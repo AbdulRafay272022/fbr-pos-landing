@@ -1,8 +1,8 @@
-import type { MetadataRoute } from "next";
+﻿import type { MetadataRoute } from "next";
 import { getAllBlogs } from "@/lib/blogStore";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://phelixerp.com";
+  const baseUrl = "https://fbr-pos-landing.vercel.app";
   const blogs = await getAllBlogs();
 
   const blogUrls: MetadataRoute.Sitemap = blogs.map((blog) => ({
@@ -34,3 +34,4 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...blogUrls,
   ];
 }
+

@@ -1,6 +1,6 @@
-import type { BlogPost } from "./types";
+﻿import type { BlogPost } from "./types";
 
-const BASE_URL = "https://phelixerp.com";
+const BASE_URL = "https://fbr-pos-landing.vercel.app";
 
 export function organizationSchema() {
   return {
@@ -106,7 +106,7 @@ export const LANDING_FAQS = [
   },
   {
     q: "How long does FBR POS setup take with Phelix ERP?",
-    a: "Complete setup — including FBR IRIS API integration, system configuration, and staff training — is finished within 24 hours of signing up. Our team handles everything remotely. You do not need any technical knowledge.",
+    a: "Complete setup â€” including FBR IRIS API integration, system configuration, and staff training â€” is finished within 24 hours of signing up. Our team handles everything remotely. You do not need any technical knowledge.",
   },
   {
     q: "Can I use Phelix ERP on my mobile phone or tablet?",
@@ -204,3 +204,4 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
     })),
   };
 }
+

@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "FBR Compliance Checker – Is Your Business FBR Compliant?",
+  title: "FBR Compliance Checker â€“ Is Your Business FBR Compliant?",
   description:
     "Free FBR compliance checker for Pakistani businesses. Get your compliance score, risk level, and exact steps to fix issues. Used by retailers, pharmacies, and restaurants across Pakistan.",
   keywords: [
@@ -13,11 +13,11 @@ export const metadata: Metadata = {
     "check FBR compliance Pakistan",
   ],
   openGraph: {
-    title: "FBR Compliance Checker – Free Tool for Pakistani Businesses",
+    title: "FBR Compliance Checker â€“ Free Tool for Pakistani Businesses",
     description:
       "Check if your business is FBR compliant in 60 seconds. Get a compliance score, risk level, and a personalized fix plan.",
     type: "website",
-    url: "https://phelixerp.com/fbr-checker",
+    url: "https://fbr-pos-landing.vercel.app/fbr-checker",
     images: [
       {
         url: "/dashboard-screenshot.png",
@@ -29,13 +29,13 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "FBR Compliance Checker – Free Tool for Pakistani Businesses",
+    title: "FBR Compliance Checker â€“ Free Tool for Pakistani Businesses",
     description:
       "Check your FBR compliance score in 60 seconds. Get a risk level and personalised action plan.",
     images: ["/dashboard-screenshot.png"],
   },
   alternates: {
-    canonical: "https://phelixerp.com/fbr-checker",
+    canonical: "https://fbr-pos-landing.vercel.app/fbr-checker",
   },
 };
 
@@ -46,3 +46,4 @@ export default function FBRCheckerLayout({
 }) {
   return <>{children}</>;
 }
+

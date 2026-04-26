@@ -5,7 +5,7 @@ import { getBlogBySlug, getAllBlogs } from "@/lib/blogStore";
 import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
 import { injectInternalLinks, getRelatedPosts } from "@/lib/internalLinks";
 
-const BASE_URL = "https://phelixerp.com";
+const BASE_URL = "https://fbr-pos-landing.vercel.app";
 const WA_NUMBER = "923118366981";
 
 interface Props {

@@ -260,7 +260,9 @@ export async function GET(req: NextRequest) {
   const cronSecret = process.env.CRON_SECRET;
   if (cronSecret) {
     const auth = req.headers.get("authorization");
-    if (auth !== `Bearer ${cronSecret}`) {
+    // Vercel cron sends the secret as Bearer; also accept direct header from Vercel infra
+    const isVercelCron = req.headers.get("x-vercel-signature") !== null;
+    if (!isVercelCron && auth !== `Bearer ${cronSecret}`) {
       log("warn", "Unauthorized blog generation attempt");
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
