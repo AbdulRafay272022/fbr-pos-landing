@@ -83,9 +83,6 @@ export const metadata: Metadata = {
     canonical: "https://phelixerp.vercel.app",
   },
   category: "technology",
-  icons: {
-    icon: "/phelix-logo.png",
-  },
 };
 
 export default function RootLayout({
