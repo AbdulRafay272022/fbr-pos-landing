@@ -96,6 +96,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <meta name="google-site-verification" content="ff535bd7a9ec1568" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
