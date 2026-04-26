@@ -82,6 +82,9 @@ export const metadata: Metadata = {
     canonical: "https://fbr-pos-landing.vercel.app",
   },
   category: "technology",
+  icons: {
+    icon: "/phelix-logo.png",
+  },
 };
 
 export default function RootLayout({
