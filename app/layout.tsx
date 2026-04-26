@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import Analytics from "@/components/Analytics";
 import { organizationSchema, webSiteSchema } from "@/lib/schema";
 import "./globals.css";
@@ -15,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://fbr-pos-landing.vercel.app"),
+  metadataBase: new URL("https://phelixerp.vercel.app"),
   title: {
     default: "Phelix ERP â€“ FBR POS System Pakistan | FBR e-Invoicing Software",
     template: "%s | Phelix ERP Pakistan",
@@ -40,7 +41,7 @@ export const metadata: Metadata = {
     "FBR integrated POS",
     "ERP Pakistan small business",
   ],
-  authors: [{ name: "Phelix ERP", url: "https://fbr-pos-landing.vercel.app" }],
+  authors: [{ name: "Phelix ERP", url: "https://phelixerp.vercel.app" }],
   creator: "Phelix ERP",
   publisher: "Phelix ERP",
   robots: {
@@ -57,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_PK",
-    url: "https://fbr-pos-landing.vercel.app",
+    url: "https://phelixerp.vercel.app",
     siteName: "Phelix ERP",
     title: "Phelix ERP â€“ FBR POS System Pakistan | FBR e-Invoicing Software",
     description:
@@ -79,7 +80,7 @@ export const metadata: Metadata = {
     images: ["/dashboard-screenshot.png"],
   },
   alternates: {
-    canonical: "https://fbr-pos-landing.vercel.app",
+    canonical: "https://phelixerp.vercel.app",
   },
   category: "technology",
   icons: {
@@ -114,6 +115,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Analytics />
         {children}
+        <VercelAnalytics />
       </body>
     </html>
   );

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     description:
       "Check if your business is FBR compliant in 60 seconds. Get a compliance score, risk level, and a personalized fix plan.",
     type: "website",
-    url: "https://fbr-pos-landing.vercel.app/fbr-checker",
+    url: "https://phelixerp.vercel.app/fbr-checker",
     images: [
       {
         url: "/dashboard-screenshot.png",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     images: ["/dashboard-screenshot.png"],
   },
   alternates: {
-    canonical: "https://fbr-pos-landing.vercel.app/fbr-checker",
+    canonical: "https://phelixerp.vercel.app/fbr-checker",
   },
 };
 

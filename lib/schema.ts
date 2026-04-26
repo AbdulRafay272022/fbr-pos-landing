@@ -1,6 +1,6 @@
 ﻿import type { BlogPost } from "./types";
 
-const BASE_URL = "https://fbr-pos-landing.vercel.app";
+const BASE_URL = "https://phelixerp.vercel.app";
 
 export function organizationSchema() {
   return {

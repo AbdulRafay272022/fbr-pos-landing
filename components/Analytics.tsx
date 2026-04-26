@@ -1,10 +1,8 @@
 import Script from "next/script";
 
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-HH2FE5P4KF";
 
 export default function Analytics() {
-  if (!GA_ID) return null;
-
   return (
     <>
       <Script
