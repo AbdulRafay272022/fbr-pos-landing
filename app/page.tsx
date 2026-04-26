@@ -178,9 +178,9 @@ export default function LandingPage() {
             <Image
               src="/phelix-logo.png"
               alt="Phelix ERP Logo – FBR POS System Pakistan"
-              width={360}
-              height={120}
-              className="h-24 w-auto object-contain"
+              width={240}
+              height={72}
+              className="h-16 w-auto object-contain"
               style={{ marginTop: "-8px", marginBottom: "-8px" }}
             />
           </div>
@@ -590,9 +590,9 @@ export default function LandingPage() {
               <Image
                 src="/phelix-logo.png"
                 alt="Phelix ERP – FBR POS Pakistan"
-                width={280}
-                height={90}
-                className="h-20 w-auto object-contain"
+                width={200}
+                height={60}
+                className="h-14 w-auto object-contain"
               />
             </div>
             <nav className="flex flex-wrap gap-5 justify-center">
