@@ -4,46 +4,59 @@ import type { BlogPost } from "./types";
 
 export type { BlogPost };
 
-const DATA_FILE = path.join(process.cwd(), "data", "blogs.json");
-const TMP_FILE = path.join("/tmp", "phelix-blogs-generated.json");
+const INDEX_FILE = path.join(process.cwd(), "data", "index.json");
+const BLOGS_DIR  = path.join(process.cwd(), "data", "blogs");
 
-function readFromFile(filePath: string): BlogPost[] {
+type BlogIndex = Omit<BlogPost, "content">;
+
+function readIndex(): BlogIndex[] {
   try {
-    if (!fs.existsSync(filePath)) return [];
-    const raw = fs.readFileSync(filePath, "utf-8");
-    return JSON.parse(raw) as BlogPost[];
+    if (!fs.existsSync(INDEX_FILE)) return [];
+    const raw = fs.readFileSync(INDEX_FILE, "utf-8");
+    return JSON.parse(raw) as BlogIndex[];
   } catch {
     return [];
   }
 }
 
+function readBlogFile(slug: string): BlogPost | null {
+  try {
+    const filePath = path.join(BLOGS_DIR, `${slug}.json`);
+    if (!fs.existsSync(filePath)) return null;
+    const raw = fs.readFileSync(filePath, "utf-8");
+    return JSON.parse(raw) as BlogPost;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Returns all blogs sorted newest-first.
+ * Reads index.json only — no content field (fast for listing pages).
+ */
 export async function getAllBlogs(): Promise<BlogPost[]> {
-  const seed = readFromFile(DATA_FILE);
-  const generated = readFromFile(TMP_FILE);
-  const all = [...generated, ...seed];
-  const seen = new Set<string>();
-  return all.filter((b) => {
-    if (seen.has(b.slug)) return false;
-    seen.add(b.slug);
-    return true;
-  });
+  const index = readIndex();
+  return index
+    .sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    .map((entry) => ({ ...entry, content: "" }));
 }
 
+/**
+ * Returns a single blog with full content by reading its individual JSON file.
+ */
 export async function getBlogBySlug(slug: string): Promise<BlogPost | null> {
-  const all = await getAllBlogs();
-  return all.find((b) => b.slug === slug) ?? null;
+  return readBlogFile(slug);
 }
 
-export async function saveBlog(blog: BlogPost): Promise<void> {
-  const existing = readFromFile(TMP_FILE);
-  const updated = [blog, ...existing.filter((b) => b.slug !== blog.slug)];
-  fs.mkdirSync(path.dirname(TMP_FILE), { recursive: true });
-  fs.writeFileSync(TMP_FILE, JSON.stringify(updated, null, 2), "utf-8");
-}
-
+/**
+ * Checks whether a slug already exists in the deployed data/blogs/ directory
+ * or in the index (belt-and-suspenders).
+ */
 export async function isDuplicateSlug(slug: string): Promise<boolean> {
-  const all = await getAllBlogs();
-  return all.some((b) => b.slug === slug);
+  const filePath = path.join(BLOGS_DIR, `${slug}.json`);
+  if (fs.existsSync(filePath)) return true;
+  const index = readIndex();
+  return index.some((b) => b.slug === slug);
 }
 
 export function countWords(html: string): number {

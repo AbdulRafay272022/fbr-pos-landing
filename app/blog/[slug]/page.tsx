@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogBySlug, getAllBlogs } from "@/lib/blogStore";
-import { blogPostingSchema, breadcrumbSchema } from "@/lib/schema";
+import { blogPostingSchema, breadcrumbSchema, faqSchema, LANDING_FAQS } from "@/lib/schema";
 import { injectInternalLinks, getRelatedPosts } from "@/lib/internalLinks";
 
 const BASE_URL = "https://phelixerp.vercel.app";
@@ -68,8 +68,9 @@ export default async function BlogPostPage({ params }: Props) {
   const shareText = `I just read: "${blog.title}" – Check out this FBR compliance guide for Pakistani businesses: ${pageUrl}`;
   const waShareHref = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
-  const blogSchema = blogPostingSchema(blog, pageUrl);
-  const breadcrumb = breadcrumbSchema([
+  const blogSchema  = blogPostingSchema(blog, pageUrl);
+  const faqLd      = faqSchema(LANDING_FAQS);
+  const breadcrumb  = breadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "Blog", url: "/blog" },
     { name: blog.title, url: `/blog/${blog.slug}` },
@@ -84,6 +85,10 @@ export default async function BlogPostPage({ params }: Props) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
       />
 
       <nav className="border-b border-gray-200 px-6 py-4 bg-white sticky top-0 z-40">

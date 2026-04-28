@@ -1,58 +1,191 @@
 import { NextRequest, NextResponse } from "next/server";
-import { isDuplicateSlug, countWords, type BlogPost } from "@/lib/blogStore";
+import { revalidatePath } from "next/cache";
+import { countWords, type BlogPost } from "@/lib/blogStore";
 
-// ── GitHub CMS: persist blogs permanently in data/blogs.json ──────────────────
-async function pushBlogToGitHub(blog: BlogPost): Promise<void> {
-  const token = process.env.GITHUB_TOKEN;
-  const owner = process.env.GITHUB_OWNER;
-  const repo  = process.env.GITHUB_REPO;
-  const branch = process.env.GITHUB_BRANCH ?? "main";
+// ─────────────────────────────────────────────────────────────────────────────
+// Types
+// ─────────────────────────────────────────────────────────────────────────────
+type BlogIndex = Omit<BlogPost, "content">;
+interface MetaJson { lastTopicIndex: number }
 
-  if (!token || !owner || !repo) {
-    throw new Error("GitHub env vars not set (GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO)");
-  }
-
-  const filePath = "data/blogs.json";
-  const apiBase  = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
-  const headers  = {
+// ─────────────────────────────────────────────────────────────────────────────
+// GitHub low-level helpers
+// ─────────────────────────────────────────────────────────────────────────────
+function ghHeaders(token: string) {
+  return {
     Authorization: `Bearer ${token}`,
     "Content-Type": "application/json",
     Accept: "application/vnd.github+json",
     "X-GitHub-Api-Version": "2022-11-28",
   };
+}
 
-  // 1. Fetch current file + sha
-  const getRes = await fetch(apiBase, { headers });
-  if (!getRes.ok) throw new Error(`GitHub GET failed: ${getRes.status}`);
-  const getJson = (await getRes.json()) as { content: string; sha: string };
+function ghBase(owner: string, repo: string) {
+  return `https://api.github.com/repos/${owner}/${repo}`;
+}
 
-  const currentBlogs: BlogPost[] = JSON.parse(
-    Buffer.from(getJson.content, "base64").toString("utf8")
-  );
+async function ghGet<T>(url: string, token: string): Promise<T | null> {
+  const res = await fetch(url, { headers: ghHeaders(token) });
+  if (res.status === 404) return null;
+  if (!res.ok) throw new Error(`GitHub GET ${url} → ${res.status}`);
+  return res.json() as Promise<T>;
+}
 
-  // 2. Append new blog (skip if slug already exists)
-  if (currentBlogs.some((b) => b.slug === blog.slug)) return;
-  const updated = [blog, ...currentBlogs];
+// ─────────────────────────────────────────────────────────────────────────────
+// Slug existence check: uses GitHub API (never local FS — serverless FS lags)
+// ─────────────────────────────────────────────────────────────────────────────
+async function slugExistsOnGitHub(
+  slug: string,
+  token: string,
+  owner: string,
+  repo: string
+): Promise<boolean> {
+  const url = `${ghBase(owner, repo)}/contents/data/blogs/${slug}.json`;
+  const res = await fetch(url, { method: "HEAD", headers: ghHeaders(token) });
+  return res.ok;
+}
 
-  // 3. Push updated file back
-  const putRes = await fetch(apiBase, {
-    method: "PUT",
-    headers,
-    body: JSON.stringify({
-      message: `blog: add "${blog.title}"`,
-      content: Buffer.from(JSON.stringify(updated, null, 2)).toString("base64"),
-      sha: getJson.sha,
-      branch,
-    }),
-  });
-
-  if (!putRes.ok) {
-    const errText = await putRes.text().catch(() => "unknown");
-    throw new Error(`GitHub PUT failed: ${putRes.status} — ${errText}`);
+// ─────────────────────────────────────────────────────────────────────────────
+// Read data/meta.json from GitHub (topic progress tracking)
+// ─────────────────────────────────────────────────────────────────────────────
+async function readMeta(
+  token: string,
+  owner: string,
+  repo: string
+): Promise<{ lastTopicIndex: number }> {
+  const url = `${ghBase(owner, repo)}/contents/data/meta.json`;
+  const file = await ghGet<{ content: string }>(url, token);
+  if (!file) return { lastTopicIndex: -1 };
+  try {
+    const parsed = JSON.parse(
+      Buffer.from(file.content, "base64").toString("utf8")
+    ) as MetaJson;
+    return { lastTopicIndex: parsed.lastTopicIndex ?? -1 };
+  } catch {
+    return { lastTopicIndex: -1 };
   }
 }
 
-const WA_NUMBER = "923118366981";
+// ─────────────────────────────────────────────────────────────────────────────
+// Read data/index.json from GitHub
+// ─────────────────────────────────────────────────────────────────────────────
+async function readIndexFromGitHub(
+  token: string,
+  owner: string,
+  repo: string
+): Promise<BlogIndex[]> {
+  const url = `${ghBase(owner, repo)}/contents/data/index.json`;
+  const file = await ghGet<{ content: string }>(url, token);
+  if (!file) return [];
+  try {
+    return JSON.parse(
+      Buffer.from(file.content, "base64").toString("utf8")
+    ) as BlogIndex[];
+  } catch {
+    return [];
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Single GitHub commit: blog file + index.json + meta.json  (1 deploy trigger)
+// Uses Git Trees API so all three files land in ONE commit.
+// ─────────────────────────────────────────────────────────────────────────────
+async function commitBlogToGitHub(
+  blog: BlogPost,
+  nextTopicIndex: number,
+  token: string,
+  owner: string,
+  repo: string,
+  branch: string
+): Promise<void> {
+  const base = ghBase(owner, repo);
+  const h    = ghHeaders(token);
+
+  // 1 ── Latest commit SHA on branch
+  const refRes = await fetch(`${base}/git/refs/heads/${branch}`, { headers: h });
+  if (!refRes.ok) throw new Error(`GitHub refs failed: ${refRes.status}`);
+  const { object: { sha: latestCommitSha } } =
+    (await refRes.json()) as { object: { sha: string } };
+
+  // 2 ── Base tree SHA
+  const commitRes = await fetch(`${base}/git/commits/${latestCommitSha}`, { headers: h });
+  if (!commitRes.ok) throw new Error(`GitHub commit read failed: ${commitRes.status}`);
+  const { tree: { sha: baseTreeSha } } =
+    (await commitRes.json()) as { tree: { sha: string } };
+
+  // 3 ── Fetch current index so we can prepend the new entry
+  const currentIndex = await readIndexFromGitHub(token, owner, repo);
+  const { content: _c, ...indexEntry } = blog;
+  const alreadyInIndex = currentIndex.some((b) => b.slug === blog.slug);
+  const updatedIndex: BlogIndex[] = alreadyInIndex
+    ? currentIndex
+    : [indexEntry, ...currentIndex];
+
+  const updatedMeta: MetaJson = { lastTopicIndex: nextTopicIndex };
+
+  // 4 ── Create blobs in parallel
+  async function createBlob(content: string): Promise<string> {
+    const res = await fetch(`${base}/git/blobs`, {
+      method: "POST",
+      headers: h,
+      body: JSON.stringify({
+        content: Buffer.from(content).toString("base64"),
+        encoding: "base64",
+      }),
+    });
+    if (!res.ok) throw new Error(`GitHub blob failed: ${res.status}`);
+    const { sha } = (await res.json()) as { sha: string };
+    return sha;
+  }
+
+  const [blogBlobSha, indexBlobSha, metaBlobSha] = await Promise.all([
+    createBlob(JSON.stringify(blog, null, 2)),
+    createBlob(JSON.stringify(updatedIndex, null, 2)),
+    createBlob(JSON.stringify(updatedMeta, null, 2)),
+  ]);
+
+  // 5 ── New tree (three files updated atomically)
+  const treeRes = await fetch(`${base}/git/trees`, {
+    method: "POST",
+    headers: h,
+    body: JSON.stringify({
+      base_tree: baseTreeSha,
+      tree: [
+        { path: `data/blogs/${blog.slug}.json`, mode: "100644", type: "blob", sha: blogBlobSha },
+        { path: "data/index.json",              mode: "100644", type: "blob", sha: indexBlobSha },
+        { path: "data/meta.json",               mode: "100644", type: "blob", sha: metaBlobSha  },
+      ],
+    }),
+  });
+  if (!treeRes.ok) throw new Error(`GitHub tree failed: ${treeRes.status}`);
+  const { sha: newTreeSha } = (await treeRes.json()) as { sha: string };
+
+  // 6 ── Create commit
+  const newCommitRes = await fetch(`${base}/git/commits`, {
+    method: "POST",
+    headers: h,
+    body: JSON.stringify({
+      message: `blog: add "${blog.title}"`,
+      tree: newTreeSha,
+      parents: [latestCommitSha],
+    }),
+  });
+  if (!newCommitRes.ok) throw new Error(`GitHub commit create failed: ${newCommitRes.status}`);
+  const { sha: newCommitSha } = (await newCommitRes.json()) as { sha: string };
+
+  // 7 ── Advance branch ref
+  const refUpdateRes = await fetch(`${base}/git/refs/heads/${branch}`, {
+    method: "PATCH",
+    headers: h,
+    body: JSON.stringify({ sha: newCommitSha }),
+  });
+  if (!refUpdateRes.ok) throw new Error(`GitHub ref update failed: ${refUpdateRes.status}`);
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Constants
+// ─────────────────────────────────────────────────────────────────────────────
+const WA_NUMBER    = "923118366981";
 const MIN_WORD_COUNT = 1200;
 
 const BLOG_TOPICS = [
@@ -128,15 +261,21 @@ const BLOG_TOPICS = [
     focus: "using the FBR IRIS portal for POS registration and integration in Pakistan",
     businessType: "general",
   },
-];
+] as const;
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Logging
+// ─────────────────────────────────────────────────────────────────────────────
 function log(level: "info" | "warn" | "error", message: string, data?: unknown) {
   const entry = { ts: new Date().toISOString(), level, message, ...(data ? { data } : {}) };
   if (level === "error") console.error(JSON.stringify(entry));
-  else if (level === "warn") console.warn(JSON.stringify(entry));
-  else console.log(JSON.stringify(entry));
+  else if (level === "warn")  console.warn(JSON.stringify(entry));
+  else                        console.log(JSON.stringify(entry));
 }
 
+// ─────────────────────────────────────────────────────────────────────────────
+// Slug / text helpers
+// ─────────────────────────────────────────────────────────────────────────────
 function slugify(text: string): string {
   return text
     .toLowerCase()
@@ -146,7 +285,10 @@ function slugify(text: string): string {
     .replace(/-+/g, "-");
 }
 
-async function generateWithGroq(topic: (typeof BLOG_TOPICS)[0]): Promise<string> {
+// ─────────────────────────────────────────────────────────────────────────────
+// Groq content generation
+// ─────────────────────────────────────────────────────────────────────────────
+async function generateWithGroq(topic: (typeof BLOG_TOPICS)[number]): Promise<string> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error("GROQ_API_KEY not configured");
 
@@ -200,7 +342,10 @@ STRICT REQUIREMENTS:
   return data.choices[0].message.content;
 }
 
-function generateTemplate(topic: (typeof BLOG_TOPICS)[0]): string {
+// ─────────────────────────────────────────────────────────────────────────────
+// Template fallback (used when Groq fails or is below word limit)
+// ─────────────────────────────────────────────────────────────────────────────
+function generateTemplate(topic: (typeof BLOG_TOPICS)[number]): string {
   const shortTitle = topic.title.split("–")[0].trim();
   const keyword = topic.keywords[0];
 
@@ -250,7 +395,20 @@ function generateTemplate(topic: (typeof BLOG_TOPICS)[0]): string {
 <p>Provide your API credentials to your POS provider. A qualified provider handles all technical configuration — FBR connection, tax rate setup, and test invoice generation. Before going live, verify at least five test transactions appear correctly in your IRIS portal.</p>
 
 <h3>Step 5 – Train Staff and Go Live</h3>
-<p>FBR-compliant POS systems are designed for non-technical users. Staff training takes 20–30 minutes. Ensure all team members understand the basic sales flow and how to handle offline transactions (which sync automatically when connectivity returns).</p>
+<p>FBR-compliant POS systems are designed for non-technical users. Staff training takes 20-30 minutes. Ensure all team members understand the basic sales flow and how to handle offline transactions (which sync automatically when connectivity returns).</p>
+
+<h2>Common Mistakes Pakistani Businesses Make</h2>
+<ul>
+<li><strong>Using non-FBR-approved software</strong> – Generic POS apps from app stores are almost never IRIS-integrated. Always verify before purchasing.</li>
+<li><strong>Ignoring offline sync requirements</strong> – Transactions made during downtime must automatically sync to FBR when reconnected — many businesses don't realise this is mandatory.</li>
+<li><strong>Wrong tax rate configuration</strong> – Applying the standard 17% rate to categories that have reduced or zero rates results in overcharging customers and incorrect FBR submissions.</li>
+<li><strong>Not testing before going live</strong> – Skipping the test phase means your first real customer transactions may fail to reach FBR, creating unreported sales from day one.</li>
+<li><strong>Assuming once set up it never needs updates</strong> – FBR requirements evolve. Your POS provider must push regular updates to stay compliant as rules change.</li>
+</ul>
+
+<h2>QR Invoicing Requirements in Pakistan</h2>
+<p>Every invoice generated through an FBR-compliant POS must include a QR code. This QR code encodes a verification link that customers can scan to confirm the invoice is genuine and registered with FBR. Without the QR code, the invoice is legally non-compliant, even if all other details are correct.</p>
+<p>The QR code must be present on both printed receipts and digital invoices sent via SMS or email. Customers have the right to demand a QR-coded invoice, and businesses that cannot provide one are in violation of FBR regulations.</p>
 
 <h2>FBR Penalties for Non-Compliance</h2>
 <p>The consequences of operating without proper FBR POS integration are severe:</p>
@@ -261,10 +419,8 @@ function generateTemplate(topic: (typeof BLOG_TOPICS)[0]): string {
 <li><strong>Tax audit trigger</strong> – Non-integrated businesses are automatically flagged for comprehensive tax audits</li>
 <li><strong>Reputation damage</strong> – FBR can publish lists of non-compliant businesses</li>
 </ul>
-<p>The cumulative cost of non-compliance — fines, disruption, audit fees, lost business — far exceeds the cost of a proper POS system. Compliance is an investment, not an expense.</p>
 
 <h2>Business Benefits Beyond Compliance</h2>
-<p>FBR POS integration delivers tangible operational benefits:</p>
 <ul>
 <li><strong>Automated bookkeeping</strong> – Every transaction is digitally recorded, eliminating manual entries and errors</li>
 <li><strong>Simplified tax filing</strong> – Monthly sales tax returns are prepared from your FBR-submitted data, saving accountant time</li>
@@ -274,13 +430,13 @@ function generateTemplate(topic: (typeof BLOG_TOPICS)[0]): string {
 <li><strong>Customer confidence</strong> – Scannable receipts signal that your business is professional and trustworthy</li>
 </ul>
 
-<h2>Common Questions About ${keyword}</h2>
+<h2>Frequently Asked Questions</h2>
 <h3>Does FBR integration require expensive hardware?</h3>
-<p>No. Modern FBR-compatible POS software runs on standard smartphones, tablets, and computers. You do not need specialised POS terminals — though printers can be added for a professional setup.</p>
+<p>No. Modern FBR-compatible POS software runs on standard smartphones, tablets, and computers. You do not need specialised POS terminals — though thermal printers can be added for professional printed receipts.</p>
 <h3>What if my internet connection goes down?</h3>
-<p>Quality FBR POS systems include offline mode. Transactions processed without internet are stored locally and automatically synced to FBR IRIS when connectivity returns.</p>
+<p>Quality FBR POS systems include offline mode. Transactions processed without internet are stored locally and automatically synced to FBR IRIS when connectivity returns — maintaining full compliance without interruption.</p>
 <h3>How quickly can I get set up?</h3>
-<p>With the right provider, complete setup — FBR IRIS registration, API integration, configuration, and training — can be done within 24 hours. Many businesses are live the same day they sign up.</p>
+<p>With the right provider, complete setup — FBR IRIS registration, API integration, configuration, and staff training — can be done within 24 hours. Many businesses are live the same day they sign up with Phelix ERP.</p>
 
 <h2>How Phelix ERP Handles FBR Compliance for You</h2>
 <p>Phelix ERP is Pakistan's dedicated FBR-integrated POS and business management system, built from the ground up for Pakistani compliance requirements. Here is what you get:</p>
@@ -305,53 +461,67 @@ function generateTemplate(topic: (typeof BLOG_TOPICS)[0]): string {
 </div>`;
 }
 
-function pickTopicOrder(dayOffset: number): (typeof BLOG_TOPICS) {
-  const dayOfYear = Math.floor(
-    (Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000
-  );
-  const ordered: typeof BLOG_TOPICS = [];
-  for (let i = 0; i < BLOG_TOPICS.length; i++) {
-    ordered.push(BLOG_TOPICS[(dayOfYear + dayOffset + i) % BLOG_TOPICS.length]);
-  }
-  return ordered;
-}
-
+// ─────────────────────────────────────────────────────────────────────────────
+// Route handler
+// ─────────────────────────────────────────────────────────────────────────────
 export async function GET(req: NextRequest) {
+  // ── Auth: Vercel Cron sends Authorization: Bearer {CRON_SECRET} ─────────────
   const cronSecret = process.env.CRON_SECRET;
   if (cronSecret) {
     const auth = req.headers.get("authorization");
-    // Vercel cron sends the secret as Bearer; also accept direct header from Vercel infra
-    const isVercelCron = req.headers.get("x-vercel-signature") !== null;
-    if (!isVercelCron && auth !== `Bearer ${cronSecret}`) {
+    if (auth !== `Bearer ${cronSecret}`) {
       log("warn", "Unauthorized blog generation attempt");
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
     }
   }
 
-  const topicOffset = parseInt(req.nextUrl.searchParams.get("topic") ?? "0", 10);
-  log("info", "Blog generation started", { topicOffset });
+  // ── GitHub env vars ──────────────────────────────────────────────────────────
+  const token  = process.env.GITHUB_TOKEN;
+  const owner  = process.env.GITHUB_OWNER;
+  const repo   = process.env.GITHUB_REPO;
+  const branch = process.env.GITHUB_BRANCH ?? "main";
 
-  const candidates = pickTopicOrder(topicOffset);
-  let selectedTopic = candidates[0];
-  let slug = slugify(selectedTopic.title);
+  if (!token || !owner || !repo) {
+    log("error", "Missing GitHub env vars");
+    return NextResponse.json(
+      { success: false, reason: "GitHub env vars not set" },
+      { status: 500 }
+    );
+  }
 
-  for (const candidate of candidates) {
-    const candidateSlug = slugify(candidate.title);
-    const dupe = await isDuplicateSlug(candidateSlug);
-    if (!dupe) {
-      selectedTopic = candidate;
-      slug = candidateSlug;
-      log("info", "Topic selected", { slug, title: selectedTopic.title });
+  log("info", "Blog generation started");
+
+  // ── Pick next topic using meta.json (sequential, never repeats) ──────────────
+  const meta = await readMeta(token, owner, repo);
+  const startIndex = (meta.lastTopicIndex + 1) % BLOG_TOPICS.length;
+
+  let selectedTopic: (typeof BLOG_TOPICS)[number] | null = null;
+  let nextTopicIndex = startIndex;
+
+  for (let i = 0; i < BLOG_TOPICS.length; i++) {
+    const idx       = (startIndex + i) % BLOG_TOPICS.length;
+    const candidate = BLOG_TOPICS[idx];
+    const slug      = slugify(candidate.title);
+
+    // Check GitHub directly — local FS lags behind repo state on Vercel
+    const exists = await slugExistsOnGitHub(slug, token, owner, repo);
+    if (!exists) {
+      selectedTopic  = candidate;
+      nextTopicIndex = idx;
+      log("info", "Topic selected", { slug, title: candidate.title, idx });
       break;
     }
-    log("info", "Skipping duplicate slug", { candidateSlug });
+    log("info", "Skipping — slug exists on GitHub", { slug });
   }
 
-  if (await isDuplicateSlug(slug)) {
-    log("warn", "All candidate topics already published", { slug });
-    return NextResponse.json({ success: false, reason: "All topics already published today" });
+  if (!selectedTopic) {
+    log("warn", "All topics already published");
+    return NextResponse.json({ success: false, reason: "All topics already published" });
   }
 
+  const slug = slugify(selectedTopic.title);
+
+  // ── Generate content ─────────────────────────────────────────────────────────
   let content: string;
   let source: "groq" | "template";
 
@@ -362,9 +532,12 @@ export async function GET(req: NextRequest) {
     log("info", "Groq generation complete", { words });
 
     if (words < MIN_WORD_COUNT) {
-      log("warn", "Groq output below minimum — falling back to template", { words, minimum: MIN_WORD_COUNT });
+      log("warn", "Groq output below minimum — falling back to template", {
+        words,
+        minimum: MIN_WORD_COUNT,
+      });
       content = generateTemplate(selectedTopic);
-      source = "template";
+      source  = "template";
     } else {
       source = "groq";
     }
@@ -372,7 +545,7 @@ export async function GET(req: NextRequest) {
     const message = err instanceof Error ? err.message : String(err);
     log("warn", "Groq failed — using template fallback", { error: message });
     content = generateTemplate(selectedTopic);
-    source = "template";
+    source  = "template";
   }
 
   const finalWords = countWords(content);
@@ -385,34 +558,48 @@ export async function GET(req: NextRequest) {
     );
   }
 
+  // ── Assemble blog object ─────────────────────────────────────────────────────
   const blog: BlogPost = {
     slug,
     title: selectedTopic.title,
-    metaDescription: `${selectedTopic.focus.charAt(0).toUpperCase() + selectedTopic.focus.slice(1)} — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.`,
-    keywords: selectedTopic.keywords,
+    metaDescription: `${
+      selectedTopic.focus.charAt(0).toUpperCase() + selectedTopic.focus.slice(1)
+    } — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.`,
+    keywords:    [...selectedTopic.keywords],
     content,
     publishedAt: new Date().toISOString(),
-    readTime: Math.max(1, Math.ceil(finalWords / 200)),
+    readTime:    Math.max(1, Math.ceil(finalWords / 200)),
   };
 
+  // ── Single commit: blog + index.json + meta.json ─────────────────────────────
   try {
-    await pushBlogToGitHub(blog);
-    log("info", "Blog pushed to GitHub", { slug, source, words: finalWords });
+    await commitBlogToGitHub(blog, nextTopicIndex, token, owner, repo, branch);
+    log("info", "Blog committed to GitHub", { slug, source, words: finalWords });
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
-    log("error", "Failed to push blog to GitHub", { slug, error: message });
+    log("error", "GitHub commit failed", { slug, error: message });
     return NextResponse.json(
-      { success: false, reason: "GitHub push failed", error: message },
+      { success: false, reason: "GitHub commit failed", error: message },
       { status: 500 }
     );
   }
 
+  // ── Revalidate blog listing and sitemap so ISR picks up new content ──────────
+  try {
+    revalidatePath("/blog");
+    revalidatePath("/sitemap.xml");
+    log("info", "Revalidated /blog and /sitemap.xml");
+  } catch (err) {
+    // Non-fatal — next deploy will pick it up regardless
+    log("warn", "revalidatePath failed (non-fatal)", { error: String(err) });
+  }
+
   return NextResponse.json({
-    success: true,
-    slug: blog.slug,
-    title: blog.title,
+    success:  true,
+    slug:     blog.slug,
+    title:    blog.title,
     source,
-    words: finalWords,
+    words:    finalWords,
     readTime: blog.readTime,
   });
 }
