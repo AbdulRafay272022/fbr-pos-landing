@@ -1,5 +1,56 @@
 import { NextRequest, NextResponse } from "next/server";
-import { saveBlog, isDuplicateSlug, countWords, type BlogPost } from "@/lib/blogStore";
+import { isDuplicateSlug, countWords, type BlogPost } from "@/lib/blogStore";
+
+// ── GitHub CMS: persist blogs permanently in data/blogs.json ──────────────────
+async function pushBlogToGitHub(blog: BlogPost): Promise<void> {
+  const token = process.env.GITHUB_TOKEN;
+  const owner = process.env.GITHUB_OWNER;
+  const repo  = process.env.GITHUB_REPO;
+  const branch = process.env.GITHUB_BRANCH ?? "main";
+
+  if (!token || !owner || !repo) {
+    throw new Error("GitHub env vars not set (GITHUB_TOKEN, GITHUB_OWNER, GITHUB_REPO)");
+  }
+
+  const filePath = "data/blogs.json";
+  const apiBase  = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
+  const headers  = {
+    Authorization: `Bearer ${token}`,
+    "Content-Type": "application/json",
+    Accept: "application/vnd.github+json",
+    "X-GitHub-Api-Version": "2022-11-28",
+  };
+
+  // 1. Fetch current file + sha
+  const getRes = await fetch(apiBase, { headers });
+  if (!getRes.ok) throw new Error(`GitHub GET failed: ${getRes.status}`);
+  const getJson = (await getRes.json()) as { content: string; sha: string };
+
+  const currentBlogs: BlogPost[] = JSON.parse(
+    Buffer.from(getJson.content, "base64").toString("utf8")
+  );
+
+  // 2. Append new blog (skip if slug already exists)
+  if (currentBlogs.some((b) => b.slug === blog.slug)) return;
+  const updated = [blog, ...currentBlogs];
+
+  // 3. Push updated file back
+  const putRes = await fetch(apiBase, {
+    method: "PUT",
+    headers,
+    body: JSON.stringify({
+      message: `blog: add "${blog.title}"`,
+      content: Buffer.from(JSON.stringify(updated, null, 2)).toString("base64"),
+      sha: getJson.sha,
+      branch,
+    }),
+  });
+
+  if (!putRes.ok) {
+    const errText = await putRes.text().catch(() => "unknown");
+    throw new Error(`GitHub PUT failed: ${putRes.status} — ${errText}`);
+  }
+}
 
 const WA_NUMBER = "923118366981";
 const MIN_WORD_COUNT = 1200;
@@ -99,20 +150,29 @@ async function generateWithGroq(topic: (typeof BLOG_TOPICS)[0]): Promise<string>
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error("GROQ_API_KEY not configured");
 
-  const prompt = `You are an SEO content writer specialising in FBR compliance and Pakistani business technology.
+  const prompt = `You are a senior SEO content writer specialising in FBR compliance and Pakistani business technology.
 
-Write a ${MIN_WORD_COUNT}+ word SEO-optimised blog post titled: "${topic.title}"
+Write a LONG, DETAILED, SEO-optimised blog post titled: "${topic.title}"
 Focus: ${topic.focus}
 
-REQUIREMENTS:
-- Minimum ${MIN_WORD_COUNT} words of actual content
+STRICT REQUIREMENTS:
+- You MUST write AT LEAST 1400 words of actual content. Do not stop early.
 - Target: Pakistani ${topic.businessType} business owners
-- Cover FBR IRIS, STRN, QR invoicing, penalties, and benefits in depth
-- Use H2 and H3 headings, bullet lists, and numbered steps
-- End with a CTA to contact Phelix ERP via WhatsApp: https://wa.me/${WA_NUMBER}
+- Include ALL of these sections (each section must be 150-200 words minimum):
+  1. Introduction — what this topic means for Pakistani businesses
+  2. What the FBR law says — specific SRO references, penalties
+  3. Step-by-step compliance guide — numbered list, 6-8 steps
+  4. Common mistakes businesses make — 4-5 bullet points with explanations
+  5. How FBR IRIS integration works — technical but simple explanation
+  6. QR invoicing requirements — what it means and how to implement
+  7. Benefits of being compliant — 4+ benefits with details
+  8. Frequently asked questions — 3 Q&As
+  9. Conclusion with CTA to contact Phelix ERP via WhatsApp: https://wa.me/${WA_NUMBER}
+- Use H2 and H3 headings, bullet lists, and numbered steps throughout
 - Output ONLY clean HTML tags (h2, h3, p, ul, li, ol, strong)
 - Do NOT include <html>, <head>, <body>, or <article> wrappers
-- Start with an <h2> tag`;
+- Start directly with an <h2> tag
+- IMPORTANT: Do not truncate or summarise — write the full content for every section`;
 
   const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
@@ -121,9 +181,9 @@ REQUIREMENTS:
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "llama-3.1-8b-instant",
+      model: "llama-3.3-70b-versatile",
       messages: [{ role: "user", content: prompt }],
-      max_tokens: 3000,
+      max_tokens: 6000,
       temperature: 0.7,
     }),
     signal: AbortSignal.timeout(30000),
@@ -336,13 +396,13 @@ export async function GET(req: NextRequest) {
   };
 
   try {
-    await saveBlog(blog);
-    log("info", "Blog saved", { slug, source, words: finalWords });
+    await pushBlogToGitHub(blog);
+    log("info", "Blog pushed to GitHub", { slug, source, words: finalWords });
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
-    log("error", "Failed to save blog", { slug, error: message });
+    log("error", "Failed to push blog to GitHub", { slug, error: message });
     return NextResponse.json(
-      { success: false, reason: "Save failed", error: message },
+      { success: false, reason: "GitHub push failed", error: message },
       { status: 500 }
     );
   }

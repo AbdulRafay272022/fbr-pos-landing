@@ -4,7 +4,7 @@ import { getAllBlogs } from "@/lib/blogStore";
 import { breadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
-  title: "FBR POS Blog â€“ Pakistan POS & e-Invoicing Guides",
+  title: "FBR POS Blog — Pakistan POS & e-Invoicing Guides",
   description:
     "Expert guides on FBR POS compliance, e-invoicing setup, and POS software for Pakistan businesses. Updated daily with new articles.",
   keywords: [
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "how to use FBR POS system",
   ],
   openGraph: {
-    title: "FBR POS Blog â€“ Pakistan POS & e-Invoicing Guides",
+    title: "FBR POS Blog — Pakistan POS & e-Invoicing Guides",
     description:
       "Expert guides on FBR POS compliance, e-invoicing, and POS software for Pakistani businesses.",
     type: "website",
@@ -68,7 +68,7 @@ export default async function BlogPage() {
       <div className="max-w-6xl mx-auto px-6 pt-6 pb-0">
         <nav aria-label="breadcrumb" className="text-xs text-gray-400 flex items-center gap-1.5">
           <Link href="/" className="hover:text-gray-600">Home</Link>
-          <span>â€º</span>
+          <span>›</span>
           <span className="text-gray-700 font-medium">Blog</span>
         </nav>
       </div>
@@ -93,7 +93,7 @@ export default async function BlogPage() {
           style={{ background: "#FFF7ED", border: "1px solid #FDBA74" }}
         >
           <div>
-            <p className="font-bold text-gray-900">ðŸ” Free FBR Compliance Checker</p>
+            <p className="font-bold text-gray-900">🔍 Free FBR Compliance Checker</p>
             <p className="text-sm text-gray-600">
               Not sure if your business is FBR compliant? Get your score in 60 seconds.
             </p>
@@ -103,7 +103,7 @@ export default async function BlogPage() {
             className="text-white px-5 py-2 rounded-lg font-semibold text-sm whitespace-nowrap no-underline"
             style={{ background: "#F97316" }}
           >
-            Check Compliance â†’
+            Check Compliance →
           </Link>
         </div>
 
@@ -123,7 +123,7 @@ export default async function BlogPage() {
                     month: "long",
                     day: "numeric",
                   })}{" "}
-                  Â· {blog.readTime} min read
+                  . {blog.readTime} min read
                 </p>
                 <h2 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2 flex-1">
                   {blog.title}
@@ -132,7 +132,7 @@ export default async function BlogPage() {
                   {blog.metaDescription}
                 </p>
                 <span className="text-sm font-semibold" style={{ color: "#F97316" }}>
-                  Read more â†’
+                  Read more →
                 </span>
               </Link>
             ))}
@@ -148,7 +148,7 @@ export default async function BlogPage() {
             Ready to become FBR compliant?
           </h2>
           <p className="mb-6 opacity-90">
-            Get Phelix ERP set up in 24 hours. Free demo on WhatsApp â€” we respond
+            Get Phelix ERP set up in 24 hours. Free demo on WhatsApp — we respond
             in minutes.
           </p>
           <a
@@ -164,7 +164,7 @@ export default async function BlogPage() {
       </div>
 
       <footer className="border-t border-gray-200 mt-8 py-8 text-center text-sm text-gray-500">
-        <p>Â© {new Date().getFullYear()} Phelix ERP Â· FBR-Compliant POS System Pakistan</p>
+        <p>© {new Date().getFullYear()} Phelix ERP . FBR-Compliant POS System Pakistan</p>
         <div className="flex gap-6 justify-center mt-3">
           <Link href="/" className="hover:text-gray-700">Home</Link>
           <Link href="/blog" className="hover:text-gray-700">Blog</Link>

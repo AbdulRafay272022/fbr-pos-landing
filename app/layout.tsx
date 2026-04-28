@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://phelixerp.vercel.app"),
   title: {
-    default: "Phelix ERP â€“ FBR POS System Pakistan | FBR e-Invoicing Software",
+    default: "Phelix ERP — FBR POS System Pakistan | FBR e-Invoicing Software",
     template: "%s | Phelix ERP Pakistan",
   },
   description:
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     locale: "en_PK",
     url: "https://phelixerp.vercel.app",
     siteName: "Phelix ERP",
-    title: "Phelix ERP â€“ FBR POS System Pakistan | FBR e-Invoicing Software",
+    title: "Phelix ERP — FBR POS System Pakistan | FBR e-Invoicing Software",
     description:
       "Pakistan's leading FBR-compliant POS system. QR invoices, FBR IRIS integration, inventory management. Setup in 24 hours.",
     images: [
@@ -68,13 +68,13 @@ export const metadata: Metadata = {
         url: "/dashboard-screenshot.png",
         width: 1200,
         height: 630,
-        alt: "Phelix ERP â€“ FBR POS System Pakistan dashboard",
+        alt: "Phelix ERP — FBR POS System Pakistan dashboard",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Phelix ERP â€“ FBR POS System Pakistan",
+    title: "Phelix ERP — FBR POS System Pakistan",
     description:
       "FBR-compliant POS with QR invoicing, inventory management & sales reports. Trusted by 20+ Pakistan businesses.",
     images: ["/dashboard-screenshot.png"],

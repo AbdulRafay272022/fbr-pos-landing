@@ -38,38 +38,38 @@ function calculateCompliance(
   let score = 100;
 
   if (hasStrn === "no") {
-    issues.push("No Sales Tax Registration Number (STRN) â€” required for all registered businesses");
+    issues.push("No Sales Tax Registration Number (STRN)  required for all registered businesses");
     score -= 30;
   } else if (hasStrn === "yes") {
-    positives.push("STRN registered with FBR âœ“");
+    positives.push("STRN registered with FBR ✓");
   }
 
   if (hasPos === "no") {
-    issues.push("No POS system â€” manual billing is not FBR-compliant for registered businesses");
+    issues.push("No POS system  manual billing is not FBR-compliant for registered businesses");
     score -= 20;
   } else if (hasPos === "yes") {
-    positives.push("POS system in use âœ“");
+    positives.push("POS system in use ✓");
   }
 
   if (hasFbrIntegration === "no") {
-    issues.push("POS not connected to FBR IRIS â€” required for real-time invoice submission");
+    issues.push("POS not connected to FBR IRIS  required for real-time invoice submission");
     score -= 25;
   } else if (hasFbrIntegration === "yes") {
-    positives.push("FBR IRIS real-time integration active âœ“");
+    positives.push("FBR IRIS real-time integration active ✓");
   }
 
   if (hasQrInvoice === "no") {
-    issues.push("Not issuing QR-coded invoices â€” required by FBR for all Tier-1 businesses");
+    issues.push("Not issuing QR-coded invoices  required by FBR for all Tier-1 businesses");
     score -= 20;
   } else if (hasQrInvoice === "yes") {
-    positives.push("QR-coded invoices being issued âœ“");
+    positives.push("QR-coded invoices being issued ✓");
   }
 
   if (hasInventory === "no") {
-    issues.push("No inventory management â€” FBR audits check stock records vs. sales records");
+    issues.push("No inventory management  FBR audits check stock records vs. sales records");
     score -= 5;
   } else if (hasInventory === "yes") {
-    positives.push("Inventory tracking in place âœ“");
+    positives.push("Inventory tracking in place ✓");
   }
 
   const pharmacyRestaurant =
@@ -142,9 +142,9 @@ export default function FBRCheckerPage() {
   }
 
   const riskColors = {
-    Low: { bg: "#F0FDF4", text: "#15803D", border: "#86EFAC", label: "Low Risk â€“ Good Compliance" },
-    Medium: { bg: "#FFFBEB", text: "#B45309", border: "#FCD34D", label: "Medium Risk â€“ Action Needed" },
-    High: { bg: "#FEF2F2", text: "#DC2626", border: "#FCA5A5", label: "High Risk â€“ Immediate Action Required" },
+    Low: { bg: "#F0FDF4", text: "#15803D", border: "#86EFAC", label: "Low Risk — Good Compliance" },
+    Medium: { bg: "#FFFBEB", text: "#B45309", border: "#FCD34D", label: "Medium Risk — Action Needed" },
+    High: { bg: "#FEF2F2", text: "#DC2626", border: "#FCA5A5", label: "High Risk — Immediate Action Required" },
   };
 
   const waMessage = result
@@ -191,7 +191,7 @@ export default function FBRCheckerPage() {
           {/* Breadcrumb */}
           <nav aria-label="breadcrumb" className="text-xs text-gray-400 flex items-center gap-1.5 justify-center mb-6">
             <Link href="/" className="hover:text-gray-600">Home</Link>
-            <span>â€º</span>
+            <span>›</span>
             <span className="text-gray-700 font-medium">FBR Compliance Checker</span>
           </nav>
 
@@ -199,7 +199,7 @@ export default function FBRCheckerPage() {
             className="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-4"
             style={{ background: "#FFF7ED", color: "#EA580C", border: "1px solid #FDBA74" }}
           >
-            Free Tool Â· No Registration Required
+            Free Tool . No Registration Required
           </div>
 
           <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -209,18 +209,18 @@ export default function FBRCheckerPage() {
 
           <p className="text-gray-600 max-w-2xl mx-auto mb-6 text-base leading-relaxed">
             Find out if your business is FBR-compliant in 60 seconds. Get a
-            personalised compliance score (0â€“100), your risk level, and the exact
-            steps to fix every issue â€” before FBR inspects you.
+            personalised compliance score (0—100), your risk level, and the exact
+            steps to fix every issue  before FBR inspects you.
           </p>
 
           {/* Key stats */}
           <div className="flex flex-wrap gap-6 justify-center mb-8 text-sm">
             {[
-              { icon: "ðŸ”", text: "60-second check" },
-              { icon: "ðŸ“Š", text: "Compliance score out of 100" },
-              { icon: "âš ï¸", text: "Risk level: Low / Medium / High" },
-              { icon: "âœ…", text: "Personalised fix plan" },
-              { icon: "ðŸ’¬", text: "Pre-filled WhatsApp message" },
+              { icon: "🔍", text: "60-second check" },
+              { icon: "📊", text: "Compliance score out of 100" },
+              { icon: "⚠️", text: "Risk level: Low / Medium / High" },
+              { icon: "✅", text: "Personalised fix plan" },
+              { icon: "💬", text: "Pre-filled WhatsApp message" },
             ].map(({ icon, text }) => (
               <span key={text} className="flex items-center gap-1.5 text-gray-600">
                 <span>{icon}</span>
@@ -231,7 +231,7 @@ export default function FBRCheckerPage() {
         </div>
       </div>
 
-      {/* WHY THIS MATTERS â€” SEO content block */}
+      {/* WHY THIS MATTERS  SEO content block */}
       <div className="max-w-3xl mx-auto px-6 py-10">
         <div className="bg-white rounded-2xl border border-gray-200 p-7 mb-8">
           <h2 className="text-lg font-bold text-gray-900 mb-4">
@@ -240,22 +240,22 @@ export default function FBRCheckerPage() {
           <div className="grid md:grid-cols-2 gap-4 text-sm">
             {[
               {
-                icon: "ðŸ’¸",
+                icon: "💸",
                 title: "Fines up to PKR 1,000,000",
                 desc: "FBR penalties for non-compliance start at PKR 10,000 and reach PKR 1M for repeat violations.",
               },
               {
-                icon: "ðŸ”’",
+                icon: "🔒",
                 title: "STRN Suspension",
                 desc: "FBR can suspend your Sales Tax Registration Number, making it illegal to do business.",
               },
               {
-                icon: "ðŸ”Ž",
+                icon: "🔎",
                 title: "Raid Risk",
                 desc: "Non-compliant businesses are flagged for surprise inspections and full tax audits.",
               },
               {
-                icon: "ðŸ“‹",
+                icon: "📋",
                 title: "Mandatory for Tier-1",
                 desc: "Retailers, pharmacies, restaurants, and distributors are legally required to integrate POS with FBR IRIS.",
               },
@@ -276,10 +276,10 @@ export default function FBRCheckerPage() {
           className="rounded-xl p-4 mb-8 flex items-center gap-3"
           style={{ background: "#FEF2F2", border: "1px solid #FCA5A5" }}
         >
-          <span className="text-xl flex-shrink-0">âš ï¸</span>
+          <span className="text-xl flex-shrink-0">⚠️</span>
           <p className="text-sm font-semibold text-red-700">
             FBR is actively conducting inspections in 2026. Non-compliant businesses
-            face fines up to PKR 1,000,000 and STRN suspension. Check now â€” it&apos;s free.
+            face fines up to PKR 1,000,000 and STRN suspension. Check now  it&apos;s free.
           </p>
         </div>
 
@@ -415,7 +415,7 @@ export default function FBRCheckerPage() {
                 cursor: canSubmit ? "pointer" : "not-allowed",
               }}
             >
-              Check My FBR Compliance Score â†’
+              Check My FBR Compliance Score →
             </button>
           </form>
         ) : (
@@ -476,7 +476,7 @@ export default function FBRCheckerPage() {
                 {/* Share result button */}
                 <div className="mt-5 pt-5 border-t border-gray-100">
                   <p className="text-xs text-gray-500 mb-3">
-                    Share your result â€” help other businesses check their compliance:
+                    Share your result  help other businesses check their compliance:
                   </p>
                   <a
                     href={waShareHref}
@@ -498,13 +498,13 @@ export default function FBRCheckerPage() {
               {result.issues.length > 0 && (
                 <div className="bg-white rounded-2xl border border-red-100 p-6">
                   <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="text-red-500 text-lg">âœ—</span>
+                    <span className="text-red-500 text-lg">✗</span>
                     Compliance Issues Found ({result.issues.length})
                   </h3>
                   <ul className="space-y-3">
                     {result.issues.map((issue, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="text-red-400 mt-0.5 flex-shrink-0 font-bold">â—</span>
+                        <span className="text-red-400 mt-0.5 flex-shrink-0 font-bold">●</span>
                         <span className="text-sm text-gray-700">{issue}</span>
                       </li>
                     ))}
@@ -516,13 +516,13 @@ export default function FBRCheckerPage() {
               {result.positives.length > 0 && (
                 <div className="bg-white rounded-2xl border border-green-100 p-6">
                   <h3 className="font-bold text-gray-900 mb-4 flex items-center gap-2">
-                    <span className="text-green-500 text-lg">âœ“</span>
+                    <span className="text-green-500 text-lg">✓</span>
                     What You Have in Place
                   </h3>
                   <ul className="space-y-3">
                     {result.positives.map((p, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="text-green-500 mt-0.5 flex-shrink-0 font-bold">â—</span>
+                        <span className="text-green-500 mt-0.5 flex-shrink-0 font-bold">●</span>
                         <span className="text-sm text-gray-700">{p}</span>
                       </li>
                     ))}
@@ -542,7 +542,7 @@ export default function FBRCheckerPage() {
                 </h2>
                 <p className="text-gray-300 mb-2">
                   Our team will resolve every issue listed above. FBR IRIS integration,
-                  QR invoices, STRN registration â€” all handled in 24 hours.
+                  QR invoices, STRN registration  all handled in 24 hours.
                 </p>
                 <p className="text-gray-500 text-xs mb-6">
                   Your compliance score and issues are pre-filled in the WhatsApp message.
@@ -602,23 +602,23 @@ export default function FBRCheckerPage() {
             {[
               {
                 href: "/blog/fbr-pos-system-pakistan-complete-guide-2026",
-                label: "FBR POS System Pakistan â€“ Complete Guide 2026",
+                label: "FBR POS System Pakistan — Complete Guide 2026",
               },
               {
                 href: "/blog/how-to-register-pos-fbr-pakistan-step-by-step",
-                label: "How to Register POS with FBR Pakistan â€“ Step by Step",
+                label: "How to Register POS with FBR Pakistan — Step by Step",
               },
               {
                 href: "/blog/fbr-e-invoicing-pakistan-explained",
-                label: "FBR e-Invoicing Pakistan Explained â€“ What Every Business Must Know",
+                label: "FBR e-Invoicing Pakistan Explained — What Every Business Must Know",
               },
               {
                 href: "/blog/retail-pos-compliance-pakistan-fbr-penalties-guide",
-                label: "FBR POS Compliance for Retailers â€“ Avoid Penalties in 2026",
+                label: "FBR POS Compliance for Retailers — Avoid Penalties in 2026",
               },
             ].map(({ href, label }) => (
               <li key={href} className="flex items-center gap-2">
-                <span style={{ color: "#F97316" }}>â†’</span>
+                <span style={{ color: "#F97316" }}>→</span>
                 <Link href={href} className="text-sm text-gray-700 hover:text-orange-500 hover:underline">
                   {label}
                 </Link>
@@ -629,7 +629,7 @@ export default function FBRCheckerPage() {
       </div>
 
       <footer className="border-t border-gray-200 mt-8 py-8 text-center text-sm text-gray-500">
-        <p>Â© {new Date().getFullYear()} Phelix ERP Â· FBR-Compliant POS System Pakistan</p>
+        <p>© {new Date().getFullYear()} Phelix ERP . FBR-Compliant POS System Pakistan</p>
         <div className="flex gap-6 justify-center mt-3">
           <Link href="/" className="hover:text-gray-700">Home</Link>
           <Link href="/blog" className="hover:text-gray-700">Blog</Link>
