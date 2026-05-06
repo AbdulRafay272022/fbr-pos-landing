@@ -28,10 +28,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${BASE_URL}/blog/${blog.slug}`,
       images: [
         {
-          url: "/dashboard-screenshot.png",
+          url: blog.heroImage?.url ?? "/dashboard-screenshot.png",
           width: 1200,
           height: 630,
-          alt: blog.title,
+          alt: blog.heroImage?.alt ?? blog.title,
         },
       ],
     },
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: blog.title,
       description: blog.metaDescription,
-      images: ["/dashboard-screenshot.png"],
+      images: [blog.heroImage?.url ?? "/dashboard-screenshot.png"],
     },
     alternates: {
       canonical: `${BASE_URL}/blog/${blog.slug}`,
@@ -69,7 +69,11 @@ export default async function BlogPostPage({ params }: Props) {
   const waShareHref = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
   const blogSchema  = blogPostingSchema(blog, pageUrl);
-  const faqLd      = faqSchema(LANDING_FAQS);
+  // Use the blog's own FAQs if available (AI-generated), fall back to site FAQs
+  const faqSource = blog.faqs && blog.faqs.length > 0
+    ? blog.faqs.map((f) => ({ q: f.question, a: f.answer }))
+    : LANDING_FAQS;
+  const faqLd     = faqSchema(faqSource);
   const breadcrumb  = breadcrumbSchema([
     { name: "Home", url: "/" },
     { name: "Blog", url: "/blog" },
@@ -139,7 +143,53 @@ export default async function BlogPostPage({ params }: Props) {
             {blog.title}
           </h1>
           <p className="text-lg text-gray-500 leading-relaxed">{blog.metaDescription}</p>
+
+          {/* Author byline — E-E-A-T signal */}
+          {blog.authorName && (
+            <div className="flex items-center gap-3 mt-5 pt-5 border-t border-gray-100">
+              <div className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0" style={{ background: "#F97316" }}>
+                {blog.authorName.charAt(0).toUpperCase()}
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-gray-800">
+                  By{" "}
+                  <a
+                    href={`/author/${blog.authorName.toLowerCase().replace(/\s+/g, "-")}`}
+                    className="hover:underline"
+                    style={{ color: "#F97316" }}
+                  >
+                    {blog.authorName}
+                  </a>
+                </p>
+                <p className="text-xs text-gray-400">FBR Compliance Specialist · Phelix ERP</p>
+              </div>
+            </div>
+          )}
         </div>
+
+        {/* Hero image */}
+        {blog.heroImage && (
+          <div className="mb-10 rounded-2xl overflow-hidden">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={blog.heroImage.url}
+              alt={blog.heroImage.alt}
+              className="w-full object-cover"
+              style={{ maxHeight: "420px" }}
+              loading="lazy"
+            />
+            <p className="text-xs text-gray-400 mt-1.5 text-right pr-1">
+              Photo by{" "}
+              <a href={blog.heroImage.photographerUrl} target="_blank" rel="noreferrer nofollow" className="underline hover:text-gray-600">
+                {blog.heroImage.photographer}
+              </a>{" "}
+              on{" "}
+              <a href={blog.heroImage.pexelsUrl} target="_blank" rel="noreferrer nofollow" className="underline hover:text-gray-600">
+                Pexels
+              </a>
+            </p>
+          </div>
+        )}
 
         {/* Top urgency CTA */}
         <div

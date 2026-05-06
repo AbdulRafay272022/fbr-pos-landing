@@ -7,6 +7,7 @@ export type { BlogPost };
 const INDEX_FILE = path.join(process.cwd(), "data", "index.json");
 const BLOGS_DIR  = path.join(process.cwd(), "data", "blogs");
 
+/** Lightweight index entry — no content field, but includes lastUpdated for the update engine */
 type BlogIndex = Omit<BlogPost, "content">;
 
 function readIndex(): BlogIndex[] {

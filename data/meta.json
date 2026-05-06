@@ -1,3 +1,16 @@
 {
-  "lastTopicIndex": 8
+  "lastTopicIndex": -1,
+  "agent": {
+    "isRunning": false,
+    "lockedAt": null,
+    "lockedBy": null
+  },
+  "stats": {
+    "lastScrapeAt": null,
+    "lastGenerateAt": null,
+    "lastUpdateAt": null,
+    "blogsGeneratedTotal": 0,
+    "blogsUpdatedTotal": 0,
+    "keywordsUsedTotal": 0
+  }
 }

@@ -1,8 +1,12 @@
 {
   "crons": [
     {
-      "path": "/api/generate-blog",
-      "schedule": "0 9 * * *"
+      "path": "/api/agent",
+      "schedule": "0 */4 * * *"
+    },
+    {
+      "path": "/api/scrape-keywords",
+      "schedule": "0 1 * * 1"
     }
   ]
 }

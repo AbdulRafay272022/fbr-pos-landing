@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { softwareApplicationSchema, faqSchema, LANDING_FAQS } from "@/lib/schema";
@@ -145,13 +145,60 @@ const CheckIcon = () => (
   </svg>
 );
 
+const screenshotTabs = [
+  {
+    id: "invoice",
+    label: "FBR Invoice",
+    icon: "🧾",
+    src: "/screenshot-invoice.png",
+    alt: "Phelix ERP Sales Invoice with FBR QR code and IRIS integration",
+    caption: "Real-time FBR Invoice with QR code — submitted to IRIS automatically",
+    badge: "FBR Certified",
+    badgeColor: "#16A34A",
+  },
+  {
+    id: "selling",
+    label: "Selling",
+    icon: "🛒",
+    src: "/screenshot-selling.png",
+    alt: "Phelix ERP Selling module dashboard",
+    caption: "Complete Selling module — orders, customers, POS, analytics in one place",
+    badge: "POS Ready",
+    badgeColor: "#2563EB",
+  },
+  {
+    id: "stock",
+    label: "Stock",
+    icon: "📦",
+    src: "/screenshot-stock.png",
+    alt: "Phelix ERP Stock and inventory management",
+    caption: "Live stock tracking — 680+ items, warehouse management, auto deduction on sale",
+    badge: "Live Inventory",
+    badgeColor: "#7C3AED",
+  },
+  {
+    id: "buying",
+    label: "Buying",
+    icon: "🏭",
+    src: "/screenshot-buying.png",
+    alt: "Phelix ERP Buying and procurement module",
+    caption: "Full procurement — purchase orders, supplier management, cost tracking",
+    badge: "Full ERP",
+    badgeColor: "#EA580C",
+  },
+];
+
 export default function LandingPage() {
   const [phone, setPhone] = useState("");
+  const [activeTab, setActiveTab] = useState("invoice");
   const cleanNumber = phone.replace(/\D/g, "").replace(/^0/, "");
   const waHref =
     cleanNumber.length > 5
       ? `https://wa.me/92${cleanNumber}`
       : `https://wa.me/${WA_NUMBER}`;
+
+  const activeScreen = screenshotTabs.find((t) => t.id === activeTab) ?? screenshotTabs[0];
+  const handleTab = useCallback((id: string) => setActiveTab(id), []);
 
   return (
     <>
@@ -320,32 +367,153 @@ export default function LandingPage() {
           ))}
         </div>
 
-        {/* DASHBOARD SCREENSHOT */}
-        <section className="bg-[#F8F9FC] px-6 md:px-10 py-16 text-center">
-          <p className="text-xs tracking-widest uppercase text-[#F97316] font-semibold mb-3">See the system</p>
-          <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1D27] tracking-tight mb-3">
-            Your business at a glance
+        {/* SOFTWARE SCREENSHOTS — TABBED */}
+        <section className="bg-[#F8F9FC] px-6 md:px-10 py-16">
+          <p className="text-xs tracking-widest uppercase text-[#F97316] font-semibold text-center mb-3">Real software, real results</p>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-center text-[#1A1D27] tracking-tight mb-3">
+            See Phelix ERP in action
           </h2>
-          <p className="text-sm text-gray-500 max-w-md mx-auto mb-10">
-            A clean, simple dashboard — inventory, invoices, reports, all in one place.
+          <p className="text-sm text-gray-500 text-center max-w-lg mx-auto mb-10">
+            These are actual screenshots from our live system — not mockups.
+            Everything your business needs, built in one place.
           </p>
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden border border-gray-200 shadow-lg">
-            <div className="bg-[#1A1D27] px-4 py-3 flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-red-400" />
-              <span className="w-3 h-3 rounded-full bg-yellow-400" />
-              <span className="w-3 h-3 rounded-full bg-green-400" />
-              <span className="ml-3 flex-1 bg-white/10 rounded px-3 py-1 text-xs text-white/40">
-                app.phelixerp.com/dashboard
-              </span>
+
+          {/* Tab buttons */}
+          <div className="flex flex-wrap justify-center gap-2 mb-8">
+            {screenshotTabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => handleTab(tab.id)}
+                className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold transition-all"
+                style={
+                  activeTab === tab.id
+                    ? { background: "#1A1D27", color: "white", boxShadow: "0 2px 8px rgba(0,0,0,0.15)" }
+                    : { background: "white", color: "#6B7280", border: "1.5px solid #E5E7EB" }
+                }
+              >
+                <span>{tab.icon}</span>
+                {tab.label}
+                {activeTab === tab.id && (
+                  <span
+                    className="text-xs font-bold px-2 py-0.5 rounded-full"
+                    style={{ background: tab.badgeColor, color: "white" }}
+                  >
+                    {tab.badge}
+                  </span>
+                )}
+              </button>
+            ))}
+          </div>
+
+          {/* Screenshot viewer */}
+          <div className="max-w-5xl mx-auto">
+            <div className="rounded-2xl overflow-hidden border border-gray-200 shadow-xl">
+              {/* Browser chrome */}
+              <div className="bg-[#1A1D27] px-4 py-3 flex items-center gap-2">
+                <span className="w-3 h-3 rounded-full bg-red-400" />
+                <span className="w-3 h-3 rounded-full bg-yellow-400" />
+                <span className="w-3 h-3 rounded-full bg-green-400" />
+                <span className="ml-3 flex-1 bg-white/10 rounded px-3 py-1 text-xs text-white/40 flex items-center gap-2">
+                  <span>🔒</span> app.phelixerp.com / {activeTab}
+                </span>
+                <span
+                  className="text-xs font-bold px-2 py-1 rounded-full"
+                  style={{ background: activeScreen.badgeColor + "33", color: activeScreen.badgeColor }}
+                >
+                  {activeScreen.badge}
+                </span>
+              </div>
+              {/* Screenshot */}
+              <div className="relative bg-gray-100" style={{ minHeight: "400px" }}>
+                <Image
+                  key={activeTab}
+                  src={activeScreen.src}
+                  alt={activeScreen.alt}
+                  width={1400}
+                  height={800}
+                  className="w-full object-cover object-top"
+                  priority
+                />
+              </div>
+              {/* Caption bar */}
+              <div className="bg-white border-t border-gray-100 px-5 py-3 flex items-center justify-between gap-4 flex-wrap">
+                <p className="text-sm text-gray-600 font-medium">{activeScreen.caption}</p>
+                <a
+                  href={`https://wa.me/${WA_NUMBER}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() => trackWAClick("screenshot_section")}
+                  className="flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-lg text-xs font-semibold no-underline hover:opacity-90 transition-opacity shrink-0"
+                >
+                  <WhatsAppIcon size={13} />
+                  Get a live demo
+                </a>
+              </div>
             </div>
-            <Image
-              src="/dashboard-screenshot.png"
-              alt="Phelix ERP dashboard – FBR POS system showing invoices and inventory"
-              width={1200}
-              height={700}
-              className="w-full object-cover"
-              priority
-            />
+          </div>
+        </section>
+
+        {/* FBR PRINTED INVOICE PROOF */}
+        <section className="bg-white border-t border-gray-100 px-6 md:px-10 py-16">
+          <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
+            {/* Left — text */}
+            <div className="flex-1">
+              <div className="inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-full px-4 py-1.5 text-xs font-semibold text-green-700 mb-5">
+                <span>✅</span> FBR Digital Invoicing System — Certified
+              </div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-[#1A1D27] tracking-tight mb-4">
+                Every sale generates a<br />
+                <span className="text-[#F97316]">real FBR invoice</span> with QR code
+              </h2>
+              <p className="text-sm text-gray-500 leading-relaxed mb-6">
+                When your customer pays, Phelix ERP automatically generates a
+                Sales Tax Invoice with a unique FBR verification QR code.
+                The invoice is submitted to FBR IRIS in real time — no manual work.
+              </p>
+              <ul className="space-y-3 mb-8">
+                {[
+                  "FBR Invoice Number assigned automatically",
+                  "QR code verifiable by customer on FBR website",
+                  "GST calculated correctly — 17% or custom rate",
+                  "Amount in words auto-generated in PKR",
+                  "Printable PDF + WhatsApp to customer in one click",
+                  "All invoices stored in cloud — audit-ready anytime",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3 text-sm text-gray-700">
+                    <span className="w-5 h-5 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <CheckIcon />
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <a
+                href={`https://wa.me/${WA_NUMBER}`}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => trackWAClick("invoice_section")}
+                className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-lg text-sm font-semibold no-underline hover:opacity-90 transition-opacity"
+              >
+                <WhatsAppIcon size={16} />
+                See a live invoice demo
+              </a>
+            </div>
+
+            {/* Right — printed invoice image */}
+            <div className="flex-shrink-0 w-full md:w-80">
+              <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200 rotate-1 hover:rotate-0 transition-transform duration-300">
+                <Image
+                  src="/screenshot-print.png"
+                  alt="Phelix ERP printed Sales Tax Invoice with FBR QR code and FBR Digital Invoicing System logo"
+                  width={640}
+                  height={900}
+                  className="w-full object-cover"
+                />
+              </div>
+              <p className="text-xs text-center text-gray-400 mt-3">
+                Actual Phelix ERP invoice — FBR Digital Invoicing System certified
+              </p>
+            </div>
           </div>
         </section>
 

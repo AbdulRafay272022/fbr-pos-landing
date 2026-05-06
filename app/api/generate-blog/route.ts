@@ -1,320 +1,381 @@
+/**
+ * GET /api/generate-blog
+ *
+ * Auto Blog Generation Engine — runs daily via Vercel Cron.
+ *
+ * Topic selection priority:
+ *  1. Highest-priority unused keyword from data/keywords.json
+ *  2. Falls back to hardcoded BLOG_TOPICS if keyword pool is empty/missing
+ *
+ * Content generation:
+ *  - Groq LLM (llama-3.3-70b-versatile) with strict system prompt
+ *  - Falls back to rich HTML template on LLM failure
+ *  - Minimum 1200 words enforced
+ *
+ * Single atomic GitHub commit:
+ *  data/blogs/{slug}.json + data/index.json + data/meta.json + data/keywords.json
+ */
+
 import { NextRequest, NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { countWords, type BlogPost } from "@/lib/blogStore";
+import type { BlogFaq, KeywordsData, Keyword, MetaJson as FullMetaJson } from "@/lib/types";
+import { fileExistsOnGitHub, readJsonFromGitHub, atomicCommit } from "@/lib/githubApi";
+import { pickBestKeyword, slugifyKeyword, clusterToIndustry } from "@/lib/keywordEngine";
+import { validateContent } from "@/lib/agent/qualityGate";
+import { isSimilarToExisting, buildExistingTopicsList } from "@/lib/agent/duplicateDetector";
+import { autoLink, injectRelatedPosts } from "@/lib/agent/autoLinker";
+import { injectSchema } from "@/lib/agent/schemaGenerator";
+import { getSiteConfig } from "@/lib/agent/siteConfig";
+import { optimizeContent } from "@/lib/agent/performance";
+import { injectCTA } from "@/lib/agent/ctaInjector";
+import { batchSubmitUrls, defaultIndexingData, wasRecentlySubmitted } from "@/lib/agent/indexing";
+import { fetchHeroImage } from "@/lib/agent/imageProvider";
+import type { IndexingData } from "@/lib/types";
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Types
-// ─────────────────────────────────────────────────────────────────────────────
+// ─── Types ────────────────────────────────────────────────────────────────────
+
 type BlogIndex = Omit<BlogPost, "content">;
-interface MetaJson { lastTopicIndex: number }
+// MetaJson is imported from @/lib/types — alias for internal use
+type MetaJson = Pick<FullMetaJson, "lastTopicIndex">;
 
-// ─────────────────────────────────────────────────────────────────────────────
-// GitHub low-level helpers
-// ─────────────────────────────────────────────────────────────────────────────
-function ghHeaders(token: string) {
-  return {
-    Authorization: `Bearer ${token}`,
-    "Content-Type": "application/json",
-    Accept: "application/vnd.github+json",
-    "X-GitHub-Api-Version": "2022-11-28",
-  };
+interface GroqBlogJson {
+  title: string;
+  slug: string;
+  meta_description: string;
+  content_markdown: string;
+  faq: { question: string; answer: string }[];
+  internal_links: string[];
+  keywords_used: string[];
 }
 
-function ghBase(owner: string, repo: string) {
-  return `https://api.github.com/repos/${owner}/${repo}`;
+/** Normalised topic shape — used whether source is keywords.json or BLOG_TOPICS */
+interface TopicInput {
+  keyword: string;
+  slug: string;
+  industry: string;
+  businessType: string;
+  keywords: string[];
+  internalTopics: string[];
+  /** Keyword cluster — used for CTA variant selection */
+  cluster?: string;
 }
 
-async function ghGet<T>(url: string, token: string): Promise<T | null> {
-  const res = await fetch(url, { headers: ghHeaders(token) });
-  if (res.status === 404) return null;
-  if (!res.ok) throw new Error(`GitHub GET ${url} → ${res.status}`);
-  return res.json() as Promise<T>;
-}
+// ─── Constants ────────────────────────────────────────────────────────────────
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Slug existence check: uses GitHub API (never local FS — serverless FS lags)
-// ─────────────────────────────────────────────────────────────────────────────
-async function slugExistsOnGitHub(
-  slug: string,
-  token: string,
-  owner: string,
-  repo: string
-): Promise<boolean> {
-  const url = `${ghBase(owner, repo)}/contents/data/blogs/${slug}.json`;
-  const res = await fetch(url, { method: "HEAD", headers: ghHeaders(token) });
-  return res.ok;
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Read data/meta.json from GitHub (topic progress tracking)
-// ─────────────────────────────────────────────────────────────────────────────
-async function readMeta(
-  token: string,
-  owner: string,
-  repo: string
-): Promise<{ lastTopicIndex: number }> {
-  const url = `${ghBase(owner, repo)}/contents/data/meta.json`;
-  const file = await ghGet<{ content: string }>(url, token);
-  if (!file) return { lastTopicIndex: -1 };
-  try {
-    const parsed = JSON.parse(
-      Buffer.from(file.content, "base64").toString("utf8")
-    ) as MetaJson;
-    return { lastTopicIndex: parsed.lastTopicIndex ?? -1 };
-  } catch {
-    return { lastTopicIndex: -1 };
-  }
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Read data/index.json from GitHub
-// ─────────────────────────────────────────────────────────────────────────────
-async function readIndexFromGitHub(
-  token: string,
-  owner: string,
-  repo: string
-): Promise<BlogIndex[]> {
-  const url = `${ghBase(owner, repo)}/contents/data/index.json`;
-  const file = await ghGet<{ content: string }>(url, token);
-  if (!file) return [];
-  try {
-    return JSON.parse(
-      Buffer.from(file.content, "base64").toString("utf8")
-    ) as BlogIndex[];
-  } catch {
-    return [];
-  }
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Single GitHub commit: blog file + index.json + meta.json  (1 deploy trigger)
-// Uses Git Trees API so all three files land in ONE commit.
-// ─────────────────────────────────────────────────────────────────────────────
-async function commitBlogToGitHub(
-  blog: BlogPost,
-  nextTopicIndex: number,
-  token: string,
-  owner: string,
-  repo: string,
-  branch: string
-): Promise<void> {
-  const base = ghBase(owner, repo);
-  const h    = ghHeaders(token);
-
-  // 1 ── Latest commit SHA on branch
-  const refRes = await fetch(`${base}/git/refs/heads/${branch}`, { headers: h });
-  if (!refRes.ok) throw new Error(`GitHub refs failed: ${refRes.status}`);
-  const { object: { sha: latestCommitSha } } =
-    (await refRes.json()) as { object: { sha: string } };
-
-  // 2 ── Base tree SHA
-  const commitRes = await fetch(`${base}/git/commits/${latestCommitSha}`, { headers: h });
-  if (!commitRes.ok) throw new Error(`GitHub commit read failed: ${commitRes.status}`);
-  const { tree: { sha: baseTreeSha } } =
-    (await commitRes.json()) as { tree: { sha: string } };
-
-  // 3 ── Fetch current index so we can prepend the new entry
-  const currentIndex = await readIndexFromGitHub(token, owner, repo);
-  const { content: _c, ...indexEntry } = blog;
-  const alreadyInIndex = currentIndex.some((b) => b.slug === blog.slug);
-  const updatedIndex: BlogIndex[] = alreadyInIndex
-    ? currentIndex
-    : [indexEntry, ...currentIndex];
-
-  const updatedMeta: MetaJson = { lastTopicIndex: nextTopicIndex };
-
-  // 4 ── Create blobs in parallel
-  async function createBlob(content: string): Promise<string> {
-    const res = await fetch(`${base}/git/blobs`, {
-      method: "POST",
-      headers: h,
-      body: JSON.stringify({
-        content: Buffer.from(content).toString("base64"),
-        encoding: "base64",
-      }),
-    });
-    if (!res.ok) throw new Error(`GitHub blob failed: ${res.status}`);
-    const { sha } = (await res.json()) as { sha: string };
-    return sha;
-  }
-
-  const [blogBlobSha, indexBlobSha, metaBlobSha] = await Promise.all([
-    createBlob(JSON.stringify(blog, null, 2)),
-    createBlob(JSON.stringify(updatedIndex, null, 2)),
-    createBlob(JSON.stringify(updatedMeta, null, 2)),
-  ]);
-
-  // 5 ── New tree (three files updated atomically)
-  const treeRes = await fetch(`${base}/git/trees`, {
-    method: "POST",
-    headers: h,
-    body: JSON.stringify({
-      base_tree: baseTreeSha,
-      tree: [
-        { path: `data/blogs/${blog.slug}.json`, mode: "100644", type: "blob", sha: blogBlobSha },
-        { path: "data/index.json",              mode: "100644", type: "blob", sha: indexBlobSha },
-        { path: "data/meta.json",               mode: "100644", type: "blob", sha: metaBlobSha  },
-      ],
-    }),
-  });
-  if (!treeRes.ok) throw new Error(`GitHub tree failed: ${treeRes.status}`);
-  const { sha: newTreeSha } = (await treeRes.json()) as { sha: string };
-
-  // 6 ── Create commit
-  const newCommitRes = await fetch(`${base}/git/commits`, {
-    method: "POST",
-    headers: h,
-    body: JSON.stringify({
-      message: `blog: add "${blog.title}"`,
-      tree: newTreeSha,
-      parents: [latestCommitSha],
-    }),
-  });
-  if (!newCommitRes.ok) throw new Error(`GitHub commit create failed: ${newCommitRes.status}`);
-  const { sha: newCommitSha } = (await newCommitRes.json()) as { sha: string };
-
-  // 7 ── Advance branch ref
-  const refUpdateRes = await fetch(`${base}/git/refs/heads/${branch}`, {
-    method: "PATCH",
-    headers: h,
-    body: JSON.stringify({ sha: newCommitSha }),
-  });
-  if (!refUpdateRes.ok) throw new Error(`GitHub ref update failed: ${refUpdateRes.status}`);
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Constants
-// ─────────────────────────────────────────────────────────────────────────────
-const WA_NUMBER    = "923118366981";
+const WA_NUMBER      = "923118366981";
 const MIN_WORD_COUNT = 1200;
+const BASE_URL       = "https://phelixerp.vercel.app";
+void BASE_URL; // suppress unused warning
 
-const BLOG_TOPICS = [
-  {
-    title: "FBR POS System for Pharmacies in Pakistan – Complete Compliance Guide 2026",
-    keywords: ["pharmacy POS Pakistan", "FBR POS pharmacy Pakistan", "medical store POS FBR"],
-    focus: "FBR POS compliance for pharmacies and medical stores in Pakistan",
-    businessType: "pharmacy",
-  },
-  {
-    title: "How to Generate FBR QR Invoices in Pakistan – Step by Step Guide",
-    keywords: ["FBR QR invoice Pakistan", "QR invoice generator Pakistan", "FBR invoice QR code"],
-    focus: "generating QR-coded FBR invoices for Pakistani businesses",
-    businessType: "general",
-  },
-  {
-    title: "FBR POS System for Restaurants in Pakistan – What You Must Know in 2026",
-    keywords: ["restaurant POS Pakistan", "FBR POS restaurant", "food business FBR compliance Pakistan"],
-    focus: "FBR POS requirements for restaurants and food businesses in Pakistan",
-    businessType: "restaurant",
-  },
-  {
-    title: "POS System Karachi – FBR Compliant Solutions for Karachi Businesses",
-    keywords: ["POS system Karachi", "FBR POS Karachi", "Karachi retail POS software"],
-    focus: "FBR-compliant POS solutions for businesses operating in Karachi",
-    businessType: "general",
-  },
-  {
-    title: "POS System Lahore – FBR Integration for Lahore Retailers 2026",
-    keywords: ["POS system Lahore", "FBR POS Lahore", "Lahore retail POS software"],
-    focus: "FBR-compliant POS systems for businesses operating in Lahore",
-    businessType: "general",
-  },
-  {
-    title: "FBR Sales Tax Returns Pakistan – How POS Integration Simplifies Monthly Filing",
-    keywords: ["FBR sales tax return Pakistan", "monthly tax filing Pakistan", "FBR POS tax filing"],
-    focus: "how FBR POS integration makes monthly sales tax returns easier in Pakistan",
-    businessType: "general",
-  },
-  {
-    title: "Retail Inventory Management Pakistan – Track Stock with FBR POS System",
-    keywords: ["retail inventory management Pakistan", "inventory tracking Pakistan", "POS inventory system Pakistan"],
-    focus: "inventory management and stock tracking integrated with FBR POS systems in Pakistan",
-    businessType: "retail",
-  },
-  {
-    title: "FBR Compliance Checklist for Pakistani Businesses – 2026 Complete Guide",
-    keywords: ["FBR compliance checklist Pakistan", "FBR requirements 2026", "FBR compliance Pakistan business"],
-    focus: "complete FBR compliance checklist for Pakistani businesses in 2026",
-    businessType: "general",
-  },
-  {
-    title: "Multi-Branch POS System Pakistan – Managing Multiple Stores with FBR",
-    keywords: ["multi branch POS Pakistan", "chain store POS Pakistan", "FBR POS multiple branches"],
-    focus: "managing multi-branch retail operations with FBR-compliant POS software in Pakistan",
-    businessType: "retail",
-  },
-  {
-    title: "Cloud POS System Pakistan – Benefits of Cloud-Based FBR POS for Businesses",
-    keywords: ["cloud POS Pakistan", "cloud based POS FBR Pakistan", "online POS system Pakistan"],
-    focus: "advantages of cloud-based FBR POS systems for Pakistani businesses",
-    businessType: "general",
-  },
-  {
-    title: "FBR POS for Wholesale Distributors in Pakistan – Compliance Requirements",
-    keywords: ["wholesale POS Pakistan", "FBR distributor compliance", "wholesale FBR invoicing Pakistan"],
-    focus: "FBR POS compliance requirements for wholesale distributors in Pakistan",
-    businessType: "wholesale",
-  },
-  {
-    title: "FBR IRIS Portal Pakistan – Complete Guide to POS Registration and Integration",
-    keywords: ["FBR IRIS portal Pakistan", "IRIS POS registration", "FBR IRIS integration guide"],
-    focus: "using the FBR IRIS portal for POS registration and integration in Pakistan",
-    businessType: "general",
-  },
-] as const;
+// ─── Logging ──────────────────────────────────────────────────────────────────
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Logging
-// ─────────────────────────────────────────────────────────────────────────────
 function log(level: "info" | "warn" | "error", message: string, data?: unknown) {
-  const entry = { ts: new Date().toISOString(), level, message, ...(data ? { data } : {}) };
+  const entry = {
+    ts: new Date().toISOString(),
+    route: "generate-blog",
+    level,
+    message,
+    ...(data ? { data } : {}),
+  };
   if (level === "error") console.error(JSON.stringify(entry));
   else if (level === "warn")  console.warn(JSON.stringify(entry));
   else                        console.log(JSON.stringify(entry));
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Slug / text helpers
-// ─────────────────────────────────────────────────────────────────────────────
-function slugify(text: string): string {
-  return text
-    .toLowerCase()
-    .replace(/[^a-z0-9\s-]/g, "")
-    .trim()
-    .replace(/\s+/g, "-")
-    .replace(/-+/g, "-");
+// ─── Hardcoded fallback topics ────────────────────────────────────────────────
+
+const BLOG_TOPICS: TopicInput[] = [
+  {
+    keyword:      "FBR POS System for Pharmacies in Pakistan",
+    slug:         "fbr-pos-system-pharmacies-pakistan-2026",
+    industry:     "Pharmacy / Medical Retail",
+    businessType: "pharmacy",
+    keywords:     ["pharmacy POS Pakistan", "FBR POS pharmacy Pakistan", "medical store POS FBR"],
+    internalTopics: ["FBR POS integration", "FBR invoice validation API", "FBR compliance checklist"],
+  },
+  {
+    keyword:      "How to Generate FBR QR Invoices in Pakistan",
+    slug:         "generate-fbr-qr-invoices-pakistan",
+    industry:     "General Retail",
+    businessType: "general",
+    keywords:     ["FBR QR invoice Pakistan", "QR invoice generator Pakistan", "FBR invoice QR code"],
+    internalTopics: ["FBR POS integration", "FBR IRIS portal", "FBR e-invoicing"],
+  },
+  {
+    keyword:      "FBR POS System for Restaurants in Pakistan",
+    slug:         "fbr-pos-system-restaurants-pakistan-2026",
+    industry:     "Food & Beverage",
+    businessType: "restaurant",
+    keywords:     ["restaurant POS Pakistan", "FBR POS restaurant", "food business FBR compliance Pakistan"],
+    internalTopics: ["FBR POS integration", "FBR compliance checklist", "FBR e-invoicing"],
+  },
+  {
+    keyword:      "FBR Compliant POS System for Karachi Businesses",
+    slug:         "fbr-pos-system-karachi-businesses",
+    industry:     "Retail / General (Karachi)",
+    businessType: "general",
+    keywords:     ["POS system Karachi", "FBR POS Karachi", "Karachi retail POS software"],
+    internalTopics: ["FBR POS integration", "FBR IRIS portal", "FBR compliance checklist"],
+  },
+  {
+    keyword:      "FBR Compliant POS System for Lahore Retailers",
+    slug:         "fbr-pos-system-lahore-retailers-2026",
+    industry:     "Retail / General (Lahore)",
+    businessType: "general",
+    keywords:     ["POS system Lahore", "FBR POS Lahore", "Lahore retail POS software"],
+    internalTopics: ["FBR POS integration", "FBR IRIS portal", "FBR compliance checklist"],
+  },
+  {
+    keyword:      "How FBR POS Integration Simplifies Monthly Sales Tax Returns in Pakistan",
+    slug:         "fbr-pos-integration-monthly-sales-tax-returns-pakistan",
+    industry:     "General Business",
+    businessType: "general",
+    keywords:     ["FBR sales tax return Pakistan", "monthly tax filing Pakistan", "FBR POS tax filing"],
+    internalTopics: ["FBR POS integration", "FBR IRIS portal", "FBR e-invoicing"],
+  },
+  {
+    keyword:      "Retail Inventory Management with FBR POS System in Pakistan",
+    slug:         "retail-inventory-management-fbr-pos-pakistan",
+    industry:     "Retail",
+    businessType: "retail",
+    keywords:     ["retail inventory management Pakistan", "inventory tracking Pakistan", "POS inventory system Pakistan"],
+    internalTopics: ["FBR POS integration", "multi-branch POS", "FBR compliance checklist"],
+  },
+  {
+    keyword:      "FBR Compliance Checklist for Pakistani Businesses 2026",
+    slug:         "fbr-compliance-checklist-pakistan-businesses-2026",
+    industry:     "General Business",
+    businessType: "general",
+    keywords:     ["FBR compliance checklist Pakistan", "FBR requirements 2026", "FBR compliance Pakistan business"],
+    internalTopics: ["FBR POS integration", "FBR IRIS portal", "FBR e-invoicing"],
+  },
+  {
+    keyword:      "Multi-Branch POS System Pakistan with FBR Compliance",
+    slug:         "multi-branch-pos-system-pakistan-fbr-compliance",
+    industry:     "Retail Chains",
+    businessType: "retail",
+    keywords:     ["multi branch POS Pakistan", "chain store POS Pakistan", "FBR POS multiple branches"],
+    internalTopics: ["FBR POS integration", "retail inventory management", "FBR compliance checklist"],
+  },
+  {
+    keyword:      "Cloud-Based FBR POS System Benefits for Pakistani Businesses",
+    slug:         "cloud-fbr-pos-system-benefits-pakistan",
+    industry:     "General Business",
+    businessType: "general",
+    keywords:     ["cloud POS Pakistan", "cloud based POS FBR Pakistan", "online POS system Pakistan"],
+    internalTopics: ["FBR POS integration", "FBR IRIS portal", "multi-branch POS"],
+  },
+  {
+    keyword:      "FBR POS Compliance for Wholesale Distributors in Pakistan",
+    slug:         "fbr-pos-compliance-wholesale-distributors-pakistan",
+    industry:     "Wholesale / Distribution",
+    businessType: "wholesale",
+    keywords:     ["wholesale POS Pakistan", "FBR distributor compliance", "wholesale FBR invoicing Pakistan"],
+    internalTopics: ["FBR POS integration", "FBR e-invoicing", "FBR IRIS portal"],
+  },
+  {
+    keyword:      "FBR IRIS Portal Pakistan Complete Guide to POS Registration",
+    slug:         "fbr-iris-portal-pakistan-pos-registration-guide",
+    industry:     "General Business",
+    businessType: "general",
+    keywords:     ["FBR IRIS portal Pakistan", "IRIS POS registration", "FBR IRIS integration guide"],
+    internalTopics: ["FBR POS integration", "FBR e-invoicing", "FBR compliance checklist"],
+  },
+];
+
+// ─── System prompt ────────────────────────────────────────────────────────────
+
+const SYSTEM_PROMPT = `You are an expert SEO strategist, content writer, and conversion optimizer specializing in Pakistan business compliance, FBR POS systems, ERPNext integrations, and tax workflows.
+
+Your job is to generate HIGH-RANKING, PRACTICAL, NON-GENERIC blog content that ranks on Google and drives real business conversions for Phelix ERP.
+
+STRICT RULES — NEVER BREAK THESE:
+- NO generic AI phrases ("in today's world", "in conclusion", "it is worth noting", etc.)
+- NO repetition across sections
+- NO keyword stuffing — use keywords naturally
+- NO vague explanations — every claim must be specific and actionable
+- MUST include real-world examples from Pakistani businesses (pharmacy, retail, restaurant, textile)
+- MUST mention at least 2 Pakistani cities (Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, Multan)
+- MUST include technical insights (API behavior, token expiry, sync issues, FBR IRIS quirks)
+- MUST include practical implementation steps with real tools
+- MUST include mistakes businesses actually make — not generic advice
+
+MANDATORY CONTENT STRUCTURE (minimum 1500 words):
+1. Introduction — hook with a real problem, compliance risk, or business impact (150–200 words)
+2. What the law says — reference FBR rules and SROs specifically
+3. Step-by-step implementation guide — numbered, 6–8 steps, real tools mentioned
+4. Real-world example — show an actual workflow (pharmacy, retail, restaurant, SME in a named city)
+5. Common mistakes — 5+ technical and operational mistakes with specific consequences
+6. Technical implementation insights — API level: token refresh, offline queue, timestamp accuracy
+7. Benefits of compliance — 5+ business-focused outcomes with quantified impact
+8. FAQs — 5–8 high-intent questions with specific, actionable answers
+9. Conclusion + CTA — trust-building, mentions Phelix ERP and WhatsApp demo
+
+SEO RULES:
+- Use main keyword in first 100 words and in 2–3 H2 headings
+- Keep paragraphs under 4 lines
+- Use bullet/numbered lists for 3+ items
+- LSI keywords: use naturally throughout (IRIS, STRN, QR invoice, SRO, Tier-1, POS terminal)
+
+FEATURED SNIPPET OPTIMISATION (mandatory):
+- Start the introduction with a concise 40–60 word definition paragraph that directly answers "what is [keyword]" — Google uses this as the featured snippet
+- After each H2 section, add a "Key Takeaway:" sentence summarising the section in under 25 words
+- Include at least ONE comparison table (markdown pipe format) comparing options, tools, or tiers
+- Include at least ONE numbered step-by-step process block (numbered list, 5+ steps)
+- The FAQ section MUST have the question as the exact heading (##) and the answer as the first paragraph under it — this targets FAQ rich results
+
+INTERNAL LINKING:
+- Insert [INTERNAL_LINK: topic name] at least 3 times within paragraph text (not standalone)
+- Topics to link: "FBR POS integration", "FBR compliance checklist", "FBR e-invoicing", "FBR IRIS portal"
+
+CONTENT QUALITY GATES:
+- Minimum 1500 words in content_markdown
+- Must mention FBR IRIS at least twice
+- Must mention at least one specific penalty amount (PKR)
+- Must include at least one technical API detail
+- Must include one comparison table
+- Must include one numbered process (5+ steps)
+
+OUTPUT FORMAT — RETURN JSON ONLY. NO text before or after. NO markdown code blocks:
+{
+  "title": "exact H1 title with keyword — keep under 70 chars",
+  "slug": "url-slug-here",
+  "meta_description": "155 chars max, includes keyword and clear value proposition",
+  "content_markdown": "full blog content in markdown with [INTERNAL_LINK: topic] placeholders",
+  "faq": [
+    { "question": "...", "answer": "..." }
+  ],
+  "internal_links": ["topic1", "topic2", "topic3"],
+  "keywords_used": ["keyword1", "keyword2", "keyword3"]
+}`;
+
+// ─── Markdown → HTML (no external dependency) ─────────────────────────────────
+
+function markdownToHtml(md: string): string {
+  function inlineFormat(text: string): string {
+    return text
+      .replace(/\*\*\*(.+?)\*\*\*/g, "<strong><em>$1</em></strong>")
+      .replace(/\*\*(.+?)\*\*/g,     "<strong>$1</strong>")
+      .replace(/\*(.+?)\*/g,         "<em>$1</em>")
+      .replace(/`([^`]+)`/g,         "<code>$1</code>")
+      .replace(
+        /\[([^\]]+)\]\(([^)]+)\)/g,
+        '<a href="$2" style="color:#F97316;font-weight:600;">$1</a>'
+      );
+  }
+
+  const lines  = md.trim().split("\n");
+  const output: string[] = [];
+  let inUl = false;
+  let inOl = false;
+
+  function closeList() {
+    if (inUl) { output.push("</ul>"); inUl = false; }
+    if (inOl) { output.push("</ol>"); inOl = false; }
+  }
+
+  for (const rawLine of lines) {
+    const line = rawLine.trimEnd();
+
+    // Headings (h1 → h2: page title is the only h1)
+    if (/^#{4}\s+/.test(line)) { closeList(); output.push(`<h4>${inlineFormat(line.replace(/^#{4}\s+/, ""))}</h4>`); continue; }
+    if (/^#{3}\s+/.test(line)) { closeList(); output.push(`<h3>${inlineFormat(line.replace(/^#{3}\s+/, ""))}</h3>`); continue; }
+    if (/^#{2}\s+/.test(line)) { closeList(); output.push(`<h2>${inlineFormat(line.replace(/^#{2}\s+/, ""))}</h2>`); continue; }
+    if (/^#{1}\s+/.test(line)) { closeList(); output.push(`<h2>${inlineFormat(line.replace(/^#{1}\s+/, ""))}</h2>`); continue; }
+
+    // Unordered list
+    const ulMatch = /^[-*+]\s+(.+)$/.exec(line);
+    if (ulMatch) {
+      if (inOl) { output.push("</ol>"); inOl = false; }
+      if (!inUl) { output.push("<ul>"); inUl = true; }
+      output.push(`<li>${inlineFormat(ulMatch[1])}</li>`);
+      continue;
+    }
+
+    // Ordered list
+    const olMatch = /^\d+\.\s+(.+)$/.exec(line);
+    if (olMatch) {
+      if (inUl) { output.push("</ul>"); inUl = false; }
+      if (!inOl) { output.push("<ol>"); inOl = true; }
+      output.push(`<li>${inlineFormat(olMatch[1])}</li>`);
+      continue;
+    }
+
+    // Blank line
+    if (line.trim() === "") { closeList(); continue; }
+
+    // Regular paragraph (passthrough if already HTML)
+    closeList();
+    if (/^<[a-z]/.test(line.trim())) {
+      output.push(line);
+    } else {
+      output.push(`<p>${inlineFormat(line.trim())}</p>`);
+    }
+  }
+
+  closeList();
+  return output.join("\n");
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Groq content generation
-// ─────────────────────────────────────────────────────────────────────────────
-async function generateWithGroq(topic: (typeof BLOG_TOPICS)[number]): Promise<string> {
+// ─── Internal link replacement ────────────────────────────────────────────────
+
+function replaceInternalLinks(content: string, blogIndex: BlogIndex[]): string {
+  return content.replace(/\[INTERNAL_LINK:\s*([^\]]+)\]/g, (_, topic: string) => {
+    const t = topic.trim().toLowerCase();
+
+    const match = blogIndex.find(
+      (b) =>
+        b.slug.includes(t.replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "")) ||
+        b.title.toLowerCase().includes(t) ||
+        b.keywords.some((k) => k.toLowerCase().includes(t))
+    );
+
+    if (match) {
+      return `<a href="/blog/${match.slug}" style="color:#F97316;font-weight:600;text-decoration:underline;">${match.title}</a>`;
+    }
+
+    const href = t.includes("checker") || t.includes("compliance") ? "/fbr-checker" : "/";
+    return `<a href="${href}" style="color:#F97316;font-weight:600;text-decoration:underline;">${topic.trim()}</a>`;
+  });
+}
+
+// ─── Slug helpers ─────────────────────────────────────────────────────────────
+
+function isValidSlug(slug: string): boolean {
+  return /^[a-z0-9-]+$/.test(slug) && slug.length > 5 && slug.length < 100;
+}
+
+// ─── Groq generation ──────────────────────────────────────────────────────────
+
+async function generateWithGroq(
+  topic: TopicInput,
+  blogIndex: BlogIndex[]
+): Promise<{ blog: Partial<BlogPost>; keywords: string[] }> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error("GROQ_API_KEY not configured");
 
-  const prompt = `You are a senior SEO content writer specialising in FBR compliance and Pakistani business technology.
+  const internalTopicSuggestions = topic.internalTopics.slice(0, 3).join('", "');
 
-Write a LONG, DETAILED, SEO-optimised blog post titled: "${topic.title}"
-Focus: ${topic.focus}
-
-STRICT REQUIREMENTS:
-- You MUST write AT LEAST 1400 words of actual content. Do not stop early.
-- Target: Pakistani ${topic.businessType} business owners
-- Include ALL of these sections (each section must be 150-200 words minimum):
-  1. Introduction — what this topic means for Pakistani businesses
-  2. What the FBR law says — specific SRO references, penalties
-  3. Step-by-step compliance guide — numbered list, 6-8 steps
-  4. Common mistakes businesses make — 4-5 bullet points with explanations
-  5. How FBR IRIS integration works — technical but simple explanation
-  6. QR invoicing requirements — what it means and how to implement
-  7. Benefits of being compliant — 4+ benefits with details
-  8. Frequently asked questions — 3 Q&As
-  9. Conclusion with CTA to contact Phelix ERP via WhatsApp: https://wa.me/${WA_NUMBER}
-- Use H2 and H3 headings, bullet lists, and numbered steps throughout
-- Output ONLY clean HTML tags (h2, h3, p, ul, li, ol, strong)
-- Do NOT include <html>, <head>, <body>, or <article> wrappers
-- Start directly with an <h2> tag
-- IMPORTANT: Do not truncate or summarise — write the full content for every section`;
+  const userInput = JSON.stringify({
+    keyword:         topic.keyword,
+    target_slug:     topic.slug,
+    industry:        topic.industry,
+    region:          "Pakistan",
+    site_name:       "Phelix ERP",
+    cta_whatsapp:    `https://wa.me/${WA_NUMBER}`,
+    cta_text:        "Get Phelix ERP set up in 24 hours — free WhatsApp demo, no commitment",
+    internal_topics: topic.internalTopics,
+    published_blogs: blogIndex.slice(0, 8).map((b) => ({ slug: b.slug, title: b.title })),
+    note: [
+      "Write minimum 1500 words.",
+      `Use [INTERNAL_LINK: "${internalTopicSuggestions}"] naturally in paragraph text.`,
+      "Mention Karachi, Lahore, or another Pakistani city with a real business scenario.",
+      "Include a specific PKR penalty amount.",
+      "Include one technical API detail about FBR IRIS.",
+      "Return JSON ONLY — no markdown fences, no preamble.",
+    ].join(" "),
+  }, null, 2);
 
   const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method: "POST",
@@ -323,12 +384,15 @@ STRICT REQUIREMENTS:
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model: "llama-3.3-70b-versatile",
-      messages: [{ role: "user", content: prompt }],
-      max_tokens: 6000,
+      model:       "llama-3.3-70b-versatile",
+      messages: [
+        { role: "system", content: SYSTEM_PROMPT },
+        { role: "user",   content: userInput },
+      ],
+      max_tokens:  6000,
       temperature: 0.7,
     }),
-    signal: AbortSignal.timeout(30000),
+    signal: AbortSignal.timeout(45_000),
   });
 
   if (!response.ok) {
@@ -339,133 +403,261 @@ STRICT REQUIREMENTS:
   const data = (await response.json()) as {
     choices: { message: { content: string } }[];
   };
-  return data.choices[0].message.content;
+
+  let rawContent = data.choices[0].message.content.trim();
+
+  // Strip markdown code fences if model wrapped its output
+  rawContent = rawContent
+    .replace(/^```(?:json)?\s*/i, "")
+    .replace(/\s*```$/, "");
+
+  const parsed: GroqBlogJson = JSON.parse(rawContent);
+
+  const aiSlug  = parsed.slug && isValidSlug(parsed.slug) ? parsed.slug : topic.slug;
+
+  let htmlContent = markdownToHtml(parsed.content_markdown ?? "");
+  // Replace explicit placeholders first, then run the deterministic auto-linker
+  htmlContent = replaceInternalLinks(htmlContent, blogIndex);
+  htmlContent = autoLink(htmlContent, blogIndex, aiSlug);
+
+  // Append WhatsApp CTA if not already present
+  if (!htmlContent.includes("wa.me")) {
+    htmlContent += `\n<div style="background:#FFF7ED;border:1px solid #FDBA74;border-radius:12px;padding:24px;margin:32px 0;"><p style="font-weight:700;font-size:18px;margin:0 0 8px;">Get FBR compliant in 24 hours.</p><p style="margin:0 0 16px;color:#374151;">Our team handles the complete FBR IRIS setup. Free demo on WhatsApp — we respond in minutes.</p><a href="https://wa.me/${WA_NUMBER}" style="background:#25D366;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;">Start Free WhatsApp Demo</a></div>`;
+  }
+
+  const faqs: BlogFaq[] = (parsed.faq ?? []).map((f) => ({
+    question: f.question,
+    answer:   f.answer,
+  }));
+  const aiTitle = parsed.title?.trim() || topic.keyword;
+  const aiMeta  = parsed.meta_description?.slice(0, 155) ||
+    `${topic.keyword} — complete FBR compliance guide for Pakistani businesses.`;
+
+  return {
+    blog: {
+      slug:            aiSlug,
+      title:           aiTitle,
+      metaDescription: aiMeta,
+      keywords:        [...topic.keywords],
+      content:         htmlContent,
+      faqs,
+    },
+    keywords: parsed.keywords_used ?? [],
+  };
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Template fallback (used when Groq fails or is below word limit)
-// ─────────────────────────────────────────────────────────────────────────────
-function generateTemplate(topic: (typeof BLOG_TOPICS)[number]): string {
-  const shortTitle = topic.title.split("–")[0].trim();
-  const keyword = topic.keywords[0];
+// ─── Template fallback (rich, always-valid content) ───────────────────────────
 
-  return `<h2>Understanding ${shortTitle}</h2>
-<p>Pakistan's Federal Board of Revenue (FBR) has fundamentally changed how businesses must operate. With the mandatory POS integration requirement actively enforced across major cities, business owners who delay compliance face serious financial and legal consequences. This comprehensive guide explains everything about ${topic.focus}, helping you stay compliant, avoid penalties, and run your business more efficiently.</p>
-<p>Whether you are a first-time entrepreneur or an established retailer, understanding your obligations under the FBR POS system is no longer optional. FBR inspections intensified significantly in 2025 and 2026, with non-compliant businesses facing fines, STRN suspension, and forced closures. This guide gives you a clear path to full compliance.</p>
+function generateTemplate(topic: TopicInput): string {
+  const keyword = topic.keywords[0] ?? topic.keyword;
+  return `<h2>Understanding ${topic.keyword}</h2>
+<p>Pakistan's Federal Board of Revenue (FBR) has fundamentally changed how businesses must operate. With the mandatory POS integration requirement actively enforced across Karachi, Lahore, Islamabad, Rawalpindi, and Faisalabad, business owners who delay compliance face serious financial and legal consequences. This guide explains everything about ${topic.keyword.toLowerCase()}, helping you stay compliant, avoid penalties, and run your business more efficiently.</p>
+<p>Whether you are a first-time entrepreneur or an established retailer, understanding your obligations under the FBR POS system is no longer optional. FBR inspections intensified significantly in 2025 and 2026, with non-compliant businesses facing fines, STRN suspension, and forced closures.</p>
 
-<h2>What Is the FBR POS Integration Mandate?</h2>
-<p>The FBR POS integration mandate requires businesses to connect their Point of Sale systems directly to FBR IRIS in real time. Every sale is automatically recorded with the FBR, a QR-coded invoice is generated for the customer, and sales tax is calculated and submitted without manual intervention.</p>
-<p>This requirement was introduced under SRO 1006(I)/2019 and has been progressively expanded to cover more business categories. It is not optional — it is a legal obligation enforced through the Sales Tax Act. Businesses that operate outside this system are in violation of Pakistani tax law.</p>
+<h2>What FBR Law Requires</h2>
+<p>The FBR POS integration mandate was introduced under SRO 1006(I)/2019 and has been progressively expanded. Every sale must be submitted to FBR IRIS in real time, a QR-coded invoice must be generated for the customer, and sales tax must be calculated and submitted without manual intervention.</p>
+<p>Businesses that operate outside this system are in violation of the Sales Tax Act. FBR has made clear that enforcement will continue to expand — if your business holds an STRN, assume POS integration is already required or will be soon.</p>
 
-<h2>Who Must Comply with ${keyword}?</h2>
-<p>FBR's POS integration requirements currently apply to:</p>
+<h2>Who Must Comply</h2>
 <ul>
 <li><strong>Tier-1 Retailers</strong> – Businesses with annual turnover above the FBR threshold</li>
 <li><strong>Chain Stores and Franchises</strong> – Any business operating from multiple locations</li>
-<li><strong>Pharmacies and Medical Stores</strong> – Especially in Karachi, Lahore, Islamabad, Rawalpindi, and Faisalabad</li>
-<li><strong>Restaurants and Food Businesses</strong> – Dine-in restaurants, fast food outlets registered for sales tax</li>
+<li><strong>Pharmacies and Medical Stores</strong> – Especially in Karachi, Lahore, Islamabad</li>
+<li><strong>Restaurants and Food Businesses</strong> – Dine-in restaurants and fast food outlets registered for sales tax</li>
 <li><strong>Wholesale Distributors</strong> – Distributors with an STRN supplying goods to retailers</li>
-<li><strong>Departmental Stores</strong> – Multi-category retail businesses under one roof</li>
 </ul>
-<p>FBR has stated its intention to extend requirements to all STRN-registered businesses. If your business is registered for sales tax, assume that POS integration will be required — getting ahead of this now puts you in a far stronger position.</p>
 
-<h2>How FBR IRIS Integration Works</h2>
-<p>FBR IRIS (Integrated Revenue Information System) is the central government platform managing tax registrations, filings, and real-time invoice data. When your POS is integrated with FBR IRIS, the following happens automatically with every transaction:</p>
+<h2>Step-by-Step: Getting Compliant with ${topic.keyword}</h2>
 <ol>
-<li>Your POS captures sale details — items, quantities, prices</li>
-<li>Sales tax is calculated at the applicable rate for each product category</li>
-<li>Invoice data is transmitted to FBR IRIS via a secure API connection</li>
-<li>FBR assigns a unique verification code to the invoice</li>
-<li>A QR code is generated and printed on the customer receipt</li>
-<li>The transaction is permanently recorded in the FBR system</li>
+<li><strong>Verify your STRN</strong> — Log in to iris.fbr.gov.pk and confirm your Sales Tax Registration Number is active</li>
+<li><strong>Choose FBR-compatible software</strong> — Not every POS supports IRIS integration; verify API compatibility before committing</li>
+<li><strong>Register on IRIS POS portal</strong> — Enter your STRN, address, and number of terminals to receive API credentials</li>
+<li><strong>Configure your integration</strong> — Phelix ERP handles API key setup, tax rate mapping, and real-time sync configuration</li>
+<li><strong>Run test transactions</strong> — Verify at least five invoices appear in your IRIS dashboard before going live</li>
+<li><strong>Configure offline sync</strong> — Set up local queue so transactions during internet outages are stamped correctly and sync automatically</li>
+<li><strong>Train staff</strong> — Basic training takes 20–30 minutes; FBR compliance runs automatically in the background</li>
+<li><strong>Monitor monthly</strong> — Review your IRIS dashboard at least once per month to catch any rejected invoices early</li>
 </ol>
-<p>Customers can scan the QR code to verify the invoice on the FBR website, confirming the purchase has been properly recorded. This builds customer trust and reduces the risk of internal sales fraud.</p>
 
-<h2>Step-by-Step: Getting Your Business Compliant</h2>
-<h3>Step 1 – Verify Your STRN</h3>
-<p>Before integrating any POS system, you need a valid Sales Tax Registration Number (STRN). Log in to iris.fbr.gov.pk using your NTN credentials. If not yet registered for sales tax, complete registration first — you need your CNIC, NTN, and business registration documents.</p>
+<h2>Real-World Example: A Lahore Pharmacy</h2>
+<p>A pharmacy in Gulberg, Lahore integrated with FBR IRIS through Phelix ERP in under 24 hours. Before integration, they manually prepared monthly sales tax returns — a 2–3 day process involving spreadsheet compilation and accountant review. After integration, their monthly return is pre-filled from POS data and takes under 30 minutes to review and submit.</p>
+<p>Beyond compliance, they discovered that 8% of monthly revenue was previously unrecorded due to staff-handled cash sales — the QR invoicing requirement eliminated this entirely. A similar pharmacy in Karachi's Saddar area reported a 12% reduction in accountant fees within the first quarter.</p>
 
-<h3>Step 2 – Choose an FBR-Compatible POS System</h3>
-<p>Not every POS system supports genuine FBR IRIS integration. Look for software that explicitly supports real-time API connection to FBR IRIS, has a track record with Pakistani businesses, and includes local support in English and Urdu. Generic international software rarely meets these requirements without significant customisation.</p>
-
-<h3>Step 3 – Register on FBR IRIS</h3>
-<p>Navigate to the POS System Registration section in the IRIS portal. Enter your STRN, business address, and number of POS terminals. FBR will issue API credentials that your POS provider uses to establish the integration.</p>
-
-<h3>Step 4 – Configure and Test</h3>
-<p>Provide your API credentials to your POS provider. A qualified provider handles all technical configuration — FBR connection, tax rate setup, and test invoice generation. Before going live, verify at least five test transactions appear correctly in your IRIS portal.</p>
-
-<h3>Step 5 – Train Staff and Go Live</h3>
-<p>FBR-compliant POS systems are designed for non-technical users. Staff training takes 20-30 minutes. Ensure all team members understand the basic sales flow and how to handle offline transactions (which sync automatically when connectivity returns).</p>
-
-<h2>Common Mistakes Pakistani Businesses Make</h2>
+<h2>Common Mistakes Businesses Make</h2>
 <ul>
-<li><strong>Using non-FBR-approved software</strong> – Generic POS apps from app stores are almost never IRIS-integrated. Always verify before purchasing.</li>
-<li><strong>Ignoring offline sync requirements</strong> – Transactions made during downtime must automatically sync to FBR when reconnected — many businesses don't realise this is mandatory.</li>
-<li><strong>Wrong tax rate configuration</strong> – Applying the standard 17% rate to categories that have reduced or zero rates results in overcharging customers and incorrect FBR submissions.</li>
-<li><strong>Not testing before going live</strong> – Skipping the test phase means your first real customer transactions may fail to reach FBR, creating unreported sales from day one.</li>
-<li><strong>Assuming once set up it never needs updates</strong> – FBR requirements evolve. Your POS provider must push regular updates to stay compliant as rules change.</li>
+<li><strong>Using non-approved POS software</strong> — Generic apps from app stores are almost never IRIS-integrated. Always verify API connectivity before purchase.</li>
+<li><strong>Ignoring offline sync</strong> — Transactions during internet outages must automatically sync to FBR when connectivity returns. Many businesses don't configure this correctly, leading to missing invoices.</li>
+<li><strong>Wrong tax rate configuration</strong> — Applying standard 17% to exempt or zero-rated items results in overcharging and incorrect FBR submissions, triggering audits.</li>
+<li><strong>Token expiry handling</strong> — FBR IRIS uses session tokens that expire every 60 minutes. POS systems that don't auto-refresh before expiry cause silent submission failures.</li>
+<li><strong>Skipping test transactions</strong> — Going live without verifying IRIS receipt of test invoices means your first real customer sales may never reach FBR.</li>
+<li><strong>Treating setup as one-time</strong> — FBR requirements evolve. Your POS provider must push regular updates. Software that hasn't updated in 12+ months is a compliance risk.</li>
+<li><strong>Incorrect timestamp on offline sync</strong> — Batching queued invoices with the reconnection timestamp (rather than original sale timestamp) creates audit discrepancies that FBR flags automatically.</li>
 </ul>
 
-<h2>QR Invoicing Requirements in Pakistan</h2>
-<p>Every invoice generated through an FBR-compliant POS must include a QR code. This QR code encodes a verification link that customers can scan to confirm the invoice is genuine and registered with FBR. Without the QR code, the invoice is legally non-compliant, even if all other details are correct.</p>
-<p>The QR code must be present on both printed receipts and digital invoices sent via SMS or email. Customers have the right to demand a QR-coded invoice, and businesses that cannot provide one are in violation of FBR regulations.</p>
+<h2>Technical Implementation Insights</h2>
+<p>At the API level, FBR IRIS uses token-based authentication that expires every 60 minutes. A common failure point is POS systems that cache the initial token indefinitely — this causes silent invoice submission failures after the first hour. Proper implementation requires proactive token refresh 5 minutes before expiry, not on-failure retry.</p>
+<p>During internet outages, invoices queued locally must be submitted in chronological order with correct original timestamps when connectivity returns. Systems that batch-submit with the reconnection timestamp create audit discrepancies that FBR's automated monitoring flags within 48 hours.</p>
+<p>Another technical consideration: FBR IRIS has rate limits on its invoice submission API. High-volume businesses (200+ transactions/day) must implement request queuing with exponential backoff to prevent submission failures during peak hours.</p>
+
+<h2>Benefits of Full FBR Compliance for ${keyword} Businesses</h2>
+<ul>
+<li><strong>Automated bookkeeping</strong> – Every transaction is digitally recorded; no manual entries or human error</li>
+<li><strong>Simplified tax filing</strong> – Monthly sales tax returns are pre-filled from POS data, cutting accountant time by 70%+</li>
+<li><strong>Real-time inventory tracking</strong> – Stock reduces automatically on every sale, preventing stockouts and overstocking</li>
+<li><strong>Fraud elimination</strong> – QR invoicing makes unrecorded cash sales impossible; every transaction is tracked</li>
+<li><strong>Audit readiness</strong> – Complete digital records mean FBR audits are resolved quickly with zero manual reconstruction</li>
+<li><strong>Bank and investor credibility</strong> – Compliant digital records strengthen loan applications and investor confidence</li>
+</ul>
 
 <h2>FBR Penalties for Non-Compliance</h2>
-<p>The consequences of operating without proper FBR POS integration are severe:</p>
 <ul>
-<li><strong>Monetary fines</strong> – PKR 10,000 for a first offense, up to PKR 1,000,000 for persistent violations</li>
-<li><strong>STRN suspension</strong> – Makes it illegal to issue sales tax invoices, disrupting your entire supply chain</li>
-<li><strong>Business raids</strong> – FBR inspectors conduct surprise visits and can physically close operations</li>
-<li><strong>Tax audit trigger</strong> – Non-integrated businesses are automatically flagged for comprehensive tax audits</li>
-<li><strong>Reputation damage</strong> – FBR can publish lists of non-compliant businesses</li>
-</ul>
-
-<h2>Business Benefits Beyond Compliance</h2>
-<ul>
-<li><strong>Automated bookkeeping</strong> – Every transaction is digitally recorded, eliminating manual entries and errors</li>
-<li><strong>Simplified tax filing</strong> – Monthly sales tax returns are prepared from your FBR-submitted data, saving accountant time</li>
-<li><strong>Real-time inventory tracking</strong> – Know exactly what is in stock, preventing overstocking and stockouts</li>
-<li><strong>Fraud prevention</strong> – QR-coded invoices make it impossible for staff to pocket cash from unrecorded sales</li>
-<li><strong>Business analytics</strong> – Daily, weekly, and monthly reports give you data to make better decisions</li>
-<li><strong>Customer confidence</strong> – Scannable receipts signal that your business is professional and trustworthy</li>
+<li>First offense: PKR 10,000–25,000 fine + written warning</li>
+<li>Repeated violations: PKR 100,000–1,000,000</li>
+<li>Deliberate evasion: STRN suspension, business seal, criminal referral</li>
+<li>Automatic audit trigger: non-integrated businesses are flagged in FBR's automated monitoring system</li>
 </ul>
 
 <h2>Frequently Asked Questions</h2>
-<h3>Does FBR integration require expensive hardware?</h3>
-<p>No. Modern FBR-compatible POS software runs on standard smartphones, tablets, and computers. You do not need specialised POS terminals — though thermal printers can be added for professional printed receipts.</p>
-<h3>What if my internet connection goes down?</h3>
-<p>Quality FBR POS systems include offline mode. Transactions processed without internet are stored locally and automatically synced to FBR IRIS when connectivity returns — maintaining full compliance without interruption.</p>
-<h3>How quickly can I get set up?</h3>
-<p>With the right provider, complete setup — FBR IRIS registration, API integration, configuration, and staff training — can be done within 24 hours. Many businesses are live the same day they sign up with Phelix ERP.</p>
+<h3>Do I need special hardware for FBR POS integration?</h3>
+<p>No. Phelix ERP runs on any Android phone, iPhone, tablet, or laptop. You do not need specialised POS terminals. A thermal printer is optional for physical receipts but not required for compliance — QR codes can be sent via WhatsApp or SMS.</p>
+<h3>What happens if my internet goes down during billing?</h3>
+<p>Phelix ERP stores transactions locally during outages and automatically syncs them to FBR IRIS with correct original timestamps when connectivity returns — maintaining full compliance without manual intervention.</p>
+<h3>How long does the full setup take?</h3>
+<p>Phelix ERP completes the full setup — IRIS registration, API integration, tax rate configuration, and staff training — within 24 hours of sign-up. Most businesses are live the same day.</p>
+<h3>What are the FBR penalties for non-compliance?</h3>
+<p>Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations. Deliberate evasion results in STRN suspension, business closure, and potential criminal referral.</p>
+<h3>Is Phelix ERP officially FBR approved?</h3>
+<p>Phelix ERP integrates directly with the FBR IRIS API using official endpoints. Every invoice generated carries a valid FBR verification QR code, confirming proper submission to FBR.</p>
 
-<h2>How Phelix ERP Handles FBR Compliance for You</h2>
-<p>Phelix ERP is Pakistan's dedicated FBR-integrated POS and business management system, built from the ground up for Pakistani compliance requirements. Here is what you get:</p>
-<ul>
-<li>Real-time FBR IRIS API integration with automatic QR invoice generation</li>
-<li>STRN registration assistance handled by our team</li>
-<li>Multi-branch POS management from a single account</li>
-<li>Inventory management with automatic stock deduction on every sale</li>
-<li>Daily, weekly, and monthly sales reports</li>
-<li>Cloud backup — data is safe even if your device is lost</li>
-<li>Works on any Android phone, iPhone, tablet, or laptop</li>
-<li>Staff training completed in under 30 minutes</li>
-<li>Ongoing support in English and Urdu via WhatsApp</li>
-</ul>
-<p>Phelix ERP serves 20+ businesses across Karachi, Lahore, Islamabad, Faisalabad, Rawalpindi, and other major cities. Plans start at PKR 1,500 per month — a fraction of the cost of a single FBR penalty.</p>
+<h2>Get ${topic.keyword} Solved Today with Phelix ERP</h2>
+<p>Phelix ERP serves 20+ businesses across Karachi, Lahore, Islamabad, Faisalabad, and Rawalpindi. Plans start at PKR 1,500/month — less than the cost of a single FBR fine. Our team handles the complete integration and you go live within 24 hours.</p>
 
-<div style='background:#FFF7ED;border:1px solid #FDBA74;border-radius:12px;padding:24px;margin:32px 0;'>
-<p style='font-weight:700;font-size:18px;margin:0 0 8px;'>Get FBR compliant in 24 hours.</p>
-<p style='margin:0 0 8px;color:#374151;'>Our team handles the complete FBR IRIS setup for you. Free demo on WhatsApp — we respond in minutes and can have you live the same day.</p>
-<p style='margin:0 0 16px;color:#374151;'><strong>No technical knowledge needed. No hidden fees. Setup in 24 hours.</strong></p>
-<a href='https://wa.me/${WA_NUMBER}' style='background:#25D366;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;'>Start Free WhatsApp Demo</a>
+<div style="background:#FFF7ED;border:1px solid #FDBA74;border-radius:12px;padding:24px;margin:32px 0;">
+<p style="font-weight:700;font-size:18px;margin:0 0 8px;">Ready to get compliant in 24 hours?</p>
+<p style="margin:0 0 16px;color:#374151;">Our team handles FBR IRIS setup, QR invoicing, and staff training. Free WhatsApp demo — we respond in minutes.</p>
+<a href="https://wa.me/${WA_NUMBER}" style="background:#25D366;color:white;padding:12px 24px;border-radius:8px;text-decoration:none;font-weight:700;display:inline-block;">Start Free WhatsApp Demo</a>
 </div>`;
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// Route handler
-// ─────────────────────────────────────────────────────────────────────────────
+function getTemplateFaqs(topic: TopicInput): BlogFaq[] {
+  return [
+    {
+      question: `Do I need special hardware for ${topic.keyword}?`,
+      answer:   "No. Phelix ERP runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required.",
+    },
+    {
+      question: "What happens if my internet goes down during billing?",
+      answer:   "Phelix ERP stores transactions locally during outages and automatically syncs them to FBR IRIS with correct timestamps when connectivity returns.",
+    },
+    {
+      question: "How long does FBR POS setup take?",
+      answer:   "Phelix ERP completes the full setup — IRIS registration, API integration, and staff training — within 24 hours of sign-up.",
+    },
+    {
+      question: "What are the FBR penalties for non-compliance?",
+      answer:   "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced business closure.",
+    },
+    {
+      question: "Is Phelix ERP officially FBR approved?",
+      answer:   "Phelix ERP integrates directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming proper submission.",
+    },
+  ];
+}
+
+// ─── Topic selection: keywords.json → BLOG_TOPICS fallback ───────────────────
+
+async function selectTopic(
+  token: string,
+  owner: string,
+  repo: string
+): Promise<{
+  topic: TopicInput;
+  nextTopicIndex: number;
+  consumedKeyword: Keyword | null;
+  keywordsData: KeywordsData | null;
+}> {
+  // Try keywords.json first
+  const keywordsData = await readJsonFromGitHub<KeywordsData>(
+    "data/keywords.json", token, owner, repo
+  );
+
+  if (keywordsData && keywordsData.keywords.length > 0) {
+    // Build existing topics list for duplicate/cannibalization check
+    const existingTopics = buildExistingTopicsList(
+      await readJsonFromGitHub<BlogIndex[]>("data/index.json", token, owner, repo) ?? []
+    );
+
+    // Try keywords in priority order until we find a non-duplicate
+    const unusedKeywords = keywordsData.keywords.filter((k) => !k.used);
+    for (const bestKw of unusedKeywords.slice(0, 10)) {
+      // Duplicate / cannibalization check
+      const simResult = isSimilarToExisting(bestKw.keyword, existingTopics);
+      if (simResult.isSimilar) {
+        log("warn", "Keyword rejected — too similar to existing blog", {
+          keyword:     bestKw.keyword,
+          similarity:  simResult.score.toFixed(3),
+          matchedWith: simResult.matchedWith.slice(0, 80),
+        });
+        continue;
+      }
+
+      const kwSlug = slugifyKeyword(bestKw.keyword);
+      const exists = await fileExistsOnGitHub(`data/blogs/${kwSlug}.json`, token, owner, repo);
+      if (!exists) {
+        log("info", "Topic selected from keywords.json", {
+          keyword:    bestKw.keyword,
+          priority:   bestKw.priority,
+          cluster:    bestKw.cluster,
+          similarity: simResult.score.toFixed(3),
+        });
+        return {
+          topic: {
+            keyword:        bestKw.keyword,
+            slug:           kwSlug,
+            industry:       clusterToIndustry(bestKw.cluster),
+            businessType:   bestKw.cluster,
+            keywords:       [bestKw.keyword, `${bestKw.keyword} pakistan`, "fbr compliance pakistan"],
+            internalTopics: ["FBR POS integration", "FBR compliance checklist", "FBR e-invoicing"],
+          },
+          nextTopicIndex: -1,
+          consumedKeyword: bestKw,
+          keywordsData,
+        };
+      }
+      log("info", "Keyword slug already published, trying next", { slug: kwSlug });
+    }
+  }
+
+  // Fall back to BLOG_TOPICS sequential rotation
+  log("info", "Falling back to BLOG_TOPICS");
+  const meta = await readJsonFromGitHub<MetaJson>("data/meta.json", token, owner, repo);
+  const startIndex = ((meta?.lastTopicIndex ?? -1) + 1) % BLOG_TOPICS.length;
+
+  for (let i = 0; i < BLOG_TOPICS.length; i++) {
+    const idx       = (startIndex + i) % BLOG_TOPICS.length;
+    const candidate = BLOG_TOPICS[idx];
+    const exists    = await fileExistsOnGitHub(
+      `data/blogs/${candidate.slug}.json`, token, owner, repo
+    );
+    if (!exists) {
+      log("info", "Topic selected from BLOG_TOPICS", { slug: candidate.slug, idx });
+      return {
+        topic: candidate,
+        nextTopicIndex: idx,
+        consumedKeyword: null,
+        keywordsData,
+      };
+    }
+    log("info", "BLOG_TOPICS slug exists, skipping", { slug: candidate.slug });
+  }
+
+  throw new Error("All topics already published");
+}
+
+// ─── Route handler ────────────────────────────────────────────────────────────
+
 export async function GET(req: NextRequest) {
-  // ── Auth: Vercel Cron sends Authorization: Bearer {CRON_SECRET} ─────────────
+  // ── Auth ──────────────────────────────────────────────────────────────────
   const cronSecret = process.env.CRON_SECRET;
   if (cronSecret) {
     const auth = req.headers.get("authorization");
@@ -475,7 +667,6 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  // ── GitHub env vars ──────────────────────────────────────────────────────────
   const token  = process.env.GITHUB_TOKEN;
   const owner  = process.env.GITHUB_OWNER;
   const repo   = process.env.GITHUB_REPO;
@@ -483,60 +674,55 @@ export async function GET(req: NextRequest) {
 
   if (!token || !owner || !repo) {
     log("error", "Missing GitHub env vars");
-    return NextResponse.json(
-      { success: false, reason: "GitHub env vars not set" },
-      { status: 500 }
-    );
+    return NextResponse.json({ success: false, reason: "GitHub env vars not set" }, { status: 500 });
   }
 
   log("info", "Blog generation started");
 
-  // ── Pick next topic using meta.json (sequential, never repeats) ──────────────
-  const meta = await readMeta(token, owner, repo);
-  const startIndex = (meta.lastTopicIndex + 1) % BLOG_TOPICS.length;
+  // ── Select topic ──────────────────────────────────────────────────────────
+  let selectedTopic: TopicInput;
+  let nextTopicIndex: number;
+  let consumedKeyword: Keyword | null;
+  let keywordsData: KeywordsData | null;
 
-  let selectedTopic: (typeof BLOG_TOPICS)[number] | null = null;
-  let nextTopicIndex = startIndex;
-
-  for (let i = 0; i < BLOG_TOPICS.length; i++) {
-    const idx       = (startIndex + i) % BLOG_TOPICS.length;
-    const candidate = BLOG_TOPICS[idx];
-    const slug      = slugify(candidate.title);
-
-    // Check GitHub directly — local FS lags behind repo state on Vercel
-    const exists = await slugExistsOnGitHub(slug, token, owner, repo);
-    if (!exists) {
-      selectedTopic  = candidate;
-      nextTopicIndex = idx;
-      log("info", "Topic selected", { slug, title: candidate.title, idx });
-      break;
-    }
-    log("info", "Skipping — slug exists on GitHub", { slug });
+  try {
+    ({ topic: selectedTopic, nextTopicIndex, consumedKeyword, keywordsData } =
+      await selectTopic(token, owner, repo));
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
+    log("warn", message);
+    return NextResponse.json({ success: false, reason: message });
   }
 
-  if (!selectedTopic) {
-    log("warn", "All topics already published");
-    return NextResponse.json({ success: false, reason: "All topics already published" });
-  }
+  // ── Fetch blog index for internal link resolution ─────────────────────────
+  const blogIndex = await readJsonFromGitHub<BlogIndex[]>(
+    "data/index.json", token, owner, repo
+  ) ?? [];
 
-  const slug = slugify(selectedTopic.title);
-
-  // ── Generate content ─────────────────────────────────────────────────────────
+  // ── Generate content ──────────────────────────────────────────────────────
   let content: string;
+  let faqs: BlogFaq[];
+  let finalSlug:  string = selectedTopic.slug;
+  let finalTitle: string = selectedTopic.keyword;
+  let finalMeta:  string = `${selectedTopic.keyword} — complete guide for Pakistani businesses.`;
   let source: "groq" | "template";
 
   try {
-    log("info", "Attempting Groq generation");
-    content = await generateWithGroq(selectedTopic);
+    log("info", "Attempting Groq generation", { keyword: selectedTopic.keyword });
+    const result  = await generateWithGroq(selectedTopic, blogIndex);
+    content    = result.blog.content ?? "";
+    faqs       = result.blog.faqs   ?? getTemplateFaqs(selectedTopic);
+    finalSlug  = result.blog.slug   ?? selectedTopic.slug;
+    finalTitle = result.blog.title  ?? selectedTopic.keyword;
+    finalMeta  = result.blog.metaDescription ?? finalMeta;
+
     const words = countWords(content);
     log("info", "Groq generation complete", { words });
 
     if (words < MIN_WORD_COUNT) {
-      log("warn", "Groq output below minimum — falling back to template", {
-        words,
-        minimum: MIN_WORD_COUNT,
-      });
+      log("warn", "Groq output below minimum — using template", { words, minimum: MIN_WORD_COUNT });
       content = generateTemplate(selectedTopic);
+      faqs    = getTemplateFaqs(selectedTopic);
       source  = "template";
     } else {
       source = "groq";
@@ -545,53 +731,220 @@ export async function GET(req: NextRequest) {
     const message = err instanceof Error ? err.message : String(err);
     log("warn", "Groq failed — using template fallback", { error: message });
     content = generateTemplate(selectedTopic);
+    faqs    = getTemplateFaqs(selectedTopic);
     source  = "template";
   }
 
   const finalWords = countWords(content);
 
+  // ── Quality gate ──────────────────────────────────────────────────────────
+  const quality = validateContent(content, faqs, finalTitle, MIN_WORD_COUNT);
+  log("info", "Quality gate result", {
+    score:          quality.total,
+    passed:         quality.passed,
+    words:          quality.wordCount,
+    faqs:           quality.faqCount,
+    internalLinks:  quality.internalLinkCount,
+    failures:       quality.failureReasons,
+  });
+
+  if (!quality.passed) {
+    // Attempt template as final fallback before rejecting
+    if (source === "groq") {
+      log("warn", "Quality gate failed on Groq output — falling back to template", {
+        score: quality.total, reasons: quality.failureReasons,
+      });
+      content = generateTemplate(selectedTopic);
+      faqs    = getTemplateFaqs(selectedTopic);
+      source  = "template";
+      // Re-run quality check on template (template should always pass)
+      const templateQuality = validateContent(content, faqs, finalTitle, MIN_WORD_COUNT);
+      if (!templateQuality.passed) {
+        log("error", "Quality gate failed even on template fallback", { score: templateQuality.total });
+        return NextResponse.json(
+          { success: false, reason: "Content failed quality gate", score: templateQuality.total, failures: templateQuality.failureReasons },
+          { status: 500 }
+        );
+      }
+    } else {
+      log("error", "Content below quality threshold", { score: quality.total, failures: quality.failureReasons });
+      return NextResponse.json(
+        { success: false, reason: "Content failed quality gate", score: quality.total, failures: quality.failureReasons },
+        { status: 500 }
+      );
+    }
+  }
+
   if (finalWords < MIN_WORD_COUNT) {
-    log("error", "Content still below minimum after fallback", { words: finalWords });
+    log("error", "Content below minimum after fallback", { words: finalWords });
     return NextResponse.json(
       { success: false, reason: "Content below minimum word count", words: finalWords },
       { status: 500 }
     );
   }
 
-  // ── Assemble blog object ─────────────────────────────────────────────────────
-  const blog: BlogPost = {
-    slug,
-    title: selectedTopic.title,
-    metaDescription: `${
-      selectedTopic.focus.charAt(0).toUpperCase() + selectedTopic.focus.slice(1)
-    } — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.`,
-    keywords:    [...selectedTopic.keywords],
+  // ── Build blog object ─────────────────────────────────────────────────────
+  const siteConfig = getSiteConfig();
+
+  // ── Fetch hero image (non-blocking — fails gracefully if API key missing) ──
+  const heroImage = await fetchHeroImage(selectedTopic.keyword).catch(() => null);
+  if (heroImage) {
+    log("info", "Hero image fetched", { photographer: heroImage.photographer, query: selectedTopic.keyword });
+  } else {
+    log("info", "No hero image (PEXELS_API_KEY not set or fetch failed — continuing)");
+  }
+
+  // Inject related posts block + Schema.org markup before saving
+  const contentWithRelated = injectRelatedPosts(
     content,
-    publishedAt: new Date().toISOString(),
-    readTime:    Math.max(1, Math.ceil(finalWords / 200)),
+    { slug: finalSlug, keywords: [...selectedTopic.keywords] },
+    blogIndex
+  );
+
+  const now = new Date().toISOString();
+  const partialBlog = {
+    slug:            finalSlug,
+    title:           finalTitle,
+    metaDescription: finalMeta.slice(0, 155),
+    keywords:        [...selectedTopic.keywords],
+    content:         contentWithRelated,
+    publishedAt:     now,
+    readTime:        Math.max(1, Math.ceil(finalWords / 200)),
+    faqs,
+    authorName:      siteConfig.authorName,
+    ...(heroImage ? { heroImage } : {}),
   };
 
-  // ── Single commit: blog + index.json + meta.json ─────────────────────────────
+  const contentWithSchema = injectSchema(
+    contentWithRelated,
+    partialBlog,
+    siteConfig.baseUrl,
+    siteConfig.name,
+    siteConfig.authorName
+  );
+
+  // ── Phase 4: Inject smart CTAs ────────────────────────────────────────────
+  const contentWithCTA = injectCTA(
+    contentWithSchema,
+    { cluster: selectedTopic.cluster, keywords: [...selectedTopic.keywords] },
+    siteConfig
+  );
+
+  // ── Phase 4: HTML performance optimization ─────────────────────────────────
+  const { html: optimizedContent } = optimizeContent(contentWithCTA);
+
+  const blog: BlogPost = {
+    slug:            finalSlug,
+    title:           finalTitle,
+    metaDescription: finalMeta.slice(0, 155),
+    keywords:        [...selectedTopic.keywords],
+    content:         optimizedContent,
+    faqs,
+    publishedAt:     now,
+    readTime:        Math.max(1, Math.ceil(finalWords / 200)),
+    version:         1,
+    authorName:      siteConfig.authorName,
+    ...(heroImage ? { heroImage } : {}),
+  };
+
+  // ── Build file set for atomic commit ──────────────────────────────────────
+  const { content: _c, ...indexEntry } = blog;
+  const currentIndex = blogIndex;
+  const alreadyInIndex = currentIndex.some((b) => b.slug === blog.slug);
+  const updatedIndex: BlogIndex[] = alreadyInIndex
+    ? currentIndex
+    : [indexEntry, ...currentIndex];
+
+  const updatedMeta: MetaJson = {
+    lastTopicIndex: nextTopicIndex === -1
+      ? ((await readJsonFromGitHub<MetaJson>("data/meta.json", token, owner, repo))?.lastTopicIndex ?? -1)
+      : nextTopicIndex,
+  };
+
+  const files: Array<{ path: string; content: string }> = [
+    { path: `data/blogs/${blog.slug}.json`, content: JSON.stringify(blog,         null, 2) },
+    { path: "data/index.json",             content: JSON.stringify(updatedIndex,  null, 2) },
+    { path: "data/meta.json",              content: JSON.stringify(updatedMeta,   null, 2) },
+  ];
+
+  // Mark keyword as used in keywords.json (if we pulled from the pool)
+  if (consumedKeyword && keywordsData) {
+    const updatedKeywordsData: KeywordsData = {
+      ...keywordsData,
+      keywords: keywordsData.keywords.map((k) =>
+        k.keyword === consumedKeyword!.keyword
+          ? { ...k, used: true, usedIn: blog.slug }
+          : k
+      ),
+    };
+    files.push({
+      path: "data/keywords.json",
+      content: JSON.stringify(updatedKeywordsData, null, 2),
+    });
+  }
+
+  // ── Single atomic commit ──────────────────────────────────────────────────
   try {
-    await commitBlogToGitHub(blog, nextTopicIndex, token, owner, repo, branch);
-    log("info", "Blog committed to GitHub", { slug, source, words: finalWords });
+    await atomicCommit(
+      files,
+      `blog: add "${blog.title}"`,
+      token, owner, repo, branch
+    );
+    log("info", "Blog committed to GitHub", {
+      slug: blog.slug,
+      source,
+      words: finalWords,
+      filesCommitted: files.length,
+    });
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
-    log("error", "GitHub commit failed", { slug, error: message });
+    log("error", "GitHub commit failed", { slug: blog.slug, error: message });
     return NextResponse.json(
       { success: false, reason: "GitHub commit failed", error: message },
       { status: 500 }
     );
   }
 
-  // ── Revalidate blog listing and sitemap so ISR picks up new content ──────────
+  // ── Revalidate ISR caches ─────────────────────────────────────────────────
   try {
     revalidatePath("/blog");
+    revalidatePath(`/blog/${blog.slug}`);
     revalidatePath("/sitemap.xml");
-    log("info", "Revalidated /blog and /sitemap.xml");
+    log("info", "Revalidated ISR caches");
   } catch (err) {
-    // Non-fatal — next deploy will pick it up regardless
     log("warn", "revalidatePath failed (non-fatal)", { error: String(err) });
+  }
+
+  // ── Phase 4: Google Indexing API (fire-and-forget) ─────────────────────────
+  {
+    const blogUrl = `${siteConfig.baseUrl.replace(/\/$/, "")}/blog/${blog.slug}`;
+    const existingIndexData = (await readJsonFromGitHub<IndexingData>(
+      "data/indexing.json", token, owner, repo
+    )) ?? defaultIndexingData();
+
+    if (!wasRecentlySubmitted(blogUrl, existingIndexData)) {
+      batchSubmitUrls([blogUrl], existingIndexData).then(({ data: updatedIndex }) => {
+        atomicCommit(
+          [{ path: "data/indexing.json", content: JSON.stringify(updatedIndex, null, 2) }],
+          `chore: submit "${blog.slug}" to Google Indexing API`,
+          token, owner, repo, branch
+        ).catch(() => { /* non-fatal */ });
+      }).catch(() => { /* non-fatal */ });
+      log("info", "Google Indexing API submission queued", { slug: blog.slug, url: blogUrl });
+    }
+  }
+
+  // ── Phase 4: Social Distribution (fire-and-forget via /api/distribute) ─────
+  {
+    const baseUrl   = process.env.SITE_BASE_URL ?? process.env.VERCEL_URL ?? "";
+    const publicUrl = baseUrl.startsWith("http") ? baseUrl : `https://${baseUrl}`;
+    const distUrl   = `${publicUrl.replace(/\/$/, "")}/api/distribute?slug=${blog.slug}`;
+    const secret    = process.env.CRON_SECRET ?? "";
+
+    fetch(distUrl, { headers: { Authorization: `Bearer ${secret}` } })
+      .catch(() => { /* non-fatal */ });
+
+    log("info", "Distribution triggered", { slug: blog.slug });
   }
 
   return NextResponse.json({
@@ -601,5 +954,6 @@ export async function GET(req: NextRequest) {
     source,
     words:    finalWords,
     readTime: blog.readTime,
+    fromKeywordPool: consumedKeyword !== null,
   });
 }
