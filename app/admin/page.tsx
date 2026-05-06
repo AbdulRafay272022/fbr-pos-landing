@@ -15,6 +15,7 @@
  */
 
 import { useEffect, useState, useCallback } from "react";
+import Link from "next/link";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -194,10 +195,13 @@ export default function AdminDashboard() {
   };
 
   useEffect(() => {
-    fetchAll();
-    const interval = setInterval(fetchAll, 30_000); // auto-refresh every 30s
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    void fetchAll();
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    const interval = setInterval(() => { void fetchAll(); }, 30_000);
     return () => clearInterval(interval);
-  }, [fetchAll]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (loading) {
     return (
@@ -241,13 +245,13 @@ export default function AdminDashboard() {
             >
               {healthLoading ? "Checking..." : "Re-check APIs"}
             </button>
-            <a
+            <Link
               href="/"
               className="text-sm px-4 py-2 rounded-lg font-semibold"
               style={{ background: "#374151", color: "white" }}
             >
               ← Site
-            </a>
+            </Link>
           </div>
         </div>
 
