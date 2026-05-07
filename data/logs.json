@@ -1,4 +1,142 @@
 {
-  "entries": [],
+  "entries": [
+    {
+      "id": "mouule9i-ub912",
+      "ts": "2026-05-07T02:09:18.198Z",
+      "site": "Phelix ERP",
+      "event": "agent_start",
+      "level": "info",
+      "success": true,
+      "details": {
+        "runId": "run-mouule9f",
+        "site": "Phelix ERP",
+        "baseUrl": "https://phelixerp.vercel.app/"
+      }
+    },
+    {
+      "id": "mouulehe-3mki7",
+      "ts": "2026-05-07T02:09:18.482Z",
+      "site": "Phelix ERP",
+      "event": "agent_decision",
+      "level": "info",
+      "success": true,
+      "details": {
+        "runId": "run-mouule9f",
+        "shouldScrape": true,
+        "shouldGenerate": false,
+        "shouldUpdate": true,
+        "shouldFetchSeo": true,
+        "shouldRefresh": false,
+        "shouldOptimizeTitles": true,
+        "shouldGenerateLanding": true,
+        "shouldOptimizeConversion": false,
+        "shouldDetectDecay": false,
+        "shouldGenerateProgrammatic": true,
+        "reasons": {
+          "scrape": "never scraped before",
+          "generate": "skipped: no unused keywords in pool",
+          "update": "Infinityh since last update run",
+          "fetchSeo": "first GSC fetch",
+          "refresh": "skipped: no low-performing pages with sufficient impressions",
+          "optimizeTitles": "first title optimization run",
+          "generateLanding": "first landing page generation",
+          "optimizeConversion": "skipped: no traffic data available yet",
+          "detectDecay": "skipped: no GSC data to compare against",
+          "generateProgrammatic": "first programmatic page generation"
+        },
+        "anyAction": true
+      }
+    },
+    {
+      "id": "mouulfio-f8qim",
+      "ts": "2026-05-07T02:09:19.824Z",
+      "site": "Phelix ERP",
+      "event": "keyword_scraped",
+      "level": "info",
+      "success": true,
+      "details": {
+        "runId": "run-mouule9f",
+        "action": "starting scrape"
+      }
+    },
+    {
+      "id": "mouulh5z-4fju3",
+      "ts": "2026-05-07T02:09:21.959Z",
+      "site": "Phelix ERP",
+      "event": "keyword_scraped",
+      "level": "info",
+      "success": true,
+      "durationMs": 2134,
+      "details": {
+        "runId": "run-mouule9f",
+        "total": 2669
+      }
+    },
+    {
+      "id": "mouum851-f30b5",
+      "ts": "2026-05-07T02:09:56.917Z",
+      "site": "Phelix ERP",
+      "event": "blog_updated",
+      "level": "info",
+      "success": true,
+      "durationMs": 34958,
+      "details": {
+        "runId": "run-mouule9f",
+        "updatedCount": 0
+      }
+    },
+    {
+      "id": "mouum8kj-1umno",
+      "ts": "2026-05-07T02:09:57.475Z",
+      "site": "Phelix ERP",
+      "event": "seo_fetch_complete",
+      "level": "info",
+      "success": false,
+      "durationMs": 558,
+      "details": {
+        "runId": "run-mouule9f"
+      }
+    },
+    {
+      "id": "mouumb0s-xjq3o",
+      "ts": "2026-05-07T02:10:00.652Z",
+      "site": "Phelix ERP",
+      "event": "title_optimized",
+      "level": "info",
+      "success": true,
+      "durationMs": 3177,
+      "details": {
+        "runId": "run-mouule9f",
+        "optimizedCount": 3
+      }
+    },
+    {
+      "id": "mouumbca-yptei",
+      "ts": "2026-05-07T02:10:01.066Z",
+      "site": "Phelix ERP",
+      "event": "landing_generated",
+      "level": "info",
+      "success": false,
+      "durationMs": 414,
+      "details": {
+        "runId": "run-mouule9f"
+      }
+    },
+    {
+      "id": "mouumfsn-yutg6",
+      "ts": "2026-05-07T02:10:06.839Z",
+      "site": "Phelix ERP",
+      "event": "programmatic_generated",
+      "level": "info",
+      "success": true,
+      "slug": "pos-system-restaurant-karachi",
+      "durationMs": 5773,
+      "details": {
+        "runId": "run-mouule9f",
+        "city": "karachi",
+        "service": "POS System"
+      }
+    }
+  ],
   "lastTrimmedAt": null
 }
