@@ -1,9 +1,9 @@
 {
   "lastTopicIndex": -1,
   "agent": {
-    "isRunning": false,
-    "lockedAt": null,
-    "lockedBy": null
+    "isRunning": true,
+    "lockedAt": "2026-05-07T02:09:18.482Z",
+    "lockedBy": "run-mouule9f"
   },
   "stats": {
     "lastScrapeAt": null,
