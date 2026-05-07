@@ -355,9 +355,9 @@ export default function LandingPage() {
         {/* STATS BAR */}
         <div className="bg-[#1A1D27] grid grid-cols-2 md:grid-cols-4 gap-0">
           {[
-            ["20+", "Active clients"],
-            ["2,000+", "FBR invoices submitted"],
-            ["24hr", "Setup & onboarding"],
+            ["25+", "Active clients"],
+            ["10,000+", "FBR invoices submitted"],
+            ["6 months", "In production"],
             ["99.9%", "System uptime"],
           ].map(([n, l]) => (
             <div key={l} className="text-center py-8 border-r border-white/10 last:border-r-0">
@@ -543,14 +543,127 @@ export default function LandingPage() {
           </div>
         </section>
 
+        {/* ADVANCED FEATURES */}
+        <section className="bg-[#F8F9FC] border-t border-gray-100 px-6 md:px-10 py-16">
+          <p className="text-xs tracking-widest uppercase text-[#F97316] font-semibold text-center mb-3">Under the hood</p>
+          <h2 className="text-2xl md:text-3xl font-extrabold text-center tracking-tight mb-3">Why Phelix ERP is different</h2>
+          <p className="text-sm text-gray-500 text-center max-w-lg mx-auto mb-12">
+            Built specifically for Pakistan&apos;s FBR POS requirements — with intelligence baked in so your team never makes a compliance mistake.
+          </p>
+          <div className="grid md:grid-cols-2 gap-4 max-w-4xl mx-auto">
+            {[
+              {
+                icon: (
+                  <svg className="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                ),
+                title: "Auto-fetch seller STRN status",
+                desc: "Phelix ERP fetches your seller registration status directly from FBR IRIS in real-time — no manual checks needed.",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                ),
+                title: "Daily HS code, UOM & rate sync",
+                desc: "HS codes, units of measure, and FBR tax rates are synced automatically every day — your data is always up to date.",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                  </svg>
+                ),
+                title: "HS code vs UOM auto-validation",
+                desc: "Enter a wrong unit of measure for an HS code and the system flags it instantly — with a suggestion for the correct UOM.",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                ),
+                title: "Smart rate engine",
+                desc: "Tax rate is calculated automatically based on sale type, HS code, and UOM — zero manual rate lookup, zero errors.",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+                  </svg>
+                ),
+                title: "Multi-item invoice submission",
+                desc: "Add as many line items as needed in a single FBR invoice submission — no limit, no workarounds.",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                ),
+                title: "Validate before submit",
+                desc: "Every invoice is validated against FBR rules before submission — wrong data is caught and blocked before it reaches FBR.",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4" />
+                  </svg>
+                ),
+                title: "Draft workflow",
+                desc: "Save invoices as drafts, review them, then submit to FBR when ready — no accidental premature submissions.",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                ),
+                title: "Customer & item master",
+                desc: "Set up your customers and items once — reuse them on every invoice. No re-entering data every time.",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                  </svg>
+                ),
+                title: "Bulk invoice import",
+                desc: "Import hundreds of invoices at once via file upload — ideal for businesses with high transaction volumes.",
+              },
+              {
+                icon: (
+                  <svg className="w-5 h-5 text-[#F97316]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                ),
+                title: "API integration",
+                desc: "Connect your existing billing or ERP system via API — invoices created in your system automatically sync and submit to FBR.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="bg-white border border-gray-100 rounded-2xl p-5 flex gap-4 hover:border-orange-200 hover:shadow-sm transition-all">
+                <div className="w-9 h-9 rounded-xl bg-orange-50 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  {item.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-sm text-[#1A1D27] mb-1">{item.title}</h3>
+                  <p className="text-sm text-gray-500 leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* CLIENTS */}
         <section id="clients" className="bg-[#F8F9FC] border-t border-gray-100 px-6 md:px-10 py-16">
           <p className="text-xs tracking-widest uppercase text-[#F97316] font-semibold text-center mb-3">Trusted by businesses</p>
           <h2 className="text-2xl md:text-3xl font-extrabold text-center tracking-tight mb-3">
-            20+ active clients across Pakistan
+            25+ active clients across Pakistan
           </h2>
           <p className="text-sm text-gray-500 text-center max-w-md mx-auto mb-12">
-            Shops, restaurants, and traders using Phelix ERP every day to submit FBR invoices.
+            Shops, restaurants, and traders using Phelix ERP every day — 10,000+ FBR invoices submitted and counting.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-5xl mx-auto">
             {clients.map((c) => (
