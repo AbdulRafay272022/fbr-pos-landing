@@ -1,6 +1,39 @@
 {
-  "entries": [],
-  "monthly": {},
+  "entries": [
+    {
+      "ts": "2026-05-07T02:09:58.272Z",
+      "action": "title_optimize",
+      "slug": "fbr-sales-tax-returns-pakistan-how-pos-integration-simplifies-monthly-filing",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-07T02:09:58.802Z",
+      "action": "title_optimize",
+      "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-07T02:09:59.256Z",
+      "action": "title_optimize",
+      "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    }
+  ],
+  "monthly": {
+    "2026-05": {
+      "tokens": 1200,
+      "calls": 3
+    }
+  },
   "monthlyTokenBudget": 5000000,
   "lastTrimmedAt": null
 }
