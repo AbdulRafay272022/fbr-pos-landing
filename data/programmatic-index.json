@@ -1,5 +1,13 @@
 {
-  "pages": [],
-  "totalPublished": 0,
-  "lastGeneratedAt": null
+  "pages": [
+    {
+      "slug": "pos-system-restaurant-karachi",
+      "city": "karachi",
+      "service": "POS System",
+      "industry": "restaurant",
+      "publishedAt": "2026-05-07T02:10:05.256Z"
+    }
+  ],
+  "totalPublished": 1,
+  "lastGeneratedAt": "2026-05-07T02:10:05.256Z"
 }
