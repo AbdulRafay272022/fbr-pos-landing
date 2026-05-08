@@ -1,5 +1,14 @@
 {
-  "records": [],
-  "lastSubmittedAt": null,
+  "records": [
+    {
+      "slug": "how-to-setup-fbr-penalty-in-pakistan",
+      "url": "https://phelixerp.vercel.app/blog/how-to-setup-fbr-penalty-in-pakistan",
+      "submittedAt": "2026-05-08T02:59:13.806Z",
+      "type": "URL_UPDATED",
+      "status": "failed",
+      "error": "HTTP 403: {\n  \"error\": {\n    \"code\": 403,\n    \"message\": \"Web Search Indexing API has not been used in project 1001662319725 before or it is disabled. Enable it by visiting https://console.developers.google.com"
+    }
+  ],
+  "lastSubmittedAt": "2026-05-08T02:59:13.806Z",
   "totalSubmitted": 0
 }
