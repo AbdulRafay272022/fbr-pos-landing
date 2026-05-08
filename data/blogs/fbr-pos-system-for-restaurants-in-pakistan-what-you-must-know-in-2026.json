@@ -1,7 +1,7 @@
 {
   "slug": "fbr-pos-system-for-restaurants-in-pakistan-what-you-must-know-in-2026",
-  "title": "Top 3 Restaurant POS Pakistan Systems Compared",
-  "metaDescription": "FBR POS requirements for restaurants in Pakistan 2026 — dine-in vs takeaway tax rules, SRO 237 explained, GST on food, inspection risks, and compliance setup guide.",
+  "title": "FBR POS System for Restaurants in Pakistan: What You Must Know in 2026",
+  "metaDescription": "FBR POS requirements for restaurants in Pakistan 2026 — dine-in vs takeaway tax rules, SRO 237 breakdown, GST on food, and how to stay compliant.",
   "keywords": [
     "restaurant POS Pakistan",
     "FBR POS restaurant",
@@ -33,5 +33,7 @@
     }
   ],
   "lastUpdated": "2026-05-08T02:59:49.173Z",
-  "version": 2
+  "version": 2,
+  "pinnedTitle": true,
+  "cluster": "pos-by-industry"
 }

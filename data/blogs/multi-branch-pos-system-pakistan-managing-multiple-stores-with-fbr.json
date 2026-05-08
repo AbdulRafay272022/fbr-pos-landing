@@ -1,7 +1,7 @@
 {
   "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
-  "title": "Multi Branch POS Pakistan vs Single Store: Which is Best?",
-  "metaDescription": "Managing multi-branch retail operations with FBR-compliant POS software in Pakistan — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
+  "title": "Multi-Branch POS System Pakistan: Managing Multiple Stores with FBR 2026",
+  "metaDescription": "How to manage multiple retail branches with FBR-compliant POS in Pakistan — POSID per branch, central reporting, and avoiding cross-branch compliance gaps.",
   "keywords": [
     "multi branch POS Pakistan",
     "chain store POS Pakistan",
@@ -11,5 +11,29 @@
   "publishedAt": "2026-05-06T09:25:57.687Z",
   "readTime": 8,
   "lastUpdated": "2026-05-07T02:09:58.801Z",
-  "version": 2
+  "version": 2,
+  "pinnedTitle": true,
+  "faqs": [
+    {
+      "question": "Does each branch need its own FBR POS registration?",
+      "answer": "Yes. FBR requires a separate POS registration (unique POSID) for each branch location. All branches can operate under the same business STRN, but each point of sale must be individually registered in IRIS."
+    },
+    {
+      "question": "Can I see consolidated sales reports from all branches in one dashboard?",
+      "answer": "Yes. Phelix ERP provides a central dashboard that aggregates sales, tax collected, and invoice counts from all registered branches so you get a group-level view alongside branch-level detail in real time."
+    },
+    {
+      "question": "What happens if one branch goes offline — do I lose FBR compliance?",
+      "answer": "Phelix ERP queues invoices locally when a branch loses connectivity and submits them to FBR IRIS as soon as the connection restores. FBR allows a short grace window for documented network outages."
+    },
+    {
+      "question": "Can different branches have different product catalogues in the same system?",
+      "answer": "Yes. Phelix ERP supports branch-specific product lists, pricing, and tax mappings while maintaining a shared customer and item master across all locations for consistency."
+    },
+    {
+      "question": "How long does it take to add a new branch to an existing Phelix ERP setup?",
+      "answer": "Adding a new branch typically takes 24 to 48 hours — FBR IRIS registration for the new POSID, hardware setup, and data sync from the central system. Phelix ERP manages the IRIS registration steps on your behalf."
+    }
+  ],
+  "cluster": "pos-software"
 }

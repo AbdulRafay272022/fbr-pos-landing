@@ -1,7 +1,7 @@
 {
   "slug": "fbr-e-invoicing-pakistan-explained",
   "title": "FBR e-Invoicing Pakistan Explained – What Every Business Must Know",
-  "metaDescription": "FBR e-invoicing explained for Pakistani businesses — what QR invoices contain, how real-time IRIS submission works, who must comply, and penalties for non-compliance.",
+  "metaDescription": "FBR e-invoicing explained — what QR invoices contain, how IRIS integration works, and which businesses in Pakistan are legally required to comply in 2026.",
   "keywords": [
     "FBR e-invoicing Pakistan",
     "QR invoice Pakistan",
@@ -32,5 +32,7 @@
       "question": "Do all items on an invoice need sales tax applied?",
       "answer": "No. Pakistani tax law has multiple categories — standard 17% GST, reduced rates for certain items, and zero-rated or exempt categories (like basic foodstuffs and medicines). Your POS must be configured with the correct rate for each product line you sell."
     }
-  ]
+  ],
+  "pinnedTitle": true,
+  "cluster": "fbr-invoicing"
 }

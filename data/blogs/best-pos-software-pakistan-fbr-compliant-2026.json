@@ -1,7 +1,7 @@
 {
   "slug": "best-pos-software-pakistan-fbr-compliant-2026",
   "title": "Best FBR-Compliant POS Software in Pakistan 2026",
-  "metaDescription": "How to choose the best FBR-compliant POS software in Pakistan for 2026 — key features, red flags, pricing in PKR, and what separates genuine compliance from fake claims.",
+  "metaDescription": "How to choose the best FBR-compliant POS software in Pakistan 2026 — key features, red flags, pricing, and what real compliance actually looks like.",
   "keywords": [
     "best POS software Pakistan",
     "FBR POS software Pakistan",
@@ -32,5 +32,7 @@
       "question": "Does FBR POS software need to handle multiple tax rates?",
       "answer": "Yes. Pakistani businesses sell products across different tax categories — standard 17% GST, reduced rates for certain food and pharmaceutical items, and zero-rated or exempt categories. Your POS software must correctly apply the right rate to each product line."
     }
-  ]
+  ],
+  "pinnedTitle": true,
+  "cluster": "pos-software"
 }

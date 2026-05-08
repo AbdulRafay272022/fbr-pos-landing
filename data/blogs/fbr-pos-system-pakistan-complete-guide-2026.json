@@ -32,5 +32,7 @@
       "question": "Does FBR POS integration require special hardware?",
       "answer": "No. FBR-compliant POS software runs on standard Android phones, iPhones, tablets, and PCs. You do not need dedicated POS terminals. A thermal receipt printer (PKR 8,000–15,000) is recommended for printed QR invoices but is not mandatory."
     }
-  ]
+  ],
+  "pinnedTitle": true,
+  "cluster": "fbr-compliance"
 }

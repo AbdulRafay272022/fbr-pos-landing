@@ -1,7 +1,7 @@
 {
   "slug": "fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide",
   "title": "FBR Compliance Checklist for Pakistani Businesses – 2026 Complete Guide",
-  "metaDescription": "FBR compliance checklist for Pakistani businesses in 2026 — STRN verification, POS registration, QR invoicing, tax rate configuration, and monthly filing requirements.",
+  "metaDescription": "FBR compliance checklist for Pakistani businesses 2026 — STRN verification, POS registration, QR invoicing, and monthly filing steps in one complete guide.",
   "keywords": [
     "FBR compliance checklist Pakistan",
     "FBR requirements 2026",
@@ -31,5 +31,7 @@
       "question": "Can I switch from one FBR POS software to another without losing data?",
       "answer": "Yes. Your sales data is stored both in your POS software and in FBR IRIS. When switching providers, your new POS provider re-registers under your existing STRN and API credentials. Historical IRIS data is unaffected. Ensure your previous provider exports your local transaction data before you switch."
     }
-  ]
+  ],
+  "pinnedTitle": true,
+  "cluster": "fbr-compliance"
 }

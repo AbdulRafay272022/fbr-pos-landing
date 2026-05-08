@@ -1,7 +1,7 @@
 {
   "slug": "how-to-register-pos-fbr-pakistan-step-by-step",
   "title": "How to Register POS with FBR Pakistan – Step by Step 2026",
-  "metaDescription": "Step-by-step guide to registering your POS with FBR Pakistan in 2026 — IRIS portal walkthrough, API credentials, common errors, and how to get live in 24 hours.",
+  "metaDescription": "How to register your POS with FBR Pakistan in 2026 — IRIS portal walkthrough, API credentials, common errors, and how to go live in 24 hours.",
   "keywords": [
     "how to register POS with FBR",
     "FBR POS registration Pakistan",
@@ -32,5 +32,7 @@
       "question": "How do I know if my POS registration is active and working?",
       "answer": "After configuration, generate a test invoice from your POS and then log in to IRIS. Go to Invoice Verification and search for the test invoice number. If it appears with the correct details, your registration is active and working correctly."
     }
-  ]
+  ],
+  "pinnedTitle": true,
+  "cluster": "fbr-compliance"
 }

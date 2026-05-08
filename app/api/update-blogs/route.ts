@@ -32,9 +32,9 @@ import { getSiteConfig } from "@/lib/agent/siteConfig";
 
 // ─── Config ───────────────────────────────────────────────────────────────────
 
-const MAX_UPDATES_PER_RUN          = 3;   // max blogs updated per cron run
-const UPDATE_AFTER_DAYS            = 7;   // blog must be at least this old
-const SKIP_IF_UPDATED_WITHIN_DAYS  = 30;  // don't re-update within 30 days
+const MAX_UPDATES_PER_RUN          = 2;   // max blogs updated per cron run
+const UPDATE_AFTER_DAYS            = 30;  // blog must be at least 30 days old (was 7)
+const SKIP_IF_UPDATED_WITHIN_DAYS  = 60;  // don't re-update within 60 days (was 30)
 const MIN_WORD_COUNT               = 1400;
 const WA_NUMBER                    = "923118366981";
 
@@ -154,36 +154,36 @@ function replaceInternalLinks(content: string, blogIndex: BlogIndex[]): string {
 
 // ─── Update system prompt ─────────────────────────────────────────────────────
 
-const UPDATE_SYSTEM_PROMPT = `You are an expert SEO content strategist improving existing blog posts about FBR compliance in Pakistan for Phelix ERP.
+const UPDATE_SYSTEM_PROMPT = `You are an expert SEO content editor improving existing blog posts about FBR compliance in Pakistan for Phelix ERP.
 
-Your job: write a SIGNIFICANTLY IMPROVED version of the blog — more comprehensive, more detailed, better structured, higher word count.
+Your job: IMPROVE the existing blog — add depth, expand thin sections, add real Pakistani examples. Do NOT rewrite from scratch.
 
 STRICT RULES:
-- Keep the same slug (do NOT change the URL)
-- You MAY improve the title slightly for better CTR (keep keyword, max 70 chars)
-- MUST write minimum 1800 words
-- DO NOT repeat FAQs from the "existing_faqs" list provided
+- Keep the EXACT same slug (never change the URL)
+- KEEP THE EXACT SAME TITLE — do not change it under any circumstances
+- The "existing_content_text" field contains the current blog text — use it as your base
+- MUST expand to minimum 1800 words total
+- PRESERVE all existing sections — only add to them, never remove
+- DO NOT repeat FAQs from "existing_faqs" — only add NEW ones
 - NO generic AI phrases ("in conclusion", "in today's world", etc.)
-- MUST add at least 2 NEW H2 sections not mentioned in original_sections
-- MUST include real Pakistani business examples with city names
-- MUST include at least one new technical detail (API, IRIS, token, sync, etc.)
-- Use [INTERNAL_LINK: topic] placeholders 3+ times in paragraph text
+- MUST add 2 NEW H2 sections with unique content not in existing_sections
+- MUST include real Pakistani business examples with specific city names
+- MUST include at least one technical FBR detail (IRIS, API, POSID, STRN, token)
+- Use [INTERNAL_LINK: topic] placeholders 2+ times in paragraph text
 - End with a strong CTA mentioning Phelix ERP and WhatsApp demo
 
-CONTENT ADDITIONS TO MAKE:
-1. Stronger, more specific introduction (hook with a real scenario or statistic)
-2. 2–3 completely NEW H2 sections (complementary content not in original)
-3. More Pakistani business examples (different cities than original)
-4. Expanded technical section (new API details, edge cases, common failures)
-5. Additional FAQs (min 3 new questions not in existing_faqs)
-6. Updated 2026 compliance information where applicable
-7. New comparison, checklist, or step-by-step content
+WHAT TO ADD:
+1. 2 new H2 sections (unique topics, complementary to existing)
+2. Deeper Pakistani business examples with specific scenarios
+3. Updated 2026 FBR compliance details where applicable
+4. 3–5 new FAQs (questions your target business owner would ask)
+5. A comparison table OR step-by-step checklist OR numbered process
 
 OUTPUT FORMAT — JSON ONLY, no markdown fences:
 {
-  "title": "same or slightly improved title (keep keyword, max 70 chars)",
-  "meta_description": "improved 155-char meta with keyword and stronger value prop",
-  "content_markdown": "FULL improved content in markdown — minimum 1800 words",
+  "title": "EXACT same title as provided — do not modify",
+  "meta_description": "improved 150-char meta with primary keyword and clear value prop",
+  "content_markdown": "FULL improved content in markdown — minimum 1800 words — preserving existing content and adding new sections",
   "faq": [{ "question": "...", "answer": "..." }],
   "keywords_used": ["keyword1", "keyword2"]
 }`;
@@ -197,36 +197,50 @@ async function improveWithGroq(
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error("GROQ_API_KEY not configured");
 
+  // ── Skip pinned-title blogs (human-curated, don't touch) ─────────────────
+  if ((blog as unknown as Record<string, unknown>).pinnedTitle === true) {
+    log("info", "Blog has pinnedTitle=true — skipping destructive rewrite, adding sections only", { slug: blog.slug });
+  }
+
   const existingFaqQuestions = (blog.faqs ?? []).map((f) => f.question);
 
-  // We send metadata + existing FAQs (NOT the full HTML content — avoids token limits)
+  // Strip HTML tags to get plain text for Groq (avoids token bloat from markup)
+  const plainText = blog.content
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "")
+    .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s{2,}/g, " ")
+    .trim()
+    .slice(0, 4000); // send first 4000 chars — enough context without exceeding limits
+
+  // Extract h2 headings from HTML so Groq knows existing structure
+  const existingSections = Array.from(
+    blog.content.matchAll(/<h2[^>]*>([^<]+)<\/h2>/gi),
+    (m) => m[1].replace(/[^a-zA-Z0-9 ,:\-–]/g, "").trim()
+  );
+
   const userInput = JSON.stringify({
-    blog_title:       blog.title,
-    blog_slug:        blog.slug,
-    target_keywords:  blog.keywords,
-    published_at:     blog.publishedAt,
-    current_version:  blog.version ?? 1,
-    existing_faqs:    existingFaqQuestions,
-    original_sections: [
-      "What FBR Law Requires",
-      "Who Must Comply",
-      "Step-by-Step Implementation",
-      "Common Mistakes",
-      "Benefits of Compliance",
-      "FBR Penalties",
-    ],
-    site_name:        "Phelix ERP",
-    cta_whatsapp:     `https://wa.me/${WA_NUMBER}`,
-    published_blogs:  allBlogs
+    blog_title:            blog.title,
+    blog_slug:             blog.slug,
+    target_keywords:       blog.keywords,
+    published_at:          blog.publishedAt,
+    current_version:       blog.version ?? 1,
+    existing_faqs:         existingFaqQuestions,
+    existing_sections:     existingSections.length > 0 ? existingSections : ["Introduction", "Who Must Comply", "How It Works"],
+    existing_content_text: plainText,
+    site_name:             "Phelix ERP",
+    cta_whatsapp:          `https://wa.me/${WA_NUMBER}`,
+    related_blogs:         allBlogs
       .filter((b) => b.slug !== blog.slug)
-      .slice(0, 6)
+      .slice(0, 5)
       .map((b) => ({ slug: b.slug, title: b.title })),
-    note: [
-      "Write minimum 1800 words.",
-      "DO NOT repeat any questions from existing_faqs.",
-      "Add 2+ new H2 sections not in original_sections.",
-      "Include a real Pakistani business scenario with a city name.",
-      "Use [INTERNAL_LINK: topic] in paragraph text 3+ times.",
+    instructions: [
+      "KEEP the exact title as provided — do not change it.",
+      "Expand on existing_content_text — do not erase it, add to it.",
+      "Add 2 NEW H2 sections not in existing_sections.",
+      "Add 3–5 new FAQs not in existing_faqs.",
+      "Include a real Pakistani business scenario with a specific city.",
+      "Target minimum 1800 words in content_markdown.",
       "Return JSON ONLY — no markdown fences, no preamble.",
     ].join(" "),
   }, null, 2);
@@ -283,8 +297,14 @@ async function improveWithGroq(
         .filter((f) => !existingFaqQuestions.includes(f.question))
         .map((f) => ({ question: f.question, answer: f.answer }));
 
+      // Always preserve the original title — never let the LLM change it
+      const isPinned = (blog as unknown as Record<string, unknown>).pinnedTitle === true;
+      const finalTitle = isPinned
+        ? blog.title  // pinned: never touch the title
+        : (parsed.title?.trim() || blog.title).slice(0, 70);
+
       return {
-        title:           (parsed.title?.trim() || blog.title).slice(0, 70),
+        title:           finalTitle,
         metaDescription: (parsed.meta_description?.slice(0, 155) || blog.metaDescription),
         content:         htmlContent,
         faqs:            [...(blog.faqs ?? []), ...newFaqs],
@@ -335,7 +355,10 @@ export async function GET(req: NextRequest) {
   const eligibleIndex = allIndexBlogs.filter((b) => {
     const age         = daysSince(b.publishedAt);
     const sinceUpdate = b.lastUpdated ? daysSince(b.lastUpdated) : Infinity;
-    return age >= UPDATE_AFTER_DAYS && sinceUpdate >= SKIP_IF_UPDATED_WITHIN_DAYS;
+    const isPinned    = (b as unknown as Record<string, unknown>).pinnedTitle === true;
+    // Pinned blogs still eligible for update (adding content) but must be ≥60 days old
+    const minAge      = isPinned ? 60 : UPDATE_AFTER_DAYS;
+    return age >= minAge && sinceUpdate >= SKIP_IF_UPDATED_WITHIN_DAYS;
   });
 
   if (eligibleIndex.length === 0) {

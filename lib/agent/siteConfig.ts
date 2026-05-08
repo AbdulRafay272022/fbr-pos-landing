@@ -133,7 +133,7 @@ export function getSiteConfig(): SiteConfig {
     // E-E-A-T author (shown on blog bylines + schema)
     authorName:  env("SITE_AUTHOR_NAME",  "Phelix ERP Team"),
     authorTitle: env("SITE_AUTHOR_TITLE", "FBR Compliance Specialists"),
-    authorBio:   env("SITE_AUTHOR_BIO",   "The Phelix ERP team has helped 20+ Pakistani businesses across Karachi, Lahore, and Islamabad achieve FBR POS compliance. We specialise in IRIS integration, QR invoicing, and automated sales-tax workflows for retail, restaurants, and pharmacies."),
+    authorBio:   env("SITE_AUTHOR_BIO",   "The Phelix ERP team has helped 25+ Pakistani businesses across Karachi, Lahore, and Islamabad achieve FBR POS compliance. We specialise in IRIS integration, QR invoicing, and automated sales-tax workflows for retail, restaurants, and pharmacies."),
 
     // Content quality
     minWordCount:     envNum("MIN_WORD_COUNT",     1200),
@@ -144,7 +144,7 @@ export function getSiteConfig(): SiteConfig {
     minUnusedKeywordsThreshold: envNum("MIN_UNUSED_KEYWORDS",    20),
     scrapeIntervalDays:         envNum("SCRAPE_INTERVAL_DAYS",    7),
     generateIntervalHours:      envNum("GENERATE_INTERVAL_HOURS", 20),
-    updateIntervalHours:        envNum("UPDATE_INTERVAL_HOURS",   22),
+    updateIntervalHours:        envNum("UPDATE_INTERVAL_HOURS",   168), // 7 days (was 22h — too aggressive)
     updateAfterDays:            envNum("UPDATE_AFTER_DAYS",       7),
     skipIfUpdatedWithinDays:    envNum("SKIP_IF_UPDATED_DAYS",    30),
   };

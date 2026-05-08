@@ -1,7 +1,7 @@
 {
   "slug": "pos-system-lahore-fbr-integration-for-lahore-retailers-2026",
   "title": "POS System Lahore – FBR Integration for Lahore Retailers 2026",
-  "metaDescription": "FBR-compliant POS systems for Lahore businesses in 2026 — Liberty Market, Gulberg, Johar Town compliance, Lahore Chamber guidance, and how to get set up in 24 hours.",
+  "metaDescription": "FBR-compliant POS for Lahore businesses in 2026 — Liberty Market, Gulberg, Johar Town compliance, Lahore Chamber guidance, and 24-hour setup.",
   "keywords": [
     "POS system Lahore",
     "FBR POS Lahore",
@@ -31,5 +31,7 @@
       "question": "Can a Lahore business owner manage FBR compliance from outside the city?",
       "answer": "Yes. FBR POS registration and compliance management is entirely online through IRIS. Business owners who travel or manage businesses remotely can monitor compliance, review invoices, and file returns from anywhere with internet access."
     }
-  ]
+  ],
+  "pinnedTitle": true,
+  "cluster": "pos-by-city"
 }

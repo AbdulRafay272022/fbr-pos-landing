@@ -31,5 +31,7 @@
       "question": "What is the penalty for issuing an invoice without a QR code?",
       "answer": "An invoice without a QR code is non-compliant even if it contains all other correct fields. FBR can issue fines starting at PKR 10,000 per non-compliant invoice, and businesses found issuing non-QR receipts during inspections are treated as operating without FBR integration."
     }
-  ]
+  ],
+  "pinnedTitle": true,
+  "cluster": "fbr-invoicing"
 }

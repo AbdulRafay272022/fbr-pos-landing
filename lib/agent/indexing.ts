@@ -1,95 +1,22 @@
 /**
  * lib/agent/indexing.ts
  *
- * Google Indexing API integration.
+ * Sitemap notification for Google.
  *
- * Submits page URLs to Google for immediate crawl using the
- * Indexing API (service account JWT auth — same pattern as GSC).
+ * The Google Indexing API only supports JobPosting and BroadcastEvent schema types
+ * and is NOT suitable for blog pages. Replaced with a sitemap ping to Google and Bing,
+ * which is the correct mechanism for notifying search engines of new/updated blog content.
  *
- * Required env vars:
- *   GOOGLE_INDEXING_CLIENT_EMAIL  — service account email
- *   GOOGLE_INDEXING_PRIVATE_KEY   — RSA private key (PEM, \n-escaped)
+ * Google: https://www.google.com/ping?sitemap=<sitemapUrl>
+ * Bing:   https://www.bing.com/ping?sitemap=<sitemapUrl>
  *
- * Note: The service account MUST be added as a "verified owner" in
- *       Google Search Console for the property, otherwise submissions
- *       return 403. See: https://developers.google.com/search/apis/indexing-api/v3/quickstart
- *
- * Rate limits: 200 URLs/day on free tier.
- * Graceful degradation: if env vars missing, logs a warning and returns.
+ * Rate limits: unlimited (sitemap pings are not rate limited).
+ * No credentials required.
  */
 
 import type { IndexingRecord, IndexingData } from "@/lib/types";
 
-// ─── JWT (same helper pattern as seoFeedback.ts) ─────────────────────────────
-
-function b64url(buf: ArrayBuffer): string {
-  const bytes = new Uint8Array(buf);
-  let str = "";
-  for (const b of bytes) str += String.fromCharCode(b);
-  return btoa(str).replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
-}
-
-async function buildIndexingJwt(clientEmail: string, privateKeyPem: string): Promise<string> {
-  const headerBytes  = new TextEncoder().encode(JSON.stringify({ alg: "RS256", typ: "JWT" }));
-  const header       = b64url(headerBytes.buffer as ArrayBuffer);
-  const now          = Math.floor(Date.now() / 1000);
-  const payloadBytes = new TextEncoder().encode(
-    JSON.stringify({
-      iss:   clientEmail,
-      scope: "https://www.googleapis.com/auth/indexing",
-      aud:   "https://oauth2.googleapis.com/token",
-      iat:   now,
-      exp:   now + 3600,
-    })
-  );
-  const payload = b64url(payloadBytes.buffer as ArrayBuffer);
-
-  const pemBody = privateKeyPem
-    .replace(/-----BEGIN PRIVATE KEY-----/, "")
-    .replace(/-----END PRIVATE KEY-----/, "")
-    .replace(/\s+/g, "");
-  const binaryKey = Uint8Array.from(atob(pemBody), (c) => c.charCodeAt(0));
-
-  const cryptoKey = await crypto.subtle.importKey(
-    "pkcs8",
-    binaryKey.buffer as ArrayBuffer,
-    { name: "RSASSA-PKCS1-v1_5", hash: "SHA-256" },
-    false,
-    ["sign"]
-  );
-
-  const sigBytes = new TextEncoder().encode(`${header}.${payload}`);
-  const sigBuf   = await crypto.subtle.sign(
-    "RSASSA-PKCS1-v1_5",
-    cryptoKey,
-    sigBytes.buffer as ArrayBuffer
-  );
-
-  return `${header}.${payload}.${b64url(sigBuf)}`;
-}
-
-async function getIndexingAccessToken(clientEmail: string, privateKeyPem: string): Promise<string> {
-  const jwt = await buildIndexingJwt(clientEmail, privateKeyPem);
-  const res = await fetch("https://oauth2.googleapis.com/token", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams({
-      grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
-      assertion:  jwt,
-    }),
-  });
-
-  if (!res.ok) {
-    const text = await res.text();
-    throw new Error(`Indexing API token error ${res.status}: ${text}`);
-  }
-
-  const json = await res.json() as { access_token?: string };
-  if (!json.access_token) throw new Error("No access_token in response");
-  return json.access_token;
-}
-
-// ─── Core submit function ─────────────────────────────────────────────────────
+// ─── Sitemap ping ─────────────────────────────────────────────────────────────
 
 export interface IndexSubmitResult {
   url:     string;
@@ -98,92 +25,65 @@ export interface IndexSubmitResult {
 }
 
 /**
- * Submit a single URL to the Google Indexing API.
- * type "URL_UPDATED" = new/updated content; "URL_DELETED" = removed content.
+ * Notify Google and Bing of a new/updated sitemap.
+ * This is the correct mechanism for blog content (not the Indexing API,
+ * which only supports JobPosting and BroadcastEvent schema types).
  */
-export async function submitToGoogleIndexing(
-  url:          string,
-  accessToken:  string,
-  type: "URL_UPDATED" | "URL_DELETED" = "URL_UPDATED"
-): Promise<IndexSubmitResult> {
-  try {
-    const res = await fetch("https://indexing.googleapis.com/v3/urlNotifications:publish", {
-      method:  "POST",
-      headers: {
-        Authorization:  `Bearer ${accessToken}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ url, type }),
-      signal: AbortSignal.timeout(10_000),
-    });
-
-    if (!res.ok) {
-      const text = await res.text();
-      return { url, success: false, error: `HTTP ${res.status}: ${text.slice(0, 200)}` };
-    }
-
-    return { url, success: true };
-  } catch (err) {
-    return {
-      url,
-      success: false,
-      error: err instanceof Error ? err.message : String(err),
-    };
-  }
+async function pingSitemap(sitemapUrl: string): Promise<{ google: boolean; bing: boolean }> {
+  const encoded = encodeURIComponent(sitemapUrl);
+  const [googleRes, bingRes] = await Promise.allSettled([
+    fetch(`https://www.google.com/ping?sitemap=${encoded}`, { signal: AbortSignal.timeout(10_000) }),
+    fetch(`https://www.bing.com/ping?sitemap=${encoded}`,  { signal: AbortSignal.timeout(10_000) }),
+  ]);
+  return {
+    google: googleRes.status === "fulfilled" && googleRes.value.ok,
+    bing:   bingRes.status   === "fulfilled" && bingRes.value.ok,
+  };
 }
 
 /**
- * Submit multiple URLs in sequence (Google rate limits to ~200/day).
+ * Submit multiple blog URLs by pinging the sitemap.
+ * Called after each new blog is published or updated.
  * Returns per-URL results and the updated IndexingData object.
- *
- * Gracefully returns empty results if env vars are not configured.
  */
 export async function batchSubmitUrls(
   urls:     string[],
   existing: IndexingData
 ): Promise<{ results: IndexSubmitResult[]; data: IndexingData }> {
-  const clientEmail = process.env.GOOGLE_INDEXING_CLIENT_EMAIL;
-  const privateKey  = process.env.GOOGLE_INDEXING_PRIVATE_KEY?.replace(/\\n/g, "\n");
+  const base        = (process.env.SITE_BASE_URL ?? "https://phelixerp.vercel.app").replace(/\/$/, "");
+  const sitemapUrl  = `${base}/sitemap.xml`;
+  const now         = new Date().toISOString();
 
-  if (!clientEmail || !privateKey) {
-    // Not configured — skip silently
-    return {
-      results: urls.map((url) => ({ url, success: false, error: "Indexing API not configured" })),
-      data:    existing,
-    };
-  }
-
-  let accessToken: string;
+  // Ping the sitemap once regardless of how many URLs there are
+  let pingSuccess = false;
+  let pingError: string | undefined;
   try {
-    accessToken = await getIndexingAccessToken(clientEmail, privateKey);
+    const { google, bing } = await pingSitemap(sitemapUrl);
+    pingSuccess = google || bing;
+    if (!pingSuccess) pingError = "Both Google and Bing ping returned non-OK";
   } catch (err) {
-    const error = err instanceof Error ? err.message : String(err);
-    return {
-      results: urls.map((url) => ({ url, success: false, error })),
-      data:    existing,
-    };
+    pingError = err instanceof Error ? err.message : String(err);
   }
 
-  const results: IndexSubmitResult[] = [];
-  const now     = new Date().toISOString();
-  const base    = (process.env.SITE_BASE_URL ?? "").replace(/\/$/, "");
+  const results: IndexSubmitResult[] = urls.map((url) => ({
+    url,
+    success: pingSuccess,
+    ...(pingError ? { error: pingError } : {}),
+  }));
 
+  // Record each URL
   for (const url of urls) {
-    const result = await submitToGoogleIndexing(url, accessToken);
-    results.push(result);
-
     const slug = url.replace(`${base}/blog/`, "");
     const record: IndexingRecord = {
       slug,
       url,
       submittedAt: now,
       type:        "URL_UPDATED",
-      status:      result.success ? "submitted" : "failed",
-      ...(result.error ? { error: result.error } : {}),
+      status:      pingSuccess ? "submitted" : "failed",
+      ...(pingError ? { error: pingError } : {}),
     };
-
     existing.records.push(record);
-    if (result.success) existing.totalSubmitted++;
+    if (pingSuccess) existing.totalSubmitted++;
   }
 
   existing.lastSubmittedAt = now;

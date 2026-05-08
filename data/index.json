@@ -1,8 +1,8 @@
 [
   {
     "slug": "how-to-setup-fbr-penalty-in-pakistan",
-    "title": "how to setup fbr penalty in pakistan",
-    "metaDescription": "how to setup fbr penalty in pakistan — complete guide for Pakistani businesses.",
+    "title": "FBR Penalty in Pakistan: What It Costs, How It's Applied & How to Avoid It in 2026",
+    "metaDescription": "Complete guide to FBR penalties in Pakistan 2026 — exact fine amounts for missing POS, late filing, wrong invoices, and step-by-step guide to staying penalty-free.",
     "keywords": [
       "how to setup fbr penalty in pakistan",
       "how to setup fbr penalty in pakistan pakistan",
@@ -41,12 +41,15 @@
       "photographer": "iram shehzad",
       "photographerUrl": "https://www.pexels.com/@iram-shehzad-45081404",
       "pexelsUrl": "https://www.pexels.com/photo/young-woman-in-pakistani-attire-at-business-event-36965908/"
-    }
+    },
+    "cluster": "fbr-compliance",
+    "pinnedTitle": true,
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
   },
   {
     "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
-    "title": "Multi Branch POS Pakistan vs Single Store: Which is Best?",
-    "metaDescription": "Managing multi-branch retail operations with FBR-compliant POS software in Pakistan — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
+    "title": "Multi-Branch POS System Pakistan: Managing Multiple Stores with FBR 2026",
+    "metaDescription": "How to manage multiple retail branches with FBR-compliant POS in Pakistan — POSID per branch, central reporting, and avoiding cross-branch compliance gaps.",
     "keywords": [
       "multi branch POS Pakistan",
       "chain store POS Pakistan",
@@ -54,25 +57,30 @@
     ],
     "publishedAt": "2026-05-06T09:25:57.687Z",
     "readTime": 8,
-    "lastUpdated": "2026-05-07T02:09:58.801Z",
-    "version": 2
+    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "version": 2,
+    "cluster": "pos-software",
+    "pinnedTitle": true
   },
   {
     "slug": "fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide",
     "title": "FBR Compliance Checklist for Pakistani Businesses – 2026 Complete Guide",
-    "metaDescription": "Complete FBR compliance checklist for Pakistani businesses in 2026 — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
+    "metaDescription": "FBR compliance checklist for Pakistani businesses 2026 — STRN verification, POS registration, QR invoicing, and monthly filing steps in one complete guide.",
     "keywords": [
       "FBR compliance checklist Pakistan",
       "FBR requirements 2026",
       "FBR compliance Pakistan business"
     ],
     "publishedAt": "2026-05-05T09:36:45.838Z",
-    "readTime": 8
+    "readTime": 8,
+    "cluster": "fbr-compliance",
+    "pinnedTitle": true,
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
   },
   {
     "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
-    "title": "Top 3 Retail Inventory Management Pakistan Mistakes to Avoid",
-    "metaDescription": "Inventory management and stock tracking integrated with FBR POS systems in Pakistan — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
+    "title": "Retail Inventory Management Pakistan: Track Stock with FBR POS System",
+    "metaDescription": "Retail inventory management for FBR POS compliance in Pakistan — HS code validation, UOM matching, stock reconciliation, and audit-ready reporting.",
     "keywords": [
       "retail inventory management Pakistan",
       "inventory tracking Pakistan",
@@ -80,13 +88,15 @@
     ],
     "publishedAt": "2026-05-04T09:48:37.534Z",
     "readTime": 7,
-    "lastUpdated": "2026-05-07T02:09:59.256Z",
-    "version": 2
+    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "version": 2,
+    "cluster": "pos-software",
+    "pinnedTitle": true
   },
   {
     "slug": "fbr-sales-tax-returns-pakistan-how-pos-integration-simplifies-monthly-filing",
-    "title": "FBR Sales Tax Return Pakistan Made Easy: Top 3 Benefits",
-    "metaDescription": "How FBR POS integration makes monthly sales tax returns easier in Pakistan — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
+    "title": "FBR Sales Tax Returns Pakistan: How POS Integration Simplifies Monthly Filing",
+    "metaDescription": "How FBR POS integration simplifies monthly sales tax returns in Pakistan — automate STR-7 data, cut reconciliation time, and file on time every month.",
     "keywords": [
       "FBR sales tax return Pakistan",
       "monthly tax filing Pakistan",
@@ -94,25 +104,30 @@
     ],
     "publishedAt": "2026-05-03T09:44:49.620Z",
     "readTime": 8,
-    "lastUpdated": "2026-05-07T02:09:58.271Z",
-    "version": 2
+    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "version": 2,
+    "cluster": "fbr-invoicing",
+    "pinnedTitle": true
   },
   {
     "slug": "pos-system-lahore-fbr-integration-for-lahore-retailers-2026",
     "title": "POS System Lahore – FBR Integration for Lahore Retailers 2026",
-    "metaDescription": "FBR-compliant POS systems for businesses operating in Lahore — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
+    "metaDescription": "FBR-compliant POS systems for Lahore businesses in 2026 — Liberty Market, Gulberg, Johar Town compliance, Lahore Chamber guidance, and how to get set up in 24 hours.",
     "keywords": [
       "POS system Lahore",
       "FBR POS Lahore",
       "Lahore retail POS software"
     ],
     "publishedAt": "2026-05-02T09:12:55.548Z",
-    "readTime": 8
+    "readTime": 8,
+    "cluster": "pos-by-city",
+    "pinnedTitle": true,
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
   },
   {
     "slug": "pos-system-karachi-fbr-compliant-solutions-for-karachi-businesses",
-    "title": "Top POS System Karachi: Cloud vs Traditional Solutions",
-    "metaDescription": "FBR-compliant POS solutions for businesses operating in Karachi — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
+    "title": "POS System Karachi: FBR-Compliant Solutions for Karachi Businesses 2026",
+    "metaDescription": "FBR-compliant POS systems for Karachi businesses in 2026 — which Karachi markets are FBR-targeted, what fines apply, and how to get compliant fast.",
     "keywords": [
       "POS system Karachi",
       "FBR POS Karachi",
@@ -120,13 +135,15 @@
     ],
     "publishedAt": "2026-05-01T09:38:13.877Z",
     "readTime": 7,
-    "lastUpdated": "2026-05-08T02:59:48.653Z",
-    "version": 2
+    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "version": 2,
+    "cluster": "pos-by-city",
+    "pinnedTitle": true
   },
   {
     "slug": "fbr-pos-system-for-restaurants-in-pakistan-what-you-must-know-in-2026",
-    "title": "Top 3 Restaurant POS Pakistan Systems Compared",
-    "metaDescription": "FBR POS requirements for restaurants and food businesses in Pakistan — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
+    "title": "FBR POS System for Restaurants in Pakistan: What You Must Know in 2026",
+    "metaDescription": "FBR POS requirements for restaurants in Pakistan 2026 — dine-in vs takeaway tax rules, SRO 237 explained, GST on food, inspection risks, and compliance setup guide.",
     "keywords": [
       "restaurant POS Pakistan",
       "FBR POS restaurant",
@@ -134,37 +151,45 @@
     ],
     "publishedAt": "2026-04-30T09:54:13.780Z",
     "readTime": 7,
-    "lastUpdated": "2026-05-08T02:59:49.173Z",
-    "version": 2
+    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "version": 2,
+    "cluster": "pos-by-industry",
+    "pinnedTitle": true
   },
   {
     "slug": "how-to-generate-fbr-qr-invoices-in-pakistan-step-by-step-guide",
     "title": "How to Generate FBR QR Invoices in Pakistan – Step by Step Guide",
-    "metaDescription": "Generating QR-coded FBR invoices for Pakistani businesses — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
+    "metaDescription": "How to generate FBR QR invoices in Pakistan — what the QR code contains, step-by-step setup, testing your integration, and common errors to fix.",
     "keywords": [
       "FBR QR invoice Pakistan",
       "QR invoice generator Pakistan",
       "FBR invoice QR code"
     ],
     "publishedAt": "2026-04-29T09:58:57.361Z",
-    "readTime": 8
+    "readTime": 8,
+    "cluster": "fbr-invoicing",
+    "pinnedTitle": true,
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
   },
   {
     "slug": "fbr-pos-system-for-pharmacies-in-pakistan-complete-compliance-guide-2026",
     "title": "FBR POS System for Pharmacies in Pakistan – Complete Compliance Guide 2026",
-    "metaDescription": "FBR POS compliance for pharmacies and medical stores in Pakistan — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
+    "metaDescription": "FBR POS compliance for pharmacies in Pakistan — SRO 1216 requirements, how medicine sales are taxed, and which POS systems are approved for 2026.",
     "keywords": [
       "pharmacy POS Pakistan",
       "FBR POS pharmacy Pakistan",
       "medical store POS FBR"
     ],
     "publishedAt": "2026-04-28T23:40:14.415Z",
-    "readTime": 7
+    "readTime": 7,
+    "cluster": "pos-by-industry",
+    "pinnedTitle": true,
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
   },
   {
     "slug": "retail-pos-compliance-pakistan-fbr-penalties-guide",
-    "title": "Top 3 Retail POS Pakistan Solutions Compared",
-    "metaDescription": "Pakistani retailers: understand FBR POS compliance requirements, penalty risks, and how to get your business compliant quickly to avoid fines and raids.",
+    "title": "Retail POS Compliance Pakistan: FBR Penalties, Fines & How to Stay Compliant in 2026",
+    "metaDescription": "FBR POS compliance guide for Pakistani retailers in 2026 — real penalty amounts, FBR inspection process, what happens during a raid, and how to get compliant fast.",
     "keywords": [
       "retail POS Pakistan",
       "FBR POS compliance Pakistan",
@@ -173,13 +198,15 @@
     ],
     "publishedAt": "2026-04-26T09:00:00.000Z",
     "readTime": 6,
-    "lastUpdated": "2026-05-08T02:59:49.639Z",
-    "version": 2
+    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "version": 2,
+    "cluster": "fbr-compliance",
+    "pinnedTitle": true
   },
   {
     "slug": "fbr-e-invoicing-pakistan-explained",
     "title": "FBR e-Invoicing Pakistan Explained – What Every Business Must Know",
-    "metaDescription": "Clear explanation of FBR e-invoicing requirements for Pakistan businesses. QR invoice format, submission process, penalties for non-compliance, and how to set it up fast.",
+    "metaDescription": "FBR e-invoicing explained — what QR invoices contain, how IRIS integration works, and which businesses in Pakistan are legally required to comply in 2026.",
     "keywords": [
       "FBR e-invoicing Pakistan",
       "QR invoice Pakistan",
@@ -187,12 +214,15 @@
       "FBR e invoice requirements"
     ],
     "publishedAt": "2026-04-25T09:00:00.000Z",
-    "readTime": 6
+    "readTime": 6,
+    "cluster": "fbr-invoicing",
+    "pinnedTitle": true,
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
   },
   {
     "slug": "best-pos-software-pakistan-fbr-compliant-2026",
     "title": "Best FBR-Compliant POS Software in Pakistan 2026",
-    "metaDescription": "Compare the best FBR-compliant POS software for Pakistani businesses in 2026. Features, pricing, and what to look for when choosing a POS system for FBR integration.",
+    "metaDescription": "How to choose the best FBR-compliant POS software in Pakistan 2026 — key features, red flags, pricing, and what real compliance actually looks like.",
     "keywords": [
       "best POS software Pakistan",
       "FBR POS software Pakistan",
@@ -200,12 +230,15 @@
       "POS system Pakistan 2026"
     ],
     "publishedAt": "2026-04-24T09:00:00.000Z",
-    "readTime": 7
+    "readTime": 7,
+    "cluster": "pos-software",
+    "pinnedTitle": true,
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
   },
   {
     "slug": "how-to-register-pos-fbr-pakistan-step-by-step",
     "title": "How to Register POS with FBR Pakistan – Step by Step 2026",
-    "metaDescription": "Complete step-by-step guide to registering your POS system with FBR Pakistan. Includes IRIS portal setup, integration requirements, and common mistakes to avoid.",
+    "metaDescription": "Step-by-step guide to registering your POS with FBR Pakistan in 2026 — IRIS portal walkthrough, API credentials, common errors, and how to get live in 24 hours.",
     "keywords": [
       "how to register POS with FBR",
       "FBR POS registration Pakistan",
@@ -213,12 +246,15 @@
       "FBR POS Pakistan 2026"
     ],
     "publishedAt": "2026-04-22T09:00:00.000Z",
-    "readTime": 6
+    "readTime": 6,
+    "cluster": "fbr-compliance",
+    "pinnedTitle": true,
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
   },
   {
     "slug": "fbr-pos-system-pakistan-complete-guide-2026",
     "title": "FBR POS System Pakistan – Complete Guide 2026",
-    "metaDescription": "Everything Pakistani businesses need to know about FBR POS systems in 2026. Registration, compliance requirements, QR invoicing, and how to avoid heavy FBR penalties.",
+    "metaDescription": "Complete 2026 guide to FBR POS systems in Pakistan — who must comply, how to register on IRIS, QR invoicing, penalty amounts, and setup in 24 hours.",
     "keywords": [
       "FBR POS system Pakistan",
       "FBR POS 2026",
@@ -226,6 +262,9 @@
       "QR invoice Pakistan"
     ],
     "publishedAt": "2026-04-20T09:00:00.000Z",
-    "readTime": 7
+    "readTime": 7,
+    "cluster": "fbr-compliance",
+    "pinnedTitle": true,
+    "lastUpdated": "2026-05-09T00:00:00.000Z"
   }
 ]

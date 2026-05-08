@@ -1,7 +1,7 @@
 {
   "slug": "fbr-pos-system-for-pharmacies-in-pakistan-complete-compliance-guide-2026",
   "title": "FBR POS System for Pharmacies in Pakistan – Complete Compliance Guide 2026",
-  "metaDescription": "FBR POS compliance for pharmacies and medical stores in Pakistan — legal requirements under SRO 1216, drug category tax rates, DRAP vs FBR obligations, and setup guide.",
+  "metaDescription": "FBR POS compliance for pharmacies in Pakistan — SRO 1216 requirements, how medicine sales are taxed, and which POS systems are approved for 2026.",
   "keywords": [
     "pharmacy POS Pakistan",
     "FBR POS pharmacy Pakistan",
@@ -31,5 +31,7 @@
       "question": "Can a pharmacy issue digital receipts via WhatsApp or SMS instead of printed ones?",
       "answer": "Yes. FBR allows digital invoices sent via WhatsApp, SMS, or email, provided they contain all mandatory fields including the QR code. A growing number of pharmacies are sending digital receipts to patients, which also helps build a customer contact database."
     }
-  ]
+  ],
+  "pinnedTitle": true,
+  "cluster": "pos-by-industry"
 }

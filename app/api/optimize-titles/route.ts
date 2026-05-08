@@ -95,8 +95,9 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ success: false, reason: "budget_exceeded" }, { status: 429 });
   }
 
-  // ── Select candidates: lowest-scoring titles ───────────────────────────────
+  // ── Select candidates: lowest-scoring titles (skip pinned blogs) ──────────
   const scored = blogIndex
+    .filter((b) => !(b as unknown as Record<string, unknown>).pinnedTitle) // never touch pinned titles
     .map((b) => ({
       blog:  b,
       score: scoreTitleVariant(b.title, b.keywords[0] ?? b.title).ctrScore,
