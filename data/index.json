@@ -1,5 +1,49 @@
 [
   {
+    "slug": "how-to-setup-fbr-penalty-in-pakistan",
+    "title": "how to setup fbr penalty in pakistan",
+    "metaDescription": "how to setup fbr penalty in pakistan — complete guide for Pakistani businesses.",
+    "keywords": [
+      "how to setup fbr penalty in pakistan",
+      "how to setup fbr penalty in pakistan pakistan",
+      "fbr compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need special hardware for how to setup fbr penalty in pakistan?",
+        "answer": "No. Phelix ERP runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+      },
+      {
+        "question": "What happens if my internet goes down during billing?",
+        "answer": "Phelix ERP stores transactions locally during outages and automatically syncs them to FBR IRIS with correct timestamps when connectivity returns."
+      },
+      {
+        "question": "How long does FBR POS setup take?",
+        "answer": "Phelix ERP completes the full setup — IRIS registration, API integration, and staff training — within 24 hours of sign-up."
+      },
+      {
+        "question": "What are the FBR penalties for non-compliance?",
+        "answer": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced business closure."
+      },
+      {
+        "question": "Is Phelix ERP officially FBR approved?",
+        "answer": "Phelix ERP integrates directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming proper submission."
+      }
+    ],
+    "publishedAt": "2026-05-08T02:59:11.647Z",
+    "readTime": 7,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36965908/pexels-photo-36965908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36965908/pexels-photo-36965908.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A young woman in traditional Pakistani clothing attends a lively business networking event indoors.",
+      "photographer": "iram shehzad",
+      "photographerUrl": "https://www.pexels.com/@iram-shehzad-45081404",
+      "pexelsUrl": "https://www.pexels.com/photo/young-woman-in-pakistani-attire-at-business-event-36965908/"
+    }
+  },
+  {
     "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
     "title": "Multi Branch POS Pakistan vs Single Store: Which is Best?",
     "metaDescription": "Managing multi-branch retail operations with FBR-compliant POS software in Pakistan — complete guide for Pakistani businesses. FBR POS compliance, e-invoicing requirements, and step-by-step setup.",
