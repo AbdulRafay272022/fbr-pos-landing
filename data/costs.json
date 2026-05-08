@@ -34,12 +34,39 @@
       "promptTokens": 1033,
       "completionTokens": 1698,
       "totalTokens": 2731
+    },
+    {
+      "ts": "2026-05-08T02:59:48.653Z",
+      "action": "title_optimize",
+      "slug": "pos-system-karachi-fbr-compliant-solutions-for-karachi-businesses",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-08T02:59:49.173Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-system-for-restaurants-in-pakistan-what-you-must-know-in-2026",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-08T02:59:49.639Z",
+      "action": "title_optimize",
+      "slug": "retail-pos-compliance-pakistan-fbr-penalties-guide",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 3931,
-      "calls": 4
+      "tokens": 5131,
+      "calls": 7
     }
   },
   "monthlyTokenBudget": 5000000,
