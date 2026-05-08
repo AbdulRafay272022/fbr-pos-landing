@@ -1,29 +1,29 @@
 {
   "entries": [
     {
-      "id": "mouule9i-ub912",
-      "ts": "2026-05-07T02:09:18.198Z",
+      "id": "mowbt9tb-k6lbj",
+      "ts": "2026-05-08T02:59:05.327Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mouule9f",
+        "runId": "run-mowbt9t8",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.vercel.app/"
       }
     },
     {
-      "id": "mouulehe-3mki7",
-      "ts": "2026-05-07T02:09:18.482Z",
+      "id": "mowbta2s-fp9u1",
+      "ts": "2026-05-08T02:59:05.668Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mouule9f",
-        "shouldScrape": true,
-        "shouldGenerate": false,
+        "runId": "run-mowbt9t8",
+        "shouldScrape": false,
+        "shouldGenerate": true,
         "shouldUpdate": true,
         "shouldFetchSeo": true,
         "shouldRefresh": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "never scraped before",
-          "generate": "skipped: no unused keywords in pool",
-          "update": "Infinityh since last update run",
+          "scrape": "skipped: 2669 unused keywords available, last scrape 1.0d ago",
+          "generate": "Infinityh since last generation, 2669 keywords available",
+          "update": "24.8h since last update run",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,93 +48,80 @@
       }
     },
     {
-      "id": "mouulfio-f8qim",
-      "ts": "2026-05-07T02:09:19.824Z",
+      "id": "mowbtgc4-n67q8",
+      "ts": "2026-05-08T02:59:13.780Z",
       "site": "Phelix ERP",
-      "event": "keyword_scraped",
+      "event": "blog_generated",
       "level": "info",
       "success": true,
+      "slug": "how-to-setup-fbr-penalty-in-pakistan",
+      "words": 1226,
+      "source": "template",
+      "durationMs": 6819,
       "details": {
-        "runId": "run-mouule9f",
-        "action": "starting scrape"
+        "runId": "run-mowbt9t8"
       }
     },
     {
-      "id": "mouulh5z-4fju3",
-      "ts": "2026-05-07T02:09:21.959Z",
-      "site": "Phelix ERP",
-      "event": "keyword_scraped",
-      "level": "info",
-      "success": true,
-      "durationMs": 2134,
-      "details": {
-        "runId": "run-mouule9f",
-        "total": 2669
-      }
-    },
-    {
-      "id": "mouum851-f30b5",
-      "ts": "2026-05-07T02:09:56.917Z",
+      "id": "mowbu6c1-ixo50",
+      "ts": "2026-05-08T02:59:47.473Z",
       "site": "Phelix ERP",
       "event": "blog_updated",
       "level": "info",
       "success": true,
-      "durationMs": 34958,
+      "durationMs": 33692,
       "details": {
-        "runId": "run-mouule9f",
+        "runId": "run-mowbt9t8",
         "updatedCount": 0
       }
     },
     {
-      "id": "mouum8kj-1umno",
-      "ts": "2026-05-07T02:09:57.475Z",
+      "id": "mowbu6p4-jk67v",
+      "ts": "2026-05-08T02:59:47.944Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 558,
+      "durationMs": 471,
       "details": {
-        "runId": "run-mouule9f"
+        "runId": "run-mowbt9t8"
       }
     },
     {
-      "id": "mouumb0s-xjq3o",
-      "ts": "2026-05-07T02:10:00.652Z",
+      "id": "mowbu915-iyohs",
+      "ts": "2026-05-08T02:59:50.969Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 3177,
+      "durationMs": 3025,
       "details": {
-        "runId": "run-mouule9f",
+        "runId": "run-mowbt9t8",
         "optimizedCount": 3
       }
     },
     {
-      "id": "mouumbca-yptei",
-      "ts": "2026-05-07T02:10:01.066Z",
+      "id": "mowbu9ab-k0kf6",
+      "ts": "2026-05-08T02:59:51.299Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 414,
+      "durationMs": 329,
       "details": {
-        "runId": "run-mouule9f"
+        "runId": "run-mowbt9t8"
       }
     },
     {
-      "id": "mouumfsn-yutg6",
-      "ts": "2026-05-07T02:10:06.839Z",
+      "id": "mowbu9i2-wfuln",
+      "ts": "2026-05-08T02:59:51.578Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": true,
-      "slug": "pos-system-restaurant-karachi",
-      "durationMs": 5773,
+      "success": false,
+      "durationMs": 279,
       "details": {
-        "runId": "run-mouule9f",
-        "city": "karachi",
-        "service": "POS System"
+        "runId": "run-mowbt9t8"
       }
     }
   ],
