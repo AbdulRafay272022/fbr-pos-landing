@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "id": "mowbt9tb-k6lbj",
-      "ts": "2026-05-08T02:59:05.327Z",
+      "id": "moxqs4c8-5lyv9",
+      "ts": "2026-05-09T02:45:51.992Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mowbt9t8",
+        "runId": "run-moxqs4c5",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.vercel.app/"
       }
     },
     {
-      "id": "mowbta2s-fp9u1",
-      "ts": "2026-05-08T02:59:05.668Z",
+      "id": "moxqs4l1-9ttmj",
+      "ts": "2026-05-09T02:45:52.309Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mowbt9t8",
+        "runId": "run-moxqs4c5",
         "shouldScrape": false,
         "shouldGenerate": true,
-        "shouldUpdate": true,
+        "shouldUpdate": false,
         "shouldFetchSeo": true,
         "shouldRefresh": false,
         "shouldOptimizeTitles": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2669 unused keywords available, last scrape 1.0d ago",
-          "generate": "Infinityh since last generation, 2669 keywords available",
-          "update": "24.8h since last update run",
+          "scrape": "skipped: 2668 unused keywords available, last scrape 2.0d ago",
+          "generate": "23.8h since last generation, 2668 keywords available",
+          "update": "skipped: last update 23.8h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,80 +48,67 @@
       }
     },
     {
-      "id": "mowbtgc4-n67q8",
-      "ts": "2026-05-08T02:59:13.780Z",
+      "id": "moxqsac5-48prq",
+      "ts": "2026-05-09T02:45:59.765Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "how-to-setup-fbr-penalty-in-pakistan",
+      "slug": "how-to-configure-fbr-penalty-in-pakistan",
       "words": 1226,
       "source": "template",
-      "durationMs": 6819,
+      "durationMs": 6154,
       "details": {
-        "runId": "run-mowbt9t8"
+        "runId": "run-moxqs4c5"
       }
     },
     {
-      "id": "mowbu6c1-ixo50",
-      "ts": "2026-05-08T02:59:47.473Z",
-      "site": "Phelix ERP",
-      "event": "blog_updated",
-      "level": "info",
-      "success": true,
-      "durationMs": 33692,
-      "details": {
-        "runId": "run-mowbt9t8",
-        "updatedCount": 0
-      }
-    },
-    {
-      "id": "mowbu6p4-jk67v",
-      "ts": "2026-05-08T02:59:47.944Z",
+      "id": "moxqsaix-p1ac7",
+      "ts": "2026-05-09T02:46:00.009Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 471,
+      "durationMs": 244,
       "details": {
-        "runId": "run-mowbt9t8"
+        "runId": "run-moxqs4c5"
       }
     },
     {
-      "id": "mowbu915-iyohs",
-      "ts": "2026-05-08T02:59:50.969Z",
+      "id": "moxqses4-i2ygt",
+      "ts": "2026-05-09T02:46:05.524Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 3025,
+      "durationMs": 5515,
       "details": {
-        "runId": "run-mowbt9t8",
-        "optimizedCount": 3
+        "runId": "run-moxqs4c5",
+        "optimizedCount": 1
       }
     },
     {
-      "id": "mowbu9ab-k0kf6",
-      "ts": "2026-05-08T02:59:51.299Z",
+      "id": "moxqsj7z-i2n7z",
+      "ts": "2026-05-09T02:46:11.279Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 329,
+      "durationMs": 5755,
       "details": {
-        "runId": "run-mowbt9t8"
+        "runId": "run-moxqs4c5"
       }
     },
     {
-      "id": "mowbu9i2-wfuln",
-      "ts": "2026-05-08T02:59:51.578Z",
+      "id": "moxqsjey-pfyb7",
+      "ts": "2026-05-09T02:46:11.530Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 279,
+      "durationMs": 251,
       "details": {
-        "runId": "run-mowbt9t8"
+        "runId": "run-moxqs4c5"
       }
     }
   ],
