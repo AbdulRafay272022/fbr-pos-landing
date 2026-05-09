@@ -20,8 +20,29 @@
         }
       ],
       "distributedAt": "2026-05-08T02:59:14.038Z"
+    },
+    {
+      "slug": "how-to-configure-fbr-penalty-in-pakistan",
+      "title": "FBR Penalty Configuration",
+      "blogUrl": "https://phelixerp.vercel.app/blog/how-to-configure-fbr-penalty-in-pakistan",
+      "hook": "FBR Penalty Configuration",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-05-09T02:46:00.600Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-05-09T02:46:00.600Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-05-09T02:46:00.601Z"
     }
   ],
-  "lastDistributedAt": "2026-05-08T02:59:14.038Z",
+  "lastDistributedAt": "2026-05-09T02:46:00.601Z",
   "totalDistributed": 0
 }
