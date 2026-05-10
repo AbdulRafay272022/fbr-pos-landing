@@ -97,6 +97,12 @@ export default function RootLayout({
     >
       <head>
         <meta name="google-site-verification" content="ff535bd7a9ec1568" />
+        {process.env.BING_SITE_VERIFICATION && (
+          <meta name="msvalidate.01" content={process.env.BING_SITE_VERIFICATION} />
+        )}
+        {process.env.YANDEX_VERIFICATION && (
+          <meta name="yandex-verification" content={process.env.YANDEX_VERIFICATION} />
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
