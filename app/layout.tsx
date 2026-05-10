@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_BASE_URL ?? "https://www.phelixerp.online"),
+  metadataBase: new URL(process.env.SITE_BASE_URL ?? "https://phelixerp.online"),
   title: {
     default: "Phelix ERP — FBR POS System Pakistan | FBR e-Invoicing Software",
     template: "%s | Phelix ERP Pakistan",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "FBR integrated POS",
     "ERP Pakistan small business",
   ],
-  authors: [{ name: "Phelix ERP", url: "https://www.phelixerp.online" }],
+  authors: [{ name: "Phelix ERP", url: "https://phelixerp.online" }],
   creator: "Phelix ERP",
   publisher: "Phelix ERP",
   robots: {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_PK",
-    url: "https://www.phelixerp.online",
+    url: "https://phelixerp.online",
     siteName: "Phelix ERP",
     title: "Phelix ERP — FBR POS System Pakistan | FBR e-Invoicing Software",
     description:
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     images: ["/dashboard-screenshot.png"],
   },
   alternates: {
-    canonical: "https://www.phelixerp.online",
+    canonical: "https://phelixerp.online",
   },
   category: "technology",
 };

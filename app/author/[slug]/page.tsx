@@ -13,7 +13,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { getAllBlogs } from "@/lib/blogStore";
 
-const BASE_URL   = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.phelixerp.online";
+const BASE_URL   = process.env.NEXT_PUBLIC_SITE_URL ?? "https://phelixerp.online";
 const WA_NUMBER  = "923118366981";
 const AUTHOR_NAME  = process.env.SITE_AUTHOR_NAME  ?? "Phelix ERP Team";
 const AUTHOR_TITLE = process.env.SITE_AUTHOR_TITLE ?? "FBR Compliance Specialists";

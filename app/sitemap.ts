@@ -59,7 +59,7 @@ function blogPriority(blog: BlogIndexEntry): number {
 // ─── Sitemap generator ────────────────────────────────────────────────────────
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const base = (process.env.SITE_BASE_URL ?? "https://www.phelixerp.online").replace(/\/$/, "");
+  const base = (process.env.SITE_BASE_URL ?? "https://phelixerp.online").replace(/\/$/, "");
 
   const staticPages: MetadataRoute.Sitemap = [
     {

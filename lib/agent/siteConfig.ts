@@ -43,7 +43,7 @@ export function getSiteConfig(): SiteConfig {
     name:    env("SITE_NAME",    "Phelix ERP"),
     niche:   env("SITE_NICHE",   "FBR POS Compliance Pakistan"),
     country: env("SITE_COUNTRY", "Pakistan"),
-    baseUrl: env("SITE_BASE_URL", "https://www.phelixerp.online"),
+    baseUrl: env("SITE_BASE_URL", "https://phelixerp.online"),
 
     // Seed keywords — core topics that drive keyword expansion
     seedKeywords: envList("SITE_SEED_KEYWORDS", [

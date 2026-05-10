@@ -9,7 +9,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const base = (process.env.SITE_BASE_URL ?? "https://www.phelixerp.online").replace(/\/$/, "");
+  const base = (process.env.SITE_BASE_URL ?? "https://phelixerp.online").replace(/\/$/, "");
 
   return {
     rules: [

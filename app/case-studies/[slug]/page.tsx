@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { CASE_STUDIES } from "../page";
 import { getSiteConfig } from "@/lib/agent/siteConfig";
 
-const BASE_URL  = "https://www.phelixerp.online";
+const BASE_URL  = "https://phelixerp.online";
 const WA_NUMBER = "923118366981";
 
 interface Props {

@@ -100,7 +100,7 @@ export async function batchSubmitUrls(
   urls:     string[],
   existing: IndexingData
 ): Promise<{ results: IndexSubmitResult[]; data: IndexingData }> {
-  const base = (process.env.SITE_BASE_URL ?? "https://www.phelixerp.online").replace(/\/$/, "");
+  const base = (process.env.SITE_BASE_URL ?? "https://phelixerp.online").replace(/\/$/, "");
   const host = base.replace(/^https?:\/\//, "");
   const now  = new Date().toISOString();
 
