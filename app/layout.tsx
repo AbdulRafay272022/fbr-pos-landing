@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Phelix ERP Pakistan",
   },
   description:
-    "Pakistan's leading FBR-compliant POS system. Real-time QR invoice submission to FBR IRIS, inventory management, and sales reports. Setup in 24 hours. Trusted by 25+ businesses.",
+    "Pakistan's #1 FBR-compliant POS system. Auto QR invoicing to FBR IRIS, inventory tracking & sales reports. Trusted by 25+ businesses. Setup in 24 hours.",
   keywords: [
     "FBR POS system Pakistan",
     "FBR e-invoicing software Pakistan",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     siteName: "Phelix ERP",
     title: "Phelix ERP — FBR POS System Pakistan | FBR e-Invoicing Software",
     description:
-      "Pakistan's leading FBR-compliant POS system. QR invoices, FBR IRIS integration, inventory management. Setup in 24 hours.",
+      "Auto QR invoicing to FBR IRIS, inventory tracking & sales reports. Trusted by 25+ Pakistan businesses. Setup in 24 hours.",
     images: [
       {
         url: "/dashboard-screenshot.png",
