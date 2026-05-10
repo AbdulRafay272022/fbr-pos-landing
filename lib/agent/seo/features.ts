@@ -15,13 +15,17 @@ export interface SeoFeatureFlags {
   pageSpeedInsights: boolean;   // Core Web Vitals
   richResults:       boolean;   // Schema validation (always free)
 
-  // DataForSEO (one credential set powers many features)
-  dataForSeo:        boolean;
+  // SERP providers (primary: Serper, fallback: DataForSEO)
+  serper:            boolean;   // Serper.dev — Google Autocomplete + PAA + SERP
+  dataForSeo:        boolean;   // DataForSEO — SERP data (fallback)
   rankTracking:      boolean;
   serpAnalysis:      boolean;
   paaScraping:       boolean;
   contentGaps:       boolean;
   backlinks:         boolean;
+
+  // Market keyword discovery
+  marketDiscovery:   boolean;   // Google Autocomplete (always free) + Serper PAA
 
   // Distribution
   twitter:           boolean;
@@ -33,7 +37,9 @@ export interface SeoFeatureFlags {
 }
 
 export function getSeoFeatures(): SeoFeatureFlags {
+  const hasSerper     = !!process.env.SERPER_API_KEY;
   const hasDataForSeo = !!(process.env.DATAFORSEO_LOGIN && process.env.DATAFORSEO_PASSWORD);
+  const hasAnySerpApi = hasSerper || hasDataForSeo;
 
   return {
     gsc: !!(
@@ -47,12 +53,19 @@ export function getSeoFeatures(): SeoFeatureFlags {
     pageSpeedInsights: !!process.env.PAGESPEED_API_KEY || true, // free tier works keyless (limited)
     richResults: true,                                          // always available
 
-    dataForSeo:   hasDataForSeo,
-    rankTracking: hasDataForSeo,
-    serpAnalysis: hasDataForSeo,
-    paaScraping:  hasDataForSeo,
-    contentGaps:  hasDataForSeo,
-    backlinks:    hasDataForSeo,
+    // SERP providers
+    serper:     hasSerper,
+    dataForSeo: hasDataForSeo,
+
+    // Features powered by any SERP API
+    rankTracking: hasAnySerpApi,
+    serpAnalysis: hasAnySerpApi,
+    paaScraping:  hasSerper,    // Serper includes PAA natively
+    contentGaps:  hasAnySerpApi,
+    backlinks:    hasDataForSeo, // only DataForSEO has backlink API
+
+    // Market discovery: Google Autocomplete is always free, PAA needs Serper
+    marketDiscovery: true,  // Autocomplete is always free; Serper makes it better
 
     twitter:  !!(process.env.TWITTER_BEARER_TOKEN || process.env.TWITTER_API_KEY),
     linkedin: !!process.env.LINKEDIN_ACCESS_TOKEN,
@@ -72,12 +85,14 @@ export function describeSeoFeatures(): { active: string[]; idle: string[] } {
     gsc:               "Google Search Console (impressions, clicks, position)",
     pageSpeedInsights: "Core Web Vitals monitoring",
     richResults:       "Structured-data validation",
-    dataForSeo:        "DataForSEO API",
+    serper:            "Serper.dev (SERP + PAA — primary)",
+    dataForSeo:        "DataForSEO API (SERP — fallback)",
     rankTracking:      "Daily keyword rank tracking",
     serpAnalysis:      "SERP top-10 analysis",
     paaScraping:       "People Also Ask scraping",
     contentGaps:       "Competitor content-gap analysis",
     backlinks:         "Backlink monitoring",
+    marketDiscovery:   "Autonomous market keyword discovery",
     twitter:           "X / Twitter syndication",
     linkedin:          "LinkedIn syndication",
     groq:              "Groq LLM (bulk content)",
