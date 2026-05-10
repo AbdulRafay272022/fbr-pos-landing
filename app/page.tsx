@@ -423,8 +423,8 @@ export default function LandingPage() {
                   {activeScreen.badge}
                 </span>
               </div>
-              {/* Screenshot — fixed height crops empty bottom of ERP UI */}
-              <div className="relative bg-white overflow-hidden" style={{ height: "420px" }}>
+              {/* Screenshot — responsive height, crops empty bottom of ERP UI */}
+              <div className="relative bg-white overflow-hidden h-48 sm:h-64 md:h-[420px]">
                 <Image
                   key={activeTab}
                   src={activeScreen.src}
