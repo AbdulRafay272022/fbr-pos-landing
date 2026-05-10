@@ -5,7 +5,7 @@ import { getBlogBySlug, getAllBlogs } from "@/lib/blogStore";
 import { blogPostingSchema, breadcrumbSchema, faqSchema, LANDING_FAQS } from "@/lib/schema";
 import { injectInternalLinks, getRelatedPosts } from "@/lib/internalLinks";
 
-const BASE_URL = "https://phelixerp.online";
+const BASE_URL = "https://www.phelixerp.online";
 const WA_NUMBER = "923118366981";
 
 interface Props {

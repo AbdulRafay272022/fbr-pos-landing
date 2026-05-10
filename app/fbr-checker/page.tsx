@@ -153,7 +153,7 @@ export default function FBRCheckerPage() {
   const waHref = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(waMessage)}`;
 
   const shareText = result
-    ? `I checked FBR compliance for ${businessName} on Phelix ERP and scored ${result.score}/100 (${result.risk} Risk). Check your business compliance free: https://phelixerp.online/fbr-checker`
+    ? `I checked FBR compliance for ${businessName} on Phelix ERP and scored ${result.score}/100 (${result.risk} Risk). Check your business compliance free: https://www.phelixerp.online/fbr-checker`
     : "";
   const waShareHref = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 

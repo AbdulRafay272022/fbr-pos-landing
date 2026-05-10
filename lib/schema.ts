@@ -1,6 +1,6 @@
 ﻿import type { BlogPost } from "./types";
 
-const BASE_URL = "https://phelixerp.online";
+const BASE_URL = "https://www.phelixerp.online";
 
 export function organizationSchema() {
   return {

@@ -1,8 +1,8 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { getSiteConfig } from "@/lib/agent/siteConfig";
 
-const BASE_URL  = "https://phelixerp.online";
+const BASE_URL  = "https://www.phelixerp.online";
 const WA_NUMBER = "923118366981";
 
 export const metadata: Metadata = {

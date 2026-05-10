@@ -1,4 +1,4 @@
-/**
+﻿/**
  * lib/agent/agentBrain.ts
  *
  * Central SEO Agent Orchestrator — the decision layer.
@@ -370,7 +370,7 @@ async function callAction(
  *
  * @param config   - site configuration
  * @param gh       - GitHub connection details
- * @param baseUrl  - deployment base URL (e.g. https://phelixerp.online)
+ * @param baseUrl  - deployment base URL (e.g. https://www.phelixerp.online)
  * @param secret   - CRON_SECRET for calling sub-routes
  */
 export async function runAgent(

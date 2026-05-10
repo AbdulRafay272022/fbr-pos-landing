@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Privacy Policy — Phelix ERP",
   description: "Privacy Policy for Phelix ERP FBR POS system. How we collect, use, and protect your data in compliance with Pakistan's data protection standards.",
-  alternates: { canonical: "https://phelixerp.online/privacy" },
+  alternates: { canonical: "https://www.phelixerp.online/privacy" },
 };
 
 const LAST_UPDATED = "May 2026";

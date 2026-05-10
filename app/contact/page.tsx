@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "Contact Phelix ERP — FBR POS Support Pakistan",
   description:
     "Contact Phelix ERP for FBR POS system setup, demo, pricing, or support. WhatsApp: +92 311 836 6981. Serving businesses across Karachi, Lahore, Islamabad and all Pakistan.",
-  alternates: { canonical: "https://phelixerp.online/contact" },
+  alternates: { canonical: "https://www.phelixerp.online/contact" },
   openGraph: {
     title: "Contact Phelix ERP — FBR POS Support Pakistan",
     description: "Reach our FBR compliance team via WhatsApp, phone, or Facebook. We respond within minutes.",
-    url: "https://phelixerp.online/contact",
+    url: "https://www.phelixerp.online/contact",
   },
 };
 

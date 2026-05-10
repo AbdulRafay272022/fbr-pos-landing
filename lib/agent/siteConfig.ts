@@ -1,4 +1,4 @@
-/**
+﻿/**
  * lib/agent/siteConfig.ts
  *
  * SiteConfig is the single source of truth for ALL site-specific values.
@@ -43,7 +43,7 @@ export function getSiteConfig(): SiteConfig {
     name:    env("SITE_NAME",    "Phelix ERP"),
     niche:   env("SITE_NICHE",   "FBR POS Compliance Pakistan"),
     country: env("SITE_COUNTRY", "Pakistan"),
-    baseUrl: env("SITE_BASE_URL", "https://phelixerp.online"),
+    baseUrl: env("SITE_BASE_URL", "https://www.phelixerp.online"),
 
     // Seed keywords — core topics that drive keyword expansion
     seedKeywords: envList("SITE_SEED_KEYWORDS", [

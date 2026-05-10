@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     description:
       "Expert guides on FBR POS compliance, e-invoicing, and POS software for Pakistani businesses.",
     type: "website",
-    url: "https://phelixerp.online/blog",
+    url: "https://www.phelixerp.online/blog",
     images: [{ url: "/dashboard-screenshot.png", width: 1200, height: 630, alt: "Phelix ERP Blog" }],
   },
-  alternates: { canonical: "https://phelixerp.online/blog" },
+  alternates: { canonical: "https://www.phelixerp.online/blog" },
 };
 
 export const revalidate = 3600;
