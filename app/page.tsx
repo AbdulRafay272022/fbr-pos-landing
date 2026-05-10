@@ -424,15 +424,15 @@ export default function LandingPage() {
                 </span>
               </div>
               {/* Screenshot */}
-              <div className="relative bg-gray-100" style={{ minHeight: "400px" }}>
+              <div className="relative bg-white overflow-hidden" style={{ aspectRatio: "16/9" }}>
                 <Image
                   key={activeTab}
                   src={activeScreen.src}
                   alt={activeScreen.alt}
-                  width={1400}
-                  height={800}
-                  className="w-full object-cover object-top"
+                  fill
+                  className="object-cover object-top"
                   priority
+                  sizes="(max-width: 768px) 100vw, 1024px"
                 />
               </div>
               {/* Caption bar */}
@@ -882,6 +882,10 @@ export default function LandingPage() {
                 { label: "Pricing", href: "#pricing" },
                 { label: "Blog", href: "/blog" },
                 { label: "FBR Checker", href: "/fbr-checker" },
+                { label: "About", href: "/about" },
+                { label: "Contact", href: "/contact" },
+                { label: "Privacy", href: "/privacy" },
+                { label: "Terms", href: "/terms" },
               ].map(({ label, href }) => (
                 <a
                   key={label}

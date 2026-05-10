@@ -16,13 +16,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://phelixerp.vercel.app"),
+  metadataBase: new URL(process.env.SITE_BASE_URL ?? "https://phelixerp.online"),
   title: {
     default: "Phelix ERP — FBR POS System Pakistan | FBR e-Invoicing Software",
     template: "%s | Phelix ERP Pakistan",
   },
   description:
-    "Pakistan's leading FBR-compliant POS system. Real-time QR invoice submission to FBR IRIS, inventory management, and sales reports. Setup in 24 hours. Trusted by 20+ businesses.",
+    "Pakistan's leading FBR-compliant POS system. Real-time QR invoice submission to FBR IRIS, inventory management, and sales reports. Setup in 24 hours. Trusted by 25+ businesses.",
   keywords: [
     "FBR POS system Pakistan",
     "FBR e-invoicing software Pakistan",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     "FBR integrated POS",
     "ERP Pakistan small business",
   ],
-  authors: [{ name: "Phelix ERP", url: "https://phelixerp.vercel.app" }],
+  authors: [{ name: "Phelix ERP", url: "https://phelixerp.online" }],
   creator: "Phelix ERP",
   publisher: "Phelix ERP",
   robots: {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_PK",
-    url: "https://phelixerp.vercel.app",
+    url: "https://phelixerp.online",
     siteName: "Phelix ERP",
     title: "Phelix ERP — FBR POS System Pakistan | FBR e-Invoicing Software",
     description:
@@ -76,11 +76,11 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Phelix ERP — FBR POS System Pakistan",
     description:
-      "FBR-compliant POS with QR invoicing, inventory management & sales reports. Trusted by 20+ Pakistan businesses.",
+      "FBR-compliant POS with QR invoicing, inventory management & sales reports. Trusted by 25+ Pakistan businesses.",
     images: ["/dashboard-screenshot.png"],
   },
   alternates: {
-    canonical: "https://phelixerp.vercel.app",
+    canonical: "https://phelixerp.online",
   },
   category: "technology",
 };
