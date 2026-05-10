@@ -245,6 +245,30 @@ async function checkLinkedIn(): Promise<ServiceCheck> {
   };
 }
 
+async function checkSerper(): Promise<ServiceCheck> {
+  const configured = isSet(process.env.SERPER_API_KEY);
+
+  if (!configured) {
+    return { name: "Serper.dev (SERP)", configured: false, reachable: false, required: false,
+      note: "Not configured — set SERPER_API_KEY for real SERP data" };
+  }
+
+  const result = await ping("https://google.serper.dev/search", {
+    method:  "POST",
+    headers: { "X-API-KEY": process.env.SERPER_API_KEY!, "Content-Type": "application/json" },
+    body:    JSON.stringify({ q: "FBR POS Pakistan", gl: "pk", num: 3 }),
+  });
+
+  return {
+    name: "Serper.dev (SERP)", configured: true, required: false,
+    reachable: result.ok || result.status === 400,
+    latencyMs: result.latencyMs,
+    note: result.ok || result.status === 400
+      ? "Connected — real SERP data active (primary provider)"
+      : `HTTP ${result.status} — check SERPER_API_KEY. ${result.error ?? ""}`,
+  };
+}
+
 async function checkDataForSEO(): Promise<ServiceCheck> {
   const configured = isSet(
     process.env.DATAFORSEO_LOGIN,
@@ -291,6 +315,7 @@ export async function GET() {
     checkGoogleIndexing(),
     checkTwitter(),
     checkLinkedIn(),
+    checkSerper(),
     checkDataForSEO(),
   ]);
 

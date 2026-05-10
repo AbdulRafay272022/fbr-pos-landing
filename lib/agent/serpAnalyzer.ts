@@ -17,7 +17,51 @@
 
 import type { SerpAnalysis, SerpResult } from "@/lib/types";
 
-// ─── DataForSEO integration ───────────────────────────────────────────────────
+// ─── Serper.dev integration (primary) ────────────────────────────────────────
+
+interface SerperOrganicItem {
+  position?: number;
+  link?:     string;
+  title?:    string;
+  snippet?:  string;
+}
+
+interface SerperApiResponse {
+  organic?: SerperOrganicItem[];
+}
+
+async function fetchFromSerper(
+  keyword: string,
+  location: string = "pk" // Pakistan country code
+): Promise<SerpResult[]> {
+  const apiKey = process.env.SERPER_API_KEY;
+  if (!apiKey) throw new Error("Serper API key not configured");
+
+  const res = await fetch("https://google.serper.dev/search", {
+    method:  "POST",
+    headers: {
+      "X-API-KEY":    apiKey,
+      "Content-Type": "application/json",
+    },
+    body:   JSON.stringify({ q: keyword, gl: location, hl: "en", num: 10 }),
+    signal: AbortSignal.timeout(15_000),
+  });
+
+  if (!res.ok) {
+    const text = await res.text();
+    throw new Error(`Serper error ${res.status}: ${text.slice(0, 200)}`);
+  }
+
+  const data = await res.json() as SerperApiResponse;
+  return (data.organic ?? []).map((item, idx): SerpResult => ({
+    position:    item.position    ?? idx + 1,
+    url:         item.link        ?? "",
+    title:       item.title       ?? "",
+    description: item.snippet     ?? "",
+  }));
+}
+
+// ─── DataForSEO integration (secondary fallback) ──────────────────────────────
 
 interface DfsOrganicItem {
   rank_absolute?: number;
@@ -40,16 +84,16 @@ interface DfsApiResponse {
 
 async function fetchFromDataForSeo(
   keyword:  string,
-  location: string = "2586" // Pakistan
+  location: string = "2586" // Pakistan location code
 ): Promise<SerpResult[]> {
-  const login    = process.env.DATAFORSEO_API_LOGIN;
-  const password = process.env.DATAFORSEO_API_KEY;
+  const login    = process.env.DATAFORSEO_LOGIN;
+  const password = process.env.DATAFORSEO_PASSWORD;
 
   if (!login || !password) {
     throw new Error("DataForSEO credentials not configured");
   }
 
-  const credentials = btoa(`${login}:${password}`);
+  const credentials = Buffer.from(`${login}:${password}`).toString("base64");
   const body = JSON.stringify([
     {
       keyword,
@@ -216,10 +260,24 @@ export async function analyzeSerpForKeyword(
   const analyzedAt = new Date().toISOString();
 
   let results: SerpResult[];
-  try {
-    results = await fetchFromDataForSeo(keyword);
-  } catch {
-    // Graceful fallback — heuristic mock
+  // Priority: Serper.dev → DataForSEO → heuristic fallback
+  if (process.env.SERPER_API_KEY) {
+    try {
+      results = await fetchFromSerper(keyword);
+    } catch {
+      try {
+        results = await fetchFromDataForSeo(keyword);
+      } catch {
+        results = heuristicAnalysis(keyword);
+      }
+    }
+  } else if (process.env.DATAFORSEO_LOGIN && process.env.DATAFORSEO_PASSWORD) {
+    try {
+      results = await fetchFromDataForSeo(keyword);
+    } catch {
+      results = heuristicAnalysis(keyword);
+    }
+  } else {
     results = heuristicAnalysis(keyword);
   }
 
