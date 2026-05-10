@@ -381,6 +381,14 @@ async function generateWithGroq(
             if (compBrief) seoBrief += "\n\n" + compBrief;
           }
         } catch { /* non-fatal */ }
+        // Add semantic entity coverage from Wikidata + niche dictionary
+        try {
+          const { buildEntityCoverage, buildEntityBrief } = await import("@/lib/agent/entityGraph");
+          const siteCfg = getSiteConfig();
+          const coverage = await buildEntityCoverage(topic.keyword, siteCfg.niche, siteCfg.seedKeywords);
+          const entityBrief = buildEntityBrief(coverage);
+          if (entityBrief) seoBrief += "\n\n" + entityBrief;
+        } catch { /* non-fatal */ }
         console.log(JSON.stringify({
           ts: new Date().toISOString(),
           event: "serp_intelligence_brief",

@@ -17,6 +17,8 @@
 import { analyzeSerpIntelligence } from "./serpIntelligence";
 import type { SerpAnalysis, Verdict } from "./serpIntelligence";
 import { getCountryCode } from "./keywordDiscovery";
+import { estimateVolume } from "./volumeSignals";
+import type { VolumeSignals } from "./volumeSignals";
 import type { SeoData } from "@/lib/types";
 
 export interface ValidationResult {
@@ -24,6 +26,7 @@ export interface ValidationResult {
   verdict:     Verdict;
   reason:      string;
   analysis?:   SerpAnalysis;
+  volume?:     VolumeSignals;
   refreshSlug?: string;       // if verdict = "refresh", which existing post to update
 }
 
@@ -43,9 +46,12 @@ export async function validateKeyword(
   // Find existing blog post that covers this keyword (for refresh candidate)
   const existingPost = findExistingPostForKeyword(keyword, blogIndex ?? []);
 
-  // Run SERP intelligence
+  // Run SERP intelligence + volume estimation in parallel
   const countryCode = getCountryCode(country);
-  const analysis = await analyzeSerpIntelligence(keyword, countryCode, yourRanking);
+  const [analysis, volume] = await Promise.all([
+    analyzeSerpIntelligence(keyword, countryCode, yourRanking),
+    estimateVolume(keyword, countryCode, seoData),
+  ]);
 
   if (!analysis) {
     // No SERP data — can't validate, default to write (cautious)
@@ -53,6 +59,18 @@ export async function validateKeyword(
       keyword,
       verdict: "write",
       reason:  "SERP data unavailable — proceeding without validation.",
+      volume,
+    };
+  }
+
+  // Volume gate: skip if very-low volume signal AND not already getting GSC impressions
+  if (volume.pseudoVolume === "very-low" && volume.gscImpressions === 0) {
+    return {
+      keyword,
+      verdict: "skip",
+      reason:  `Very low volume signal (score ${volume.score}/100). No autocomplete, PAA, or GSC presence.`,
+      analysis,
+      volume,
     };
   }
 
@@ -63,6 +81,7 @@ export async function validateKeyword(
       verdict:     "refresh",
       reason:      analysis.verdictReason,
       analysis,
+      volume,
       refreshSlug: existingPost.slug,
     };
   }
@@ -72,6 +91,7 @@ export async function validateKeyword(
     verdict: analysis.verdict,
     reason:  analysis.verdictReason,
     analysis,
+    volume,
   };
 }
 

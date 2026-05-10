@@ -897,6 +897,7 @@ export default function LandingPage() {
                 { label: "Blog", href: "/blog" },
                 { label: "FBR Checker", href: "/fbr-checker" },
                 { label: "About", href: "/about" },
+                { label: "Case Studies", href: "/case-studies" },
                 { label: "Contact", href: "/contact" },
                 { label: "Privacy", href: "/privacy" },
                 { label: "Terms", href: "/terms" },

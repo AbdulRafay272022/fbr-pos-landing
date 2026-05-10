@@ -92,6 +92,42 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority:        0.5,
     },
+    {
+      url:             `${base}/about`,
+      lastModified:    new Date(),
+      changeFrequency: "monthly",
+      priority:        0.7,
+    },
+    {
+      url:             `${base}/case-studies`,
+      lastModified:    new Date(),
+      changeFrequency: "weekly",
+      priority:        0.85,
+    },
+    {
+      url:             `${base}/case-studies/lahore-pharmacy-fbr-compliance`,
+      lastModified:    new Date(),
+      changeFrequency: "monthly",
+      priority:        0.7,
+    },
+    {
+      url:             `${base}/case-studies/karachi-retail-multi-branch`,
+      lastModified:    new Date(),
+      changeFrequency: "monthly",
+      priority:        0.7,
+    },
+    {
+      url:             `${base}/case-studies/islamabad-restaurant-pos`,
+      lastModified:    new Date(),
+      changeFrequency: "monthly",
+      priority:        0.7,
+    },
+    {
+      url:             `${base}/authors/phelix-erp-team`,
+      lastModified:    new Date(),
+      changeFrequency: "monthly",
+      priority:        0.6,
+    },
   ];
 
   const token = process.env.GITHUB_TOKEN;
