@@ -141,8 +141,9 @@ function findCurrentRanking(keyword: string, seoData?: SeoData): number | null {
   const norm = keyword.toLowerCase().trim();
 
   for (const page of seoData.pages ?? []) {
-    if (!page.queries) continue;
-    if (page.queries.some((q) => q.toLowerCase().trim() === norm)) {
+    const pageWithQueries = page as unknown as { queries?: string[] };
+    if (!pageWithQueries.queries) continue;
+    if (pageWithQueries.queries.some((q) => q.toLowerCase().trim() === norm)) {
       return Math.round(page.position);
     }
   }

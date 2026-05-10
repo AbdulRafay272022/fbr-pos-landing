@@ -153,7 +153,10 @@ export function mineGscQueries(
   const discovered: DiscoveredKeyword[] = [];
 
   for (const page of seoData.pages) {
-    for (const query of page.queries ?? []) {
+    // PageMetric may be extended with `queries` field at runtime
+    const pageWithQueries = page as unknown as { queries?: string[] };
+    const queries = pageWithQueries.queries ?? [];
+    for (const query of queries) {
       const norm = query.toLowerCase().trim();
       // Skip single words and branded queries
       if (norm.split(" ").length < 2) continue;
