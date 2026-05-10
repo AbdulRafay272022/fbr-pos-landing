@@ -371,6 +371,16 @@ async function generateWithGroq(
       const analysis = await analyzeSerpIntelligence(topic.keyword, getCountryCode(country));
       if (analysis) {
         seoBrief = buildIntelligentBrief(analysis);
+        // Scrape top-3 competitors for deeper content brief
+        try {
+          const { extractCompetitorProfiles, buildCompetitorBrief } = await import("@/lib/agent/competitorScraper");
+          const topUrls = analysis.competitors.slice(0, 3).map((c) => c.url).filter(Boolean);
+          if (topUrls.length > 0) {
+            const profile = await extractCompetitorProfiles(topUrls, 3);
+            const compBrief = buildCompetitorBrief(profile);
+            if (compBrief) seoBrief += "\n\n" + compBrief;
+          }
+        } catch { /* non-fatal */ }
         console.log(JSON.stringify({
           ts: new Date().toISOString(),
           event: "serp_intelligence_brief",
@@ -633,6 +643,59 @@ async function selectTopic(
     const blogIdx = await readJsonFromGitHub<BlogIndex[]>("data/index.json", token, owner, repo) ?? [];
     const existingTopics = buildExistingTopicsList(blogIdx);
 
+    // ── Cluster-aware topic selection ────────────────────────────────────────
+    // Build topic clusters from current keyword pool, pick from cluster strategy
+    let clusterPick: { keyword: string; clusterId: string; isPillar: boolean } | null = null;
+    try {
+      const { buildTopicClusters, pickNextClusterKeyword } = await import("@/lib/agent/topicCluster");
+      const { decideSchedule } = await import("@/lib/agent/publishingSchedule");
+
+      const indexForCluster = blogIdx.map((b) => ({
+        slug: b.slug, keywords: b.keywords ?? [], title: b.title,
+      }));
+      const clustering = buildTopicClusters(keywordsData.keywords, indexForCluster);
+
+      // Check schedule decision (rest day? burst protection?)
+      const meta2 = await readJsonFromGitHub<{ stats?: { lastGenerateAt?: string } }>("data/meta.json", token, owner, repo);
+      const lastPublishAt = meta2?.stats?.lastGenerateAt ?? null;
+      const schedule = decideSchedule(clustering.clusters, lastPublishAt);
+
+      log("info", "Schedule decision", {
+        action:    schedule.action,
+        reason:    schedule.reason,
+        dayOfWeek: schedule.cadence.dayOfWeek,
+      });
+
+      if (schedule.action === "rest") {
+        // Skip publishing today entirely
+        throw new Error(`Schedule: ${schedule.reason}`);
+      }
+      if (schedule.action === "refresh-existing") {
+        // Refresh-content cron handles this — skip blog generation
+        throw new Error(`Schedule: ${schedule.reason}`);
+      }
+
+      // publish-pillar or publish-cluster → use the cluster-recommended keyword
+      const next = pickNextClusterKeyword(clustering.clusters);
+      if (next) {
+        clusterPick = { keyword: next.keyword, clusterId: next.clusterId, isPillar: next.isPillar };
+        log("info", "Cluster strategy picked next keyword", {
+          keyword:   next.keyword,
+          clusterId: next.clusterId,
+          isPillar:  next.isPillar,
+          status:    next.clusterContext.status,
+          progress:  `${next.clusterContext.writtenCount}/${next.clusterContext.totalKeywords}`,
+        });
+      }
+    } catch (err) {
+      // Schedule rest is not an error per-se — propagate it as a skip
+      const msg = String(err);
+      if (msg.includes("Schedule:")) {
+        throw err;
+      }
+      log("warn", "Cluster strategy unavailable, falling back to priority order", { error: msg });
+    }
+
     // Load GSC data once for SERP-aware validation
     let seoData = null;
     try {
@@ -645,9 +708,18 @@ async function selectTopic(
       log("info", "SERP validation enabled — picking winnable keywords");
     }
 
-    // Try keywords in priority order until we find a non-duplicate winnable one
+    // Try cluster-picked keyword first, then fall back to priority order
     const unusedKeywords = keywordsData.keywords.filter((k) => !k.used);
-    for (const bestKw of unusedKeywords.slice(0, 15)) {
+    let candidates = unusedKeywords.slice(0, 15);
+    if (clusterPick) {
+      const clusterKw = unusedKeywords.find(
+        (k) => k.keyword.toLowerCase() === clusterPick!.keyword.toLowerCase()
+      );
+      if (clusterKw) {
+        candidates = [clusterKw, ...candidates.filter((c) => c.keyword !== clusterKw.keyword)];
+      }
+    }
+    for (const bestKw of candidates) {
       // Step 1: Duplicate / cannibalization check (cheap, do first)
       const simResult = isSimilarToExisting(bestKw.keyword, existingTopics);
       if (simResult.isSimilar) {

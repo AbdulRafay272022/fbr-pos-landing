@@ -127,7 +127,9 @@ Focus on:
 export function buildRefreshUserPrompt(
   blog: BlogPost,
   metric: PageMetric | undefined,
-  targetKeyword: string
+  targetKeyword: string,
+  serpBrief?: string,
+  competitorBrief?: string
 ): string {
   const metricSummary = metric
     ? `Current GSC performance:
@@ -137,7 +139,17 @@ export function buildRefreshUserPrompt(
 - Average position: ${metric.position.toFixed(1)}`
     : "No GSC data yet (page not indexed).";
 
-  return `${metricSummary}
+  const briefSection = serpBrief
+    ? `
+
+═══ LIVE SERP INTELLIGENCE (use this to beat current rankings) ═══
+${serpBrief}
+${competitorBrief ? "\n" + competitorBrief : ""}
+═══════════════════════════════════════════════════════════════════
+`
+    : "";
+
+  return `${metricSummary}${briefSection}
 
 Target keyword: "${targetKeyword}"
 
@@ -167,7 +179,8 @@ export async function callGroqRefresh(
   candidate:   RefreshCandidate,
   niche:       string,
   siteName:    string,
-  groqApiKey:  string
+  groqApiKey:  string,
+  country?:    string
 ): Promise<{
   title:            string;
   meta_description: string;
@@ -177,7 +190,31 @@ export async function callGroqRefresh(
 }> {
   const keyword      = blog.keywords[0] ?? blog.title;
   const systemPrompt = buildRefreshSystemPrompt(candidate.refreshType, niche, siteName);
-  const userPrompt   = buildRefreshUserPrompt(blog, candidate.metric, keyword);
+
+  // ── Pull live SERP intelligence + competitor data for refresh ──────────────
+  let serpBrief = "";
+  let competitorBrief = "";
+  if (process.env.SERPER_API_KEY && country) {
+    try {
+      const { analyzeSerpIntelligence, buildIntelligentBrief } = await import("./serpIntelligence");
+      const { getCountryCode } = await import("./keywordDiscovery");
+      const analysis = await analyzeSerpIntelligence(keyword, getCountryCode(country));
+      if (analysis) {
+        serpBrief = buildIntelligentBrief(analysis);
+        // Scrape top 3 competitors for deeper analysis
+        try {
+          const { extractCompetitorProfiles, buildCompetitorBrief } = await import("./competitorScraper");
+          const topUrls = analysis.competitors.slice(0, 3).map((c) => c.url).filter(Boolean);
+          if (topUrls.length > 0) {
+            const profile = await extractCompetitorProfiles(topUrls, 3);
+            competitorBrief = buildCompetitorBrief(profile);
+          }
+        } catch { /* non-fatal */ }
+      }
+    } catch { /* non-fatal */ }
+  }
+
+  const userPrompt = buildRefreshUserPrompt(blog, candidate.metric, keyword, serpBrief, competitorBrief);
 
   const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
     method:  "POST",

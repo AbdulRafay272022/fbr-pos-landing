@@ -216,7 +216,8 @@ export async function GET(req: NextRequest) {
         candidate,
         config.niche,
         config.name,
-        groqKey
+        groqKey,
+        config.country  // enables SERP intel for refresh
       );
 
       // Convert markdown → HTML
