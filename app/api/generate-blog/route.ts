@@ -357,23 +357,45 @@ async function generateWithGroq(
 
   const internalTopicSuggestions = topic.internalTopics.slice(0, 3).join('", "');
 
-  // ── Optional: SERP-based brief (senior-SEO mode) ──────────────────────────
-  // If DataForSEO env vars are set, fetch the top-10 SERP and build a
-  // competitive brief. Falls back to keyword-only generation if disabled.
+  // ── SERP-based brief (senior-SEO mode) ────────────────────────────────────
+  // Priority 1: Serper SERP intelligence (real top-10 analysis)
+  // Priority 2: DataForSEO brief (legacy)
+  // Priority 3: keyword-only generation (no brief)
   let seoBrief = "";
   try {
-    const { getSeoFeatures } = await import("@/lib/agent/seo/features");
-    if (getSeoFeatures().serpAnalysis) {
-      const { generateBrief, briefToPrompt } = await import("@/lib/agent/seo/briefGenerator");
-      const briefResult = await generateBrief({
-        keyword:      topic.keyword,
-        blogIndex:    blogIndex.map((b) => ({ slug: b.slug, title: b.title })),
-        locationCode: process.env.RANK_TRACK_LOCATION ? parseInt(process.env.RANK_TRACK_LOCATION, 10) : undefined,
-        languageCode: process.env.RANK_TRACK_LANGUAGE ?? "en",
-        scrapeDepth:  parseInt(process.env.BRIEF_SCRAPE_DEPTH ?? "3", 10),
-      });
-      if (briefResult.ok) {
-        seoBrief = briefToPrompt(briefResult.brief);
+    if (process.env.SERPER_API_KEY) {
+      // PRIMARY: Serper-based SERP intelligence
+      const { analyzeSerpIntelligence, buildIntelligentBrief } = await import("@/lib/agent/serpIntelligence");
+      const { getCountryCode } = await import("@/lib/agent/keywordDiscovery");
+      const country = process.env.SITE_COUNTRY ?? "Pakistan";
+      const analysis = await analyzeSerpIntelligence(topic.keyword, getCountryCode(country));
+      if (analysis) {
+        seoBrief = buildIntelligentBrief(analysis);
+        console.log(JSON.stringify({
+          ts: new Date().toISOString(),
+          event: "serp_intelligence_brief",
+          keyword: topic.keyword,
+          difficulty: analysis.difficulty,
+          rankability: analysis.rankability,
+          intent: analysis.intent,
+          contentType: analysis.recommendedContentType,
+        }));
+      }
+    } else {
+      // FALLBACK: DataForSEO brief generator
+      const { getSeoFeatures } = await import("@/lib/agent/seo/features");
+      if (getSeoFeatures().serpAnalysis) {
+        const { generateBrief, briefToPrompt } = await import("@/lib/agent/seo/briefGenerator");
+        const briefResult = await generateBrief({
+          keyword:      topic.keyword,
+          blogIndex:    blogIndex.map((b) => ({ slug: b.slug, title: b.title })),
+          locationCode: process.env.RANK_TRACK_LOCATION ? parseInt(process.env.RANK_TRACK_LOCATION, 10) : undefined,
+          languageCode: process.env.RANK_TRACK_LANGUAGE ?? "en",
+          scrapeDepth:  parseInt(process.env.BRIEF_SCRAPE_DEPTH ?? "3", 10),
+        });
+        if (briefResult.ok) {
+          seoBrief = briefToPrompt(briefResult.brief);
+        }
       }
     }
   } catch (err) {
@@ -608,14 +630,25 @@ async function selectTopic(
 
   if (keywordsData && keywordsData.keywords.length > 0) {
     // Build existing topics list for duplicate/cannibalization check
-    const existingTopics = buildExistingTopicsList(
-      await readJsonFromGitHub<BlogIndex[]>("data/index.json", token, owner, repo) ?? []
-    );
+    const blogIdx = await readJsonFromGitHub<BlogIndex[]>("data/index.json", token, owner, repo) ?? [];
+    const existingTopics = buildExistingTopicsList(blogIdx);
 
-    // Try keywords in priority order until we find a non-duplicate
+    // Load GSC data once for SERP-aware validation
+    let seoData = null;
+    try {
+      const { readJsonFromGitHub: readJson } = await import("@/lib/githubApi");
+      seoData = await readJson("data/seo.json", token, owner, repo);
+    } catch { /* non-fatal */ }
+
+    const useSerperValidation = !!process.env.SERPER_API_KEY;
+    if (useSerperValidation) {
+      log("info", "SERP validation enabled — picking winnable keywords");
+    }
+
+    // Try keywords in priority order until we find a non-duplicate winnable one
     const unusedKeywords = keywordsData.keywords.filter((k) => !k.used);
-    for (const bestKw of unusedKeywords.slice(0, 10)) {
-      // Duplicate / cannibalization check
+    for (const bestKw of unusedKeywords.slice(0, 15)) {
+      // Step 1: Duplicate / cannibalization check (cheap, do first)
       const simResult = isSimilarToExisting(bestKw.keyword, existingTopics);
       if (simResult.isSimilar) {
         log("warn", "Keyword rejected — too similar to existing blog", {
@@ -628,28 +661,74 @@ async function selectTopic(
 
       const kwSlug = slugifyKeyword(bestKw.keyword);
       const exists = await fileExistsOnGitHub(`data/blogs/${kwSlug}.json`, token, owner, repo);
-      if (!exists) {
-        log("info", "Topic selected from keywords.json", {
-          keyword:    bestKw.keyword,
-          priority:   bestKw.priority,
-          cluster:    bestKw.cluster,
-          similarity: simResult.score.toFixed(3),
-        });
-        return {
-          topic: {
-            keyword:        bestKw.keyword,
-            slug:           kwSlug,
-            industry:       clusterToIndustry(bestKw.cluster),
-            businessType:   bestKw.cluster,
-            keywords:       [bestKw.keyword, `${bestKw.keyword} pakistan`, "fbr compliance pakistan"],
-            internalTopics: ["FBR POS integration", "FBR compliance checklist", "FBR e-invoicing"],
-          },
-          nextTopicIndex: -1,
-          consumedKeyword: bestKw,
-          keywordsData,
-        };
+      if (exists) {
+        log("info", "Keyword slug already published, trying next", { slug: kwSlug });
+        continue;
       }
-      log("info", "Keyword slug already published, trying next", { slug: kwSlug });
+
+      // Step 2: SERP-aware validation (only if Serper available)
+      if (useSerperValidation) {
+        try {
+          const { validateKeyword } = await import("@/lib/agent/keywordValidator");
+          const country = process.env.SITE_COUNTRY ?? "Pakistan";
+          const validation = await validateKeyword(
+            bestKw.keyword,
+            country,
+            seoData as Parameters<typeof validateKeyword>[2],
+            blogIdx
+          );
+
+          if (validation.verdict === "skip") {
+            log("warn", "Keyword skipped by SERP validator", {
+              keyword:    bestKw.keyword,
+              reason:     validation.reason,
+              difficulty: validation.analysis?.difficulty,
+            });
+            continue;
+          }
+
+          if (validation.verdict === "refresh") {
+            // Already ranking — refresh-content cron will handle this. Skip new post.
+            log("info", "Keyword already ranking — refresh handled separately", {
+              keyword:    bestKw.keyword,
+              currentPos: validation.analysis?.yourCurrentRanking,
+              refreshSlug: validation.refreshSlug,
+            });
+            continue;
+          }
+
+          // verdict = write
+          log("info", "Keyword passed SERP validation — WRITE", {
+            keyword:     bestKw.keyword,
+            difficulty:  validation.analysis?.difficulty,
+            rankability: validation.analysis?.rankability,
+            intent:      validation.analysis?.intent,
+            reason:      validation.reason,
+          });
+        } catch (err) {
+          log("warn", "SERP validation failed, proceeding without", { error: String(err) });
+        }
+      }
+
+      // Passed all gates — return this topic
+      log("info", "Topic selected", {
+        keyword:    bestKw.keyword,
+        priority:   bestKw.priority,
+        cluster:    bestKw.cluster,
+      });
+      return {
+        topic: {
+          keyword:        bestKw.keyword,
+          slug:           kwSlug,
+          industry:       clusterToIndustry(bestKw.cluster),
+          businessType:   bestKw.cluster,
+          keywords:       [bestKw.keyword, `${bestKw.keyword} pakistan`, "fbr compliance pakistan"],
+          internalTopics: ["FBR POS integration", "FBR compliance checklist", "FBR e-invoicing"],
+        },
+        nextTopicIndex: -1,
+        consumedKeyword: bestKw,
+        keywordsData,
+      };
     }
   }
 
