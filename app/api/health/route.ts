@@ -248,7 +248,7 @@ async function checkLinkedIn(): Promise<ServiceCheck> {
 async function checkDataForSEO(): Promise<ServiceCheck> {
   const configured = isSet(
     process.env.DATAFORSEO_LOGIN,
-    process.env.DATAFORSEO_KEY
+    process.env.DATAFORSEO_PASSWORD
   );
 
   if (!configured) {
@@ -257,7 +257,7 @@ async function checkDataForSEO(): Promise<ServiceCheck> {
   }
 
   const credentials = Buffer.from(
-    `${process.env.DATAFORSEO_LOGIN}:${process.env.DATAFORSEO_KEY}`
+    `${process.env.DATAFORSEO_LOGIN}:${process.env.DATAFORSEO_PASSWORD}`
   ).toString("base64");
 
   const result = await ping(
@@ -273,7 +273,7 @@ async function checkDataForSEO(): Promise<ServiceCheck> {
     latencyMs: result.latencyMs,
     note: result.ok || result.status === 400
       ? "Connected — real SERP data will improve keyword prioritization"
-      : `HTTP ${result.status} — check DATAFORSEO_LOGIN and DATAFORSEO_KEY. ${result.error ?? ""}`,
+      : `HTTP ${result.status} — check DATAFORSEO_LOGIN and DATAFORSEO_PASSWORD. ${result.error ?? ""}`,
   };
 }
 
