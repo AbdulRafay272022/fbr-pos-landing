@@ -5,7 +5,7 @@ import { getBlogBySlug, getAllBlogs } from "@/lib/blogStore";
 import { blogPostingSchema, breadcrumbSchema, faqSchema, LANDING_FAQS } from "@/lib/schema";
 import { injectInternalLinks, getRelatedPosts } from "@/lib/internalLinks";
 
-const BASE_URL = "https://phelixerp.vercel.app";
+const BASE_URL = "https://phelixerp.online";
 const WA_NUMBER = "923118366981";
 
 interface Props {
@@ -16,6 +16,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const blog = await getBlogBySlug(slug);
   if (!blog) return { title: "Not Found" };
+
+  // Auto-generated branded OG image per post — improves social CTR
+  const ogImage = `${BASE_URL}/api/og?title=${encodeURIComponent(blog.title)}&subtitle=${encodeURIComponent(blog.metaDescription.slice(0, 120))}`;
+
   return {
     title: blog.title,
     description: blog.metaDescription,
@@ -28,10 +32,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${BASE_URL}/blog/${blog.slug}`,
       images: [
         {
-          url: blog.heroImage?.url ?? "/dashboard-screenshot.png",
-          width: 1200,
+          url:    ogImage,
+          width:  1200,
           height: 630,
-          alt: blog.heroImage?.alt ?? blog.title,
+          alt:    blog.title,
         },
       ],
     },
@@ -39,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: blog.title,
       description: blog.metaDescription,
-      images: [blog.heroImage?.url ?? "/dashboard-screenshot.png"],
+      images: [ogImage],
     },
     alternates: {
       canonical: `${BASE_URL}/blog/${blog.slug}`,

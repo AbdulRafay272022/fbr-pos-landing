@@ -9,7 +9,7 @@
 import type { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
-  const base = (process.env.SITE_BASE_URL ?? "https://phelixerp.vercel.app").replace(/\/$/, "");
+  const base = (process.env.SITE_BASE_URL ?? "https://phelixerp.online").replace(/\/$/, "");
 
   return {
     rules: [
@@ -23,8 +23,10 @@ export default function robots(): MetadataRoute.Robots {
         ],
       },
       {
-        // Block AI training bots that consume crawl budget without value
-        userAgent: ["GPTBot", "Google-Extended", "CCBot", "anthropic-ai"],
+        // Block pure AI training scrapers, but keep Google-Extended allowed.
+        // Google-Extended powers AI Overviews — the 30-40% of search results
+        // that show AI summaries. Blocking it cuts you out of that traffic.
+        userAgent: ["GPTBot", "CCBot", "anthropic-ai", "ClaudeBot", "PerplexityBot"],
         disallow: "/",
       },
     ],

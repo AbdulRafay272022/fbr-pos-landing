@@ -1,9 +1,6 @@
 {
   "crons": [
-    { "path": "/api/agent",               "schedule": "0 2 * * *" },
-    { "path": "/api/scrape-keywords",     "schedule": "0 3 * * 1" },
-    { "path": "/api/seo/track-rankings",  "schedule": "0 6 * * *" },
-    { "path": "/api/seo/full-audit",      "schedule": "0 4 * * 1" },
-    { "path": "/api/seo/check-backlinks", "schedule": "0 5 * * 1" }
+    { "path": "/api/agent",          "schedule": "0 2 * * *" },
+    { "path": "/api/seo/full-audit", "schedule": "0 4 * * 1" }
   ]
 }

@@ -1,22 +1,48 @@
 /**
  * lib/agent/indexing.ts
  *
- * Sitemap notification for Google.
+ * URL submission to search engines via IndexNow protocol.
  *
- * The Google Indexing API only supports JobPosting and BroadcastEvent schema types
- * and is NOT suitable for blog pages. Replaced with a sitemap ping to Google and Bing,
- * which is the correct mechanism for notifying search engines of new/updated blog content.
+ * Background:
+ *   - Google deprecated sitemap pings in June 2023 (now ignored)
+ *   - Bing deprecated sitemap pings in May 2023 (now ignored)
+ *   - Google Indexing API only accepts JobPosting/BroadcastEvent (not blogs)
  *
- * Google: https://www.google.com/ping?sitemap=<sitemapUrl>
- * Bing:   https://www.bing.com/ping?sitemap=<sitemapUrl>
+ * Solution: IndexNow (https://www.indexnow.org)
+ *   - Open protocol led by Microsoft Bing & Yandex
+ *   - Adopted by: Bing, Yandex, Seznam, Naver
+ *   - Push-based: tells search engines instantly when content changes
+ *   - Free, no auth needed beyond a key file on your domain
  *
- * Rate limits: unlimited (sitemap pings are not rate limited).
- * No credentials required.
+ * Usage:
+ *   1. Generate a 32-char hex key (do this once)
+ *   2. Host {key}.txt at your site root (handled by /api/indexnow-key route)
+ *   3. POST URLs to https://api.indexnow.org/indexnow with the key
+ *
+ * Set INDEXNOW_KEY env var (any 8-128 hex chars). If unset, falls back
+ * to a deterministic key derived from your CRON_SECRET.
  */
 
 import type { IndexingRecord, IndexingData } from "@/lib/types";
 
-// ─── Sitemap ping ─────────────────────────────────────────────────────────────
+// ─── Helpers ─────────────────────────────────────────────────────────────────
+
+export function getIndexNowKey(): string {
+  const explicit = process.env.INDEXNOW_KEY;
+  if (explicit && /^[a-f0-9]{8,128}$/i.test(explicit)) return explicit.toLowerCase();
+  // Derive a 32-char hex key from CRON_SECRET (deterministic, stable across deploys)
+  const secret = process.env.CRON_SECRET ?? "phelix-erp-default-key-do-not-use-in-prod";
+  // Simple djb2-style hash → 32 hex chars (no external deps, ES5 compatible)
+  let h1 = 5381, h2 = 52711;
+  for (let i = 0; i < secret.length; i++) {
+    const c = secret.charCodeAt(i);
+    h1 = ((h1 << 5) + h1 + c) >>> 0;
+    h2 = ((h2 << 5) + h2 + c * 7) >>> 0;
+  }
+  const hex1 = h1.toString(16).padStart(8, "0");
+  const hex2 = h2.toString(16).padStart(8, "0");
+  return (hex1 + hex2 + hex1 + hex2).slice(0, 32);
+}
 
 export interface IndexSubmitResult {
   url:     string;
@@ -24,25 +50,49 @@ export interface IndexSubmitResult {
   error?:  string;
 }
 
+// ─── IndexNow submission ─────────────────────────────────────────────────────
+
 /**
- * Notify Google and Bing of a new/updated sitemap.
- * This is the correct mechanism for blog content (not the Indexing API,
- * which only supports JobPosting and BroadcastEvent schema types).
+ * Submit URLs to IndexNow API.
+ * One request can include up to 10,000 URLs.
+ *
+ * @param host  - your domain (e.g. "phelixerp.online")
+ * @param urls  - full URLs to notify
+ * @returns success/error per the batch (IndexNow returns one status for all)
  */
-async function pingSitemap(sitemapUrl: string): Promise<{ google: boolean; bing: boolean }> {
-  const encoded = encodeURIComponent(sitemapUrl);
-  const [googleRes, bingRes] = await Promise.allSettled([
-    fetch(`https://www.google.com/ping?sitemap=${encoded}`, { signal: AbortSignal.timeout(10_000) }),
-    fetch(`https://www.bing.com/ping?sitemap=${encoded}`,  { signal: AbortSignal.timeout(10_000) }),
-  ]);
-  return {
-    google: googleRes.status === "fulfilled" && googleRes.value.ok,
-    bing:   bingRes.status   === "fulfilled" && bingRes.value.ok,
-  };
+async function submitToIndexNow(host: string, urls: string[]): Promise<{ ok: boolean; status: number; error?: string }> {
+  const key = getIndexNowKey();
+
+  try {
+    const res = await fetch("https://api.indexnow.org/indexnow", {
+      method:  "POST",
+      headers: { "Content-Type": "application/json; charset=utf-8" },
+      body:    JSON.stringify({
+        host,
+        key,
+        keyLocation: `https://${host}/api/indexnow-key`,
+        urlList:     urls,
+      }),
+      signal: AbortSignal.timeout(15_000),
+    });
+    // IndexNow returns:
+    //   200 OK            — accepted
+    //   202 Accepted      — accepted, will be processed
+    //   400 Bad Request   — malformed input
+    //   403 Forbidden     — key file not found at keyLocation
+    //   422 Unprocessable — URLs don't match host
+    //   429 Too Many      — slow down
+    if (res.status === 200 || res.status === 202) {
+      return { ok: true, status: res.status };
+    }
+    return { ok: false, status: res.status, error: `IndexNow HTTP ${res.status}` };
+  } catch (err) {
+    return { ok: false, status: 0, error: err instanceof Error ? err.message : String(err) };
+  }
 }
 
 /**
- * Submit multiple blog URLs by pinging the sitemap.
+ * Submit a batch of URLs by notifying IndexNow.
  * Called after each new blog is published or updated.
  * Returns per-URL results and the updated IndexingData object.
  */
@@ -50,25 +100,19 @@ export async function batchSubmitUrls(
   urls:     string[],
   existing: IndexingData
 ): Promise<{ results: IndexSubmitResult[]; data: IndexingData }> {
-  const base        = (process.env.SITE_BASE_URL ?? "https://phelixerp.vercel.app").replace(/\/$/, "");
-  const sitemapUrl  = `${base}/sitemap.xml`;
-  const now         = new Date().toISOString();
+  const base = (process.env.SITE_BASE_URL ?? "https://phelixerp.online").replace(/\/$/, "");
+  const host = base.replace(/^https?:\/\//, "");
+  const now  = new Date().toISOString();
 
-  // Ping the sitemap once regardless of how many URLs there are
-  let pingSuccess = false;
-  let pingError: string | undefined;
-  try {
-    const { google, bing } = await pingSitemap(sitemapUrl);
-    pingSuccess = google || bing;
-    if (!pingSuccess) pingError = "Both Google and Bing ping returned non-OK";
-  } catch (err) {
-    pingError = err instanceof Error ? err.message : String(err);
-  }
+  // IndexNow accepts batches of up to 10k. Single batch is fine for blog posts.
+  const batchResult = urls.length > 0
+    ? await submitToIndexNow(host, urls)
+    : { ok: true, status: 200 };
 
   const results: IndexSubmitResult[] = urls.map((url) => ({
     url,
-    success: pingSuccess,
-    ...(pingError ? { error: pingError } : {}),
+    success: batchResult.ok,
+    ...(batchResult.error ? { error: batchResult.error } : {}),
   }));
 
   // Record each URL
@@ -79,11 +123,11 @@ export async function batchSubmitUrls(
       url,
       submittedAt: now,
       type:        "URL_UPDATED",
-      status:      pingSuccess ? "submitted" : "failed",
-      ...(pingError ? { error: pingError } : {}),
+      status:      batchResult.ok ? "submitted" : "failed",
+      ...(batchResult.error ? { error: batchResult.error } : {}),
     };
     existing.records.push(record);
-    if (pingSuccess) existing.totalSubmitted++;
+    if (batchResult.ok) existing.totalSubmitted++;
   }
 
   existing.lastSubmittedAt = now;

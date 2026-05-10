@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "About Phelix ERP — FBR POS System Pakistan",
   description:
     "Phelix ERP is a Pakistan-based FBR POS software company. 25+ businesses, 10,000+ invoices submitted, 6 months in production. Meet the team behind Pakistan's trusted FBR compliance system.",
-  alternates: { canonical: "https://phelixerp.vercel.app/about" },
+  alternates: { canonical: "https://phelixerp.online/about" },
   openGraph: {
     title: "About Phelix ERP — FBR POS Pakistan",
     description: "Pakistan-built FBR POS system trusted by 25+ businesses across Karachi, Lahore, Islamabad and beyond.",
-    url: "https://phelixerp.vercel.app/about",
+    url: "https://phelixerp.online/about",
   },
 };
 

@@ -220,9 +220,12 @@ async function makeDecision(
 
   // ── FETCH SEO decision (Phase 3) ───────────────────────────────────────────
   const gscConfigured = !!(
-    process.env.GSC_CLIENT_EMAIL &&
-    process.env.GSC_PRIVATE_KEY  &&
-    process.env.GSC_SITE_URL
+    process.env.GSC_SITE_URL && (
+      // OAuth2 refresh token (recommended for personal Google accounts)
+      (process.env.GSC_CLIENT_ID && process.env.GSC_CLIENT_SECRET && process.env.GSC_REFRESH_TOKEN) ||
+      // Service account JWT (fallback, requires Workspace)
+      (process.env.GSC_CLIENT_EMAIL && process.env.GSC_PRIVATE_KEY)
+    )
   );
 
   if (gscConfigured) {
@@ -367,7 +370,7 @@ async function callAction(
  *
  * @param config   - site configuration
  * @param gh       - GitHub connection details
- * @param baseUrl  - deployment base URL (e.g. https://phelixerp.vercel.app)
+ * @param baseUrl  - deployment base URL (e.g. https://phelixerp.online)
  * @param secret   - CRON_SECRET for calling sub-routes
  */
 export async function runAgent(

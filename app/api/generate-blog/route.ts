@@ -65,7 +65,7 @@ interface TopicInput {
 
 const WA_NUMBER      = "923118366981";
 const MIN_WORD_COUNT = 1200;
-const BASE_URL       = "https://phelixerp.vercel.app";
+const BASE_URL       = "https://phelixerp.online";
 void BASE_URL; // suppress unused warning
 
 // ─── Logging ──────────────────────────────────────────────────────────────────

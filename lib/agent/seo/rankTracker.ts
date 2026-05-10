@@ -115,7 +115,7 @@ function getSnapshotNDaysAgo(history: RankSnapshot[], days: number): number | nu
 
 export interface TrackOptions {
   keywords:     string[];
-  ourDomain:    string;          // e.g. "phelixerp.vercel.app"
+  ourDomain:    string;          // e.g. "phelixerp.online"
   locationCode?:number;
   languageCode?:string;
   /** Limit how many keywords to track this run (cost guard) */

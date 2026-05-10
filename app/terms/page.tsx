@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Terms of Service — Phelix ERP",
   description: "Terms of Service for Phelix ERP FBR POS system. Usage terms, service scope, payment, and liability for Pakistan-based clients.",
-  alternates: { canonical: "https://phelixerp.vercel.app/terms" },
+  alternates: { canonical: "https://phelixerp.online/terms" },
 };
 
 const LAST_UPDATED = "May 2026";

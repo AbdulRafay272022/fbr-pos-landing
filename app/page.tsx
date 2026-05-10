@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { softwareApplicationSchema, faqSchema, LANDING_FAQS } from "@/lib/schema";
+import { softwareApplicationSchema, faqSchema, LANDING_FAQS, productSchema, localBusinessSchema } from "@/lib/schema";
 import { trackWAClick } from "@/lib/analytics";
 
 const clients = [
@@ -214,6 +214,20 @@ export default function LandingPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema(LANDING_FAQS)),
+        }}
+      />
+      {/* JSON-LD: Product (Google Product rich results) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema()),
+        }}
+      />
+      {/* JSON-LD: LocalBusiness (Google Maps + local SERP) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema()),
         }}
       />
 

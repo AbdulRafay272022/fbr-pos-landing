@@ -70,8 +70,8 @@ async function buildJwt(clientEmail: string, privateKeyPem: string): Promise<str
   return `${header}.${payload}.${b64url(sigBuf)}`;
 }
 
-/** Exchange a signed JWT for a Google access token */
-async function getAccessToken(clientEmail: string, privateKeyPem: string): Promise<string> {
+/** Exchange a signed JWT for a Google access token (service account flow) */
+async function getAccessTokenJwt(clientEmail: string, privateKeyPem: string): Promise<string> {
   const jwt = await buildJwt(clientEmail, privateKeyPem);
 
   const res = await fetch("https://oauth2.googleapis.com/token", {
@@ -85,12 +85,53 @@ async function getAccessToken(clientEmail: string, privateKeyPem: string): Promi
 
   if (!res.ok) {
     const body = await res.text();
-    throw new Error(`GSC token exchange failed ${res.status}: ${body}`);
+    throw new Error(`GSC JWT token exchange failed ${res.status}: ${body}`);
   }
 
   const json = await res.json() as { access_token?: string };
   if (!json.access_token) throw new Error("No access_token in Google response");
   return json.access_token;
+}
+
+/** Exchange a refresh token for a Google access token (OAuth2 user flow) */
+async function getAccessTokenOAuth2(clientId: string, clientSecret: string, refreshToken: string): Promise<string> {
+  const res = await fetch("https://oauth2.googleapis.com/token", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams({
+      client_id:     clientId,
+      client_secret: clientSecret,
+      refresh_token: refreshToken,
+      grant_type:    "refresh_token",
+    }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(`GSC OAuth2 refresh failed ${res.status}: ${body}`);
+  }
+  const json = await res.json() as { access_token?: string };
+  if (!json.access_token) throw new Error("No access_token in Google response");
+  return json.access_token;
+}
+
+/**
+ * Auto-detect auth method based on what creds are present.
+ * OAuth2 is preferred (works with personal Google accounts).
+ */
+async function getAccessToken(creds: {
+  clientEmail?:  string;
+  privateKey?:   string;
+  clientId?:     string;
+  clientSecret?: string;
+  refreshToken?: string;
+}): Promise<string> {
+  if (creds.clientId && creds.clientSecret && creds.refreshToken) {
+    return getAccessTokenOAuth2(creds.clientId, creds.clientSecret, creds.refreshToken);
+  }
+  if (creds.clientEmail && creds.privateKey) {
+    return getAccessTokenJwt(creds.clientEmail, creds.privateKey);
+  }
+  throw new Error("No GSC auth credentials. Set GSC_CLIENT_ID+GSC_CLIENT_SECRET+GSC_REFRESH_TOKEN or GSC_CLIENT_EMAIL+GSC_PRIVATE_KEY.");
 }
 
 // ─── GSC Search Analytics ─────────────────────────────────────────────────────
@@ -182,15 +223,24 @@ export interface FetchSeoDataResult {
 /**
  * Fetch GSC data and return a structured SeoData object.
  * Does NOT commit to GitHub — caller handles persistence.
+ *
+ * Supports both OAuth2 (recommended) and Service Account JWT auth.
  */
 export async function fetchSeoData(
-  clientEmail: string,
-  privateKeyPem: string,
+  creds: {
+    // OAuth2 (preferred)
+    clientId?:     string;
+    clientSecret?: string;
+    refreshToken?: string;
+    // Service account JWT (fallback)
+    clientEmail?:  string;
+    privateKey?:   string;
+  },
   siteUrl: string
 ): Promise<FetchSeoDataResult> {
   let accessToken: string;
   try {
-    accessToken = await getAccessToken(clientEmail, privateKeyPem);
+    accessToken = await getAccessToken(creds);
   } catch (err) {
     return {
       success: false,

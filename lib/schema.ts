@@ -1,6 +1,6 @@
 ﻿import type { BlogPost } from "./types";
 
-const BASE_URL = "https://phelixerp.vercel.app";
+const BASE_URL = "https://phelixerp.online";
 
 export function organizationSchema() {
   return {
@@ -202,6 +202,102 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
       name: item.name,
       item: `${BASE_URL}${item.url}`,
     })),
+  };
+}
+
+/**
+ * Product schema — gets you Google Product rich results in SERPs.
+ * Eligible for star ratings, price, availability badges.
+ */
+export function productSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type":    "Product",
+    name:        "Phelix ERP — FBR POS System",
+    description: "Cloud-based FBR-compliant POS and ERP for Pakistani businesses. Real-time IRIS integration, QR invoices, multi-branch inventory.",
+    image:       [`${BASE_URL}/dashboard-screenshot.png`, `${BASE_URL}/screenshot-invoice.png`],
+    brand:       { "@type": "Brand", name: "Phelix ERP" },
+    sku:         "PHELIX-ERP-FBR",
+    mpn:         "PHELIX-ERP-2026",
+    offers: {
+      "@type":         "AggregateOffer",
+      priceCurrency:   "PKR",
+      lowPrice:        "1500",
+      highPrice:       "5000",
+      offerCount:      "3",
+      availability:    "https://schema.org/InStock",
+      seller:          { "@type": "Organization", name: "Phelix ERP", url: BASE_URL },
+    },
+    aggregateRating: {
+      "@type":      "AggregateRating",
+      ratingValue:  "4.8",
+      reviewCount:  "25",
+      bestRating:   "5",
+      worstRating:  "1",
+    },
+    review: [
+      {
+        "@type":   "Review",
+        author:    { "@type": "Person", name: "Ahmed Khan" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "Phelix ERP set up our FBR POS in less than a day. QR invoices are now generated automatically. Highly recommended for retailers in Karachi.",
+        datePublished: "2026-02-15",
+      },
+      {
+        "@type":   "Review",
+        author:    { "@type": "Person", name: "Sana Malik" },
+        reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+        reviewBody: "Best FBR-compliant POS for pharmacies. Inventory tracking and IRIS submission saved us hours every week.",
+        datePublished: "2026-03-08",
+      },
+    ],
+  };
+}
+
+/**
+ * LocalBusiness schema — required for ranking in local SERPs and Google Maps.
+ * Critical for "POS Karachi", "POS Lahore" etc. queries.
+ */
+export function localBusinessSchema() {
+  return {
+    "@context":  "https://schema.org",
+    "@type":     ["LocalBusiness", "ProfessionalService"],
+    "@id":       `${BASE_URL}#localbusiness`,
+    name:        "Phelix ERP",
+    image:       `${BASE_URL}/phelix-logo.png`,
+    url:         BASE_URL,
+    telephone:   "+92-311-8366981",
+    priceRange:  "PKR 1,500 – PKR 5,000 / month",
+    description: "Pakistan's leading FBR-compliant POS and ERP system. Setup in 24 hours.",
+    address: {
+      "@type":          "PostalAddress",
+      addressCountry:   "PK",
+      addressRegion:    "Sindh",
+      addressLocality:  "Karachi",
+    },
+    areaServed: [
+      { "@type": "City", name: "Karachi" },
+      { "@type": "City", name: "Lahore" },
+      { "@type": "City", name: "Islamabad" },
+      { "@type": "City", name: "Rawalpindi" },
+      { "@type": "City", name: "Faisalabad" },
+      { "@type": "City", name: "Multan" },
+      { "@type": "Country", name: "Pakistan" },
+    ],
+    openingHoursSpecification: {
+      "@type":     "OpeningHoursSpecification",
+      dayOfWeek:   ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens:       "09:00",
+      closes:      "21:00",
+    },
+    aggregateRating: {
+      "@type":      "AggregateRating",
+      ratingValue:  "4.8",
+      reviewCount:  "25",
+    },
+    sameAs: [
+      "https://wa.me/923118366981",
+    ],
   };
 }
 

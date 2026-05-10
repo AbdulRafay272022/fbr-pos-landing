@@ -51,24 +51,33 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ success: false, reason: "GitHub env vars not set" }, { status: 500 });
   }
 
-  const clientEmail = process.env.GSC_CLIENT_EMAIL;
-  const privateKey  = process.env.GSC_PRIVATE_KEY?.replace(/\\n/g, "\n");
-  const siteUrl     = process.env.GSC_SITE_URL;
+  const siteUrl      = process.env.GSC_SITE_URL;
+  const clientId     = process.env.GSC_CLIENT_ID;
+  const clientSecret = process.env.GSC_CLIENT_SECRET;
+  const refreshToken = process.env.GSC_REFRESH_TOKEN;
+  const clientEmail  = process.env.GSC_CLIENT_EMAIL;
+  const privateKey   = process.env.GSC_PRIVATE_KEY?.replace(/\\n/g, "\n");
 
-  if (!clientEmail || !privateKey || !siteUrl) {
+  const hasOAuth2 = !!(clientId && clientSecret && refreshToken);
+  const hasJwt    = !!(clientEmail && privateKey);
+
+  if (!siteUrl || (!hasOAuth2 && !hasJwt)) {
     log("warn", "GSC env vars not configured — skipping fetch");
     return NextResponse.json({
       success:  false,
-      reason:   "GSC_CLIENT_EMAIL, GSC_PRIVATE_KEY, GSC_SITE_URL not configured",
+      reason:   "GSC not configured. Set GSC_SITE_URL plus either OAuth2 (CLIENT_ID/SECRET/REFRESH_TOKEN) or JWT (CLIENT_EMAIL/PRIVATE_KEY).",
       skipped:  true,
     });
   }
 
   const config = getSiteConfig();
-  log("info", "GSC fetch started", { site: config.name, siteUrl });
+  log("info", "GSC fetch started", { site: config.name, siteUrl, authMode: hasOAuth2 ? "oauth2" : "jwt" });
 
   // ── Fetch from GSC ─────────────────────────────────────────────────────────
-  const result = await fetchSeoData(clientEmail, privateKey, siteUrl);
+  const result = await fetchSeoData(
+    { clientId, clientSecret, refreshToken, clientEmail, privateKey },
+    siteUrl
+  );
 
   if (!result.success || !result.data) {
     log("warn", "GSC fetch unsuccessful", { reason: result.reason });

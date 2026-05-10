@@ -5,7 +5,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "Privacy Policy — Phelix ERP",
   description: "Privacy Policy for Phelix ERP FBR POS system. How we collect, use, and protect your data in compliance with Pakistan's data protection standards.",
-  alternates: { canonical: "https://phelixerp.vercel.app/privacy" },
+  alternates: { canonical: "https://phelixerp.online/privacy" },
 };
 
 const LAST_UPDATED = "May 2026";
@@ -36,7 +36,7 @@ export default function PrivacyPage() {
             <p>
               Phelix ERP (&quot;we&quot;, &quot;our&quot;, &quot;us&quot;) is a Pakistan-based software company
               providing FBR-compliant POS and e-invoicing software. Our website is
-              <strong> phelixerp.vercel.app</strong>. This Privacy Policy explains how we
+              <strong> phelixerp.online</strong>. This Privacy Policy explains how we
               collect and use information when you use our website or contact us.
             </p>
             <p className="mt-3">
