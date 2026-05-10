@@ -357,7 +357,32 @@ async function generateWithGroq(
 
   const internalTopicSuggestions = topic.internalTopics.slice(0, 3).join('", "');
 
+  // ── Optional: SERP-based brief (senior-SEO mode) ──────────────────────────
+  // If DataForSEO env vars are set, fetch the top-10 SERP and build a
+  // competitive brief. Falls back to keyword-only generation if disabled.
+  let seoBrief = "";
+  try {
+    const { getSeoFeatures } = await import("@/lib/agent/seo/features");
+    if (getSeoFeatures().serpAnalysis) {
+      const { generateBrief, briefToPrompt } = await import("@/lib/agent/seo/briefGenerator");
+      const briefResult = await generateBrief({
+        keyword:      topic.keyword,
+        blogIndex:    blogIndex.map((b) => ({ slug: b.slug, title: b.title })),
+        locationCode: process.env.RANK_TRACK_LOCATION ? parseInt(process.env.RANK_TRACK_LOCATION, 10) : undefined,
+        languageCode: process.env.RANK_TRACK_LANGUAGE ?? "en",
+        scrapeDepth:  parseInt(process.env.BRIEF_SCRAPE_DEPTH ?? "3", 10),
+      });
+      if (briefResult.ok) {
+        seoBrief = briefToPrompt(briefResult.brief);
+      }
+    }
+  } catch (err) {
+    // Brief generation is optional — never block content creation
+    console.warn(JSON.stringify({ ts: new Date().toISOString(), event: "brief_skipped", error: err instanceof Error ? err.message : String(err) }));
+  }
+
   const userInput = JSON.stringify({
+    seo_brief: seoBrief || undefined,
     keyword:         topic.keyword,
     target_slug:     topic.slug,
     industry:        topic.industry,
