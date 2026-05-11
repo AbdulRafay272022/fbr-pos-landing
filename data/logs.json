@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "moxqs4c8-5lyv9",
-      "ts": "2026-05-09T02:45:51.992Z",
+      "id": "mp0ltmsg-zsv50",
+      "ts": "2026-05-11T02:50:23.008Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-moxqs4c5",
+        "runId": "run-mp0ltmsd",
         "site": "Phelix ERP",
-        "baseUrl": "https://phelixerp.vercel.app/"
+        "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "moxqs4l1-9ttmj",
-      "ts": "2026-05-09T02:45:52.309Z",
+      "id": "mp0ltn2q-ysoz0",
+      "ts": "2026-05-11T02:50:23.378Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-moxqs4c5",
+        "runId": "run-mp0ltmsd",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2668 unused keywords available, last scrape 2.0d ago",
-          "generate": "23.8h since last generation, 2668 keywords available",
-          "update": "skipped: last update 23.8h ago (min 168h)",
+          "scrape": "skipped: 2667 unused keywords available, last scrape 4.0d ago",
+          "generate": "48.1h since last generation, 2667 keywords available",
+          "update": "skipped: last update 71.8h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,67 @@
       }
     },
     {
-      "id": "moxqsac5-48prq",
-      "ts": "2026-05-09T02:45:59.765Z",
+      "id": "mp0lu426-2g183",
+      "ts": "2026-05-11T02:50:45.390Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "how-to-configure-fbr-penalty-in-pakistan",
-      "words": 1226,
+      "slug": "best-fbr-pos-system-for-retail-in-karachi",
+      "words": 1231,
       "source": "template",
-      "durationMs": 6154,
+      "durationMs": 20660,
       "details": {
-        "runId": "run-moxqs4c5"
+        "runId": "run-mp0ltmsd"
       }
     },
     {
-      "id": "moxqsaix-p1ac7",
-      "ts": "2026-05-09T02:46:00.009Z",
+      "id": "mp0lu4yv-cw5cl",
+      "ts": "2026-05-11T02:50:46.567Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 244,
+      "durationMs": 1177,
       "details": {
-        "runId": "run-moxqs4c5"
+        "runId": "run-mp0ltmsd"
       }
     },
     {
-      "id": "moxqses4-i2ygt",
-      "ts": "2026-05-09T02:46:05.524Z",
+      "id": "mp0lu86d-cp3yl",
+      "ts": "2026-05-11T02:50:50.725Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 5515,
+      "durationMs": 4158,
       "details": {
-        "runId": "run-moxqs4c5",
+        "runId": "run-mp0ltmsd",
         "optimizedCount": 1
       }
     },
     {
-      "id": "moxqsj7z-i2n7z",
-      "ts": "2026-05-09T02:46:11.279Z",
+      "id": "mp0lud7f-gtcjx",
+      "ts": "2026-05-11T02:50:57.243Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 5755,
+      "durationMs": 6518,
       "details": {
-        "runId": "run-moxqs4c5"
+        "runId": "run-mp0ltmsd"
       }
     },
     {
-      "id": "moxqsjey-pfyb7",
-      "ts": "2026-05-09T02:46:11.530Z",
+      "id": "mp0ludds-4rl9t",
+      "ts": "2026-05-11T02:50:57.472Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 251,
+      "durationMs": 229,
       "details": {
-        "runId": "run-moxqs4c5"
+        "runId": "run-mp0ltmsd"
       }
     }
   ],
