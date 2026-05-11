@@ -41,8 +41,29 @@
         }
       ],
       "distributedAt": "2026-05-09T02:46:00.601Z"
+    },
+    {
+      "slug": "best-fbr-pos-system-for-retail-in-karachi",
+      "title": "best fbr pos system for retail in karachi",
+      "blogUrl": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi",
+      "hook": "best fbr pos system for retail in karachi",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-05-11T02:50:45.574Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-05-11T02:50:45.575Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-05-11T02:50:45.575Z"
     }
   ],
-  "lastDistributedAt": "2026-05-09T02:46:00.601Z",
+  "lastDistributedAt": "2026-05-11T02:50:45.575Z",
   "totalDistributed": 0
 }
