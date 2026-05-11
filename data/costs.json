@@ -70,12 +70,21 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-11T02:50:47.501Z",
+      "action": "title_optimize",
+      "slug": "how-to-configure-fbr-penalty-in-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 5531,
-      "calls": 8
+      "tokens": 5931,
+      "calls": 9
     }
   },
   "monthlyTokenBudget": 5000000,
