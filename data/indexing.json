@@ -15,8 +15,16 @@
       "type": "URL_UPDATED",
       "status": "failed",
       "error": "Both Google and Bing ping returned non-OK"
+    },
+    {
+      "slug": "best-fbr-pos-system-for-retail-in-karachi",
+      "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi",
+      "submittedAt": "2026-05-11T02:50:45.367Z",
+      "type": "URL_UPDATED",
+      "status": "failed",
+      "error": "IndexNow HTTP 422"
     }
   ],
-  "lastSubmittedAt": "2026-05-09T02:45:59.730Z",
+  "lastSubmittedAt": "2026-05-11T02:50:45.367Z",
   "totalSubmitted": 0
 }
