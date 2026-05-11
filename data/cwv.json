@@ -1,0 +1,215 @@
+{
+  "audits": {
+    "https://phelixerp.online": [
+      {
+        "url": "https://phelixerp.online",
+        "fetchedAt": "2026-05-11T04:06:11.416Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi": [
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi",
+        "fetchedAt": "2026-05-11T04:06:12.542Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/how-to-configure-fbr-penalty-in-pakistan": [
+      {
+        "url": "https://phelixerp.online/blog/how-to-configure-fbr-penalty-in-pakistan",
+        "fetchedAt": "2026-05-11T04:06:13.666Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/how-to-setup-fbr-penalty-in-pakistan": [
+      {
+        "url": "https://phelixerp.online/blog/how-to-setup-fbr-penalty-in-pakistan",
+        "fetchedAt": "2026-05-11T04:06:14.792Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr": [
+      {
+        "url": "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
+        "fetchedAt": "2026-05-11T04:06:15.913Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide",
+        "fetchedAt": "2026-05-11T04:06:17.037Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/retail-inventory-management-pakistan-track-stock-with-fbr-pos-system": [
+      {
+        "url": "https://phelixerp.online/blog/retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
+        "fetchedAt": "2026-05-11T04:06:18.166Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-sales-tax-returns-pakistan-how-pos-integration-simplifies-monthly-filing": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-sales-tax-returns-pakistan-how-pos-integration-simplifies-monthly-filing",
+        "fetchedAt": "2026-05-11T04:06:19.298Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/pos-system-lahore-fbr-integration-for-lahore-retailers-2026": [
+      {
+        "url": "https://phelixerp.online/blog/pos-system-lahore-fbr-integration-for-lahore-retailers-2026",
+        "fetchedAt": "2026-05-11T04:06:20.421Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/pos-system-karachi-fbr-compliant-solutions-for-karachi-businesses": [
+      {
+        "url": "https://phelixerp.online/blog/pos-system-karachi-fbr-compliant-solutions-for-karachi-businesses",
+        "fetchedAt": "2026-05-11T04:06:21.546Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ]
+  },
+  "lastFullAuditAt": "2026-05-11T04:06:21.547Z"
+}
