@@ -79,12 +79,21 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-12T02:12:25.563Z",
+      "action": "title_optimize",
+      "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 5931,
-      "calls": 9
+      "tokens": 6331,
+      "calls": 10
     }
   },
   "monthlyTokenBudget": 5000000,
