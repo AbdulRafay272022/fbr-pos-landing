@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mp0ltmsg-zsv50",
-      "ts": "2026-05-11T02:50:23.008Z",
+      "id": "mp1zw98a-0oo5a",
+      "ts": "2026-05-12T02:12:06.202Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp0ltmsd",
+        "runId": "run-mp1zw988",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mp0ltn2q-ysoz0",
-      "ts": "2026-05-11T02:50:23.378Z",
+      "id": "mp1zw9if-2orqc",
+      "ts": "2026-05-12T02:12:06.567Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp0ltmsd",
+        "runId": "run-mp1zw988",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2667 unused keywords available, last scrape 4.0d ago",
-          "generate": "48.1h since last generation, 2667 keywords available",
-          "update": "skipped: last update 71.8h ago (min 168h)",
+          "scrape": "skipped: 2666 unused keywords available, last scrape 5.0d ago",
+          "generate": "23.4h since last generation, 2666 keywords available",
+          "update": "skipped: last update 95.2h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,70 @@
       }
     },
     {
-      "id": "mp0lu426-2g183",
-      "ts": "2026-05-11T02:50:45.390Z",
+      "id": "mp1zwndj-7f0mc",
+      "ts": "2026-05-12T02:12:24.535Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "best-fbr-pos-system-for-retail-in-karachi",
+      "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
       "words": 1231,
       "source": "template",
-      "durationMs": 20660,
+      "durationMs": 16505,
       "details": {
-        "runId": "run-mp0ltmsd"
+        "runId": "run-mp1zw988"
       }
     },
     {
-      "id": "mp0lu4yv-cw5cl",
-      "ts": "2026-05-11T02:50:46.567Z",
+      "id": "mp1zwnit-ip6e4",
+      "ts": "2026-05-12T02:12:24.725Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 1177,
+      "durationMs": 190,
       "details": {
-        "runId": "run-mp0ltmsd"
+        "runId": "run-mp1zw988"
       }
     },
     {
-      "id": "mp0lu86d-cp3yl",
-      "ts": "2026-05-11T02:50:50.725Z",
+      "id": "mp1zwt97-1hcs0",
+      "ts": "2026-05-12T02:12:32.155Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 4158,
+      "durationMs": 7430,
       "details": {
-        "runId": "run-mp0ltmsd",
+        "runId": "run-mp1zw988",
         "optimizedCount": 1
       }
     },
     {
-      "id": "mp0lud7f-gtcjx",
-      "ts": "2026-05-11T02:50:57.243Z",
+      "id": "mp1zwtlk-7it00",
+      "ts": "2026-05-12T02:12:32.600Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 6518,
+      "durationMs": 444,
       "details": {
-        "runId": "run-mp0ltmsd"
+        "runId": "run-mp1zw988"
       }
     },
     {
-      "id": "mp0ludds-4rl9t",
-      "ts": "2026-05-11T02:50:57.472Z",
+      "id": "mp1zwxov-mxe10",
+      "ts": "2026-05-12T02:12:37.903Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 229,
+      "success": true,
+      "slug": "pos-system-retail-karachi",
+      "durationMs": 5303,
       "details": {
-        "runId": "run-mp0ltmsd"
+        "runId": "run-mp1zw988",
+        "city": "karachi",
+        "service": "POS System"
       }
     }
   ],
