@@ -62,8 +62,29 @@
         }
       ],
       "distributedAt": "2026-05-11T02:50:45.575Z"
+    },
+    {
+      "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
+      "title": "best fbr pos system for restaurant in lahore",
+      "blogUrl": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-lahore",
+      "hook": "best fbr pos system for restaurant in lahore",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-05-12T02:12:25.409Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-05-12T02:12:25.409Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-05-12T02:12:25.409Z"
     }
   ],
-  "lastDistributedAt": "2026-05-11T02:50:45.575Z",
+  "lastDistributedAt": "2026-05-12T02:12:25.409Z",
   "totalDistributed": 0
 }
