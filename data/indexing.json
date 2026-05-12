@@ -23,8 +23,16 @@
       "type": "URL_UPDATED",
       "status": "failed",
       "error": "IndexNow HTTP 422"
+    },
+    {
+      "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
+      "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-lahore",
+      "submittedAt": "2026-05-12T02:12:24.512Z",
+      "type": "URL_UPDATED",
+      "status": "failed",
+      "error": "IndexNow HTTP 422"
     }
   ],
-  "lastSubmittedAt": "2026-05-11T02:50:45.367Z",
+  "lastSubmittedAt": "2026-05-12T02:12:24.512Z",
   "totalSubmitted": 0
 }
