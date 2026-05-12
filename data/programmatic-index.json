@@ -6,8 +6,15 @@
       "service": "POS System",
       "industry": "restaurant",
       "publishedAt": "2026-05-07T02:10:05.256Z"
+    },
+    {
+      "slug": "pos-system-retail-karachi",
+      "city": "karachi",
+      "service": "POS System",
+      "industry": "retail",
+      "publishedAt": "2026-05-12T02:12:36.516Z"
     }
   ],
-  "totalPublished": 1,
-  "lastGeneratedAt": "2026-05-07T02:10:05.256Z"
+  "totalPublished": 2,
+  "lastGeneratedAt": "2026-05-12T02:12:36.516Z"
 }
