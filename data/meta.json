@@ -1,9 +1,9 @@
 {
   "lastTopicIndex": -1,
   "agent": {
-    "isRunning": false,
-    "lockedAt": null,
-    "lockedBy": null
+    "isRunning": true,
+    "lockedAt": "2026-05-12T02:12:06.567Z",
+    "lockedBy": "run-mp1zw988"
   },
   "stats": {
     "lastScrapeAt": "2026-05-07T02:09:21.959Z",
@@ -11,8 +11,6 @@
     "lastUpdateAt": "2026-05-08T02:59:47.472Z",
     "blogsGeneratedTotal": 3,
     "blogsUpdatedTotal": 0,
-    "keywordsUsedTotal": 0,
-    "lastTitleOptimizeAt": "2026-05-11T02:50:50.725Z",
-    "titlesOptimizedTotal": 1
+    "keywordsUsedTotal": 0
   }
 }
