@@ -421,8 +421,11 @@ async function generateWithGroq(
     console.warn(JSON.stringify({ ts: new Date().toISOString(), event: "brief_skipped", error: err instanceof Error ? err.message : String(err) }));
   }
 
+  // Cap SEO brief to ~1000 chars to keep input tokens under control
+  const cappedBrief = seoBrief ? seoBrief.slice(0, 1000) : undefined;
+
   const userInput = JSON.stringify({
-    seo_brief: seoBrief || undefined,
+    seo_brief: cappedBrief || undefined,
     keyword:         topic.keyword,
     target_slug:     topic.slug,
     industry:        topic.industry,
@@ -454,10 +457,10 @@ async function generateWithGroq(
         { role: "system", content: SYSTEM_PROMPT },
         { role: "user",   content: userInput },
       ],
-      max_tokens:  6000,
+      max_tokens:  8000,
       temperature: 0.7,
     }),
-    signal: AbortSignal.timeout(45_000),
+    signal: AbortSignal.timeout(55_000),
   });
 
   if (!response.ok) {
@@ -467,16 +470,71 @@ async function generateWithGroq(
 
   const data = (await response.json()) as {
     choices: { message: { content: string } }[];
+    usage?: { prompt_tokens: number; completion_tokens: number };
   };
 
   let rawContent = data.choices[0].message.content.trim();
+
+  // Log token usage to help diagnose truncation
+  console.warn(JSON.stringify({
+    ts: new Date().toISOString(),
+    event: "groq_usage",
+    prompt_tokens:     data.usage?.prompt_tokens,
+    completion_tokens: data.usage?.completion_tokens,
+    raw_length:        rawContent.length,
+    keyword:           topic.keyword,
+  }));
 
   // Strip markdown code fences if model wrapped its output
   rawContent = rawContent
     .replace(/^```(?:json)?\s*/i, "")
     .replace(/\s*```$/, "");
 
-  const parsed: GroqBlogJson = JSON.parse(rawContent);
+  // Attempt to repair truncated JSON before parsing
+  let repairedContent = rawContent;
+  if (!rawContent.endsWith("}")) {
+    // Count open vs closed braces/brackets to close any unclosed structures
+    let openBraces   = 0;
+    let openBrackets = 0;
+    let inString     = false;
+    let escaped      = false;
+    for (const ch of rawContent) {
+      if (escaped)      { escaped = false; continue; }
+      if (ch === "\\")  { escaped = true;  continue; }
+      if (ch === '"')   { inString = !inString; continue; }
+      if (inString)     { continue; }
+      if (ch === "{")   openBraces++;
+      if (ch === "}")   openBraces--;
+      if (ch === "[")   openBrackets++;
+      if (ch === "]")   openBrackets--;
+    }
+    // Close any unclosed strings, arrays, objects
+    if (inString)       repairedContent += '"';
+    for (let i = 0; i < openBrackets; i++) repairedContent += "]";
+    for (let i = 0; i < openBraces;   i++) repairedContent += "}";
+    if (repairedContent !== rawContent) {
+      console.warn(JSON.stringify({
+        ts: new Date().toISOString(),
+        event: "groq_json_repaired",
+        original_tail: rawContent.slice(-120),
+        repaired_tail: repairedContent.slice(-120),
+      }));
+    }
+  }
+
+  let parsed: GroqBlogJson;
+  try {
+    parsed = JSON.parse(repairedContent) as GroqBlogJson;
+  } catch (parseErr) {
+    // Log raw content tail for debugging then re-throw so outer catch uses template
+    console.error(JSON.stringify({
+      ts:    new Date().toISOString(),
+      event: "groq_json_parse_failed",
+      error: String(parseErr),
+      raw_tail: rawContent.slice(-300),
+    }));
+    throw new Error(`Groq JSON parse failed: ${String(parseErr)}`);
+  }
 
   const aiSlug  = parsed.slug && isValidSlug(parsed.slug) ? parsed.slug : topic.slug;
 
@@ -922,7 +980,13 @@ export async function GET(req: NextRequest) {
     }
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
-    log("warn", "Groq failed — using template fallback", { error: message });
+    log("warn", "Groq failed — using template fallback", { error: message, keyword: selectedTopic.keyword });
+    console.error(JSON.stringify({
+      ts:      new Date().toISOString(),
+      event:   "groq_generation_failed",
+      error:   message,
+      keyword: selectedTopic.keyword,
+    }));
     content = generateTemplate(selectedTopic);
     faqs    = getTemplateFaqs(selectedTopic);
     source  = "template";
