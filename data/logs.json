@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mp1zw98a-0oo5a",
-      "ts": "2026-05-12T02:12:06.202Z",
+      "id": "mp3fu666-5c7xi",
+      "ts": "2026-05-13T02:26:08.958Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp1zw988",
+        "runId": "run-mp3fu664",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mp1zw9if-2orqc",
-      "ts": "2026-05-12T02:12:06.567Z",
+      "id": "mp3fu6ez-ngdsv",
+      "ts": "2026-05-13T02:26:09.275Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp1zw988",
+        "runId": "run-mp3fu664",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2666 unused keywords available, last scrape 5.0d ago",
-          "generate": "23.4h since last generation, 2666 keywords available",
-          "update": "skipped: last update 95.2h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 6.0d ago",
+          "generate": "24.2h since last generation, 2665 keywords available",
+          "update": "skipped: last update 119.4h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,70 +48,67 @@
       }
     },
     {
-      "id": "mp1zwndj-7f0mc",
-      "ts": "2026-05-12T02:12:24.535Z",
+      "id": "mp3fuoly-736r5",
+      "ts": "2026-05-13T02:26:32.854Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
-      "words": 1231,
+      "slug": "fbr-pos-system-pharmacies-pakistan-2026",
+      "words": 1222,
       "source": "template",
-      "durationMs": 16505,
+      "durationMs": 22225,
       "details": {
-        "runId": "run-mp1zw988"
+        "runId": "run-mp3fu664"
       }
     },
     {
-      "id": "mp1zwnit-ip6e4",
-      "ts": "2026-05-12T02:12:24.725Z",
+      "id": "mp3fuotf-w9e5q",
+      "ts": "2026-05-13T02:26:33.123Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 190,
+      "durationMs": 269,
       "details": {
-        "runId": "run-mp1zw988"
+        "runId": "run-mp3fu664"
       }
     },
     {
-      "id": "mp1zwt97-1hcs0",
-      "ts": "2026-05-12T02:12:32.155Z",
+      "id": "mp3fuqub-coy1h",
+      "ts": "2026-05-13T02:26:35.747Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 7430,
+      "durationMs": 2623,
       "details": {
-        "runId": "run-mp1zw988",
+        "runId": "run-mp3fu664",
         "optimizedCount": 1
       }
     },
     {
-      "id": "mp1zwtlk-7it00",
-      "ts": "2026-05-12T02:12:32.600Z",
+      "id": "mp3fur7w-tonxg",
+      "ts": "2026-05-13T02:26:36.236Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 444,
+      "durationMs": 489,
       "details": {
-        "runId": "run-mp1zw988"
+        "runId": "run-mp3fu664"
       }
     },
     {
-      "id": "mp1zwxov-mxe10",
-      "ts": "2026-05-12T02:12:37.903Z",
+      "id": "mp3furfr-4d7li",
+      "ts": "2026-05-13T02:26:36.519Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": true,
-      "slug": "pos-system-retail-karachi",
-      "durationMs": 5303,
+      "success": false,
+      "durationMs": 283,
       "details": {
-        "runId": "run-mp1zw988",
-        "city": "karachi",
-        "service": "POS System"
+        "runId": "run-mp3fu664"
       }
     }
   ],
