@@ -31,8 +31,16 @@
       "type": "URL_UPDATED",
       "status": "failed",
       "error": "IndexNow HTTP 422"
+    },
+    {
+      "slug": "fbr-pos-system-pharmacies-pakistan-2026",
+      "url": "https://phelixerp.online/blog/fbr-pos-system-pharmacies-pakistan-2026",
+      "submittedAt": "2026-05-13T02:26:32.834Z",
+      "type": "URL_UPDATED",
+      "status": "failed",
+      "error": "IndexNow HTTP 422"
     }
   ],
-  "lastSubmittedAt": "2026-05-12T02:12:24.512Z",
+  "lastSubmittedAt": "2026-05-13T02:26:32.834Z",
   "totalSubmitted": 0
 }
