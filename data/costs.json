@@ -96,12 +96,21 @@
       "promptTokens": 1033,
       "completionTokens": 1469,
       "totalTokens": 2502
+    },
+    {
+      "ts": "2026-05-13T02:26:33.768Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-system-pharmacies-pakistan-2026",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 8833,
-      "calls": 11
+      "tokens": 9233,
+      "calls": 12
     }
   },
   "monthlyTokenBudget": 5000000,
