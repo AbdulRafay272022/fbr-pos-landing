@@ -20,8 +20,15 @@
       "service": "POS System",
       "industry": "pharmacy",
       "publishedAt": "2026-05-13T21:32:48.338Z"
+    },
+    {
+      "slug": "pos-system-clothing-store-karachi",
+      "city": "karachi",
+      "service": "POS System",
+      "industry": "clothing store",
+      "publishedAt": "2026-05-13T21:33:09.526Z"
     }
   ],
-  "totalPublished": 3,
-  "lastGeneratedAt": "2026-05-13T21:32:48.338Z"
+  "totalPublished": 4,
+  "lastGeneratedAt": "2026-05-13T21:33:09.526Z"
 }
