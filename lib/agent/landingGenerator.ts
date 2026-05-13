@@ -230,7 +230,16 @@ async function callGroqLanding(
       .replace(/\s*```$/, "")
       .trim();
 
-    const parsed = JSON.parse(cleaned) as GroqGenerateResult;
+    // Escape literal control characters inside JSON string values
+    // (Groq sometimes embeds raw \n/\t inside HTML content strings)
+    const sanitized = cleaned.replace(/"(?:[^"\\]|\\.)*"/gs, (match) =>
+      match
+        .replace(/\n/g, "\\n")
+        .replace(/\r/g, "\\r")
+        .replace(/\t/g, "\\t")
+    );
+
+    const parsed = JSON.parse(sanitized) as GroqGenerateResult;
 
     // Validate minimum requirements
     if (!parsed.title || !parsed.slug || !parsed.content) {

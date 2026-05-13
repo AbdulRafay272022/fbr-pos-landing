@@ -490,6 +490,15 @@ async function generateWithGroq(
     .replace(/^```(?:json)?\s*/i, "")
     .replace(/\s*```$/, "");
 
+  // Escape literal control characters inside JSON string values
+  // (Groq sometimes embeds raw \n/\t inside HTML content strings)
+  rawContent = rawContent.replace(/"(?:[^"\\]|\\.)*"/gs, (match) =>
+    match
+      .replace(/\n/g, "\\n")
+      .replace(/\r/g, "\\r")
+      .replace(/\t/g, "\\t")
+  );
+
   // Attempt to repair truncated JSON before parsing
   let repairedContent = rawContent;
   if (!rawContent.endsWith("}")) {

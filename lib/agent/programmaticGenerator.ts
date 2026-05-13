@@ -213,7 +213,16 @@ async function callGroqProgrammatic(
       .replace(/\s*```$/, "")
       .trim();
 
-    const parsed = JSON.parse(cleaned) as GroqProgResult;
+    // Escape literal control characters inside JSON string values
+    // (Groq sometimes embeds raw \n/\t inside HTML content strings)
+    const sanitized = cleaned.replace(/"(?:[^"\\]|\\.)*"/gs, (match) =>
+      match
+        .replace(/\n/g, "\\n")
+        .replace(/\r/g, "\\r")
+        .replace(/\t/g, "\\t")
+    );
+
+    const parsed = JSON.parse(sanitized) as GroqProgResult;
 
     if (!parsed.title || !parsed.content) {
       throw new Error("Missing required fields in programmatic page response");
