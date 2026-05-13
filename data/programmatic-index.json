@@ -13,8 +13,15 @@
       "service": "POS System",
       "industry": "retail",
       "publishedAt": "2026-05-12T02:12:36.516Z"
+    },
+    {
+      "slug": "pos-system-pharmacy-karachi",
+      "city": "karachi",
+      "service": "POS System",
+      "industry": "pharmacy",
+      "publishedAt": "2026-05-13T21:32:48.338Z"
     }
   ],
-  "totalPublished": 2,
-  "lastGeneratedAt": "2026-05-12T02:12:36.516Z"
+  "totalPublished": 3,
+  "lastGeneratedAt": "2026-05-13T21:32:48.338Z"
 }
