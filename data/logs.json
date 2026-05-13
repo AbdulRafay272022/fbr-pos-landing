@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mp4kmd3x-wxzfe",
-      "ts": "2026-05-13T21:27:48.957Z",
+      "id": "mp4kmu57-o1ghe",
+      "ts": "2026-05-13T21:28:11.035Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp4kmd3v",
+        "runId": "run-mp4kmu57",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mp4kmdct-q1116",
-      "ts": "2026-05-13T21:27:49.277Z",
+      "id": "mp4kmudt-f7s15",
+      "ts": "2026-05-13T21:28:11.345Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp4kmd3v",
+        "runId": "run-mp4kmu57",
         "shouldScrape": false,
         "shouldGenerate": false,
         "shouldUpdate": false,
@@ -48,52 +48,52 @@
       }
     },
     {
-      "id": "mp4kmeo6-khya1",
-      "ts": "2026-05-13T21:27:50.982Z",
+      "id": "mp4kmvlc-pcrip",
+      "ts": "2026-05-13T21:28:12.912Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 294,
+      "durationMs": 142,
       "details": {
-        "runId": "run-mp4kmd3v"
+        "runId": "run-mp4kmu57"
       }
     },
     {
-      "id": "mp4kmfum-di9lg",
-      "ts": "2026-05-13T21:27:52.510Z",
+      "id": "mp4kmwru-zjyar",
+      "ts": "2026-05-13T21:28:14.442Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1527,
+      "durationMs": 1530,
       "details": {
-        "runId": "run-mp4kmd3v",
+        "runId": "run-mp4kmu57",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mp4kmkbe-2emz0",
-      "ts": "2026-05-13T21:27:58.298Z",
+      "id": "mp4kn19u-ihfw9",
+      "ts": "2026-05-13T21:28:20.274Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 5788,
+      "durationMs": 5831,
       "details": {
-        "runId": "run-mp4kmd3v"
+        "runId": "run-mp4kmu57"
       }
     },
     {
-      "id": "mp4kmkh3-mbu6d",
-      "ts": "2026-05-13T21:27:58.503Z",
+      "id": "mp4kn1fj-zaesa",
+      "ts": "2026-05-13T21:28:20.479Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
       "durationMs": 205,
       "details": {
-        "runId": "run-mp4kmd3v"
+        "runId": "run-mp4kmu57"
       }
     }
   ],
