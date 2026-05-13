@@ -27,8 +27,15 @@
       "service": "POS System",
       "industry": "clothing store",
       "publishedAt": "2026-05-13T21:33:09.526Z"
+    },
+    {
+      "slug": "pos-system-grocery-store-karachi",
+      "city": "karachi",
+      "service": "POS System",
+      "industry": "grocery store",
+      "publishedAt": "2026-05-13T21:35:11.621Z"
     }
   ],
-  "totalPublished": 4,
-  "lastGeneratedAt": "2026-05-13T21:33:09.526Z"
+  "totalPublished": 5,
+  "lastGeneratedAt": "2026-05-13T21:35:11.621Z"
 }
