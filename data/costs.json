@@ -105,12 +105,21 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-13T21:25:16.078Z",
+      "action": "title_optimize",
+      "slug": "best-fbr-pos-system-for-retail-in-karachi",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 9233,
-      "calls": 12
+      "tokens": 9633,
+      "calls": 13
     }
   },
   "monthlyTokenBudget": 5000000,
