@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mp4kshgr-rdhxj",
-      "ts": "2026-05-13T21:32:34.539Z",
+      "id": "mp4ksy6l-briq5",
+      "ts": "2026-05-13T21:32:56.205Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp4kshgr",
+        "runId": "run-mp4ksy6l",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mp4kshwe-68n03",
-      "ts": "2026-05-13T21:32:35.102Z",
+      "id": "mp4ksypi-gheiq",
+      "ts": "2026-05-13T21:32:56.886Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp4kshgr",
+        "runId": "run-mp4ksy6l",
         "shouldScrape": false,
         "shouldGenerate": false,
         "shouldUpdate": false,
@@ -35,7 +35,7 @@
         "reasons": {
           "scrape": "skipped: 2665 unused keywords available, last scrape 6.8d ago",
           "generate": "skipped: last generation 19.1h ago (min 20h)",
-          "update": "skipped: last update 138.5h ago (min 168h)",
+          "update": "skipped: last update 138.6h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,53 +48,53 @@
       }
     },
     {
-      "id": "mp4ksj2x-7340h",
-      "ts": "2026-05-13T21:32:36.633Z",
+      "id": "mp4kszxu-fyaab",
+      "ts": "2026-05-13T21:32:58.482Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 147,
+      "durationMs": 263,
       "details": {
-        "runId": "run-mp4kshgr"
+        "runId": "run-mp4ksy6l"
       }
     },
     {
-      "id": "mp4kskdx-6hd15",
-      "ts": "2026-05-13T21:32:38.325Z",
+      "id": "mp4kt0yv-wsezf",
+      "ts": "2026-05-13T21:32:59.815Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1692,
+      "durationMs": 1333,
       "details": {
-        "runId": "run-mp4kshgr",
+        "runId": "run-mp4ksy6l",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mp4ksoyg-ealri",
-      "ts": "2026-05-13T21:32:44.248Z",
+      "id": "mp4kt5dm-sdgvr",
+      "ts": "2026-05-13T21:33:05.530Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 5923,
+      "durationMs": 5715,
       "details": {
-        "runId": "run-mp4kshgr"
+        "runId": "run-mp4ksy6l"
       }
     },
     {
-      "id": "mp4kst8i-khdxf",
-      "ts": "2026-05-13T21:32:49.794Z",
+      "id": "mp4kt9jl-g9kl0",
+      "ts": "2026-05-13T21:33:10.929Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": true,
-      "slug": "pos-system-pharmacy-karachi",
-      "durationMs": 5545,
+      "slug": "pos-system-clothing-store-karachi",
+      "durationMs": 5399,
       "details": {
-        "runId": "run-mp4kshgr",
+        "runId": "run-mp4ksy6l",
         "city": "karachi",
         "service": "POS System"
       }
