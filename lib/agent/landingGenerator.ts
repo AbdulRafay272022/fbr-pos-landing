@@ -230,17 +230,32 @@ async function callGroqLanding(
       .replace(/\s*```$/, "")
       .trim();
 
-    // Escape literal control characters inside JSON string values
-    // (Groq sometimes embeds raw \n/\t inside HTML content strings)
-    // Note: use [\s\S] instead of . with s-flag for pre-ES2018 TS targets
+    // Escape ALL control characters (U+0000-U+001F) inside JSON string values.
+    // Groq sometimes embeds raw newlines, tabs, form-feeds, etc. in HTML content.
+    // Strategy: match each JSON string literal, then replace any bare control char.
+    // Note: use [\s\S] instead of dotAll 's' flag for pre-ES2018 TS targets.
     const sanitized = cleaned.replace(/"(?:[^"\\]|\\[\s\S])*"/g, (match) =>
-      match
-        .replace(/\n/g, "\\n")
-        .replace(/\r/g, "\\r")
-        .replace(/\t/g, "\\t")
+      // eslint-disable-next-line no-control-regex
+      match.replace(/[\x00-\x1F]/g, (ch) => {
+        if (ch === "\n") return "\\n";
+        if (ch === "\r") return "\\r";
+        if (ch === "\t") return "\\t";
+        return "\\u" + ch.charCodeAt(0).toString(16).padStart(4, "0");
+      })
     );
 
-    const parsed = JSON.parse(sanitized) as GroqGenerateResult;
+    let parsed: GroqGenerateResult;
+    try {
+      parsed = JSON.parse(sanitized) as GroqGenerateResult;
+    } catch (parseErr) {
+      console.error(JSON.stringify({
+        ts: new Date().toISOString(),
+        event: "landing_json_parse_failed",
+        error: String(parseErr),
+        raw_tail: cleaned.slice(-300),
+      }));
+      throw new Error(`Landing JSON parse failed: ${String(parseErr)}`);
+    }
 
     // Validate minimum requirements
     if (!parsed.title || !parsed.slug || !parsed.content) {
