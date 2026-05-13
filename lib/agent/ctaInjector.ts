@@ -64,7 +64,7 @@ function buildVariants(config: SiteConfig): Record<string, CtaVariant> {
     },
     pricing: {
       id:       "pricing-cta",
-      headline: `${config.name} pricing — from PKR 3,500/month.`,
+      headline: `${config.name} pricing — from PKR 1,500/month.`,
       subline:  "All-in-one FBR POS compliance: hardware setup, IRIS integration, staff training, and ongoing support included.",
       btnText:  "Get Pricing on WhatsApp",
       btnHref:  wa,

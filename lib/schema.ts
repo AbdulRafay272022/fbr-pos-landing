@@ -267,7 +267,7 @@ export function localBusinessSchema() {
     image:       `${BASE_URL}/phelix-logo.png`,
     url:         BASE_URL,
     telephone:   "+92-311-8366981",
-    priceRange:  "PKR 1,500 – PKR 5,000 / month",
+    priceRange:  "PKR 1,500 – PKR 4,000 / month",
     description: "Pakistan's leading FBR-compliant POS and ERP system. Setup in 24 hours.",
     address: {
       "@type":          "PostalAddress",

@@ -884,11 +884,20 @@ export async function GET(req: NextRequest) {
   ) ?? [];
 
   // ── Generate content ──────────────────────────────────────────────────────
+  // Title-case helper: "best fbr pos" → "Best FBR POS"
+  const ALWAYS_UPPER = new Set(["fbr","pos","erp","qr","iris","gst","strn","api","sro","pk"]);
+  const toTitleCase = (s: string) =>
+    s.replace(/\w+/g, (w) =>
+      ALWAYS_UPPER.has(w.toLowerCase())
+        ? w.toUpperCase()
+        : w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
+    );
+
   let content: string;
   let faqs: BlogFaq[];
   let finalSlug:  string = selectedTopic.slug;
-  let finalTitle: string = selectedTopic.keyword;
-  let finalMeta:  string = `${selectedTopic.keyword} — complete guide for Pakistani businesses.`;
+  let finalTitle: string = toTitleCase(selectedTopic.keyword);
+  let finalMeta:  string = `${toTitleCase(selectedTopic.keyword)} — complete guide for Pakistani businesses.`;
   let source: "groq" | "template";
 
   try {
@@ -897,7 +906,7 @@ export async function GET(req: NextRequest) {
     content    = result.blog.content ?? "";
     faqs       = result.blog.faqs   ?? getTemplateFaqs(selectedTopic);
     finalSlug  = result.blog.slug   ?? selectedTopic.slug;
-    finalTitle = result.blog.title  ?? selectedTopic.keyword;
+    finalTitle = result.blog.title  ?? toTitleCase(selectedTopic.keyword);
     finalMeta  = result.blog.metaDescription ?? finalMeta;
 
     const words = countWords(content);

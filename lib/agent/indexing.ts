@@ -70,7 +70,7 @@ async function submitToIndexNow(host: string, urls: string[]): Promise<{ ok: boo
       body:    JSON.stringify({
         host,
         key,
-        keyLocation: `https://${host}/api/indexnow-key`,
+        keyLocation: `https://${host}/a1b2c3d4e5f6a7b8c9d0a1b2c3d4e5f6.txt`,
         urlList:     urls,
       }),
       signal: AbortSignal.timeout(15_000),

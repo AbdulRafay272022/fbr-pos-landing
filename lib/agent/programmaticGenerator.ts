@@ -151,7 +151,8 @@ The content HTML must include:
   <a href="${ctaUrl}" style="display:inline-block;background:#fff;color:#F97316;padding:14px 32px;border-radius:8px;font-weight:800;text-decoration:none;" data-cta-id="prog-end" data-cta-pos="end">💬 Book Your Free ${city} Demo</a>
 </section>
 
-IMPORTANT: No \`\`\`json fences. Pure JSON only. All prices in PKR.`;
+IMPORTANT: No \`\`\`json fences. Pure JSON only. All prices in PKR.
+Pricing: Starter plan PKR 1,500/month (single branch). Business plan PKR 4,000/month (multi-branch, most popular). Use these exact prices — do not invent other amounts.`;
 }
 
 // ─── Groq call ────────────────────────────────────────────────────────────────
