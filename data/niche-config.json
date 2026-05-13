@@ -1,0 +1,41 @@
+{
+  "businessName": "Phelix ERP",
+  "niche": "FBR-compliant POS system and ERP software for Pakistani businesses. Full digital invoicing, QR invoice generation, FBR IRIS integration, inventory management. Serves restaurants, retail, pharmacies, clothing stores, grocery stores. Also offers white-labelling for consultants.",
+  "country": "Pakistan",
+  "cities": [
+    "Karachi",
+    "Lahore",
+    "Islamabad",
+    "Rawalpindi",
+    "Faisalabad",
+    "Multan",
+    "Peshawar",
+    "Quetta",
+    "Sialkot",
+    "Gujranwala",
+    "Hyderabad",
+    "Abbottabad",
+    "Bahawalpur"
+  ],
+  "industries": [
+    "restaurant",
+    "retail",
+    "pharmacy",
+    "clothing store",
+    "grocery store",
+    "wholesale",
+    "electronics",
+    "bakery",
+    "supermarket",
+    "beauty salon"
+  ],
+  "targetAudience": "Pakistani business owners who need FBR POS integration, Tier-1 retailers, chain stores, consultants seeking white-label ERP",
+  "competitors": [
+    "pospakistan.com",
+    "hamarapos.com",
+    "cloudpos.pk"
+  ],
+  "ctaWhatsApp": "923118366981",
+  "ctaText": "Get Free WhatsApp Demo",
+  "configuredAt": "2026-05-13T21:25:06.427Z"
+}
