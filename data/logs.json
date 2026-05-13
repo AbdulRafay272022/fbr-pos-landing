@@ -1,29 +1,29 @@
 {
   "entries": [
     {
-      "id": "mp3fu666-5c7xi",
-      "ts": "2026-05-13T02:26:08.958Z",
+      "id": "mp4kj10b-4a08n",
+      "ts": "2026-05-13T21:25:13.307Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp3fu664",
+        "runId": "run-mp4kj108",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mp3fu6ez-ngdsv",
-      "ts": "2026-05-13T02:26:09.275Z",
+      "id": "mp4kj1ci-jhzns",
+      "ts": "2026-05-13T21:25:13.746Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp3fu664",
+        "runId": "run-mp4kj108",
         "shouldScrape": false,
-        "shouldGenerate": true,
+        "shouldGenerate": false,
         "shouldUpdate": false,
         "shouldFetchSeo": true,
         "shouldRefresh": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 6.0d ago",
-          "generate": "24.2h since last generation, 2665 keywords available",
-          "update": "skipped: last update 119.4h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 6.8d ago",
+          "generate": "skipped: last generation 19.0h ago (min 20h)",
+          "update": "skipped: last update 138.4h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,52 @@
       }
     },
     {
-      "id": "mp3fuoly-736r5",
-      "ts": "2026-05-13T02:26:32.854Z",
-      "site": "Phelix ERP",
-      "event": "blog_generated",
-      "level": "info",
-      "success": true,
-      "slug": "fbr-pos-system-pharmacies-pakistan-2026",
-      "words": 1222,
-      "source": "template",
-      "durationMs": 22225,
-      "details": {
-        "runId": "run-mp3fu664"
-      }
-    },
-    {
-      "id": "mp3fuotf-w9e5q",
-      "ts": "2026-05-13T02:26:33.123Z",
+      "id": "mp4kj2oj-qnp6u",
+      "ts": "2026-05-13T21:25:15.475Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 269,
+      "durationMs": 272,
       "details": {
-        "runId": "run-mp3fu664"
+        "runId": "run-mp4kj108"
       }
     },
     {
-      "id": "mp3fuqub-coy1h",
-      "ts": "2026-05-13T02:26:35.747Z",
+      "id": "mp4kj4zh-0czh0",
+      "ts": "2026-05-13T21:25:18.461Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2623,
+      "durationMs": 2986,
       "details": {
-        "runId": "run-mp3fu664",
+        "runId": "run-mp4kj108",
         "optimizedCount": 1
       }
     },
     {
-      "id": "mp3fur7w-tonxg",
-      "ts": "2026-05-13T02:26:36.236Z",
+      "id": "mp4kj9es-b3xqz",
+      "ts": "2026-05-13T21:25:24.196Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 489,
+      "durationMs": 5734,
       "details": {
-        "runId": "run-mp3fu664"
+        "runId": "run-mp4kj108"
       }
     },
     {
-      "id": "mp3furfr-4d7li",
-      "ts": "2026-05-13T02:26:36.519Z",
+      "id": "mp4kjc8a-a9hbh",
+      "ts": "2026-05-13T21:25:27.850Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 283,
+      "durationMs": 3654,
       "details": {
-        "runId": "run-mp3fu664"
+        "runId": "run-mp4kj108"
       }
     }
   ],
