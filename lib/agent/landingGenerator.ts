@@ -232,7 +232,8 @@ async function callGroqLanding(
 
     // Escape literal control characters inside JSON string values
     // (Groq sometimes embeds raw \n/\t inside HTML content strings)
-    const sanitized = cleaned.replace(/"(?:[^"\\]|\\.)*"/gs, (match) =>
+    // Note: use [\s\S] instead of . with s-flag for pre-ES2018 TS targets
+    const sanitized = cleaned.replace(/"(?:[^"\\]|\\[\s\S])*"/g, (match) =>
       match
         .replace(/\n/g, "\\n")
         .replace(/\r/g, "\\r")
