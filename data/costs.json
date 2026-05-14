@@ -147,12 +147,21 @@
       "promptTokens": 1089,
       "completionTokens": 1647,
       "totalTokens": 2736
+    },
+    {
+      "ts": "2026-05-14T02:22:56.262Z",
+      "action": "title_optimize",
+      "slug": "generate-fbr-qr-invoices-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 21616,
-      "calls": 17
+      "tokens": 22016,
+      "calls": 18
     }
   },
   "monthlyTokenBudget": 5000000,
