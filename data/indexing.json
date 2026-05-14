@@ -39,8 +39,15 @@
       "type": "URL_UPDATED",
       "status": "failed",
       "error": "IndexNow HTTP 422"
+    },
+    {
+      "slug": "generate-fbr-qr-invoices-pakistan",
+      "url": "https://phelixerp.online/blog/generate-fbr-qr-invoices-pakistan",
+      "submittedAt": "2026-05-14T02:22:55.439Z",
+      "type": "URL_UPDATED",
+      "status": "submitted"
     }
   ],
-  "lastSubmittedAt": "2026-05-13T02:26:32.834Z",
-  "totalSubmitted": 0
+  "lastSubmittedAt": "2026-05-14T02:22:55.439Z",
+  "totalSubmitted": 1
 }
