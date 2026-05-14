@@ -1,29 +1,29 @@
 {
   "entries": [
     {
-      "id": "mp4kviyn-8e35w",
-      "ts": "2026-05-13T21:34:56.447Z",
+      "id": "mp4v5bzd-gdgq3",
+      "ts": "2026-05-14T02:22:30.121Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp4kviyk",
+        "runId": "run-mp4v5bza",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mp4kvjac-xkaha",
-      "ts": "2026-05-13T21:34:56.868Z",
+      "id": "mp4v5c8m-lrezm",
+      "ts": "2026-05-14T02:22:30.454Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp4kviyk",
+        "runId": "run-mp4v5bza",
         "shouldScrape": false,
-        "shouldGenerate": false,
+        "shouldGenerate": true,
         "shouldUpdate": false,
         "shouldFetchSeo": true,
         "shouldRefresh": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 6.8d ago",
-          "generate": "skipped: last generation 19.1h ago (min 20h)",
-          "update": "skipped: last update 138.6h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 7.0d ago",
+          "generate": "23.9h since last generation, 2665 keywords available",
+          "update": "skipped: last update 143.4h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,57 +48,67 @@
       }
     },
     {
-      "id": "mp4kvkpn-40rfc",
-      "ts": "2026-05-13T21:34:58.715Z",
+      "id": "mp4v5vj7-xozfu",
+      "ts": "2026-05-14T02:22:55.459Z",
+      "site": "Phelix ERP",
+      "event": "blog_generated",
+      "level": "info",
+      "success": true,
+      "slug": "generate-fbr-qr-invoices-pakistan",
+      "words": 1227,
+      "source": "template",
+      "durationMs": 23558,
+      "details": {
+        "runId": "run-mp4v5bza"
+      }
+    },
+    {
+      "id": "mp4v5vos-m9lbw",
+      "ts": "2026-05-14T02:22:55.660Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 233,
+      "durationMs": 201,
       "details": {
-        "runId": "run-mp4kviyk"
+        "runId": "run-mp4v5bza"
       }
     },
     {
-      "id": "mp4kvlwp-o5rnf",
-      "ts": "2026-05-13T21:35:00.265Z",
+      "id": "mp4v5xq5-p3voe",
+      "ts": "2026-05-14T02:22:58.301Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1549,
+      "durationMs": 2641,
       "details": {
-        "runId": "run-mp4kviyk",
-        "optimizedCount": 0
+        "runId": "run-mp4v5bza",
+        "optimizedCount": 1
       }
     },
     {
-      "id": "mp4kvrjh-cym11",
-      "ts": "2026-05-13T21:35:07.565Z",
+      "id": "mp4v5xz3-pz2of",
+      "ts": "2026-05-14T02:22:58.623Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
-      "success": true,
-      "slug": "fbr-pos-integration-pakistan",
-      "durationMs": 7299,
+      "success": false,
+      "durationMs": 322,
       "details": {
-        "runId": "run-mp4kviyk",
-        "pageType": "service"
+        "runId": "run-mp4v5bza"
       }
     },
     {
-      "id": "mp4kvvxm-taakp",
-      "ts": "2026-05-13T21:35:13.258Z",
+      "id": "mp4v5y8t-vqqiy",
+      "ts": "2026-05-14T02:22:58.973Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": true,
-      "slug": "pos-system-grocery-store-karachi",
-      "durationMs": 5692,
+      "success": false,
+      "durationMs": 350,
       "details": {
-        "runId": "run-mp4kviyk",
-        "city": "karachi",
-        "service": "POS System"
+        "runId": "run-mp4v5bza"
       }
     }
   ],
