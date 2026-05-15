@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mp4v5bzd-gdgq3",
-      "ts": "2026-05-14T02:22:30.121Z",
+      "id": "mp6btmbn-4kkky",
+      "ts": "2026-05-15T02:57:03.299Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp4v5bza",
+        "runId": "run-mp6btmbn",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mp4v5c8m-lrezm",
-      "ts": "2026-05-14T02:22:30.454Z",
+      "id": "mp6btmkm-s90tx",
+      "ts": "2026-05-15T02:57:03.622Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mp4v5bza",
+        "runId": "run-mp6btmbn",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 7.0d ago",
-          "generate": "23.9h since last generation, 2665 keywords available",
-          "update": "skipped: last update 143.4h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 8.0d ago",
+          "generate": "24.6h since last generation, 2665 keywords available",
+          "update": "skipped: last update 168.0h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,67 @@
       }
     },
     {
-      "id": "mp4v5vj7-xozfu",
-      "ts": "2026-05-14T02:22:55.459Z",
+      "id": "mp6bu3w7-0hyg1",
+      "ts": "2026-05-15T02:57:26.071Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "generate-fbr-qr-invoices-pakistan",
-      "words": 1227,
+      "slug": "fbr-pos-system-restaurants-pakistan-2026",
+      "words": 1222,
       "source": "template",
-      "durationMs": 23558,
+      "durationMs": 21043,
       "details": {
-        "runId": "run-mp4v5bza"
+        "runId": "run-mp6btmbn"
       }
     },
     {
-      "id": "mp4v5vos-m9lbw",
-      "ts": "2026-05-14T02:22:55.660Z",
+      "id": "mp6bu43o-ay33y",
+      "ts": "2026-05-15T02:57:26.340Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 201,
+      "durationMs": 269,
       "details": {
-        "runId": "run-mp4v5bza"
+        "runId": "run-mp6btmbn"
       }
     },
     {
-      "id": "mp4v5xq5-p3voe",
-      "ts": "2026-05-14T02:22:58.301Z",
+      "id": "mp6bu7g9-h1xhx",
+      "ts": "2026-05-15T02:57:30.681Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2641,
+      "durationMs": 4340,
       "details": {
-        "runId": "run-mp4v5bza",
+        "runId": "run-mp6btmbn",
         "optimizedCount": 1
       }
     },
     {
-      "id": "mp4v5xz3-pz2of",
-      "ts": "2026-05-14T02:22:58.623Z",
+      "id": "mp6bu7qt-opsio",
+      "ts": "2026-05-15T02:57:31.061Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 322,
+      "durationMs": 380,
       "details": {
-        "runId": "run-mp4v5bza"
+        "runId": "run-mp6btmbn"
       }
     },
     {
-      "id": "mp4v5y8t-vqqiy",
-      "ts": "2026-05-14T02:22:58.973Z",
+      "id": "mp6bu7w4-8l4fm",
+      "ts": "2026-05-15T02:57:31.252Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 350,
+      "durationMs": 191,
       "details": {
-        "runId": "run-mp4v5bza"
+        "runId": "run-mp6btmbn"
       }
     }
   ],
