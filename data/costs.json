@@ -156,12 +156,21 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-15T02:57:26.872Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-system-restaurants-pakistan-2026",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 22016,
-      "calls": 18
+      "tokens": 22416,
+      "calls": 19
     }
   },
   "monthlyTokenBudget": 5000000,
