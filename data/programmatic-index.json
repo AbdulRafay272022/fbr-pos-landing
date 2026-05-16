@@ -34,8 +34,15 @@
       "service": "POS System",
       "industry": "grocery store",
       "publishedAt": "2026-05-13T21:35:11.621Z"
+    },
+    {
+      "slug": "fbr-pos-integration-restaurant-karachi",
+      "city": "karachi",
+      "service": "FBR POS Integration",
+      "industry": "restaurant",
+      "publishedAt": "2026-05-16T02:28:46.013Z"
     }
   ],
-  "totalPublished": 5,
-  "lastGeneratedAt": "2026-05-13T21:35:11.621Z"
+  "totalPublished": 6,
+  "lastGeneratedAt": "2026-05-16T02:28:46.013Z"
 }
