@@ -41,8 +41,15 @@
       "service": "FBR POS Integration",
       "industry": "restaurant",
       "publishedAt": "2026-05-16T02:28:46.013Z"
+    },
+    {
+      "slug": "fbr-pos-integration-retail-karachi",
+      "city": "karachi",
+      "service": "FBR POS Integration",
+      "industry": "retail",
+      "publishedAt": "2026-05-17T02:39:44.562Z"
     }
   ],
-  "totalPublished": 6,
-  "lastGeneratedAt": "2026-05-16T02:28:46.013Z"
+  "totalPublished": 7,
+  "lastGeneratedAt": "2026-05-17T02:39:44.562Z"
 }
