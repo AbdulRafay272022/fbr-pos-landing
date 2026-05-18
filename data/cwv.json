@@ -19,12 +19,50 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online",
+        "fetchedAt": "2026-05-18T04:13:19.905Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi": [
       {
         "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi",
         "fetchedAt": "2026-05-11T04:06:12.542Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi",
+        "fetchedAt": "2026-05-18T04:13:26.640Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -61,6 +99,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/how-to-configure-fbr-penalty-in-pakistan",
+        "fetchedAt": "2026-05-18T04:13:27.774Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/how-to-setup-fbr-penalty-in-pakistan": [
@@ -82,12 +139,50 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/how-to-setup-fbr-penalty-in-pakistan",
+        "fetchedAt": "2026-05-18T04:13:28.894Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr": [
       {
         "url": "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
         "fetchedAt": "2026-05-11T04:06:15.913Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
+        "fetchedAt": "2026-05-18T04:13:30.019Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -209,7 +304,112 @@
           "PSI HTTP 429"
         ]
       }
+    ],
+    "https://phelixerp.online/blog/fbr-pos-system-karachi-businesses": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-pos-system-karachi-businesses",
+        "fetchedAt": "2026-05-18T04:13:21.028Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-pos-system-restaurants-pakistan-2026": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-pos-system-restaurants-pakistan-2026",
+        "fetchedAt": "2026-05-18T04:13:22.147Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/generate-fbr-qr-invoices-pakistan": [
+      {
+        "url": "https://phelixerp.online/blog/generate-fbr-qr-invoices-pakistan",
+        "fetchedAt": "2026-05-18T04:13:23.268Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-pos-system-pharmacies-pakistan-2026": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-pos-system-pharmacies-pakistan-2026",
+        "fetchedAt": "2026-05-18T04:13:24.392Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-lahore": [
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-lahore",
+        "fetchedAt": "2026-05-18T04:13:25.514Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
     ]
   },
-  "lastFullAuditAt": "2026-05-11T04:06:21.547Z"
+  "lastFullAuditAt": "2026-05-18T04:13:30.019Z"
 }
