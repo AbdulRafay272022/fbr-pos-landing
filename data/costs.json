@@ -199,12 +199,30 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-19T02:10:12.071Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-system-lahore-retailers-2026",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-19T02:10:12.488Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-system-karachi-businesses",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 32118,
-      "calls": 23
+      "tokens": 32918,
+      "calls": 25
     }
   },
   "monthlyTokenBudget": 5000000,
