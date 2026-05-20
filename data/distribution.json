@@ -125,8 +125,29 @@
         }
       ],
       "distributedAt": "2026-05-19T02:10:11.474Z"
+    },
+    {
+      "slug": "fbr-pos-integration-monthly-sales-tax-returns-pakistan",
+      "title": "FBR POS Integration",
+      "blogUrl": "https://phelixerp.online/blog/fbr-pos-integration-monthly-sales-tax-returns-pakistan",
+      "hook": "FBR POS Integration",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-05-20T02:07:12.632Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-05-20T02:07:12.632Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-05-20T02:07:12.632Z"
     }
   ],
-  "lastDistributedAt": "2026-05-19T02:10:11.474Z",
+  "lastDistributedAt": "2026-05-20T02:07:12.632Z",
   "totalDistributed": 0
 }
