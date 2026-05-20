@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mpbzw9eb-kdljv",
-      "ts": "2026-05-19T02:09:48.180Z",
+      "id": "mpdf8600-sbl45",
+      "ts": "2026-05-20T02:06:44.064Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpbzw9e8",
+        "runId": "run-mpdf85zx",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mpbzw9o3-cvmj2",
-      "ts": "2026-05-19T02:09:48.532Z",
+      "id": "mpdf86a8-n212c",
+      "ts": "2026-05-20T02:06:44.432Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpbzw9e8",
+        "runId": "run-mpdf85zx",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 12.0d ago",
-          "generate": "23.8h since last generation, 2665 keywords available",
-          "update": "skipped: last update 71.7h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 13.0d ago",
+          "generate": "23.9h since last generation, 2665 keywords available",
+          "update": "skipped: last update 95.6h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,69 @@
       }
     },
     {
-      "id": "mpbzwr5r-yensm",
-      "ts": "2026-05-19T02:10:11.199Z",
+      "id": "mpdf8ru2-ijpq7",
+      "ts": "2026-05-20T02:07:12.362Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "fbr-pos-system-lahore-retailers-2026",
-      "words": 1222,
+      "slug": "fbr-pos-integration-monthly-sales-tax-returns-pakistan",
+      "words": 1240,
       "source": "template",
-      "durationMs": 21309,
+      "durationMs": 26278,
       "details": {
-        "runId": "run-mpbzw9e8"
+        "runId": "run-mpdf85zx"
       }
     },
     {
-      "id": "mpbzwrai-nh4rr",
-      "ts": "2026-05-19T02:10:11.370Z",
+      "id": "mpdf8rzy-6bd1c",
+      "ts": "2026-05-20T02:07:12.574Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 170,
+      "durationMs": 212,
       "details": {
-        "runId": "run-mpbzw9e8"
+        "runId": "run-mpdf85zx"
       }
     },
     {
-      "id": "mpbzwtp3-h2bti",
-      "ts": "2026-05-19T02:10:14.487Z",
+      "id": "mpdf8uhr-l3dyf",
+      "ts": "2026-05-20T02:07:15.807Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 3117,
+      "durationMs": 3233,
       "details": {
-        "runId": "run-mpbzw9e8",
-        "optimizedCount": 2
+        "runId": "run-mpdf85zx",
+        "optimizedCount": 1
       }
     },
     {
-      "id": "mpbzwu18-pxm48",
-      "ts": "2026-05-19T02:10:14.924Z",
+      "id": "mpdf92bo-qzx4k",
+      "ts": "2026-05-20T02:07:25.956Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 437,
+      "success": true,
+      "slug": "fbr-pos-integration-pakistan-mpdf9144",
+      "durationMs": 10149,
       "details": {
-        "runId": "run-mpbzw9e8"
+        "runId": "run-mpdf85zx",
+        "pageType": "service"
       }
     },
     {
-      "id": "mpbzwu7s-a0hea",
-      "ts": "2026-05-19T02:10:15.160Z",
+      "id": "mpdf92ky-puejv",
+      "ts": "2026-05-20T02:07:26.290Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 236,
+      "durationMs": 333,
       "details": {
-        "runId": "run-mpbzw9e8"
+        "runId": "run-mpdf85zx"
       }
     }
   ],
