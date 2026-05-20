@@ -53,8 +53,15 @@
       "submittedAt": "2026-05-15T02:57:26.053Z",
       "type": "URL_UPDATED",
       "status": "submitted"
+    },
+    {
+      "slug": "fbr-pos-integration-monthly-sales-tax-returns-pakistan",
+      "url": "https://phelixerp.online/blog/fbr-pos-integration-monthly-sales-tax-returns-pakistan",
+      "submittedAt": "2026-05-20T02:07:12.331Z",
+      "type": "URL_UPDATED",
+      "status": "submitted"
     }
   ],
-  "lastSubmittedAt": "2026-05-15T02:57:26.053Z",
-  "totalSubmitted": 2
+  "lastSubmittedAt": "2026-05-20T02:07:12.331Z",
+  "totalSubmitted": 3
 }
