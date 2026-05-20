@@ -217,12 +217,21 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-20T02:07:13.273Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-integration-monthly-sales-tax-returns-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 32918,
-      "calls": 25
+      "tokens": 33318,
+      "calls": 26
     }
   },
   "monthlyTokenBudget": 5000000,
