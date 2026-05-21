@@ -235,12 +235,21 @@
       "promptTokens": 1534,
       "completionTokens": 3724,
       "totalTokens": 5258
+    },
+    {
+      "ts": "2026-05-21T02:38:45.570Z",
+      "action": "title_optimize",
+      "slug": "retail-inventory-management-fbr-pos-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 38576,
-      "calls": 27
+      "tokens": 38976,
+      "calls": 28
     }
   },
   "monthlyTokenBudget": 5000000,
