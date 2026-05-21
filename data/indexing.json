@@ -60,8 +60,15 @@
       "submittedAt": "2026-05-20T02:07:12.331Z",
       "type": "URL_UPDATED",
       "status": "submitted"
+    },
+    {
+      "slug": "retail-inventory-management-fbr-pos-pakistan",
+      "url": "https://phelixerp.online/blog/retail-inventory-management-fbr-pos-pakistan",
+      "submittedAt": "2026-05-21T02:38:44.690Z",
+      "type": "URL_UPDATED",
+      "status": "submitted"
     }
   ],
-  "lastSubmittedAt": "2026-05-20T02:07:12.331Z",
-  "totalSubmitted": 3
+  "lastSubmittedAt": "2026-05-21T02:38:44.690Z",
+  "totalSubmitted": 4
 }
