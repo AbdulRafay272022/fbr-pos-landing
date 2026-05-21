@@ -146,8 +146,29 @@
         }
       ],
       "distributedAt": "2026-05-20T02:07:12.632Z"
+    },
+    {
+      "slug": "retail-inventory-management-fbr-pos-pakistan",
+      "title": "FBR POS System Pakistan",
+      "blogUrl": "https://phelixerp.online/blog/retail-inventory-management-fbr-pos-pakistan",
+      "hook": "FBR POS System Pakistan",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-05-21T02:38:45.010Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-05-21T02:38:45.010Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-05-21T02:38:45.010Z"
     }
   ],
-  "lastDistributedAt": "2026-05-20T02:07:12.632Z",
+  "lastDistributedAt": "2026-05-21T02:38:45.010Z",
   "totalDistributed": 0
 }
