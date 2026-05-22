@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mpevspwu-ouj5n",
-      "ts": "2026-05-21T02:38:23.022Z",
+      "id": "mpg9zwne-4cwf0",
+      "ts": "2026-05-22T02:03:39.146Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpevspwr",
+        "runId": "run-mpg9zwn9",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mpevsq4p-kvxxo",
-      "ts": "2026-05-21T02:38:23.305Z",
+      "id": "mpg9zwx3-omfwv",
+      "ts": "2026-05-22T02:03:39.495Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpevspwr",
+        "runId": "run-mpg9zwn9",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 14.0d ago",
-          "generate": "24.5h since last generation, 2665 keywords available",
-          "update": "skipped: last update 120.2h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 15.0d ago",
+          "generate": "23.4h since last generation, 2665 keywords available",
+          "update": "skipped: last update 143.6h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,67 @@
       }
     },
     {
-      "id": "mpevt6n9-r5wb7",
-      "ts": "2026-05-21T02:38:44.709Z",
+      "id": "mpga0dxd-gclx5",
+      "ts": "2026-05-22T02:04:01.537Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "retail-inventory-management-fbr-pos-pakistan",
-      "words": 1231,
+      "slug": "fbr-compliance-checklist-pakistan-businesses-2026",
+      "words": 1223,
       "source": "template",
-      "durationMs": 20025,
+      "durationMs": 20421,
       "details": {
-        "runId": "run-mpevspwr"
+        "runId": "run-mpg9zwn9"
       }
     },
     {
-      "id": "mpevt6tn-tekqn",
-      "ts": "2026-05-21T02:38:44.940Z",
+      "id": "mpga0e30-99lud",
+      "ts": "2026-05-22T02:04:01.740Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 230,
+      "durationMs": 203,
       "details": {
-        "runId": "run-mpevspwr"
+        "runId": "run-mpg9zwn9"
       }
     },
     {
-      "id": "mpevt8tw-y05ha",
-      "ts": "2026-05-21T02:38:47.540Z",
+      "id": "mpga0gnq-xoays",
+      "ts": "2026-05-22T02:04:05.078Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2600,
+      "durationMs": 3338,
       "details": {
-        "runId": "run-mpevspwr",
+        "runId": "run-mpg9zwn9",
         "optimizedCount": 1
       }
     },
     {
-      "id": "mpevt94a-hllwt",
-      "ts": "2026-05-21T02:38:47.914Z",
+      "id": "mpga0gxc-u1owk",
+      "ts": "2026-05-22T02:04:05.424Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 374,
+      "durationMs": 346,
       "details": {
-        "runId": "run-mpevspwr"
+        "runId": "run-mpg9zwn9"
       }
     },
     {
-      "id": "mpevt99n-7rt5j",
-      "ts": "2026-05-21T02:38:48.107Z",
+      "id": "mpga0h4j-knvvk",
+      "ts": "2026-05-22T02:04:05.683Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 193,
+      "durationMs": 259,
       "details": {
-        "runId": "run-mpevspwr"
+        "runId": "run-mpg9zwn9"
       }
     }
   ],
