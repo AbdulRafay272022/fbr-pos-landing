@@ -167,8 +167,29 @@
         }
       ],
       "distributedAt": "2026-05-21T02:38:45.010Z"
+    },
+    {
+      "slug": "fbr-compliance-checklist-pakistan-businesses-2026",
+      "title": "FBR Compliance Checklist",
+      "blogUrl": "https://phelixerp.online/blog/fbr-compliance-checklist-pakistan-businesses-2026",
+      "hook": "FBR Compliance Checklist",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-05-22T02:04:01.860Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-05-22T02:04:01.860Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-05-22T02:04:01.861Z"
     }
   ],
-  "lastDistributedAt": "2026-05-21T02:38:45.010Z",
+  "lastDistributedAt": "2026-05-22T02:04:01.861Z",
   "totalDistributed": 0
 }
