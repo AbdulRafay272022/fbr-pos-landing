@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "id": "mpg9zwne-4cwf0",
-      "ts": "2026-05-22T02:03:39.146Z",
+      "id": "mphrc4u5-2h0rr",
+      "ts": "2026-05-23T02:56:49.277Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpg9zwn9",
+        "runId": "run-mphrc4u1",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mpg9zwx3-omfwv",
-      "ts": "2026-05-22T02:03:39.495Z",
+      "id": "mphrc52u-7rh49",
+      "ts": "2026-05-23T02:56:49.590Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpg9zwn9",
+        "runId": "run-mphrc4u1",
         "shouldScrape": false,
         "shouldGenerate": true,
-        "shouldUpdate": false,
+        "shouldUpdate": true,
         "shouldFetchSeo": true,
         "shouldRefresh": false,
         "shouldOptimizeTitles": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 15.0d ago",
-          "generate": "23.4h since last generation, 2665 keywords available",
-          "update": "skipped: last update 143.6h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 16.0d ago",
+          "generate": "24.9h since last generation, 2665 keywords available",
+          "update": "168.5h since last update run",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,82 @@
       }
     },
     {
-      "id": "mpga0dxd-gclx5",
-      "ts": "2026-05-22T02:04:01.537Z",
+      "id": "mphrc6rq-knhnp",
+      "ts": "2026-05-23T02:56:51.782Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
-      "success": true,
-      "slug": "fbr-compliance-checklist-pakistan-businesses-2026",
-      "words": 1223,
-      "source": "template",
-      "durationMs": 20421,
+      "success": false,
+      "durationMs": 802,
       "details": {
-        "runId": "run-mpg9zwn9"
+        "runId": "run-mphrc4u1"
       }
     },
     {
-      "id": "mpga0e30-99lud",
-      "ts": "2026-05-22T02:04:01.740Z",
+      "id": "mphrc6yi-tgtdi",
+      "ts": "2026-05-23T02:56:52.026Z",
+      "site": "Phelix ERP",
+      "event": "blog_updated",
+      "level": "info",
+      "success": true,
+      "durationMs": 244,
+      "details": {
+        "runId": "run-mphrc4u1",
+        "updatedCount": 0
+      }
+    },
+    {
+      "id": "mphrc72n-vood3",
+      "ts": "2026-05-23T02:56:52.175Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 203,
+      "durationMs": 149,
       "details": {
-        "runId": "run-mpg9zwn9"
+        "runId": "run-mphrc4u1"
       }
     },
     {
-      "id": "mpga0gnq-xoays",
-      "ts": "2026-05-22T02:04:05.078Z",
+      "id": "mphrc7xm-5xjoy",
+      "ts": "2026-05-23T02:56:53.290Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 3338,
+      "durationMs": 1114,
       "details": {
-        "runId": "run-mpg9zwn9",
-        "optimizedCount": 1
+        "runId": "run-mphrc4u1",
+        "optimizedCount": 0
       }
     },
     {
-      "id": "mpga0gxc-u1owk",
-      "ts": "2026-05-22T02:04:05.424Z",
+      "id": "mphrcdnk-h6c76",
+      "ts": "2026-05-23T02:57:00.704Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 346,
+      "success": true,
+      "slug": "fbr-pos-integration-pakistan-mphrcclj",
+      "durationMs": 7414,
       "details": {
-        "runId": "run-mpg9zwn9"
+        "runId": "run-mphrc4u1",
+        "pageType": "service"
       }
     },
     {
-      "id": "mpga0h4j-knvvk",
-      "ts": "2026-05-22T02:04:05.683Z",
+      "id": "mphrchky-rxlsf",
+      "ts": "2026-05-23T02:57:05.794Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 259,
+      "success": true,
+      "slug": "fbr-pos-integration-pharmacy-karachi",
+      "durationMs": 5089,
       "details": {
-        "runId": "run-mpg9zwn9"
+        "runId": "run-mphrc4u1",
+        "city": "karachi",
+        "service": "FBR POS Integration"
       }
     }
   ],
