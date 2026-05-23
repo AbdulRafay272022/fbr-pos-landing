@@ -27,8 +27,15 @@
       "cluster": "fbr-compliance",
       "pageType": "service",
       "publishedAt": "2026-05-20T02:07:24.290Z"
+    },
+    {
+      "slug": "fbr-pos-integration-pakistan-mphrcclj",
+      "title": "FBR POS Integration Service Pakistan - Phelix ERP",
+      "cluster": "fbr-compliance",
+      "pageType": "service",
+      "publishedAt": "2026-05-23T02:56:59.261Z"
     }
   ],
-  "totalPublished": 4,
-  "lastGeneratedAt": "2026-05-20T02:07:24.388Z"
+  "totalPublished": 5,
+  "lastGeneratedAt": "2026-05-23T02:56:59.335Z"
 }
