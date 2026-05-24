@@ -1,9 +1,9 @@
 {
   "lastTopicIndex": -1,
   "agent": {
-    "isRunning": false,
-    "lockedAt": null,
-    "lockedBy": null
+    "isRunning": true,
+    "lockedAt": "2026-05-24T02:41:49.707Z",
+    "lockedBy": "run-mpj68p4c"
   },
   "stats": {
     "lastScrapeAt": "2026-05-07T02:09:21.959Z",
@@ -11,12 +11,6 @@
     "lastUpdateAt": "2026-05-23T02:56:52.026Z",
     "blogsGeneratedTotal": 12,
     "blogsUpdatedTotal": 0,
-    "keywordsUsedTotal": 0,
-    "lastTitleOptimizeAt": "2026-05-23T02:56:53.290Z",
-    "titlesOptimizedTotal": 0,
-    "lastLandingGenerateAt": "2026-05-23T02:57:00.704Z",
-    "landingsGeneratedTotal": 1,
-    "lastProgGenerateAt": "2026-05-23T02:57:05.793Z",
-    "programmaticGeneratedTotal": 1
+    "keywordsUsedTotal": 0
   }
 }
