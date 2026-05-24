@@ -39,14 +39,22 @@
       "slug": "fbr-pos-system-karachi-businesses",
       "value": 52,
       "source": "phelixerp.online"
+    },
+    {
+      "id": "eng-mpjigoq2-q07g",
+      "ts": "2026-05-24T08:23:57.482Z",
+      "type": "scroll_depth",
+      "slug": "fbr-pos-system-karachi-businesses",
+      "value": 100,
+      "source": "phelixerp.online"
     }
   ],
   "summary": {
     "fbr-pos-system-karachi-businesses": {
-      "avgScrollDepth": 75,
+      "avgScrollDepth": 81.3,
       "avgTimeOnPage": 37,
       "bounceRate": 0,
-      "totalSessions": 3
+      "totalSessions": 4
     }
   },
   "lastTrimmedAt": null
