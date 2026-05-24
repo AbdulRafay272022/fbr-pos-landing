@@ -55,8 +55,15 @@
       "service": "FBR POS Integration",
       "industry": "pharmacy",
       "publishedAt": "2026-05-23T02:57:04.468Z"
+    },
+    {
+      "slug": "fbr-pos-integration-clothing-store-karachi",
+      "city": "karachi",
+      "service": "FBR POS Integration",
+      "industry": "clothing store",
+      "publishedAt": "2026-05-24T02:42:01.602Z"
     }
   ],
-  "totalPublished": 8,
-  "lastGeneratedAt": "2026-05-23T02:57:04.468Z"
+  "totalPublished": 9,
+  "lastGeneratedAt": "2026-05-24T02:42:01.602Z"
 }
