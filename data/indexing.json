@@ -67,8 +67,15 @@
       "submittedAt": "2026-05-21T02:38:44.690Z",
       "type": "URL_UPDATED",
       "status": "submitted"
+    },
+    {
+      "slug": "multi-branch-pos-system-pakistan-fbr-compliance",
+      "url": "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-fbr-compliance",
+      "submittedAt": "2026-05-25T02:38:56.559Z",
+      "type": "URL_UPDATED",
+      "status": "submitted"
     }
   ],
-  "lastSubmittedAt": "2026-05-21T02:38:44.690Z",
-  "totalSubmitted": 4
+  "lastSubmittedAt": "2026-05-25T02:38:56.559Z",
+  "totalSubmitted": 5
 }
