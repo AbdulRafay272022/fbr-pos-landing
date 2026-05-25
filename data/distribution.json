@@ -188,8 +188,29 @@
         }
       ],
       "distributedAt": "2026-05-22T02:04:01.861Z"
+    },
+    {
+      "slug": "multi-branch-pos-system-pakistan-fbr-compliance",
+      "title": "Multi-Branch POS System Pakistan",
+      "blogUrl": "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-fbr-compliance",
+      "hook": "Multi-Branch POS System Pakistan",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-05-25T02:38:56.765Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-05-25T02:38:56.765Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-05-25T02:38:56.765Z"
     }
   ],
-  "lastDistributedAt": "2026-05-22T02:04:01.861Z",
+  "lastDistributedAt": "2026-05-25T02:38:56.765Z",
   "totalDistributed": 0
 }
