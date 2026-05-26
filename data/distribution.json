@@ -209,8 +209,29 @@
         }
       ],
       "distributedAt": "2026-05-25T02:38:56.765Z"
+    },
+    {
+      "slug": "cloud-fbr-pos-system-benefits-pakistan",
+      "title": "Cloud FBR POS Benefits",
+      "blogUrl": "https://phelixerp.online/blog/cloud-fbr-pos-system-benefits-pakistan",
+      "hook": "Cloud FBR POS Benefits",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-05-26T02:13:14.957Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-05-26T02:13:14.958Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-05-26T02:13:14.958Z"
     }
   ],
-  "lastDistributedAt": "2026-05-25T02:38:56.765Z",
+  "lastDistributedAt": "2026-05-26T02:13:14.958Z",
   "totalDistributed": 0
 }
