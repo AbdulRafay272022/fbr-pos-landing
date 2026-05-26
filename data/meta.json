@@ -1,3 +1,18 @@
 {
-  "lastTopicIndex": 9
+  "lastTopicIndex": -1,
+  "agent": {
+    "isRunning": false,
+    "lockedAt": null,
+    "lockedBy": null
+  },
+  "stats": {
+    "lastScrapeAt": "2026-05-07T02:09:21.959Z",
+    "lastGenerateAt": "2026-05-26T02:13:14.690Z",
+    "lastUpdateAt": "2026-05-23T02:56:52.026Z",
+    "blogsGeneratedTotal": 14,
+    "blogsUpdatedTotal": 0,
+    "keywordsUsedTotal": 0,
+    "lastTitleOptimizeAt": "2026-05-26T02:13:18.507Z",
+    "titlesOptimizedTotal": 1
+  }
 }

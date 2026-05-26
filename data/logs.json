@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mpklkcg4-j1w72",
-      "ts": "2026-05-25T02:38:33.220Z",
+      "id": "mpm0364h-nvt95",
+      "ts": "2026-05-26T02:12:52.289Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpklkcg1",
+        "runId": "run-mpm0364f",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mpklkcpl-4b5s2",
-      "ts": "2026-05-25T02:38:33.561Z",
+      "id": "mpm036dx-k7ecm",
+      "ts": "2026-05-26T02:12:52.630Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpklkcg1",
+        "runId": "run-mpm0364f",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 18.0d ago",
-          "generate": "72.6h since last generation, 2665 keywords available",
-          "update": "skipped: last update 47.7h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 19.0d ago",
+          "generate": "23.6h since last generation, 2665 keywords available",
+          "update": "skipped: last update 71.3h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,67 @@
       }
     },
     {
-      "id": "mpklkugz-5al5x",
-      "ts": "2026-05-25T02:38:56.579Z",
+      "id": "mpm03neq-ay6no",
+      "ts": "2026-05-26T02:13:14.690Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "multi-branch-pos-system-pakistan-fbr-compliance",
-      "words": 1223,
+      "slug": "cloud-fbr-pos-system-benefits-pakistan",
+      "words": 1226,
       "source": "template",
-      "durationMs": 21671,
+      "durationMs": 20490,
       "details": {
-        "runId": "run-mpklkcg1"
+        "runId": "run-mpm0364f"
       }
     },
     {
-      "id": "mpklkv58-ph899",
-      "ts": "2026-05-25T02:38:57.452Z",
+      "id": "mpm03o5g-58pkf",
+      "ts": "2026-05-26T02:13:15.652Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 871,
+      "durationMs": 961,
       "details": {
-        "runId": "run-mpklkcg1"
+        "runId": "run-mpm0364f"
       }
     },
     {
-      "id": "mpklkx5b-y35wr",
-      "ts": "2026-05-25T02:39:00.047Z",
+      "id": "mpm03qcr-48tq4",
+      "ts": "2026-05-26T02:13:18.507Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2595,
+      "durationMs": 2855,
       "details": {
-        "runId": "run-mpklkcg1",
+        "runId": "run-mpm0364f",
         "optimizedCount": 1
       }
     },
     {
-      "id": "mpklkxel-0rtyv",
-      "ts": "2026-05-25T02:39:00.381Z",
+      "id": "mpm03qq1-8o5cu",
+      "ts": "2026-05-26T02:13:18.985Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 334,
+      "durationMs": 478,
       "details": {
-        "runId": "run-mpklkcg1"
+        "runId": "run-mpm0364f"
       }
     },
     {
-      "id": "mpklkxkz-ghw27",
-      "ts": "2026-05-25T02:39:00.611Z",
+      "id": "mpm03qxx-n0qdv",
+      "ts": "2026-05-26T02:13:19.269Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 230,
+      "durationMs": 284,
       "details": {
-        "runId": "run-mpklkcg1"
+        "runId": "run-mpm0364f"
       }
     }
   ],
