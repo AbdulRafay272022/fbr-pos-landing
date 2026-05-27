@@ -296,12 +296,21 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-05-27T02:19:23.020Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-compliance-wholesale-distributors-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 49440,
-      "calls": 34
+      "tokens": 49840,
+      "calls": 35
     }
   },
   "monthlyTokenBudget": 5000000,
