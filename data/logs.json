@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mpm0364h-nvt95",
-      "ts": "2026-05-26T02:12:52.289Z",
+      "id": "mpnfqutv-otx4k",
+      "ts": "2026-05-27T02:18:57.811Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpm0364f",
+        "runId": "run-mpnfquts",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mpm036dx-k7ecm",
-      "ts": "2026-05-26T02:12:52.630Z",
+      "id": "mpnfqv23-idfh3",
+      "ts": "2026-05-27T02:18:58.107Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpm0364f",
+        "runId": "run-mpnfquts",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 19.0d ago",
-          "generate": "23.6h since last generation, 2665 keywords available",
-          "update": "skipped: last update 71.3h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 20.0d ago",
+          "generate": "24.1h since last generation, 2665 keywords available",
+          "update": "skipped: last update 95.4h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,70 @@
       }
     },
     {
-      "id": "mpm03neq-ay6no",
-      "ts": "2026-05-26T02:13:14.690Z",
+      "id": "mpnfrdm1-ctgrm",
+      "ts": "2026-05-27T02:19:22.153Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "cloud-fbr-pos-system-benefits-pakistan",
+      "slug": "fbr-pos-compliance-wholesale-distributors-pakistan",
       "words": 1226,
       "source": "template",
-      "durationMs": 20490,
+      "durationMs": 22427,
       "details": {
-        "runId": "run-mpm0364f"
+        "runId": "run-mpnfquts"
       }
     },
     {
-      "id": "mpm03o5g-58pkf",
-      "ts": "2026-05-26T02:13:15.652Z",
+      "id": "mpnfrdqt-ra4et",
+      "ts": "2026-05-27T02:19:22.325Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 961,
+      "durationMs": 172,
       "details": {
-        "runId": "run-mpm0364f"
+        "runId": "run-mpnfquts"
       }
     },
     {
-      "id": "mpm03qcr-48tq4",
-      "ts": "2026-05-26T02:13:18.507Z",
+      "id": "mpnfrg0y-bm9j9",
+      "ts": "2026-05-27T02:19:25.282Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2855,
+      "durationMs": 2957,
       "details": {
-        "runId": "run-mpm0364f",
+        "runId": "run-mpnfquts",
         "optimizedCount": 1
       }
     },
     {
-      "id": "mpm03qq1-8o5cu",
-      "ts": "2026-05-26T02:13:18.985Z",
+      "id": "mpnfrgda-c0n4z",
+      "ts": "2026-05-27T02:19:25.726Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 478,
+      "durationMs": 443,
       "details": {
-        "runId": "run-mpm0364f"
+        "runId": "run-mpnfquts"
       }
     },
     {
-      "id": "mpm03qxx-n0qdv",
-      "ts": "2026-05-26T02:13:19.269Z",
+      "id": "mpnfrkog-ap8zs",
+      "ts": "2026-05-27T02:19:31.312Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 284,
+      "success": true,
+      "slug": "fbr-pos-integration-grocery-store-karachi",
+      "durationMs": 5586,
       "details": {
-        "runId": "run-mpm0364f"
+        "runId": "run-mpnfquts",
+        "city": "karachi",
+        "service": "FBR POS Integration"
       }
     }
   ],
