@@ -251,8 +251,29 @@
         }
       ],
       "distributedAt": "2026-05-27T02:19:22.331Z"
+    },
+    {
+      "slug": "fbr-iris-portal-pakistan-pos-registration-guide",
+      "title": "FBR IRIS Portal Pakistan Guide",
+      "blogUrl": "https://phelixerp.online/blog/fbr-iris-portal-pakistan-pos-registration-guide",
+      "hook": "FBR IRIS Portal Pakistan Guide",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-05-28T02:23:57.066Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-05-28T02:23:57.066Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-05-28T02:23:57.066Z"
     }
   ],
-  "lastDistributedAt": "2026-05-27T02:19:22.331Z",
+  "lastDistributedAt": "2026-05-28T02:23:57.066Z",
   "totalDistributed": 0
 }
