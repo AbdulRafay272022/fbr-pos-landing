@@ -313,12 +313,21 @@
       "promptTokens": 1097,
       "completionTokens": 1787,
       "totalTokens": 2884
+    },
+    {
+      "ts": "2026-05-28T02:23:57.726Z",
+      "action": "title_optimize",
+      "slug": "fbr-iris-portal-pakistan-pos-registration-guide",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
     "2026-05": {
-      "tokens": 52724,
-      "calls": 36
+      "tokens": 53124,
+      "calls": 37
     }
   },
   "monthlyTokenBudget": 5000000,
