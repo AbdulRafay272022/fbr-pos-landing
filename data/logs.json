@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mpnfqutv-otx4k",
-      "ts": "2026-05-27T02:18:57.811Z",
+      "id": "mpovclte-ro5k5",
+      "ts": "2026-05-28T02:23:32.978Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpnfquts",
+        "runId": "run-mpovcltb",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mpnfqv23-idfh3",
-      "ts": "2026-05-27T02:18:58.107Z",
+      "id": "mpovcm21-ugtj4",
+      "ts": "2026-05-28T02:23:33.289Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpnfquts",
+        "runId": "run-mpovcltb",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 20.0d ago",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 21.0d ago",
           "generate": "24.1h since last generation, 2665 keywords available",
-          "update": "skipped: last update 95.4h ago (min 168h)",
+          "update": "skipped: last update 119.4h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,70 +48,67 @@
       }
     },
     {
-      "id": "mpnfrdm1-ctgrm",
-      "ts": "2026-05-27T02:19:22.153Z",
+      "id": "mpovd49r-8s0x6",
+      "ts": "2026-05-28T02:23:56.895Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "fbr-pos-compliance-wholesale-distributors-pakistan",
-      "words": 1226,
+      "slug": "fbr-iris-portal-pakistan-pos-registration-guide",
+      "words": 1231,
       "source": "template",
-      "durationMs": 22427,
+      "durationMs": 22289,
       "details": {
-        "runId": "run-mpnfquts"
+        "runId": "run-mpovcltb"
       }
     },
     {
-      "id": "mpnfrdqt-ra4et",
-      "ts": "2026-05-27T02:19:22.325Z",
+      "id": "mpovd4f2-283cu",
+      "ts": "2026-05-28T02:23:57.086Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 172,
+      "durationMs": 191,
       "details": {
-        "runId": "run-mpnfquts"
+        "runId": "run-mpovcltb"
       }
     },
     {
-      "id": "mpnfrg0y-bm9j9",
-      "ts": "2026-05-27T02:19:25.282Z",
+      "id": "mpovd6is-0bzy4",
+      "ts": "2026-05-28T02:23:59.812Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2957,
+      "durationMs": 2726,
       "details": {
-        "runId": "run-mpnfquts",
+        "runId": "run-mpovcltb",
         "optimizedCount": 1
       }
     },
     {
-      "id": "mpnfrgda-c0n4z",
-      "ts": "2026-05-27T02:19:25.726Z",
+      "id": "mpovd6tw-s1gdl",
+      "ts": "2026-05-28T02:24:00.212Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 443,
+      "durationMs": 400,
       "details": {
-        "runId": "run-mpnfquts"
+        "runId": "run-mpovcltb"
       }
     },
     {
-      "id": "mpnfrkog-ap8zs",
-      "ts": "2026-05-27T02:19:31.312Z",
+      "id": "mpovd6zc-5bwww",
+      "ts": "2026-05-28T02:24:00.408Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": true,
-      "slug": "fbr-pos-integration-grocery-store-karachi",
-      "durationMs": 5586,
+      "success": false,
+      "durationMs": 196,
       "details": {
-        "runId": "run-mpnfquts",
-        "city": "karachi",
-        "service": "FBR POS Integration"
+        "runId": "run-mpovcltb"
       }
     }
   ],
