@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mpovclte-ro5k5",
-      "ts": "2026-05-28T02:23:32.978Z",
+      "id": "mpqb3pne-zo7dx",
+      "ts": "2026-05-29T02:32:18.074Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpovcltb",
+        "runId": "run-mpqb3pnb",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mpovcm21-ugtj4",
-      "ts": "2026-05-28T02:23:33.289Z",
+      "id": "mpqb3px4-46v1g",
+      "ts": "2026-05-29T02:32:18.424Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpovcltb",
+        "runId": "run-mpqb3pnb",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 21.0d ago",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 22.0d ago",
           "generate": "24.1h since last generation, 2665 keywords available",
-          "update": "skipped: last update 119.4h ago (min 168h)",
+          "update": "skipped: last update 143.6h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,69 @@
       }
     },
     {
-      "id": "mpovd49r-8s0x6",
-      "ts": "2026-05-28T02:23:56.895Z",
+      "id": "mpqb3vy0-mvpa2",
+      "ts": "2026-05-29T02:32:26.232Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
-      "success": true,
-      "slug": "fbr-iris-portal-pakistan-pos-registration-guide",
-      "words": 1231,
-      "source": "template",
-      "durationMs": 22289,
+      "success": false,
+      "durationMs": 6494,
       "details": {
-        "runId": "run-mpovcltb"
+        "runId": "run-mpqb3pnb"
       }
     },
     {
-      "id": "mpovd4f2-283cu",
-      "ts": "2026-05-28T02:23:57.086Z",
+      "id": "mpqb3w1z-6skge",
+      "ts": "2026-05-29T02:32:26.375Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 191,
+      "durationMs": 143,
       "details": {
-        "runId": "run-mpovcltb"
+        "runId": "run-mpqb3pnb"
       }
     },
     {
-      "id": "mpovd6is-0bzy4",
-      "ts": "2026-05-28T02:23:59.812Z",
+      "id": "mpqb3z15-y31a9",
+      "ts": "2026-05-29T02:32:30.233Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2726,
+      "durationMs": 3858,
       "details": {
-        "runId": "run-mpovcltb",
+        "runId": "run-mpqb3pnb",
         "optimizedCount": 1
       }
     },
     {
-      "id": "mpovd6tw-s1gdl",
-      "ts": "2026-05-28T02:24:00.212Z",
+      "id": "mpqb452l-fja2u",
+      "ts": "2026-05-29T02:32:38.061Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 400,
+      "success": true,
+      "slug": "fbr-pos-integration-pakistan-mpqb4411",
+      "durationMs": 7828,
       "details": {
-        "runId": "run-mpovcltb"
+        "runId": "run-mpqb3pnb",
+        "pageType": "service"
       }
     },
     {
-      "id": "mpovd6zc-5bwww",
-      "ts": "2026-05-28T02:24:00.408Z",
+      "id": "mpqb48s1-lk9op",
+      "ts": "2026-05-29T02:32:42.865Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 196,
+      "success": true,
+      "slug": "billing-software-restaurant-karachi",
+      "durationMs": 4804,
       "details": {
-        "runId": "run-mpovcltb"
+        "runId": "run-mpqb3pnb",
+        "city": "karachi",
+        "service": "Billing Software"
       }
     }
   ],
