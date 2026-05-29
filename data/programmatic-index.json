@@ -69,8 +69,15 @@
       "service": "FBR POS Integration",
       "industry": "grocery store",
       "publishedAt": "2026-05-27T02:19:29.823Z"
+    },
+    {
+      "slug": "billing-software-restaurant-karachi",
+      "city": "karachi",
+      "service": "Billing Software",
+      "industry": "restaurant",
+      "publishedAt": "2026-05-29T02:32:41.532Z"
     }
   ],
-  "totalPublished": 10,
-  "lastGeneratedAt": "2026-05-27T02:19:29.823Z"
+  "totalPublished": 11,
+  "lastGeneratedAt": "2026-05-29T02:32:41.532Z"
 }
