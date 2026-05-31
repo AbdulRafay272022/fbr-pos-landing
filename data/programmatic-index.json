@@ -76,8 +76,15 @@
       "service": "Billing Software",
       "industry": "restaurant",
       "publishedAt": "2026-05-29T02:32:41.532Z"
+    },
+    {
+      "slug": "billing-software-retail-karachi",
+      "city": "karachi",
+      "service": "Billing Software",
+      "industry": "retail",
+      "publishedAt": "2026-05-31T02:57:50.059Z"
     }
   ],
-  "totalPublished": 11,
-  "lastGeneratedAt": "2026-05-29T02:32:41.532Z"
+  "totalPublished": 12,
+  "lastGeneratedAt": "2026-05-31T02:57:50.060Z"
 }
