@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "id": "mprr3dxv-686lv",
-      "ts": "2026-05-30T02:47:42.931Z",
+      "id": "mpt6vxct-hnt33",
+      "ts": "2026-05-31T02:57:34.877Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mprr3dxs",
+        "runId": "run-mpt6vxcq",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mprr3e6q-fqmqg",
-      "ts": "2026-05-30T02:47:43.250Z",
+      "id": "mpt6vxlb-3ocxg",
+      "ts": "2026-05-31T02:57:35.183Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mprr3dxs",
+        "runId": "run-mpt6vxcq",
         "shouldScrape": false,
         "shouldGenerate": true,
-        "shouldUpdate": false,
+        "shouldUpdate": true,
         "shouldFetchSeo": true,
         "shouldRefresh": false,
         "shouldOptimizeTitles": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 23.0d ago",
-          "generate": "48.4h since last generation, 2665 keywords available",
-          "update": "skipped: last update 167.8h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 24.0d ago",
+          "generate": "72.6h since last generation, 2665 keywords available",
+          "update": "192.0h since last update run",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,66 +48,82 @@
       }
     },
     {
-      "id": "mprr3fu6-qbqrq",
-      "ts": "2026-05-30T02:47:45.390Z",
+      "id": "mpt6vz4k-kj7di",
+      "ts": "2026-05-31T02:57:37.172Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": false,
-      "durationMs": 831,
+      "durationMs": 710,
       "details": {
-        "runId": "run-mprr3dxs"
+        "runId": "run-mpt6vxcq"
       }
     },
     {
-      "id": "mprr3fyd-fjspf",
-      "ts": "2026-05-30T02:47:45.541Z",
+      "id": "mpt6vzb6-5bqot",
+      "ts": "2026-05-31T02:57:37.410Z",
+      "site": "Phelix ERP",
+      "event": "blog_updated",
+      "level": "info",
+      "success": true,
+      "durationMs": 238,
+      "details": {
+        "runId": "run-mpt6vxcq",
+        "updatedCount": 0
+      }
+    },
+    {
+      "id": "mpt6vzfe-1ja4r",
+      "ts": "2026-05-31T02:57:37.562Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 151,
+      "durationMs": 152,
       "details": {
-        "runId": "run-mprr3dxs"
+        "runId": "run-mpt6vxcq"
       }
     },
     {
-      "id": "mprr3gx4-otf2t",
-      "ts": "2026-05-30T02:47:46.792Z",
+      "id": "mpt6w08j-011tr",
+      "ts": "2026-05-31T02:57:38.611Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1251,
+      "durationMs": 1048,
       "details": {
-        "runId": "run-mprr3dxs",
+        "runId": "run-mpt6vxcq",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mprr3mqy-j4n6h",
-      "ts": "2026-05-30T02:47:54.346Z",
+      "id": "mpt6w69c-iz77k",
+      "ts": "2026-05-31T02:57:46.416Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "slug": "fbr-pos-integration-pakistan-mprr3lpj",
-      "durationMs": 7554,
+      "slug": "fbr-pos-integration-pakistan-mpt6w597",
+      "durationMs": 7805,
       "details": {
-        "runId": "run-mprr3dxs",
+        "runId": "run-mpt6vxcq",
         "pageType": "service"
       }
     },
     {
-      "id": "mprr3mwc-c1p8f",
-      "ts": "2026-05-30T02:47:54.540Z",
+      "id": "mpt6wa0e-5a4w9",
+      "ts": "2026-05-31T02:57:51.278Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 194,
+      "success": true,
+      "slug": "billing-software-retail-karachi",
+      "durationMs": 4862,
       "details": {
-        "runId": "run-mprr3dxs"
+        "runId": "run-mpt6vxcq",
+        "city": "karachi",
+        "service": "Billing Software"
       }
     }
   ],
