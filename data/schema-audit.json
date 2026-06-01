@@ -2,7 +2,7 @@
   "checks": {
     "https://phelixerp.online": {
       "url": "https://phelixerp.online",
-      "fetchedAt": "2026-05-25T04:31:29.906Z",
+      "fetchedAt": "2026-06-01T04:18:42.376Z",
       "blocks": [
         {
           "type": "Organization",
@@ -337,7 +337,7 @@
     },
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi": {
       "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi",
-      "fetchedAt": "2026-05-25T04:31:31.863Z",
+      "fetchedAt": "2026-06-01T04:18:44.620Z",
       "blocks": [
         {
           "type": "Organization",
@@ -587,7 +587,7 @@
     },
     "https://phelixerp.online/blog/how-to-configure-fbr-penalty-in-pakistan": {
       "url": "https://phelixerp.online/blog/how-to-configure-fbr-penalty-in-pakistan",
-      "fetchedAt": "2026-05-25T04:31:31.993Z",
+      "fetchedAt": "2026-06-01T04:18:44.787Z",
       "blocks": [
         {
           "type": "Organization",
@@ -4030,7 +4030,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-system-karachi-businesses": {
       "url": "https://phelixerp.online/blog/fbr-pos-system-karachi-businesses",
-      "fetchedAt": "2026-05-25T04:31:31.249Z",
+      "fetchedAt": "2026-06-01T04:18:43.924Z",
       "blocks": [
         {
           "type": "Organization",
@@ -4280,7 +4280,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-system-restaurants-pakistan-2026": {
       "url": "https://phelixerp.online/blog/fbr-pos-system-restaurants-pakistan-2026",
-      "fetchedAt": "2026-05-25T04:31:31.400Z",
+      "fetchedAt": "2026-06-01T04:18:44.100Z",
       "blocks": [
         {
           "type": "Organization",
@@ -4530,7 +4530,7 @@
     },
     "https://phelixerp.online/blog/generate-fbr-qr-invoices-pakistan": {
       "url": "https://phelixerp.online/blog/generate-fbr-qr-invoices-pakistan",
-      "fetchedAt": "2026-05-25T04:31:31.516Z",
+      "fetchedAt": "2026-06-01T04:18:44.204Z",
       "blocks": [
         {
           "type": "Organization",
@@ -4780,7 +4780,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-system-pharmacies-pakistan-2026": {
       "url": "https://phelixerp.online/blog/fbr-pos-system-pharmacies-pakistan-2026",
-      "fetchedAt": "2026-05-25T04:31:31.668Z",
+      "fetchedAt": "2026-06-01T04:18:44.395Z",
       "blocks": [
         {
           "type": "Organization",
@@ -5030,7 +5030,7 @@
     },
     "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-lahore": {
       "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-lahore",
-      "fetchedAt": "2026-05-25T04:31:31.766Z",
+      "fetchedAt": "2026-06-01T04:18:44.509Z",
       "blocks": [
         {
           "type": "Organization",
@@ -5280,7 +5280,7 @@
     },
     "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-fbr-compliance": {
       "url": "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-fbr-compliance",
-      "fetchedAt": "2026-05-25T04:31:30.218Z",
+      "fetchedAt": "2026-06-01T04:18:43.186Z",
       "blocks": [
         {
           "type": "Organization",
@@ -5530,7 +5530,7 @@
     },
     "https://phelixerp.online/blog/fbr-compliance-checklist-pakistan-businesses-2026": {
       "url": "https://phelixerp.online/blog/fbr-compliance-checklist-pakistan-businesses-2026",
-      "fetchedAt": "2026-05-25T04:31:30.378Z",
+      "fetchedAt": "2026-06-01T04:18:43.309Z",
       "blocks": [
         {
           "type": "Organization",
@@ -5780,7 +5780,7 @@
     },
     "https://phelixerp.online/blog/retail-inventory-management-fbr-pos-pakistan": {
       "url": "https://phelixerp.online/blog/retail-inventory-management-fbr-pos-pakistan",
-      "fetchedAt": "2026-05-25T04:31:30.795Z",
+      "fetchedAt": "2026-06-01T04:18:43.540Z",
       "blocks": [
         {
           "type": "Organization",
@@ -6030,7 +6030,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-integration-monthly-sales-tax-returns-pakistan": {
       "url": "https://phelixerp.online/blog/fbr-pos-integration-monthly-sales-tax-returns-pakistan",
-      "fetchedAt": "2026-05-25T04:31:30.961Z",
+      "fetchedAt": "2026-06-01T04:18:43.709Z",
       "blocks": [
         {
           "type": "Organization",
@@ -6280,7 +6280,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-system-lahore-retailers-2026": {
       "url": "https://phelixerp.online/blog/fbr-pos-system-lahore-retailers-2026",
-      "fetchedAt": "2026-05-25T04:31:31.097Z",
+      "fetchedAt": "2026-06-01T04:18:43.845Z",
       "blocks": [
         {
           "type": "Organization",
@@ -6527,7 +6527,757 @@
         }
       ],
       "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-iris-portal-pakistan-pos-registration-guide": {
+      "url": "https://phelixerp.online/blog/fbr-iris-portal-pakistan-pos-registration-guide",
+      "fetchedAt": "2026-06-01T04:18:42.634Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 3 Benefits of FBR IRIS Portal Pakistan for Businesses",
+            "description": "Complete guide to FBR IRIS Portal Pakistan POS registration, including step-by-step implementation and real-world examples from Karachi and Lahore business",
+            "url": "https://phelixerp.online/blog/fbr-iris-portal-pakistan-pos-registration-guide",
+            "datePublished": "2026-05-28T02:23:55.295Z",
+            "dateModified": "2026-05-28T02:23:55.295Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "FBR IRIS portal Pakistan, IRIS POS registration, FBR IRIS integration guide",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-iris-portal-pakistan-pos-registration-guide"
+            },
+            "wordCount": 1574
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 3 Benefits of FBR IRIS Portal Pakistan for Businesses",
+                "item": "https://phelixerp.online/blog/fbr-iris-portal-pakistan-pos-registration-guide"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for FBR IRIS Portal Pakistan Complete Guide to POS Registration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Phelix ERP runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP stores transactions locally during outages and automatically syncs them to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP completes the full setup — IRIS registration, API integration, and staff training — within 24 hours of sign-up."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced business closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Phelix ERP officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP integrates directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming proper submission."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR IRIS Portal Pakistan Guide",
+            "description": "Complete guide to FBR IRIS Portal Pakistan POS registration, including step-by-step implementation and real-world examples from Karachi and Lahore business",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/author/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-05-28T02:23:55.295Z",
+            "dateModified": "2026-05-28T02:23:55.295Z",
+            "url": "https://phelixerp.online/blog/fbr-iris-portal-pakistan-pos-registration-guide",
+            "keywords": "FBR IRIS portal Pakistan, IRIS POS registration, FBR IRIS integration guide",
+            "image": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for FBR IRIS Portal Pakistan Complete Guide to POS Registration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Phelix ERP runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP stores transactions locally during outages and automatically syncs them to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP completes the full setup — IRIS registration, API integration, and staff training — within 24 hours of sign-up."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced business closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Phelix ERP officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP integrates directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming proper submission."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-pos-compliance-wholesale-distributors-pakistan": {
+      "url": "https://phelixerp.online/blog/fbr-pos-compliance-wholesale-distributors-pakistan",
+      "fetchedAt": "2026-06-01T04:18:42.761Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 3 Wholesale POS Pakistan Solutions",
+            "description": "Learn about FBR POS compliance for wholesale distributors in Pakistan, including integration, retailers, and penalties.",
+            "url": "https://phelixerp.online/blog/fbr-pos-compliance-wholesale-distributors-pakistan",
+            "datePublished": "2026-05-27T02:19:20.501Z",
+            "dateModified": "2026-05-27T02:19:20.501Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "wholesale POS Pakistan, FBR distributor compliance, wholesale FBR invoicing Pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-pos-compliance-wholesale-distributors-pakistan"
+            },
+            "wordCount": 1556
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 3 Wholesale POS Pakistan Solutions",
+                "item": "https://phelixerp.online/blog/fbr-pos-compliance-wholesale-distributors-pakistan"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for FBR POS Compliance for Wholesale Distributors in Pakistan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Phelix ERP runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP stores transactions locally during outages and automatically syncs them to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP completes the full setup — IRIS registration, API integration, and staff training — within 24 hours of sign-up."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced business closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Phelix ERP officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP integrates directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming proper submission."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR POS Compliance",
+            "description": "Learn about FBR POS compliance for wholesale distributors in Pakistan, including integration, retailers, and penalties.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/author/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-05-27T02:19:20.501Z",
+            "dateModified": "2026-05-27T02:19:20.501Z",
+            "url": "https://phelixerp.online/blog/fbr-pos-compliance-wholesale-distributors-pakistan",
+            "keywords": "wholesale POS Pakistan, FBR distributor compliance, wholesale FBR invoicing Pakistan",
+            "image": "https://images.pexels.com/photos/10834810/pexels-photo-10834810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for FBR POS Compliance for Wholesale Distributors in Pakistan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Phelix ERP runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP stores transactions locally during outages and automatically syncs them to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP completes the full setup — IRIS registration, API integration, and staff training — within 24 hours of sign-up."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced business closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Phelix ERP officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP integrates directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming proper submission."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/cloud-fbr-pos-system-benefits-pakistan": {
+      "url": "https://phelixerp.online/blog/cloud-fbr-pos-system-benefits-pakistan",
+      "fetchedAt": "2026-06-01T04:18:42.870Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 3 Cloud POS Pakistan Benefits",
+            "description": "Discover the benefits of a cloud-based FBR POS system for Pakistani businesses, including improved compliance and efficiency",
+            "url": "https://phelixerp.online/blog/cloud-fbr-pos-system-benefits-pakistan",
+            "datePublished": "2026-05-26T02:13:13.073Z",
+            "dateModified": "2026-05-26T02:13:13.073Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "cloud POS Pakistan, cloud based POS FBR Pakistan, online POS system Pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/cloud-fbr-pos-system-benefits-pakistan"
+            },
+            "wordCount": 1566
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 3 Cloud POS Pakistan Benefits",
+                "item": "https://phelixerp.online/blog/cloud-fbr-pos-system-benefits-pakistan"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for Cloud-Based FBR POS System Benefits for Pakistani Businesses?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Phelix ERP runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP stores transactions locally during outages and automatically syncs them to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP completes the full setup — IRIS registration, API integration, and staff training — within 24 hours of sign-up."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced business closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Phelix ERP officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP integrates directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming proper submission."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Cloud FBR POS Benefits",
+            "description": "Discover the benefits of a cloud-based FBR POS system for Pakistani businesses, including improved compliance and efficiency",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/author/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-05-26T02:13:13.073Z",
+            "dateModified": "2026-05-26T02:13:13.073Z",
+            "url": "https://phelixerp.online/blog/cloud-fbr-pos-system-benefits-pakistan",
+            "keywords": "cloud POS Pakistan, cloud based POS FBR Pakistan, online POS system Pakistan",
+            "image": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for Cloud-Based FBR POS System Benefits for Pakistani Businesses?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Phelix ERP runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP stores transactions locally during outages and automatically syncs them to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP completes the full setup — IRIS registration, API integration, and staff training — within 24 hours of sign-up."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced business closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Phelix ERP officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Phelix ERP integrates directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming proper submission."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
     }
   },
-  "lastAuditedAt": "2026-05-25T04:31:32.556Z"
+  "lastAuditedAt": "2026-06-01T04:18:44.893Z"
 }

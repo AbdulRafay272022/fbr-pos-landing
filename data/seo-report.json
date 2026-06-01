@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T04:31:15.181Z",
+  "generatedAt": "2026-06-01T04:18:27.269Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -19,22 +19,16 @@
   },
   "recommendations": [
     {
-      "priority": "high",
-      "title": "2 pages have invalid structured data",
-      "detail": "9 schema errors detected — these block rich-result eligibility.",
-      "action": "Fix structured data — see schema audit page."
-    },
-    {
       "priority": "medium",
-      "title": "Cannibalization: 14 keyword clusters",
-      "detail": "\"pos pakistan solutions\" — 2 pages compete. 2 pages have similar titles. Google will pick one and dilute authority on others.",
-      "action": "Merge into one canonical post."
+      "title": "Cannibalization: 15 keyword clusters",
+      "detail": "\"pos pakistan solutions\" — 3 pages compete. 3 pages have similar titles. Google will pick one and dilute authority on others.",
+      "action": "Differentiate intent — assign each post a unique long-tail variant."
     }
   ],
   "gsc": {
     "rows": 0,
     "days": 0,
-    "error": "OAuth2 token refresh failed: 400 {\n  \"error\": \"invalid_grant\",\n  \"error_description\": \"Token has been expired or revoked.\"\n}"
+    "error": "OAuth2 token refresh failed: 400 {\n  \"error\": \"invalid_grant\",\n  \"error_description\": \"Bad Request\"\n}"
   },
   "rankings": {
     "summary": {
@@ -60,9 +54,19 @@
         "primaryKeyword": "pos pakistan solutions",
         "pages": [
           {
+            "slug": "fbr-pos-compliance-wholesale-distributors-pakistan",
+            "title": "Top 3 Wholesale POS Pakistan Solutions",
+            "titleSim": 1,
+            "keywords": [
+              "wholesale POS Pakistan",
+              "FBR distributor compliance",
+              "wholesale FBR invoicing Pakistan"
+            ]
+          },
+          {
             "slug": "multi-branch-pos-system-pakistan-fbr-compliance",
             "title": "Top 5 Multi Branch POS Pakistan Solutions",
-            "titleSim": 1,
+            "titleSim": 0.5,
             "keywords": [
               "multi branch POS Pakistan",
               "chain store POS Pakistan",
@@ -72,11 +76,38 @@
           {
             "slug": "fbr-pos-system-restaurants-pakistan-2026",
             "title": "Top 3 Restaurant POS Pakistan Solutions",
-            "titleSim": 0.5,
+            "titleSim": 0.6,
             "keywords": [
               "restaurant POS Pakistan",
               "FBR POS restaurant",
               "food business FBR compliance Pakistan"
+            ]
+          }
+        ],
+        "recommendation": "differentiate",
+        "reason": "3 pages have similar titles. Google will pick one and dilute authority on others."
+      },
+      {
+        "primaryKeyword": "pos pakistan benefits",
+        "pages": [
+          {
+            "slug": "cloud-fbr-pos-system-benefits-pakistan",
+            "title": "Top 3 Cloud POS Pakistan Benefits",
+            "titleSim": 1,
+            "keywords": [
+              "cloud POS Pakistan",
+              "cloud based POS FBR Pakistan",
+              "online POS system Pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-pos-system-pharmacies-pakistan-2026",
+            "title": "What is Pharmacy POS Pakistan and Its Benefits?",
+            "titleSim": 0.5,
+            "keywords": [
+              "pharmacy POS Pakistan",
+              "FBR POS pharmacy Pakistan",
+              "medical store POS FBR"
             ]
           }
         ],
@@ -459,11 +490,11 @@
         "reason": "2 pages claim the same keyword \"qr invoice pakistan\". Reassign to unique long-tail variants."
       }
     ],
-    "flagged": 14
+    "flagged": 15
   },
   "cwv": {
     "summary": {
-      "totalAudited": 20,
+      "totalAudited": 23,
       "passingCwv": 0,
       "failingCwv": 0,
       "avgPerformance": null,
@@ -477,7 +508,7 @@
   },
   "schema": {
     "checked": 16,
-    "failed": 2,
+    "failed": 0,
     "issues": 9
   },
   "contentGaps": {
