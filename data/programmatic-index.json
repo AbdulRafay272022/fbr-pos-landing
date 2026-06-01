@@ -83,8 +83,15 @@
       "service": "Billing Software",
       "industry": "retail",
       "publishedAt": "2026-05-31T02:57:50.059Z"
+    },
+    {
+      "slug": "billing-software-pharmacy-karachi",
+      "city": "karachi",
+      "service": "Billing Software",
+      "industry": "pharmacy",
+      "publishedAt": "2026-06-01T02:41:22.561Z"
     }
   ],
-  "totalPublished": 12,
-  "lastGeneratedAt": "2026-05-31T02:57:50.060Z"
+  "totalPublished": 13,
+  "lastGeneratedAt": "2026-06-01T02:41:22.561Z"
 }
