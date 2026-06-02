@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mpulqh64-pqaod",
-      "ts": "2026-06-01T02:41:01.036Z",
+      "id": "mpw1o1eb-xa0kt",
+      "ts": "2026-06-02T02:54:47.315Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpulqh61",
+        "runId": "run-mpw1o1ea",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mpulqhfp-vljr4",
-      "ts": "2026-06-01T02:41:01.381Z",
+      "id": "mpw1o1nh-zdxuw",
+      "ts": "2026-06-02T02:54:47.645Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpulqh61",
+        "runId": "run-mpw1o1ea",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 25.0d ago",
-          "generate": "96.3h since last generation, 2665 keywords available",
-          "update": "skipped: last update 23.7h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 26.0d ago",
+          "generate": "120.5h since last generation, 2665 keywords available",
+          "update": "skipped: last update 48.0h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,65 @@
       }
     },
     {
-      "id": "mpulqoez-gcy6w",
-      "ts": "2026-06-01T02:41:10.427Z",
+      "id": "mpw1o96j-xo2sb",
+      "ts": "2026-06-02T02:54:57.403Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": false,
-      "durationMs": 7630,
+      "durationMs": 8382,
       "details": {
-        "runId": "run-mpulqh61"
+        "runId": "run-mpw1o1ea"
       }
     },
     {
-      "id": "mpulqojv-rd7k6",
-      "ts": "2026-06-01T02:41:10.603Z",
+      "id": "mpw1o9bt-l6ovy",
+      "ts": "2026-06-02T02:54:57.593Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 176,
+      "durationMs": 190,
       "details": {
-        "runId": "run-mpulqh61"
+        "runId": "run-mpw1o1ea"
       }
     },
     {
-      "id": "mpulqpnc-r2ju0",
-      "ts": "2026-06-01T02:41:12.024Z",
+      "id": "mpw1oa8f-irmz7",
+      "ts": "2026-06-02T02:54:58.767Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1421,
+      "durationMs": 1173,
       "details": {
-        "runId": "run-mpulqh61",
+        "runId": "run-mpw1o1ea",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mpulqv1f-via2d",
-      "ts": "2026-06-01T02:41:19.011Z",
+      "id": "mpw1of0u-xrqwv",
+      "ts": "2026-06-02T02:55:04.974Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
-      "success": true,
-      "slug": "fbr-pos-integration-pakistan-mpulqtwg",
-      "durationMs": 6987,
+      "success": false,
+      "durationMs": 6207,
       "details": {
-        "runId": "run-mpulqh61",
-        "pageType": "service"
+        "runId": "run-mpw1o1ea"
       }
     },
     {
-      "id": "mpulqyx6-pxwjm",
-      "ts": "2026-06-01T02:41:24.042Z",
+      "id": "mpw1oipy-7ngki",
+      "ts": "2026-06-02T02:55:09.766Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": true,
-      "slug": "billing-software-pharmacy-karachi",
-      "durationMs": 5031,
+      "slug": "billing-software-clothing-store-karachi",
+      "durationMs": 4792,
       "details": {
-        "runId": "run-mpulqh61",
+        "runId": "run-mpw1o1ea",
         "city": "karachi",
         "service": "Billing Software"
       }
