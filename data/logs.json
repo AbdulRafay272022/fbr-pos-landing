@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mpw1o1eb-xa0kt",
-      "ts": "2026-06-02T02:54:47.315Z",
+      "id": "mpxfgjh5-py5r6",
+      "ts": "2026-06-03T02:08:38.297Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpw1o1ea",
+        "runId": "run-mpxfgjh2",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mpw1o1nh-zdxuw",
-      "ts": "2026-06-02T02:54:47.645Z",
+      "id": "mpxfgjsk-xkp7v",
+      "ts": "2026-06-03T02:08:38.708Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpw1o1ea",
+        "runId": "run-mpxfgjh2",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 26.0d ago",
-          "generate": "120.5h since last generation, 2665 keywords available",
-          "update": "skipped: last update 48.0h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 27.0d ago",
+          "generate": "143.7h since last generation, 2665 keywords available",
+          "update": "skipped: last update 71.2h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,67 +48,66 @@
       }
     },
     {
-      "id": "mpw1o96j-xo2sb",
-      "ts": "2026-06-02T02:54:57.403Z",
+      "id": "mpxfgpvs-3s5tw",
+      "ts": "2026-06-03T02:08:46.600Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": false,
-      "durationMs": 8382,
+      "durationMs": 6215,
       "details": {
-        "runId": "run-mpw1o1ea"
+        "runId": "run-mpxfgjh2"
       }
     },
     {
-      "id": "mpw1o9bt-l6ovy",
-      "ts": "2026-06-02T02:54:57.593Z",
+      "id": "mpxfgq2b-idcae",
+      "ts": "2026-06-03T02:08:46.835Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 190,
+      "durationMs": 235,
       "details": {
-        "runId": "run-mpw1o1ea"
+        "runId": "run-mpxfgjh2"
       }
     },
     {
-      "id": "mpw1oa8f-irmz7",
-      "ts": "2026-06-02T02:54:58.767Z",
+      "id": "mpxfgr2v-hdq6t",
+      "ts": "2026-06-03T02:08:48.151Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1173,
+      "durationMs": 1316,
       "details": {
-        "runId": "run-mpw1o1ea",
+        "runId": "run-mpxfgjh2",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mpw1of0u-xrqwv",
-      "ts": "2026-06-02T02:55:04.974Z",
+      "id": "mpxfgw9j-84oos",
+      "ts": "2026-06-03T02:08:54.871Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 6207,
+      "success": true,
+      "slug": "fbr-pos-integration-pakistan-mpxfgv63",
+      "durationMs": 6720,
       "details": {
-        "runId": "run-mpw1o1ea"
+        "runId": "run-mpxfgjh2",
+        "pageType": "service"
       }
     },
     {
-      "id": "mpw1oipy-7ngki",
-      "ts": "2026-06-02T02:55:09.766Z",
+      "id": "mpxfgwg2-p2205",
+      "ts": "2026-06-03T02:08:55.106Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": true,
-      "slug": "billing-software-clothing-store-karachi",
-      "durationMs": 4792,
+      "success": false,
+      "durationMs": 235,
       "details": {
-        "runId": "run-mpw1o1ea",
-        "city": "karachi",
-        "service": "Billing Software"
+        "runId": "run-mpxfgjh2"
       }
     }
   ],
