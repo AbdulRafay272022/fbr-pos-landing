@@ -97,8 +97,15 @@
       "service": "Billing Software",
       "industry": "clothing store",
       "publishedAt": "2026-06-02T02:55:08.390Z"
+    },
+    {
+      "slug": "billing-software-grocery-store-karachi",
+      "city": "karachi",
+      "service": "Billing Software",
+      "industry": "grocery store",
+      "publishedAt": "2026-06-05T02:12:43.338Z"
     }
   ],
-  "totalPublished": 14,
-  "lastGeneratedAt": "2026-06-02T02:55:08.390Z"
+  "totalPublished": 15,
+  "lastGeneratedAt": "2026-06-05T02:12:43.338Z"
 }
