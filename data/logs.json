@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mpyw6x41-swzzz",
-      "ts": "2026-06-04T02:44:49.057Z",
+      "id": "mq0ah1mg-ho0st",
+      "ts": "2026-06-05T02:12:22.264Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpyw6x3y",
+        "runId": "run-mq0ah1md",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mpyw6xdd-6ndu9",
-      "ts": "2026-06-04T02:44:49.393Z",
+      "id": "mq0ah1w2-3l32x",
+      "ts": "2026-06-05T02:12:22.610Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mpyw6x3y",
+        "runId": "run-mq0ah1md",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 2665 unused keywords available, last scrape 28.0d ago",
-          "generate": "168.3h since last generation, 2665 keywords available",
-          "update": "skipped: last update 95.8h ago (min 168h)",
+          "scrape": "skipped: 2665 unused keywords available, last scrape 29.0d ago",
+          "generate": "191.8h since last generation, 2665 keywords available",
+          "update": "skipped: last update 119.2h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no low-performing pages with sufficient impressions",
           "optimizeTitles": "first title optimization run",
@@ -48,66 +48,67 @@
       }
     },
     {
-      "id": "mpyw73v5-q2vug",
-      "ts": "2026-06-04T02:44:57.809Z",
+      "id": "mq0ah96o-6vb1c",
+      "ts": "2026-06-05T02:12:32.064Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": false,
-      "durationMs": 7084,
+      "durationMs": 8050,
       "details": {
-        "runId": "run-mpyw6x3y"
+        "runId": "run-mq0ah1md"
       }
     },
     {
-      "id": "mpyw7421-i1i0e",
-      "ts": "2026-06-04T02:44:58.057Z",
+      "id": "mq0ah9e6-gnhcc",
+      "ts": "2026-06-05T02:12:32.334Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": false,
-      "durationMs": 248,
+      "durationMs": 269,
       "details": {
-        "runId": "run-mpyw6x3y"
+        "runId": "run-mq0ah1md"
       }
     },
     {
-      "id": "mpyw754w-r0yy7",
-      "ts": "2026-06-04T02:44:59.456Z",
+      "id": "mq0ahaf9-pnilb",
+      "ts": "2026-06-05T02:12:33.669Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1399,
+      "durationMs": 1335,
       "details": {
-        "runId": "run-mpyw6x3y",
+        "runId": "run-mq0ah1md",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mpyw7bel-4kg5n",
-      "ts": "2026-06-04T02:45:07.581Z",
+      "id": "mq0aheqt-yjpf7",
+      "ts": "2026-06-05T02:12:39.269Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
-      "success": true,
-      "slug": "fbr-pos-integration-pakistan-mpyw7a8t",
-      "durationMs": 8123,
+      "success": false,
+      "durationMs": 5600,
       "details": {
-        "runId": "run-mpyw6x3y",
-        "pageType": "service"
+        "runId": "run-mq0ah1md"
       }
     },
     {
-      "id": "mpyw7blo-nxhbi",
-      "ts": "2026-06-04T02:45:07.836Z",
+      "id": "mq0ahj08-ygkjb",
+      "ts": "2026-06-05T02:12:44.792Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 255,
+      "success": true,
+      "slug": "billing-software-grocery-store-karachi",
+      "durationMs": 5523,
       "details": {
-        "runId": "run-mpyw6x3y"
+        "runId": "run-mq0ah1md",
+        "city": "karachi",
+        "service": "Billing Software"
       }
     }
   ],
