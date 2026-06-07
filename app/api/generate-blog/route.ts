@@ -346,82 +346,128 @@ function isValidSlug(slug: string): boolean {
   return /^[a-z0-9-]+$/.test(slug) && slug.length > 5 && slug.length < 100;
 }
 
+// ─── Brief resolver — cache-first, parallel inline fallback ──────────────────
+//
+// Architecture: /api/pre-brief runs at 1 AM (Stage 1) and pre-computes the
+// SEO brief using Serper + competitor scraper + entity graph.
+// This function reads that cached brief at 2 AM (Stage 2) — a 1ms GitHub read
+// instead of a 23s serial pipeline — leaving Groq its full 55s budget.
+//
+// Fallback: if the cache is stale/missing, run SERP + entity IN PARALLEL with
+// a hard 12s cap. No competitor scraper in the fallback (no time budget for it).
+
+interface PendingBrief {
+  keyword:    string;
+  seoBrief:   string;
+  createdAt:  string;
+}
+
+async function resolveBrief(
+  topic: TopicInput,
+  token: string,
+  owner: string,
+  repo:  string
+): Promise<string> {
+  // ── 1. Cache hit: pre-brief from /api/pre-brief (1 AM) ───────────────────
+  try {
+    const cached = await readJsonFromGitHub<PendingBrief>(
+      "data/briefs/pending.json", token, owner, repo
+    );
+    if (cached?.keyword && cached.seoBrief) {
+      const ageHours    = (Date.now() - new Date(cached.createdAt).getTime()) / 3_600_000;
+      const keywordMatch = cached.keyword.toLowerCase().trim() === topic.keyword.toLowerCase().trim();
+
+      if (keywordMatch && ageHours < 6) {
+        log("info", "SEO brief: cache HIT (pre-brief)", {
+          keyword:     topic.keyword,
+          ageHours:    +ageHours.toFixed(2),
+          briefLength: cached.seoBrief.length,
+        });
+        return cached.seoBrief.slice(0, 1000);
+      }
+
+      log("info", "SEO brief: cache MISS", {
+        keyword:      topic.keyword,
+        cachedFor:    cached.keyword,
+        ageHours:     +ageHours.toFixed(2),
+        keywordMatch,
+      });
+    }
+  } catch {
+    /* non-fatal — proceed to inline fallback */
+  }
+
+  // ── 2. Cache miss: inline parallel SERP + entity (12s cap, no competitors) ─
+  if (!process.env.SERPER_API_KEY) return "";
+
+  log("info", "SEO brief: computing inline (parallel, 12s cap)");
+  const t0 = Date.now();
+
+  try {
+    const [
+      { analyzeSerpIntelligence, buildIntelligentBrief },
+      { getCountryCode },
+      { getSiteConfig: getSC },
+    ] = await Promise.all([
+      import("@/lib/agent/serpIntelligence"),
+      import("@/lib/agent/keywordDiscovery"),
+      import("@/lib/agent/siteConfig"),
+    ]);
+
+    const country = process.env.SITE_COUNTRY ?? "Pakistan";
+    const siteCfg = getSC();
+
+    // Both are fully independent — run concurrently
+    const [serpSettled, entitySettled] = await Promise.allSettled([
+      analyzeSerpIntelligence(topic.keyword, getCountryCode(country)),
+
+      (async () => {
+        const { buildEntityCoverage, buildEntityBrief } =
+          await import("@/lib/agent/entityGraph");
+        return buildEntityBrief(
+          await buildEntityCoverage(topic.keyword, siteCfg.niche, siteCfg.seedKeywords)
+        );
+      })(),
+    ]);
+
+    const analysis    = serpSettled.status   === "fulfilled" ? serpSettled.value   : null;
+    const entityBrief = entitySettled.status === "fulfilled" ? (entitySettled.value ?? "") : "";
+
+    let brief = "";
+    if (analysis) {
+      brief = buildIntelligentBrief(analysis);
+      log("info", "SEO brief: SERP inline complete", {
+        difficulty:  analysis.difficulty,
+        rankability: analysis.rankability,
+        intent:      analysis.intent,
+        elapsedMs:   Date.now() - t0,
+      });
+    }
+    if (entityBrief) brief += "\n\n" + entityBrief;
+
+    // No competitor scraper here — no time budget when running inline
+    return brief.slice(0, 1000);
+  } catch (err) {
+    log("warn", "SEO brief: inline fallback failed — proceeding without brief", {
+      error: String(err),
+    });
+    return "";
+  }
+}
+
 // ─── Groq generation ──────────────────────────────────────────────────────────
 
 async function generateWithGroq(
-  topic: TopicInput,
-  blogIndex: BlogIndex[]
+  topic:     TopicInput,
+  blogIndex: BlogIndex[],
+  seoBrief = ""        // ← passed in from resolveBrief(); no brief computation here
 ): Promise<{ blog: Partial<BlogPost>; keywords: string[] }> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error("GROQ_API_KEY not configured");
 
   const internalTopicSuggestions = topic.internalTopics.slice(0, 3).join('", "');
 
-  // ── SERP-based brief (senior-SEO mode) ────────────────────────────────────
-  // Priority 1: Serper SERP intelligence (real top-10 analysis)
-  // Priority 2: DataForSEO brief (legacy)
-  // Priority 3: keyword-only generation (no brief)
-  let seoBrief = "";
-  try {
-    if (process.env.SERPER_API_KEY) {
-      // PRIMARY: Serper-based SERP intelligence
-      const { analyzeSerpIntelligence, buildIntelligentBrief } = await import("@/lib/agent/serpIntelligence");
-      const { getCountryCode } = await import("@/lib/agent/keywordDiscovery");
-      const country = process.env.SITE_COUNTRY ?? "Pakistan";
-      const analysis = await analyzeSerpIntelligence(topic.keyword, getCountryCode(country));
-      if (analysis) {
-        seoBrief = buildIntelligentBrief(analysis);
-        // Scrape top-3 competitors for deeper content brief
-        try {
-          const { extractCompetitorProfiles, buildCompetitorBrief } = await import("@/lib/agent/competitorScraper");
-          const topUrls = analysis.competitors.slice(0, 3).map((c) => c.url).filter(Boolean);
-          if (topUrls.length > 0) {
-            const profile = await extractCompetitorProfiles(topUrls, 3);
-            const compBrief = buildCompetitorBrief(profile);
-            if (compBrief) seoBrief += "\n\n" + compBrief;
-          }
-        } catch { /* non-fatal */ }
-        // Add semantic entity coverage from Wikidata + niche dictionary
-        try {
-          const { buildEntityCoverage, buildEntityBrief } = await import("@/lib/agent/entityGraph");
-          const siteCfg = getSiteConfig();
-          const coverage = await buildEntityCoverage(topic.keyword, siteCfg.niche, siteCfg.seedKeywords);
-          const entityBrief = buildEntityBrief(coverage);
-          if (entityBrief) seoBrief += "\n\n" + entityBrief;
-        } catch { /* non-fatal */ }
-        console.log(JSON.stringify({
-          ts: new Date().toISOString(),
-          event: "serp_intelligence_brief",
-          keyword: topic.keyword,
-          difficulty: analysis.difficulty,
-          rankability: analysis.rankability,
-          intent: analysis.intent,
-          contentType: analysis.recommendedContentType,
-        }));
-      }
-    } else {
-      // FALLBACK: DataForSEO brief generator
-      const { getSeoFeatures } = await import("@/lib/agent/seo/features");
-      if (getSeoFeatures().serpAnalysis) {
-        const { generateBrief, briefToPrompt } = await import("@/lib/agent/seo/briefGenerator");
-        const briefResult = await generateBrief({
-          keyword:      topic.keyword,
-          blogIndex:    blogIndex.map((b) => ({ slug: b.slug, title: b.title })),
-          locationCode: process.env.RANK_TRACK_LOCATION ? parseInt(process.env.RANK_TRACK_LOCATION, 10) : undefined,
-          languageCode: process.env.RANK_TRACK_LANGUAGE ?? "en",
-          scrapeDepth:  parseInt(process.env.BRIEF_SCRAPE_DEPTH ?? "3", 10),
-        });
-        if (briefResult.ok) {
-          seoBrief = briefToPrompt(briefResult.brief);
-        }
-      }
-    }
-  } catch (err) {
-    // Brief generation is optional — never block content creation
-    console.warn(JSON.stringify({ ts: new Date().toISOString(), event: "brief_skipped", error: err instanceof Error ? err.message : String(err) }));
-  }
-
-  // Cap SEO brief to ~1000 chars to keep input tokens under control
+  // Cap to ~1000 chars to keep input tokens under control
   const cappedBrief = seoBrief ? seoBrief.slice(0, 1000) : undefined;
 
   const userInput = JSON.stringify({
@@ -953,6 +999,11 @@ export async function GET(req: NextRequest) {
     "data/index.json", token, owner, repo
   ) ?? [];
 
+  // ── Resolve SEO brief (cache-first from pre-brief, parallel inline fallback)
+  // This is the key to Bug 1: brief computation was blocking Groq for 23s.
+  // Now pre-brief does this at 1 AM; generate-blog just reads the cache (1s).
+  const seoBrief = await resolveBrief(selectedTopic, token, owner, repo);
+
   // ── Generate content ──────────────────────────────────────────────────────
   // Title-case helper: "best fbr pos" → "Best FBR POS"
   const ALWAYS_UPPER = new Set(["fbr","pos","erp","qr","iris","gst","strn","api","sro","pk"]);
@@ -971,8 +1022,12 @@ export async function GET(req: NextRequest) {
   let source: "groq" | "template";
 
   try {
-    log("info", "Attempting Groq generation", { keyword: selectedTopic.keyword });
-    const result  = await generateWithGroq(selectedTopic, blogIndex);
+    log("info", "Attempting Groq generation", {
+      keyword:     selectedTopic.keyword,
+      hasBrief:    seoBrief.length > 0,
+      briefSource: seoBrief.length > 0 ? "resolved" : "none",
+    });
+    const result  = await generateWithGroq(selectedTopic, blogIndex, seoBrief);
     content    = result.blog.content ?? "";
     faqs       = result.blog.faqs   ?? getTemplateFaqs(selectedTopic);
     finalSlug  = result.blog.slug   ?? selectedTopic.slug;

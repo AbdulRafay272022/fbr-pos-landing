@@ -342,7 +342,9 @@ async function callAction(
     const url = `${baseUrl}${path}`;
     const res = await fetch(url, {
       headers: { Authorization: `Bearer ${secret}` },
-      signal:  AbortSignal.timeout(55_000), // just under Vercel's 60s limit
+      // 110s: generate-blog now completes in ~40s (cache hit) or ~55s (inline fallback).
+      // The /api/agent route itself has maxDuration: 300, so it can wait this long.
+      signal:  AbortSignal.timeout(110_000),
     });
 
     const data = await res.json().catch(() => ({})) as Record<string, unknown>;

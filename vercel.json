@@ -1,5 +1,16 @@
 {
+  "functions": {
+    "app/api/pre-brief/route.ts":        { "maxDuration": 60  },
+    "app/api/generate-blog/route.ts":    { "maxDuration": 120 },
+    "app/api/agent/route.ts":            { "maxDuration": 300 },
+    "app/api/scrape-keywords/route.ts":  { "maxDuration": 120 },
+    "app/api/refresh-content/route.ts":  { "maxDuration": 120 },
+    "app/api/generate-landing/route.ts": { "maxDuration": 120 },
+    "app/api/generate-programmatic/route.ts": { "maxDuration": 120 },
+    "app/api/seo/full-audit/route.ts":   { "maxDuration": 300 }
+  },
   "crons": [
+    { "path": "/api/pre-brief",      "schedule": "0 1 * * *" },
     { "path": "/api/agent",          "schedule": "0 2 * * *" },
     { "path": "/api/seo/full-audit", "schedule": "0 4 * * 1" }
   ]
