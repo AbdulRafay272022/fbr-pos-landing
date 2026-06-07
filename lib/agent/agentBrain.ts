@@ -182,17 +182,44 @@ async function makeDecision(
   const lastProgGen      = (statsExt.lastProgGenerateAt      as string | undefined) ?? null;
 
   // ── SCRAPE decision ────────────────────────────────────────────────────────
-  const scrapeAgeOk   = daysSince(lastScrape) >= config.scrapeIntervalDays;
-  const needsKeywords = unusedCount < config.minUnusedKeywordsThreshold;
-  const neverScraped  = !lastScrape;
+  //
+  // Two independent triggers — either one fires the scrape:
+  //
+  //   Trigger A — Emergency: pool is running low
+  //     scrapeAge > scrapeIntervalDays (default 7d) AND unused < threshold (20)
+  //     Keeps the pool topped up when daily blog generation drains keywords fast.
+  //
+  //   Trigger B — Freshness: pool is stale regardless of size
+  //     scrapeAge > 30 days — FBR regulations change, seasonal search trends shift,
+  //     new product keywords emerge. A 2,665-keyword pool from 31 days ago has
+  //     zero trending keywords from last month. Refresh monthly unconditionally.
+  //
+  // Bug 7 root cause: old code used (scrapeAgeOk AND needsKeywords).
+  // With 2,665 unused keywords, needsKeywords was always false → never scraped.
+  // The 30-day freshness trigger fires regardless of pool size.
 
-  if (neverScraped || (scrapeAgeOk && needsKeywords)) {
+  const neverScraped   = !lastScrape;
+  const daysSinceScrape = daysSince(lastScrape);
+
+  // Trigger A: low pool
+  const scrapeAgeOk    = daysSinceScrape >= config.scrapeIntervalDays;
+  const needsKeywords  = unusedCount < config.minUnusedKeywordsThreshold;
+  const lowPool        = scrapeAgeOk && needsKeywords;
+
+  // Trigger B: monthly freshness (always refresh if > 30 days regardless of pool size)
+  const FRESHNESS_DAYS = 30;
+  const poolIsStale    = daysSinceScrape >= FRESHNESS_DAYS;
+
+  if (neverScraped || lowPool || poolIsStale) {
     decision.shouldScrape = true;
     decision.reasons.scrape = neverScraped
       ? "never scraped before"
-      : `${daysSince(lastScrape).toFixed(1)}d since last scrape, only ${unusedCount} unused keywords`;
+      : poolIsStale && !lowPool
+        ? `pool freshness refresh: ${daysSinceScrape.toFixed(0)}d since last scrape (>${FRESHNESS_DAYS}d threshold) — keywords may be stale`
+        : `low pool: ${unusedCount} unused keywords, ${daysSinceScrape.toFixed(1)}d since last scrape`;
   } else {
-    decision.reasons.scrape = `skipped: ${unusedCount} unused keywords available, last scrape ${daysSince(lastScrape).toFixed(1)}d ago`;
+    decision.reasons.scrape =
+      `skipped: ${unusedCount} unused keywords, last scrape ${daysSinceScrape.toFixed(1)}d ago (next forced refresh in ${(FRESHNESS_DAYS - daysSinceScrape).toFixed(0)}d)`;
   }
 
   // ── GENERATE decision ──────────────────────────────────────────────────────

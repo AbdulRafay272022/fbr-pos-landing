@@ -22,26 +22,50 @@ export function buildArticleSchema(
   siteName: string,
   authorName?: string
 ): ArticleSchema {
-  const url        = `${siteUrl.replace(/\/$/, "")}/blog/${blog.slug}`;
-  const resolvedAuthor = blog.authorName ?? authorName ?? siteName;
-  // Use @type Person when we have a real name, otherwise fall back to Organization
-  const isRealPerson = resolvedAuthor !== siteName;
-  const authorSlug  = resolvedAuthor.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+  const base            = siteUrl.replace(/\/$/, "");
+  const url             = `${base}/blog/${blog.slug}`;
+  const resolvedAuthor  = blog.authorName ?? authorName ?? siteName;
+  const isRealPerson    = resolvedAuthor !== siteName;
+  // Note: author pages live at /authors/ (plural) — matches the actual Next.js route
+  const authorSlug      = resolvedAuthor.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9-]/g, "");
+
+  // Google Article schema requires headline ≤ 110 characters.
+  // Truncate with ellipsis to avoid validation errors on long blog titles.
+  const headline = blog.title.length > 110
+    ? blog.title.slice(0, 107) + "..."
+    : blog.title;
 
   return {
     "@context":   "https://schema.org",
     "@type":      "Article",
-    headline:     blog.title,
+    headline,
     description:  blog.metaDescription,
     author: isRealPerson
-      ? { "@type": "Person",       name: resolvedAuthor, url: `${siteUrl.replace(/\/$/, "")}/author/${authorSlug}` }
+      ? {
+          "@type": "Person",
+          name:    resolvedAuthor,
+          // Fix: /authors/ (plural) — was /author/ (singular) → 404 in validator
+          url:     `${base}/authors/${authorSlug}`,
+        }
       : { "@type": "Organization", name: siteName },
     publisher:    { "@type": "Organization", name: siteName },
     datePublished: blog.publishedAt,
     dateModified:  blog.lastUpdated ?? blog.publishedAt,
     url,
     keywords:     blog.keywords.join(", "),
-    ...(blog.heroImage ? { image: blog.heroImage.url } : {}),
+    // Fix: use ImageObject (url + dimensions) instead of bare string.
+    // Google prefers ImageObject for rich result eligibility.
+    // Pexels returns 16:9 images at ~1200px wide by default.
+    ...(blog.heroImage
+      ? {
+          image: {
+            "@type":  "ImageObject",
+            url:      blog.heroImage.url,
+            width:    1200,
+            height:   675,
+          },
+        }
+      : {}),
   };
 }
 

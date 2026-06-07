@@ -386,8 +386,11 @@ export interface ArticleSchema {
   dateModified: string;
   url: string;
   keywords: string;
-  /** Hero image URL (optional) */
-  image?: string;
+  /**
+   * Hero image — Google prefers ImageObject over bare string URL.
+   * ImageObject with width/height qualifies for rich result eligibility.
+   */
+  image?: string | { "@type": "ImageObject"; url: string; width: number; height: number };
 }
 
 export interface FaqPageSchema {
