@@ -104,8 +104,15 @@
       "service": "Billing Software",
       "industry": "grocery store",
       "publishedAt": "2026-06-05T02:12:43.338Z"
+    },
+    {
+      "slug": "inventory-management-software-restaurant-karachi",
+      "city": "karachi",
+      "service": "Inventory Management Software",
+      "industry": "restaurant",
+      "publishedAt": "2026-06-07T02:08:56.338Z"
     }
   ],
-  "totalPublished": 15,
-  "lastGeneratedAt": "2026-06-05T02:12:43.338Z"
+  "totalPublished": 16,
+  "lastGeneratedAt": "2026-06-07T02:08:56.338Z"
 }
