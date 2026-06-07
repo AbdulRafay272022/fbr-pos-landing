@@ -820,10 +820,40 @@ async function selectTopic(
       log("warn", "Cluster strategy unavailable, falling back to priority order", { error: msg });
     }
 
+    // ── Priority 0: Trending topics (pre-brief cached at 1 AM) ───────────────
+    // Load data/trends/latest.json — pre-brief discovers trends every 48h and
+    // saves them. These are the hottest topics RIGHT NOW on Google Pakistan.
+    // Trending news = competitors haven't written yet = first-mover advantage.
+    let trendKeywords: Keyword[] = [];
+    try {
+      const { readJsonFromGitHub: readJson } = await import("@/lib/githubApi");
+      const trendsCache = await readJson<{ candidates: Array<{ keyword: string; source: string; score: number; freshnessHours: number; discoveredAt: string }>; expiresAt: string }>(
+        "data/trends/latest.json", token, owner, repo
+      );
+      if (trendsCache && new Date(trendsCache.expiresAt) > new Date()) {
+        trendKeywords = trendsCache.candidates.map((c, i) => ({
+          keyword:         c.keyword,
+          intent:          "informational" as const,
+          difficulty:      c.freshnessHours <= 24 ? ("low" as const) : ("medium" as const),
+          priority:        Math.max(70, 100 - i),
+          cluster:         c.source === "news" ? "trending-news" : "trending-autocomplete",
+          used:            false,
+          usedIn:          null,
+          generatedAt:     c.discoveredAt,
+          validated:       true,
+          validationBoost: c.source === "news" ? 2.0 : 1.5,
+        }));
+        log("info", "Trending candidates loaded", {
+          count:       trendKeywords.length,
+          top:         trendKeywords[0]?.keyword,
+          expiresAt:   trendsCache.expiresAt,
+        });
+      }
+    } catch { /* non-fatal — agent still works without trends */ }
+
     // ── Fix 1: GSC-first selection ─────────────────────────────────────────
     // Load seo.json and extract queries already ranking at positions 11–50.
     // These are guaranteed winnable — Google is already partially ranking us.
-    // When GSC is reconnected, these become the highest-priority candidates.
     let seoData: { pages?: Array<{ page: string; position: number; queries?: string[] }>; queries?: Array<{ query: string; impressions: number; clicks: number; ctr: number; position: number; fetchedAt: string }> } | null = null;
     try {
       const { readJsonFromGitHub: readJson } = await import("@/lib/githubApi");
@@ -901,38 +931,60 @@ async function selectTopic(
     const clusterSeen = new Map<string, number>();
     const diverseCandidates: typeof unusedKeywords = [];
 
-    // GSC-matched keywords go first (strongest opportunity signal)
-    for (const kw of gscPriorityKeywords) {
+    // Track all seen keywords to avoid duplicates across priority tiers
+    const seenKwSet = new Set<string>();
+
+    // Priority 0: Trending topics (hottest signal, freshest, first-mover wins)
+    for (const kw of trendKeywords) {
+      const norm = kw.keyword.toLowerCase().trim();
+      if (seenKwSet.has(norm)) continue;
+      seenKwSet.add(norm);
       diverseCandidates.push(kw);
       const c = kw.cluster ?? "none";
       clusterSeen.set(c, (clusterSeen.get(c) ?? 0) + 1);
     }
 
-    // Fill remaining slots with cluster-diverse picks from the unused pool
+    // Priority 1: GSC striking-distance keywords (Google already approves us)
+    for (const kw of gscPriorityKeywords) {
+      const norm = kw.keyword.toLowerCase().trim();
+      if (seenKwSet.has(norm)) continue;
+      seenKwSet.add(norm);
+      diverseCandidates.push(kw);
+      const c = kw.cluster ?? "none";
+      clusterSeen.set(c, (clusterSeen.get(c) ?? 0) + 1);
+    }
+
+    // Priority 2: Cluster-diverse picks from the keyword pool
     for (const kw of unusedKeywords) {
-      if (diverseCandidates.some((d) => d.keyword === kw.keyword)) continue;
+      const norm = kw.keyword.toLowerCase().trim();
+      if (seenKwSet.has(norm)) continue;
       const c = kw.cluster ?? "none";
       if ((clusterSeen.get(c) ?? 0) < 2) {
+        seenKwSet.add(norm);
         diverseCandidates.push(kw);
         clusterSeen.set(c, (clusterSeen.get(c) ?? 0) + 1);
         if (diverseCandidates.length >= 30) break;
       }
     }
 
-    // Put cluster-recommended keyword at the very front
+    // Put cluster-recommended keyword at the very front (after trending)
     let candidates = diverseCandidates;
     if (clusterPick) {
       const clusterKw = unusedKeywords.find(
         (k) => k.keyword.toLowerCase() === clusterPick!.keyword.toLowerCase()
       );
       if (clusterKw) {
-        candidates = [clusterKw, ...candidates.filter((c) => c.keyword !== clusterKw.keyword)];
+        // Insert after trending keywords but before GSC/pool
+        const trendCount = trendKeywords.length;
+        const rest = candidates.filter((c) => c.keyword !== clusterKw.keyword);
+        candidates = [...rest.slice(0, trendCount), clusterKw, ...rest.slice(trendCount)];
       }
     }
 
     log("info", "Candidate pool built", {
-      total:          candidates.length,
-      gscPriority:    gscPriorityKeywords.length,
+      total:               candidates.length,
+      trending:            trendKeywords.length,
+      gscPriority:         gscPriorityKeywords.length,
       clustersRepresented: clusterSeen.size,
     });
 

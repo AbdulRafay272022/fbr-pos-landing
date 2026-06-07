@@ -25,6 +25,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { readJsonFromGitHub, atomicCommit } from "@/lib/githubApi";
 import type { KeywordsData } from "@/lib/types";
+import type { TrendsCache } from "@/lib/agent/trendDiscovery";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -87,16 +88,76 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  // ── Pick next keyword (cluster-diverse, skip pre-rejected) ──────────────
-  // Mirror the same diversity logic as generate-blog's selectTopic so we brief
-  // the keyword that is most likely to be picked at 2 AM.
-  const kwData = await readJsonFromGitHub<KeywordsData>(
-    "data/keywords.json", token, owner, repo
-  );
-  // Exclude used AND already-rejected keywords
+  // ── Stage 0: Discover trends + load keyword data in parallel ────────────
+  // Trend discovery (~8s) runs at the same time as GitHub reads (~1s each).
+  // This adds zero wall-clock cost since GitHub reads dominate the first few ms.
+  const [kwData, seoData, existingTrendsCache] = await Promise.all([
+    readJsonFromGitHub<KeywordsData>("data/keywords.json", token, owner, repo),
+    readJsonFromGitHub<{ queries?: Array<{ query: string; impressions: number; position: number; fetchedAt: string; clicks: number; ctr: number }> }>("data/seo.json", token, owner, repo).catch(() => null),
+    readJsonFromGitHub<TrendsCache>("data/trends/latest.json", token, owner, repo).catch(() => null),
+  ]);
+
+  // ── Discover or reuse trend candidates ───────────────────────────────────
+  const { discoverTrends, buildTrendsCache, isCacheValid, toKeywordCandidates } =
+    await import("@/lib/agent/trendDiscovery");
+
+  let trendCandidates: ReturnType<typeof toKeywordCandidates> = [];
+  let freshTrendsCache: TrendsCache | null = null;
+
+  if (existingTrendsCache && isCacheValid(existingTrendsCache)) {
+    // Cache still valid (< 48h) — reuse it without another API call
+    trendCandidates = toKeywordCandidates(existingTrendsCache.candidates);
+    log("trends_cached", {
+      count:       existingTrendsCache.candidates.length,
+      expiresAt:   existingTrendsCache.expiresAt,
+    });
+  } else {
+    // Cache stale or missing — run fresh discovery
+    try {
+      const discovered = await discoverTrends(process.env.SERPER_API_KEY);
+      trendCandidates  = toKeywordCandidates(discovered);
+      freshTrendsCache = buildTrendsCache(discovered);
+      log("trends_discovered", {
+        count:    discovered.length,
+        news:     discovered.filter((c) => c.source === "news").length,
+        autocomplete: discovered.filter((c) => c.source === "autocomplete").length,
+        top:      discovered[0]?.keyword,
+      });
+    } catch (err) {
+      // Non-fatal — agent still works without trends
+      log("trends_failed", { error: String(err) });
+    }
+  }
+
+  // ── Build GSC striking-distance candidates ────────────────────────────────
+  // Mirror what generate-blog does: pos 11–50 queries = highest ROI
+  const gscCandidates: ReturnType<typeof toKeywordCandidates> = [];
+  if (seoData?.queries) {
+    const strikingQueries = seoData.queries
+      .filter((q) => q.position >= 11 && q.position <= 50 && q.impressions >= 3)
+      .sort((a, b) => b.impressions - a.impressions)
+      .slice(0, 10);
+
+    for (const q of strikingQueries) {
+      gscCandidates.push({
+        keyword:         q.query,
+        intent:          "informational" as const,
+        difficulty:      q.position <= 20 ? ("low" as const) : ("medium" as const),
+        priority:        Math.min(100, Math.round(q.impressions * 2 + (50 - q.position))),
+        cluster:         "gsc-discovered",
+        used:            false,
+        usedIn:          null,
+        generatedAt:     q.fetchedAt,
+        validated:       true,
+        validationBoost: 1.8,
+      });
+    }
+  }
+
+  // Exclude used AND already-rejected keywords from the keyword pool
   const unused = (kwData?.keywords ?? []).filter((k) => !k.used && !k.rejected);
 
-  if (unused.length === 0) {
+  if (unused.length === 0 && trendCandidates.length === 0 && gscCandidates.length === 0) {
     log("skipped", { reason: "No unused non-rejected keywords in pool" });
     return NextResponse.json({
       success: true,
@@ -105,10 +166,13 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  // Cluster-diverse sort: pick top-2 per cluster, same logic as generate-blog
+  // ── Build candidate list: Trending → GSC → cluster-diverse pool ───────────
+  // Trending topics get Priority 0 — freshest news wins.
+  // GSC striking-distance keywords are Priority 1 — Google-validated.
+  // Cluster-diverse keywords from the pool fill the rest.
   const clusterSeen = new Map<string, number>();
-  const sortedUnused = [...unused].sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0));
   const diversePool: typeof unused = [];
+  const sortedUnused = [...unused].sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0));
   for (const kw of sortedUnused) {
     const c = kw.cluster ?? "none";
     if ((clusterSeen.get(c) ?? 0) < 2) {
@@ -118,11 +182,34 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  // We'll try up to 3 candidates; mark impossible ones and move to the next
-  const candidates = diversePool.slice(0, 3);
+  // Merge: trending first, then GSC, then diverse pool
+  // Deduplicate by keyword string
+  const seen = new Set<string>();
+  const mergedCandidates = [...trendCandidates, ...gscCandidates, ...diversePool]
+    .filter((kw) => {
+      const norm = kw.keyword.toLowerCase().trim();
+      if (seen.has(norm)) return false;
+      seen.add(norm);
+      return true;
+    });
+
+  // We'll try up to 5 candidates; mark impossible ones and move to the next
+  const candidates = mergedCandidates.slice(0, 5);
+
+  if (candidates.length === 0) {
+    log("skipped", { reason: "No candidates after merge" });
+    return NextResponse.json({ success: true, skipped: true, reason: "No candidates" });
+  }
+
   let target = candidates[0];
 
-  log("start", { keyword: target.keyword, unusedCount: unused.length });
+  log("start", {
+    keyword:      target.keyword,
+    source:       (target as { cluster?: string }).cluster ?? "pool",
+    unusedCount:  unused.length,
+    trendCount:   trendCandidates.length,
+    gscCount:     gscCandidates.length,
+  });
 
   // ── Lazy imports ──────────────────────────────────────────────────────────
   const [
@@ -268,10 +355,23 @@ export async function GET(req: NextRequest) {
     } : {}),
   };
 
+  // ── Build commit payload: brief + trends cache (one atomic commit) ────────
+  const commitFiles: Array<{ path: string; content: string }> = [
+    { path: "data/briefs/pending.json", content: JSON.stringify(brief, null, 2) },
+  ];
+
+  // Persist fresh trends cache if we just discovered them (not read from cache)
+  if (freshTrendsCache) {
+    commitFiles.push({
+      path:    "data/trends/latest.json",
+      content: JSON.stringify(freshTrendsCache, null, 2),
+    });
+  }
+
   try {
     await atomicCommit(
-      [{ path: "data/briefs/pending.json", content: JSON.stringify(brief, null, 2) }],
-      `chore: pre-brief for "${target.keyword}"`,
+      commitFiles,
+      `chore: pre-brief for "${target.keyword}"${freshTrendsCache ? ` + ${freshTrendsCache.candidates.length} trends` : ""}`,
       token, owner, repo, branch
     );
   } catch (err) {
@@ -286,20 +386,24 @@ export async function GET(req: NextRequest) {
   const totalMs = Date.now() - startMs;
   log("complete", {
     keyword:         target.keyword,
+    source:          (target as { cluster?: string }).cluster ?? "pool",
     briefLength:     seoBrief.length,
     serpDifficulty:  analysis?.difficulty,
     serpRankability: analysis?.rankability,
+    trendCount:      freshTrendsCache?.candidates.length ?? existingTrendsCache?.candidates.length ?? 0,
     elapsedMs:       totalMs,
   });
 
   return NextResponse.json({
     success:         true,
     keyword:         target.keyword,
+    keywordSource:   (target as { cluster?: string }).cluster ?? "pool",
     briefLength:     seoBrief.length,
     serpDifficulty:  analysis?.difficulty,
     serpRankability: analysis?.rankability,
     serpIntent:      analysis?.intent,
     competitorUrls:  competitorUrls.length,
+    trendCount:      freshTrendsCache?.candidates.length ?? 0,
     elapsedMs:       totalMs,
   });
 }
