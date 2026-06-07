@@ -28,7 +28,9 @@
       "cluster": "compliance-penalties",
       "used": false,
       "usedIn": null,
-      "generatedAt": "2026-05-07T02:09:20.087Z"
+      "generatedAt": "2026-05-07T02:09:20.087Z",
+      "rejected": true,
+      "rejectedReason": "impossible SERP difficulty — government sites dominate"
     },
     {
       "keyword": "cost of fbr penalty pakistan",
@@ -38,7 +40,9 @@
       "cluster": "compliance-penalties",
       "used": false,
       "usedIn": null,
-      "generatedAt": "2026-05-07T02:09:20.087Z"
+      "generatedAt": "2026-05-07T02:09:20.087Z",
+      "rejected": true,
+      "rejectedReason": "impossible SERP difficulty — government sites dominate"
     },
     {
       "keyword": "price of fbr penalty pakistan",
