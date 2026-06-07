@@ -21,6 +21,7 @@ import { defaultCostData } from "@/lib/agent/costGuard";
 import {
   generateLandingPage,
   getNextLandingPageSpec,
+  computeCanonicalSlug,
   type LandingPageSpec,
 } from "@/lib/agent/landingGenerator";
 
@@ -95,6 +96,7 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
   let spec: LandingPageSpec | null;
 
   if (forceKw) {
+    const canonicalSlug = computeCanonicalSlug(forceKw);
     spec = {
       pageType:       (forceType ?? "service") as LandingPageSpec["pageType"],
       targetKeyword:  forceKw,
@@ -102,6 +104,7 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
       targetIndustry: forceInd  ?? undefined,
       targetService:  forceSvc  ?? undefined,
       cluster:        "fbr-compliance",
+      canonicalSlug,
     };
   } else {
     // Load blog index to enrich landing page with related blog links
@@ -149,13 +152,24 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
   const page        = genResult.page;
   const updatedCosts = genResult.costs!;
 
-  // ── Check for slug collision ──────────────────────────────────────────────────
+  // ── Guard: canonical slug must not already exist on GitHub ──────────────────
+  // If it exists, the spec was already generated (the index may be stale).
+  // Do NOT append a timestamp suffix — that was the original bug causing 13 dupes.
+  // Instead: skip cleanly. The agent will call getNextLandingPageSpec() again
+  // next run and move to the next ungenerated spec.
   const pageFilePath  = `data/landing-pages/${page.slug}.json`;
   const alreadyExists = await fileExistsOnGitHub(pageFilePath, token, owner, repo);
 
   if (alreadyExists) {
-    log("warn", "Landing page slug collision — appending timestamp suffix", { slug: page.slug });
-    page.slug = `${page.slug}-${Date.now().toString(36)}`;
+    log("warn", "Landing page already exists on GitHub — skipping (index may be stale)", {
+      slug:  page.slug,
+      fix:   "next run will pick the next ungenerated spec",
+    });
+    return NextResponse.json({
+      success: false,
+      skipped: true,
+      reason:  `Landing page "${page.slug}" already exists — moving to next spec next run`,
+    });
   }
 
   // ── Update landing index ──────────────────────────────────────────────────────

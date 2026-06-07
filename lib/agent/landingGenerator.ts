@@ -49,6 +49,28 @@ export interface LandingPageSpec {
   /** Slugs of related blog posts to link to (max 3) */
   relatedBlogSlugs?: string[];
   relatedBlogTitles?: string[];
+  /**
+   * Pre-computed canonical slug — set by getNextLandingPageSpec().
+   * When present, generateLandingPage() MUST use this slug (overrides Groq).
+   * This is the slug stored in landing-index.json and used for dedup checks.
+   */
+  canonicalSlug?: string;
+}
+
+/**
+ * Compute the stable, deterministic slug for a landing page spec.
+ * This is the single source of truth — used by both the dedup check in
+ * getNextLandingPageSpec() and the file write in generateLandingPage().
+ *
+ * Rule: derived from targetKeyword (not the LLM title, which varies each run).
+ */
+export function computeCanonicalSlug(targetKeyword: string): string {
+  return targetKeyword
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 // ─── System prompt ────────────────────────────────────────────────────────────
@@ -388,8 +410,14 @@ export async function generateLandingPage(
 
   const now = new Date().toISOString();
 
+  // ── Enforce canonical slug ──────────────────────────────────────────────
+  // Groq generates its own slug from the title it invents — this varies each
+  // run and breaks the dedup check in getNextLandingPageSpec(). Always use
+  // the pre-computed canonicalSlug from the spec if one was provided.
+  const finalSlug = spec.canonicalSlug ?? result.slug;
+
   const page: LandingPage = {
-    slug:            result.slug,
+    slug:            finalSlug,
     title:           result.title,
     metaDescription: result.metaDescription,
     keywords:        result.keywords ?? [],
@@ -480,13 +508,12 @@ export function getNextLandingPageSpec(
   const allSpecs = [...servicePages, ...industryPages, ...locationPages];
 
   for (const spec of allSpecs) {
-    const candidateSlug = spec.targetKeyword
-      .toLowerCase()
-      .replace(/[^a-z0-9\s]/g, "")
-      .replace(/\s+/g, "-");
+    // Use computeCanonicalSlug — single source of truth for all slug checks
+    const canonicalSlug = computeCanonicalSlug(spec.targetKeyword);
 
-    if (!existing.has(candidateSlug)) {
-      return spec;
+    if (!existing.has(canonicalSlug)) {
+      // Attach the canonical slug so generateLandingPage() uses it directly
+      return { ...spec, canonicalSlug };
     }
   }
 
