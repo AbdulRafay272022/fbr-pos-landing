@@ -14,8 +14,9 @@
  * Decision rules:
  *
  *   SCRAPE keywords if:
- *     - never scraped before  OR  last scrape > scrapeIntervalDays ago
- *     - AND unused keywords < minUnusedKeywordsThreshold
+ *     Trigger A (emergency): scrapeAge > scrapeIntervalDays AND unused < minThreshold
+ *     Trigger B (freshness): scrapeAge > 30 days — always refresh regardless of pool size
+ *       (FBR regulations change; seasonal keywords emerge; old pool goes stale)
  *
  *   GENERATE a blog if:
  *     - last generation > generateIntervalHours ago
@@ -44,8 +45,13 @@ const GSC_FETCH_INTERVAL_HOURS   = 24;
 const REFRESH_INTERVAL_HOURS     = 48;
 /** Run title optimisation once every 72h */
 const TITLE_OPT_INTERVAL_HOURS   = 72;
-/** Min impressions on a page before it becomes a refresh candidate */
-const MIN_IMPRESSIONS_FOR_REFRESH = 50;
+/**
+ * Min impressions on a page before it becomes a refresh candidate.
+ * Set low (5) so young sites with 10–50 total impressions still get
+ * schema re-injection, CTR optimisation, and content refreshes.
+ * Raise to 100+ once the site exceeds 500 impressions/month.
+ */
+const MIN_IMPRESSIONS_FOR_REFRESH = 5;
 
 // ── Phase 5 decision thresholds ───────────────────────────────────────────────
 /** Generate a landing page once every 48h */
@@ -164,7 +170,10 @@ async function makeDecision(
     readJsonFromGitHub<SeoData>("data/seo.json", gh.token, gh.owner, gh.repo),
   ]);
 
-  const unusedCount  = (kwData?.keywords ?? []).filter((k) => !k.used).length;
+  // Exclude both used AND rejected keywords — rejected ones can never be generated.
+  // Using !k.used alone inflates the count and causes the agent to schedule
+  // generation runs that produce nothing (all valid candidates are exhausted).
+  const unusedCount  = (kwData?.keywords ?? []).filter((k) => !k.used && !k.rejected).length;
   const lastScrape   = meta.stats.lastScrapeAt;
   const lastGenerate = meta.stats.lastGenerateAt;
   const lastUpdate   = meta.stats.lastUpdateAt;
@@ -270,23 +279,43 @@ async function makeDecision(
   }
 
   // ── REFRESH decision (Phase 3) — requires GSC data ────────────────────────
-  const refreshAgeOk      = hoursSince(lastRefresh) >= REFRESH_INTERVAL_HOURS;
-  const hasSeoData        = seoData && seoData.pages.length > 0;
+  const refreshAgeOk = hoursSince(lastRefresh) >= REFRESH_INTERVAL_HOURS;
+  const hasSeoData   = seoData && seoData.pages.length > 0;
+
+  // Which pages are eligible for a refresh run?
+  //
+  // Phase A (young site — CTR = 0, all pages on page 1):
+  //   Any page with impressions >= threshold is eligible.
+  //   This ensures schema re-injection, internal link updates, and content
+  //   freshness happen on all GSC-tracked pages even with zero clicks.
+  //   Without this: CTR=0 for all → ctr < avgCTR is always 0 < 0 = false
+  //   → refresh NEVER fires on a brand-new site. Schema errors persist forever.
+  //
+  // Phase B (mature site — CTR > 0, some pages on page 2+):
+  //   Also catch low-CTR pages (< site average) and pages at pos > 20.
+  //   These are the classic "striking distance" refresh candidates.
   const hasRefreshTargets = hasSeoData &&
     seoData!.pages.some(
-      (p) => p.impressions >= MIN_IMPRESSIONS_FOR_REFRESH &&
-             (p.ctr < seoData!.summary.avgCTR || p.position > 20)
+      (p) =>
+        p.impressions >= MIN_IMPRESSIONS_FOR_REFRESH &&
+        (
+          // Phase A: any indexed page qualifies (young site / zero clicks)
+          seoData!.summary.avgCTR === 0 ||
+          // Phase B: low CTR or low ranking (mature site)
+          p.ctr < seoData!.summary.avgCTR ||
+          p.position > 20
+        )
     );
 
   if (refreshAgeOk && hasRefreshTargets) {
     decision.shouldRefresh = true;
     decision.reasons.refresh = lastRefresh
-      ? `${hoursSince(lastRefresh).toFixed(1)}h since last refresh, low-performers detected`
-      : "first refresh run, low-performers detected";
+      ? `${hoursSince(lastRefresh).toFixed(1)}h since last refresh, eligible pages detected`
+      : "first refresh run — schema re-injection + content freshening";
   } else if (!refreshAgeOk) {
     decision.reasons.refresh = `skipped: last refresh ${hoursSince(lastRefresh).toFixed(1)}h ago (min ${REFRESH_INTERVAL_HOURS}h)`;
   } else {
-    decision.reasons.refresh = "skipped: no low-performing pages with sufficient impressions";
+    decision.reasons.refresh = "skipped: no GSC-indexed pages meet refresh threshold";
   }
 
   // ── OPTIMIZE TITLES decision (Phase 3) ────────────────────────────────────
