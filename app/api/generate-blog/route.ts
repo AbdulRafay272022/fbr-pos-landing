@@ -820,21 +820,72 @@ async function selectTopic(
       log("warn", "Cluster strategy unavailable, falling back to priority order", { error: msg });
     }
 
-    // Load GSC data once for SERP-aware validation
-    let seoData = null;
+    // ── Fix 1: GSC-first selection ─────────────────────────────────────────
+    // Load seo.json and extract queries already ranking at positions 11–50.
+    // These are guaranteed winnable — Google is already partially ranking us.
+    // When GSC is reconnected, these become the highest-priority candidates.
+    let seoData: { pages?: Array<{ page: string; position: number; queries?: string[] }>; queries?: Array<{ query: string; position: number }> } | null = null;
     try {
       const { readJsonFromGitHub: readJson } = await import("@/lib/githubApi");
       seoData = await readJson("data/seo.json", token, owner, repo);
     } catch { /* non-fatal */ }
 
-    const useSerperValidation = !!process.env.SERPER_API_KEY;
-    if (useSerperValidation) {
-      log("info", "SERP validation enabled — picking winnable keywords");
+    const unusedKeywords = keywordsData.keywords.filter((k) => !k.used && !k.rejected);
+
+    // GSC queries at pos 11–50 matched against keyword pool → guaranteed quick wins
+    const gscPriorityKeywords: typeof unusedKeywords = [];
+    if (seoData) {
+      // Root-level query array (if GSC fetch stores them there)
+      const rootQueries = (seoData.queries ?? [])
+        .filter((q) => q.position >= 11 && q.position <= 50)
+        .sort((a, b) => a.position - b.position); // closest to page 1 first
+
+      for (const q of rootQueries) {
+        const norm = q.query.toLowerCase().trim();
+        const match = unusedKeywords.find(
+          (k) => k.keyword.toLowerCase().trim() === norm ||
+                 k.keyword.toLowerCase().includes(norm) ||
+                 norm.includes(k.keyword.toLowerCase())
+        );
+        if (match && !gscPriorityKeywords.includes(match)) {
+          gscPriorityKeywords.push(match);
+        }
+      }
+
+      if (gscPriorityKeywords.length > 0) {
+        log("info", "GSC quick-win keywords found", {
+          count: gscPriorityKeywords.length,
+          top:   gscPriorityKeywords[0]?.keyword,
+        });
+      }
     }
 
-    // Try cluster-picked keyword first, then fall back to priority order
-    const unusedKeywords = keywordsData.keywords.filter((k) => !k.used);
-    let candidates = unusedKeywords.slice(0, 15);
+    // ── Fix 2: Cluster-diverse sampling ─────────────────────────────────────
+    // Old: slice(0, 15) — one cluster monopolises all slots.
+    // New: top-2 per cluster, 30 total — every cluster gets representation.
+    const clusterSeen = new Map<string, number>();
+    const diverseCandidates: typeof unusedKeywords = [];
+
+    // GSC-matched keywords go first (strongest opportunity signal)
+    for (const kw of gscPriorityKeywords) {
+      diverseCandidates.push(kw);
+      const c = kw.cluster ?? "none";
+      clusterSeen.set(c, (clusterSeen.get(c) ?? 0) + 1);
+    }
+
+    // Fill remaining slots with cluster-diverse picks from the unused pool
+    for (const kw of unusedKeywords) {
+      if (diverseCandidates.some((d) => d.keyword === kw.keyword)) continue;
+      const c = kw.cluster ?? "none";
+      if ((clusterSeen.get(c) ?? 0) < 2) {
+        diverseCandidates.push(kw);
+        clusterSeen.set(c, (clusterSeen.get(c) ?? 0) + 1);
+        if (diverseCandidates.length >= 30) break;
+      }
+    }
+
+    // Put cluster-recommended keyword at the very front
+    let candidates = diverseCandidates;
     if (clusterPick) {
       const clusterKw = unusedKeywords.find(
         (k) => k.keyword.toLowerCase() === clusterPick!.keyword.toLowerCase()
@@ -843,8 +894,28 @@ async function selectTopic(
         candidates = [clusterKw, ...candidates.filter((c) => c.keyword !== clusterKw.keyword)];
       }
     }
+
+    log("info", "Candidate pool built", {
+      total:          candidates.length,
+      gscPriority:    gscPriorityKeywords.length,
+      clustersRepresented: clusterSeen.size,
+    });
+
+    // ── Fix 3: Fast checks only — no inline SERP call per keyword ───────────
+    // SERP validation ran inside /api/pre-brief at 1 AM and stored results.
+    // Per-keyword Serper calls (12s each × 15 = 180s) caused timeouts.
+    // Now: only cheap checks — rejected flag + similarity + slug exists.
     for (const bestKw of candidates) {
-      // Step 1: Duplicate / cannibalization check (cheap, do first)
+      // Fix 4: Skip keywords pre-brief already marked impossible
+      if (bestKw.rejected) {
+        log("info", "Keyword skipped — pre-rejected", {
+          keyword: bestKw.keyword,
+          reason:  bestKw.rejectedReason ?? "impossible SERP",
+        });
+        continue;
+      }
+
+      // Similarity / cannibalization check (~1ms)
       const simResult = isSimilarToExisting(bestKw.keyword, existingTopics);
       if (simResult.isSimilar) {
         log("warn", "Keyword rejected — too similar to existing blog", {
@@ -855,6 +926,7 @@ async function selectTopic(
         continue;
       }
 
+      // Slug existence check (~200ms GitHub read)
       const kwSlug = slugifyKeyword(bestKw.keyword);
       const exists = await fileExistsOnGitHub(`data/blogs/${kwSlug}.json`, token, owner, repo);
       if (exists) {
@@ -862,55 +934,12 @@ async function selectTopic(
         continue;
       }
 
-      // Step 2: SERP-aware validation (only if Serper available)
-      if (useSerperValidation) {
-        try {
-          const { validateKeyword } = await import("@/lib/agent/keywordValidator");
-          const country = process.env.SITE_COUNTRY ?? "Pakistan";
-          const validation = await validateKeyword(
-            bestKw.keyword,
-            country,
-            seoData as Parameters<typeof validateKeyword>[2],
-            blogIdx
-          );
-
-          if (validation.verdict === "skip") {
-            log("warn", "Keyword skipped by SERP validator", {
-              keyword:    bestKw.keyword,
-              reason:     validation.reason,
-              difficulty: validation.analysis?.difficulty,
-            });
-            continue;
-          }
-
-          if (validation.verdict === "refresh") {
-            // Already ranking — refresh-content cron will handle this. Skip new post.
-            log("info", "Keyword already ranking — refresh handled separately", {
-              keyword:    bestKw.keyword,
-              currentPos: validation.analysis?.yourCurrentRanking,
-              refreshSlug: validation.refreshSlug,
-            });
-            continue;
-          }
-
-          // verdict = write
-          log("info", "Keyword passed SERP validation — WRITE", {
-            keyword:     bestKw.keyword,
-            difficulty:  validation.analysis?.difficulty,
-            rankability: validation.analysis?.rankability,
-            intent:      validation.analysis?.intent,
-            reason:      validation.reason,
-          });
-        } catch (err) {
-          log("warn", "SERP validation failed, proceeding without", { error: String(err) });
-        }
-      }
-
-      // Passed all gates — return this topic
+      // ✅ Passed — this is our keyword
       log("info", "Topic selected", {
-        keyword:    bestKw.keyword,
-        priority:   bestKw.priority,
-        cluster:    bestKw.cluster,
+        keyword:   bestKw.keyword,
+        cluster:   bestKw.cluster,
+        priority:  bestKw.priority,
+        gscBoost:  gscPriorityKeywords.includes(bestKw),
       });
       return {
         topic: {
@@ -928,7 +957,10 @@ async function selectTopic(
     }
   }
 
-  // Fall back to BLOG_TOPICS sequential rotation
+  // ── Fix 5: BLOG_TOPICS with resurrection — never throws dead ────────────────
+  // First: try each BLOG_TOPIC that hasn't been published yet.
+  // Then: if all 12 are published, resurrect the oldest as a refreshed guide
+  // (new slug + updated year) instead of dying permanently.
   log("info", "Falling back to BLOG_TOPICS");
   const meta = await readJsonFromGitHub<MetaJson>("data/meta.json", token, owner, repo);
   const startIndex = ((meta?.lastTopicIndex ?? -1) + 1) % BLOG_TOPICS.length;
@@ -951,7 +983,37 @@ async function selectTopic(
     log("info", "BLOG_TOPICS slug exists, skipping", { slug: candidate.slug });
   }
 
-  throw new Error("All topics already published");
+  // ── Resurrection: all 12 BLOG_TOPICS are published ───────────────────────
+  // Rotate daily through the list so we don't repeat the same one twice.
+  // Each resurrection creates a fresh slug so it doesn't overwrite the original.
+  log("warn", "All BLOG_TOPICS exhausted — resurrecting as refreshed guide");
+  const year           = new Date().getFullYear();
+  const dayRotation    = Math.floor(Date.now() / 86_400_000) % BLOG_TOPICS.length;
+  const base           = BLOG_TOPICS[dayRotation];
+  // Strip existing year suffix (e.g. -2026) then re-append current year
+  const baseSlug       = base.slug.replace(/-\d{4}$/, "");
+  const resurrectedSlug = `${baseSlug}-complete-guide-${year}`;
+
+  const resurrectedExists = await fileExistsOnGitHub(
+    `data/blogs/${resurrectedSlug}.json`, token, owner, repo
+  );
+
+  if (!resurrectedExists) {
+    log("info", "Resurrected topic", { slug: resurrectedSlug, base: base.slug });
+    return {
+      topic: {
+        ...base,
+        slug:    resurrectedSlug,
+        keyword: `${base.keyword} — Complete ${year} Guide`,
+      },
+      nextTopicIndex: dayRotation,
+      consumedKeyword: null,
+      keywordsData,
+    };
+  }
+
+  // Absolute last resort — should never reach here with 2665+ keywords in pool
+  throw new Error("All topics already published — keyword pool may be fully exhausted");
 }
 
 // ─── Route handler ────────────────────────────────────────────────────────────

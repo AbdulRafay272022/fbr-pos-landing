@@ -87,17 +87,17 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  // ── Pick next keyword ─────────────────────────────────────────────────────
-  // Lightweight preview: sort unused keywords by priority, take the top one.
-  // generate-blog runs its own full cluster/schedule logic — this is just an
-  // optimistic peek at what it will most likely pick next.
+  // ── Pick next keyword (cluster-diverse, skip pre-rejected) ──────────────
+  // Mirror the same diversity logic as generate-blog's selectTopic so we brief
+  // the keyword that is most likely to be picked at 2 AM.
   const kwData = await readJsonFromGitHub<KeywordsData>(
     "data/keywords.json", token, owner, repo
   );
-  const unused = (kwData?.keywords ?? []).filter((k) => !k.used);
+  // Exclude used AND already-rejected keywords
+  const unused = (kwData?.keywords ?? []).filter((k) => !k.used && !k.rejected);
 
   if (unused.length === 0) {
-    log("skipped", { reason: "No unused keywords in pool" });
+    log("skipped", { reason: "No unused non-rejected keywords in pool" });
     return NextResponse.json({
       success: true,
       skipped: true,
@@ -105,9 +105,22 @@ export async function GET(req: NextRequest) {
     });
   }
 
-  // Sort by priority descending (same preference as pickBestKeyword)
-  const sorted = [...unused].sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0));
-  const target = sorted[0];
+  // Cluster-diverse sort: pick top-2 per cluster, same logic as generate-blog
+  const clusterSeen = new Map<string, number>();
+  const sortedUnused = [...unused].sort((a, b) => (b.priority ?? 0) - (a.priority ?? 0));
+  const diversePool: typeof unused = [];
+  for (const kw of sortedUnused) {
+    const c = kw.cluster ?? "none";
+    if ((clusterSeen.get(c) ?? 0) < 2) {
+      diversePool.push(kw);
+      clusterSeen.set(c, (clusterSeen.get(c) ?? 0) + 1);
+      if (diversePool.length >= 10) break;
+    }
+  }
+
+  // We'll try up to 3 candidates; mark impossible ones and move to the next
+  const candidates = diversePool.slice(0, 3);
+  let target = candidates[0];
 
   log("start", { keyword: target.keyword, unusedCount: unused.length });
 
@@ -126,42 +139,90 @@ export async function GET(req: NextRequest) {
   const siteCfg = getSiteConfig();
 
   // ── Stage A: SERP intelligence + Entity graph — run IN PARALLEL ───────────
-  // Both are independent: entity graph uses Wikidata/niche-dict, not SERP data.
-  // Max time: ~12s (SERP is the bottleneck, entity is ~3s)
-  const [serpSettled, entitySettled] = await Promise.allSettled([
-    analyzeSerpIntelligence(target.keyword, getCountryCode(country)),
+  // Try up to 3 candidates. If top candidate is "impossible" (government sites
+  // dominate), mark it rejected in keywords.json and brief the next one instead.
+  // This self-cleans the pool so impossible keywords never clog the queue again.
 
-    (async () => {
-      try {
-        const { buildEntityCoverage, buildEntityBrief } = await import("@/lib/agent/entityGraph");
-        const coverage = await buildEntityCoverage(
-          target.keyword, siteCfg.niche, siteCfg.seedKeywords
-        );
-        return buildEntityBrief(coverage);
-      } catch {
-        return "";
-      }
-    })(),
-  ]);
-
-  const analysis    = serpSettled.status   === "fulfilled" ? serpSettled.value   : null;
-  const entityBrief = entitySettled.status === "fulfilled" ? (entitySettled.value ?? "") : "";
-
-  let seoBrief:       string   = "";
+  let analysis:    Awaited<ReturnType<typeof analyzeSerpIntelligence>> = null;
+  let entityBrief: string   = "";
+  let seoBrief:    string   = "";
   let competitorUrls: string[] = [];
+  const toMarkRejected: string[] = [];
 
-  if (analysis) {
-    seoBrief       = buildIntelligentBrief(analysis);
-    competitorUrls = analysis.competitors.slice(0, 3).map((c) => c.url).filter(Boolean);
-    log("serp_done", {
-      difficulty:  analysis.difficulty,
-      rankability: analysis.rankability,
-      intent:      analysis.intent,
-      competitors: competitorUrls.length,
-      elapsedMs:   Date.now() - startMs,
-    });
-  } else {
-    log("serp_failed", { elapsedMs: Date.now() - startMs });
+  for (const candidate of candidates) {
+    const [serpSettled, entitySettled] = await Promise.allSettled([
+      analyzeSerpIntelligence(candidate.keyword, getCountryCode(country)),
+
+      (async () => {
+        try {
+          const { buildEntityCoverage, buildEntityBrief } = await import("@/lib/agent/entityGraph");
+          const coverage = await buildEntityCoverage(
+            candidate.keyword, siteCfg.niche, siteCfg.seedKeywords
+          );
+          return buildEntityBrief(coverage);
+        } catch {
+          return "";
+        }
+      })(),
+    ]);
+
+    const candidateAnalysis = serpSettled.status === "fulfilled" ? serpSettled.value : null;
+
+    // Fix 4: Mark impossible keywords so generate-blog skips them instantly
+    if (candidateAnalysis?.rankability === "impossible") {
+      log("rejection_mark", {
+        keyword:    candidate.keyword,
+        difficulty: candidateAnalysis.difficulty,
+        reason:     "impossible — government/high-auth sites dominate SERP",
+      });
+      toMarkRejected.push(candidate.keyword);
+      // Try next candidate
+      continue;
+    }
+
+    // Found a winnable keyword — use it
+    analysis    = candidateAnalysis;
+    entityBrief = entitySettled.status === "fulfilled" ? (entitySettled.value ?? "") : "";
+    target      = candidate;
+
+    if (analysis) {
+      seoBrief       = buildIntelligentBrief(analysis);
+      competitorUrls = analysis.competitors.slice(0, 3).map((c) => c.url).filter(Boolean);
+      log("serp_done", {
+        keyword:     target.keyword,
+        difficulty:  analysis.difficulty,
+        rankability: analysis.rankability,
+        intent:      analysis.intent,
+        competitors: competitorUrls.length,
+        elapsedMs:   Date.now() - startMs,
+      });
+    } else {
+      log("serp_failed", { keyword: target.keyword, elapsedMs: Date.now() - startMs });
+    }
+    break; // Found our target
+  }
+
+  // Persist rejection marks to keywords.json (batch update)
+  if (toMarkRejected.length > 0 && kwData) {
+    try {
+      const updatedKwData: KeywordsData = {
+        ...kwData,
+        keywords: kwData.keywords.map((k) =>
+          toMarkRejected.includes(k.keyword)
+            ? { ...k, rejected: true, rejectedReason: "impossible SERP difficulty — government sites dominate" }
+            : k
+        ),
+      };
+      await atomicCommit(
+        [{ path: "data/keywords.json", content: JSON.stringify(updatedKwData, null, 2) }],
+        `chore: mark ${toMarkRejected.length} impossible keywords as rejected`,
+        token, owner, repo, branch
+      );
+      log("rejection_committed", { marked: toMarkRejected.length, keywords: toMarkRejected });
+    } catch (err) {
+      // Non-fatal — worst case these keywords get checked again next run
+      log("rejection_commit_failed", { error: String(err) });
+    }
   }
 
   // ── Stage B: Competitor scraper ───────────────────────────────────────────

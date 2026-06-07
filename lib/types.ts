@@ -53,6 +53,10 @@ export interface Keyword {
   validated?: boolean;
   /** Boost applied after validation (e.g. 1.0 = no boost, 1.5 = validated match) */
   validationBoost?: number;
+  /** Marked by pre-brief when SERP shows impossible difficulty (fbr.gov.pk dominates etc.) */
+  rejected?: boolean;
+  /** Human-readable rejection reason for debugging */
+  rejectedReason?: string;
 }
 
 export interface KeywordsData {
