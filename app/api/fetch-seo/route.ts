@@ -98,11 +98,12 @@ export async function GET(req: NextRequest) {
   };
 
   log("info", "GSC fetch successful", {
-    pages:            merged.pages.length,
-    totalImpressions: merged.summary.totalImpressions,
-    totalClicks:      merged.summary.totalClicks,
-    avgCTR:           (merged.summary.avgCTR * 100).toFixed(2) + "%",
-    avgPosition:      merged.summary.avgPosition.toFixed(1),
+    pages:             merged.pages.length,
+    strikingQueries:   merged.queries?.length ?? 0,
+    totalImpressions:  merged.summary.totalImpressions,
+    totalClicks:       merged.summary.totalClicks,
+    avgCTR:            (merged.summary.avgCTR * 100).toFixed(2) + "%",
+    avgPosition:       merged.summary.avgPosition.toFixed(1),
   });
 
   // ── Commit to GitHub ───────────────────────────────────────────────────────
@@ -114,13 +115,15 @@ export async function GET(req: NextRequest) {
     );
 
     return NextResponse.json({
-      success:          true,
-      pages:            merged.pages.length,
-      totalImpressions: merged.summary.totalImpressions,
-      avgCTR:           merged.summary.avgCTR,
-      avgPosition:      merged.summary.avgPosition,
-      topPages:         merged.topPages,
-      lastFetchedAt:    merged.lastFetchedAt,
+      success:           true,
+      pages:             merged.pages.length,
+      queries:           merged.queries?.length ?? 0,
+      totalImpressions:  merged.summary.totalImpressions,
+      avgCTR:            merged.summary.avgCTR,
+      avgPosition:       merged.summary.avgPosition,
+      topPages:          merged.topPages,
+      topQueries:        merged.topQueries ?? [],
+      lastFetchedAt:     merged.lastFetchedAt,
     });
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);

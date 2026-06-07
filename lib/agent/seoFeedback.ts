@@ -17,7 +17,7 @@
  * "Domain property" and add a TXT DNS record for the service account.
  */
 
-import type { PageMetric, SeoData } from "@/lib/types";
+import type { PageMetric, QueryMetric, SeoData } from "@/lib/types";
 
 // ─── JWT helpers (no external dependency) ────────────────────────────────────
 
@@ -151,28 +151,21 @@ interface GscResponse {
 }
 
 /**
- * Fetch the last 28 days of page-level data from GSC Search Analytics.
- * Returns raw rows keyed by full URL.
+ * Core GSC Search Analytics query helper.
+ * Fetches last 28 days of data with the given dimensions.
  */
-async function fetchGscData(
+async function fetchGscRows(
   siteUrl: string,
-  accessToken: string
+  accessToken: string,
+  dimensions: string[],
+  rowLimit = 500
 ): Promise<GscRow[]> {
   const endDate   = new Date();
   const startDate = new Date(Date.now() - 28 * 24 * 60 * 60 * 1000);
-
-  const fmt = (d: Date) => d.toISOString().split("T")[0];
+  const fmt       = (d: Date) => d.toISOString().split("T")[0];
 
   const encodedSite = encodeURIComponent(siteUrl);
   const endpoint    = `https://searchconsole.googleapis.com/webmasters/v3/sites/${encodedSite}/searchAnalytics/query`;
-
-  const body = {
-    startDate:   fmt(startDate),
-    endDate:     fmt(endDate),
-    dimensions:  ["page"],
-    rowLimit:    500,
-    startRow:    0,
-  };
 
   const res = await fetch(endpoint, {
     method:  "POST",
@@ -180,7 +173,13 @@ async function fetchGscData(
       Authorization:  `Bearer ${accessToken}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(body),
+    body: JSON.stringify({
+      startDate:  fmt(startDate),
+      endDate:    fmt(endDate),
+      dimensions,
+      rowLimit,
+      startRow:   0,
+    }),
   });
 
   if (!res.ok) {
@@ -191,6 +190,62 @@ async function fetchGscData(
   const json = await res.json() as GscResponse;
   if (json.error) throw new Error(`GSC API error: ${json.error.message}`);
   return json.rows ?? [];
+}
+
+/**
+ * Fetch the last 28 days of page-level data from GSC Search Analytics.
+ * Returns raw rows keyed by full URL.
+ */
+async function fetchGscData(
+  siteUrl: string,
+  accessToken: string
+): Promise<GscRow[]> {
+  return fetchGscRows(siteUrl, accessToken, ["page"], 500);
+}
+
+/**
+ * Fetch the last 28 days of query-level data from GSC.
+ * Returns all queries the site appeared for — we filter to positions 11–50
+ * (striking distance: Google considers us relevant but we're not on page 1 yet).
+ *
+ * These are the HIGHEST-ROI keywords to target because:
+ *   - Google already thinks the site is relevant for them
+ *   - Nobody clicks (page 2+)
+ *   - A targeted blog post can push to page 1
+ */
+async function fetchGscQueries(
+  siteUrl: string,
+  accessToken: string
+): Promise<QueryMetric[]> {
+  let rows: GscRow[];
+  try {
+    // Fetch top 1000 queries by impressions
+    rows = await fetchGscRows(siteUrl, accessToken, ["query"], 1000);
+  } catch {
+    // Non-fatal — page data is still saved even if query fetch fails
+    return [];
+  }
+
+  const fetchedAt = new Date().toISOString();
+
+  return rows
+    // Striking distance: positions 11–50 (page 2–5), at least 2 impressions
+    .filter((r) => r.position >= 11 && r.position <= 50 && r.impressions >= 2)
+    // Drop branded queries — they'll never be new keyword opportunities
+    .filter((r) => {
+      const q = r.keys[0].toLowerCase();
+      return !q.includes("phelix") && !q.includes("fbr erp");
+    })
+    .map((r) => ({
+      query:       r.keys[0],
+      impressions: r.impressions,
+      clicks:      r.clicks,
+      ctr:         r.ctr,
+      position:    r.position,
+      fetchedAt,
+    }))
+    // Highest impressions first = biggest opportunity first
+    .sort((a, b) => b.impressions - a.impressions);
 }
 
 // ─── URL → slug mapping ───────────────────────────────────────────────────────
@@ -248,9 +303,25 @@ export async function fetchSeoData(
     };
   }
 
-  let rows: GscRow[];
+  // ── Fetch page-level AND query-level data in parallel ─────────────────────
+  let pageRows: GscRow[];
+  let queries:  ReturnType<typeof fetchGscQueries> extends Promise<infer T> ? T : never;
+
   try {
-    rows = await fetchGscData(siteUrl, accessToken);
+    const [pageResult, queryResult] = await Promise.allSettled([
+      fetchGscData(siteUrl, accessToken),
+      fetchGscQueries(siteUrl, accessToken),
+    ]);
+
+    if (pageResult.status === "rejected") {
+      return {
+        success: false,
+        reason:  `GSC fetch failed: ${pageResult.reason instanceof Error ? pageResult.reason.message : String(pageResult.reason)}`,
+      };
+    }
+
+    pageRows = pageResult.value;
+    queries  = queryResult.status === "fulfilled" ? queryResult.value : [];
   } catch (err) {
     return {
       success: false,
@@ -258,7 +329,7 @@ export async function fetchSeoData(
     };
   }
 
-  if (rows.length === 0) {
+  if (pageRows.length === 0) {
     return {
       success: false,
       reason:  "GSC returned 0 rows — site may have no impressions yet",
@@ -268,7 +339,7 @@ export async function fetchSeoData(
   const fetchedAt = new Date().toISOString();
   const pages: PageMetric[] = [];
 
-  for (const row of rows) {
+  for (const row of pageRows) {
     const pageUrl = row.keys[0];
     const slug    = urlToSlug(pageUrl, siteUrl);
     if (!slug) continue; // skip homepage, sitemap, etc.
@@ -298,11 +369,17 @@ export async function fetchSeoData(
     .slice(0, 5)
     .map((p) => ({ slug: p.slug, impressions: p.impressions, ctr: p.ctr, position: p.position }));
 
+  const topQueries = queries
+    .slice(0, 20)
+    .map((q) => ({ query: q.query, impressions: q.impressions, position: Math.round(q.position * 10) / 10 }));
+
   const seoData: SeoData = {
     pages,
+    queries,           // full striking-distance query list (pos 11–50)
     lastFetchedAt: fetchedAt,
     summary:  { totalImpressions, totalClicks, avgCTR, avgPosition },
     topPages,
+    topQueries,        // top 20 for quick inspection
   };
 
   return { success: true, data: seoData };

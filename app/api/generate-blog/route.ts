@@ -824,7 +824,7 @@ async function selectTopic(
     // Load seo.json and extract queries already ranking at positions 11–50.
     // These are guaranteed winnable — Google is already partially ranking us.
     // When GSC is reconnected, these become the highest-priority candidates.
-    let seoData: { pages?: Array<{ page: string; position: number; queries?: string[] }>; queries?: Array<{ query: string; position: number }> } | null = null;
+    let seoData: { pages?: Array<{ page: string; position: number; queries?: string[] }>; queries?: Array<{ query: string; impressions: number; clicks: number; ctr: number; position: number; fetchedAt: string }> } | null = null;
     try {
       const { readJsonFromGitHub: readJson } = await import("@/lib/githubApi");
       seoData = await readJson("data/seo.json", token, owner, repo);
@@ -832,30 +832,65 @@ async function selectTopic(
 
     const unusedKeywords = keywordsData.keywords.filter((k) => !k.used && !k.rejected);
 
-    // GSC queries at pos 11–50 matched against keyword pool → guaranteed quick wins
+    // ── GSC queries at pos 11–50 → highest-priority candidates ────────────────
+    // Two tiers:
+    //   Tier A: Query already in keywords.json → matched directly (exact/partial)
+    //   Tier B: Query NOT in keywords.json → synthesize as a Keyword and inject
+    //           Google already considers us relevant for it — no keyword research needed.
     const gscPriorityKeywords: typeof unusedKeywords = [];
-    if (seoData) {
-      // Root-level query array (if GSC fetch stores them there)
-      const rootQueries = (seoData.queries ?? [])
-        .filter((q) => q.position >= 11 && q.position <= 50)
-        .sort((a, b) => a.position - b.position); // closest to page 1 first
+    if (seoData?.queries && seoData.queries.length > 0) {
+      const strikingQueries = seoData.queries
+        .filter((q) => q.position >= 11 && q.position <= 50 && q.impressions >= 3)
+        .sort((a, b) => b.impressions - a.impressions); // highest impression opportunity first
 
-      for (const q of rootQueries) {
+      const usedKeywordStrings = new Set(
+        keywordsData.keywords.filter((k) => k.used).map((k) => k.keyword.toLowerCase().trim())
+      );
+
+      for (const q of strikingQueries) {
         const norm = q.query.toLowerCase().trim();
-        const match = unusedKeywords.find(
+
+        // Skip if we already published a blog for this query
+        if (usedKeywordStrings.has(norm)) continue;
+
+        // Tier A: exact/partial match in unused keyword pool
+        const poolMatch = unusedKeywords.find(
           (k) => k.keyword.toLowerCase().trim() === norm ||
                  k.keyword.toLowerCase().includes(norm) ||
                  norm.includes(k.keyword.toLowerCase())
         );
-        if (match && !gscPriorityKeywords.includes(match)) {
-          gscPriorityKeywords.push(match);
+        if (poolMatch && !gscPriorityKeywords.includes(poolMatch)) {
+          gscPriorityKeywords.push(poolMatch);
+          continue;
         }
+
+        // Tier B: query not in keywords.json at all — synthesize from GSC data
+        // Google already ranks us for this, so it's a guaranteed winnable topic.
+        const synthesized: Keyword = {
+          keyword:      q.query,
+          intent:       "informational",
+          difficulty:   q.position <= 20 ? "low" : "medium",
+          priority:     Math.min(100, Math.round(q.impressions * 2 + (50 - q.position))),
+          cluster:      "gsc-discovered",
+          used:         false,
+          usedIn:       null,
+          generatedAt:  new Date().toISOString(),
+          validated:    true,         // GSC data = real validation
+          validationBoost: 1.8,       // strong boost — Google already approves
+        };
+        gscPriorityKeywords.push(synthesized);
       }
 
       if (gscPriorityKeywords.length > 0) {
         log("info", "GSC quick-win keywords found", {
-          count: gscPriorityKeywords.length,
-          top:   gscPriorityKeywords[0]?.keyword,
+          count:     gscPriorityKeywords.length,
+          top:       gscPriorityKeywords[0]?.keyword,
+          topImpressions: strikingQueries[0]?.impressions,
+          topPos:    strikingQueries[0]?.position?.toFixed(1),
+        });
+      } else {
+        log("info", "GSC data present but no striking-distance queries matched", {
+          totalQueries: strikingQueries.length,
         });
       }
     }

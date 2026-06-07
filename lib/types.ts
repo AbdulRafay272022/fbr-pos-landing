@@ -274,9 +274,30 @@ export interface PageMetric {
   fetchedAt: string;
 }
 
+/** A search query that Google shows the site for (from GSC query-level data) */
+export interface QueryMetric {
+  /** The raw search query, e.g. "fbr pos software lahore" */
+  query: string;
+  impressions: number;
+  clicks: number;
+  /** 0.0–1.0 */
+  ctr: number;
+  /** Average position in SERP */
+  position: number;
+  /** ISO timestamp of when this data was fetched */
+  fetchedAt: string;
+}
+
 export interface SeoData {
   /** All page metrics from latest GSC fetch */
   pages: PageMetric[];
+  /**
+   * Search queries Google shows the site for (dimensions: ["query"]).
+   * Filtered to positions 11–50 — "striking distance" keywords Google considers
+   * us relevant for but we're not yet on page 1. These are the highest-ROI
+   * keywords to target with new content.
+   */
+  queries?: QueryMetric[];
   /** ISO timestamp of last successful fetch */
   lastFetchedAt: string | null;
   /** Summary stats */
@@ -288,6 +309,8 @@ export interface SeoData {
   };
   /** Top 5 pages by impressions */
   topPages: Array<{ slug: string; impressions: number; ctr: number; position: number }>;
+  /** Top striking-distance queries (pos 11–50, sorted by impressions desc) */
+  topQueries?: Array<{ query: string; impressions: number; position: number }>;
 }
 
 // ─── Cost / token tracking ────────────────────────────────────────────────────
