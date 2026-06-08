@@ -111,8 +111,15 @@
       "service": "Inventory Management Software",
       "industry": "restaurant",
       "publishedAt": "2026-06-07T02:08:56.338Z"
+    },
+    {
+      "slug": "inventory-management-software-retail-karachi",
+      "city": "karachi",
+      "service": "Inventory Management Software",
+      "industry": "retail",
+      "publishedAt": "2026-06-08T02:30:11.231Z"
     }
   ],
-  "totalPublished": 16,
-  "lastGeneratedAt": "2026-06-07T02:08:56.338Z"
+  "totalPublished": 17,
+  "lastGeneratedAt": "2026-06-08T02:30:11.231Z"
 }
