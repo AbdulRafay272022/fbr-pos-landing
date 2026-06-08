@@ -820,6 +820,61 @@ async function selectTopic(
       log("warn", "Cluster strategy unavailable, falling back to priority order", { error: msg });
     }
 
+    // ── Priority -1: Pre-briefed keyword (highest priority) ─────────────────
+    // The /api/pre-brief cron runs at 1 AM and:
+    //   1. Discovers trending topics + picks the best keyword
+    //   2. Runs SERP intelligence + competitor scraping for that keyword
+    //   3. Saves the result to data/briefs/pending.json
+    //
+    // We MUST honour this choice as Priority -1 — it already has a full brief
+    // ready, which gives Groq the richest possible context. If we pick a
+    // DIFFERENT keyword here, the brief cache will miss and Groq gets an empty
+    // brief → generic short content → template fallback.
+    //
+    // Guard: only use the brief if it is fresh (< 6 h) AND the slug hasn't
+    // been published yet. If either check fails, fall through to Priority 0.
+    let preBriefKeyword: Keyword | null = null;
+    try {
+      const pending = await readJsonFromGitHub<{
+        keyword:    string;
+        createdAt:  string;
+        serpRankability?: string;
+      }>("data/briefs/pending.json", token, owner, repo);
+
+      if (pending?.keyword && pending.createdAt) {
+        const ageHours  = (Date.now() - new Date(pending.createdAt).getTime()) / 3_600_000;
+        const pendingSlug = slugifyKeyword(pending.keyword);
+        const alreadyPublished = await fileExistsOnGitHub(
+          `data/blogs/${pendingSlug}.json`, token, owner, repo
+        );
+
+        if (ageHours < 6 && !alreadyPublished) {
+          preBriefKeyword = {
+            keyword:         pending.keyword,
+            intent:          "informational",
+            difficulty:      pending.serpRankability === "hard" ? "high" : "low",
+            priority:        110,          // above everything else
+            cluster:         "pre-briefed",
+            used:            false,
+            usedIn:          null,
+            generatedAt:     pending.createdAt,
+            validated:       true,
+            validationBoost: 2.5,          // pre-validated by live SERP data
+          };
+          log("info", "Pre-briefed keyword selected (Priority -1)", {
+            keyword:  pending.keyword,
+            ageHours: +ageHours.toFixed(2),
+          });
+        } else {
+          log("info", "Pre-brief skipped", {
+            keyword:   pending.keyword,
+            ageHours:  +ageHours.toFixed(2),
+            published: alreadyPublished,
+          });
+        }
+      }
+    } catch { /* non-fatal — fall through to Priority 0 */ }
+
     // ── Priority 0: Trending topics (pre-brief cached at 1 AM) ───────────────
     // Load data/trends/latest.json — pre-brief discovers trends every 48h and
     // saves them. These are the hottest topics RIGHT NOW on Google Pakistan.
@@ -934,6 +989,14 @@ async function selectTopic(
     // Track all seen keywords to avoid duplicates across priority tiers
     const seenKwSet = new Set<string>();
 
+    // Priority -1: Pre-briefed keyword (1 AM pre-brief already ran SERP + wrote brief)
+    if (preBriefKeyword) {
+      const norm = preBriefKeyword.keyword.toLowerCase().trim();
+      seenKwSet.add(norm);
+      diverseCandidates.push(preBriefKeyword);
+      clusterSeen.set("pre-briefed", 1);
+    }
+
     // Priority 0: Trending topics (hottest signal, freshest, first-mover wins)
     for (const kw of trendKeywords) {
       const norm = kw.keyword.toLowerCase().trim();
@@ -983,6 +1046,7 @@ async function selectTopic(
 
     log("info", "Candidate pool built", {
       total:               candidates.length,
+      preBriefed:          preBriefKeyword ? 1 : 0,
       trending:            trendKeywords.length,
       gscPriority:         gscPriorityKeywords.length,
       clustersRepresented: clusterSeen.size,

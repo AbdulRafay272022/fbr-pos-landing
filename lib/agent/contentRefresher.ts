@@ -57,8 +57,11 @@ export function selectRefreshCandidates(
     const metric = metricMap.get(slug);
 
     if (!metric) {
-      // No GSC data at all — page not crawled yet
-      candidates.push({ slug, refreshType: "no_impressions", priority: 5 });
+      // No GSC data at all — page not indexed/crawled yet.
+      // Skipping: Groq-refreshing uncrawled pages wastes tokens and Groq capacity.
+      // These pages need indexing (sitemap ping, internal links) not content edits.
+      // The no_impressions case is handled separately by the schema-injection refresh
+      // in agentBrain, which is cheaper and doesn't need an LLM call.
       continue;
     }
 

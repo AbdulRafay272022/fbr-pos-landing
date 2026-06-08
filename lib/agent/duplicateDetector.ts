@@ -24,18 +24,29 @@ import type { SimilarityResult } from "@/lib/types";
 
 // ─── Thresholds ───────────────────────────────────────────────────────────────
 
-const JACCARD_THRESHOLD = 0.55;  // reject if token overlap > 55%
-const BIGRAM_THRESHOLD  = 0.60;  // reject if bigram overlap > 60%
+const JACCARD_THRESHOLD = 0.65;  // reject if token overlap > 65% (raised from 0.55 — niche is narrow)
+const BIGRAM_THRESHOLD  = 0.70;  // reject if bigram overlap > 70% (raised from 0.60)
 
 // ─── Stop words (ignored during tokenization) ─────────────────────────────────
+// NOTE: Include universal niche-level tokens (fbr, pos, erp) that appear in
+// virtually every keyword in this domain. Without them, "fbr pos restaurant" and
+// "fbr pos pharmacy" share {fbr, pos} and look 67% similar — blocking perfectly
+// valid new topics. Adding them here lets the UNIQUE part of each keyword drive
+// the similarity score.
 
 const STOP_WORDS = new Set([
+  // English function words
   "a", "an", "the", "and", "or", "but", "in", "on", "at", "to",
   "for", "of", "with", "by", "from", "is", "are", "was", "were",
   "be", "been", "being", "have", "has", "had", "do", "does", "did",
   "will", "would", "could", "should", "may", "might", "shall",
   "how", "what", "when", "where", "why", "which", "who",
+  // Universal niche-level tokens that appear in virtually every FBR/POS keyword.
+  // Without these, "fbr pos restaurant" and "fbr pos pharmacy" score 50% Jaccard
+  // just from the shared {fbr, pos} prefix — near the rejection threshold.
+  // "pakistan" and "guide" were already excluded; adding fbr/pos/erp for same reason.
   "pakistan", "guide", "complete",
+  "fbr", "pos", "erp",
 ]);
 
 // ─── Tokenisation ─────────────────────────────────────────────────────────────
