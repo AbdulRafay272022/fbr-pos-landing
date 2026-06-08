@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T11:17:58.947Z",
+  "generatedAt": "2026-06-08T04:31:28.390Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -20,15 +20,14 @@
   "recommendations": [
     {
       "priority": "medium",
-      "title": "Cannibalization: 15 keyword clusters",
-      "detail": "\"pos pakistan solutions\" — 3 pages compete. 3 pages have similar titles. Google will pick one and dilute authority on others.",
-      "action": "Differentiate intent — assign each post a unique long-tail variant."
+      "title": "Cannibalization: 16 keyword clusters",
+      "detail": "\"multi branch pos pakistan\" — 2 pages compete. 2 pages have similar titles. Google will pick one and dilute authority on others.",
+      "action": "Merge into one canonical post."
     }
   ],
   "gsc": {
-    "rows": 0,
-    "days": 0,
-    "error": "OAuth2 token refresh failed: 400 {\n  \"error\": \"invalid_grant\",\n  \"error_description\": \"Bad Request\"\n}"
+    "rows": 2,
+    "days": 28
   },
   "rankings": {
     "summary": {
@@ -48,8 +47,41 @@
     "newWins": 0,
     "newDrops": 0
   },
+  "opportunities": {
+    "total": 0,
+    "page2": 0,
+    "page1Bottom": 0,
+    "topPages": []
+  },
   "cannibalization": {
     "clusters": [
+      {
+        "primaryKeyword": "multi branch pos pakistan",
+        "pages": [
+          {
+            "slug": "multi-branch-pos-system-pakistan-fbr-compliance-complete-guide-2026",
+            "title": "Top Multi Branch POS Pakistan: Top Features Compared",
+            "titleSim": 1,
+            "keywords": [
+              "multi branch POS Pakistan",
+              "chain store POS Pakistan",
+              "FBR POS multiple branches"
+            ]
+          },
+          {
+            "slug": "multi-branch-pos-system-pakistan-fbr-compliance",
+            "title": "Top 5 Multi Branch POS Pakistan Solutions",
+            "titleSim": 0.5714285714285714,
+            "keywords": [
+              "multi branch POS Pakistan",
+              "chain store POS Pakistan",
+              "FBR POS multiple branches"
+            ]
+          }
+        ],
+        "recommendation": "merge",
+        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
+      },
       {
         "primaryKeyword": "pos pakistan solutions",
         "pages": [
@@ -64,16 +96,6 @@
             ]
           },
           {
-            "slug": "multi-branch-pos-system-pakistan-fbr-compliance",
-            "title": "Top 5 Multi Branch POS Pakistan Solutions",
-            "titleSim": 0.5,
-            "keywords": [
-              "multi branch POS Pakistan",
-              "chain store POS Pakistan",
-              "FBR POS multiple branches"
-            ]
-          },
-          {
             "slug": "fbr-pos-system-restaurants-pakistan-2026",
             "title": "Top 3 Restaurant POS Pakistan Solutions",
             "titleSim": 0.6,
@@ -84,8 +106,8 @@
             ]
           }
         ],
-        "recommendation": "differentiate",
-        "reason": "3 pages have similar titles. Google will pick one and dilute authority on others."
+        "recommendation": "merge",
+        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
         "primaryKeyword": "pos pakistan benefits",
@@ -174,6 +196,16 @@
         "primaryKeyword": "multi branch pos pakistan",
         "pages": [
           {
+            "slug": "multi-branch-pos-system-pakistan-fbr-compliance-complete-guide-2026",
+            "title": "Top Multi Branch POS Pakistan: Top Features Compared",
+            "titleSim": 0,
+            "keywords": [
+              "multi branch POS Pakistan",
+              "chain store POS Pakistan",
+              "FBR POS multiple branches"
+            ]
+          },
+          {
             "slug": "multi-branch-pos-system-pakistan-fbr-compliance",
             "title": "Top 5 Multi Branch POS Pakistan Solutions",
             "titleSim": 0,
@@ -195,7 +227,7 @@
           }
         ],
         "recommendation": "differentiate",
-        "reason": "2 pages claim the same keyword \"multi branch pos pakistan\". Reassign to unique long-tail variants."
+        "reason": "3 pages claim the same keyword \"multi branch pos pakistan\". Reassign to unique long-tail variants."
       },
       {
         "primaryKeyword": "fbr compliance checklist pakistan",
@@ -490,11 +522,11 @@
         "reason": "2 pages claim the same keyword \"qr invoice pakistan\". Reassign to unique long-tail variants."
       }
     ],
-    "flagged": 15
+    "flagged": 16
   },
   "cwv": {
     "summary": {
-      "totalAudited": 23,
+      "totalAudited": 24,
       "passingCwv": 0,
       "failingCwv": 0,
       "avgPerformance": null,
