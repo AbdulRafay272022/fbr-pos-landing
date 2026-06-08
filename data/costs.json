@@ -451,6 +451,15 @@
       "promptTokens": 1081,
       "completionTokens": 1639,
       "totalTokens": 2720
+    },
+    {
+      "ts": "2026-06-08T02:30:02.895Z",
+      "action": "title_optimize",
+      "slug": "multi-branch-pos-system-pakistan-fbr-compliance-complete-guide-2026",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -459,8 +468,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 31915,
-      "calls": 9
+      "tokens": 32315,
+      "calls": 10
     }
   },
   "monthlyTokenBudget": 5000000,
