@@ -477,6 +477,15 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-06-09T02:55:54.012Z",
+      "action": "generate_landing",
+      "slug": "fbr-pos-integration-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 1534,
+      "completionTokens": 2587,
+      "totalTokens": 4121
     }
   ],
   "monthly": {
@@ -485,8 +494,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 35304,
-      "calls": 12
+      "tokens": 39425,
+      "calls": 13
     }
   },
   "monthlyTokenBudget": 5000000,
