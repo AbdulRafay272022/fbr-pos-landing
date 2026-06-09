@@ -118,8 +118,15 @@
       "service": "Inventory Management Software",
       "industry": "retail",
       "publishedAt": "2026-06-08T02:30:11.231Z"
+    },
+    {
+      "slug": "inventory-management-software-pharmacy-karachi",
+      "city": "karachi",
+      "service": "Inventory Management Software",
+      "industry": "pharmacy",
+      "publishedAt": "2026-06-09T02:56:01.607Z"
     }
   ],
-  "totalPublished": 17,
-  "lastGeneratedAt": "2026-06-08T02:30:11.231Z"
+  "totalPublished": 18,
+  "lastGeneratedAt": "2026-06-09T02:56:01.607Z"
 }
