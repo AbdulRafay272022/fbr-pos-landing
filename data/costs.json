@@ -494,6 +494,15 @@
       "promptTokens": 1081,
       "completionTokens": 1749,
       "totalTokens": 2830
+    },
+    {
+      "ts": "2026-06-10T02:08:52.804Z",
+      "action": "generate_landing",
+      "slug": "fbr-cloud-pos-system",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 1384,
+      "completionTokens": 2554,
+      "totalTokens": 3938
     }
   ],
   "monthly": {
@@ -502,8 +511,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 42255,
-      "calls": 14
+      "tokens": 46193,
+      "calls": 15
     }
   },
   "monthlyTokenBudget": 5000000,

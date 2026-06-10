@@ -6,8 +6,15 @@
       "cluster": "fbr-compliance",
       "pageType": "service",
       "publishedAt": "2026-06-09T02:55:54.012Z"
+    },
+    {
+      "slug": "cloud-pos-system-pakistan",
+      "title": "Cloud POS System Pakistan - FBR Compliant Solution",
+      "cluster": "pos-systems",
+      "pageType": "service",
+      "publishedAt": "2026-06-10T02:08:52.804Z"
     }
   ],
-  "totalPublished": 1,
-  "lastGeneratedAt": "2026-06-09T02:55:54.081Z"
+  "totalPublished": 2,
+  "lastGeneratedAt": "2026-06-10T02:08:52.878Z"
 }
