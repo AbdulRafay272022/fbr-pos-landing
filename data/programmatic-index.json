@@ -125,8 +125,15 @@
       "service": "Inventory Management Software",
       "industry": "pharmacy",
       "publishedAt": "2026-06-09T02:56:01.607Z"
+    },
+    {
+      "slug": "inventory-management-software-clothing-store-karachi",
+      "city": "karachi",
+      "service": "Inventory Management Software",
+      "industry": "clothing store",
+      "publishedAt": "2026-06-10T02:09:00.058Z"
     }
   ],
-  "totalPublished": 18,
-  "lastGeneratedAt": "2026-06-09T02:56:01.607Z"
+  "totalPublished": 19,
+  "lastGeneratedAt": "2026-06-10T02:09:00.058Z"
 }
