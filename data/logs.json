@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mq61s4oa-lkc1v",
-      "ts": "2026-06-09T02:55:39.946Z",
+      "id": "mq7fjjo4-kc4up",
+      "ts": "2026-06-10T02:08:40.276Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mq61s4o7",
+        "runId": "run-mq7fjjo1",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mq61s4uk-0jo6u",
-      "ts": "2026-06-09T02:55:40.172Z",
+      "id": "mq7fjjwr-pawd5",
+      "ts": "2026-06-10T02:08:40.588Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mq61s4o7",
+        "runId": "run-mq7fjjo1",
         "shouldScrape": false,
         "shouldGenerate": false,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 0 unused keywords, last scrape 1.0d ago (next forced refresh in 29d)",
+          "scrape": "skipped: 0 unused keywords, last scrape 2.0d ago (next forced refresh in 28d)",
           "generate": "skipped: no unused keywords in pool",
-          "update": "skipped: last update 24.4h ago (min 168h)",
+          "update": "skipped: last update 47.6h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,96 +48,96 @@
       }
     },
     {
-      "id": "mq61s825-i0pf1",
-      "ts": "2026-06-09T02:55:44.333Z",
+      "id": "mq7fjn2v-ggsmz",
+      "ts": "2026-06-10T02:08:44.695Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2872,
+      "durationMs": 2745,
       "details": {
-        "runId": "run-mq61s4o7",
+        "runId": "run-mq7fjjo1",
         "pages": 6,
-        "totalImpressions": 47
+        "totalImpressions": 41
       }
     },
     {
-      "id": "mq61s8uw-j41r5",
-      "ts": "2026-06-09T02:55:45.368Z",
+      "id": "mq7fjnxa-umcok",
+      "ts": "2026-06-10T02:08:45.790Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 1035,
+      "durationMs": 1095,
       "details": {
-        "runId": "run-mq61s4o7",
+        "runId": "run-mq7fjjo1",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mq61sb19-0uedu",
-      "ts": "2026-06-09T02:55:48.189Z",
+      "id": "mq7fjoxq-mb86j",
+      "ts": "2026-06-10T02:08:47.102Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2821,
+      "durationMs": 1311,
       "details": {
-        "runId": "run-mq61s4o7",
-        "optimizedCount": 1
-      }
-    },
-    {
-      "id": "mq61sgpt-ocssv",
-      "ts": "2026-06-09T02:55:55.553Z",
-      "site": "Phelix ERP",
-      "event": "landing_generated",
-      "level": "info",
-      "success": true,
-      "slug": "fbr-pos-integration-service-pakistan",
-      "durationMs": 7364,
-      "details": {
-        "runId": "run-mq61s4o7",
-        "pageType": "service"
-      }
-    },
-    {
-      "id": "mq61sgxl-taf5d",
-      "ts": "2026-06-09T02:55:55.833Z",
-      "site": "Phelix ERP",
-      "event": "conversion_optimized",
-      "level": "info",
-      "success": true,
-      "durationMs": 280,
-      "details": {
-        "runId": "run-mq61s4o7",
+        "runId": "run-mq7fjjo1",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mq61si6j-7pkz7",
-      "ts": "2026-06-09T02:55:57.451Z",
+      "id": "mq7fjufx-ubx80",
+      "ts": "2026-06-10T02:08:54.237Z",
+      "site": "Phelix ERP",
+      "event": "landing_generated",
+      "level": "info",
+      "success": true,
+      "slug": "cloud-pos-system-pakistan",
+      "durationMs": 7135,
+      "details": {
+        "runId": "run-mq7fjjo1",
+        "pageType": "service"
+      }
+    },
+    {
+      "id": "mq7fjurb-wrpy5",
+      "ts": "2026-06-10T02:08:54.647Z",
+      "site": "Phelix ERP",
+      "event": "conversion_optimized",
+      "level": "info",
+      "success": true,
+      "durationMs": 410,
+      "details": {
+        "runId": "run-mq7fjjo1",
+        "optimizedCount": 0
+      }
+    },
+    {
+      "id": "mq7fjw0w-haoxn",
+      "ts": "2026-06-10T02:08:56.288Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1618,
+      "durationMs": 1641,
       "details": {
-        "runId": "run-mq61s4o7",
+        "runId": "run-mq7fjjo1",
         "decaysFound": 0
       }
     },
     {
-      "id": "mq61smfr-hh5od",
-      "ts": "2026-06-09T02:56:02.967Z",
+      "id": "mq7fjzz5-gyvlb",
+      "ts": "2026-06-10T02:09:01.409Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": true,
-      "slug": "inventory-management-software-pharmacy-karachi",
-      "durationMs": 5516,
+      "slug": "inventory-management-software-clothing-store-karachi",
+      "durationMs": 5121,
       "details": {
-        "runId": "run-mq61s4o7",
+        "runId": "run-mq7fjjo1",
         "city": "karachi",
         "service": "Inventory Management Software"
       }
