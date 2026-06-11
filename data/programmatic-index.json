@@ -132,8 +132,15 @@
       "service": "Inventory Management Software",
       "industry": "clothing store",
       "publishedAt": "2026-06-10T02:09:00.058Z"
+    },
+    {
+      "slug": "inventory-management-software-grocery-store-karachi",
+      "city": "karachi",
+      "service": "Inventory Management Software",
+      "industry": "grocery store",
+      "publishedAt": "2026-06-11T02:33:39.535Z"
     }
   ],
-  "totalPublished": 19,
-  "lastGeneratedAt": "2026-06-10T02:09:00.058Z"
+  "totalPublished": 20,
+  "lastGeneratedAt": "2026-06-11T02:33:39.535Z"
 }
