@@ -511,6 +511,15 @@
       "promptTokens": 1093,
       "completionTokens": 1386,
       "totalTokens": 2479
+    },
+    {
+      "ts": "2026-06-11T02:33:32.504Z",
+      "action": "generate_landing",
+      "slug": "restaurant-billing-software-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 1386,
+      "completionTokens": 2985,
+      "totalTokens": 4371
     }
   ],
   "monthly": {
@@ -519,8 +528,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 48672,
-      "calls": 16
+      "tokens": 53043,
+      "calls": 17
     }
   },
   "monthlyTokenBudget": 5000000,
