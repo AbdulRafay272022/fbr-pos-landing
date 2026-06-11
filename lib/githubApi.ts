@@ -98,11 +98,24 @@ export async function readJsonFromGitHub<T>(
   repo: string
 ): Promise<T | null> {
   const url = `${ghBase(owner, repo)}/contents/${filePath}`;
-  const file = await ghGet<{ content: string }>(url, token);
+  const file = await ghGet<{ content: string; sha?: string; size?: number }>(url, token);
   if (!file) return null;
+
+  // GitHub Contents API returns content: "" for files > 1 MB.
+  // Fall back to the Git Blobs API (supports up to 100 MB) using the file's sha.
+  let raw: string;
+  if (!file.content && file.sha) {
+    const blob = await ghGet<{ content: string; encoding: string }>(
+      `${ghBase(owner, repo)}/git/blobs/${file.sha}`, token
+    );
+    if (!blob) return null;
+    raw = Buffer.from(blob.content, "base64").toString("utf8");
+  } else {
+    raw = Buffer.from(file.content ?? "", "base64").toString("utf8");
+  }
+
   try {
-    const decoded = Buffer.from(file.content, "base64").toString("utf8");
-    return JSON.parse(decoded) as T;
+    return JSON.parse(raw) as T;
   } catch {
     return null;
   }
