@@ -20,8 +20,15 @@
       "cluster": "restaurant-industry",
       "pageType": "service",
       "publishedAt": "2026-06-11T02:33:32.505Z"
+    },
+    {
+      "slug": "retail-inventory-management-software-pakistan",
+      "title": "Retail Inventory Management Software Pakistan",
+      "cluster": "retail-industry",
+      "pageType": "service",
+      "publishedAt": "2026-06-12T02:39:58.525Z"
     }
   ],
-  "totalPublished": 3,
-  "lastGeneratedAt": "2026-06-11T02:33:32.584Z"
+  "totalPublished": 4,
+  "lastGeneratedAt": "2026-06-12T02:39:58.599Z"
 }

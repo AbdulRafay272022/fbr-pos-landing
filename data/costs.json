@@ -537,6 +537,15 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-06-12T02:39:58.525Z",
+      "action": "generate_landing",
+      "slug": "retail-inventory-management-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 1390,
+      "completionTokens": 2593,
+      "totalTokens": 3983
     }
   ],
   "monthly": {
@@ -545,8 +554,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 56001,
-      "calls": 19
+      "tokens": 59984,
+      "calls": 20
     }
   },
   "monthlyTokenBudget": 5000000,
