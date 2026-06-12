@@ -528,6 +528,15 @@
       "promptTokens": 1093,
       "completionTokens": 1465,
       "totalTokens": 2558
+    },
+    {
+      "ts": "2026-06-12T02:39:49.286Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-system-issues",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -536,8 +545,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 55601,
-      "calls": 18
+      "tokens": 56001,
+      "calls": 19
     }
   },
   "monthlyTokenBudget": 5000000,
