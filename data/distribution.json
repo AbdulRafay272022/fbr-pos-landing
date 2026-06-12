@@ -272,8 +272,29 @@
         }
       ],
       "distributedAt": "2026-05-28T02:23:57.066Z"
+    },
+    {
+      "slug": "fbr-pos-system-issues",
+      "title": "FBR POS System Issues",
+      "blogUrl": "https://phelixerp.online/blog/fbr-pos-system-issues",
+      "hook": "FBR POS System Issues",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-06-12T02:39:44.455Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-06-12T02:39:44.455Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-06-12T02:39:44.456Z"
     }
   ],
-  "lastDistributedAt": "2026-05-28T02:23:57.066Z",
+  "lastDistributedAt": "2026-06-12T02:39:44.456Z",
   "totalDistributed": 0
 }
