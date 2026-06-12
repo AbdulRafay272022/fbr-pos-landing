@@ -1,29 +1,29 @@
 {
   "entries": [
     {
-      "id": "mq8vv39m-73n8v",
-      "ts": "2026-06-11T02:33:18.922Z",
+      "id": "mqabiyn9-xyh89",
+      "ts": "2026-06-12T02:39:33.093Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mq8vv39j",
+        "runId": "run-mqabiyn6",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mq8vv3h3-nbqfi",
-      "ts": "2026-06-11T02:33:19.191Z",
+      "id": "mqabiyzz-21geu",
+      "ts": "2026-06-12T02:39:33.551Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mq8vv39j",
+        "runId": "run-mqabiyn6",
         "shouldScrape": false,
-        "shouldGenerate": false,
+        "shouldGenerate": true,
         "shouldUpdate": false,
         "shouldFetchSeo": true,
         "shouldRefresh": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 0 unused keywords, last scrape 3.0d ago (next forced refresh in 27d)",
-          "generate": "skipped: no unused keywords in pool",
-          "update": "skipped: last update 72.1h ago (min 168h)",
+          "scrape": "skipped: 4278 unused keywords, last scrape 4.0d ago (next forced refresh in 26d)",
+          "generate": "96.2h since last generation, 4278 keywords available",
+          "update": "skipped: last update 96.2h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,98 +48,110 @@
       }
     },
     {
-      "id": "mq8vv6hm-ucjvg",
-      "ts": "2026-06-11T02:33:23.098Z",
+      "id": "mqabj6gw-p8jnb",
+      "ts": "2026-06-12T02:39:43.232Z",
+      "site": "Phelix ERP",
+      "event": "blog_generated",
+      "level": "info",
+      "success": true,
+      "slug": "fbr-pos-system-issues",
+      "words": 1211,
+      "source": "template",
+      "durationMs": 8429,
+      "details": {
+        "runId": "run-mqabiyn6"
+      }
+    },
+    {
+      "id": "mqabjacv-2pebp",
+      "ts": "2026-06-12T02:39:48.271Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2694,
+      "durationMs": 5038,
       "details": {
-        "runId": "run-mq8vv39j",
+        "runId": "run-mqabiyn6",
         "pages": 6,
-        "totalImpressions": 39
+        "totalImpressions": 38
       }
     },
     {
-      "id": "mq8vv7bk-8i0z6",
-      "ts": "2026-06-11T02:33:24.176Z",
+      "id": "mqabjakf-21chy",
+      "ts": "2026-06-12T02:39:48.543Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 1077,
+      "durationMs": 271,
       "details": {
-        "runId": "run-mq8vv39j",
+        "runId": "run-mqabiyn6",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mq8vv8h9-zuzoa",
-      "ts": "2026-06-11T02:33:25.677Z",
+      "id": "mqabjct6-qz81z",
+      "ts": "2026-06-12T02:39:51.450Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1501,
+      "durationMs": 2907,
       "details": {
-        "runId": "run-mq8vv39j",
-        "optimizedCount": 0
+        "runId": "run-mqabiyn6",
+        "optimizedCount": 1
       }
     },
     {
-      "id": "mq8vvewa-e8eyq",
-      "ts": "2026-06-11T02:33:33.994Z",
+      "id": "mqabjjfg-2qqj1",
+      "ts": "2026-06-12T02:40:00.028Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "slug": "restaurant-billing-software-pakistan",
-      "durationMs": 8317,
+      "slug": "retail-inventory-management-software-pakistan",
+      "durationMs": 8578,
       "details": {
-        "runId": "run-mq8vv39j",
+        "runId": "run-mqabiyn6",
         "pageType": "service"
       }
     },
     {
-      "id": "mq8vvf5l-7ctbm",
-      "ts": "2026-06-11T02:33:34.329Z",
+      "id": "mqabjjng-3yv4k",
+      "ts": "2026-06-12T02:40:00.316Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 335,
+      "durationMs": 288,
       "details": {
-        "runId": "run-mq8vv39j",
+        "runId": "run-mqabiyn6",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mq8vvga6-by7f8",
-      "ts": "2026-06-11T02:33:35.790Z",
+      "id": "mqabjkw9-ntwhr",
+      "ts": "2026-06-12T02:40:01.929Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1461,
+      "durationMs": 1612,
       "details": {
-        "runId": "run-mq8vv39j",
+        "runId": "run-mqabiyn6",
         "decaysFound": 0
       }
     },
     {
-      "id": "mq8vvk71-59cj1",
-      "ts": "2026-06-11T02:33:40.861Z",
+      "id": "mqabjl3a-aaoi8",
+      "ts": "2026-06-12T02:40:02.182Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": true,
-      "slug": "inventory-management-software-grocery-store-karachi",
-      "durationMs": 5071,
+      "success": false,
+      "durationMs": 253,
       "details": {
-        "runId": "run-mq8vv39j",
-        "city": "karachi",
-        "service": "Inventory Management Software"
+        "runId": "run-mqabiyn6"
       }
     }
   ],
