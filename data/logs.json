@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mqabiyn9-xyh89",
-      "ts": "2026-06-12T02:39:33.093Z",
+      "id": "mqbrk14q-sm9jh",
+      "ts": "2026-06-13T02:56:03.002Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mqabiyn6",
+        "runId": "run-mqbrk14n",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mqabiyzz-21geu",
-      "ts": "2026-06-12T02:39:33.551Z",
+      "id": "mqbrk1hl-1yi4g",
+      "ts": "2026-06-13T02:56:03.465Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mqabiyn6",
+        "runId": "run-mqbrk14n",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4278 unused keywords, last scrape 4.0d ago (next forced refresh in 26d)",
-          "generate": "96.2h since last generation, 4278 keywords available",
-          "update": "skipped: last update 96.2h ago (min 168h)",
+          "scrape": "skipped: 4278 unused keywords, last scrape 5.0d ago (next forced refresh in 25d)",
+          "generate": "24.3h since last generation, 4278 keywords available",
+          "update": "skipped: last update 120.4h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,110 +48,107 @@
       }
     },
     {
-      "id": "mqabj6gw-p8jnb",
-      "ts": "2026-06-12T02:39:43.232Z",
+      "id": "mqbrk3yq-k00l4",
+      "ts": "2026-06-13T02:56:06.674Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
-      "success": true,
-      "slug": "fbr-pos-system-issues",
-      "words": 1211,
-      "source": "template",
-      "durationMs": 8429,
+      "success": false,
+      "durationMs": 1907,
       "details": {
-        "runId": "run-mqabiyn6"
+        "runId": "run-mqbrk14n"
       }
     },
     {
-      "id": "mqabjacv-2pebp",
-      "ts": "2026-06-12T02:39:48.271Z",
+      "id": "mqbrk643-pnef0",
+      "ts": "2026-06-13T02:56:09.459Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 5038,
+      "durationMs": 2785,
       "details": {
-        "runId": "run-mqabiyn6",
+        "runId": "run-mqbrk14n",
         "pages": 6,
-        "totalImpressions": 38
+        "totalImpressions": 37
       }
     },
     {
-      "id": "mqabjakf-21chy",
-      "ts": "2026-06-12T02:39:48.543Z",
+      "id": "mqbrk6bx-fj6k8",
+      "ts": "2026-06-13T02:56:09.741Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 271,
+      "durationMs": 282,
       "details": {
-        "runId": "run-mqabiyn6",
+        "runId": "run-mqbrk14n",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mqabjct6-qz81z",
-      "ts": "2026-06-12T02:39:51.450Z",
+      "id": "mqbrk7bw-ecqpa",
+      "ts": "2026-06-13T02:56:11.036Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2907,
+      "durationMs": 1294,
       "details": {
-        "runId": "run-mqabiyn6",
-        "optimizedCount": 1
-      }
-    },
-    {
-      "id": "mqabjjfg-2qqj1",
-      "ts": "2026-06-12T02:40:00.028Z",
-      "site": "Phelix ERP",
-      "event": "landing_generated",
-      "level": "info",
-      "success": true,
-      "slug": "retail-inventory-management-software-pakistan",
-      "durationMs": 8578,
-      "details": {
-        "runId": "run-mqabiyn6",
-        "pageType": "service"
-      }
-    },
-    {
-      "id": "mqabjjng-3yv4k",
-      "ts": "2026-06-12T02:40:00.316Z",
-      "site": "Phelix ERP",
-      "event": "conversion_optimized",
-      "level": "info",
-      "success": true,
-      "durationMs": 288,
-      "details": {
-        "runId": "run-mqabiyn6",
+        "runId": "run-mqbrk14n",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mqabjkw9-ntwhr",
-      "ts": "2026-06-12T02:40:01.929Z",
+      "id": "mqbrketk-w5r0i",
+      "ts": "2026-06-13T02:56:20.744Z",
+      "site": "Phelix ERP",
+      "event": "landing_generated",
+      "level": "info",
+      "success": true,
+      "slug": "erp-accounting-software-pakistan-sme",
+      "durationMs": 9708,
+      "details": {
+        "runId": "run-mqbrk14n",
+        "pageType": "service"
+      }
+    },
+    {
+      "id": "mqbrkf1u-2a2cg",
+      "ts": "2026-06-13T02:56:21.042Z",
+      "site": "Phelix ERP",
+      "event": "conversion_optimized",
+      "level": "info",
+      "success": true,
+      "durationMs": 298,
+      "details": {
+        "runId": "run-mqbrk14n",
+        "optimizedCount": 0
+      }
+    },
+    {
+      "id": "mqbrkg7o-9sjb9",
+      "ts": "2026-06-13T02:56:22.548Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1612,
+      "durationMs": 1506,
       "details": {
-        "runId": "run-mqabiyn6",
+        "runId": "run-mqbrk14n",
         "decaysFound": 0
       }
     },
     {
-      "id": "mqabjl3a-aaoi8",
-      "ts": "2026-06-12T02:40:02.182Z",
+      "id": "mqbrkgk6-ct8bt",
+      "ts": "2026-06-13T02:56:22.998Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 253,
+      "durationMs": 449,
       "details": {
-        "runId": "run-mqabiyn6"
+        "runId": "run-mqbrk14n"
       }
     }
   ],
