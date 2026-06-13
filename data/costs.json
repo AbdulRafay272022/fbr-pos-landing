@@ -546,6 +546,15 @@
       "promptTokens": 1390,
       "completionTokens": 2593,
       "totalTokens": 3983
+    },
+    {
+      "ts": "2026-06-13T02:56:19.309Z",
+      "action": "generate_landing",
+      "slug": "erp-accounting-software-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 1386,
+      "completionTokens": 3663,
+      "totalTokens": 5049
     }
   ],
   "monthly": {
@@ -554,8 +563,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 59984,
-      "calls": 20
+      "tokens": 65033,
+      "calls": 21
     }
   },
   "monthlyTokenBudget": 5000000,

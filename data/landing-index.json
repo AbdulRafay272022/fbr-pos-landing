@@ -27,8 +27,15 @@
       "cluster": "retail-industry",
       "pageType": "service",
       "publishedAt": "2026-06-12T02:39:58.525Z"
+    },
+    {
+      "slug": "erp-accounting-software-pakistan-sme",
+      "title": "ERP Accounting Software Pakistan SME - Phelix ERP",
+      "cluster": "erp-accounting",
+      "pageType": "service",
+      "publishedAt": "2026-06-13T02:56:19.309Z"
     }
   ],
-  "totalPublished": 4,
-  "lastGeneratedAt": "2026-06-12T02:39:58.599Z"
+  "totalPublished": 5,
+  "lastGeneratedAt": "2026-06-13T02:56:19.383Z"
 }
