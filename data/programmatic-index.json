@@ -139,8 +139,15 @@
       "service": "Inventory Management Software",
       "industry": "grocery store",
       "publishedAt": "2026-06-11T02:33:39.535Z"
+    },
+    {
+      "slug": "restaurant-pos-restaurant-karachi",
+      "city": "karachi",
+      "service": "Restaurant POS",
+      "industry": "restaurant",
+      "publishedAt": "2026-06-14T02:15:06.713Z"
     }
   ],
-  "totalPublished": 20,
-  "lastGeneratedAt": "2026-06-11T02:33:39.535Z"
+  "totalPublished": 21,
+  "lastGeneratedAt": "2026-06-14T02:15:06.713Z"
 }
