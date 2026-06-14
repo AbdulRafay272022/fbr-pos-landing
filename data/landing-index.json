@@ -34,8 +34,15 @@
       "cluster": "erp-accounting",
       "pageType": "service",
       "publishedAt": "2026-06-13T02:56:19.309Z"
+    },
+    {
+      "slug": "pos-system-for-retail-pakistan",
+      "title": "POS System for Retail Pakistan - FBR Compliant Solution",
+      "cluster": "retail-industry",
+      "pageType": "industry",
+      "publishedAt": "2026-06-14T02:14:59.560Z"
     }
   ],
-  "totalPublished": 5,
-  "lastGeneratedAt": "2026-06-13T02:56:19.383Z"
+  "totalPublished": 6,
+  "lastGeneratedAt": "2026-06-14T02:14:59.633Z"
 }
