@@ -146,8 +146,15 @@
       "service": "Restaurant POS",
       "industry": "restaurant",
       "publishedAt": "2026-06-14T02:15:06.713Z"
+    },
+    {
+      "slug": "restaurant-pos-retail-karachi",
+      "city": "karachi",
+      "service": "Restaurant POS",
+      "industry": "retail",
+      "publishedAt": "2026-06-15T02:44:33.647Z"
     }
   ],
-  "totalPublished": 21,
-  "lastGeneratedAt": "2026-06-14T02:15:06.713Z"
+  "totalPublished": 22,
+  "lastGeneratedAt": "2026-06-15T02:44:33.647Z"
 }
