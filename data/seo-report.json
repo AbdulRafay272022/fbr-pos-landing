@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T04:31:28.390Z",
+  "generatedAt": "2026-06-15T04:27:44.589Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -20,13 +20,13 @@
   "recommendations": [
     {
       "priority": "medium",
-      "title": "Cannibalization: 16 keyword clusters",
-      "detail": "\"multi branch pos pakistan\" — 2 pages compete. 2 pages have similar titles. Google will pick one and dilute authority on others.",
-      "action": "Merge into one canonical post."
+      "title": "Cannibalization: 17 keyword clusters",
+      "detail": "\"pos system\" — 4 pages compete. 4 pages have similar titles. Google will pick one and dilute authority on others.",
+      "action": "Differentiate intent — assign each post a unique long-tail variant."
     }
   ],
   "gsc": {
-    "rows": 2,
+    "rows": 3,
     "days": 28
   },
   "rankings": {
@@ -56,11 +56,58 @@
   "cannibalization": {
     "clusters": [
       {
+        "primaryKeyword": "pos system",
+        "pages": [
+          {
+            "slug": "fbr-pos-system-retailers",
+            "title": "Top 5 FBR POS System Retailers",
+            "titleSim": 1,
+            "keywords": [
+              "fbr pos system retailers",
+              "fbr pos system retailers pakistan",
+              "fbr compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-pos-system-issues",
+            "title": "Top 3 FBR POS System Issues Solved",
+            "titleSim": 0.5,
+            "keywords": [
+              "fbr pos system issues",
+              "fbr pos system issues pakistan",
+              "fbr compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-pos-system-karachi-businesses",
+            "title": "Top 5 POS System Karachi for Retailers",
+            "titleSim": 0.6,
+            "keywords": [
+              "POS system Karachi",
+              "FBR POS Karachi",
+              "Karachi retail POS software"
+            ]
+          },
+          {
+            "slug": "pos-system-lahore-fbr-integration-for-lahore-retailers-2026",
+            "title": "POS System Lahore – FBR Integration for Lahore Retailers 2026",
+            "titleSim": 0.6666666666666666,
+            "keywords": [
+              "POS system Lahore",
+              "FBR POS Lahore",
+              "Lahore retail POS software"
+            ]
+          }
+        ],
+        "recommendation": "differentiate",
+        "reason": "4 pages have similar titles. Google will pick one and dilute authority on others."
+      },
+      {
         "primaryKeyword": "multi branch pos pakistan",
         "pages": [
           {
             "slug": "multi-branch-pos-system-pakistan-fbr-compliance-complete-guide-2026",
-            "title": "Top Multi Branch POS Pakistan: Top Features Compared",
+            "title": "Top 3 Multi Branch POS Pakistan: Features and Pricing",
             "titleSim": 1,
             "keywords": [
               "multi branch POS Pakistan",
@@ -193,11 +240,78 @@
         "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
+        "primaryKeyword": "fbr compliance pakistan",
+        "pages": [
+          {
+            "slug": "fbr-pos-system-retailers",
+            "title": "Top 5 FBR POS System Retailers",
+            "titleSim": 0,
+            "keywords": [
+              "fbr pos system retailers",
+              "fbr pos system retailers pakistan",
+              "fbr compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-pos-system-issues",
+            "title": "Top 3 FBR POS System Issues Solved",
+            "titleSim": 0,
+            "keywords": [
+              "fbr pos system issues",
+              "fbr pos system issues pakistan",
+              "fbr compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
+            "title": "Top 5 Best FBR POS Systems for Lahore Restaurants",
+            "titleSim": 0,
+            "keywords": [
+              "best fbr pos system for restaurant in lahore",
+              "best fbr pos system for restaurant in lahore pakistan",
+              "fbr compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-karachi",
+            "title": "Top 5 Best FBR POS Systems for Karachi Retail",
+            "titleSim": 0,
+            "keywords": [
+              "best fbr pos system for retail in karachi",
+              "best fbr pos system for retail in karachi pakistan",
+              "fbr compliance pakistan"
+            ]
+          },
+          {
+            "slug": "how-to-configure-fbr-penalty-in-pakistan",
+            "title": "Top 3 Tips: Configure FBR Penalty in Pakistan",
+            "titleSim": 0,
+            "keywords": [
+              "how to configure fbr penalty in pakistan",
+              "how to configure fbr penalty in pakistan pakistan",
+              "fbr compliance pakistan"
+            ]
+          },
+          {
+            "slug": "how-to-setup-fbr-penalty-in-pakistan",
+            "title": "FBR Penalty Pakistan: Costs, Rules & How to Avoid It 2026",
+            "titleSim": 0,
+            "keywords": [
+              "how to setup fbr penalty in pakistan",
+              "how to setup fbr penalty in pakistan pakistan",
+              "fbr compliance pakistan"
+            ]
+          }
+        ],
+        "recommendation": "differentiate",
+        "reason": "6 pages claim the same keyword \"fbr compliance pakistan\". Reassign to unique long-tail variants."
+      },
+      {
         "primaryKeyword": "multi branch pos pakistan",
         "pages": [
           {
             "slug": "multi-branch-pos-system-pakistan-fbr-compliance-complete-guide-2026",
-            "title": "Top Multi Branch POS Pakistan: Top Features Compared",
+            "title": "Top 3 Multi Branch POS Pakistan: Features and Pricing",
             "titleSim": 0,
             "keywords": [
               "multi branch POS Pakistan",
@@ -446,53 +560,6 @@
         "reason": "2 pages claim the same keyword \"pharmacy pos pakistan\". Reassign to unique long-tail variants."
       },
       {
-        "primaryKeyword": "fbr compliance pakistan",
-        "pages": [
-          {
-            "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
-            "title": "Top 5 Best FBR POS Systems for Lahore Restaurants",
-            "titleSim": 0,
-            "keywords": [
-              "best fbr pos system for restaurant in lahore",
-              "best fbr pos system for restaurant in lahore pakistan",
-              "fbr compliance pakistan"
-            ]
-          },
-          {
-            "slug": "best-fbr-pos-system-for-retail-in-karachi",
-            "title": "Top 5 Best FBR POS Systems for Karachi Retail",
-            "titleSim": 0,
-            "keywords": [
-              "best fbr pos system for retail in karachi",
-              "best fbr pos system for retail in karachi pakistan",
-              "fbr compliance pakistan"
-            ]
-          },
-          {
-            "slug": "how-to-configure-fbr-penalty-in-pakistan",
-            "title": "Top 3 Tips: Configure FBR Penalty in Pakistan",
-            "titleSim": 0,
-            "keywords": [
-              "how to configure fbr penalty in pakistan",
-              "how to configure fbr penalty in pakistan pakistan",
-              "fbr compliance pakistan"
-            ]
-          },
-          {
-            "slug": "how-to-setup-fbr-penalty-in-pakistan",
-            "title": "FBR Penalty Pakistan: Costs, Rules & How to Avoid It 2026",
-            "titleSim": 0,
-            "keywords": [
-              "how to setup fbr penalty in pakistan",
-              "how to setup fbr penalty in pakistan pakistan",
-              "fbr compliance pakistan"
-            ]
-          }
-        ],
-        "recommendation": "differentiate",
-        "reason": "4 pages claim the same keyword \"fbr compliance pakistan\". Reassign to unique long-tail variants."
-      },
-      {
         "primaryKeyword": "qr invoice pakistan",
         "pages": [
           {
@@ -522,11 +589,11 @@
         "reason": "2 pages claim the same keyword \"qr invoice pakistan\". Reassign to unique long-tail variants."
       }
     ],
-    "flagged": 16
+    "flagged": 17
   },
   "cwv": {
     "summary": {
-      "totalAudited": 24,
+      "totalAudited": 26,
       "passingCwv": 0,
       "failingCwv": 0,
       "avgPerformance": null,
