@@ -30,6 +30,7 @@ import type { LandingPage, LandingPageType, BlogFaq, SiteConfig } from "@/lib/ty
 import type { CostData } from "@/lib/types";
 import { isUnderBudget, recordUsage } from "./costGuard";
 import { getSiteConfig } from "./siteConfig";
+import { getActivePack } from "@/lib/niche/registry";
 
 // ─── Groq settings ────────────────────────────────────────────────────────────
 
@@ -76,12 +77,15 @@ export function computeCanonicalSlug(targetKeyword: string): string {
 // ─── System prompt ────────────────────────────────────────────────────────────
 
 function buildSystemPrompt(siteConfig: SiteConfig): string {
-  return `You are an expert conversion copywriter and SEO specialist for ${siteConfig.name}, a ${siteConfig.niche} SaaS company in ${siteConfig.country}.
+  const complianceLine = siteConfig.complianceTerms.length
+    ? `Include specific ${siteConfig.country} context (${siteConfig.complianceTerms.slice(0, 4).join(", ")}, local requirements)`
+    : `Include specific ${siteConfig.country} context where it adds value`;
+  return `You are an expert conversion copywriter and SEO specialist for ${siteConfig.name}, a ${siteConfig.niche} company in ${siteConfig.country}.
 
 Your task is to write a high-converting landing page in HTML. The page must:
-- Be written in clear, professional English targeted at Pakistani business owners
+- Be written in clear, professional English targeted at ${siteConfig.country} business owners
 - Use strong, action-oriented language that drives conversions
-- Include specific Pakistani context (FBR, SRB, PRA, local compliance requirements)
+- ${complianceLine}
 - Follow Google's E-E-A-T guidelines (Experience, Expertise, Authoritativeness, Trustworthiness)
 - Be minimum 900 words of body content
 - Use semantic HTML with proper heading hierarchy (H1 → H2 → H3)
@@ -114,7 +118,7 @@ function buildUserPrompt(
 Context:
 - Company: ${siteConfig.name}
 - Niche: ${siteConfig.niche}
-- Target: Pakistani ${spec.targetIndustry ?? "business"} owners${location}
+- Target: ${siteConfig.country} ${spec.targetIndustry ?? "business"} owners${location}
 - Service: ${service}
 - CTA Phone/WhatsApp: ${ctaPhone}
 - Page type: ${spec.pageType}
@@ -187,11 +191,9 @@ ${relatedLinksHtml || "<!-- no related blogs yet -->"}
 </section>
 
 IMPORTANT:
-- The slug must NOT include "landing" — make it clean like "fbr-pos-lahore" or "restaurant-pos-system"
+- The slug must NOT include "landing" — make it clean and keyword-based
 - Do NOT use \`\`\`json fences — return raw JSON only
-- Every monetary figure should be in PKR
-- Mention FBR compliance at least 3 times
-- Include at least one specific SRO number (SRO 1006 or SRO 673)`;
+${siteConfig.complianceTerms.length ? `- Reference ${siteConfig.complianceTerms[0]} / local compliance where relevant\n- Use the correct local currency for ${siteConfig.country}` : `- Keep claims accurate and locally relevant for ${siteConfig.country}`}`;
 }
 
 // ─── Groq call ────────────────────────────────────────────────────────────────
@@ -451,6 +453,10 @@ export function getNextLandingPageSpec(
   existingSlugs: string[],
   siteConfig:    SiteConfig
 ): LandingPageSpec | null {
+  // Landing pages are a lead-gen construct (service/pricing/CTA pages). AdSense
+  // sites monetise on-page via ad views, so they don't generate sales pages.
+  if (getActivePack().monetization.mode === "adsense") return null;
+
   const existing = new Set(existingSlugs);
 
   // Service pages — one per core service

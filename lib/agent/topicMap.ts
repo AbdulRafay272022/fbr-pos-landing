@@ -16,10 +16,11 @@
  */
 
 import type { TopicCluster, ClusterStatus, TopicMap } from "@/lib/types";
+import { getActivePack } from "@/lib/niche/registry";
 
 // ─── Cluster definitions ──────────────────────────────────────────────────────
 
-export const TOPIC_CLUSTERS: TopicCluster[] = [
+const FBR_DEFAULT_CLUSTERS: TopicCluster[] = [
   {
     id:             "fbr-compliance",
     name:           "FBR Compliance",
@@ -113,6 +114,13 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
   },
 ];
 
+/**
+ * Active clusters come from the niche pack (sports, etc.). The FBR list above is
+ * the default when a pack defines none. All pillar/internal-link logic reads
+ * TOPIC_CLUSTERS, so this single binding makes the whole link graph niche-aware.
+ */
+export const TOPIC_CLUSTERS: TopicCluster[] = getActivePack().clusters ?? FBR_DEFAULT_CLUSTERS;
+
 // ─── Keyword → cluster assignment ─────────────────────────────────────────────
 
 /**
@@ -123,7 +131,7 @@ export const TOPIC_CLUSTERS: TopicCluster[] = [
 export function assignKeywordToCluster(keyword: string): string {
   const kw = keyword.toLowerCase();
 
-  let bestCluster = "fbr-compliance";
+  let bestCluster = TOPIC_CLUSTERS[0]?.id ?? "general";
   let bestScore   = 0;
 
   for (const cluster of TOPIC_CLUSTERS) {

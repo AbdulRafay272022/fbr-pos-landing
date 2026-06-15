@@ -176,18 +176,39 @@ export interface EntityCoverage {
   nicheSpecific:  string[];        // from curated niche dictionary
 }
 
+/** Per-niche entity guardrails (supplied by the active NichePack). */
+export interface EntityFilter {
+  /** Terms guaranteed to be included (anchors the topic). */
+  allow?: string[];
+  /** Tokens that must NEVER be treated as entities — kills Wikidata
+   *  disambiguation noise (e.g. "Issues" → the band "System of a Down"). */
+  deny?: string[];
+}
+
+/** Drop any entity that matches a deny token (exact or substring, case-insensitive). */
+function applyDeny(items: string[], deny: string[]): string[] {
+  if (deny.length === 0) return items;
+  const denyLc = deny.map((d) => d.toLowerCase());
+  return items.filter((it) => {
+    const lc = it.toLowerCase();
+    return !denyLc.some((d) => lc === d || lc.includes(d));
+  });
+}
+
 /**
  * Build entity coverage for a keyword.
- * Combines Wikidata graph + niche dictionary.
+ * Combines Wikidata graph + niche dictionary, filtered by the pack's guardrails.
  *
  * @param keyword       - target keyword (e.g. "fbr pos pharmacy")
  * @param niche         - site niche string (e.g. "fbr pos compliance pakistan")
  * @param seedKeywords  - site seed keywords (helps niche detection)
+ * @param filter        - allow/deny lists from the active niche pack
  */
 export async function buildEntityCoverage(
   keyword:      string,
   niche:        string  = "",
   seedKeywords: string[] = [],
+  filter:       EntityFilter = {},
 ): Promise<EntityCoverage> {
   const tokens = keyword
     .toLowerCase()
@@ -213,15 +234,19 @@ export async function buildEntityCoverage(
     }
   }
 
-  const nicheSpecific = pickNicheDictionary(niche, seedKeywords);
+  // Niche dictionary + pack allow-list anchors (guaranteed-relevant entities).
+  const nicheSpecific = [...(filter.allow ?? []), ...pickNicheDictionary(niche, seedKeywords)];
 
-  // Deduplicate
+  // Deduplicate, then strip anything on the deny-list. The deny filter is what
+  // stops the entity graph from injecting off-topic Wikidata noise on broad
+  // niches (sports, news, etc.) where keyword tokens are highly ambiguous.
+  const deny = filter.deny ?? [];
   const dedupe = (arr: string[]) => [...new Set(arr.map((s) => s.trim()).filter(Boolean))];
 
   return {
-    primary:       dedupe(primary),
-    related:       dedupe(related).slice(0, 12),
-    nicheSpecific: dedupe(nicheSpecific).slice(0, 15),
+    primary:       applyDeny(dedupe(primary), deny),
+    related:       applyDeny(dedupe(related), deny).slice(0, 12),
+    nicheSpecific: applyDeny(dedupe(nicheSpecific), deny).slice(0, 15),
   };
 }
 

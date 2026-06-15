@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import Analytics from "@/components/Analytics";
 import { organizationSchema, webSiteSchema } from "@/lib/schema";
+import { getSiteConfig } from "@/lib/agent/siteConfig";
+import { getActivePack } from "@/lib/niche/registry";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -15,88 +17,72 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(process.env.SITE_BASE_URL ?? "https://phelixerp.online"),
-  title: {
-    default: "Phelix ERP — FBR POS System Pakistan | FBR e-Invoicing Software",
-    template: "%s | Phelix ERP Pakistan",
-  },
-  description:
-    "Pakistan's #1 FBR-compliant POS system. Auto QR invoicing to FBR IRIS, inventory tracking & sales reports. Trusted by 25+ businesses. Setup in 24 hours.",
-  keywords: [
-    "FBR POS system Pakistan",
-    "FBR e-invoicing software Pakistan",
-    "POS software Pakistan FBR compliant",
-    "QR invoice system Pakistan",
-    "retail POS Pakistan",
-    "FBR POS Karachi",
-    "FBR POS Lahore",
-    "pharmacy POS Pakistan",
-    "FBR invoice QR generator",
-    "FBR compliance Pakistan",
-    "how to register POS with FBR",
-    "Phelix ERP",
-    "FBR POS software",
-    "Pakistan billing software",
-    "FBR integrated POS",
-    "ERP Pakistan small business",
-  ],
-  authors: [{ name: "Phelix ERP", url: "https://phelixerp.online" }],
-  creator: "Phelix ERP",
-  publisher: "Phelix ERP",
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+// Metadata is derived from the active niche pack (via getSiteConfig), so a new
+// niche needs no edits here. Per-deployment overrides still come from env vars.
+export function generateMetadata(): Metadata {
+  const c = getSiteConfig();
+  const base = c.baseUrl.replace(/\/$/, "");
+  const title = `${c.name} — ${c.niche}`;
+  const description = (c.authorBio || c.niche).slice(0, 160);
+
+  return {
+    metadataBase: new URL(base),
+    title: { default: title, template: `%s | ${c.name}` },
+    description,
+    keywords: c.seedKeywords,
+    authors: [{ name: c.name, url: base }],
+    creator: c.name,
+    publisher: c.name,
+    robots: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  openGraph: {
-    type: "website",
-    locale: "en_PK",
-    url: "https://phelixerp.online",
-    siteName: "Phelix ERP",
-    title: "Phelix ERP — FBR POS System Pakistan | FBR e-Invoicing Software",
-    description:
-      "Auto QR invoicing to FBR IRIS, inventory tracking & sales reports. Trusted by 25+ Pakistan businesses. Setup in 24 hours.",
-    images: [
-      {
-        url: "/dashboard-screenshot.png",
-        width: 1200,
-        height: 630,
-        alt: "Phelix ERP — FBR POS System Pakistan dashboard",
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Phelix ERP — FBR POS System Pakistan",
-    description:
-      "FBR-compliant POS with QR invoicing, inventory management & sales reports. Trusted by 25+ Pakistan businesses.",
-    images: ["/dashboard-screenshot.png"],
-  },
-  alternates: {
-    canonical: "https://phelixerp.online",
-  },
-  category: "technology",
-};
+    },
+    openGraph: {
+      type: "website",
+      url: base,
+      siteName: c.name,
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+    alternates: { canonical: base },
+    category: "technology",
+  };
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
   return (
     <html
-      lang="en-PK"
+      lang={getActivePack().language}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
         <meta name="google-site-verification" content="ff535bd7a9ec1568" />
+        {/* Google AdSense library — only loads when a client id is configured */}
+        {adsenseClient && (
+          // eslint-disable-next-line @next/next/no-sync-scripts
+          <script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClient}`}
+            crossOrigin="anonymous"
+          />
+        )}
         {process.env.BING_SITE_VERIFICATION && (
           <meta name="msvalidate.01" content={process.env.BING_SITE_VERIFICATION} />
         )}

@@ -58,6 +58,7 @@ export async function GET(req: NextRequest) {
 
   // ── Auth ──────────────────────────────────────────────────────────────────
   const cronSecret = process.env.CRON_SECRET;
+  if (!cronSecret) return new Response("Unauthorized: CRON_SECRET not configured", { status: 503 });
   if (cronSecret) {
     const auth = req.headers.get("authorization");
     if (auth !== `Bearer ${cronSecret}`) {
@@ -216,14 +217,17 @@ export async function GET(req: NextRequest) {
     { getCountryCode },
     { analyzeSerpIntelligence, buildIntelligentBrief },
     { getSiteConfig },
+    { getActivePack },
   ] = await Promise.all([
     import("@/lib/agent/keywordDiscovery"),
     import("@/lib/agent/serpIntelligence"),
     import("@/lib/agent/siteConfig"),
+    import("@/lib/niche/registry"),
   ]);
 
   const country = process.env.SITE_COUNTRY ?? "Pakistan";
   const siteCfg = getSiteConfig();
+  const activePack = getActivePack();
 
   // ── Stage A: SERP intelligence + Entity graph — run IN PARALLEL ───────────
   // Try up to 3 candidates. If top candidate is "impossible" (government sites
@@ -244,7 +248,8 @@ export async function GET(req: NextRequest) {
         try {
           const { buildEntityCoverage, buildEntityBrief } = await import("@/lib/agent/entityGraph");
           const coverage = await buildEntityCoverage(
-            candidate.keyword, siteCfg.niche, siteCfg.seedKeywords
+            candidate.keyword, siteCfg.niche, siteCfg.seedKeywords,
+            { allow: activePack.prompt.entityAllow, deny: activePack.prompt.entityDeny }
           );
           return buildEntityBrief(coverage);
         } catch {

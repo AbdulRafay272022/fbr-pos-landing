@@ -1,12 +1,16 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getBlogBySlug, getAllBlogs } from "@/lib/blogStore";
 import { blogPostingSchema, breadcrumbSchema, faqSchema, LANDING_FAQS } from "@/lib/schema";
 import { injectInternalLinks, getRelatedPosts } from "@/lib/internalLinks";
+import { getSiteConfig } from "@/lib/agent/siteConfig";
+import { getActivePack } from "@/lib/niche/registry";
+import AdHydrator from "@/components/AdHydrator";
 
-const BASE_URL = "https://phelixerp.online";
-const WA_NUMBER = "923118366981";
+function baseUrl(): string {
+  return getSiteConfig().baseUrl.replace(/\/$/, "");
+}
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -17,8 +21,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const blog = await getBlogBySlug(slug);
   if (!blog) return { title: "Not Found" };
 
+  const base = baseUrl();
   // Auto-generated branded OG image per post — improves social CTR
-  const ogImage = `${BASE_URL}/api/og?title=${encodeURIComponent(blog.title)}&subtitle=${encodeURIComponent(blog.metaDescription.slice(0, 120))}`;
+  const ogImage = `${base}/api/og?title=${encodeURIComponent(blog.title)}&subtitle=${encodeURIComponent(blog.metaDescription.slice(0, 120))}`;
 
   return {
     title: blog.title,
@@ -29,15 +34,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: blog.metaDescription,
       type: "article",
       publishedTime: blog.publishedAt,
-      url: `${BASE_URL}/blog/${blog.slug}`,
-      images: [
-        {
-          url:    ogImage,
-          width:  1200,
-          height: 630,
-          alt:    blog.title,
-        },
-      ],
+      url: `${base}/blog/${blog.slug}`,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: blog.title }],
     },
     twitter: {
       card: "summary_large_image",
@@ -45,9 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: blog.metaDescription,
       images: [ogImage],
     },
-    alternates: {
-      canonical: `${BASE_URL}/blog/${blog.slug}`,
-    },
+    alternates: { canonical: `${base}/blog/${blog.slug}` },
   };
 }
 
@@ -66,14 +62,20 @@ export default async function BlogPostPage({ params }: Props) {
   ]);
   if (!blog) notFound();
 
-  const pageUrl = `${BASE_URL}/blog/${blog.slug}`;
+  const cfg  = getSiteConfig();
+  const pack = getActivePack();
+  const isLeadgen = pack.monetization.mode === "leadgen";
+  const wa = cfg.ctaWhatsApp ? `https://wa.me/${cfg.ctaWhatsApp.replace(/[^0-9]/g, "")}` : "";
+  const accent = "#F97316";
+
+  const base = baseUrl();
+  const pageUrl = `${base}/blog/${blog.slug}`;
   const enrichedContent = injectInternalLinks(blog.content, blog.slug);
   const relatedPosts = getRelatedPosts(blog.slug, allBlogs, 3);
-  const shareText = `I just read: "${blog.title}" – Check out this FBR compliance guide for Pakistani businesses: ${pageUrl}`;
+  const shareText = `I just read: "${blog.title}" — ${pageUrl}`;
   const waShareHref = `https://wa.me/?text=${encodeURIComponent(shareText)}`;
 
   const blogSchema  = blogPostingSchema(blog, pageUrl);
-  // Use the blog's own FAQs if available (AI-generated), fall back to site FAQs
   const faqSource = blog.faqs && blog.faqs.length > 0
     ? blog.faqs.map((f) => ({ q: f.question, a: f.answer }))
     : LANDING_FAQS;
@@ -86,40 +88,30 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <main className="min-h-screen bg-white">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
 
       <nav className="border-b border-gray-200 px-6 py-4 bg-white sticky top-0 z-40">
         <div className="max-w-4xl mx-auto flex items-center justify-between">
-          <Link href="/" className="text-xl font-bold" style={{ color: "#F97316" }}>
-            Phelix ERP
+          <Link href="/" className="text-xl font-bold" style={{ color: accent }}>
+            {cfg.name}
           </Link>
           <div className="flex items-center gap-4">
             <Link href="/blog" className="text-sm text-gray-600 hover:text-gray-900">
               Blog
             </Link>
-            <Link href="/fbr-checker" className="text-sm text-gray-600 hover:text-gray-900">
-              FBR Checker
-            </Link>
-            <a
-              href={`https://wa.me/${WA_NUMBER}`}
-              target="_blank"
-              rel="noreferrer"
-              className="text-sm font-semibold text-white px-4 py-2 rounded-lg"
-              style={{ background: "#25D366" }}
-            >
-              WhatsApp Demo
-            </a>
+            {isLeadgen && cfg.ctaWhatsApp && (
+              <a
+                href={wa}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-semibold text-white px-4 py-2 rounded-lg"
+                style={{ background: "#25D366" }}
+              >
+                {cfg.ctaText || "Contact us"}
+              </a>
+            )}
           </div>
         </div>
       </nav>
@@ -135,8 +127,8 @@ export default async function BlogPostPage({ params }: Props) {
         </nav>
 
         <div className="mb-8">
-          <p className="text-sm font-semibold mt-1 mb-3" style={{ color: "#F97316" }}>
-            {new Date(blog.publishedAt).toLocaleDateString("en-PK", {
+          <p className="text-sm font-semibold mt-1 mb-3" style={{ color: accent }}>
+            {new Date(blog.publishedAt).toLocaleDateString("en-US", {
               year: "numeric",
               month: "long",
               day: "numeric",
@@ -151,7 +143,7 @@ export default async function BlogPostPage({ params }: Props) {
           {/* Author byline — E-E-A-T signal */}
           {blog.authorName && (
             <div className="flex items-center gap-3 mt-5 pt-5 border-t border-gray-100">
-              <div className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0" style={{ background: "#F97316" }}>
+              <div className="w-9 h-9 rounded-full flex items-center justify-center text-white text-sm font-bold shrink-0" style={{ background: accent }}>
                 {blog.authorName.charAt(0).toUpperCase()}
               </div>
               <div>
@@ -160,12 +152,12 @@ export default async function BlogPostPage({ params }: Props) {
                   <a
                     href={`/author/${blog.authorName.toLowerCase().replace(/\s+/g, "-")}`}
                     className="hover:underline"
-                    style={{ color: "#F97316" }}
+                    style={{ color: accent }}
                   >
                     {blog.authorName}
                   </a>
                 </p>
-                <p className="text-xs text-gray-400">FBR Compliance Specialist · Phelix ERP</p>
+                <p className="text-xs text-gray-400">{cfg.authorTitle} · {cfg.name}</p>
               </div>
             </div>
           )}
@@ -195,40 +187,41 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
 
-        {/* Top urgency CTA */}
-        <div
-          className="rounded-xl p-6 mb-10 flex items-center justify-between gap-4 flex-wrap"
-          style={{ background: "#FFF7ED", border: "1px solid #FDBA74" }}
-        >
-          <div>
-            <p className="font-bold text-gray-900">
-              ⚠️ FBR compliance is mandatory in Pakistan
-            </p>
-            <p className="text-sm text-gray-600">
-              Get Phelix ERP set up in 24 hours — free WhatsApp demo, no commitment.
-            </p>
-          </div>
-          <a
-            href={`https://wa.me/${WA_NUMBER}`}
-            target="_blank"
-            rel="noreferrer"
-            className="text-white px-5 py-2 rounded-lg font-semibold text-sm whitespace-nowrap"
-            style={{ background: "#25D366" }}
+        {/* Lead-gen only: top urgency CTA. AdSense sites stay reader-first. */}
+        {isLeadgen && cfg.ctaWhatsApp && (
+          <div
+            className="rounded-xl p-6 mb-10 flex items-center justify-between gap-4 flex-wrap"
+            style={{ background: "#FFF7ED", border: "1px solid #FDBA74" }}
           >
-            WhatsApp Free Demo
-          </a>
-        </div>
+            <div>
+              <p className="font-bold text-gray-900">{cfg.name}</p>
+              <p className="text-sm text-gray-600">{cfg.ctaSubtext}</p>
+            </div>
+            <a
+              href={wa}
+              target="_blank"
+              rel="noreferrer"
+              className="text-white px-5 py-2 rounded-lg font-semibold text-sm whitespace-nowrap"
+              style={{ background: "#25D366" }}
+            >
+              {cfg.ctaText}
+            </a>
+          </div>
+        )}
 
-        {/* Blog content with injected internal links */}
+        {/* Blog content with injected internal links + ad placeholders */}
         <div
           className="prose prose-gray max-w-none prose-headings:text-gray-900 prose-headings:font-bold prose-h2:text-2xl prose-h3:text-xl prose-p:text-gray-700 prose-p:leading-relaxed prose-li:text-gray-700 prose-a:text-orange-500"
           dangerouslySetInnerHTML={{ __html: enrichedContent }}
         />
 
+        {/* Hydrates any AdSense placeholders in the content (no-op otherwise) */}
+        <AdHydrator />
+
         {/* Share bar */}
         <div className="mt-10 flex items-center justify-between flex-wrap gap-4 py-5 border-t border-b border-gray-100">
           <p className="text-sm font-semibold text-gray-700">
-            Found this useful? Share it with a fellow business owner:
+            Found this useful? Share it:
           </p>
           <a
             href={waShareHref}
@@ -244,38 +237,30 @@ export default async function BlogPostPage({ params }: Props) {
           </a>
         </div>
 
-        {/* Bottom CTA */}
-        <div className="mt-12 bg-gray-900 rounded-2xl p-8 text-center text-white">
-          <h2 className="text-2xl font-bold mb-2">Get FBR Compliant Today</h2>
-          <p className="mb-6 text-gray-300">
-            Phelix ERP handles all FBR POS requirements. Setup in 24 hours. No
-            technical skills needed.
-          </p>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <a
-              href={`https://wa.me/${WA_NUMBER}`}
-              target="_blank"
-              rel="noreferrer"
-              className="font-bold px-8 py-3 rounded-xl transition-colors text-white"
-              style={{ background: "#25D366" }}
-            >
-              WhatsApp Free Demo
-            </a>
-            <Link
-              href="/fbr-checker"
-              className="font-bold px-8 py-3 rounded-xl transition-colors text-white no-underline"
-              style={{ background: "#F97316" }}
-            >
-              Check FBR Compliance Score
-            </Link>
+        {/* Lead-gen only: bottom conversion CTA */}
+        {isLeadgen && cfg.ctaWhatsApp && (
+          <div className="mt-12 bg-gray-900 rounded-2xl p-8 text-center text-white">
+            <h2 className="text-2xl font-bold mb-2">{cfg.name}</h2>
+            <p className="mb-6 text-gray-300">{cfg.ctaSubtext}</p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <a
+                href={wa}
+                target="_blank"
+                rel="noreferrer"
+                className="font-bold px-8 py-3 rounded-xl transition-colors text-white"
+                style={{ background: "#25D366" }}
+              >
+                {cfg.ctaText}
+              </a>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Related posts */}
         {relatedPosts.length > 0 && (
           <div className="mt-14">
             <h2 className="text-xl font-bold text-gray-900 mb-6">
-              Related FBR Guides
+              Related Posts
             </h2>
             <div className="grid gap-5 md:grid-cols-3">
               {relatedPosts.map((post) => (
@@ -284,13 +269,13 @@ export default async function BlogPostPage({ params }: Props) {
                   href={`/blog/${post.slug}`}
                   className="bg-gray-50 border border-gray-200 rounded-xl p-5 hover:shadow-md transition-shadow no-underline flex flex-col"
                 >
-                  <p className="text-xs font-semibold mb-2" style={{ color: "#F97316" }}>
+                  <p className="text-xs font-semibold mb-2" style={{ color: accent }}>
                     {post.readTime} min read
                   </p>
                   <h3 className="text-sm font-bold text-gray-900 line-clamp-2 mb-2 flex-1">
                     {post.title}
                   </h3>
-                  <span className="text-xs font-semibold" style={{ color: "#F97316" }}>
+                  <span className="text-xs font-semibold" style={{ color: accent }}>
                     Read more →
                   </span>
                 </Link>
@@ -301,11 +286,10 @@ export default async function BlogPostPage({ params }: Props) {
       </article>
 
       <footer className="border-t border-gray-200 mt-16 py-8 text-center text-sm text-gray-500">
-        <p>© {new Date().getFullYear()} Phelix ERP · FBR-Compliant POS System Pakistan</p>
+        <p>© {new Date().getFullYear()} {cfg.name} · {cfg.niche}</p>
         <div className="flex gap-6 justify-center mt-3">
           <Link href="/" className="hover:text-gray-700">Home</Link>
           <Link href="/blog" className="hover:text-gray-700">Blog</Link>
-          <Link href="/fbr-checker" className="hover:text-gray-700">FBR Checker</Link>
         </div>
       </footer>
     </main>

@@ -27,6 +27,7 @@ import type {
 } from "@/lib/types";
 import { isUnderBudget, recordUsage } from "./costGuard";
 import { getSiteConfig } from "./siteConfig";
+import { getActivePack } from "@/lib/niche/registry";
 
 // ─── Groq settings ────────────────────────────────────────────────────────────
 
@@ -72,9 +73,9 @@ export function buildProgSlug(
 
 // ─── Groq prompts ─────────────────────────────────────────────────────────────
 
-function buildSystemPrompt(): string {
-  return `You are a local SEO content expert specialising in Pakistani business software.
-Write compelling, locally-relevant content for POS and ERP software landing pages.
+function buildSystemPrompt(siteConfig: SiteConfig): string {
+  return `You are a local SEO content expert specialising in ${siteConfig.niche} in ${siteConfig.country}.
+Write compelling, locally-relevant landing page content for ${siteConfig.name}.
 Your content must feel written by someone who knows the specific city and industry well.
 CRITICAL: Respond ONLY with a JSON object. No markdown. No explanation. Pure JSON only.`;
 }
@@ -90,7 +91,7 @@ function buildUserPrompt(
   const siteName = siteConfig.name;
 
   return `Generate a programmatic landing page for:
-- City: ${city} (Pakistan)
+- City: ${city} (${siteConfig.country})
 - Service: ${service}
 - Industry: ${industry} businesses
 - Company: ${siteName}
@@ -188,7 +189,7 @@ async function callGroqProgrammatic(
         temperature: 0.65,
         max_tokens:  3000,
         messages: [
-          { role: "system", content: buildSystemPrompt() },
+          { role: "system", content: buildSystemPrompt(siteConfig) },
           { role: "user",   content: buildUserPrompt(city, service, industry, siteConfig) },
         ],
       }),
@@ -255,7 +256,7 @@ function buildLocalBusinessSchema(
     "areaServed": {
       "@type":       "City",
       "name":        city,
-      "containedIn": { "@type": "Country", "name": "Pakistan" },
+      "containedIn": { "@type": "Country", "name": siteConfig.country },
     },
     "applicationCategory": "BusinessApplication",
     "operatingSystem":     "Web, Android, iOS",
@@ -354,6 +355,11 @@ export function getNextProgrammaticCombination(
   existingSlugs: string[],
   siteConfig:    SiteConfig
 ): { city: string; service: string; industry: string } | null {
+  // City × service × industry pages are a local-business lead-gen construct
+  // (and depend on a city list). AdSense packs don't generate them — they grow
+  // via informational articles instead.
+  if (getActivePack().monetization.mode === "adsense") return null;
+
   const existing = new Set(existingSlugs);
 
   // Priority cities (subset of siteConfig.cities)

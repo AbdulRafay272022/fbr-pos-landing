@@ -14,6 +14,7 @@ import { readJsonFromGitHub, atomicCommit } from "@/lib/githubApi";
 
 export async function GET(req: NextRequest) {
   const cronSecret = process.env.CRON_SECRET;
+  if (!cronSecret) return new Response("Unauthorized: CRON_SECRET not configured", { status: 503 });
   if (cronSecret) {
     const auth = req.headers.get("authorization");
     if (auth && auth !== `Bearer ${cronSecret}`) {
