@@ -7,16 +7,16 @@
       "clicks": 0,
       "ctr": 0,
       "position": 9.555555555555555,
-      "fetchedAt": "2026-06-14T02:14:50.009Z"
+      "fetchedAt": "2026-06-15T02:44:21.009Z"
     },
     {
       "slug": "how-to-setup-fbr-penalty-in-pakistan",
       "url": "https://phelixerp.online/blog/how-to-setup-fbr-penalty-in-pakistan",
-      "impressions": 20,
+      "impressions": 19,
       "clicks": 0,
       "ctr": 0,
-      "position": 8.5,
-      "fetchedAt": "2026-06-14T02:14:50.009Z"
+      "position": 8.789473684210527,
+      "fetchedAt": "2026-06-15T02:44:21.009Z"
     },
     {
       "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
@@ -25,7 +25,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 5.5,
-      "fetchedAt": "2026-06-14T02:14:50.009Z"
+      "fetchedAt": "2026-06-15T02:44:21.009Z"
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
@@ -34,7 +34,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 5,
-      "fetchedAt": "2026-06-14T02:14:50.009Z"
+      "fetchedAt": "2026-06-15T02:44:21.009Z"
     },
     {
       "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
@@ -43,7 +43,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 2,
-      "fetchedAt": "2026-06-14T02:14:50.009Z"
+      "fetchedAt": "2026-06-15T02:44:21.009Z"
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
@@ -52,23 +52,23 @@
       "clicks": 0,
       "ctr": 0,
       "position": 6.333333333333333,
-      "fetchedAt": "2026-06-14T02:14:50.009Z"
+      "fetchedAt": "2026-06-15T02:44:21.009Z"
     }
   ],
   "queries": [],
-  "lastFetchedAt": "2026-06-14T02:14:50.009Z",
+  "lastFetchedAt": "2026-06-15T02:44:21.009Z",
   "summary": {
-    "totalImpressions": 38,
+    "totalImpressions": 37,
     "totalClicks": 0,
     "avgCTR": 0,
-    "avgPosition": 6.148148148148149
+    "avgPosition": 6.196393762183237
   },
   "topPages": [
     {
       "slug": "how-to-setup-fbr-penalty-in-pakistan",
-      "impressions": 20,
+      "impressions": 19,
       "ctr": 0,
-      "position": 8.5
+      "position": 8.789473684210527
     },
     {
       "slug": "fbr-pos-system-restaurants-pakistan-2026",
