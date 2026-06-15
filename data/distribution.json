@@ -293,8 +293,29 @@
         }
       ],
       "distributedAt": "2026-06-12T02:39:44.456Z"
+    },
+    {
+      "slug": "fbr-pos-system-retailers",
+      "title": "FBR POS System Retailers",
+      "blogUrl": "https://phelixerp.online/blog/fbr-pos-system-retailers",
+      "hook": "FBR POS System Retailers",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-06-15T02:44:20.660Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-06-15T02:44:20.660Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-06-15T02:44:20.660Z"
     }
   ],
-  "lastDistributedAt": "2026-06-12T02:39:44.456Z",
+  "lastDistributedAt": "2026-06-15T02:44:20.660Z",
   "totalDistributed": 0
 }
