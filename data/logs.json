@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "id": "mqd5irrq-sij78",
-      "ts": "2026-06-14T02:14:45.014Z",
+      "id": "mqem0eq6-4a6rl",
+      "ts": "2026-06-15T02:44:07.951Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mqd5irrn",
+        "runId": "run-mqem0eq3",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mqd5is59-5wpik",
-      "ts": "2026-06-14T02:14:45.501Z",
+      "id": "mqem0f4u-8a0c7",
+      "ts": "2026-06-15T02:44:08.478Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mqd5irrn",
+        "runId": "run-mqem0eq3",
         "shouldScrape": false,
         "shouldGenerate": true,
-        "shouldUpdate": false,
+        "shouldUpdate": true,
         "shouldFetchSeo": true,
         "shouldRefresh": true,
         "shouldOptimizeTitles": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4278 unused keywords, last scrape 6.0d ago (next forced refresh in 24d)",
-          "generate": "47.6h since last generation, 4278 keywords available",
-          "update": "skipped: last update 143.7h ago (min 168h)",
+          "scrape": "skipped: 4278 unused keywords, last scrape 7.0d ago (next forced refresh in 23d)",
+          "generate": "72.1h since last generation, 4278 keywords available",
+          "update": "168.2h since last update run",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,108 +48,122 @@
       }
     },
     {
-      "id": "mqd5iupx-tfuru",
-      "ts": "2026-06-14T02:14:48.837Z",
+      "id": "mqem0nmw-bseuo",
+      "ts": "2026-06-15T02:44:19.496Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 2069,
+      "success": true,
+      "slug": "fbr-pos-system-retailers",
+      "words": 1211,
+      "source": "template",
+      "durationMs": 9621,
       "details": {
-        "runId": "run-mqd5irrn"
+        "runId": "run-mqem0eq3"
       }
     },
     {
-      "id": "mqd5iwp3-h9c5b",
-      "ts": "2026-06-14T02:14:51.399Z",
+      "id": "mqem0ojn-8nsl0",
+      "ts": "2026-06-15T02:44:20.675Z",
+      "site": "Phelix ERP",
+      "event": "blog_updated",
+      "level": "info",
+      "success": true,
+      "durationMs": 1179,
+      "details": {
+        "runId": "run-mqem0eq3",
+        "updatedCount": 0
+      }
+    },
+    {
+      "id": "mqem0r69-n0b2b",
+      "ts": "2026-06-15T02:44:24.082Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2562,
+      "durationMs": 3406,
       "details": {
-        "runId": "run-mqd5irrn",
+        "runId": "run-mqem0eq3",
         "pages": 6,
-        "totalImpressions": 38
+        "totalImpressions": 37
       }
     },
     {
-      "id": "mqd5iwy8-cvl9f",
-      "ts": "2026-06-14T02:14:51.728Z",
+      "id": "mqem0rea-qire8",
+      "ts": "2026-06-15T02:44:24.370Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 329,
+      "durationMs": 288,
       "details": {
-        "runId": "run-mqd5irrn",
+        "runId": "run-mqem0eq3",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mqd5iy2x-3zumx",
-      "ts": "2026-06-14T02:14:53.193Z",
+      "id": "mqem0tj5-8343r",
+      "ts": "2026-06-15T02:44:27.137Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1465,
+      "durationMs": 2767,
       "details": {
-        "runId": "run-mqd5irrn",
-        "optimizedCount": 0
+        "runId": "run-mqem0eq3",
+        "optimizedCount": 1
       }
     },
     {
-      "id": "mqd5j465-162ay",
-      "ts": "2026-06-14T02:15:01.085Z",
+      "id": "mqem0uah-t5xhr",
+      "ts": "2026-06-15T02:44:28.121Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
-      "success": true,
-      "slug": "pos-system-for-retail-pakistan",
-      "durationMs": 7892,
+      "success": false,
+      "durationMs": 984,
       "details": {
-        "runId": "run-mqd5irrn",
-        "pageType": "industry"
+        "runId": "run-mqem0eq3"
       }
     },
     {
-      "id": "mqd5j4ea-uhqmk",
-      "ts": "2026-06-14T02:15:01.378Z",
+      "id": "mqem0uj6-d41yj",
+      "ts": "2026-06-15T02:44:28.434Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 293,
+      "durationMs": 312,
       "details": {
-        "runId": "run-mqd5irrn",
+        "runId": "run-mqem0eq3",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mqd5j5iw-3e7as",
-      "ts": "2026-06-14T02:15:02.840Z",
+      "id": "mqem0vlf-gsy7u",
+      "ts": "2026-06-15T02:44:29.811Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1461,
+      "durationMs": 1377,
       "details": {
-        "runId": "run-mqd5irrn",
+        "runId": "run-mqem0eq3",
         "decaysFound": 0
       }
     },
     {
-      "id": "mqd5j9k1-5r28n",
-      "ts": "2026-06-14T02:15:08.065Z",
+      "id": "mqem0zkh-4js00",
+      "ts": "2026-06-15T02:44:34.961Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": true,
-      "slug": "restaurant-pos-restaurant-karachi",
-      "durationMs": 5225,
+      "slug": "restaurant-pos-retail-karachi",
+      "durationMs": 5150,
       "details": {
-        "runId": "run-mqd5irrn",
+        "runId": "run-mqem0eq3",
         "city": "karachi",
         "service": "Restaurant POS"
       }
