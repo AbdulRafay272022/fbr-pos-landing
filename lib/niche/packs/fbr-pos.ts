@@ -76,13 +76,35 @@ function buildTemplate(input: TemplateInput): TemplateOutput {
 <li>Deliberate evasion: STRN suspension, business seal, criminal referral</li>
 </ul>
 
+<h2>Staying Compliant After You Go Live</h2>
+<p>Getting integrated is the start, not the finish. FBR compliance is an ongoing obligation, and the businesses that avoid penalties are the ones that build a few simple habits after go-live. The first is a monthly reconciliation: log in to your IRIS dashboard and confirm that the number of invoices it shows matches your own sales records. Mismatches are almost always caused by rejected or unsynced invoices, and catching them early is far cheaper than explaining them during an audit.</p>
+<p>The second habit is keeping your software current. FBR amends its rules and issues new SROs over time, and an integration that worked last year can quietly break when an endpoint or tax rule changes. A provider that ships regular updates protects you from this; one that has gone silent is a liability. Finally, keep your STRN details, business address, and terminal count accurate in IRIS — outdated registration information is a common and entirely avoidable trigger for FBR queries. Treat compliance as a light monthly routine rather than a one-time project, and it stays effortless.</p>
+
+<h2>What FBR POS Integration Costs and How Long It Takes</h2>
+<p>Cost is the first question most business owners ask, and the honest answer is that compliant POS software in Pakistan is far cheaper than a single FBR penalty. Most cloud-based plans fall in the PKR 1,500–5,000 per month range depending on the number of branches and terminals, with multi-branch chains paying more for centralised reporting. There is usually no expensive proprietary hardware to buy — the software runs on devices you already own.</p>
+<p>Timeline matters just as much as price. A straightforward single-branch setup — STRN verification, IRIS registration, API credential configuration, tax-rate mapping, and a short staff walkthrough — is typically completed within 24 to 48 hours. Multi-branch rollouts take longer because each location needs its own terminal registration and testing. The key is to budget time for test transactions before going live, rather than rushing a deadline and discovering submission errors with real customers at the counter.</p>
+
+<h2>How to Choose an FBR-Compliant POS Provider</h2>
+<p>Not every system advertised as "FBR ready" actually maintains a live IRIS integration. Before committing, confirm the provider connects to the official FBR IRIS API, issues QR-coded invoices that verify on the FBR portal, and pushes regular updates as regulations change. A provider whose software has not been updated in over a year is a compliance risk, because FBR requirements and SRO amendments evolve.</p>
+<ul>
+<li><strong>Live IRIS integration</strong> — ask to see a real verified invoice, not a screenshot</li>
+<li><strong>Offline resilience</strong> — confirm queued sales sync with their original timestamps</li>
+<li><strong>Support response time</strong> — token and sync issues need same-day help</li>
+<li><strong>Transparent pricing</strong> — no hidden per-invoice or per-branch surprises</li>
+<li><strong>Migration help</strong> — moving your existing catalogue and stock should be included</li>
+</ul>
+
 <h2>Frequently Asked Questions</h2>
 <h3>Do I need special hardware for FBR POS integration?</h3>
 <p>No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. A thermal printer is optional — QR codes can be sent via WhatsApp or SMS.</p>
 <h3>What happens if my internet goes down during billing?</h3>
-<p>Transactions are stored locally during outages and automatically sync to FBR IRIS with correct original timestamps when connectivity returns.</p>
+<p>Transactions are stored locally during outages and automatically sync to FBR IRIS with correct original timestamps when connectivity returns, so you stay compliant without interrupting sales.</p>
 <h3>How long does the full setup take?</h3>
-<p>A typical FBR IRIS setup — registration, API integration, tax rate configuration, and staff training — completes within 24 hours.</p>`;
+<p>A typical FBR IRIS setup — registration, API integration, tax rate configuration, and staff training — completes within 24 hours for a single branch.</p>
+<h3>What are the FBR penalties for non-compliance?</h3>
+<p>Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, alongside STRN suspension and, in serious cases, forced business closure.</p>
+<h3>Is the integration officially FBR approved?</h3>
+<p>Compliant systems integrate directly with the FBR IRIS API using official endpoints, and every invoice carries a valid FBR verification QR code confirming submission to FBR.</p>`;
 
   const faqs = [
     {
