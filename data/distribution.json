@@ -314,8 +314,29 @@
         }
       ],
       "distributedAt": "2026-06-15T02:44:20.660Z"
+    },
+    {
+      "slug": "services-for-fbr-penalty-pakistan",
+      "title": "FBR Penalty Services Pakistan",
+      "blogUrl": "https://phelixerp.online/blog/services-for-fbr-penalty-pakistan",
+      "hook": "FBR Penalty Services Pakistan",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-06-17T02:57:39.939Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-06-17T02:57:39.939Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-06-17T02:57:39.940Z"
     }
   ],
-  "lastDistributedAt": "2026-06-15T02:44:20.660Z",
+  "lastDistributedAt": "2026-06-17T02:57:39.940Z",
   "totalDistributed": 0
 }
