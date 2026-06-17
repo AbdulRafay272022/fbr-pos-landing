@@ -41,8 +41,15 @@
       "cluster": "retail-industry",
       "pageType": "industry",
       "publishedAt": "2026-06-14T02:14:59.560Z"
+    },
+    {
+      "slug": "pos-system-for-restaurant-pakistan",
+      "title": "Best POS System for Restaurant Pakistan - Phelix ERP",
+      "cluster": "restaurant-industry",
+      "pageType": "industry",
+      "publishedAt": "2026-06-17T02:57:53.131Z"
     }
   ],
-  "totalPublished": 6,
-  "lastGeneratedAt": "2026-06-14T02:14:59.633Z"
+  "totalPublished": 7,
+  "lastGeneratedAt": "2026-06-17T02:57:53.208Z"
 }
