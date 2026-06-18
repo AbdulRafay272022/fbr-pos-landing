@@ -607,6 +607,15 @@
       "promptTokens": 1362,
       "completionTokens": 2401,
       "totalTokens": 3763
+    },
+    {
+      "ts": "2026-06-18T02:38:23.657Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-software-download",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -615,8 +624,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 78341,
-      "calls": 27
+      "tokens": 78741,
+      "calls": 28
     }
   },
   "monthlyTokenBudget": 5000000,
