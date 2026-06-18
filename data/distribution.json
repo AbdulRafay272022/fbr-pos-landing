@@ -335,8 +335,29 @@
         }
       ],
       "distributedAt": "2026-06-17T02:57:39.940Z"
+    },
+    {
+      "slug": "fbr-pos-software-download",
+      "title": "FBR POS Software Download Guide",
+      "blogUrl": "https://phelixerp.online/blog/fbr-pos-software-download",
+      "hook": "FBR POS Software Download Guide",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-06-18T02:38:19.157Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-06-18T02:38:19.157Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-06-18T02:38:19.157Z"
     }
   ],
-  "lastDistributedAt": "2026-06-17T02:57:39.940Z",
+  "lastDistributedAt": "2026-06-18T02:38:19.157Z",
   "totalDistributed": 0
 }
