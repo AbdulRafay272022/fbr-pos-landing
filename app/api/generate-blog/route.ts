@@ -1005,6 +1005,14 @@ export async function GET(req: NextRequest) {
   let finalMeta:  string = `${toTitleCase(selectedTopic.keyword)} — a practical, up-to-date guide.`;
   let source: "groq" | "template";
 
+  // Diagnostics surfaced in the response so we can see WHY a run fell back to
+  // template without needing the Vercel function logs.
+  const diag: Record<string, unknown> = {
+    keyword:       selectedTopic.keyword,
+    briefResolved: seoBrief.length > 0,
+    minWords,
+  };
+
   try {
     log("info", "Attempting Groq generation", {
       keyword:     selectedTopic.keyword,
@@ -1019,9 +1027,11 @@ export async function GET(req: NextRequest) {
     finalMeta  = result.blog.metaDescription ?? finalMeta;
 
     const words = countWords(content);
+    diag.groqWords = words;
     log("info", "Groq generation complete", { words });
 
     if (words < minWords) {
+      diag.fallbackReason = "groq_short";
       log("warn", "Groq output below minimum — using template", { words, minimum: minWords });
       content = generateTemplate(selectedTopic);
       faqs    = getTemplateFaqs(selectedTopic);
@@ -1031,6 +1041,8 @@ export async function GET(req: NextRequest) {
     }
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
+    diag.fallbackReason = "groq_error";
+    diag.groqError = message.slice(0, 300);
     log("warn", "Groq failed — using template fallback", { error: message, keyword: selectedTopic.keyword });
     console.error(JSON.stringify({
       ts:      new Date().toISOString(),
@@ -1047,6 +1059,10 @@ export async function GET(req: NextRequest) {
 
   // ── Quality gate ──────────────────────────────────────────────────────────
   const quality = validateContent(content, faqs, finalTitle, minWords);
+  if (source === "groq") {
+    diag.qualityScore    = quality.total;
+    diag.qualityFailures = quality.failureReasons;
+  }
   log("info", "Quality gate result", {
     score:          quality.total,
     passed:         quality.passed,
@@ -1059,6 +1075,7 @@ export async function GET(req: NextRequest) {
   if (!quality.passed) {
     // Attempt template as final fallback before rejecting
     if (source === "groq") {
+      diag.fallbackReason = "quality_failed";
       log("warn", "Quality gate failed on Groq output — falling back to template", {
         score: quality.total, reasons: quality.failureReasons,
       });
@@ -1266,5 +1283,6 @@ export async function GET(req: NextRequest) {
     words:    finalWords,
     readTime: blog.readTime,
     fromKeywordPool: consumedKeyword !== null,
+    diag:     { ...diag, fallbackReason: diag.fallbackReason ?? "none" },
   });
 }
