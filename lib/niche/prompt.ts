@@ -12,6 +12,10 @@ import type { NichePack } from "./types";
 export function buildSystemPrompt(pack: NichePack): string {
   const { prompt, name, country } = pack;
   const minWords = pack.thresholds.minWordCount;
+  // Ask Groq for ~40% above the gate. LLMs routinely undershoot their target
+  // word count by 15–20%; with zero margin (target == gate) the output keeps
+  // failing the floor and the template fires, producing near-duplicate posts.
+  const targetWords = Math.round(minWords * 1.4);
   const cityHint = pack.cities.slice(0, 6).join(", ");
   const lsi = prompt.lsiTerms.join(", ");
 
@@ -38,7 +42,7 @@ STRICT RULES — NEVER BREAK THESE:
 ${rules}
 ${cityHint ? `- Where it adds value, ground examples in real places (${cityHint})` : ""}
 
-MANDATORY CONTENT STRUCTURE (minimum ${minWords} words):
+MANDATORY CONTENT STRUCTURE (minimum ${targetWords} words — aim well above this):
 1. Introduction — hook with a real problem or stake (150–200 words)
 2. Core explanation — what the reader most needs to know first
 3. Step-by-step or how-to section — numbered, 5–8 concrete steps
@@ -63,7 +67,7 @@ FEATURED SNIPPET OPTIMISATION (mandatory):
 - FAQ questions must be the exact H2/H3 heading text, answer as the first paragraph beneath
 
 CONTENT QUALITY GATES:
-- Minimum ${minWords} words in content_markdown
+- Minimum ${targetWords} words in content_markdown (articles below this will be rejected)
 ${gates}
 - Must include one comparison table
 - Must include one numbered process (5+ steps)
@@ -100,7 +104,7 @@ export function buildUserInput(pack: NichePack, args: UserInputArgs): string {
   const cityExample = pack.cities[0];
 
   const note: string[] = [
-    `Write minimum ${pack.thresholds.minWordCount} words.`,
+    `Write at least ${Math.round(pack.thresholds.minWordCount * 1.4)} words of detailed, specific content.`,
     `Use [INTERNAL_LINK: "${internalTopicSuggestions}"] naturally in paragraph text.`,
   ];
   if (cityExample) note.push(`Where relevant, ground an example in ${cityExample} or another real place.`);
