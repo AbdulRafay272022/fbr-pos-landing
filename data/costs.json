@@ -616,6 +616,15 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-06-19T02:37:38.667Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-integration-system-failures",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -624,8 +633,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 78741,
-      "calls": 28
+      "tokens": 79141,
+      "calls": 29
     }
   },
   "monthlyTokenBudget": 5000000,
