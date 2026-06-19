@@ -181,7 +181,10 @@ export const fbrPosPack: NichePack = {
     toolText: "Check compliance score →",
   },
 
-  thresholds: { minWordCount: 1200 },
+  // Floor set to what llama-3.3-70b reliably delivers (~1000–1100 words). Set
+  // higher and Groq's real output gets rejected and the duplicate template
+  // fires instead — a unique 1000-word article beats a 1400-word duplicate.
+  thresholds: { minWordCount: 1000 },
 
   fallbackTopics: [
     { keyword: "FBR POS System for Pharmacies in Pakistan", slug: "fbr-pos-system-pharmacies-pakistan-2026", industry: "Pharmacy / Medical Retail", businessType: "pharmacy", keywords: ["pharmacy POS Pakistan", "FBR POS pharmacy Pakistan", "medical store POS FBR"], internalTopics: ["FBR POS integration", "FBR invoice validation API", "FBR compliance checklist"] },
