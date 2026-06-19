@@ -398,8 +398,29 @@
         }
       ],
       "distributedAt": "2026-06-19T23:37:50.641Z"
+    },
+    {
+      "slug": "traders-difficulties-fbr-pos-system",
+      "title": "Traders' Difficulties with FBR POS System",
+      "blogUrl": "https://phelixerp.online/blog/traders-difficulties-fbr-pos-system",
+      "hook": "Traders' Difficulties with FBR POS System",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-06-19T23:40:43.414Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-06-19T23:40:43.414Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-06-19T23:40:43.415Z"
     }
   ],
-  "lastDistributedAt": "2026-06-19T23:37:50.641Z",
+  "lastDistributedAt": "2026-06-19T23:40:43.415Z",
   "totalDistributed": 0
 }
