@@ -48,8 +48,15 @@
       "cluster": "restaurant-industry",
       "pageType": "industry",
       "publishedAt": "2026-06-17T02:57:53.131Z"
+    },
+    {
+      "slug": "pos-system-for-pharmacy-pakistan",
+      "title": "POS System for Pharmacy Pakistan - FBR Compliant Solution",
+      "cluster": "retail-industry",
+      "pageType": "industry",
+      "publishedAt": "2026-06-19T02:37:46.818Z"
     }
   ],
-  "totalPublished": 7,
-  "lastGeneratedAt": "2026-06-17T02:57:53.208Z"
+  "totalPublished": 8,
+  "lastGeneratedAt": "2026-06-19T02:37:46.888Z"
 }
