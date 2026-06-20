@@ -149,7 +149,7 @@ export const sportsPack: NichePack = {
 
   // See fbr-pos: floor aligned to what the model reliably delivers so unique
   // Groq content publishes instead of falling back to the template.
-  thresholds: { minWordCount: 900 },
+  thresholds: { minWordCount: 650 },
 
   clusters: [
     {

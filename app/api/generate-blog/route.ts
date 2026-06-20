@@ -458,7 +458,7 @@ async function generateWithGroq(
   topic:     TopicInput,
   blogIndex: BlogIndex[],
   seoBrief = ""        // ← passed in from resolveBrief(); no brief computation here
-): Promise<{ blog: Partial<BlogPost>; keywords: string[] }> {
+): Promise<{ blog: Partial<BlogPost>; keywords: string[]; gen: { draftWords: number; expandedWords: number | null; expanded: boolean; expandError?: string } }> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error("GROQ_API_KEY not configured");
 
@@ -484,6 +484,9 @@ async function generateWithGroq(
   // duplicate template fallback. Wrapped so a failed expansion keeps pass-1.
   const expandTarget = Math.round(pack.thresholds.minWordCount * 1.4);
   const draftWords = markdownWordCount(parsed.content_markdown ?? "");
+  const gen: { draftWords: number; expandedWords: number | null; expanded: boolean; expandError?: string } = {
+    draftWords, expandedWords: null, expanded: false,
+  };
   if (draftWords < expandTarget) {
     try {
       const expandUser = JSON.stringify({
@@ -496,17 +499,20 @@ async function generateWithGroq(
         buildExpandSystemPrompt(expandTarget), expandUser, apiKey, `${topic.keyword} (expand)`
       );
       const expandedWords = markdownWordCount(expanded.content_markdown ?? "");
+      gen.expandedWords = expandedWords;
       if (expanded.content_markdown && expandedWords > draftWords) {
         parsed = {
           ...parsed,
           content_markdown: expanded.content_markdown,
           faq: (expanded.faq?.length ?? 0) >= (parsed.faq?.length ?? 0) ? expanded.faq : parsed.faq,
         };
+        gen.expanded = true;
         log("info", "Groq expansion applied", { draftWords, expandedWords, target: expandTarget });
       } else {
         log("info", "Groq expansion did not lengthen — keeping draft", { draftWords, expandedWords });
       }
     } catch (err) {
+      gen.expandError = String(err).slice(0, 200);
       log("warn", "Groq expansion failed — keeping first draft", { error: String(err), draftWords });
     }
   }
@@ -539,6 +545,7 @@ async function generateWithGroq(
       faqs,
     },
     keywords: parsed.keywords_used ?? [],
+    gen,
   };
 }
 
@@ -1086,6 +1093,7 @@ export async function GET(req: NextRequest) {
 
     const words = countWords(content);
     diag.groqWords = words;
+    diag.gen = result.gen;
     log("info", "Groq generation complete", { words });
 
     if (words < minWords) {
