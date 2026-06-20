@@ -636,31 +636,13 @@
       "totalTokens": 3661
     },
     {
-      "ts": "2026-06-20T02:53:23.864Z",
-      "action": "title_optimize",
-      "slug": "fbr-penalty-rto-lahore-official",
+      "ts": "2026-06-20T02:53:31.731Z",
+      "action": "generate_landing",
+      "slug": "pos-system-for-clinic-pakistan",
       "model": "llama-3.3-70b-versatile",
-      "promptTokens": 300,
-      "completionTokens": 100,
-      "totalTokens": 400
-    },
-    {
-      "ts": "2026-06-20T02:53:24.350Z",
-      "action": "title_optimize",
-      "slug": "fbr-penalty-declared-value-reversal",
-      "model": "llama-3.3-70b-versatile",
-      "promptTokens": 300,
-      "completionTokens": 100,
-      "totalTokens": 400
-    },
-    {
-      "ts": "2026-06-20T02:53:24.845Z",
-      "action": "title_optimize",
-      "slug": "fbr-retail-sector-pos-system-issues",
-      "model": "llama-3.3-70b-versatile",
-      "promptTokens": 300,
-      "completionTokens": 100,
-      "totalTokens": 400
+      "promptTokens": 1362,
+      "completionTokens": 2272,
+      "totalTokens": 3634
     }
   ],
   "monthly": {
@@ -669,8 +651,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 84002,
-      "calls": 33
+      "tokens": 86436,
+      "calls": 31
     }
   },
   "monthlyTokenBudget": 5000000,

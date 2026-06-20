@@ -55,8 +55,15 @@
       "cluster": "retail-industry",
       "pageType": "industry",
       "publishedAt": "2026-06-19T02:37:46.818Z"
+    },
+    {
+      "slug": "pos-system-for-clinic-pakistan",
+      "title": "POS System for Clinic Pakistan - Phelix ERP",
+      "cluster": "retail-industry",
+      "pageType": "industry",
+      "publishedAt": "2026-06-20T02:53:31.732Z"
     }
   ],
-  "totalPublished": 8,
-  "lastGeneratedAt": "2026-06-19T02:37:46.888Z"
+  "totalPublished": 9,
+  "lastGeneratedAt": "2026-06-20T02:53:31.808Z"
 }
