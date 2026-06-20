@@ -487,7 +487,10 @@ async function generateWithGroq(
   const gen: { draftWords: number; expandedWords: number | null; expanded: boolean; expandError?: string } = {
     draftWords, expandedWords: null, expanded: false,
   };
-  if (draftWords < expandTarget) {
+  // Only spend a second Groq call when the draft is BELOW the publish floor —
+  // i.e. when expansion is actually needed to rescue it. Drafts already above
+  // the floor publish as-is, which avoids burning tokens (and hitting TPM 429s).
+  if (draftWords < pack.thresholds.minWordCount) {
     try {
       const expandUser = JSON.stringify({
         target_words:  expandTarget,
