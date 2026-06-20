@@ -419,8 +419,29 @@
         }
       ],
       "distributedAt": "2026-06-19T23:40:43.415Z"
+    },
+    {
+      "slug": "fbr-penalty-declared-value-reversal",
+      "title": "FBR Penalty Declared Value Reversal",
+      "blogUrl": "https://phelixerp.online/blog/fbr-penalty-declared-value-reversal",
+      "hook": "FBR Penalty Declared Value Reversal",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-06-20T00:13:53.400Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-06-20T00:13:53.400Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-06-20T00:13:53.400Z"
     }
   ],
-  "lastDistributedAt": "2026-06-19T23:40:43.415Z",
+  "lastDistributedAt": "2026-06-20T00:13:53.400Z",
   "totalDistributed": 0
 }
