@@ -337,6 +337,122 @@ async function resolveBrief(
 
 // ─── Groq generation ──────────────────────────────────────────────────────────
 
+/** Count words in a markdown string (via the HTML renderer, matching countWords). */
+function markdownWordCount(md: string): number {
+  return countWords(markdownToHtml(md ?? ""));
+}
+
+/**
+ * One Groq chat call that returns a parsed GroqBlogJson.
+ * Handles code-fence stripping, control-char escaping, truncated-JSON repair,
+ * and parse — throwing on failure so the caller can fall back to template.
+ */
+async function callGroqForBlog(
+  systemPrompt: string,
+  userInput:    string,
+  apiKey:       string,
+  keyword:      string,
+): Promise<GroqBlogJson> {
+  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      model:       "llama-3.3-70b-versatile",
+      messages: [
+        { role: "system", content: systemPrompt },
+        { role: "user",   content: userInput },
+      ],
+      max_tokens:  8000,
+      temperature: 0.7,
+    }),
+    signal: AbortSignal.timeout(45_000),
+  });
+
+  if (!response.ok) {
+    const errText = await response.text().catch(() => "unknown");
+    throw new Error(`Groq ${response.status}: ${errText}`);
+  }
+
+  const data = (await response.json()) as {
+    choices: { message: { content: string } }[];
+    usage?: { prompt_tokens: number; completion_tokens: number };
+  };
+
+  let rawContent = data.choices[0].message.content.trim();
+
+  console.warn(JSON.stringify({
+    ts: new Date().toISOString(),
+    event: "groq_usage",
+    prompt_tokens:     data.usage?.prompt_tokens,
+    completion_tokens: data.usage?.completion_tokens,
+    raw_length:        rawContent.length,
+    keyword,
+  }));
+
+  // Strip markdown code fences if model wrapped its output
+  rawContent = rawContent
+    .replace(/^```(?:json)?\s*/i, "")
+    .replace(/\s*```$/, "");
+
+  // Escape ALL control characters (U+0000-U+001F) inside JSON string values.
+  rawContent = rawContent.replace(/"(?:[^"\\]|\\[\s\S])*"/g, (match) =>
+    // eslint-disable-next-line no-control-regex
+    match.replace(/[\x00-\x1F]/g, (ch) => {
+      if (ch === "\n") return "\\n";
+      if (ch === "\r") return "\\r";
+      if (ch === "\t") return "\\t";
+      return "\\u" + ch.charCodeAt(0).toString(16).padStart(4, "0");
+    })
+  );
+
+  // Attempt to repair truncated JSON before parsing
+  let repairedContent = rawContent;
+  if (!rawContent.endsWith("}")) {
+    let openBraces = 0, openBrackets = 0, inString = false, escaped = false;
+    for (const ch of rawContent) {
+      if (escaped)      { escaped = false; continue; }
+      if (ch === "\\")  { escaped = true;  continue; }
+      if (ch === '"')   { inString = !inString; continue; }
+      if (inString)     { continue; }
+      if (ch === "{")   openBraces++;
+      if (ch === "}")   openBraces--;
+      if (ch === "[")   openBrackets++;
+      if (ch === "]")   openBrackets--;
+    }
+    if (inString)       repairedContent += '"';
+    for (let i = 0; i < openBrackets; i++) repairedContent += "]";
+    for (let i = 0; i < openBraces;   i++) repairedContent += "}";
+  }
+
+  try {
+    return JSON.parse(repairedContent) as GroqBlogJson;
+  } catch (parseErr) {
+    console.error(JSON.stringify({
+      ts:    new Date().toISOString(),
+      event: "groq_json_parse_failed",
+      error: String(parseErr),
+      raw_tail: rawContent.slice(-300),
+    }));
+    throw new Error(`Groq JSON parse failed: ${String(parseErr)}`);
+  }
+}
+
+/** System prompt for the expansion pass — turns a short draft into a full article. */
+function buildExpandSystemPrompt(targetWords: number): string {
+  return `You are an expert editor. You are given a draft article as JSON. EXPAND it to at least ${targetWords} words.
+
+RULES:
+- Keep the SAME JSON shape and the SAME headings, structure, and [INTERNAL_LINK: ...] placeholders.
+- Add depth to EVERY section: concrete examples, specific numbers, step detail, and nuance.
+- Add or lengthen FAQ answers (aim for 5–8 FAQs, each answer 40+ words).
+- Keep any comparison table and numbered steps; make them richer.
+- Do NOT remove content, do NOT shorten, do NOT change the title or slug.
+- Return JSON ONLY — no markdown fences, no preamble.`;
+}
+
 async function generateWithGroq(
   pack:      NichePack,
   topic:     TopicInput,
@@ -358,107 +474,41 @@ async function generateWithGroq(
     publishedBlogs: blogIndex.map((b) => ({ slug: b.slug, title: b.title })),
   });
 
-  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${apiKey}`,
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      model:       "llama-3.3-70b-versatile",
-      messages: [
-        { role: "system", content: systemPrompt },
-        { role: "user",   content: userInput },
-      ],
-      max_tokens:  8000,
-      temperature: 0.7,
-    }),
-    signal: AbortSignal.timeout(55_000),
-  });
+  // ── Pass 1: generate ───────────────────────────────────────────────────────
+  let parsed = await callGroqForBlog(systemPrompt, userInput, apiKey, topic.keyword);
 
-  if (!response.ok) {
-    const errText = await response.text().catch(() => "unknown");
-    throw new Error(`Groq ${response.status}: ${errText}`);
-  }
-
-  const data = (await response.json()) as {
-    choices: { message: { content: string } }[];
-    usage?: { prompt_tokens: number; completion_tokens: number };
-  };
-
-  let rawContent = data.choices[0].message.content.trim();
-
-  // Log token usage to help diagnose truncation
-  console.warn(JSON.stringify({
-    ts: new Date().toISOString(),
-    event: "groq_usage",
-    prompt_tokens:     data.usage?.prompt_tokens,
-    completion_tokens: data.usage?.completion_tokens,
-    raw_length:        rawContent.length,
-    keyword:           topic.keyword,
-  }));
-
-  // Strip markdown code fences if model wrapped its output
-  rawContent = rawContent
-    .replace(/^```(?:json)?\s*/i, "")
-    .replace(/\s*```$/, "");
-
-  // Escape ALL control characters (U+0000-U+001F) inside JSON string values.
-  // Groq sometimes embeds raw newlines, tabs, form-feeds, etc. in HTML content.
-  rawContent = rawContent.replace(/"(?:[^"\\]|\\[\s\S])*"/g, (match) =>
-    // eslint-disable-next-line no-control-regex
-    match.replace(/[\x00-\x1F]/g, (ch) => {
-      if (ch === "\n") return "\\n";
-      if (ch === "\r") return "\\r";
-      if (ch === "\t") return "\\t";
-      return "\\u" + ch.charCodeAt(0).toString(16).padStart(4, "0");
-    })
-  );
-
-  // Attempt to repair truncated JSON before parsing
-  let repairedContent = rawContent;
-  if (!rawContent.endsWith("}")) {
-    // Count open vs closed braces/brackets to close any unclosed structures
-    let openBraces   = 0;
-    let openBrackets = 0;
-    let inString     = false;
-    let escaped      = false;
-    for (const ch of rawContent) {
-      if (escaped)      { escaped = false; continue; }
-      if (ch === "\\")  { escaped = true;  continue; }
-      if (ch === '"')   { inString = !inString; continue; }
-      if (inString)     { continue; }
-      if (ch === "{")   openBraces++;
-      if (ch === "}")   openBraces--;
-      if (ch === "[")   openBrackets++;
-      if (ch === "]")   openBrackets--;
+  // ── Pass 2: expand (llama-3.3 frequently returns short drafts) ─────────────
+  // If the draft is below target, ask Groq to EXPAND it rather than regenerate —
+  // expansion is far more reliable at hitting length than a cold first attempt.
+  // This is what stops short drafts from failing the gate and triggering the
+  // duplicate template fallback. Wrapped so a failed expansion keeps pass-1.
+  const expandTarget = Math.round(pack.thresholds.minWordCount * 1.4);
+  const draftWords = markdownWordCount(parsed.content_markdown ?? "");
+  if (draftWords < expandTarget) {
+    try {
+      const expandUser = JSON.stringify({
+        target_words:  expandTarget,
+        current_words: draftWords,
+        keyword:       topic.keyword,
+        article:       parsed,
+      });
+      const expanded = await callGroqForBlog(
+        buildExpandSystemPrompt(expandTarget), expandUser, apiKey, `${topic.keyword} (expand)`
+      );
+      const expandedWords = markdownWordCount(expanded.content_markdown ?? "");
+      if (expanded.content_markdown && expandedWords > draftWords) {
+        parsed = {
+          ...parsed,
+          content_markdown: expanded.content_markdown,
+          faq: (expanded.faq?.length ?? 0) >= (parsed.faq?.length ?? 0) ? expanded.faq : parsed.faq,
+        };
+        log("info", "Groq expansion applied", { draftWords, expandedWords, target: expandTarget });
+      } else {
+        log("info", "Groq expansion did not lengthen — keeping draft", { draftWords, expandedWords });
+      }
+    } catch (err) {
+      log("warn", "Groq expansion failed — keeping first draft", { error: String(err), draftWords });
     }
-    // Close any unclosed strings, arrays, objects
-    if (inString)       repairedContent += '"';
-    for (let i = 0; i < openBrackets; i++) repairedContent += "]";
-    for (let i = 0; i < openBraces;   i++) repairedContent += "}";
-    if (repairedContent !== rawContent) {
-      console.warn(JSON.stringify({
-        ts: new Date().toISOString(),
-        event: "groq_json_repaired",
-        original_tail: rawContent.slice(-120),
-        repaired_tail: repairedContent.slice(-120),
-      }));
-    }
-  }
-
-  let parsed: GroqBlogJson;
-  try {
-    parsed = JSON.parse(repairedContent) as GroqBlogJson;
-  } catch (parseErr) {
-    // Log raw content tail for debugging then re-throw so outer catch uses template
-    console.error(JSON.stringify({
-      ts:    new Date().toISOString(),
-      event: "groq_json_parse_failed",
-      error: String(parseErr),
-      raw_tail: rawContent.slice(-300),
-    }));
-    throw new Error(`Groq JSON parse failed: ${String(parseErr)}`);
   }
 
   const aiSlug  = parsed.slug && isValidSlug(parsed.slug) ? parsed.slug : topic.slug;
