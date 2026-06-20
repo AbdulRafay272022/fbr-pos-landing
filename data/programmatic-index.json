@@ -153,8 +153,15 @@
       "service": "Restaurant POS",
       "industry": "retail",
       "publishedAt": "2026-06-15T02:44:33.647Z"
+    },
+    {
+      "slug": "restaurant-pos-pharmacy-karachi",
+      "city": "karachi",
+      "service": "Restaurant POS",
+      "industry": "pharmacy",
+      "publishedAt": "2026-06-20T02:53:38.764Z"
     }
   ],
-  "totalPublished": 22,
-  "lastGeneratedAt": "2026-06-15T02:44:33.647Z"
+  "totalPublished": 23,
+  "lastGeneratedAt": "2026-06-20T02:53:38.764Z"
 }
