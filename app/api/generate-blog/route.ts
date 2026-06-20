@@ -569,7 +569,8 @@ function getTemplateFaqs(topic: TopicInput): BlogFaq[] {
 async function selectTopic(
   token: string,
   owner: string,
-  repo: string
+  repo: string,
+  force = false,   // ?force=true (auth'd) bypasses the rest/refresh schedule for testing
 ): Promise<{
   topic: TopicInput;
   nextTopicIndex: number;
@@ -609,13 +610,16 @@ async function selectTopic(
         dayOfWeek: schedule.cadence.dayOfWeek,
       });
 
-      if (schedule.action === "rest") {
+      if (!force && schedule.action === "rest") {
         // Skip publishing today entirely
         throw new Error(`Schedule: ${schedule.reason}`);
       }
-      if (schedule.action === "refresh-existing") {
+      if (!force && schedule.action === "refresh-existing") {
         // Refresh-content cron handles this — skip blog generation
         throw new Error(`Schedule: ${schedule.reason}`);
+      }
+      if (force) {
+        log("info", "Schedule bypassed via ?force=true", { action: schedule.action });
       }
 
       // publish-pillar or publish-cluster → use the cluster-recommended keyword
@@ -1007,7 +1011,11 @@ export async function GET(req: NextRequest) {
     return NextResponse.json({ success: false, reason: "GitHub env vars not set" }, { status: 500 });
   }
 
-  log("info", "Blog generation started");
+  // ?force=true (auth required) bypasses the rest/refresh-day schedule — for
+  // manual testing on weekends. Cron never sets it, so normal cadence is intact.
+  const force = new URL(req.url).searchParams.get("force") === "true";
+
+  log("info", "Blog generation started", { force });
 
   // ── Select topic ──────────────────────────────────────────────────────────
   let selectedTopic: TopicInput;
@@ -1017,7 +1025,7 @@ export async function GET(req: NextRequest) {
 
   try {
     ({ topic: selectedTopic, nextTopicIndex, consumedKeyword, keywordsData } =
-      await selectTopic(token, owner, repo));
+      await selectTopic(token, owner, repo, force));
   } catch (err) {
     const message = err instanceof Error ? err.message : String(err);
     log("warn", message);
