@@ -160,8 +160,15 @@
       "service": "Restaurant POS",
       "industry": "pharmacy",
       "publishedAt": "2026-06-20T02:53:38.764Z"
+    },
+    {
+      "slug": "restaurant-pos-clothing-store-karachi",
+      "city": "karachi",
+      "service": "Restaurant POS",
+      "industry": "clothing store",
+      "publishedAt": "2026-06-21T02:43:44.961Z"
     }
   ],
-  "totalPublished": 23,
-  "lastGeneratedAt": "2026-06-20T02:53:38.764Z"
+  "totalPublished": 24,
+  "lastGeneratedAt": "2026-06-21T02:43:44.961Z"
 }
