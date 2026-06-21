@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "id": "mqlrj3df-h8wen",
-      "ts": "2026-06-20T02:53:01.011Z",
+      "id": "mqn6mk1n-98mie",
+      "ts": "2026-06-21T02:43:23.003Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mqlrj3dd",
+        "runId": "run-mqn6mk1k",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mqlrj3qp-xxult",
-      "ts": "2026-06-20T02:53:01.489Z",
+      "id": "mqn6mkeu-zzwa1",
+      "ts": "2026-06-21T02:43:23.478Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mqlrj3dd",
-        "shouldScrape": true,
+        "runId": "run-mqn6mk1k",
+        "shouldScrape": false,
         "shouldGenerate": true,
-        "shouldUpdate": true,
+        "shouldUpdate": false,
         "shouldFetchSeo": true,
         "shouldRefresh": true,
         "shouldOptimizeTitles": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "never scraped before",
+          "scrape": "skipped: 4277 unused keywords, last scrape 1.0d ago (next forced refresh in 29d)",
           "generate": "Infinityh since last generation, 4277 keywords available",
-          "update": "Infinityh since last update run",
+          "update": "skipped: last update 23.8h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,146 +48,108 @@
       }
     },
     {
-      "id": "mqlrj4q1-tgp94",
-      "ts": "2026-06-20T02:53:02.761Z",
-      "site": "Phelix ERP",
-      "event": "keyword_scraped",
-      "level": "info",
-      "success": true,
-      "details": {
-        "runId": "run-mqlrj3dd",
-        "action": "starting scrape"
-      }
-    },
-    {
-      "id": "mqlrjgye-nz4nk",
-      "ts": "2026-06-20T02:53:18.614Z",
-      "site": "Phelix ERP",
-      "event": "keyword_scraped",
-      "level": "info",
-      "success": true,
-      "durationMs": 15852,
-      "details": {
-        "runId": "run-mqlrj3dd",
-        "total": 4286
-      }
-    },
-    {
-      "id": "mqlrjhvj-pfrj5",
-      "ts": "2026-06-20T02:53:19.807Z",
+      "id": "mqn6mmyu-ylpnc",
+      "ts": "2026-06-21T02:43:26.790Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": false,
-      "durationMs": 1193,
+      "durationMs": 2078,
       "details": {
-        "runId": "run-mqlrj3dd"
+        "runId": "run-mqn6mk1k"
       }
     },
     {
-      "id": "mqlrjiqt-asftu",
-      "ts": "2026-06-20T02:53:20.933Z",
-      "site": "Phelix ERP",
-      "event": "blog_updated",
-      "level": "info",
-      "success": true,
-      "durationMs": 1126,
-      "details": {
-        "runId": "run-mqlrj3dd",
-        "updatedCount": 0
-      }
-    },
-    {
-      "id": "mqlrjkbb-mvai3",
-      "ts": "2026-06-20T02:53:22.967Z",
+      "id": "mqn6moyu-fx8wf",
+      "ts": "2026-06-21T02:43:29.382Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2034,
+      "durationMs": 2592,
       "details": {
-        "runId": "run-mqlrj3dd",
-        "pages": 5,
-        "totalImpressions": 29
+        "runId": "run-mqn6mk1k",
+        "pages": 4,
+        "totalImpressions": 28
       }
     },
     {
-      "id": "mqlrjkgj-oovmr",
-      "ts": "2026-06-20T02:53:23.155Z",
+      "id": "mqn6mp45-ik7bq",
+      "ts": "2026-06-21T02:43:29.573Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 188,
+      "durationMs": 191,
       "details": {
-        "runId": "run-mqlrj3dd",
+        "runId": "run-mqn6mk1k",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mqlrjms1-1wul1",
-      "ts": "2026-06-20T02:53:26.161Z",
+      "id": "mqn6mr5a-drcrd",
+      "ts": "2026-06-21T02:43:32.206Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 3006,
+      "durationMs": 2633,
       "details": {
-        "runId": "run-mqlrj3dd",
-        "optimizedCount": 3
+        "runId": "run-mqn6mk1k",
+        "optimizedCount": 2
       }
     },
     {
-      "id": "mqlrjs7n-ah8dl",
-      "ts": "2026-06-20T02:53:33.203Z",
+      "id": "mqn6mwec-feuxy",
+      "ts": "2026-06-21T02:43:39.012Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "slug": "pos-system-for-clinic-pakistan",
-      "durationMs": 7042,
+      "slug": "pos-system-for-clothing-store-pakistan",
+      "durationMs": 6806,
       "details": {
-        "runId": "run-mqlrj3dd",
+        "runId": "run-mqn6mk1k",
         "pageType": "industry"
       }
     },
     {
-      "id": "mqlrjshx-6qwk5",
-      "ts": "2026-06-20T02:53:33.573Z",
+      "id": "mqn6mwlh-zamqp",
+      "ts": "2026-06-21T02:43:39.269Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 370,
+      "durationMs": 257,
       "details": {
-        "runId": "run-mqlrj3dd",
+        "runId": "run-mqn6mk1k",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mqlrjtl4-mhtdb",
-      "ts": "2026-06-20T02:53:34.984Z",
+      "id": "mqn6mxom-hjlsm",
+      "ts": "2026-06-21T02:43:40.678Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1411,
+      "durationMs": 1407,
       "details": {
-        "runId": "run-mqlrj3dd",
+        "runId": "run-mqn6mk1k",
         "decaysFound": 0
       }
     },
     {
-      "id": "mqlrjxim-3omjs",
-      "ts": "2026-06-20T02:53:40.078Z",
+      "id": "mqn6n1y9-qgl8o",
+      "ts": "2026-06-21T02:43:46.209Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": true,
-      "slug": "restaurant-pos-pharmacy-karachi",
-      "durationMs": 5094,
+      "slug": "restaurant-pos-clothing-store-karachi",
+      "durationMs": 5531,
       "details": {
-        "runId": "run-mqlrj3dd",
+        "runId": "run-mqn6mk1k",
         "city": "karachi",
         "service": "Restaurant POS"
       }
