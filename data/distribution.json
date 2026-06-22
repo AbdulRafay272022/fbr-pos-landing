@@ -461,8 +461,29 @@
         }
       ],
       "distributedAt": "2026-06-20T00:22:13.757Z"
+    },
+    {
+      "slug": "best-fbr-pos-system-for-retail-in-lahore",
+      "title": "Best FBR POS System for Retail in Lahore",
+      "blogUrl": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-lahore",
+      "hook": "Best FBR POS System for Retail in Lahore",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-06-22T02:52:51.850Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-06-22T02:52:51.850Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-06-22T02:52:51.850Z"
     }
   ],
-  "lastDistributedAt": "2026-06-20T00:22:13.757Z",
+  "lastDistributedAt": "2026-06-22T02:52:51.850Z",
   "totalDistributed": 0
 }
