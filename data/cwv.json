@@ -152,6 +152,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online",
+        "fetchedAt": "2026-06-22T04:09:57.794Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi": [
@@ -1590,7 +1609,196 @@
           "PSI HTTP 429"
         ]
       }
+    ],
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-lahore": [
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-lahore",
+        "fetchedAt": "2026-06-22T04:09:58.914Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-penalty-rto-lahore-official": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-penalty-rto-lahore-official",
+        "fetchedAt": "2026-06-22T04:10:00.055Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-penalty-declared-value-reversal": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-penalty-declared-value-reversal",
+        "fetchedAt": "2026-06-22T04:10:01.182Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/traders-difficulties-fbr-pos-system": [
+      {
+        "url": "https://phelixerp.online/blog/traders-difficulties-fbr-pos-system",
+        "fetchedAt": "2026-06-22T04:10:02.304Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-retail-sector-pos-system-issues": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-retail-sector-pos-system-issues",
+        "fetchedAt": "2026-06-22T04:10:03.428Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-pos-invoicing-system": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-pos-invoicing-system",
+        "fetchedAt": "2026-06-22T04:10:04.566Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-pos-integration-system-failures": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-pos-integration-system-failures",
+        "fetchedAt": "2026-06-22T04:10:05.687Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-pos-software-download": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-pos-software-download",
+        "fetchedAt": "2026-06-22T04:10:06.810Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/services-for-fbr-penalty-pakistan": [
+      {
+        "url": "https://phelixerp.online/blog/services-for-fbr-penalty-pakistan",
+        "fetchedAt": "2026-06-22T04:10:07.929Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
     ]
   },
-  "lastFullAuditAt": "2026-06-15T04:27:59.321Z"
+  "lastFullAuditAt": "2026-06-22T04:10:07.929Z"
 }
