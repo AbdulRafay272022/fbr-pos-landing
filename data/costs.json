@@ -686,6 +686,24 @@
       "promptTokens": 1114,
       "completionTokens": 1719,
       "totalTokens": 2833
+    },
+    {
+      "ts": "2026-06-22T02:52:56.812Z",
+      "action": "title_optimize",
+      "slug": "best-fbr-pos-system-for-retail-in-lahore",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-06-22T02:52:57.812Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-invoicing-system",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -694,8 +712,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 96397,
-      "calls": 36
+      "tokens": 97197,
+      "calls": 38
     }
   },
   "monthlyTokenBudget": 5000000,
