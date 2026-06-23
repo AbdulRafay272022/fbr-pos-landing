@@ -704,6 +704,15 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-06-23T02:24:09.930Z",
+      "action": "title_optimize",
+      "slug": "fbr-penalty-for-late-filing",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -712,8 +721,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 97197,
-      "calls": 38
+      "tokens": 97597,
+      "calls": 39
     }
   },
   "monthlyTokenBudget": 5000000,
