@@ -482,8 +482,29 @@
         }
       ],
       "distributedAt": "2026-06-22T02:52:51.850Z"
+    },
+    {
+      "slug": "fbr-penalty-for-late-filing",
+      "title": "FBR Penalty for Late Filing: A Guide for Pakistani Businesses",
+      "blogUrl": "https://phelixerp.online/blog/fbr-penalty-for-late-filing",
+      "hook": "FBR Penalty for Late Filing: A Guide for Pakistani Businesses",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-06-23T02:24:04.795Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-06-23T02:24:04.795Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-06-23T02:24:04.795Z"
     }
   ],
-  "lastDistributedAt": "2026-06-22T02:52:51.850Z",
+  "lastDistributedAt": "2026-06-23T02:24:04.795Z",
   "totalDistributed": 0
 }
