@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mqomeb08-fr6fj",
-      "ts": "2026-06-22T02:52:38.072Z",
+      "id": "mqq0t5wz-n14bo",
+      "ts": "2026-06-23T02:23:52.115Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mqomeb05",
+        "runId": "run-mqq0t5ww",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mqomebdf-efmhc",
-      "ts": "2026-06-22T02:52:38.547Z",
+      "id": "mqq0t6au-tt0zq",
+      "ts": "2026-06-23T02:23:52.614Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mqomeb05",
+        "runId": "run-mqq0t5ww",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4277 unused keywords, last scrape 2.0d ago (next forced refresh in 28d)",
-          "generate": "Infinityh since last generation, 4277 keywords available",
-          "update": "skipped: last update 48.0h ago (min 168h)",
+          "scrape": "skipped: 4276 unused keywords, last scrape 3.0d ago (next forced refresh in 27d)",
+          "generate": "23.5h since last generation, 4276 keywords available",
+          "update": "skipped: last update 71.5h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,108 +48,108 @@
       }
     },
     {
-      "id": "mqomekmg-ctle6",
-      "ts": "2026-06-22T02:52:50.536Z",
+      "id": "mqq0tesp-tx5yn",
+      "ts": "2026-06-23T02:24:03.625Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "best-fbr-pos-system-for-retail-in-lahore",
-      "words": 1019,
+      "slug": "fbr-penalty-for-late-filing",
+      "words": 706,
       "source": "groq",
-      "durationMs": 10429,
+      "durationMs": 9564,
       "details": {
-        "runId": "run-mqomeb05"
+        "runId": "run-mqq0t5ww"
       }
     },
     {
-      "id": "mqomeoed-k9sub",
-      "ts": "2026-06-22T02:52:55.429Z",
+      "id": "mqq0tiol-luhbc",
+      "ts": "2026-06-23T02:24:08.661Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 4893,
+      "durationMs": 5035,
       "details": {
-        "runId": "run-mqomeb05",
+        "runId": "run-mqq0t5ww",
         "pages": 4,
-        "totalImpressions": 27
+        "totalImpressions": 26
       }
     },
     {
-      "id": "mqomeom4-0etit",
-      "ts": "2026-06-22T02:52:55.708Z",
+      "id": "mqq0tj1h-ayudy",
+      "ts": "2026-06-23T02:24:09.125Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 279,
+      "durationMs": 464,
       "details": {
-        "runId": "run-mqomeb05",
+        "runId": "run-mqq0t5ww",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mqomerdk-6jcyd",
-      "ts": "2026-06-22T02:52:59.288Z",
+      "id": "mqq0tlb9-8n5e0",
+      "ts": "2026-06-23T02:24:12.069Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 3580,
+      "durationMs": 2944,
       "details": {
-        "runId": "run-mqomeb05",
-        "optimizedCount": 2
+        "runId": "run-mqq0t5ww",
+        "optimizedCount": 1
       }
     },
     {
-      "id": "mqomerqv-pp1z3",
-      "ts": "2026-06-22T02:52:59.767Z",
+      "id": "mqq0tm7j-cwyt3",
+      "ts": "2026-06-23T02:24:13.231Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 478,
+      "durationMs": 1162,
       "details": {
-        "runId": "run-mqomeb05"
+        "runId": "run-mqq0t5ww"
       }
     },
     {
-      "id": "mqomes1n-0k76u",
-      "ts": "2026-06-22T02:53:00.155Z",
+      "id": "mqq0tmff-a6uwh",
+      "ts": "2026-06-23T02:24:13.515Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 388,
+      "durationMs": 284,
       "details": {
-        "runId": "run-mqomeb05",
+        "runId": "run-mqq0t5ww",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mqomeukv-sisil",
-      "ts": "2026-06-22T02:53:03.439Z",
+      "id": "mqq0tnpo-o6m8j",
+      "ts": "2026-06-23T02:24:15.180Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 3284,
+      "durationMs": 1665,
       "details": {
-        "runId": "run-mqomeb05",
+        "runId": "run-mqq0t5ww",
         "decaysFound": 0
       }
     },
     {
-      "id": "mqomeurl-rdqwi",
-      "ts": "2026-06-22T02:53:03.681Z",
+      "id": "mqq0tnx6-ht1ej",
+      "ts": "2026-06-23T02:24:15.450Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 242,
+      "durationMs": 269,
       "details": {
-        "runId": "run-mqomeb05"
+        "runId": "run-mqq0t5ww"
       }
     }
   ],
