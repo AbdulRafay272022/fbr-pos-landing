@@ -524,8 +524,29 @@
         }
       ],
       "distributedAt": "2026-06-25T02:40:49.713Z"
+    },
+    {
+      "slug": "fbr-penalty-rollback-customs",
+      "title": "FBR Penalty Rollback Customs",
+      "blogUrl": "https://phelixerp.online/blog/fbr-penalty-rollback-customs",
+      "hook": "FBR Penalty Rollback Customs",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-06-26T02:31:29.393Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-06-26T02:31:29.393Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-06-26T02:31:29.393Z"
     }
   ],
-  "lastDistributedAt": "2026-06-25T02:40:49.713Z",
+  "lastDistributedAt": "2026-06-26T02:31:29.393Z",
   "totalDistributed": 0
 }
