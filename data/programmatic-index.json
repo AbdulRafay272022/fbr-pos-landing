@@ -167,8 +167,15 @@
       "service": "Restaurant POS",
       "industry": "clothing store",
       "publishedAt": "2026-06-21T02:43:44.961Z"
+    },
+    {
+      "slug": "restaurant-pos-grocery-store-karachi",
+      "city": "karachi",
+      "service": "Restaurant POS",
+      "industry": "grocery store",
+      "publishedAt": "2026-06-26T02:31:41.900Z"
     }
   ],
-  "totalPublished": 24,
-  "lastGeneratedAt": "2026-06-21T02:43:44.961Z"
+  "totalPublished": 25,
+  "lastGeneratedAt": "2026-06-26T02:31:41.900Z"
 }
