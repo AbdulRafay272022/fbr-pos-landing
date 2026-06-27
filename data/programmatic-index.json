@@ -174,8 +174,15 @@
       "service": "Restaurant POS",
       "industry": "grocery store",
       "publishedAt": "2026-06-26T02:31:41.900Z"
+    },
+    {
+      "slug": "retail-management-software-restaurant-karachi",
+      "city": "karachi",
+      "service": "Retail Management Software",
+      "industry": "restaurant",
+      "publishedAt": "2026-06-27T02:07:05.063Z"
     }
   ],
-  "totalPublished": 25,
-  "lastGeneratedAt": "2026-06-26T02:31:41.900Z"
+  "totalPublished": 26,
+  "lastGeneratedAt": "2026-06-27T02:07:05.063Z"
 }
