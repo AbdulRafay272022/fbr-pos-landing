@@ -1,9 +1,9 @@
 {
   "lastTopicIndex": -1,
   "agent": {
-    "isRunning": false,
-    "lockedAt": null,
-    "lockedBy": null
+    "isRunning": true,
+    "lockedAt": "2026-06-28T02:01:44.536Z",
+    "lockedBy": "run-mqx57yj3"
   },
   "stats": {
     "lastScrapeAt": "2026-06-20T02:53:18.614Z",
@@ -11,47 +11,6 @@
     "lastUpdateAt": "2026-06-20T02:53:20.933Z",
     "blogsGeneratedTotal": 4,
     "blogsUpdatedTotal": 0,
-    "keywordsUsedTotal": 0,
-    "lastSeoFetchAt": "2026-06-27T02:06:49.145Z",
-    "totalImpressions": 26,
-    "avgCTR": 0,
-    "topPages": [
-      {
-        "slug": "how-to-setup-fbr-penalty-in-pakistan",
-        "impressions": 10,
-        "ctr": 0,
-        "position": 8.9
-      },
-      {
-        "slug": "fbr-pos-system-restaurants-pakistan-2026",
-        "impressions": 9,
-        "ctr": 0,
-        "position": 10.333333333333334
-      },
-      {
-        "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
-        "impressions": 5,
-        "ctr": 0,
-        "position": 8.6
-      },
-      {
-        "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
-        "impressions": 2,
-        "ctr": 0,
-        "position": 6.5
-      }
-    ],
-    "lastRefreshAt": "2026-06-27T02:06:49.421Z",
-    "refreshesTotal": 0,
-    "lastTitleOptimizeAt": "2026-06-27T02:06:52.218Z",
-    "titlesOptimizedTotal": 1,
-    "lastLandingGenerateAt": "2026-06-27T02:06:59.272Z",
-    "landingsGeneratedTotal": 1,
-    "lastConversionOptAt": "2026-06-27T02:06:59.556Z",
-    "conversionsOptimizedTotal": 0,
-    "lastDecayDetectAt": "2026-06-27T02:07:01.095Z",
-    "decaysDetectedTotal": 0,
-    "lastProgGenerateAt": "2026-06-27T02:07:06.429Z",
-    "programmaticGeneratedTotal": 1
+    "keywordsUsedTotal": 0
   }
 }
