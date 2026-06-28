@@ -3,11 +3,11 @@
     {
       "slug": "fbr-pos-system-restaurants-pakistan-2026",
       "url": "https://phelixerp.online/blog/fbr-pos-system-restaurants-pakistan-2026",
-      "impressions": 9,
+      "impressions": 10,
       "clicks": 0,
       "ctr": 0,
-      "position": 10.333333333333334,
-      "fetchedAt": "2026-06-27T02:06:47.762Z"
+      "position": 10,
+      "fetchedAt": "2026-06-28T02:01:49.745Z"
     },
     {
       "slug": "how-to-setup-fbr-penalty-in-pakistan",
@@ -16,7 +16,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 8.9,
-      "fetchedAt": "2026-06-27T02:06:47.762Z"
+      "fetchedAt": "2026-06-28T02:01:49.745Z"
     },
     {
       "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
@@ -25,7 +25,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 6.5,
-      "fetchedAt": "2026-06-27T02:06:47.762Z"
+      "fetchedAt": "2026-06-28T02:01:49.745Z"
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
@@ -34,29 +34,29 @@
       "clicks": 0,
       "ctr": 0,
       "position": 8.6,
-      "fetchedAt": "2026-06-27T02:06:47.762Z"
+      "fetchedAt": "2026-06-28T02:01:49.745Z"
     }
   ],
   "queries": [],
-  "lastFetchedAt": "2026-06-27T02:06:47.762Z",
+  "lastFetchedAt": "2026-06-28T02:01:49.745Z",
   "summary": {
-    "totalImpressions": 26,
+    "totalImpressions": 27,
     "totalClicks": 0,
     "avgCTR": 0,
-    "avgPosition": 8.583333333333334
+    "avgPosition": 8.5
   },
   "topPages": [
+    {
+      "slug": "fbr-pos-system-restaurants-pakistan-2026",
+      "impressions": 10,
+      "ctr": 0,
+      "position": 10
+    },
     {
       "slug": "how-to-setup-fbr-penalty-in-pakistan",
       "impressions": 10,
       "ctr": 0,
       "position": 8.9
-    },
-    {
-      "slug": "fbr-pos-system-restaurants-pakistan-2026",
-      "impressions": 9,
-      "ctr": 0,
-      "position": 10.333333333333334
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
