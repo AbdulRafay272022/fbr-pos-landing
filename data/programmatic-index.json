@@ -181,8 +181,15 @@
       "service": "Retail Management Software",
       "industry": "restaurant",
       "publishedAt": "2026-06-27T02:07:05.063Z"
+    },
+    {
+      "slug": "retail-management-software-retail-karachi",
+      "city": "karachi",
+      "service": "Retail Management Software",
+      "industry": "retail",
+      "publishedAt": "2026-06-28T02:02:06.687Z"
     }
   ],
-  "totalPublished": 26,
-  "lastGeneratedAt": "2026-06-27T02:07:05.063Z"
+  "totalPublished": 27,
+  "lastGeneratedAt": "2026-06-28T02:02:06.687Z"
 }
