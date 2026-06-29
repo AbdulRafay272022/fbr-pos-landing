@@ -2,7 +2,7 @@
   "checks": {
     "https://phelixerp.online": {
       "url": "https://phelixerp.online",
-      "fetchedAt": "2026-06-22T04:10:07.929Z",
+      "fetchedAt": "2026-06-29T04:30:48.997Z",
       "blocks": [
         {
           "type": "Organization",
@@ -7535,7 +7535,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-system-retailers": {
       "url": "https://phelixerp.online/blog/fbr-pos-system-retailers",
-      "fetchedAt": "2026-06-22T04:10:09.992Z",
+      "fetchedAt": "2026-06-29T04:30:51.503Z",
       "blocks": [
         {
           "type": "Organization",
@@ -7790,7 +7790,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-system-issues": {
       "url": "https://phelixerp.online/blog/fbr-pos-system-issues",
-      "fetchedAt": "2026-06-22T04:10:10.233Z",
+      "fetchedAt": "2026-06-29T04:30:51.678Z",
       "blocks": [
         {
           "type": "Organization",
@@ -8045,7 +8045,7 @@
     },
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-lahore": {
       "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-lahore",
-      "fetchedAt": "2026-06-22T04:10:08.214Z",
+      "fetchedAt": "2026-06-29T04:30:49.824Z",
       "blocks": [
         {
           "type": "Organization",
@@ -8300,7 +8300,7 @@
     },
     "https://phelixerp.online/blog/fbr-penalty-rto-lahore-official": {
       "url": "https://phelixerp.online/blog/fbr-penalty-rto-lahore-official",
-      "fetchedAt": "2026-06-22T04:10:08.467Z",
+      "fetchedAt": "2026-06-29T04:30:49.971Z",
       "blocks": [
         {
           "type": "Organization",
@@ -8523,7 +8523,7 @@
     },
     "https://phelixerp.online/blog/fbr-penalty-declared-value-reversal": {
       "url": "https://phelixerp.online/blog/fbr-penalty-declared-value-reversal",
-      "fetchedAt": "2026-06-22T04:10:08.609Z",
+      "fetchedAt": "2026-06-29T04:30:50.159Z",
       "blocks": [
         {
           "type": "Organization",
@@ -8778,7 +8778,7 @@
     },
     "https://phelixerp.online/blog/traders-difficulties-fbr-pos-system": {
       "url": "https://phelixerp.online/blog/traders-difficulties-fbr-pos-system",
-      "fetchedAt": "2026-06-22T04:10:08.908Z",
+      "fetchedAt": "2026-06-29T04:30:50.356Z",
       "blocks": [
         {
           "type": "Organization",
@@ -9033,7 +9033,7 @@
     },
     "https://phelixerp.online/blog/fbr-retail-sector-pos-system-issues": {
       "url": "https://phelixerp.online/blog/fbr-retail-sector-pos-system-issues",
-      "fetchedAt": "2026-06-22T04:10:09.085Z",
+      "fetchedAt": "2026-06-29T04:30:50.497Z",
       "blocks": [
         {
           "type": "Organization",
@@ -9288,7 +9288,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-invoicing-system": {
       "url": "https://phelixerp.online/blog/fbr-pos-invoicing-system",
-      "fetchedAt": "2026-06-22T04:10:09.210Z",
+      "fetchedAt": "2026-06-29T04:30:50.627Z",
       "blocks": [
         {
           "type": "Organization",
@@ -9543,7 +9543,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-integration-system-failures": {
       "url": "https://phelixerp.online/blog/fbr-pos-integration-system-failures",
-      "fetchedAt": "2026-06-22T04:10:09.433Z",
+      "fetchedAt": "2026-06-29T04:30:50.765Z",
       "blocks": [
         {
           "type": "Organization",
@@ -9798,7 +9798,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-software-download": {
       "url": "https://phelixerp.online/blog/fbr-pos-software-download",
-      "fetchedAt": "2026-06-22T04:10:09.603Z",
+      "fetchedAt": "2026-06-29T04:30:51.216Z",
       "blocks": [
         {
           "type": "Organization",
@@ -10053,7 +10053,7 @@
     },
     "https://phelixerp.online/blog/services-for-fbr-penalty-pakistan": {
       "url": "https://phelixerp.online/blog/services-for-fbr-penalty-pakistan",
-      "fetchedAt": "2026-06-22T04:10:09.745Z",
+      "fetchedAt": "2026-06-29T04:30:51.370Z",
       "blocks": [
         {
           "type": "Organization",
@@ -10305,7 +10305,991 @@
         }
       ],
       "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-penalty-notice": {
+      "url": "https://phelixerp.online/blog/fbr-penalty-notice",
+      "fetchedAt": "2026-06-29T04:30:49.206Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 3 FBR Penalty Notice Mistakes",
+            "description": "Learn about FBR penalty notice, its implications, and how to avoid or resolve it. Get expert insights on FBR IRIS, STRN, and QR invoicing for Pakistani bus",
+            "url": "https://phelixerp.online/blog/fbr-penalty-notice",
+            "datePublished": "2026-06-29T02:33:51.787Z",
+            "dateModified": "2026-06-29T02:33:51.787Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr penalty notice, fbr penalty notice pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-penalty-notice"
+            },
+            "wordCount": 1365
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 3 FBR Penalty Notice Mistakes",
+                "item": "https://phelixerp.online/blog/fbr-penalty-notice"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR penalty notice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR penalty notice is a notification issued by the Federal Board of Revenue (FBR) to taxpayers who have failed to comply with tax laws and regulations in Pakistan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to resolve FBR penalty notice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To resolve an FBR penalty notice, verify the notice, check the FBR IRIS portal, gather required documents, submit an appeal, pay the penalty, implement FBR POS integration, and conduct regular audits."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is FBR IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS portal is an online system for tax returns, payments, and compliance, which uses APIs to integrate with POS systems."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is QR invoicing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "QR invoicing is a system of generating invoices with QR codes, which can be scanned to verify the authenticity of the invoice."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to avoid FBR penalty notice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To avoid an FBR penalty notice, ensure compliance with tax laws and regulations, implement FBR POS integration, and conduct regular audits."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR Penalty Notice: A Guide for Pakistani Businesses",
+            "description": "Learn about FBR penalty notice, its implications, and how to avoid or resolve it. Get expert insights on FBR IRIS, STRN, and QR invoicing for Pakistani bus",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-06-29T02:33:51.787Z",
+            "dateModified": "2026-06-29T02:33:51.787Z",
+            "url": "https://phelixerp.online/blog/fbr-penalty-notice",
+            "keywords": "fbr penalty notice, fbr penalty notice pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR penalty notice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR penalty notice is a notification issued by the Federal Board of Revenue (FBR) to taxpayers who have failed to comply with tax laws and regulations in Pakistan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to resolve FBR penalty notice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To resolve an FBR penalty notice, verify the notice, check the FBR IRIS portal, gather required documents, submit an appeal, pay the penalty, implement FBR POS integration, and conduct regular audits."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is FBR IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS portal is an online system for tax returns, payments, and compliance, which uses APIs to integrate with POS systems."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is QR invoicing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "QR invoicing is a system of generating invoices with QR codes, which can be scanned to verify the authenticity of the invoice."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to avoid FBR penalty notice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To avoid an FBR penalty notice, ensure compliance with tax laws and regulations, implement FBR POS integration, and conduct regular audits."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-penalty-rollback-customs": {
+      "url": "https://phelixerp.online/blog/fbr-penalty-rollback-customs",
+      "fetchedAt": "2026-06-29T04:30:49.419Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "What is FBR Penalty Rollback Customs?",
+            "description": "Learn about FBR penalty rollback customs and how to avoid penalties in Pakistan. Get expert advice on FBR IRIS and Sales Tax Act compliance.",
+            "url": "https://phelixerp.online/blog/fbr-penalty-rollback-customs",
+            "datePublished": "2026-06-26T02:31:26.176Z",
+            "dateModified": "2026-06-26T02:31:26.176Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr penalty rollback customs, fbr penalty rollback customs pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-penalty-rollback-customs"
+            },
+            "wordCount": 1408
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "What is FBR Penalty Rollback Customs?",
+                "item": "https://phelixerp.online/blog/fbr-penalty-rollback-customs"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR Penalty Rollback Customs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR penalty rollback customs is the process of reducing or eliminating penalties imposed by the FBR for non-compliance with customs laws."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I avoid penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To avoid penalties for non-compliance, ensure that you are familiar with all relevant laws and regulations, file returns on time, make correct declarations, and pay all applicable taxes and duties."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The IRIS portal is a web-based platform used by the FBR to track and monitor compliance with customs and tax laws."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I reduce or eliminate penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To reduce or eliminate penalties for non-compliance, consult with a tax expert and file an appeal with the FBR."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the benefits of FBR penalty rollback customs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of FBR penalty rollback customs include reduced penalties, improved compliance, increased efficiency, improved cash flow, and reduced risk."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR Penalty Rollback Customs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR penalty rollback customs is the process of reducing or eliminating penalties imposed by the FBR for non-compliance with customs laws."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I avoid penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To avoid penalties for non-compliance, ensure that you are familiar with all relevant laws and regulations, file returns on time, make correct declarations, and pay all applicable taxes and duties."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The IRIS portal is a web-based platform used by the FBR to track and monitor compliance with customs and tax laws."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I reduce or eliminate penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To reduce or eliminate penalties for non-compliance, consult with a tax expert and file an appeal with the FBR."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the benefits of FBR penalty rollback customs?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of FBR penalty rollback customs include reduced penalties, improved compliance, increased efficiency, improved cash flow, and reduced risk."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-islamabad": {
+      "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-islamabad",
+      "fetchedAt": "2026-06-29T04:30:49.539Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 3 Best FBR POS Systems for Retail in Islamabad Compared",
+            "description": "Discover the best FBR POS system for retail in Islamabad, ensuring compliance with FBR IRIS and Sales Tax Act. Get expert advice on POS integration and e-i",
+            "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-islamabad",
+            "datePublished": "2026-06-25T02:40:46.615Z",
+            "dateModified": "2026-06-25T02:40:46.615Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "best fbr pos system for retail in islamabad, best fbr pos system for retail in islamabad pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-islamabad"
+            },
+            "wordCount": 1130
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 3 Best FBR POS Systems for Retail in Islamabad Compared",
+                "item": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-islamabad"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR IRIS Integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS integration is the process of connecting a POS system to the FBR IRIS portal, enabling real-time reporting of sales transactions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How Do I Choose the Best FBR POS System?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Choose a POS system that integrates with FBR IRIS, such as Phelix ERP, and complies with STRN and QR invoice requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the Benefits of Implementing an FBR POS System?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits include compliance with FBR requirements, real-time reporting of sales transactions, and improved customer experience."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I Use a Non-FBR Compliant POS System?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, using a non-FBR compliant POS system can result in penalties, such as a fine of PKR 50,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How Do I Ensure Continued Compliance with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Regularly update the POS system and ensure continued integration with FBR IRIS, and monitor sales transactions to ensure compliance."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Best FBR POS System for Retail in Islamabad",
+            "description": "Discover the best FBR POS system for retail in Islamabad, ensuring compliance with FBR IRIS and Sales Tax Act. Get expert advice on POS integration and e-i",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-06-25T02:40:46.615Z",
+            "dateModified": "2026-06-25T02:40:46.615Z",
+            "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-islamabad",
+            "keywords": "best fbr pos system for retail in islamabad, best fbr pos system for retail in islamabad pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR IRIS Integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS integration is the process of connecting a POS system to the FBR IRIS portal, enabling real-time reporting of sales transactions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How Do I Choose the Best FBR POS System?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Choose a POS system that integrates with FBR IRIS, such as Phelix ERP, and complies with STRN and QR invoice requirements."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the Benefits of Implementing an FBR POS System?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits include compliance with FBR requirements, real-time reporting of sales transactions, and improved customer experience."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I Use a Non-FBR Compliant POS System?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, using a non-FBR compliant POS system can result in penalties, such as a fine of PKR 50,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How Do I Ensure Continued Compliance with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Regularly update the POS system and ensure continued integration with FBR IRIS, and monitor sales transactions to ensure compliance."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-penalty-for-late-filing": {
+      "url": "https://phelixerp.online/blog/fbr-penalty-for-late-filing",
+      "fetchedAt": "2026-06-29T04:30:49.648Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "What is FBR Penalty for Late Filing in Pakistan?",
+            "description": "Learn about FBR penalty for late filing, its implications, and how to avoid it. Discover the importance of FBR IRIS and [INTERNAL_LINK: \"FBR POS integratio",
+            "url": "https://phelixerp.online/blog/fbr-penalty-for-late-filing",
+            "datePublished": "2026-06-23T02:24:01.316Z",
+            "dateModified": "2026-06-23T02:24:01.316Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr penalty for late filing, fbr penalty for late filing pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-penalty-for-late-filing"
+            },
+            "wordCount": 1073
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "What is FBR Penalty for Late Filing in Pakistan?",
+                "item": "https://phelixerp.online/blog/fbr-penalty-for-late-filing"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR penalty for late filing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR penalty for late filing is a penalty imposed by FBR on taxpayers who fail to file their tax returns on time."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is FBR penalty for late filing calculated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR penalty for late filing is calculated based on the amount of tax due."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the importance of FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS is an online portal that allows taxpayers to file their tax returns and pay their taxes online."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can taxpayers avoid FBR penalty for late filing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Taxpayers can avoid FBR penalty for late filing by filing their tax returns on time, keeping accurate records, and using e-invoicing."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the consequence of failing to file tax returns on time?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The consequence of failing to file tax returns on time is a penalty of 5% per month or part of a month on the tax due."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR Penalty for Late Filing: A Guide for Pakistani Businesses",
+            "description": "Learn about FBR penalty for late filing, its implications, and how to avoid it. Discover the importance of FBR IRIS and [INTERNAL_LINK: \"FBR POS integratio",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-06-23T02:24:01.316Z",
+            "dateModified": "2026-06-23T02:24:01.316Z",
+            "url": "https://phelixerp.online/blog/fbr-penalty-for-late-filing",
+            "keywords": "fbr penalty for late filing, fbr penalty for late filing pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR penalty for late filing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR penalty for late filing is a penalty imposed by FBR on taxpayers who fail to file their tax returns on time."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How is FBR penalty for late filing calculated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR penalty for late filing is calculated based on the amount of tax due."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the importance of FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS is an online portal that allows taxpayers to file their tax returns and pay their taxes online."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can taxpayers avoid FBR penalty for late filing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Taxpayers can avoid FBR penalty for late filing by filing their tax returns on time, keeping accurate records, and using e-invoicing."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the consequence of failing to file tax returns on time?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The consequence of failing to file tax returns on time is a penalty of 5% per month or part of a month on the tax due."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
     }
   },
-  "lastAuditedAt": "2026-06-22T04:10:10.962Z"
+  "lastAuditedAt": "2026-06-29T04:30:51.795Z"
 }
