@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-penalty-notice",
+    "title": "FBR Penalty Notice: A Guide for Pakistani Businesses",
+    "metaDescription": "Learn about FBR penalty notice, its implications, and how to avoid or resolve it. Get expert insights on FBR IRIS, STRN, and QR invoicing for Pakistani bus",
+    "keywords": [
+      "fbr penalty notice",
+      "fbr penalty notice pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is FBR penalty notice?",
+        "answer": "FBR penalty notice is a notification issued by the Federal Board of Revenue (FBR) to taxpayers who have failed to comply with tax laws and regulations in Pakistan."
+      },
+      {
+        "question": "How to resolve FBR penalty notice?",
+        "answer": "To resolve an FBR penalty notice, verify the notice, check the FBR IRIS portal, gather required documents, submit an appeal, pay the penalty, implement FBR POS integration, and conduct regular audits."
+      },
+      {
+        "question": "What is FBR IRIS portal?",
+        "answer": "FBR IRIS portal is an online system for tax returns, payments, and compliance, which uses APIs to integrate with POS systems."
+      },
+      {
+        "question": "What is QR invoicing?",
+        "answer": "QR invoicing is a system of generating invoices with QR codes, which can be scanned to verify the authenticity of the invoice."
+      },
+      {
+        "question": "How to avoid FBR penalty notice?",
+        "answer": "To avoid an FBR penalty notice, ensure compliance with tax laws and regulations, implement FBR POS integration, and conduct regular audits."
+      }
+    ],
+    "publishedAt": "2026-06-29T02:33:51.787Z",
+    "readTime": 5,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
     "slug": "fbr-penalty-rollback-customs",
     "title": "What is FBR Penalty Rollback Customs?",
     "metaDescription": "Learn about FBR penalty rollback customs and how to avoid penalties in Pakistan. Get expert advice on FBR IRIS and Sales Tax Act compliance.",
