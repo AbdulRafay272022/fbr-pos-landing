@@ -545,8 +545,29 @@
         }
       ],
       "distributedAt": "2026-06-26T02:31:29.393Z"
+    },
+    {
+      "slug": "fbr-penalty-notice",
+      "title": "FBR Penalty Notice: A Guide for Pakistani Businesses",
+      "blogUrl": "https://phelixerp.online/blog/fbr-penalty-notice",
+      "hook": "FBR Penalty Notice: A Guide for Pakistani Businesses",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-06-29T02:33:54.749Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-06-29T02:33:54.750Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-06-29T02:33:54.750Z"
     }
   ],
-  "lastDistributedAt": "2026-06-26T02:31:29.393Z",
+  "lastDistributedAt": "2026-06-29T02:33:54.750Z",
   "totalDistributed": 0
 }
