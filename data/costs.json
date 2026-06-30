@@ -791,6 +791,33 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-06-30T02:02:08.496Z",
+      "action": "title_optimize",
+      "slug": "fbr-retail-sector-pos-system-issues",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-06-30T02:02:09.005Z",
+      "action": "title_optimize",
+      "slug": "multi-branch-pos-system-pakistan-fbr-compliance",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-06-30T02:02:09.607Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-system-pharmacies-pakistan-2026",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -799,8 +826,8 @@
       "calls": 43
     },
     "2026-06": {
-      "tokens": 114882,
-      "calls": 48
+      "tokens": 116082,
+      "calls": 51
     }
   },
   "monthlyTokenBudget": 5000000,
