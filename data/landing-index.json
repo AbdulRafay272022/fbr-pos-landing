@@ -83,8 +83,15 @@
       "cluster": "pos-systems",
       "pageType": "location",
       "publishedAt": "2026-06-28T02:01:59.114Z"
+    },
+    {
+      "slug": "pos-software-lahore-fbr-compliant",
+      "title": "POS Software Lahore FBR Compliant - Phelix ERP",
+      "cluster": "pos-systems",
+      "pageType": "location",
+      "publishedAt": "2026-07-01T02:33:40.726Z"
     }
   ],
-  "totalPublished": 12,
-  "lastGeneratedAt": "2026-06-28T02:01:59.184Z"
+  "totalPublished": 13,
+  "lastGeneratedAt": "2026-07-01T02:33:40.839Z"
 }
