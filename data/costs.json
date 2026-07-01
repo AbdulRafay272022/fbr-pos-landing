@@ -818,6 +818,33 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-01T02:33:31.176Z",
+      "action": "title_optimize",
+      "slug": "how-to-configure-fbr-penalty-in-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-01T02:33:31.934Z",
+      "action": "title_optimize",
+      "slug": "fbr-penalty-declared-value-reversal",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-01T02:33:32.541Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-invoicing-system",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -828,6 +855,10 @@
     "2026-06": {
       "tokens": 116082,
       "calls": 51
+    },
+    "2026-07": {
+      "tokens": 1200,
+      "calls": 3
     }
   },
   "monthlyTokenBudget": 5000000,
