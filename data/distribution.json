@@ -587,8 +587,29 @@
         }
       ],
       "distributedAt": "2026-06-30T02:02:03.803Z"
+    },
+    {
+      "slug": "fbr-pos-system-integration",
+      "title": "FBR POS System Integration Guide",
+      "blogUrl": "https://phelixerp.online/blog/fbr-pos-system-integration",
+      "hook": "FBR POS System Integration Guide",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-01T02:33:30.581Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-01T02:33:30.581Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-01T02:33:30.582Z"
     }
   ],
-  "lastDistributedAt": "2026-06-30T02:02:03.803Z",
+  "lastDistributedAt": "2026-07-01T02:33:30.582Z",
   "totalDistributed": 0
 }
