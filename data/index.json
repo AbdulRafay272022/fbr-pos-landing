@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-pos-system-integration",
+    "title": "FBR POS System Integration Guide",
+    "metaDescription": "Integrate your POS system with FBR IRIS to streamline tax compliance and avoid penalties. Learn how to implement FBR POS system integration in Pakistan.",
+    "keywords": [
+      "fbr pos system integration",
+      "fbr pos system integration pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is FBR POS system integration?",
+        "answer": "FBR POS system integration is the process of connecting your POS system with the FBR IRIS portal to automate sales tax compliance."
+      },
+      {
+        "question": "How much does FBR POS system integration cost?",
+        "answer": "The cost of FBR POS system integration varies depending on the solution provider."
+      },
+      {
+        "question": "What is the penalty for not integrating my POS system with the FBR IRIS portal?",
+        "answer": "The penalty for not integrating your POS system with the FBR IRIS portal is 100,000 PKR per month."
+      },
+      {
+        "question": "Can I integrate my POS system with the FBR IRIS portal myself?",
+        "answer": "Yes, you can integrate your POS system with the FBR IRIS portal yourself, but it is recommended to hire a professional to ensure accurate integration."
+      },
+      {
+        "question": "What is the FBR IRIS portal?",
+        "answer": "The FBR IRIS portal is an online platform that allows businesses to file their sales tax returns and pay their taxes electronically."
+      }
+    ],
+    "publishedAt": "2026-07-01T02:33:25.531Z",
+    "readTime": 5,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
+    }
+  },
+  {
     "slug": "best-fbr-pos-system-for-retail-in-rawalpindi",
     "title": "Best FBR POS System for Retail in Rawalpindi",
     "metaDescription": "Discover the best FBR POS system for retail in Rawalpindi, ensuring compliance with FBR regulations and streamlining sales tax management.",
