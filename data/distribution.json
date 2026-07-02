@@ -608,8 +608,29 @@
         }
       ],
       "distributedAt": "2026-07-01T02:33:30.582Z"
+    },
+    {
+      "slug": "fbr-penalty-us-182",
+      "title": "FBR Penalty US 182",
+      "blogUrl": "https://phelixerp.online/blog/fbr-penalty-us-182",
+      "hook": "FBR Penalty US 182",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-02T02:47:35.541Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-02T02:47:35.541Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-02T02:47:35.542Z"
     }
   ],
-  "lastDistributedAt": "2026-07-01T02:33:30.582Z",
+  "lastDistributedAt": "2026-07-02T02:47:35.542Z",
   "totalDistributed": 0
 }
