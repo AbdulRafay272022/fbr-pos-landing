@@ -45,6 +45,43 @@
     "lastUpdated": "2026-07-02T02:47:40.073Z"
   },
   {
+    "slug": "what-is-fbr-tier-1-retailer-pakistan",
+    "title": "What Is an FBR Tier-1 Retailer in Pakistan? (2026)",
+    "metaDescription": "What makes a business an FBR Tier-1 retailer in Pakistan — the exact criteria, the POS integration it triggers, how to check your status, and the penalties for getting it wrong.",
+    "keywords": [
+      "fbr tier 1 retailer",
+      "what is tier 1 retailer pakistan",
+      "fbr tier 1 criteria"
+    ],
+    "faqs": [
+      {
+        "question": "What is an FBR Tier-1 retailer?",
+        "answer": "An FBR Tier-1 retailer is a category of retailer defined in Pakistan's Sales Tax Act that must integrate its point of sale with FBR and report every sale to the IRIS system in real time. The category is defined by criteria such as chain membership, shop size, mall location, and electricity usage — not simply by how big the owner feels the business is."
+      },
+      {
+        "question": "Does my turnover alone decide Tier-1 status?",
+        "answer": "No. Tier-1 status is defined by a set of criteria — national/international chain membership, operating in an air-conditioned mall, shop area, a high cumulative electricity bill, or being a wholesaler-cum-retailer. Meeting any one of them can make you Tier-1, regardless of a single turnover figure."
+      },
+      {
+        "question": "What happens once I'm classified as Tier-1?",
+        "answer": "You must integrate a compliant POS with FBR IRIS, report each sale in real time, and issue QR-coded invoices customers can verify. Non-compliance carries penalties starting around PKR 10,000 and rising for repeat offences, alongside possible STRN suspension."
+      },
+      {
+        "question": "How do I confirm whether I'm a Tier-1 retailer?",
+        "answer": "Check each criterion against your business — chain status, mall location, shop area, annual electricity bill, and business model — and confirm with FBR or a tax advisor, since the thresholds are revised periodically. When in doubt, assume you may qualify rather than risk a penalty."
+      },
+      {
+        "question": "Are the Tier-1 thresholds fixed?",
+        "answer": "No. FBR revises thresholds such as the electricity-bill limit through amendments and SROs, so a figure that was current last year may change. Always verify the current threshold with FBR or a professional before relying on it."
+      }
+    ],
+    "publishedAt": "2026-07-01T09:32:49.336Z",
+    "readTime": 7,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-07-01T09:32:49.336Z"
+  },
+  {
     "slug": "fbr-pos-system-integration",
     "title": "FBR POS System Integration Guide",
     "metaDescription": "Integrate your POS system with FBR IRIS to streamline tax compliance and avoid penalties. Learn how to implement FBR POS system integration in Pakistan.",
@@ -130,6 +167,1109 @@
       "photographer": "Aa Dil",
       "photographerUrl": "https://www.pexels.com/@aadil",
       "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
+    }
+  },
+  {
+    "slug": "services-for-fbr-penalty-pakistan",
+    "title": "Top 3 FBR Penalty Services Pakistan for Stress-Free Compliance",
+    "metaDescription": "When a Pakistani business should get professional help with an FBR penalty, the kinds of services available, what they cost, and how to choose the right one.",
+    "keywords": [
+      "fbr penalty services pakistan",
+      "fbr penalty help",
+      "fbr compliance services"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need professional help for an FBR penalty?",
+        "answer": "Not always. A simple, clearly-caused penalty you can verify and fix yourself. Help is worth it when the amount is large, the cause is unclear, or the same issue keeps recurring despite your fixes."
+      },
+      {
+        "question": "What kinds of FBR penalty services exist?",
+        "answer": "Tax consultants who handle appeals and filings, POS or compliance-software vendors who fix the technical root cause, and accountants who reconcile your records. Often the real fix is technical, not just paperwork."
+      },
+      {
+        "question": "How do I choose between them?",
+        "answer": "Match the service to the cause. If the penalty stems from a POS submission failure, a software/POS fix prevents recurrence; if it is a filing dispute, a tax consultant is the right call."
+      },
+      {
+        "question": "How can I avoid needing these services at all?",
+        "answer": "Fix the root cause and add a monthly reconciliation against the IRIS dashboard. Most repeat penalties come from an unaddressed technical gap, not from needing more paperwork help."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:44:12.830Z",
+    "readTime": 4,
+    "version": 4,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-07-02T02:47:41.160Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
+    "slug": "fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide",
+    "title": "The Complete FBR Compliance Guide for 2026",
+    "metaDescription": "A complete 2026 guide to FBR compliance for Pakistani businesses — from registration and POS integration to filing and staying penalty-free, with links to the detail.",
+    "keywords": [
+      "complete fbr compliance guide 2026",
+      "fbr compliance guide pakistan",
+      "fbr requirements 2026"
+    ],
+    "faqs": [
+      {
+        "question": "What does full FBR compliance involve in 2026?",
+        "answer": "Active STRN registration, an integrated POS reporting to IRIS, correct tax treatment, timely monthly returns, and ongoing reconciliation. It is a few connected obligations rather than one task."
+      },
+      {
+        "question": "Where should a business start?",
+        "answer": "With registration: confirm your STRN is active and register your POS terminals on IRIS. Everything else builds on that foundation."
+      },
+      {
+        "question": "How do I stay compliant once set up?",
+        "answer": "Reconcile monthly against the IRIS dashboard, file returns on time, and keep your software current so FBR rule changes are applied automatically."
+      },
+      {
+        "question": "What happens if I fall short?",
+        "answer": "Penalties start around PKR 10,000 and escalate for repeat issues, with possible STRN suspension. Nearly all of it is avoidable with the steps in this guide."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:33:46.808Z",
+    "readTime": 3,
+    "version": 2,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:33:46.808Z"
+  },
+  {
+    "slug": "fbr-penalty-declared-value-reversal",
+    "title": "FBR Declared Value Reversal: Top 3 Compliance Tips",
+    "metaDescription": "What declared value reversal penalties mean in Pakistan's FBR context — why declared values get challenged, the consequences, and how accurate invoicing prevents them.",
+    "keywords": [
+      "fbr declared value reversal",
+      "fbr declared value penalty",
+      "declared value fbr pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What does 'declared value reversal' mean?",
+        "answer": "It refers to FBR challenging and adjusting a value a business declared — for goods or sales — when records do not support it. The declared figure is reversed to a corrected one, often with a penalty attached."
+      },
+      {
+        "question": "Why would FBR reverse a declared value?",
+        "answer": "Usually because the declared value does not match supporting records — invoices, POS data, or import documents. Gaps between what was declared and what the data shows invite adjustment."
+      },
+      {
+        "question": "How does accurate POS invoicing help?",
+        "answer": "When every sale is reported to FBR IRIS in real time, your declared sales values are backed by verifiable records, leaving little room for a reversal. Consistent data is the best defence."
+      },
+      {
+        "question": "What should I do if I receive a reversal notice?",
+        "answer": "Gather the supporting records, respond within the stated window, and correct any genuine errors. Accurate, reconciled POS and tax records make the response far simpler."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:33:46.808Z",
+    "readTime": 3,
+    "version": 4,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-07-01T02:33:31.933Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
+    "slug": "fbr-pos-system-retailers",
+    "title": "FBR POS for Retailers in Pakistan: A Complete Overview",
+    "metaDescription": "A clear overview of the FBR POS system for retailers in Pakistan — what it is, who must comply, how it works, and what it takes to get and stay compliant.",
+    "keywords": [
+      "fbr pos system retailers",
+      "fbr pos for retailers pakistan",
+      "retail fbr compliance overview"
+    ],
+    "faqs": [
+      {
+        "question": "What is an FBR POS system for a retailer?",
+        "answer": "Software that reports every retail sale to FBR IRIS in real time and issues a QR-coded invoice. It connects your till to FBR so each transaction is recorded as it happens."
+      },
+      {
+        "question": "Which retailers must comply?",
+        "answer": "Tier-1 retailers — broadly larger shops, chains, and businesses above the FBR turnover threshold. If you hold an STRN and trade at scale, integration applies to you."
+      },
+      {
+        "question": "Is it hard to get started?",
+        "answer": "No. A single-shop setup — STRN check, IRIS registration, integration, tax mapping, brief training — is usually complete within a day or two and runs on a phone, tablet, or laptop."
+      },
+      {
+        "question": "What does staying compliant involve?",
+        "answer": "Mainly a monthly reconciliation against the IRIS dashboard and keeping the software updated. The day-to-day reporting is automatic."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:33:46.808Z",
+    "readTime": 3,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:33:46.808Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
+      "photographer": "Aa Dil",
+      "photographerUrl": "https://www.pexels.com/@aadil",
+      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
+    }
+  },
+  {
+    "slug": "fbr-retail-sector-pos-system-issues",
+    "title": "Top 3 FBR Retail POS Issues: Causes and Fixes",
+    "metaDescription": "The FBR POS problems that hit retail hardest in Pakistan — high-SKU tax mapping, returns and exchanges, barcode mismatches, and stock-versus-sales gaps.",
+    "keywords": [
+      "fbr retail pos issues",
+      "retail sector fbr pos problems",
+      "fbr pos retail errors"
+    ],
+    "faqs": [
+      {
+        "question": "What FBR POS issues are unique to retail?",
+        "answer": "High-SKU tax mapping errors, mishandled returns and exchanges, barcode mismatches, and gaps between stock and reported sales. Retail's volume and product variety create problems a service business never sees."
+      },
+      {
+        "question": "How do returns cause FBR problems?",
+        "answer": "A return reverses a sale, and that reversal must be reported correctly — not just adjusted locally. A refund handled only on the POS while the original invoice stands in IRIS creates a discrepancy."
+      },
+      {
+        "question": "Why do barcode mismatches matter for compliance?",
+        "answer": "If a scanned barcode maps to the wrong product, the wrong tax rate and value get reported. Across thousands of sales, those small errors add up to a real reporting gap."
+      },
+      {
+        "question": "How do I catch retail-specific issues?",
+        "answer": "Reconcile stock against reported sales as well as POS against IRIS. When the three line up, your retail reporting is sound."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:33:46.808Z",
+    "readTime": 3,
+    "version": 4,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-30T02:02:08.496Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
+      "photographer": "Aa Dil",
+      "photographerUrl": "https://www.pexels.com/@aadil",
+      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
+    }
+  },
+  {
+    "slug": "how-to-configure-fbr-penalty-in-pakistan",
+    "title": "How to Respond to FBR Penalty Notice What to Do Next",
+    "metaDescription": "A calm, practical guide to handling an FBR penalty notice in Pakistan — how to verify it, respond within the window, fix the cause, and prevent the next one.",
+    "keywords": [
+      "fbr penalty notice what to do",
+      "respond to fbr penalty",
+      "fbr penalty notice pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is the first thing to do with an FBR penalty notice?",
+        "answer": "Read it carefully and verify the details against your own records and the IRIS dashboard. Confirm what it is actually for before responding — some notices stem from issues you can quickly disprove or fix."
+      },
+      {
+        "question": "How long do I have to respond?",
+        "answer": "Notices usually specify a window, often around 30 days. Missing it removes your chance to contest or correct, so act promptly even if you intend to dispute."
+      },
+      {
+        "question": "Can I get a penalty reduced?",
+        "answer": "Often, yes — by fixing the underlying cause, filing any appeal within the window, and showing corrected compliance. Acting quickly and in good faith works in your favour."
+      },
+      {
+        "question": "How do I avoid the next notice?",
+        "answer": "Find and fix the root cause — frequently a silent POS submission failure — and add a monthly reconciliation so the same gap cannot recur unnoticed."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:33:46.808Z",
+    "readTime": 3,
+    "version": 5,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-07-01T02:33:31.176Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36965908/pexels-photo-36965908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36965908/pexels-photo-36965908.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A young woman in traditional Pakistani clothing attends a lively business networking event indoors.",
+      "photographer": "iram shehzad",
+      "photographerUrl": "https://www.pexels.com/@iram-shehzad-45081404",
+      "pexelsUrl": "https://www.pexels.com/photo/young-woman-in-pakistani-attire-at-business-event-36965908/"
+    }
+  },
+  {
+    "slug": "multi-branch-pos-system-pakistan-fbr-compliance-complete-guide-2026",
+    "title": "Multi-Branch FBR Rollout: A 2026 Implementation Plan",
+    "metaDescription": "A step-by-step 2026 plan for rolling out an FBR POS across multiple branches in Pakistan — sequencing, terminal registration, testing, and central monitoring.",
+    "keywords": [
+      "multi branch fbr rollout",
+      "fbr pos rollout plan",
+      "chain fbr implementation 2026"
+    ],
+    "faqs": [
+      {
+        "question": "How should I sequence a multi-branch FBR rollout?",
+        "answer": "Pilot one branch end to end, fix what you learn, then roll out the rest in waves. A staged rollout catches configuration problems before they multiply across every location."
+      },
+      {
+        "question": "Does each branch need separate registration?",
+        "answer": "Each branch's terminals generally need registering on the IRIS POS portal, even under one STRN. Build that into each wave so no branch trades on unregistered terminals."
+      },
+      {
+        "question": "How long does a multi-branch rollout take?",
+        "answer": "It depends on branch count, but a piloted, waved rollout of several branches typically spans days to a couple of weeks — slower than one shop, but far safer than switching everyone on at once."
+      },
+      {
+        "question": "What is the biggest rollout risk?",
+        "answer": "Going live everywhere simultaneously without a pilot. A single configuration mistake then repeats across every branch instead of being caught once."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:33:46.808Z",
+    "readTime": 3,
+    "version": 4,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:33:46.808Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
+    }
+  },
+  {
+    "slug": "fbr-pos-integration-system-failures",
+    "title": "Why FBR POS Integrations Fail at Go-Live (and How to Prevent It)",
+    "metaDescription": "The real reasons FBR POS integrations fail when businesses go live in Pakistan — untested invoices, wrong credentials, no offline plan — and how to avoid each.",
+    "keywords": [
+      "fbr pos integration failures",
+      "fbr pos go-live problems",
+      "fbr integration not working"
+    ],
+    "faqs": [
+      {
+        "question": "Why do FBR POS integrations fail right after go-live?",
+        "answer": "Usually because the business went live without testing — credentials were misconfigured, no sample invoices were verified in IRIS, or the offline plan was never set up. The failures were built in on day one and only surface under real use."
+      },
+      {
+        "question": "How do I know if my integration actually works?",
+        "answer": "Run test invoices before going live and confirm each appears in your IRIS dashboard. If they do not show up there, the integration is not working, regardless of what the receipt shows."
+      },
+      {
+        "question": "What is the most overlooked go-live step?",
+        "answer": "Configuring and testing offline queueing. Businesses test on a good connection, go live, then lose invoices the first time the internet drops during trading."
+      },
+      {
+        "question": "Can a failed integration be fixed without starting over?",
+        "answer": "Almost always. Most go-live failures are configuration issues — credentials, token refresh, tax mapping, offline settings — that are corrected without replacing the system."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:30:43.602Z",
+    "readTime": 3,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:30:43.602Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
+    }
+  },
+  {
+    "slug": "fbr-pos-invoicing-system",
+    "title": "What is FBR POS Invoicing System?",
+    "metaDescription": "A plain-English walkthrough of how the FBR POS invoicing system works in Pakistan — from a sale, to IRIS submission, to the QR code a customer can verify.",
+    "keywords": [
+      "fbr pos invoicing system",
+      "how fbr invoicing works",
+      "fbr pos invoice process"
+    ],
+    "faqs": [
+      {
+        "question": "What is the FBR POS invoicing system?",
+        "answer": "It is the real-time process by which a registered business reports each sale to FBR IRIS and issues a QR-coded invoice. The system links your point of sale to FBR so every transaction is recorded as it happens."
+      },
+      {
+        "question": "Does the customer get a normal receipt?",
+        "answer": "Yes — it looks like a normal receipt but carries a QR code. Scanning it lets anyone confirm on the FBR portal that the sale was genuinely reported, which is the proof of compliance."
+      },
+      {
+        "question": "What makes an invoice 'valid' under this system?",
+        "answer": "That it was accepted by IRIS and the QR encodes the reference IRIS returned. A locally printed receipt with no matching IRIS record is not a valid FBR invoice, even if it looks the part."
+      },
+      {
+        "question": "Is the whole thing automatic?",
+        "answer": "Once configured, yes. The POS submits, IRIS validates and returns a reference, the POS prints the QR — all in the moment of sale, with no manual steps for staff."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:30:43.602Z",
+    "readTime": 4,
+    "version": 5,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-07-01T02:33:32.541Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
+    }
+  },
+  {
+    "slug": "fbr-pos-software-download",
+    "title": "Top 3 FBR POS Software Download Options Compared",
+    "metaDescription": "Thinking of downloading FBR POS software in Pakistan? What 'free download' misses, why the IRIS integration is what matters, and how to avoid unsafe apps.",
+    "keywords": [
+      "fbr pos software download",
+      "free fbr pos software",
+      "download pos software pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "Can I just download free FBR POS software and be compliant?",
+        "answer": "Downloading an app is the easy part; compliance comes from a live, maintained FBR IRIS integration behind it. Many free downloads either lack a real integration or stop being updated, which leaves you non-compliant."
+      },
+      {
+        "question": "What should I check before downloading any POS software?",
+        "answer": "That it has a verified, current FBR IRIS integration, that the vendor updates it as rules change, and that it comes from a trustworthy source. Ask to see a live invoice verify on the FBR portal."
+      },
+      {
+        "question": "Is it safe to download POS software from anywhere?",
+        "answer": "No. Random downloads can be outdated, unsupported, or unsafe. Use the vendor's official source and confirm support and updates are included."
+      },
+      {
+        "question": "Do I download anything at all with a cloud POS?",
+        "answer": "Often very little — cloud POS may run in a browser or a light app, with the integration and updates handled on the vendor's servers, which avoids the 'stale download' problem entirely."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:30:43.602Z",
+    "readTime": 3,
+    "version": 4,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-07-02T02:47:40.441Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
+    }
+  },
+  {
+    "slug": "traders-difficulties-fbr-pos-system",
+    "title": "Common FBR POS Difficulties for Small Traders (and How to Solve Them)",
+    "metaDescription": "The real difficulties small traders in Pakistan face with the FBR POS system — cost, technical worry, connectivity, staff training — and practical ways past each.",
+    "keywords": [
+      "traders fbr pos difficulties",
+      "small business fbr pos",
+      "fbr pos problems traders"
+    ],
+    "faqs": [
+      {
+        "question": "Is FBR POS too expensive for a small trader?",
+        "answer": "It is usually far cheaper than a single penalty. Cloud plans often run a modest monthly fee with no costly hardware, and the time saved on monthly filing offsets much of the cost."
+      },
+      {
+        "question": "I am not technical — is FBR POS hard to use?",
+        "answer": "Day to day it is no harder than ringing up a sale; compliance runs in the background. The setup is handled once, and basic staff training usually takes under half an hour."
+      },
+      {
+        "question": "What if my shop has unreliable internet?",
+        "answer": "A compliant POS queues sales offline and syncs them to FBR when the connection returns, so poor connectivity does not stop you billing or break compliance."
+      },
+      {
+        "question": "What is the single biggest mistake small traders make?",
+        "answer": "Delaying because it feels daunting. The penalties for non-compliance are far more painful than the setup, which is faster and simpler than most expect."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:30:43.602Z",
+    "readTime": 3,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:30:43.602Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
+    }
+  },
+  {
+    "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
+    "title": "Choosing the Best FBR POS for a Lahore Restaurant",
+    "metaDescription": "How to choose an FBR POS for a Lahore restaurant — the features that actually matter for dine-in, takeaway, and delivery, and the questions to ask any vendor.",
+    "keywords": [
+      "best fbr pos restaurant lahore",
+      "restaurant pos lahore",
+      "fbr pos for lahore restaurant"
+    ],
+    "faqs": [
+      {
+        "question": "What features matter most for a Lahore restaurant POS?",
+        "answer": "A live FBR IRIS integration, offline billing that queues and syncs, fast handling of split bills and modifications, and kitchen-display support. Compliance plus speed at the table is the combination that matters."
+      },
+      {
+        "question": "How do I verify a vendor's FBR integration is real?",
+        "answer": "Ask to see a live invoice verify on the FBR portal, not a screenshot. A genuine integration produces a QR that resolves to a real IRIS record; a vague 'FBR ready' claim is not the same thing."
+      },
+      {
+        "question": "Do I need expensive hardware for a restaurant POS?",
+        "answer": "No. A compliant POS runs on tablets or a phone, so you can take orders at the table. The cost is in the software and integration, not specialised terminals."
+      },
+      {
+        "question": "Can the POS handle a Friday-night rush if the internet drops?",
+        "answer": "A good one queues orders locally during an outage and syncs them to FBR IRIS with original timestamps when the connection returns, so service never stops."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:27:22.784Z",
+    "readTime": 3,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:27:22.784Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/6284909/pexels-photo-6284909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/6284909/pexels-photo-6284909.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Two men in a restaurant review business documents and a tablet for planning purposes.",
+      "photographer": "Gustavo Fring",
+      "photographerUrl": "https://www.pexels.com/@gustavo-fring",
+      "pexelsUrl": "https://www.pexels.com/photo/businessmen-looking-on-tablet-and-documents-in-restaurant-6284909/"
+    }
+  },
+  {
+    "slug": "best-fbr-pos-system-for-retail-in-karachi",
+    "title": "Choosing the Best FBR POS for Karachi Retail",
+    "metaDescription": "How to choose an FBR POS for a Karachi retail shop — the inventory, barcode, and multi-counter features that matter, plus how to verify a real IRIS integration.",
+    "keywords": [
+      "best fbr pos retail karachi",
+      "retail pos karachi",
+      "fbr pos for karachi shop"
+    ],
+    "faqs": [
+      {
+        "question": "What should a Karachi retailer prioritise in a POS?",
+        "answer": "A verified FBR IRIS integration first, then strong inventory management, barcode scanning, and the ability to add a second counter on busy days. For retail, accurate stock is almost as valuable as compliance."
+      },
+      {
+        "question": "Does the POS handle inventory as well as FBR reporting?",
+        "answer": "A good retail POS deducts stock on every sale it reports to FBR, so you get live inventory as a by-product of compliance. Ask whether stock and reorder alerts are built in."
+      },
+      {
+        "question": "How important is barcode scanning?",
+        "answer": "For any shop with more than a handful of SKUs, very. It speeds checkout and reduces the wrong-item errors that create tax and stock discrepancies."
+      },
+      {
+        "question": "How do I avoid buying a POS that is not really FBR compliant?",
+        "answer": "Insist on seeing a live invoice verify on the FBR portal. Many systems claim 'FBR ready' without a maintained integration; the QR-verification test settles it."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:27:22.784Z",
+    "readTime": 3,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:27:22.784Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
+      "photographer": "Aa Dil",
+      "photographerUrl": "https://www.pexels.com/@aadil",
+      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
+    }
+  },
+  {
+    "slug": "fbr-pos-system-lahore-retailers-2026",
+    "title": "FBR POS for Lahore Retailers in 2026: What to Get Right",
+    "metaDescription": "An FBR POS guide for Lahore retailers in 2026 — local enforcement, the setup steps, and how to stay compliant in one of Pakistan's busiest retail markets.",
+    "keywords": [
+      "fbr pos system lahore retailers",
+      "fbr pos lahore",
+      "lahore retail fbr compliance"
+    ],
+    "faqs": [
+      {
+        "question": "Which Lahore retailers must integrate with FBR POS?",
+        "answer": "Tier-1 retailers — larger shops, chains, and businesses above the FBR turnover threshold. If you hold an STRN and trade at scale in Lahore, integration is required or soon will be."
+      },
+      {
+        "question": "How long does setup take for a Lahore shop?",
+        "answer": "A single-branch setup is typically done in 24 to 48 hours: STRN check, IRIS registration, API configuration, tax mapping, and brief staff training."
+      },
+      {
+        "question": "Do I need new hardware?",
+        "answer": "No. A compliant POS runs on a phone, tablet, or laptop. The requirement is the live IRIS integration, not specialised terminals."
+      },
+      {
+        "question": "What is the biggest risk for a Lahore retailer?",
+        "answer": "Silent submission failures — believing you are compliant while invoices never reach FBR. A monthly reconciliation against the IRIS dashboard is the fix."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:27:22.784Z",
+    "readTime": 3,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:27:22.784Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
+      "photographer": "Aa Dil",
+      "photographerUrl": "https://www.pexels.com/@aadil",
+      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
+    }
+  },
+  {
+    "slug": "how-to-setup-fbr-penalty-in-pakistan",
+    "title": "FBR Penalties in Pakistan: How They Work and How to Avoid Them",
+    "metaDescription": "A clear guide to FBR penalties in Pakistan — what triggers them, the typical amounts, how they escalate, and the practical steps that keep your business clear of them.",
+    "keywords": [
+      "fbr penalty pakistan",
+      "fbr penalties how they work",
+      "avoid fbr penalty"
+    ],
+    "faqs": [
+      {
+        "question": "What triggers an FBR penalty most often?",
+        "answer": "Non-compliance with POS integration and failing to report sales to IRIS — frequently because of silent submission failures the business never noticed. Late filing and incorrect tax treatment are the other common triggers."
+      },
+      {
+        "question": "How much are FBR penalties?",
+        "answer": "They typically start around PKR 10,000 for a first offence and can escalate to as much as PKR 1,000,000 for repeated violations, alongside the risk of STRN suspension or, in serious cases, business closure."
+      },
+      {
+        "question": "Can I be penalised for errors I did not know about?",
+        "answer": "Yes. If invoices silently fail to reach FBR, the business is non-compliant even if it believed otherwise. That is why monthly reconciliation against the IRIS dashboard matters so much."
+      },
+      {
+        "question": "How do I get a penalty reduced?",
+        "answer": "Address the underlying issue, file any appeal within the stated window (often around 30 days), pay or contest as advised, and demonstrate corrected compliance. Acting quickly and showing good faith helps."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:27:22.784Z",
+    "readTime": 3,
+    "version": 2,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:27:22.784Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36965908/pexels-photo-36965908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36965908/pexels-photo-36965908.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A young woman in traditional Pakistani clothing attends a lively business networking event indoors.",
+      "photographer": "iram shehzad",
+      "photographerUrl": "https://www.pexels.com/@iram-shehzad-45081404",
+      "pexelsUrl": "https://www.pexels.com/photo/young-woman-in-pakistani-attire-at-business-event-36965908/"
+    }
+  },
+  {
+    "slug": "fbr-compliance-checklist-pakistan-businesses-2026",
+    "title": "FBR Compliance Checklist for Pakistani Businesses (2026)",
+    "metaDescription": "A practical FBR compliance checklist for Pakistani businesses in 2026 — STRN, IRIS registration, POS integration, tax mapping, QR validation, and monthly reconciliation.",
+    "keywords": [
+      "fbr compliance checklist pakistan",
+      "fbr compliance 2026",
+      "fbr pos compliance checklist"
+    ],
+    "faqs": [
+      {
+        "question": "How often should I run this checklist?",
+        "answer": "Do the setup items once, then run the ongoing items — reconciliation, software updates, tax-rate review — every month. Monthly is the cadence that catches silent failures before they become penalties."
+      },
+      {
+        "question": "What is the single most important item?",
+        "answer": "The monthly reconciliation between your POS and the IRIS dashboard. It is the one check that reveals invoices that never reached FBR, which is the most common and most dangerous compliance gap."
+      },
+      {
+        "question": "Do small businesses need to follow all of this?",
+        "answer": "If you are a Tier-1 retailer with an active STRN, yes — the obligations apply regardless of size. The checklist scales down easily for a single outlet."
+      },
+      {
+        "question": "What are the penalties for missing these?",
+        "answer": "Non-compliance penalties start around PKR 10,000 and rise to as much as PKR 1,000,000 for repeated violations, with possible STRN suspension. Most are avoidable by working through this list."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:22:47.290Z",
+    "readTime": 3,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:22:47.290Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
+    "slug": "fbr-iris-portal-pakistan-pos-registration-guide",
+    "title": "FBR IRIS Portal: How to Register Your POS in Pakistan",
+    "metaDescription": "A step-by-step guide to registering your POS on the FBR IRIS portal in Pakistan — what you need, how to get API credentials, and the errors that trip people up.",
+    "keywords": [
+      "fbr iris portal pos registration",
+      "register pos fbr iris",
+      "fbr iris portal pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What do I need before registering on the IRIS portal?",
+        "answer": "An active STRN, your NTN, business details, and the number of POS terminals you plan to register. Have your login for iris.fbr.gov.pk ready; without an active STRN you cannot complete POS registration."
+      },
+      {
+        "question": "Where do I get the API credentials for my POS?",
+        "answer": "After registering your terminals on the IRIS POS section, FBR issues API credentials (a token/key) that your POS software uses to submit invoices. Your POS vendor configures these so sales report automatically."
+      },
+      {
+        "question": "How many terminals should I register?",
+        "answer": "Register one per active point of sale. If you add a counter or a new branch later, register its terminal before it starts trading — selling on an unregistered terminal is non-compliant."
+      },
+      {
+        "question": "What is the most common registration mistake?",
+        "answer": "Starting to bill before the terminal is fully registered and the API credentials are live in the POS. The receipts print, but nothing reaches FBR until registration is complete."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:22:47.290Z",
+    "readTime": 3,
+    "version": 4,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:22:47.290Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
+    }
+  },
+  {
+    "slug": "fbr-pos-compliance-wholesale-distributors-pakistan",
+    "title": "FBR POS Compliance for Wholesale Distributors in Pakistan",
+    "metaDescription": "What FBR POS compliance means for wholesale and distribution businesses in Pakistan — bulk B2B invoicing, buyer STRNs, input/output tax, and high-volume reporting.",
+    "keywords": [
+      "fbr pos wholesale distributors pakistan",
+      "wholesale fbr compliance",
+      "distributor fbr invoicing"
+    ],
+    "faqs": [
+      {
+        "question": "Do wholesalers need FBR POS integration like retailers?",
+        "answer": "If you are a registered Tier-1 business, yes. Wholesale and distribution sales must be reported to FBR IRIS with compliant invoices, the same as retail — the difference is volume and the B2B nature of the invoices."
+      },
+      {
+        "question": "How is B2B invoicing different under FBR?",
+        "answer": "Your buyers are often registered businesses with their own STRNs, so invoices carry buyer details and feed into both parties' tax positions. Accuracy matters more because errors propagate to your customers' returns."
+      },
+      {
+        "question": "How do distributors handle high invoice volume?",
+        "answer": "A capable POS submits invoices to IRIS with request queuing and retry-with-backoff so peak-volume bursts are not rejected by rate limits. High volume makes silent failures more likely if the system is not built for it."
+      },
+      {
+        "question": "What is the main compliance risk for distributors?",
+        "answer": "Volume hides gaps. A small percentage of failed submissions on thousands of invoices is a large absolute number, so reconciliation and a robust retry mechanism are essential."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:22:47.290Z",
+    "readTime": 3,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:22:47.290Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/10834810/pexels-photo-10834810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/10834810/pexels-photo-10834810.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "High stacks of cardboard boxes organized in a warehouse with a blue metal ceiling.",
+      "photographer": "Ihsan Adityawarman",
+      "photographerUrl": "https://www.pexels.com/@ihsanaditya",
+      "pexelsUrl": "https://www.pexels.com/photo/stacked-boxes-in-a-warehouse-10834810/"
+    }
+  },
+  {
+    "slug": "fbr-pos-integration-monthly-sales-tax-returns-pakistan",
+    "title": "How FBR POS Integration Simplifies Monthly Sales-Tax Returns",
+    "metaDescription": "How an FBR-integrated POS turns your monthly sales-tax return in Pakistan from a multi-day chore into a short review — what's pre-filled and what to check.",
+    "keywords": [
+      "fbr pos monthly sales tax return",
+      "fbr sales tax filing pakistan",
+      "pos integration tax return"
+    ],
+    "faqs": [
+      {
+        "question": "Does an FBR POS file my sales-tax return for me?",
+        "answer": "It does most of the work. Because every sale is already reported to IRIS, your output-tax figures are largely pre-populated. You still review, add purchase/input-tax details, and submit — but the manual compilation of sales is gone."
+      },
+      {
+        "question": "What still needs manual attention each month?",
+        "answer": "Input tax on purchases, any adjustments or exemptions, and a reconciliation check between your POS records and the IRIS dashboard. The sales side is automated; the rest is review."
+      },
+      {
+        "question": "How does integration reduce errors in filing?",
+        "answer": "Manual compilation from spreadsheets is where mistakes creep in. When the return draws directly from reported POS data, the sales figures match what FBR already has, so there are no discrepancies to explain later."
+      },
+      {
+        "question": "What happens if some invoices never reached FBR?",
+        "answer": "Then your return understates sales and the gap can surface in an audit. This is why a monthly reconciliation between your POS and the IRIS dashboard matters before you file."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:22:47.290Z",
+    "readTime": 3,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:22:47.290Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Person's hand holding a company invoice on a clipboard with a pen.",
+      "photographer": "Kindel Media",
+      "photographerUrl": "https://www.pexels.com/@kindelmedia",
+      "pexelsUrl": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-clipboard-7651555/"
+    }
+  },
+  {
+    "slug": "cloud-fbr-pos-system-benefits-pakistan",
+    "title": "Cloud vs Desktop FBR POS in Pakistan: Which Should You Choose?",
+    "metaDescription": "A practical comparison of cloud and desktop FBR POS systems in Pakistan — automatic compliance updates, multi-device access, offline sync, and central reporting.",
+    "keywords": [
+      "cloud fbr pos system pakistan",
+      "cloud pos benefits pakistan",
+      "cloud vs desktop pos fbr"
+    ],
+    "faqs": [
+      {
+        "question": "Does a cloud POS keep working when the internet drops?",
+        "answer": "A well-built cloud POS keeps billing offline by queuing sales on the device, then syncs them to FBR IRIS with their original timestamps when the connection returns. The 'cloud' part is about where data is stored and updated, not a requirement to be online every second."
+      },
+      {
+        "question": "Why does cloud matter for FBR compliance specifically?",
+        "answer": "FBR rules and SROs change, and the IRIS API evolves with them. A cloud POS is updated centrally by the vendor, so every branch is compliant the day a change lands — versus desktop software that each location has to update manually and often does not."
+      },
+      {
+        "question": "Is my sales data safe in a cloud POS?",
+        "answer": "Reputable cloud POS providers encrypt data and keep backups, which is usually safer than a single shop PC that can be lost, stolen, or corrupted. Ask the vendor where data is stored and how backups work before committing."
+      },
+      {
+        "question": "Can I see all my branches in one place with a cloud POS?",
+        "answer": "Yes — that is one of its biggest advantages. Cloud systems give head office a single live view of sales, stock, and FBR reporting across every branch, which desktop systems cannot do without manual consolidation."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:07:56.495Z",
+    "readTime": 4,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:07:56.495Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
+    }
+  },
+  {
+    "slug": "fbr-pos-system-karachi-businesses",
+    "title": "FBR POS for Karachi Businesses: What You Need to Get Right",
+    "metaDescription": "An FBR POS guide for Karachi businesses — local enforcement, the sectors most affected, the setup steps, and how to stay compliant in Pakistan's busiest market.",
+    "keywords": [
+      "fbr pos system karachi",
+      "fbr pos karachi businesses",
+      "pos system karachi fbr compliant"
+    ],
+    "faqs": [
+      {
+        "question": "Which Karachi businesses must integrate with FBR POS?",
+        "answer": "Tier-1 retailers — broadly, larger shops, chains, and businesses above the FBR turnover threshold — must integrate, across retail, restaurants, pharmacies, and more. If you hold an STRN, assume integration is required or soon will be."
+      },
+      {
+        "question": "Is FBR enforcement actually active in Karachi?",
+        "answer": "Yes. As Pakistan's largest commercial centre, Karachi sees significant FBR activity, and non-integrated Tier-1 outlets are a clear target. Treating integration as optional is the most expensive mistake a Karachi business can make."
+      },
+      {
+        "question": "How long does FBR POS setup take for a Karachi shop?",
+        "answer": "A single-branch setup — STRN verification, IRIS registration, API configuration, tax mapping, and brief staff training — is typically completed within 24 to 48 hours with a compliant provider."
+      },
+      {
+        "question": "Do I need expensive hardware to be FBR compliant in Karachi?",
+        "answer": "No. A compliant POS runs on an ordinary Android phone, tablet, or laptop. The requirement is the live IRIS integration, not specialised terminals."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:07:56.495Z",
+    "readTime": 4,
+    "version": 4,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:07:56.495Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/15294407/pexels-photo-15294407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/15294407/pexels-photo-15294407.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Senior man selling footwear at a street market in Karachi, Pakistan. Local commerce and lifestyle.",
+      "photographer": "Arsalan Ahmed",
+      "photographerUrl": "https://www.pexels.com/@arsalanahmed5590",
+      "pexelsUrl": "https://www.pexels.com/photo/elderly-man-selling-clothes-on-a-street-market-15294407/"
+    }
+  },
+  {
+    "slug": "multi-branch-pos-system-pakistan-fbr-compliance",
+    "title": "Top Multi Branch POS System Pakistan: A Comparison",
+    "metaDescription": "How chains and multi-branch businesses in Pakistan stay FBR compliant — per-branch terminal registration, central reporting, and consolidated sales-tax filing.",
+    "keywords": [
+      "multi branch pos system pakistan",
+      "chain store fbr compliance",
+      "multi branch fbr pos"
+    ],
+    "faqs": [
+      {
+        "question": "Does each branch need its own FBR registration?",
+        "answer": "Each point of sale typically needs its terminals registered on the IRIS POS portal, even under one STRN. Treating branches as interchangeable without registering their terminals is a common compliance gap for growing chains."
+      },
+      {
+        "question": "Can I see all branches' FBR reporting in one place?",
+        "answer": "With a cloud, multi-branch POS, yes — head office gets a single live view of sales and FBR submissions across locations. Desktop systems force you to consolidate each branch manually, which is slow and error-prone."
+      },
+      {
+        "question": "How does multi-branch affect monthly sales-tax filing?",
+        "answer": "When every branch reports correctly to IRIS, the monthly return is largely pre-filled from consolidated POS data. The hard part is ensuring no branch is silently failing to submit, which a central dashboard makes visible."
+      },
+      {
+        "question": "What is the biggest compliance risk for a chain?",
+        "answer": "One branch quietly out of compliance while the others are fine. Without central monitoring, a single location with an expired token or unregistered terminal can accumulate weeks of unreported sales before anyone notices."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:07:56.495Z",
+    "readTime": 4,
+    "version": 4,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-30T02:02:09.005Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
+    }
+  },
+  {
+    "slug": "retail-inventory-management-fbr-pos-pakistan",
+    "title": "Retail Inventory Management with an FBR POS in Pakistan",
+    "metaDescription": "How an FBR POS doubles as inventory management for Pakistani retailers — automatic stock deduction, shrinkage control, reorder alerts, and cleaner audits.",
+    "keywords": [
+      "retail inventory management fbr pos pakistan",
+      "pos inventory pakistan",
+      "fbr pos stock management"
+    ],
+    "faqs": [
+      {
+        "question": "Does FBR POS integration help with stock, or only tax?",
+        "answer": "Both. The same sale that gets reported to FBR also deducts the item from stock in real time, so a compliant POS gives you accurate inventory as a by-product of compliance — no separate stock system needed."
+      },
+      {
+        "question": "How does QR invoicing reduce shrinkage?",
+        "answer": "Because every sale must produce a reported, QR-coded invoice, unrecorded cash sales become very hard to hide. That closes the gap where stock leaves without a corresponding sale, which is a major source of retail shrinkage."
+      },
+      {
+        "question": "Can the POS tell me when to reorder?",
+        "answer": "Most FBR-compliant retail POS systems track stock levels and can alert you when an item falls below a threshold, so you reorder before running out — turning compliance data into a practical planning tool."
+      },
+      {
+        "question": "Does accurate inventory help during an FBR audit?",
+        "answer": "Yes. When sales, stock movements, and FBR submissions all reconcile, an audit becomes a quick verification rather than a stressful reconstruction of missing records."
+      }
+    ],
+    "publishedAt": "2026-06-29T21:07:56.495Z",
+    "readTime": 3,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T21:07:56.495Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
+      "photographer": "Aa Dil",
+      "photographerUrl": "https://www.pexels.com/@aadil",
+      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
+    }
+  },
+  {
+    "slug": "fbr-pos-system-pharmacies-pakistan-2026",
+    "title": "Top FBR POS Systems for Pharmacies in Pakistan Compared",
+    "metaDescription": "An FBR POS guide for Pakistani pharmacies in 2026 — batch and expiry tracking, DRAP alongside FBR, controlled items, and the IRIS settings that keep you compliant.",
+    "keywords": [
+      "fbr pos system pharmacies pakistan",
+      "pharmacy pos fbr",
+      "medical store fbr pos"
+    ],
+    "faqs": [
+      {
+        "question": "Does an FBR POS replace my DRAP record-keeping?",
+        "answer": "No. FBR compliance and DRAP requirements are separate. A good pharmacy POS helps with both — reporting sales to FBR IRIS while also tracking batches and expiry for DRAP — but neither obligation removes the other."
+      },
+      {
+        "question": "How does batch and expiry tracking interact with FBR invoicing?",
+        "answer": "Batch and expiry tracking is for stock and DRAP, while the FBR invoice reports the sale and tax. They live in the same POS but serve different rules; the invoice still has to reach IRIS regardless of how stock is tracked."
+      },
+      {
+        "question": "Are all medicines taxed the same way on an FBR invoice?",
+        "answer": "No — many medicines fall under specific or exempt categories. Mapping each product to the correct tax treatment is essential; applying a standard rate to exempt items over-charges patients and produces wrong FBR submissions."
+      },
+      {
+        "question": "What is the penalty risk for a small pharmacy?",
+        "answer": "Even small pharmacies that are Tier-1 retailers face penalties starting around PKR 10,000 and rising for repeat non-compliance, plus possible STRN suspension. Silent submission failures are the usual cause."
+      }
+    ],
+    "publishedAt": "2026-06-29T20:51:17.431Z",
+    "readTime": 4,
+    "version": 4,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-30T02:02:09.607Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/6023608/pexels-photo-6023608.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/6023608/pexels-photo-6023608.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A person using contactless payment at a retail counter in Portugal wearing an apron.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/a-person-using-a-pos-machine-6023608/"
+    }
+  },
+  {
+    "slug": "fbr-pos-system-restaurants-pakistan-2026",
+    "title": "FBR POS for Restaurants in Pakistan: A 2026 Setup Guide",
+    "metaDescription": "How restaurants in Pakistan integrate an FBR POS system in 2026 — dine-in vs takeaway, service charge, peak-hour volume, and the IRIS settings that matter.",
+    "keywords": [
+      "fbr pos system restaurants pakistan",
+      "restaurant pos fbr",
+      "fbr pos dine-in"
+    ],
+    "faqs": [
+      {
+        "question": "Do takeaway and delivery orders need FBR invoices too?",
+        "answer": "Yes. Every taxable sale — dine-in, takeaway, or delivery — must generate an FBR-reported, QR-coded invoice. Delivery orders routed through aggregators still need a compliant invoice from your own POS."
+      },
+      {
+        "question": "How is service charge handled on an FBR invoice?",
+        "answer": "Service charge is part of the taxable value unless your tax advisor confirms otherwise, so it must appear on the invoice and be included in what is reported to IRIS. Misclassifying it is a common cause of reconciliation gaps."
+      },
+      {
+        "question": "Can my restaurant POS keep billing if the internet drops mid-service?",
+        "answer": "A compliant POS queues orders locally during an outage and submits them to FBR IRIS with their original timestamps once the connection returns, so a Friday-night rush is never blocked by connectivity."
+      },
+      {
+        "question": "What happens if a waiter voids an order after the invoice is generated?",
+        "answer": "Voids and modifications must be recorded and reported, not just deleted locally. An invoice that exists in IRIS but was cancelled only on the POS creates a discrepancy FBR can flag."
+      }
+    ],
+    "publishedAt": "2026-06-29T20:51:17.431Z",
+    "readTime": 4,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T20:51:17.431Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/6284909/pexels-photo-6284909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/6284909/pexels-photo-6284909.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Two men in a restaurant review business documents and a tablet for planning purposes.",
+      "photographer": "Gustavo Fring",
+      "photographerUrl": "https://www.pexels.com/@gustavo-fring",
+      "pexelsUrl": "https://www.pexels.com/photo/businessmen-looking-on-tablet-and-documents-in-restaurant-6284909/"
+    }
+  },
+  {
+    "slug": "generate-fbr-qr-invoices-pakistan",
+    "title": "How to Generate FBR QR Invoices in Pakistan (and Why They Fail)",
+    "metaDescription": "A clear guide to generating valid FBR QR invoices in Pakistan — what the QR encodes, the step-by-step process, and the reasons QR codes fail to verify.",
+    "keywords": [
+      "generate fbr qr invoices pakistan",
+      "fbr qr invoice",
+      "fbr qr code not validating"
+    ],
+    "faqs": [
+      {
+        "question": "What information does an FBR QR code actually contain?",
+        "answer": "It encodes the invoice reference issued by FBR IRIS so anyone can verify, on the FBR portal, that the sale was genuinely reported. A QR that points to nothing in IRIS is just a picture — it proves no compliance."
+      },
+      {
+        "question": "Why does my QR code fail to validate on the FBR portal?",
+        "answer": "Almost always because the invoice was never accepted by IRIS — a failed submission still prints a receipt locally — or the QR encodes the wrong reference. Confirm the invoice exists in your IRIS dashboard before trusting the QR."
+      },
+      {
+        "question": "Do I need a special printer to produce QR invoices?",
+        "answer": "No. Any thermal or standard printer works, and you can even send the QR invoice over WhatsApp or SMS. The QR is data, not special hardware; what matters is that the underlying invoice reached FBR."
+      },
+      {
+        "question": "Can I generate FBR QR invoices without specialised POS hardware?",
+        "answer": "Yes — a compliant POS app on a phone, tablet, or laptop can generate valid FBR QR invoices. The requirement is the IRIS integration, not expensive terminals."
+      }
+    ],
+    "publishedAt": "2026-06-29T20:51:17.431Z",
+    "readTime": 4,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T20:51:17.431Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Person's hand holding a company invoice on a clipboard with a pen.",
+      "photographer": "Kindel Media",
+      "photographerUrl": "https://www.pexels.com/@kindelmedia",
+      "pexelsUrl": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-clipboard-7651555/"
+    }
+  },
+  {
+    "slug": "fbr-pos-system-issues",
+    "title": "FBR POS System Issues: Common Errors and How to Fix Them",
+    "metaDescription": "FBR POS system issues like token expiry, offline sync failures, and QR errors — what causes them and the practical fixes that keep your IRIS integration compliant.",
+    "keywords": [
+      "fbr pos system issues",
+      "fbr pos integration problems",
+      "fbr iris errors pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "Why does my FBR POS keep showing token expiry errors?",
+        "answer": "FBR IRIS authentication tokens expire roughly every 60 minutes. If your POS caches the first token and never refreshes it, every sale after the first hour silently fails. The fix is proactive refresh — request a new token about five minutes before expiry rather than waiting for a rejection."
+      },
+      {
+        "question": "What happens to sales made while the internet is down?",
+        "answer": "A correctly built POS queues those invoices locally and submits them to FBR IRIS when the connection returns, stamped with the original sale time. If your system batches them with the reconnection time instead, FBR's monitoring flags the timestamp mismatch as a discrepancy."
+      },
+      {
+        "question": "Why is the QR code on my invoice not validating on the FBR portal?",
+        "answer": "Usually because the invoice was never accepted by IRIS (a failed submission still prints a receipt locally) or the QR encodes the wrong invoice reference number. Verify the invoice actually appears in your IRIS dashboard before trusting the printed QR."
+      },
+      {
+        "question": "Can FBR fine me for POS integration errors I did not notice?",
+        "answer": "Yes. Non-compliance penalties start around PKR 10,000 and can reach PKR 1,000,000 for repeated violations, plus possible STRN suspension. Silent submission failures are the most dangerous because the business believes it is compliant while invoices never reach FBR."
+      },
+      {
+        "question": "How often should I reconcile my POS with the IRIS dashboard?",
+        "answer": "At least monthly, and ideally weekly. Compare the invoice count your POS recorded against the count IRIS shows. Any gap points to rejected or unsynced invoices you can fix before they become an audit problem."
+      }
+    ],
+    "publishedAt": "2026-06-29T20:41:18.105Z",
+    "readTime": 6,
+    "version": 3,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-06-29T20:41:18.105Z",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
+      "photographer": "Kampus Production",
+      "photographerUrl": "https://www.pexels.com/@kampus",
+      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
     }
   },
   {
@@ -395,1076 +1535,6 @@
     "lastUpdated": "2026-06-20T02:53:23.863Z"
   },
   {
-    "slug": "fbr-penalty-declared-value-reversal",
-    "title": "FBR Declared Value Reversal: Top 3 Compliance Tips",
-    "metaDescription": "What declared value reversal penalties mean in Pakistan's FBR context — why declared values get challenged, the consequences, and how accurate invoicing prevents them.",
-    "keywords": [
-      "fbr declared value reversal",
-      "fbr declared value penalty",
-      "declared value fbr pakistan"
-    ],
-    "faqs": [
-      {
-        "question": "What does 'declared value reversal' mean?",
-        "answer": "It refers to FBR challenging and adjusting a value a business declared — for goods or sales — when records do not support it. The declared figure is reversed to a corrected one, often with a penalty attached."
-      },
-      {
-        "question": "Why would FBR reverse a declared value?",
-        "answer": "Usually because the declared value does not match supporting records — invoices, POS data, or import documents. Gaps between what was declared and what the data shows invite adjustment."
-      },
-      {
-        "question": "How does accurate POS invoicing help?",
-        "answer": "When every sale is reported to FBR IRIS in real time, your declared sales values are backed by verifiable records, leaving little room for a reversal. Consistent data is the best defence."
-      },
-      {
-        "question": "What should I do if I receive a reversal notice?",
-        "answer": "Gather the supporting records, respond within the stated window, and correct any genuine errors. Accurate, reconciled POS and tax records make the response far simpler."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:33:46.808Z",
-    "readTime": 3,
-    "version": 4,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-07-01T02:33:31.933Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
-      "photographer": "pierre matile",
-      "photographerUrl": "https://www.pexels.com/@open-borders",
-      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
-    }
-  },
-  {
-    "slug": "traders-difficulties-fbr-pos-system",
-    "title": "Common FBR POS Difficulties for Small Traders (and How to Solve Them)",
-    "metaDescription": "The real difficulties small traders in Pakistan face with the FBR POS system — cost, technical worry, connectivity, staff training — and practical ways past each.",
-    "keywords": [
-      "traders fbr pos difficulties",
-      "small business fbr pos",
-      "fbr pos problems traders"
-    ],
-    "faqs": [
-      {
-        "question": "Is FBR POS too expensive for a small trader?",
-        "answer": "It is usually far cheaper than a single penalty. Cloud plans often run a modest monthly fee with no costly hardware, and the time saved on monthly filing offsets much of the cost."
-      },
-      {
-        "question": "I am not technical — is FBR POS hard to use?",
-        "answer": "Day to day it is no harder than ringing up a sale; compliance runs in the background. The setup is handled once, and basic staff training usually takes under half an hour."
-      },
-      {
-        "question": "What if my shop has unreliable internet?",
-        "answer": "A compliant POS queues sales offline and syncs them to FBR when the connection returns, so poor connectivity does not stop you billing or break compliance."
-      },
-      {
-        "question": "What is the single biggest mistake small traders make?",
-        "answer": "Delaying because it feels daunting. The penalties for non-compliance are far more painful than the setup, which is faster and simpler than most expect."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:30:43.602Z",
-    "readTime": 3,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:30:43.602Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
-      "photographer": "Kampus Production",
-      "photographerUrl": "https://www.pexels.com/@kampus",
-      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
-    }
-  },
-  {
-    "slug": "fbr-retail-sector-pos-system-issues",
-    "title": "Top 3 FBR Retail POS Issues: Causes and Fixes",
-    "metaDescription": "The FBR POS problems that hit retail hardest in Pakistan — high-SKU tax mapping, returns and exchanges, barcode mismatches, and stock-versus-sales gaps.",
-    "keywords": [
-      "fbr retail pos issues",
-      "retail sector fbr pos problems",
-      "fbr pos retail errors"
-    ],
-    "faqs": [
-      {
-        "question": "What FBR POS issues are unique to retail?",
-        "answer": "High-SKU tax mapping errors, mishandled returns and exchanges, barcode mismatches, and gaps between stock and reported sales. Retail's volume and product variety create problems a service business never sees."
-      },
-      {
-        "question": "How do returns cause FBR problems?",
-        "answer": "A return reverses a sale, and that reversal must be reported correctly — not just adjusted locally. A refund handled only on the POS while the original invoice stands in IRIS creates a discrepancy."
-      },
-      {
-        "question": "Why do barcode mismatches matter for compliance?",
-        "answer": "If a scanned barcode maps to the wrong product, the wrong tax rate and value get reported. Across thousands of sales, those small errors add up to a real reporting gap."
-      },
-      {
-        "question": "How do I catch retail-specific issues?",
-        "answer": "Reconcile stock against reported sales as well as POS against IRIS. When the three line up, your retail reporting is sound."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:33:46.808Z",
-    "readTime": 3,
-    "version": 4,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-30T02:02:08.496Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
-      "photographer": "Aa Dil",
-      "photographerUrl": "https://www.pexels.com/@aadil",
-      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
-    }
-  },
-  {
-    "slug": "fbr-pos-invoicing-system",
-    "title": "What is FBR POS Invoicing System?",
-    "metaDescription": "A plain-English walkthrough of how the FBR POS invoicing system works in Pakistan — from a sale, to IRIS submission, to the QR code a customer can verify.",
-    "keywords": [
-      "fbr pos invoicing system",
-      "how fbr invoicing works",
-      "fbr pos invoice process"
-    ],
-    "faqs": [
-      {
-        "question": "What is the FBR POS invoicing system?",
-        "answer": "It is the real-time process by which a registered business reports each sale to FBR IRIS and issues a QR-coded invoice. The system links your point of sale to FBR so every transaction is recorded as it happens."
-      },
-      {
-        "question": "Does the customer get a normal receipt?",
-        "answer": "Yes — it looks like a normal receipt but carries a QR code. Scanning it lets anyone confirm on the FBR portal that the sale was genuinely reported, which is the proof of compliance."
-      },
-      {
-        "question": "What makes an invoice 'valid' under this system?",
-        "answer": "That it was accepted by IRIS and the QR encodes the reference IRIS returned. A locally printed receipt with no matching IRIS record is not a valid FBR invoice, even if it looks the part."
-      },
-      {
-        "question": "Is the whole thing automatic?",
-        "answer": "Once configured, yes. The POS submits, IRIS validates and returns a reference, the POS prints the QR — all in the moment of sale, with no manual steps for staff."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:30:43.602Z",
-    "readTime": 4,
-    "version": 5,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-07-01T02:33:32.541Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
-      "photographer": "Kampus Production",
-      "photographerUrl": "https://www.pexels.com/@kampus",
-      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
-    }
-  },
-  {
-    "slug": "fbr-pos-integration-system-failures",
-    "title": "Why FBR POS Integrations Fail at Go-Live (and How to Prevent It)",
-    "metaDescription": "The real reasons FBR POS integrations fail when businesses go live in Pakistan — untested invoices, wrong credentials, no offline plan — and how to avoid each.",
-    "keywords": [
-      "fbr pos integration failures",
-      "fbr pos go-live problems",
-      "fbr integration not working"
-    ],
-    "faqs": [
-      {
-        "question": "Why do FBR POS integrations fail right after go-live?",
-        "answer": "Usually because the business went live without testing — credentials were misconfigured, no sample invoices were verified in IRIS, or the offline plan was never set up. The failures were built in on day one and only surface under real use."
-      },
-      {
-        "question": "How do I know if my integration actually works?",
-        "answer": "Run test invoices before going live and confirm each appears in your IRIS dashboard. If they do not show up there, the integration is not working, regardless of what the receipt shows."
-      },
-      {
-        "question": "What is the most overlooked go-live step?",
-        "answer": "Configuring and testing offline queueing. Businesses test on a good connection, go live, then lose invoices the first time the internet drops during trading."
-      },
-      {
-        "question": "Can a failed integration be fixed without starting over?",
-        "answer": "Almost always. Most go-live failures are configuration issues — credentials, token refresh, tax mapping, offline settings — that are corrected without replacing the system."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:30:43.602Z",
-    "readTime": 3,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:30:43.602Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
-      "photographer": "Kampus Production",
-      "photographerUrl": "https://www.pexels.com/@kampus",
-      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
-    }
-  },
-  {
-    "slug": "fbr-pos-software-download",
-    "title": "Top 3 FBR POS Software Download Options Compared",
-    "metaDescription": "Thinking of downloading FBR POS software in Pakistan? What 'free download' misses, why the IRIS integration is what matters, and how to avoid unsafe apps.",
-    "keywords": [
-      "fbr pos software download",
-      "free fbr pos software",
-      "download pos software pakistan"
-    ],
-    "faqs": [
-      {
-        "question": "Can I just download free FBR POS software and be compliant?",
-        "answer": "Downloading an app is the easy part; compliance comes from a live, maintained FBR IRIS integration behind it. Many free downloads either lack a real integration or stop being updated, which leaves you non-compliant."
-      },
-      {
-        "question": "What should I check before downloading any POS software?",
-        "answer": "That it has a verified, current FBR IRIS integration, that the vendor updates it as rules change, and that it comes from a trustworthy source. Ask to see a live invoice verify on the FBR portal."
-      },
-      {
-        "question": "Is it safe to download POS software from anywhere?",
-        "answer": "No. Random downloads can be outdated, unsupported, or unsafe. Use the vendor's official source and confirm support and updates are included."
-      },
-      {
-        "question": "Do I download anything at all with a cloud POS?",
-        "answer": "Often very little — cloud POS may run in a browser or a light app, with the integration and updates handled on the vendor's servers, which avoids the 'stale download' problem entirely."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:30:43.602Z",
-    "readTime": 3,
-    "version": 4,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-07-02T02:47:40.441Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
-      "photographer": "Kampus Production",
-      "photographerUrl": "https://www.pexels.com/@kampus",
-      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
-    }
-  },
-  {
-    "slug": "services-for-fbr-penalty-pakistan",
-    "title": "Top 3 FBR Penalty Services Pakistan for Stress-Free Compliance",
-    "metaDescription": "When a Pakistani business should get professional help with an FBR penalty, the kinds of services available, what they cost, and how to choose the right one.",
-    "keywords": [
-      "fbr penalty services pakistan",
-      "fbr penalty help",
-      "fbr compliance services"
-    ],
-    "faqs": [
-      {
-        "question": "Do I need professional help for an FBR penalty?",
-        "answer": "Not always. A simple, clearly-caused penalty you can verify and fix yourself. Help is worth it when the amount is large, the cause is unclear, or the same issue keeps recurring despite your fixes."
-      },
-      {
-        "question": "What kinds of FBR penalty services exist?",
-        "answer": "Tax consultants who handle appeals and filings, POS or compliance-software vendors who fix the technical root cause, and accountants who reconcile your records. Often the real fix is technical, not just paperwork."
-      },
-      {
-        "question": "How do I choose between them?",
-        "answer": "Match the service to the cause. If the penalty stems from a POS submission failure, a software/POS fix prevents recurrence; if it is a filing dispute, a tax consultant is the right call."
-      },
-      {
-        "question": "How can I avoid needing these services at all?",
-        "answer": "Fix the root cause and add a monthly reconciliation against the IRIS dashboard. Most repeat penalties come from an unaddressed technical gap, not from needing more paperwork help."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:44:12.830Z",
-    "readTime": 4,
-    "version": 4,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-07-02T02:47:41.160Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
-      "photographer": "pierre matile",
-      "photographerUrl": "https://www.pexels.com/@open-borders",
-      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
-    }
-  },
-  {
-    "slug": "fbr-pos-system-retailers",
-    "title": "FBR POS for Retailers in Pakistan: A Complete Overview",
-    "metaDescription": "A clear overview of the FBR POS system for retailers in Pakistan — what it is, who must comply, how it works, and what it takes to get and stay compliant.",
-    "keywords": [
-      "fbr pos system retailers",
-      "fbr pos for retailers pakistan",
-      "retail fbr compliance overview"
-    ],
-    "faqs": [
-      {
-        "question": "What is an FBR POS system for a retailer?",
-        "answer": "Software that reports every retail sale to FBR IRIS in real time and issues a QR-coded invoice. It connects your till to FBR so each transaction is recorded as it happens."
-      },
-      {
-        "question": "Which retailers must comply?",
-        "answer": "Tier-1 retailers — broadly larger shops, chains, and businesses above the FBR turnover threshold. If you hold an STRN and trade at scale, integration applies to you."
-      },
-      {
-        "question": "Is it hard to get started?",
-        "answer": "No. A single-shop setup — STRN check, IRIS registration, integration, tax mapping, brief training — is usually complete within a day or two and runs on a phone, tablet, or laptop."
-      },
-      {
-        "question": "What does staying compliant involve?",
-        "answer": "Mainly a monthly reconciliation against the IRIS dashboard and keeping the software updated. The day-to-day reporting is automatic."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:33:46.808Z",
-    "readTime": 3,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:33:46.808Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
-      "photographer": "Aa Dil",
-      "photographerUrl": "https://www.pexels.com/@aadil",
-      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
-    }
-  },
-  {
-    "slug": "fbr-pos-system-issues",
-    "title": "FBR POS System Issues: Common Errors and How to Fix Them",
-    "metaDescription": "FBR POS system issues like token expiry, offline sync failures, and QR errors — what causes them and the practical fixes that keep your IRIS integration compliant.",
-    "keywords": [
-      "fbr pos system issues",
-      "fbr pos integration problems",
-      "fbr iris errors pakistan"
-    ],
-    "faqs": [
-      {
-        "question": "Why does my FBR POS keep showing token expiry errors?",
-        "answer": "FBR IRIS authentication tokens expire roughly every 60 minutes. If your POS caches the first token and never refreshes it, every sale after the first hour silently fails. The fix is proactive refresh — request a new token about five minutes before expiry rather than waiting for a rejection."
-      },
-      {
-        "question": "What happens to sales made while the internet is down?",
-        "answer": "A correctly built POS queues those invoices locally and submits them to FBR IRIS when the connection returns, stamped with the original sale time. If your system batches them with the reconnection time instead, FBR's monitoring flags the timestamp mismatch as a discrepancy."
-      },
-      {
-        "question": "Why is the QR code on my invoice not validating on the FBR portal?",
-        "answer": "Usually because the invoice was never accepted by IRIS (a failed submission still prints a receipt locally) or the QR encodes the wrong invoice reference number. Verify the invoice actually appears in your IRIS dashboard before trusting the printed QR."
-      },
-      {
-        "question": "Can FBR fine me for POS integration errors I did not notice?",
-        "answer": "Yes. Non-compliance penalties start around PKR 10,000 and can reach PKR 1,000,000 for repeated violations, plus possible STRN suspension. Silent submission failures are the most dangerous because the business believes it is compliant while invoices never reach FBR."
-      },
-      {
-        "question": "How often should I reconcile my POS with the IRIS dashboard?",
-        "answer": "At least monthly, and ideally weekly. Compare the invoice count your POS recorded against the count IRIS shows. Any gap points to rejected or unsynced invoices you can fix before they become an audit problem."
-      }
-    ],
-    "publishedAt": "2026-06-29T20:41:18.105Z",
-    "readTime": 6,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T20:41:18.105Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
-      "photographer": "Kampus Production",
-      "photographerUrl": "https://www.pexels.com/@kampus",
-      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
-    }
-  },
-  {
-    "slug": "multi-branch-pos-system-pakistan-fbr-compliance-complete-guide-2026",
-    "title": "Multi-Branch FBR Rollout: A 2026 Implementation Plan",
-    "metaDescription": "A step-by-step 2026 plan for rolling out an FBR POS across multiple branches in Pakistan — sequencing, terminal registration, testing, and central monitoring.",
-    "keywords": [
-      "multi branch fbr rollout",
-      "fbr pos rollout plan",
-      "chain fbr implementation 2026"
-    ],
-    "faqs": [
-      {
-        "question": "How should I sequence a multi-branch FBR rollout?",
-        "answer": "Pilot one branch end to end, fix what you learn, then roll out the rest in waves. A staged rollout catches configuration problems before they multiply across every location."
-      },
-      {
-        "question": "Does each branch need separate registration?",
-        "answer": "Each branch's terminals generally need registering on the IRIS POS portal, even under one STRN. Build that into each wave so no branch trades on unregistered terminals."
-      },
-      {
-        "question": "How long does a multi-branch rollout take?",
-        "answer": "It depends on branch count, but a piloted, waved rollout of several branches typically spans days to a couple of weeks — slower than one shop, but far safer than switching everyone on at once."
-      },
-      {
-        "question": "What is the biggest rollout risk?",
-        "answer": "Going live everywhere simultaneously without a pilot. A single configuration mistake then repeats across every branch instead of being caught once."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:33:46.808Z",
-    "readTime": 3,
-    "version": 4,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:33:46.808Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
-      "photographer": "Kampus Production",
-      "photographerUrl": "https://www.pexels.com/@kampus",
-      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
-    }
-  },
-  {
-    "slug": "fbr-iris-portal-pakistan-pos-registration-guide",
-    "title": "FBR IRIS Portal: How to Register Your POS in Pakistan",
-    "metaDescription": "A step-by-step guide to registering your POS on the FBR IRIS portal in Pakistan — what you need, how to get API credentials, and the errors that trip people up.",
-    "keywords": [
-      "fbr iris portal pos registration",
-      "register pos fbr iris",
-      "fbr iris portal pakistan"
-    ],
-    "faqs": [
-      {
-        "question": "What do I need before registering on the IRIS portal?",
-        "answer": "An active STRN, your NTN, business details, and the number of POS terminals you plan to register. Have your login for iris.fbr.gov.pk ready; without an active STRN you cannot complete POS registration."
-      },
-      {
-        "question": "Where do I get the API credentials for my POS?",
-        "answer": "After registering your terminals on the IRIS POS section, FBR issues API credentials (a token/key) that your POS software uses to submit invoices. Your POS vendor configures these so sales report automatically."
-      },
-      {
-        "question": "How many terminals should I register?",
-        "answer": "Register one per active point of sale. If you add a counter or a new branch later, register its terminal before it starts trading — selling on an unregistered terminal is non-compliant."
-      },
-      {
-        "question": "What is the most common registration mistake?",
-        "answer": "Starting to bill before the terminal is fully registered and the API credentials are live in the POS. The receipts print, but nothing reaches FBR until registration is complete."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:22:47.290Z",
-    "readTime": 3,
-    "version": 4,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:22:47.290Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
-      "photographer": "Kampus Production",
-      "photographerUrl": "https://www.pexels.com/@kampus",
-      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
-    }
-  },
-  {
-    "slug": "fbr-pos-compliance-wholesale-distributors-pakistan",
-    "title": "FBR POS Compliance for Wholesale Distributors in Pakistan",
-    "metaDescription": "What FBR POS compliance means for wholesale and distribution businesses in Pakistan — bulk B2B invoicing, buyer STRNs, input/output tax, and high-volume reporting.",
-    "keywords": [
-      "fbr pos wholesale distributors pakistan",
-      "wholesale fbr compliance",
-      "distributor fbr invoicing"
-    ],
-    "faqs": [
-      {
-        "question": "Do wholesalers need FBR POS integration like retailers?",
-        "answer": "If you are a registered Tier-1 business, yes. Wholesale and distribution sales must be reported to FBR IRIS with compliant invoices, the same as retail — the difference is volume and the B2B nature of the invoices."
-      },
-      {
-        "question": "How is B2B invoicing different under FBR?",
-        "answer": "Your buyers are often registered businesses with their own STRNs, so invoices carry buyer details and feed into both parties' tax positions. Accuracy matters more because errors propagate to your customers' returns."
-      },
-      {
-        "question": "How do distributors handle high invoice volume?",
-        "answer": "A capable POS submits invoices to IRIS with request queuing and retry-with-backoff so peak-volume bursts are not rejected by rate limits. High volume makes silent failures more likely if the system is not built for it."
-      },
-      {
-        "question": "What is the main compliance risk for distributors?",
-        "answer": "Volume hides gaps. A small percentage of failed submissions on thousands of invoices is a large absolute number, so reconciliation and a robust retry mechanism are essential."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:22:47.290Z",
-    "readTime": 3,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:22:47.290Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/10834810/pexels-photo-10834810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/10834810/pexels-photo-10834810.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "High stacks of cardboard boxes organized in a warehouse with a blue metal ceiling.",
-      "photographer": "Ihsan Adityawarman",
-      "photographerUrl": "https://www.pexels.com/@ihsanaditya",
-      "pexelsUrl": "https://www.pexels.com/photo/stacked-boxes-in-a-warehouse-10834810/"
-    }
-  },
-  {
-    "slug": "cloud-fbr-pos-system-benefits-pakistan",
-    "title": "Cloud vs Desktop FBR POS in Pakistan: Which Should You Choose?",
-    "metaDescription": "A practical comparison of cloud and desktop FBR POS systems in Pakistan — automatic compliance updates, multi-device access, offline sync, and central reporting.",
-    "keywords": [
-      "cloud fbr pos system pakistan",
-      "cloud pos benefits pakistan",
-      "cloud vs desktop pos fbr"
-    ],
-    "faqs": [
-      {
-        "question": "Does a cloud POS keep working when the internet drops?",
-        "answer": "A well-built cloud POS keeps billing offline by queuing sales on the device, then syncs them to FBR IRIS with their original timestamps when the connection returns. The 'cloud' part is about where data is stored and updated, not a requirement to be online every second."
-      },
-      {
-        "question": "Why does cloud matter for FBR compliance specifically?",
-        "answer": "FBR rules and SROs change, and the IRIS API evolves with them. A cloud POS is updated centrally by the vendor, so every branch is compliant the day a change lands — versus desktop software that each location has to update manually and often does not."
-      },
-      {
-        "question": "Is my sales data safe in a cloud POS?",
-        "answer": "Reputable cloud POS providers encrypt data and keep backups, which is usually safer than a single shop PC that can be lost, stolen, or corrupted. Ask the vendor where data is stored and how backups work before committing."
-      },
-      {
-        "question": "Can I see all my branches in one place with a cloud POS?",
-        "answer": "Yes — that is one of its biggest advantages. Cloud systems give head office a single live view of sales, stock, and FBR reporting across every branch, which desktop systems cannot do without manual consolidation."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:07:56.495Z",
-    "readTime": 4,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:07:56.495Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
-      "photographer": "Kampus Production",
-      "photographerUrl": "https://www.pexels.com/@kampus",
-      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
-    }
-  },
-  {
-    "slug": "multi-branch-pos-system-pakistan-fbr-compliance",
-    "title": "Top Multi Branch POS System Pakistan: A Comparison",
-    "metaDescription": "How chains and multi-branch businesses in Pakistan stay FBR compliant — per-branch terminal registration, central reporting, and consolidated sales-tax filing.",
-    "keywords": [
-      "multi branch pos system pakistan",
-      "chain store fbr compliance",
-      "multi branch fbr pos"
-    ],
-    "faqs": [
-      {
-        "question": "Does each branch need its own FBR registration?",
-        "answer": "Each point of sale typically needs its terminals registered on the IRIS POS portal, even under one STRN. Treating branches as interchangeable without registering their terminals is a common compliance gap for growing chains."
-      },
-      {
-        "question": "Can I see all branches' FBR reporting in one place?",
-        "answer": "With a cloud, multi-branch POS, yes — head office gets a single live view of sales and FBR submissions across locations. Desktop systems force you to consolidate each branch manually, which is slow and error-prone."
-      },
-      {
-        "question": "How does multi-branch affect monthly sales-tax filing?",
-        "answer": "When every branch reports correctly to IRIS, the monthly return is largely pre-filled from consolidated POS data. The hard part is ensuring no branch is silently failing to submit, which a central dashboard makes visible."
-      },
-      {
-        "question": "What is the biggest compliance risk for a chain?",
-        "answer": "One branch quietly out of compliance while the others are fine. Without central monitoring, a single location with an expired token or unregistered terminal can accumulate weeks of unreported sales before anyone notices."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:07:56.495Z",
-    "readTime": 4,
-    "version": 4,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-30T02:02:09.005Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/8422732/pexels-photo-8422732.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Close-up of customer paying for groceries with produce at a store checkout counter.",
-      "photographer": "Kampus Production",
-      "photographerUrl": "https://www.pexels.com/@kampus",
-      "pexelsUrl": "https://www.pexels.com/photo/paying-using-a-card-8422732/"
-    }
-  },
-  {
-    "slug": "fbr-compliance-checklist-pakistan-businesses-2026",
-    "title": "FBR Compliance Checklist for Pakistani Businesses (2026)",
-    "metaDescription": "A practical FBR compliance checklist for Pakistani businesses in 2026 — STRN, IRIS registration, POS integration, tax mapping, QR validation, and monthly reconciliation.",
-    "keywords": [
-      "fbr compliance checklist pakistan",
-      "fbr compliance 2026",
-      "fbr pos compliance checklist"
-    ],
-    "faqs": [
-      {
-        "question": "How often should I run this checklist?",
-        "answer": "Do the setup items once, then run the ongoing items — reconciliation, software updates, tax-rate review — every month. Monthly is the cadence that catches silent failures before they become penalties."
-      },
-      {
-        "question": "What is the single most important item?",
-        "answer": "The monthly reconciliation between your POS and the IRIS dashboard. It is the one check that reveals invoices that never reached FBR, which is the most common and most dangerous compliance gap."
-      },
-      {
-        "question": "Do small businesses need to follow all of this?",
-        "answer": "If you are a Tier-1 retailer with an active STRN, yes — the obligations apply regardless of size. The checklist scales down easily for a single outlet."
-      },
-      {
-        "question": "What are the penalties for missing these?",
-        "answer": "Non-compliance penalties start around PKR 10,000 and rise to as much as PKR 1,000,000 for repeated violations, with possible STRN suspension. Most are avoidable by working through this list."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:22:47.290Z",
-    "readTime": 3,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:22:47.290Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
-      "photographer": "pierre matile",
-      "photographerUrl": "https://www.pexels.com/@open-borders",
-      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
-    }
-  },
-  {
-    "slug": "retail-inventory-management-fbr-pos-pakistan",
-    "title": "Retail Inventory Management with an FBR POS in Pakistan",
-    "metaDescription": "How an FBR POS doubles as inventory management for Pakistani retailers — automatic stock deduction, shrinkage control, reorder alerts, and cleaner audits.",
-    "keywords": [
-      "retail inventory management fbr pos pakistan",
-      "pos inventory pakistan",
-      "fbr pos stock management"
-    ],
-    "faqs": [
-      {
-        "question": "Does FBR POS integration help with stock, or only tax?",
-        "answer": "Both. The same sale that gets reported to FBR also deducts the item from stock in real time, so a compliant POS gives you accurate inventory as a by-product of compliance — no separate stock system needed."
-      },
-      {
-        "question": "How does QR invoicing reduce shrinkage?",
-        "answer": "Because every sale must produce a reported, QR-coded invoice, unrecorded cash sales become very hard to hide. That closes the gap where stock leaves without a corresponding sale, which is a major source of retail shrinkage."
-      },
-      {
-        "question": "Can the POS tell me when to reorder?",
-        "answer": "Most FBR-compliant retail POS systems track stock levels and can alert you when an item falls below a threshold, so you reorder before running out — turning compliance data into a practical planning tool."
-      },
-      {
-        "question": "Does accurate inventory help during an FBR audit?",
-        "answer": "Yes. When sales, stock movements, and FBR submissions all reconcile, an audit becomes a quick verification rather than a stressful reconstruction of missing records."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:07:56.495Z",
-    "readTime": 3,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:07:56.495Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
-      "photographer": "Aa Dil",
-      "photographerUrl": "https://www.pexels.com/@aadil",
-      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
-    }
-  },
-  {
-    "slug": "fbr-pos-integration-monthly-sales-tax-returns-pakistan",
-    "title": "How FBR POS Integration Simplifies Monthly Sales-Tax Returns",
-    "metaDescription": "How an FBR-integrated POS turns your monthly sales-tax return in Pakistan from a multi-day chore into a short review — what's pre-filled and what to check.",
-    "keywords": [
-      "fbr pos monthly sales tax return",
-      "fbr sales tax filing pakistan",
-      "pos integration tax return"
-    ],
-    "faqs": [
-      {
-        "question": "Does an FBR POS file my sales-tax return for me?",
-        "answer": "It does most of the work. Because every sale is already reported to IRIS, your output-tax figures are largely pre-populated. You still review, add purchase/input-tax details, and submit — but the manual compilation of sales is gone."
-      },
-      {
-        "question": "What still needs manual attention each month?",
-        "answer": "Input tax on purchases, any adjustments or exemptions, and a reconciliation check between your POS records and the IRIS dashboard. The sales side is automated; the rest is review."
-      },
-      {
-        "question": "How does integration reduce errors in filing?",
-        "answer": "Manual compilation from spreadsheets is where mistakes creep in. When the return draws directly from reported POS data, the sales figures match what FBR already has, so there are no discrepancies to explain later."
-      },
-      {
-        "question": "What happens if some invoices never reached FBR?",
-        "answer": "Then your return understates sales and the gap can surface in an audit. This is why a monthly reconciliation between your POS and the IRIS dashboard matters before you file."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:22:47.290Z",
-    "readTime": 3,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:22:47.290Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Person's hand holding a company invoice on a clipboard with a pen.",
-      "photographer": "Kindel Media",
-      "photographerUrl": "https://www.pexels.com/@kindelmedia",
-      "pexelsUrl": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-clipboard-7651555/"
-    }
-  },
-  {
-    "slug": "fbr-pos-system-lahore-retailers-2026",
-    "title": "FBR POS for Lahore Retailers in 2026: What to Get Right",
-    "metaDescription": "An FBR POS guide for Lahore retailers in 2026 — local enforcement, the setup steps, and how to stay compliant in one of Pakistan's busiest retail markets.",
-    "keywords": [
-      "fbr pos system lahore retailers",
-      "fbr pos lahore",
-      "lahore retail fbr compliance"
-    ],
-    "faqs": [
-      {
-        "question": "Which Lahore retailers must integrate with FBR POS?",
-        "answer": "Tier-1 retailers — larger shops, chains, and businesses above the FBR turnover threshold. If you hold an STRN and trade at scale in Lahore, integration is required or soon will be."
-      },
-      {
-        "question": "How long does setup take for a Lahore shop?",
-        "answer": "A single-branch setup is typically done in 24 to 48 hours: STRN check, IRIS registration, API configuration, tax mapping, and brief staff training."
-      },
-      {
-        "question": "Do I need new hardware?",
-        "answer": "No. A compliant POS runs on a phone, tablet, or laptop. The requirement is the live IRIS integration, not specialised terminals."
-      },
-      {
-        "question": "What is the biggest risk for a Lahore retailer?",
-        "answer": "Silent submission failures — believing you are compliant while invoices never reach FBR. A monthly reconciliation against the IRIS dashboard is the fix."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:27:22.784Z",
-    "readTime": 3,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:27:22.784Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
-      "photographer": "Aa Dil",
-      "photographerUrl": "https://www.pexels.com/@aadil",
-      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
-    }
-  },
-  {
-    "slug": "fbr-pos-system-karachi-businesses",
-    "title": "FBR POS for Karachi Businesses: What You Need to Get Right",
-    "metaDescription": "An FBR POS guide for Karachi businesses — local enforcement, the sectors most affected, the setup steps, and how to stay compliant in Pakistan's busiest market.",
-    "keywords": [
-      "fbr pos system karachi",
-      "fbr pos karachi businesses",
-      "pos system karachi fbr compliant"
-    ],
-    "faqs": [
-      {
-        "question": "Which Karachi businesses must integrate with FBR POS?",
-        "answer": "Tier-1 retailers — broadly, larger shops, chains, and businesses above the FBR turnover threshold — must integrate, across retail, restaurants, pharmacies, and more. If you hold an STRN, assume integration is required or soon will be."
-      },
-      {
-        "question": "Is FBR enforcement actually active in Karachi?",
-        "answer": "Yes. As Pakistan's largest commercial centre, Karachi sees significant FBR activity, and non-integrated Tier-1 outlets are a clear target. Treating integration as optional is the most expensive mistake a Karachi business can make."
-      },
-      {
-        "question": "How long does FBR POS setup take for a Karachi shop?",
-        "answer": "A single-branch setup — STRN verification, IRIS registration, API configuration, tax mapping, and brief staff training — is typically completed within 24 to 48 hours with a compliant provider."
-      },
-      {
-        "question": "Do I need expensive hardware to be FBR compliant in Karachi?",
-        "answer": "No. A compliant POS runs on an ordinary Android phone, tablet, or laptop. The requirement is the live IRIS integration, not specialised terminals."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:07:56.495Z",
-    "readTime": 4,
-    "version": 4,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:07:56.495Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/15294407/pexels-photo-15294407.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/15294407/pexels-photo-15294407.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Senior man selling footwear at a street market in Karachi, Pakistan. Local commerce and lifestyle.",
-      "photographer": "Arsalan Ahmed",
-      "photographerUrl": "https://www.pexels.com/@arsalanahmed5590",
-      "pexelsUrl": "https://www.pexels.com/photo/elderly-man-selling-clothes-on-a-street-market-15294407/"
-    }
-  },
-  {
-    "slug": "fbr-pos-system-restaurants-pakistan-2026",
-    "title": "FBR POS for Restaurants in Pakistan: A 2026 Setup Guide",
-    "metaDescription": "How restaurants in Pakistan integrate an FBR POS system in 2026 — dine-in vs takeaway, service charge, peak-hour volume, and the IRIS settings that matter.",
-    "keywords": [
-      "fbr pos system restaurants pakistan",
-      "restaurant pos fbr",
-      "fbr pos dine-in"
-    ],
-    "faqs": [
-      {
-        "question": "Do takeaway and delivery orders need FBR invoices too?",
-        "answer": "Yes. Every taxable sale — dine-in, takeaway, or delivery — must generate an FBR-reported, QR-coded invoice. Delivery orders routed through aggregators still need a compliant invoice from your own POS."
-      },
-      {
-        "question": "How is service charge handled on an FBR invoice?",
-        "answer": "Service charge is part of the taxable value unless your tax advisor confirms otherwise, so it must appear on the invoice and be included in what is reported to IRIS. Misclassifying it is a common cause of reconciliation gaps."
-      },
-      {
-        "question": "Can my restaurant POS keep billing if the internet drops mid-service?",
-        "answer": "A compliant POS queues orders locally during an outage and submits them to FBR IRIS with their original timestamps once the connection returns, so a Friday-night rush is never blocked by connectivity."
-      },
-      {
-        "question": "What happens if a waiter voids an order after the invoice is generated?",
-        "answer": "Voids and modifications must be recorded and reported, not just deleted locally. An invoice that exists in IRIS but was cancelled only on the POS creates a discrepancy FBR can flag."
-      }
-    ],
-    "publishedAt": "2026-06-29T20:51:17.431Z",
-    "readTime": 4,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T20:51:17.431Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/6284909/pexels-photo-6284909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/6284909/pexels-photo-6284909.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Two men in a restaurant review business documents and a tablet for planning purposes.",
-      "photographer": "Gustavo Fring",
-      "photographerUrl": "https://www.pexels.com/@gustavo-fring",
-      "pexelsUrl": "https://www.pexels.com/photo/businessmen-looking-on-tablet-and-documents-in-restaurant-6284909/"
-    }
-  },
-  {
-    "slug": "generate-fbr-qr-invoices-pakistan",
-    "title": "How to Generate FBR QR Invoices in Pakistan (and Why They Fail)",
-    "metaDescription": "A clear guide to generating valid FBR QR invoices in Pakistan — what the QR encodes, the step-by-step process, and the reasons QR codes fail to verify.",
-    "keywords": [
-      "generate fbr qr invoices pakistan",
-      "fbr qr invoice",
-      "fbr qr code not validating"
-    ],
-    "faqs": [
-      {
-        "question": "What information does an FBR QR code actually contain?",
-        "answer": "It encodes the invoice reference issued by FBR IRIS so anyone can verify, on the FBR portal, that the sale was genuinely reported. A QR that points to nothing in IRIS is just a picture — it proves no compliance."
-      },
-      {
-        "question": "Why does my QR code fail to validate on the FBR portal?",
-        "answer": "Almost always because the invoice was never accepted by IRIS — a failed submission still prints a receipt locally — or the QR encodes the wrong reference. Confirm the invoice exists in your IRIS dashboard before trusting the QR."
-      },
-      {
-        "question": "Do I need a special printer to produce QR invoices?",
-        "answer": "No. Any thermal or standard printer works, and you can even send the QR invoice over WhatsApp or SMS. The QR is data, not special hardware; what matters is that the underlying invoice reached FBR."
-      },
-      {
-        "question": "Can I generate FBR QR invoices without specialised POS hardware?",
-        "answer": "Yes — a compliant POS app on a phone, tablet, or laptop can generate valid FBR QR invoices. The requirement is the IRIS integration, not expensive terminals."
-      }
-    ],
-    "publishedAt": "2026-06-29T20:51:17.431Z",
-    "readTime": 4,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T20:51:17.431Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Person's hand holding a company invoice on a clipboard with a pen.",
-      "photographer": "Kindel Media",
-      "photographerUrl": "https://www.pexels.com/@kindelmedia",
-      "pexelsUrl": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-clipboard-7651555/"
-    }
-  },
-  {
-    "slug": "fbr-pos-system-pharmacies-pakistan-2026",
-    "title": "Top FBR POS Systems for Pharmacies in Pakistan Compared",
-    "metaDescription": "An FBR POS guide for Pakistani pharmacies in 2026 — batch and expiry tracking, DRAP alongside FBR, controlled items, and the IRIS settings that keep you compliant.",
-    "keywords": [
-      "fbr pos system pharmacies pakistan",
-      "pharmacy pos fbr",
-      "medical store fbr pos"
-    ],
-    "faqs": [
-      {
-        "question": "Does an FBR POS replace my DRAP record-keeping?",
-        "answer": "No. FBR compliance and DRAP requirements are separate. A good pharmacy POS helps with both — reporting sales to FBR IRIS while also tracking batches and expiry for DRAP — but neither obligation removes the other."
-      },
-      {
-        "question": "How does batch and expiry tracking interact with FBR invoicing?",
-        "answer": "Batch and expiry tracking is for stock and DRAP, while the FBR invoice reports the sale and tax. They live in the same POS but serve different rules; the invoice still has to reach IRIS regardless of how stock is tracked."
-      },
-      {
-        "question": "Are all medicines taxed the same way on an FBR invoice?",
-        "answer": "No — many medicines fall under specific or exempt categories. Mapping each product to the correct tax treatment is essential; applying a standard rate to exempt items over-charges patients and produces wrong FBR submissions."
-      },
-      {
-        "question": "What is the penalty risk for a small pharmacy?",
-        "answer": "Even small pharmacies that are Tier-1 retailers face penalties starting around PKR 10,000 and rising for repeat non-compliance, plus possible STRN suspension. Silent submission failures are the usual cause."
-      }
-    ],
-    "publishedAt": "2026-06-29T20:51:17.431Z",
-    "readTime": 4,
-    "version": 4,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-30T02:02:09.607Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/6023608/pexels-photo-6023608.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/6023608/pexels-photo-6023608.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "A person using contactless payment at a retail counter in Portugal wearing an apron.",
-      "photographer": "Kampus Production",
-      "photographerUrl": "https://www.pexels.com/@kampus",
-      "pexelsUrl": "https://www.pexels.com/photo/a-person-using-a-pos-machine-6023608/"
-    }
-  },
-  {
-    "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
-    "title": "Choosing the Best FBR POS for a Lahore Restaurant",
-    "metaDescription": "How to choose an FBR POS for a Lahore restaurant — the features that actually matter for dine-in, takeaway, and delivery, and the questions to ask any vendor.",
-    "keywords": [
-      "best fbr pos restaurant lahore",
-      "restaurant pos lahore",
-      "fbr pos for lahore restaurant"
-    ],
-    "faqs": [
-      {
-        "question": "What features matter most for a Lahore restaurant POS?",
-        "answer": "A live FBR IRIS integration, offline billing that queues and syncs, fast handling of split bills and modifications, and kitchen-display support. Compliance plus speed at the table is the combination that matters."
-      },
-      {
-        "question": "How do I verify a vendor's FBR integration is real?",
-        "answer": "Ask to see a live invoice verify on the FBR portal, not a screenshot. A genuine integration produces a QR that resolves to a real IRIS record; a vague 'FBR ready' claim is not the same thing."
-      },
-      {
-        "question": "Do I need expensive hardware for a restaurant POS?",
-        "answer": "No. A compliant POS runs on tablets or a phone, so you can take orders at the table. The cost is in the software and integration, not specialised terminals."
-      },
-      {
-        "question": "Can the POS handle a Friday-night rush if the internet drops?",
-        "answer": "A good one queues orders locally during an outage and syncs them to FBR IRIS with original timestamps when the connection returns, so service never stops."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:27:22.784Z",
-    "readTime": 3,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:27:22.784Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/6284909/pexels-photo-6284909.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/6284909/pexels-photo-6284909.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Two men in a restaurant review business documents and a tablet for planning purposes.",
-      "photographer": "Gustavo Fring",
-      "photographerUrl": "https://www.pexels.com/@gustavo-fring",
-      "pexelsUrl": "https://www.pexels.com/photo/businessmen-looking-on-tablet-and-documents-in-restaurant-6284909/"
-    }
-  },
-  {
-    "slug": "best-fbr-pos-system-for-retail-in-karachi",
-    "title": "Choosing the Best FBR POS for Karachi Retail",
-    "metaDescription": "How to choose an FBR POS for a Karachi retail shop — the inventory, barcode, and multi-counter features that matter, plus how to verify a real IRIS integration.",
-    "keywords": [
-      "best fbr pos retail karachi",
-      "retail pos karachi",
-      "fbr pos for karachi shop"
-    ],
-    "faqs": [
-      {
-        "question": "What should a Karachi retailer prioritise in a POS?",
-        "answer": "A verified FBR IRIS integration first, then strong inventory management, barcode scanning, and the ability to add a second counter on busy days. For retail, accurate stock is almost as valuable as compliance."
-      },
-      {
-        "question": "Does the POS handle inventory as well as FBR reporting?",
-        "answer": "A good retail POS deducts stock on every sale it reports to FBR, so you get live inventory as a by-product of compliance. Ask whether stock and reorder alerts are built in."
-      },
-      {
-        "question": "How important is barcode scanning?",
-        "answer": "For any shop with more than a handful of SKUs, very. It speeds checkout and reduces the wrong-item errors that create tax and stock discrepancies."
-      },
-      {
-        "question": "How do I avoid buying a POS that is not really FBR compliant?",
-        "answer": "Insist on seeing a live invoice verify on the FBR portal. Many systems claim 'FBR ready' without a maintained integration; the QR-verification test settles it."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:27:22.784Z",
-    "readTime": 3,
-    "version": 3,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:27:22.784Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
-      "photographer": "Aa Dil",
-      "photographerUrl": "https://www.pexels.com/@aadil",
-      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
-    }
-  },
-  {
-    "slug": "how-to-configure-fbr-penalty-in-pakistan",
-    "title": "How to Respond to FBR Penalty Notice What to Do Next",
-    "metaDescription": "A calm, practical guide to handling an FBR penalty notice in Pakistan — how to verify it, respond within the window, fix the cause, and prevent the next one.",
-    "keywords": [
-      "fbr penalty notice what to do",
-      "respond to fbr penalty",
-      "fbr penalty notice pakistan"
-    ],
-    "faqs": [
-      {
-        "question": "What is the first thing to do with an FBR penalty notice?",
-        "answer": "Read it carefully and verify the details against your own records and the IRIS dashboard. Confirm what it is actually for before responding — some notices stem from issues you can quickly disprove or fix."
-      },
-      {
-        "question": "How long do I have to respond?",
-        "answer": "Notices usually specify a window, often around 30 days. Missing it removes your chance to contest or correct, so act promptly even if you intend to dispute."
-      },
-      {
-        "question": "Can I get a penalty reduced?",
-        "answer": "Often, yes — by fixing the underlying cause, filing any appeal within the window, and showing corrected compliance. Acting quickly and in good faith works in your favour."
-      },
-      {
-        "question": "How do I avoid the next notice?",
-        "answer": "Find and fix the root cause — frequently a silent POS submission failure — and add a monthly reconciliation so the same gap cannot recur unnoticed."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:33:46.808Z",
-    "readTime": 3,
-    "version": 5,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-07-01T02:33:31.176Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/36965908/pexels-photo-36965908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/36965908/pexels-photo-36965908.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "A young woman in traditional Pakistani clothing attends a lively business networking event indoors.",
-      "photographer": "iram shehzad",
-      "photographerUrl": "https://www.pexels.com/@iram-shehzad-45081404",
-      "pexelsUrl": "https://www.pexels.com/photo/young-woman-in-pakistani-attire-at-business-event-36965908/"
-    }
-  },
-  {
-    "slug": "how-to-setup-fbr-penalty-in-pakistan",
-    "title": "FBR Penalties in Pakistan: How They Work and How to Avoid Them",
-    "metaDescription": "A clear guide to FBR penalties in Pakistan — what triggers them, the typical amounts, how they escalate, and the practical steps that keep your business clear of them.",
-    "keywords": [
-      "fbr penalty pakistan",
-      "fbr penalties how they work",
-      "avoid fbr penalty"
-    ],
-    "faqs": [
-      {
-        "question": "What triggers an FBR penalty most often?",
-        "answer": "Non-compliance with POS integration and failing to report sales to IRIS — frequently because of silent submission failures the business never noticed. Late filing and incorrect tax treatment are the other common triggers."
-      },
-      {
-        "question": "How much are FBR penalties?",
-        "answer": "They typically start around PKR 10,000 for a first offence and can escalate to as much as PKR 1,000,000 for repeated violations, alongside the risk of STRN suspension or, in serious cases, business closure."
-      },
-      {
-        "question": "Can I be penalised for errors I did not know about?",
-        "answer": "Yes. If invoices silently fail to reach FBR, the business is non-compliant even if it believed otherwise. That is why monthly reconciliation against the IRIS dashboard matters so much."
-      },
-      {
-        "question": "How do I get a penalty reduced?",
-        "answer": "Address the underlying issue, file any appeal within the stated window (often around 30 days), pay or contest as advised, and demonstrate corrected compliance. Acting quickly and showing good faith helps."
-      }
-    ],
-    "publishedAt": "2026-06-29T21:27:22.784Z",
-    "readTime": 3,
-    "version": 2,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:27:22.784Z",
-    "heroImage": {
-      "url": "https://images.pexels.com/photos/36965908/pexels-photo-36965908.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-      "thumb": "https://images.pexels.com/photos/36965908/pexels-photo-36965908.jpeg?auto=compress&cs=tinysrgb&h=350",
-      "alt": "A young woman in traditional Pakistani clothing attends a lively business networking event indoors.",
-      "photographer": "iram shehzad",
-      "photographerUrl": "https://www.pexels.com/@iram-shehzad-45081404",
-      "pexelsUrl": "https://www.pexels.com/photo/young-woman-in-pakistani-attire-at-business-event-36965908/"
-    }
-  },
-  {
     "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
     "title": "Multi-Branch POS System Pakistan: Managing Multiple Stores",
     "metaDescription": "How to manage multiple retail branches with FBR-compliant POS in Pakistan — POSID per branch, central reporting, and avoiding cross-branch compliance gaps.",
@@ -1475,43 +1545,32 @@
     ],
     "publishedAt": "2026-05-06T09:25:57.687Z",
     "readTime": 8,
-    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "lastUpdated": "2026-05-07T02:09:58.801Z",
     "version": 2,
-    "cluster": "pos-software",
-    "pinnedTitle": true
-  },
-  {
-    "slug": "fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide",
-    "title": "The Complete FBR Compliance Guide for 2026",
-    "metaDescription": "A complete 2026 guide to FBR compliance for Pakistani businesses — from registration and POS integration to filing and staying penalty-free, with links to the detail.",
-    "keywords": [
-      "complete fbr compliance guide 2026",
-      "fbr compliance guide pakistan",
-      "fbr requirements 2026"
-    ],
+    "pinnedTitle": true,
     "faqs": [
       {
-        "question": "What does full FBR compliance involve in 2026?",
-        "answer": "Active STRN registration, an integrated POS reporting to IRIS, correct tax treatment, timely monthly returns, and ongoing reconciliation. It is a few connected obligations rather than one task."
+        "question": "Does each branch need its own FBR POS registration?",
+        "answer": "Yes. FBR requires a separate POS registration (unique POSID) for each branch location. All branches can operate under the same business STRN, but each point of sale must be individually registered in IRIS."
       },
       {
-        "question": "Where should a business start?",
-        "answer": "With registration: confirm your STRN is active and register your POS terminals on IRIS. Everything else builds on that foundation."
+        "question": "Can I see consolidated sales reports from all branches in one dashboard?",
+        "answer": "Yes. Phelix ERP provides a central dashboard that aggregates sales, tax collected, and invoice counts from all registered branches so you get a group-level view alongside branch-level detail in real time."
       },
       {
-        "question": "How do I stay compliant once set up?",
-        "answer": "Reconcile monthly against the IRIS dashboard, file returns on time, and keep your software current so FBR rule changes are applied automatically."
+        "question": "What happens if one branch goes offline — do I lose FBR compliance?",
+        "answer": "Phelix ERP queues invoices locally when a branch loses connectivity and submits them to FBR IRIS as soon as the connection restores. FBR allows a short grace window for documented network outages."
       },
       {
-        "question": "What happens if I fall short?",
-        "answer": "Penalties start around PKR 10,000 and escalate for repeat issues, with possible STRN suspension. Nearly all of it is avoidable with the steps in this guide."
+        "question": "Can different branches have different product catalogues in the same system?",
+        "answer": "Yes. Phelix ERP supports branch-specific product lists, pricing, and tax mappings while maintaining a shared customer and item master across all locations for consistency."
+      },
+      {
+        "question": "How long does it take to add a new branch to an existing Phelix ERP setup?",
+        "answer": "Adding a new branch typically takes 24 to 48 hours — FBR IRIS registration for the new POSID, hardware setup, and data sync from the central system. Phelix ERP manages the IRIS registration steps on your behalf."
       }
     ],
-    "publishedAt": "2026-06-29T21:33:46.808Z",
-    "readTime": 3,
-    "version": 2,
-    "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-06-29T21:33:46.808Z"
+    "cluster": "pos-software"
   },
   {
     "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
@@ -1524,10 +1583,32 @@
     ],
     "publishedAt": "2026-05-04T09:48:37.534Z",
     "readTime": 7,
-    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "lastUpdated": "2026-05-07T02:09:59.256Z",
     "version": 2,
-    "cluster": "pos-software",
-    "pinnedTitle": true
+    "pinnedTitle": true,
+    "faqs": [
+      {
+        "question": "Does FBR require inventory records to be connected to the POS system?",
+        "answer": "FBR does not mandate a specific inventory module, but accurate invoicing requires correct product descriptions, HS codes, and quantities — all of which come from your inventory master. A connected system prevents invoice rejections caused by missing or wrong item data."
+      },
+      {
+        "question": "How does real-time inventory tracking help with FBR compliance?",
+        "answer": "Real-time inventory ensures the product details on your FBR invoices exactly match your actual stock records. Discrepancies between physical stock and invoiced quantities are a common audit trigger in FBR inspections."
+      },
+      {
+        "question": "Can Phelix ERP track stock across multiple branches and sync with FBR?",
+        "answer": "Yes. Phelix ERP tracks inventory across all branches in a single dashboard. Each branch submits FBR invoices independently, but stock levels and product masters are shared and managed centrally."
+      },
+      {
+        "question": "What is an HS code and why does it matter for inventory in FBR invoices?",
+        "answer": "HS (Harmonized System) codes classify products for tax purposes. FBR requires the correct HS code on every invoice to determine the applicable sales tax rate. Phelix ERP validates HS codes against your inventory automatically and flags wrong entries before submission."
+      },
+      {
+        "question": "How often should I reconcile physical stock with my POS inventory records?",
+        "answer": "Best practice is a weekly spot-check and a full physical count monthly. FBR audits look for consistency between purchase records, inventory, and sales — regular reconciliation keeps you audit-ready at all times."
+      }
+    ],
+    "cluster": "pos-software"
   },
   {
     "slug": "fbr-sales-tax-returns-pakistan-how-pos-integration-simplifies-monthly-filing",
@@ -1540,25 +1621,68 @@
     ],
     "publishedAt": "2026-05-03T09:44:49.620Z",
     "readTime": 8,
-    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "lastUpdated": "2026-05-07T02:09:58.271Z",
     "version": 2,
-    "cluster": "fbr-invoicing",
-    "pinnedTitle": true
+    "pinnedTitle": true,
+    "faqs": [
+      {
+        "question": "Does FBR POS integration automatically prepare my monthly sales tax return?",
+        "answer": "FBR-integrated POS systems record every sale with the correct tax rate in real time. At month end the data is already structured correctly, so you can file Form STR-7 directly from POS reports without manual data entry or reconciliation."
+      },
+      {
+        "question": "What is the deadline for monthly FBR sales tax return filing in Pakistan?",
+        "answer": "The monthly sales tax return (Form STR-7) is due by the 18th of the following month. FBR POS integration ensures all sales are recorded accurately so you are ready to file on time without last-minute data scrambling."
+      },
+      {
+        "question": "Can I still file manually if I have FBR POS integration?",
+        "answer": "Yes. POS integration automates invoice submission to IRIS in real time, but the monthly return is still a separate filing step. The advantage is your data is already accurate and complete, making manual filing significantly faster."
+      },
+      {
+        "question": "What happens if my POS sales data does not match my FBR IRIS records?",
+        "answer": "Mismatches trigger audit flags in the FBR system. With real-time POS integration every invoice is submitted immediately so your IRIS records always match your POS records — eliminating reconciliation issues before they become audit risks."
+      },
+      {
+        "question": "Does Phelix ERP generate sales tax reports ready for FBR return filing?",
+        "answer": "Yes. Phelix ERP generates monthly tax summary reports broken down by tax rate, sale type, and product category — exactly the format needed for FBR STR-7 filing, saving hours of manual compilation each month."
+      }
+    ],
+    "cluster": "fbr-invoicing"
   },
   {
     "slug": "pos-system-lahore-fbr-integration-for-lahore-retailers-2026",
     "title": "POS System Lahore – FBR Integration for Lahore Retailers 2026",
-    "metaDescription": "FBR-compliant POS systems for Lahore businesses in 2026 — Liberty Market, Gulberg, Johar Town compliance, Lahore Chamber guidance, and how to get set up in 24 hours.",
+    "metaDescription": "FBR-compliant POS for Lahore businesses in 2026 — Liberty Market, Gulberg, Johar Town compliance, Lahore Chamber guidance, and 24-hour setup.",
     "keywords": [
       "POS system Lahore",
       "FBR POS Lahore",
       "Lahore retail POS software"
     ],
     "publishedAt": "2026-05-02T09:12:55.548Z",
-    "readTime": 8,
-    "cluster": "pos-by-city",
+    "readTime": 9,
+    "faqs": [
+      {
+        "question": "Which Lahore business areas are most targeted by FBR for POS inspections?",
+        "answer": "FBR has conducted enforcement operations in Liberty Market, MM Alam Road, Gulberg Main Boulevard, Johar Town, Defence (DHA Lahore), Model Town, and the wholesale markets near Data Darbar and Anarkali. Any STRN-registered business in Lahore without POS integration is at risk."
+      },
+      {
+        "question": "Does the Lahore Chamber of Commerce provide any guidance on FBR POS compliance?",
+        "answer": "The Lahore Chamber of Commerce and Industry (LCCI) has issued guidance to its members encouraging FBR POS compliance and has facilitated workshops on the requirements. LCCI members can contact the Chamber's tax committee for guidance, but the actual IRIS registration and POS setup must be done through FBR and your POS provider."
+      },
+      {
+        "question": "Are Lahore textile and clothing retailers required to integrate FBR POS?",
+        "answer": "Yes. Lahore's major clothing retailers — including those on Liberty Market, MM Alam Road, and in the Fortress Stadium area — are required to integrate FBR POS if they are registered for sales tax. Textile retailers and branded clothing outlets have been specifically targeted in FBR's Lahore enforcement campaigns."
+      },
+      {
+        "question": "What is the FBR regional office contact for Lahore businesses?",
+        "answer": "Lahore businesses fall under the FBR Regional Tax Office (RTO) Lahore. However, all POS registration, compliance, and return filing is done online through iris.fbr.gov.pk — there is typically no need to visit the physical RTO office for POS compliance matters."
+      },
+      {
+        "question": "Can a Lahore business owner manage FBR compliance from outside the city?",
+        "answer": "Yes. FBR POS registration and compliance management is entirely online through IRIS. Business owners who travel or manage businesses remotely can monitor compliance, review invoices, and file returns from anywhere with internet access."
+      }
+    ],
     "pinnedTitle": true,
-    "lastUpdated": "2026-05-09T00:00:00.000Z"
+    "cluster": "pos-by-city"
   },
   {
     "slug": "pos-system-karachi-fbr-compliant-solutions-for-karachi-businesses",
@@ -1570,27 +1694,71 @@
       "Karachi retail POS software"
     ],
     "publishedAt": "2026-05-01T09:38:13.877Z",
-    "readTime": 7,
-    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "readTime": 9,
+    "faqs": [
+      {
+        "question": "Which areas of Karachi has FBR targeted for POS compliance inspections?",
+        "answer": "FBR has conducted enforcement operations in Saddar, M.A. Jinnah Road, Clifton, Defence (DHA), North Karachi, SITE area, and major wholesale markets including Electronics Market and Zainab Market. Any STRN-registered business in Karachi operating without an FBR POS is at risk of inspection."
+      },
+      {
+        "question": "Does a Karachi business need to register with the FBR Karachi office specifically?",
+        "answer": "No. FBR POS registration is done online through the IRIS portal at iris.fbr.gov.pk — there is no need to visit the FBR Karachi office. Your STRN issued by the Karachi tax office links your business to the correct jurisdiction automatically."
+      },
+      {
+        "question": "Are Karachi wholesale markets like Jodia Bazaar required to have FBR POS?",
+        "answer": "Wholesale distributors registered for sales tax in Jodia Bazaar, Shershah Market, and other Karachi wholesale areas are required to integrate POS systems with FBR IRIS. Many wholesale businesses have already been inspected. Non-compliant wholesalers face STRN suspension, which disrupts their entire retail client network."
+      },
+      {
+        "question": "Can a Karachi business get same-day FBR POS setup?",
+        "answer": "Yes. With a provider like Phelix ERP, Karachi businesses can be fully FBR compliant within 24 hours. The IRIS registration and POS configuration are done remotely — no office visit required. Our team is available on WhatsApp and responds immediately."
+      },
+      {
+        "question": "What is the FBR penalty for a Karachi retailer operating without POS integration?",
+        "answer": "The same national penalty structure applies — PKR 10,000 for the first offence escalating to PKR 1,000,000 for repeated violations, plus STRN suspension and audit risk. Karachi businesses are not treated differently from other cities — FBR enforcement is national."
+      }
+    ],
+    "lastUpdated": "2026-05-08T02:59:48.653Z",
     "version": 2,
-    "cluster": "pos-by-city",
-    "pinnedTitle": true
+    "pinnedTitle": true,
+    "cluster": "pos-by-city"
   },
   {
     "slug": "fbr-pos-system-for-restaurants-in-pakistan-what-you-must-know-in-2026",
     "title": "FBR POS System for Restaurants in Pakistan: What You Must Know in 2026",
-    "metaDescription": "FBR POS requirements for restaurants in Pakistan 2026 — dine-in vs takeaway tax rules, SRO 237 explained, GST on food, inspection risks, and compliance setup guide.",
+    "metaDescription": "FBR POS requirements for restaurants in Pakistan 2026 — dine-in vs takeaway tax rules, SRO 237 breakdown, GST on food, and how to stay compliant.",
     "keywords": [
       "restaurant POS Pakistan",
       "FBR POS restaurant",
       "food business FBR compliance Pakistan"
     ],
     "publishedAt": "2026-04-30T09:54:13.780Z",
-    "readTime": 7,
-    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "readTime": 9,
+    "faqs": [
+      {
+        "question": "What GST rate applies to restaurant meals in Pakistan?",
+        "answer": "Restaurants registered for sales tax must apply the applicable GST rate to dine-in meals. The rate varies based on whether service charges are included and the type of establishment. Your POS must be configured to handle this correctly, including any service charges that are treated differently from the meal price."
+      },
+      {
+        "question": "Does a small takeaway or food stall need FBR POS integration?",
+        "answer": "Smaller food businesses below the registration threshold may not need an STRN. However, if your food business is registered for sales tax or has annual turnover above PKR 10 million, FBR POS integration is mandatory. When in doubt, consult a registered tax practitioner."
+      },
+      {
+        "question": "Can restaurants issue digital receipts via WhatsApp or printed bills?",
+        "answer": "Both are acceptable. Restaurants can provide QR-coded invoices as printed table bills, digital receipts via WhatsApp or email, or both. The QR code and all mandatory invoice fields must be present regardless of format."
+      },
+      {
+        "question": "How does FBR POS handle split bills at a restaurant table?",
+        "answer": "FBR-compliant restaurant POS systems support split billing. Each split generates a separate invoice with its own QR code, submitted individually to IRIS. The total of split invoices must match the original table order total."
+      },
+      {
+        "question": "What records must a restaurant keep for FBR compliance?",
+        "answer": "Restaurants must retain copies of all issued invoices for at least five years. They must also keep records of all sales data as submitted to FBR IRIS, monthly sales tax returns, and documentation of any corrections or credit notes issued."
+      }
+    ],
+    "lastUpdated": "2026-05-08T02:59:49.173Z",
     "version": 2,
-    "cluster": "pos-by-industry",
-    "pinnedTitle": true
+    "pinnedTitle": true,
+    "cluster": "pos-by-industry"
   },
   {
     "slug": "how-to-generate-fbr-qr-invoices-in-pakistan-step-by-step-guide",
@@ -1603,9 +1771,30 @@
     ],
     "publishedAt": "2026-04-29T09:58:57.361Z",
     "readTime": 8,
-    "cluster": "fbr-invoicing",
+    "faqs": [
+      {
+        "question": "Can a customer refuse to accept a non-QR receipt in Pakistan?",
+        "answer": "Yes. Customers have the legal right to demand a QR-coded FBR invoice. If a business cannot provide one, it is operating in violation of the Sales Tax Act. Customers can report non-compliant businesses to FBR through the official complaint portal."
+      },
+      {
+        "question": "What does the QR code on an FBR invoice actually link to?",
+        "answer": "The QR code links to the FBR invoice verification page on the FBR website. When scanned, it displays the invoice details as registered in IRIS — business STRN, invoice number, date, total amount, and tax amount. If the scanned page shows nothing, the invoice was not submitted to FBR."
+      },
+      {
+        "question": "What if the FBR API is down and I cannot generate QR invoices?",
+        "answer": "A compliant POS system continues processing sales in offline mode when the FBR API is unavailable. Invoices are queued locally with a pending QR code status and submitted to IRIS automatically when the connection is restored. This offline sync is mandatory, not optional."
+      },
+      {
+        "question": "How do I test that my QR invoices are genuinely reaching FBR IRIS?",
+        "answer": "Log in to iris.fbr.gov.pk after generating a test invoice. Navigate to Invoice Verification and search for your test invoice number. It should appear within 30 seconds with all the correct details. If it does not appear after 60 seconds, your API configuration has a problem."
+      },
+      {
+        "question": "What is the penalty for issuing an invoice without a QR code?",
+        "answer": "An invoice without a QR code is non-compliant even if it contains all other correct fields. FBR can issue fines starting at PKR 10,000 per non-compliant invoice, and businesses found issuing non-QR receipts during inspections are treated as operating without FBR integration."
+      }
+    ],
     "pinnedTitle": true,
-    "lastUpdated": "2026-05-09T00:00:00.000Z"
+    "cluster": "fbr-invoicing"
   },
   {
     "slug": "fbr-pos-system-for-pharmacies-in-pakistan-complete-compliance-guide-2026",
@@ -1617,15 +1806,36 @@
       "medical store POS FBR"
     ],
     "publishedAt": "2026-04-28T23:40:14.415Z",
-    "readTime": 7,
-    "cluster": "pos-by-industry",
+    "readTime": 9,
+    "faqs": [
+      {
+        "question": "Are all medicines subject to sales tax at pharmacies in Pakistan?",
+        "answer": "No. Many pharmaceutical products are exempt from sales tax or zero-rated under Pakistani tax law. Life-saving drugs and basic medications are typically exempt. Your POS system must be configured with the correct tax status for each product category — applying 17% to exempt items overcharges patients and creates incorrect FBR submissions."
+      },
+      {
+        "question": "Does a small neighbourhood pharmacy (medical store) need FBR POS integration?",
+        "answer": "If the pharmacy is registered for sales tax and holds an STRN, FBR POS integration is legally required. FBR has specifically targeted pharmacies in major cities for enforcement. Even smaller medical stores in Karachi, Lahore, Islamabad, Rawalpindi, and Faisalabad have been inspected and fined."
+      },
+      {
+        "question": "How does FBR POS integrate with pharmacy inventory management?",
+        "answer": "A pharmacy POS system should automatically deduct dispensed medicines from inventory with every sale, track batch numbers and expiry dates, and alert you when stock falls below reorder levels. This same inventory data supports accurate FBR reporting and simplifies monthly sales tax returns."
+      },
+      {
+        "question": "What is the correct SRO covering pharmacies for FBR POS compliance?",
+        "answer": "Pharmacies and medical stores fall under SRO 1216(I)/2019 which requires Tier-1 retailers including medical businesses to integrate POS systems with FBR IRIS. Subsequent amendments have extended this to pharmacies specifically in designated major cities."
+      },
+      {
+        "question": "Can a pharmacy issue digital receipts via WhatsApp or SMS instead of printed ones?",
+        "answer": "Yes. FBR allows digital invoices sent via WhatsApp, SMS, or email, provided they contain all mandatory fields including the QR code. A growing number of pharmacies are sending digital receipts to patients, which also helps build a customer contact database."
+      }
+    ],
     "pinnedTitle": true,
-    "lastUpdated": "2026-05-09T00:00:00.000Z"
+    "cluster": "pos-by-industry"
   },
   {
     "slug": "retail-pos-compliance-pakistan-fbr-penalties-guide",
     "title": "Retail POS Compliance Pakistan: FBR Penalties Guide 2026",
-    "metaDescription": "FBR POS compliance guide for Pakistani retailers in 2026 — real penalty amounts, FBR inspection process, what happens during a raid, and how to get compliant fast.",
+    "metaDescription": "FBR POS compliance for Pakistani retailers 2026 — real penalty amounts, what happens during an FBR inspection, and how to get compliant fast.",
     "keywords": [
       "retail POS Pakistan",
       "FBR POS compliance Pakistan",
@@ -1633,11 +1843,33 @@
       "POS compliance Pakistan 2026"
     ],
     "publishedAt": "2026-04-26T09:00:00.000Z",
-    "readTime": 6,
-    "lastUpdated": "2026-05-09T00:00:00.000Z",
+    "readTime": 8,
+    "faqs": [
+      {
+        "question": "Can FBR physically close my shop for non-compliance?",
+        "answer": "Yes. FBR inspection teams have the authority to seal business premises for serious or repeated non-compliance. They can also confiscate POS equipment and issue notices requiring court appearances. These enforcement actions have increased significantly in 2025–2026."
+      },
+      {
+        "question": "If I just started my business, do I need FBR POS integration immediately?",
+        "answer": "If your business is registered for sales tax (you have an STRN), FBR POS integration is required from the day you start trading. There is no grace period for new businesses that already have an STRN. The obligation begins with your first sale."
+      },
+      {
+        "question": "What should I do if I receive an FBR non-compliance notice?",
+        "answer": "Do not ignore it. Respond in writing within the timeframe specified (usually 15–30 days). Get an FBR-compliant POS system operational immediately and include proof of compliance in your response. Consulting a registered tax practitioner is strongly recommended."
+      },
+      {
+        "question": "Can my accountant register my POS with FBR on my behalf?",
+        "answer": "A registered tax practitioner can assist with IRIS registration, but the POS software configuration requires your POS provider. The legal obligation — and the penalty risk — rests with the business owner regardless of who does the paperwork."
+      },
+      {
+        "question": "Does FBR compliance apply to online businesses and delivery services?",
+        "answer": "Yes. Any business registered for GST in Pakistan that makes sales must issue FBR-compliant invoices, whether those sales happen in-store, online, or via delivery. The invoice must be issued at the point of sale regardless of the channel."
+      }
+    ],
+    "lastUpdated": "2026-05-08T02:59:49.639Z",
     "version": 2,
-    "cluster": "fbr-compliance",
-    "pinnedTitle": true
+    "pinnedTitle": true,
+    "cluster": "fbr-compliance"
   },
   {
     "slug": "fbr-e-invoicing-pakistan-explained",
@@ -1650,10 +1882,31 @@
       "FBR e invoice requirements"
     ],
     "publishedAt": "2026-04-25T09:00:00.000Z",
-    "readTime": 6,
-    "cluster": "fbr-invoicing",
+    "readTime": 8,
+    "faqs": [
+      {
+        "question": "What information is encoded in an FBR QR invoice code?",
+        "answer": "The QR code on an FBR invoice encodes a URL linking to the FBR invoice verification page. When scanned, it shows the invoice number, business STRN, date and time, total amount, tax amount, and item breakdown. Customers can verify the invoice is genuine and registered with FBR."
+      },
+      {
+        "question": "How does a customer verify an FBR invoice is genuine?",
+        "answer": "Customers scan the QR code on the receipt using any smartphone camera or QR scanner app. It opens a page on the FBR website showing the invoice details as registered in IRIS. If the details match the receipt, the invoice is genuine."
+      },
+      {
+        "question": "What happens to e-invoices when the internet is down?",
+        "answer": "Compliant POS software stores the invoice data locally and continues processing sales. When internet connectivity returns, all queued invoices are automatically submitted to FBR IRIS in the correct sequence. The offline period is logged and auditable."
+      },
+      {
+        "question": "Can I issue a digital e-invoice instead of a printed receipt?",
+        "answer": "Yes. FBR allows digital invoices sent via SMS, email, or WhatsApp, provided they include all required fields and the QR code. Many businesses offer customers a choice of printed or digital receipt."
+      },
+      {
+        "question": "Do all items on an invoice need sales tax applied?",
+        "answer": "No. Pakistani tax law has multiple categories — standard 17% GST, reduced rates for certain items, and zero-rated or exempt categories (like basic foodstuffs and medicines). Your POS must be configured with the correct rate for each product line you sell."
+      }
+    ],
     "pinnedTitle": true,
-    "lastUpdated": "2026-05-09T00:00:00.000Z"
+    "cluster": "fbr-invoicing"
   },
   {
     "slug": "best-pos-software-pakistan-fbr-compliant-2026",
@@ -1666,15 +1919,36 @@
       "POS system Pakistan 2026"
     ],
     "publishedAt": "2026-04-24T09:00:00.000Z",
-    "readTime": 7,
-    "cluster": "pos-software",
+    "readTime": 8,
+    "faqs": [
+      {
+        "question": "How do I know if a POS system is genuinely FBR compliant?",
+        "answer": "A genuinely FBR-compliant system connects to FBR IRIS in real time via the official API, generates QR codes on every invoice, and can show you live transaction records in your IRIS portal within seconds of a sale. Ask the vendor to demonstrate an invoice appearing in your IRIS portal before you purchase."
+      },
+      {
+        "question": "What is the difference between FBR-integrated and FBR-ready POS software?",
+        "answer": "FBR-integrated means the software is already connected to IRIS and works out of the box. FBR-ready usually means the software can theoretically support integration but requires additional development work. Always insist on integrated, not just ready."
+      },
+      {
+        "question": "Can I use an international POS like Square or Toast in Pakistan for FBR compliance?",
+        "answer": "No. International POS platforms do not support FBR IRIS API integration. They are designed for other countries' tax systems. You must use a POS system built specifically for Pakistan's FBR IRIS requirements."
+      },
+      {
+        "question": "What should FBR POS software cost in Pakistan?",
+        "answer": "Genuine FBR-compliant POS software for a single branch typically costs PKR 1,500–3,500 per month. Be cautious of very cheap one-time-payment solutions — FBR requirements change regularly and software that does not receive updates will quickly become non-compliant."
+      },
+      {
+        "question": "Does FBR POS software need to handle multiple tax rates?",
+        "answer": "Yes. Pakistani businesses sell products across different tax categories — standard 17% GST, reduced rates for certain food and pharmaceutical items, and zero-rated or exempt categories. Your POS software must correctly apply the right rate to each product line."
+      }
+    ],
     "pinnedTitle": true,
-    "lastUpdated": "2026-05-09T00:00:00.000Z"
+    "cluster": "pos-software"
   },
   {
     "slug": "how-to-register-pos-fbr-pakistan-step-by-step",
     "title": "How to Register POS with FBR Pakistan – Step by Step 2026",
-    "metaDescription": "Step-by-step guide to registering your POS with FBR Pakistan in 2026 — IRIS portal walkthrough, API credentials, common errors, and how to get live in 24 hours.",
+    "metaDescription": "How to register your POS with FBR Pakistan in 2026 — IRIS portal walkthrough, API credentials, common errors, and how to go live in 24 hours.",
     "keywords": [
       "how to register POS with FBR",
       "FBR POS registration Pakistan",
@@ -1682,10 +1956,31 @@
       "FBR POS Pakistan 2026"
     ],
     "publishedAt": "2026-04-22T09:00:00.000Z",
-    "readTime": 6,
-    "cluster": "fbr-compliance",
+    "readTime": 8,
+    "faqs": [
+      {
+        "question": "Do I need an NTN before registering my POS with FBR?",
+        "answer": "Yes. You need both an NTN (National Tax Number) and a Sales Tax Registration Number (STRN) before you can register a POS system on FBR IRIS. If you only have an NTN, you must complete Sales Tax registration on iris.fbr.gov.pk first."
+      },
+      {
+        "question": "What API credentials does FBR provide after POS registration?",
+        "answer": "FBR issues a Client ID and a Secret Key after successful POS registration on IRIS. These credentials are entered into your POS software by your provider so the system can authenticate and submit invoices to FBR IRIS in real time."
+      },
+      {
+        "question": "What if my POS registration on IRIS is rejected?",
+        "answer": "Common rejection reasons include STRN mismatch, incomplete business address, or unverified contact details. Log in to IRIS, check the rejection notice in your inbox, correct the information, and resubmit. The process usually resolves within 24–48 hours."
+      },
+      {
+        "question": "Can I register multiple POS terminals under one STRN?",
+        "answer": "Yes. During the IRIS registration process, you specify the number of POS terminals. Each terminal can be assigned its own identifier while all invoices are filed under the same STRN. Multi-branch businesses register each branch location separately."
+      },
+      {
+        "question": "How do I know if my POS registration is active and working?",
+        "answer": "After configuration, generate a test invoice from your POS and then log in to IRIS. Go to Invoice Verification and search for the test invoice number. If it appears with the correct details, your registration is active and working correctly."
+      }
+    ],
     "pinnedTitle": true,
-    "lastUpdated": "2026-05-09T00:00:00.000Z"
+    "cluster": "fbr-compliance"
   },
   {
     "slug": "fbr-pos-system-pakistan-complete-guide-2026",
@@ -1698,9 +1993,30 @@
       "QR invoice Pakistan"
     ],
     "publishedAt": "2026-04-20T09:00:00.000Z",
-    "readTime": 7,
-    "cluster": "fbr-compliance",
+    "readTime": 8,
+    "faqs": [
+      {
+        "question": "Which businesses must have FBR POS integration in Pakistan?",
+        "answer": "Tier-1 retailers, chain stores, franchise businesses, departmental stores, pharmacies in major cities, restaurants above the turnover threshold, and wholesale distributors registered for sales tax must all integrate their POS systems with FBR IRIS."
+      },
+      {
+        "question": "What is the penalty for not having FBR POS integration?",
+        "answer": "Penalties start at PKR 10,000 for a first offence and can reach PKR 1,000,000 for repeated violations. FBR can also suspend your STRN, trigger a full tax audit, and conduct physical raids on your premises."
+      },
+      {
+        "question": "How long does FBR POS registration take?",
+        "answer": "The IRIS portal registration takes 1–2 hours if your documents are ready. Full POS software configuration and testing typically takes one business day. With Phelix ERP, the complete setup including FBR integration is done within 24 hours."
+      },
+      {
+        "question": "Can a POS system work offline and still be FBR compliant?",
+        "answer": "Yes. A proper FBR-compliant POS stores transactions locally during internet outages and automatically syncs them to FBR IRIS the moment connectivity is restored. Businesses must ensure their software supports this offline-sync feature."
+      },
+      {
+        "question": "Does FBR POS integration require special hardware?",
+        "answer": "No. FBR-compliant POS software runs on standard Android phones, iPhones, tablets, and PCs. You do not need dedicated POS terminals. A thermal receipt printer (PKR 8,000–15,000) is recommended for printed QR invoices but is not mandatory."
+      }
+    ],
     "pinnedTitle": true,
-    "lastUpdated": "2026-05-09T00:00:00.000Z"
+    "cluster": "fbr-compliance"
   }
 ]
