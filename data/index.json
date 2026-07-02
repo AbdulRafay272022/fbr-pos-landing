@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-penalty-us-182",
+    "title": "FBR Penalty US 182",
+    "metaDescription": "Understand FBR penalty US 182, its implications, and how to avoid it. Learn about Section 182 notices and FBR IRIS portal integration.",
+    "keywords": [
+      "fbr penalty us 182",
+      "fbr penalty us 182 pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is FBR penalty US 182?",
+        "answer": "FBR penalty US 182 is a punishment imposed by the Federal Board of Revenue (FBR) on taxpayers who fail to comply with tax laws and regulations."
+      },
+      {
+        "question": "How can I avoid FBR penalty US 182?",
+        "answer": "To avoid FBR penalty US 182, follow the steps outlined in this guide, including registering with the FBR IRIS portal, filing tax returns on time, and maintaining accurate records."
+      },
+      {
+        "question": "What is the FBR IRIS portal?",
+        "answer": "The FBR IRIS portal is an online platform used by the Federal Board of Revenue (FBR) to manage tax-related activities, including registration, return filing, and payment of taxes."
+      },
+      {
+        "question": "What is SRO 1006(I)/2019?",
+        "answer": "SRO 1006(I)/2019 is a regulatory order issued by the Federal Board of Revenue (FBR) that mandates the use of QR invoices for certain transactions."
+      },
+      {
+        "question": "What is a Tier-1 retailer POS terminal?",
+        "answer": "A Tier-1 retailer POS terminal is a point-of-sale terminal that is integrated with the FBR IRIS portal and can generate QR invoices."
+      }
+    ],
+    "publishedAt": "2026-07-02T02:47:32.532Z",
+    "readTime": 5,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
     "slug": "fbr-pos-system-integration",
     "title": "FBR POS System Integration Guide",
     "metaDescription": "Integrate your POS system with FBR IRIS to streamline tax compliance and avoid penalties. Learn how to implement FBR POS system integration in Pakistan.",
