@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mr2wm1yl-xf8fl",
-      "ts": "2026-07-02T02:47:22.221Z",
+      "id": "mr4as5y0-it81e",
+      "ts": "2026-07-03T02:11:48.120Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mr2wm1yi",
+        "runId": "run-mr4as5xy",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mr2wm2bc-9y7h1",
-      "ts": "2026-07-02T02:47:22.680Z",
+      "id": "mr4as6av-r09fp",
+      "ts": "2026-07-03T02:11:48.583Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mr2wm1yi",
+        "runId": "run-mr4as5xy",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4274 unused keywords, last scrape 12.0d ago (next forced refresh in 18d)",
-          "generate": "24.2h since last generation, 4274 keywords available",
-          "update": "skipped: last update 96.8h ago (min 168h)",
+          "scrape": "skipped: 4274 unused keywords, last scrape 13.0d ago (next forced refresh in 17d)",
+          "generate": "23.4h since last generation, 4274 keywords available",
+          "update": "skipped: last update 120.2h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,108 +48,111 @@
       }
     },
     {
-      "id": "mr2wmbfd-zu6gr",
-      "ts": "2026-07-02T02:47:34.489Z",
+      "id": "mr4asehp-255af",
+      "ts": "2026-07-03T02:11:59.197Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "fbr-penalty-us-182",
-      "words": 815,
+      "slug": "gerrys-dnata-fbr-penalty",
+      "words": 708,
       "source": "groq",
-      "durationMs": 10544,
+      "durationMs": 9282,
       "details": {
-        "runId": "run-mr2wm1yi"
+        "runId": "run-mr4as5xy"
       }
     },
     {
-      "id": "mr2wmexo-4hxb7",
-      "ts": "2026-07-02T02:47:39.036Z",
+      "id": "mr4asi37-p7x28",
+      "ts": "2026-07-03T02:12:03.859Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 4547,
+      "durationMs": 4662,
       "details": {
-        "runId": "run-mr2wm1yi",
+        "runId": "run-mr4as5xy",
         "pages": 4,
-        "totalImpressions": 23
+        "totalImpressions": 24
       }
     },
     {
-      "id": "mr2wmf7s-dvth3",
-      "ts": "2026-07-02T02:47:39.400Z",
+      "id": "mr4asi8z-uel22",
+      "ts": "2026-07-03T02:12:04.067Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 364,
+      "durationMs": 208,
       "details": {
-        "runId": "run-mr2wm1yi",
+        "runId": "run-mr4as5xy",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mr2wmhm8-253ks",
-      "ts": "2026-07-02T02:47:42.512Z",
+      "id": "mr4askr3-of9tt",
+      "ts": "2026-07-03T02:12:07.311Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 3112,
+      "durationMs": 3244,
       "details": {
-        "runId": "run-mr2wm1yi",
+        "runId": "run-mr4as5xy",
         "optimizedCount": 3
       }
     },
     {
-      "id": "mr2wmi2h-r7nwj",
-      "ts": "2026-07-02T02:47:43.097Z",
+      "id": "mr4asllc-gv8m7",
+      "ts": "2026-07-03T02:12:08.400Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": false,
-      "durationMs": 585,
+      "durationMs": 1089,
       "details": {
-        "runId": "run-mr2wm1yi"
+        "runId": "run-mr4as5xy"
       }
     },
     {
-      "id": "mr2wmib9-9s16v",
-      "ts": "2026-07-02T02:47:43.413Z",
+      "id": "mr4aslqx-8cb95",
+      "ts": "2026-07-03T02:12:08.601Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 316,
+      "durationMs": 201,
       "details": {
-        "runId": "run-mr2wm1yi",
+        "runId": "run-mr4as5xy",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mr2wmjfs-0afhy",
-      "ts": "2026-07-02T02:47:44.872Z",
+      "id": "mr4asmv1-8nt09",
+      "ts": "2026-07-03T02:12:10.045Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1459,
+      "durationMs": 1444,
       "details": {
-        "runId": "run-mr2wm1yi",
+        "runId": "run-mr4as5xy",
         "decaysFound": 0
       }
     },
     {
-      "id": "mr2wmjph-vuqv5",
-      "ts": "2026-07-02T02:47:45.221Z",
+      "id": "mr4asr9d-cqoej",
+      "ts": "2026-07-03T02:12:15.745Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 349,
+      "success": true,
+      "slug": "retail-management-software-pharmacy-karachi",
+      "durationMs": 5700,
       "details": {
-        "runId": "run-mr2wm1yi"
+        "runId": "run-mr4as5xy",
+        "city": "karachi",
+        "service": "Retail Management Software"
       }
     }
   ],
