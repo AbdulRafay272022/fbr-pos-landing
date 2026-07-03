@@ -1,5 +1,49 @@
 [
   {
+    "slug": "gerrys-dnata-fbr-penalty",
+    "title": "Gerry's Dnata FBR Penalty",
+    "metaDescription": "Learn about the Gerry's Dnata FBR penalty, its implications, and how to avoid similar penalties with Phelix ERP's FBR compliance solutions.",
+    "keywords": [
+      "gerry's dnata fbr penalty",
+      "gerry's dnata fbr penalty pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is the penalty amount for non-compliance with FBR regulations?",
+        "answer": "The penalty amount for non-compliance with FBR regulations can range from Rs50,000 to Rs2.7 billion."
+      },
+      {
+        "question": "How can businesses avoid FBR penalties?",
+        "answer": "Businesses can avoid FBR penalties by registering with the FBR, filing tax returns on time, using FBR-approved POS systems, implementing FBR e-invoicing, conducting regular audits, using the FBR IRIS portal, and consulting with FBR experts."
+      },
+      {
+        "question": "What is the FBR IRIS portal?",
+        "answer": "The FBR IRIS portal is a web-based platform that allows businesses to file their tax returns and access other FBR services."
+      },
+      {
+        "question": "How can businesses implement FBR e-invoicing?",
+        "answer": "Businesses can implement FBR e-invoicing by using FBR-approved POS systems, such as those offered by Phelix ERP."
+      },
+      {
+        "question": "What are the benefits of compliance with FBR regulations?",
+        "answer": "The benefits of compliance with FBR regulations include avoidance of penalties, improved cash flow, increased efficiency, enhanced reputation, and access to FBR services."
+      }
+    ],
+    "publishedAt": "2026-07-03T02:11:57.387Z",
+    "readTime": 4,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
     "slug": "fbr-penalty-us-182",
     "title": "What is FBR Penalty US 182?",
     "metaDescription": "Understand FBR penalty US 182, its implications, and how to avoid it. Learn about Section 182 notices and FBR IRIS portal integration.",
