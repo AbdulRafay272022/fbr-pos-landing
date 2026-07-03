@@ -908,6 +908,14 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-03T02:12:14.423Z",
+      "action": "generate_programmatic",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 1106,
+      "completionTokens": 1760,
+      "totalTokens": 2866
     }
   ],
   "monthly": {
@@ -920,8 +928,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 7847,
-      "calls": 10
+      "tokens": 10713,
+      "calls": 11
     }
   },
   "monthlyTokenBudget": 5000000,
