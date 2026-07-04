@@ -90,8 +90,15 @@
       "cluster": "pos-systems",
       "pageType": "location",
       "publishedAt": "2026-07-01T02:33:40.726Z"
+    },
+    {
+      "slug": "pos-software-islamabad-fbr-compliant",
+      "title": "POS Software Islamabad - FBR Compliant Solution",
+      "cluster": "pos-systems",
+      "pageType": "location",
+      "publishedAt": "2026-07-04T02:14:41.275Z"
     }
   ],
-  "totalPublished": 13,
-  "lastGeneratedAt": "2026-07-01T02:33:40.839Z"
+  "totalPublished": 14,
+  "lastGeneratedAt": "2026-07-04T02:14:41.370Z"
 }
