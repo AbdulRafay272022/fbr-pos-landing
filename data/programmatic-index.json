@@ -195,8 +195,15 @@
       "service": "Retail Management Software",
       "industry": "pharmacy",
       "publishedAt": "2026-07-03T02:12:14.423Z"
+    },
+    {
+      "slug": "retail-management-software-clothing-store-karachi",
+      "city": "karachi",
+      "service": "Retail Management Software",
+      "industry": "clothing store",
+      "publishedAt": "2026-07-04T02:14:48.413Z"
     }
   ],
-  "totalPublished": 28,
-  "lastGeneratedAt": "2026-07-03T02:12:14.423Z"
+  "totalPublished": 29,
+  "lastGeneratedAt": "2026-07-04T02:14:48.413Z"
 }
