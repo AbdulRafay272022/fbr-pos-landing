@@ -1,5 +1,42 @@
 [
   {
+    "slug": "fbr-strn-registration-guide-pakistan",
+    "title": "FBR STRN Registration in Pakistan: A Step-by-Step Guide",
+    "metaDescription": "How to register for an STRN with FBR in Pakistan — what a Sales Tax Registration Number is, the documents you need, the IRIS steps, and how to activate and verify it.",
+    "keywords": [
+      "fbr strn registration",
+      "strn registration pakistan",
+      "how to get strn fbr"
+    ],
+    "faqs": [
+      {
+        "question": "What is an STRN?",
+        "answer": "An STRN, or Sales Tax Registration Number, is the number FBR issues when your business registers for sales tax in Pakistan. It identifies you in the FBR system, is required to charge and file sales tax, and is the foundation for POS integration and every other sales-tax obligation."
+      },
+      {
+        "question": "Is an STRN the same as an NTN?",
+        "answer": "No. An NTN (National Tax Number) identifies you for income tax, while an STRN specifically registers you for sales tax. A business often has both — you generally need an NTN first, and the STRN is added when you register for sales tax."
+      },
+      {
+        "question": "Who needs to register for an STRN?",
+        "answer": "Manufacturers, importers, wholesalers, and retailers meeting FBR's criteria — including Tier-1 retailers — must register for sales tax and obtain an STRN. If you are required to charge sales tax or integrate a POS, you need an active STRN."
+      },
+      {
+        "question": "How long does STRN registration take?",
+        "answer": "An online application through the IRIS portal can be processed within a few days when details and documents are in order, though biometric verification and any FBR queries can extend it. Mismatched information is the most common cause of delay."
+      },
+      {
+        "question": "How do I check if my STRN is active?",
+        "answer": "Log in to the IRIS portal and review your registration status, and check the Active Taxpayer List (ATL). An inactive STRN blocks POS integration and can expose you to penalties, so verify it before relying on it."
+      }
+    ],
+    "publishedAt": "2026-07-05T11:07:58.995Z",
+    "readTime": 7,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-07-05T11:07:58.995Z"
+  },
+  {
     "slug": "gerrys-dnata-fbr-penalty",
     "title": "Guide to Gerry's Dnata FBR Penalty Resolution",
     "metaDescription": "Learn about the Gerry's Dnata FBR penalty, its implications, and how to avoid similar penalties with Phelix ERP's FBR compliance solutions.",
