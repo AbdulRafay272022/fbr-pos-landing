@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "id": "mr5qbefc-vgx68",
-      "ts": "2026-07-04T02:14:25.992Z",
+      "id": "mr76fg92-duhm2",
+      "ts": "2026-07-05T02:33:15.014Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mr5qbef9",
+        "runId": "run-mr76fg90",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mr5qbetj-pqv0e",
-      "ts": "2026-07-04T02:14:26.504Z",
+      "id": "mr76fgor-bi5gn",
+      "ts": "2026-07-05T02:33:15.579Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mr5qbef9",
+        "runId": "run-mr76fg90",
         "shouldScrape": false,
         "shouldGenerate": true,
-        "shouldUpdate": false,
+        "shouldUpdate": true,
         "shouldFetchSeo": true,
         "shouldRefresh": true,
         "shouldOptimizeTitles": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4274 unused keywords, last scrape 14.0d ago (next forced refresh in 16d)",
-          "generate": "24.0h since last generation, 4274 keywords available",
-          "update": "skipped: last update 144.2h ago (min 168h)",
+          "scrape": "skipped: 4274 unused keywords, last scrape 15.0d ago (next forced refresh in 15d)",
+          "generate": "48.4h since last generation, 4274 keywords available",
+          "update": "168.5h since last update run",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,110 +48,120 @@
       }
     },
     {
-      "id": "mr5qbhp5-8dn2z",
-      "ts": "2026-07-04T02:14:30.233Z",
+      "id": "mr76fjbz-6o39d",
+      "ts": "2026-07-05T02:33:19.007Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": false,
-      "durationMs": 2237,
+      "durationMs": 2230,
       "details": {
-        "runId": "run-mr5qbef9"
+        "runId": "run-mr76fg90"
       }
     },
     {
-      "id": "mr5qbj3y-jlabj",
-      "ts": "2026-07-04T02:14:32.062Z",
+      "id": "mr76fy42-mqiee",
+      "ts": "2026-07-05T02:33:38.162Z",
+      "site": "Phelix ERP",
+      "event": "blog_updated",
+      "level": "info",
+      "success": true,
+      "durationMs": 19155,
+      "details": {
+        "runId": "run-mr76fg90",
+        "updatedCount": 0
+      }
+    },
+    {
+      "id": "mr76fzfh-ju0uw",
+      "ts": "2026-07-05T02:33:39.869Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 1828,
+      "durationMs": 1707,
       "details": {
-        "runId": "run-mr5qbef9",
+        "runId": "run-mr76fg90",
         "pages": 4,
-        "totalImpressions": 22
+        "totalImpressions": 25
       }
     },
     {
-      "id": "mr5qbje0-0bqfo",
-      "ts": "2026-07-04T02:14:32.424Z",
+      "id": "mr76fzup-qy0wf",
+      "ts": "2026-07-05T02:33:40.417Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 362,
+      "durationMs": 548,
       "details": {
-        "runId": "run-mr5qbef9",
+        "runId": "run-mr76fg90",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mr5qblzr-doadr",
-      "ts": "2026-07-04T02:14:35.799Z",
+      "id": "mr76g1zd-q55mm",
+      "ts": "2026-07-05T02:33:43.177Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 3375,
+      "durationMs": 2760,
       "details": {
-        "runId": "run-mr5qbef9",
-        "optimizedCount": 3
+        "runId": "run-mr76fg90",
+        "optimizedCount": 2
       }
     },
     {
-      "id": "mr5qbrco-i7nsz",
-      "ts": "2026-07-04T02:14:42.744Z",
+      "id": "mr76g7o6-0jxnc",
+      "ts": "2026-07-05T02:33:50.550Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "slug": "pos-software-islamabad-fbr-compliant",
-      "durationMs": 6945,
+      "slug": "pos-software-rawalpindi-fbr-compliant",
+      "durationMs": 7372,
       "details": {
-        "runId": "run-mr5qbef9",
+        "runId": "run-mr76fg90",
         "pageType": "location"
       }
     },
     {
-      "id": "mr5qbri9-fc76h",
-      "ts": "2026-07-04T02:14:42.945Z",
+      "id": "mr76g7sm-at1b2",
+      "ts": "2026-07-05T02:33:50.710Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 200,
+      "durationMs": 160,
       "details": {
-        "runId": "run-mr5qbef9",
+        "runId": "run-mr76fg90",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mr5qbsk3-v0boe",
-      "ts": "2026-07-04T02:14:44.307Z",
+      "id": "mr76g8ty-u4lpi",
+      "ts": "2026-07-05T02:33:52.054Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1362,
+      "durationMs": 1344,
       "details": {
-        "runId": "run-mr5qbef9",
+        "runId": "run-mr76fg90",
         "decaysFound": 0
       }
     },
     {
-      "id": "mr5qbwwe-t1ebz",
-      "ts": "2026-07-04T02:14:49.934Z",
+      "id": "mr76g91e-pvjva",
+      "ts": "2026-07-05T02:33:52.322Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": true,
-      "slug": "retail-management-software-clothing-store-karachi",
-      "durationMs": 5626,
+      "success": false,
+      "durationMs": 268,
       "details": {
-        "runId": "run-mr5qbef9",
-        "city": "karachi",
-        "service": "Retail Management Software"
+        "runId": "run-mr76fg90"
       }
     }
   ],
