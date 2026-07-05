@@ -97,8 +97,15 @@
       "cluster": "pos-systems",
       "pageType": "location",
       "publishedAt": "2026-07-04T02:14:41.275Z"
+    },
+    {
+      "slug": "pos-software-rawalpindi-fbr-compliant",
+      "title": "POS Software Rawalpindi FBR Compliant | Phelix ERP",
+      "cluster": "pos-systems",
+      "pageType": "location",
+      "publishedAt": "2026-07-05T02:33:49.084Z"
     }
   ],
-  "totalPublished": 14,
-  "lastGeneratedAt": "2026-07-04T02:14:41.370Z"
+  "totalPublished": 15,
+  "lastGeneratedAt": "2026-07-05T02:33:49.177Z"
 }
