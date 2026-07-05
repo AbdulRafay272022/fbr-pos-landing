@@ -960,6 +960,24 @@
       "promptTokens": 1118,
       "completionTokens": 1725,
       "totalTokens": 2843
+    },
+    {
+      "ts": "2026-07-05T02:33:41.411Z",
+      "action": "title_optimize",
+      "slug": "traders-difficulties-fbr-pos-system",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-05T02:33:41.835Z",
+      "action": "title_optimize",
+      "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -972,8 +990,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 18633,
-      "calls": 16
+      "tokens": 19433,
+      "calls": 18
     }
   },
   "monthlyTokenBudget": 5000000,
