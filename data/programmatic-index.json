@@ -202,8 +202,15 @@
       "service": "Retail Management Software",
       "industry": "clothing store",
       "publishedAt": "2026-07-04T02:14:48.413Z"
+    },
+    {
+      "slug": "retail-management-software-grocery-store-karachi",
+      "city": "karachi",
+      "service": "Retail Management Software",
+      "industry": "grocery store",
+      "publishedAt": "2026-07-06T02:42:48.275Z"
     }
   ],
-  "totalPublished": 29,
-  "lastGeneratedAt": "2026-07-04T02:14:48.413Z"
+  "totalPublished": 30,
+  "lastGeneratedAt": "2026-07-06T02:42:48.275Z"
 }
