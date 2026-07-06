@@ -650,8 +650,29 @@
         }
       ],
       "distributedAt": "2026-07-03T02:12:00.316Z"
+    },
+    {
+      "slug": "fbr-audit-penalty-increases",
+      "title": "FBR Audit Penalty Increases",
+      "blogUrl": "https://phelixerp.online/blog/fbr-audit-penalty-increases",
+      "hook": "FBR Audit Penalty Increases",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-06T02:42:34.934Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-06T02:42:34.934Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-06T02:42:34.934Z"
     }
   ],
-  "lastDistributedAt": "2026-07-03T02:12:00.316Z",
+  "lastDistributedAt": "2026-07-06T02:42:34.934Z",
   "totalDistributed": 0
 }
