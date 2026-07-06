@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "id": "mr76fg92-duhm2",
-      "ts": "2026-07-05T02:33:15.014Z",
+      "id": "mr8m70k1-9cb4m",
+      "ts": "2026-07-06T02:42:21.457Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mr76fg90",
+        "runId": "run-mr8m70jy",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mr76fgor-bi5gn",
-      "ts": "2026-07-05T02:33:15.579Z",
+      "id": "mr8m70zt-w0ld6",
+      "ts": "2026-07-06T02:42:22.025Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mr76fg90",
+        "runId": "run-mr8m70jy",
         "shouldScrape": false,
         "shouldGenerate": true,
-        "shouldUpdate": true,
+        "shouldUpdate": false,
         "shouldFetchSeo": true,
         "shouldRefresh": true,
         "shouldOptimizeTitles": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4274 unused keywords, last scrape 15.0d ago (next forced refresh in 15d)",
-          "generate": "48.4h since last generation, 4274 keywords available",
-          "update": "168.5h since last update run",
+          "scrape": "skipped: 4274 unused keywords, last scrape 16.0d ago (next forced refresh in 14d)",
+          "generate": "72.5h since last generation, 4274 keywords available",
+          "update": "skipped: last update 24.1h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,120 +48,111 @@
       }
     },
     {
-      "id": "mr76fjbz-6o39d",
-      "ts": "2026-07-05T02:33:19.007Z",
+      "id": "mr8m7a1y-eazhx",
+      "ts": "2026-07-06T02:42:33.766Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 2230,
-      "details": {
-        "runId": "run-mr76fg90"
-      }
-    },
-    {
-      "id": "mr76fy42-mqiee",
-      "ts": "2026-07-05T02:33:38.162Z",
-      "site": "Phelix ERP",
-      "event": "blog_updated",
-      "level": "info",
       "success": true,
-      "durationMs": 19155,
+      "slug": "fbr-audit-penalty-increases",
+      "words": 843,
+      "source": "groq",
+      "durationMs": 10442,
       "details": {
-        "runId": "run-mr76fg90",
-        "updatedCount": 0
+        "runId": "run-mr8m70jy"
       }
     },
     {
-      "id": "mr76fzfh-ju0uw",
-      "ts": "2026-07-05T02:33:39.869Z",
+      "id": "mr8m7dm8-xx1u4",
+      "ts": "2026-07-06T02:42:38.384Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 1707,
+      "durationMs": 4618,
       "details": {
-        "runId": "run-mr76fg90",
+        "runId": "run-mr8m70jy",
         "pages": 4,
-        "totalImpressions": 25
+        "totalImpressions": 24
       }
     },
     {
-      "id": "mr76fzup-qy0wf",
-      "ts": "2026-07-05T02:33:40.417Z",
+      "id": "mr8m7drc-pjp7k",
+      "ts": "2026-07-06T02:42:38.568Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 548,
+      "durationMs": 184,
       "details": {
-        "runId": "run-mr76fg90",
+        "runId": "run-mr8m70jy",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mr76g1zd-q55mm",
-      "ts": "2026-07-05T02:33:43.177Z",
+      "id": "mr8m7g0m-88wn3",
+      "ts": "2026-07-06T02:42:41.494Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2760,
+      "durationMs": 2926,
       "details": {
-        "runId": "run-mr76fg90",
+        "runId": "run-mr8m70jy",
         "optimizedCount": 2
       }
     },
     {
-      "id": "mr76g7o6-0jxnc",
-      "ts": "2026-07-05T02:33:50.550Z",
+      "id": "mr8m7gt2-fx8ap",
+      "ts": "2026-07-06T02:42:42.518Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
-      "success": true,
-      "slug": "pos-software-rawalpindi-fbr-compliant",
-      "durationMs": 7372,
+      "success": false,
+      "durationMs": 1024,
       "details": {
-        "runId": "run-mr76fg90",
-        "pageType": "location"
+        "runId": "run-mr8m70jy"
       }
     },
     {
-      "id": "mr76g7sm-at1b2",
-      "ts": "2026-07-05T02:33:50.710Z",
+      "id": "mr8m7gxp-ryole",
+      "ts": "2026-07-06T02:42:42.685Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 160,
+      "durationMs": 167,
       "details": {
-        "runId": "run-mr76fg90",
+        "runId": "run-mr8m70jy",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mr76g8ty-u4lpi",
-      "ts": "2026-07-05T02:33:52.054Z",
+      "id": "mr8m7i5x-u7rlp",
+      "ts": "2026-07-06T02:42:44.277Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1344,
+      "durationMs": 1592,
       "details": {
-        "runId": "run-mr76fg90",
+        "runId": "run-mr8m70jy",
         "decaysFound": 0
       }
     },
     {
-      "id": "mr76g91e-pvjva",
-      "ts": "2026-07-05T02:33:52.322Z",
+      "id": "mr8m7mci-ewdvy",
+      "ts": "2026-07-06T02:42:49.698Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 268,
+      "success": true,
+      "slug": "retail-management-software-grocery-store-karachi",
+      "durationMs": 5420,
       "details": {
-        "runId": "run-mr76fg90"
+        "runId": "run-mr8m70jy",
+        "city": "karachi",
+        "service": "Retail Management Software"
       }
     }
   ],
