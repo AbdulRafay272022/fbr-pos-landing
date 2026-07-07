@@ -995,6 +995,24 @@
       "promptTokens": 1118,
       "completionTokens": 1705,
       "totalTokens": 2823
+    },
+    {
+      "ts": "2026-07-07T02:54:35.162Z",
+      "action": "title_optimize",
+      "slug": "fbr-audit-penalty-increases",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-07T02:54:35.883Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-integration-monthly-sales-tax-returns-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1007,8 +1025,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 26264,
-      "calls": 20
+      "tokens": 27064,
+      "calls": 22
     }
   },
   "monthlyTokenBudget": 5000000,
