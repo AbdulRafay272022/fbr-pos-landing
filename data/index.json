@@ -1,5 +1,42 @@
 [
   {
+    "slug": "how-to-verify-fbr-invoice-pakistan",
+    "title": "How to Verify an FBR Invoice in Pakistan",
+    "metaDescription": "How to verify an FBR invoice in Pakistan — scan the QR code or enter the invoice number on the FBR portal to confirm a sale was reported, and what to do if it fails.",
+    "keywords": [
+      "verify fbr invoice",
+      "check fbr invoice online",
+      "fbr invoice verification pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What does verifying an FBR invoice mean?",
+        "answer": "Verifying an FBR invoice means confirming, on the FBR portal, that the sale was genuinely reported to the IRIS system. A verified invoice resolves to a real IRIS record; an unverifiable one means the sale may never have reached FBR, regardless of what the printed receipt shows."
+      },
+      {
+        "question": "How do I verify an FBR invoice as a customer?",
+        "answer": "Scan the QR code on the receipt with your phone, or visit the FBR verification page and enter the invoice number. A valid result shows the recorded sale details; 'not found' means the invoice was not properly reported to FBR."
+      },
+      {
+        "question": "Why would a valid-looking invoice fail verification?",
+        "answer": "Usually because the submission to FBR IRIS failed but the receipt still printed — often due to an expired authentication token or a dropped connection. The QR then encodes a reference that does not exist in IRIS, so it cannot be verified."
+      },
+      {
+        "question": "What should a business do if its invoices fail verification?",
+        "answer": "Treat it as a compliance emergency: the sales were likely not reported. Check your IRIS dashboard, fix the cause (commonly token refresh or offline sync), re-submit affected invoices, and add a monthly reconciliation so it does not recur."
+      },
+      {
+        "question": "Does a printed receipt prove FBR compliance?",
+        "answer": "No. A receipt can print even when the submission to IRIS failed. Only a QR that verifies against a real IRIS record proves the sale was reported — which is exactly why verification matters."
+      }
+    ],
+    "publishedAt": "2026-07-07T21:30:57.753Z",
+    "readTime": 6,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-07-07T21:30:57.753Z"
+  },
+  {
     "slug": "best-fbr-pos-system-for-retail-in-faisalabad",
     "title": "Best FBR POS System for Retail in Faisalabad",
     "metaDescription": "Discover the best FBR POS system for retail in Faisalabad, ensuring compliance with FBR regulations and streamlining sales operations",
