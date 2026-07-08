@@ -1013,6 +1013,33 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-08T02:39:31.000Z",
+      "action": "title_optimize",
+      "slug": "digital-invoicing-fbr-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-08T02:39:31.632Z",
+      "action": "title_optimize",
+      "slug": "gerrys-dnata-fbr-penalty",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-08T02:39:32.351Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-system-karachi-businesses",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1025,8 +1052,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 27064,
-      "calls": 22
+      "tokens": 28264,
+      "calls": 25
     }
   },
   "monthlyTokenBudget": 5000000,
