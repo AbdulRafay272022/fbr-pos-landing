@@ -692,8 +692,29 @@
         }
       ],
       "distributedAt": "2026-07-07T02:54:31.022Z"
+    },
+    {
+      "slug": "digital-invoicing-fbr-pakistan",
+      "title": "Digital Invoicing FBR Pakistan",
+      "blogUrl": "https://phelixerp.online/blog/digital-invoicing-fbr-pakistan",
+      "hook": "Digital Invoicing FBR Pakistan",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-08T02:39:28.335Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-08T02:39:28.335Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-08T02:39:28.336Z"
     }
   ],
-  "lastDistributedAt": "2026-07-07T02:54:31.022Z",
+  "lastDistributedAt": "2026-07-08T02:39:28.336Z",
   "totalDistributed": 0
 }
