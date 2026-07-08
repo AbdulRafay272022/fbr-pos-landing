@@ -209,8 +209,15 @@
       "service": "Retail Management Software",
       "industry": "grocery store",
       "publishedAt": "2026-07-06T02:42:48.275Z"
+    },
+    {
+      "slug": "pos-system-restaurant-lahore",
+      "city": "lahore",
+      "service": "POS System",
+      "industry": "restaurant",
+      "publishedAt": "2026-07-08T02:39:40.479Z"
     }
   ],
-  "totalPublished": 30,
-  "lastGeneratedAt": "2026-07-06T02:42:48.275Z"
+  "totalPublished": 31,
+  "lastGeneratedAt": "2026-07-08T02:39:40.479Z"
 }
