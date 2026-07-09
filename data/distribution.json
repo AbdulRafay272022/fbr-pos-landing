@@ -713,8 +713,29 @@
         }
       ],
       "distributedAt": "2026-07-08T02:39:28.336Z"
+    },
+    {
+      "slug": "fbr-invoice-number",
+      "title": "FBR Invoice Number: Guide to Verification",
+      "blogUrl": "https://phelixerp.online/blog/fbr-invoice-number",
+      "hook": "FBR Invoice Number: Guide to Verification",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-09T02:27:23.396Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-09T02:27:23.396Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-09T02:27:23.396Z"
     }
   ],
-  "lastDistributedAt": "2026-07-08T02:39:28.336Z",
+  "lastDistributedAt": "2026-07-09T02:27:23.396Z",
   "totalDistributed": 0
 }
