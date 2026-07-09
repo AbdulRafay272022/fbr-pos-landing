@@ -1,6 +1,6 @@
 {
   "slug": "fbr-invoice-number",
-  "title": "FBR Invoice Number: Guide to Verification",
+  "title": "Top 3 Ways to Validate FBR Invoice Number",
   "metaDescription": "Learn how to verify your FBR invoice number and avoid penalties. Discover the importance of FBR IRIS and POS integration for your business.",
   "keywords": [
     "fbr invoice number",
@@ -32,7 +32,7 @@
   ],
   "publishedAt": "2026-07-09T02:27:20.293Z",
   "readTime": 4,
-  "version": 1,
+  "version": 2,
   "authorName": "Phelix ERP Team",
   "heroImage": {
     "url": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -41,5 +41,6 @@
     "photographer": "Kindel Media",
     "photographerUrl": "https://www.pexels.com/@kindelmedia",
     "pexelsUrl": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-clipboard-7651555/"
-  }
+  },
+  "lastUpdated": "2026-07-09T02:27:27.706Z"
 }

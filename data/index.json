@@ -1,7 +1,7 @@
 [
   {
     "slug": "fbr-invoice-number",
-    "title": "FBR Invoice Number: Guide to Verification",
+    "title": "Top 3 Ways to Validate FBR Invoice Number",
     "metaDescription": "Learn how to verify your FBR invoice number and avoid penalties. Discover the importance of FBR IRIS and POS integration for your business.",
     "keywords": [
       "fbr invoice number",
@@ -32,7 +32,7 @@
     ],
     "publishedAt": "2026-07-09T02:27:20.293Z",
     "readTime": 4,
-    "version": 1,
+    "version": 2,
     "authorName": "Phelix ERP Team",
     "heroImage": {
       "url": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -41,7 +41,8 @@
       "photographer": "Kindel Media",
       "photographerUrl": "https://www.pexels.com/@kindelmedia",
       "pexelsUrl": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-clipboard-7651555/"
-    }
+    },
+    "lastUpdated": "2026-07-09T02:27:27.706Z"
   },
   {
     "slug": "digital-invoicing-fbr-pakistan",
@@ -216,7 +217,7 @@
   },
   {
     "slug": "fbr-strn-registration-guide-pakistan",
-    "title": "FBR STRN Registration in Pakistan: A Step-by-Step Guide",
+    "title": "Top 3 Benefits of FBR STRN Registration for Businesses",
     "metaDescription": "How to register for an STRN with FBR in Pakistan — what a Sales Tax Registration Number is, the documents you need, the IRIS steps, and how to activate and verify it.",
     "keywords": [
       "fbr strn registration",
@@ -247,9 +248,9 @@
     ],
     "publishedAt": "2026-07-05T11:07:58.995Z",
     "readTime": 7,
-    "version": 1,
+    "version": 2,
     "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-07-05T11:07:58.995Z"
+    "lastUpdated": "2026-07-09T02:27:28.576Z"
   },
   {
     "slug": "gerrys-dnata-fbr-penalty",
@@ -1363,7 +1364,7 @@
   },
   {
     "slug": "retail-inventory-management-fbr-pos-pakistan",
-    "title": "5 Ways FBR POS Boosts Retail Inventory Management in Pakistan",
+    "title": "Top 3 FBR POS Benefits for Retail Inventory Management in Pakistan",
     "metaDescription": "How an FBR POS doubles as inventory management for Pakistani retailers — automatic stock deduction, shrinkage control, reorder alerts, and cleaner audits.",
     "keywords": [
       "retail inventory management fbr pos pakistan",
@@ -1390,9 +1391,9 @@
     ],
     "publishedAt": "2026-06-29T21:07:56.495Z",
     "readTime": 3,
-    "version": 4,
+    "version": 5,
     "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-07-04T02:14:33.869Z",
+    "lastUpdated": "2026-07-09T02:27:28.146Z",
     "heroImage": {
       "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
       "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",

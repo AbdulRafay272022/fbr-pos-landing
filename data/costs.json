@@ -1048,6 +1048,33 @@
       "promptTokens": 1102,
       "completionTokens": 1505,
       "totalTokens": 2607
+    },
+    {
+      "ts": "2026-07-09T02:27:27.707Z",
+      "action": "title_optimize",
+      "slug": "fbr-invoice-number",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-09T02:27:28.146Z",
+      "action": "title_optimize",
+      "slug": "retail-inventory-management-fbr-pos-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-09T02:27:28.576Z",
+      "action": "title_optimize",
+      "slug": "fbr-strn-registration-guide-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1060,8 +1087,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 30871,
-      "calls": 26
+      "tokens": 32071,
+      "calls": 29
     }
   },
   "monthlyTokenBudget": 5000000,
