@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-invoice-number",
+    "title": "FBR Invoice Number: Guide to Verification",
+    "metaDescription": "Learn how to verify your FBR invoice number and avoid penalties. Discover the importance of FBR IRIS and POS integration for your business.",
+    "keywords": [
+      "fbr invoice number",
+      "fbr invoice number pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is the penalty for not verifying FBR invoice numbers?",
+        "answer": "The penalty for not verifying FBR invoice numbers can be up to PKR 100,000, depending on the nature of the offense."
+      },
+      {
+        "question": "How can I integrate my POS system with the FBR IRIS portal?",
+        "answer": "You can integrate your POS system with the FBR IRIS portal using the FBR IRIS API and following the guidelines for [INTERNAL_LINK: \"FBR POS integration\"]."
+      },
+      {
+        "question": "What is the purpose of the QR code on the FBR invoice?",
+        "answer": "The QR code on the FBR invoice is used for verification purposes and contains the invoice number, STRN, and other details."
+      },
+      {
+        "question": "Can I verify FBR invoice numbers offline?",
+        "answer": "No, you need to use the FBR IRIS portal or the FBR IRIS API to verify FBR invoice numbers."
+      },
+      {
+        "question": "What is the difference between FBR IRIS and STRN?",
+        "answer": "FBR IRIS is the portal used for invoice verification, while STRN is the unique identifier assigned to each invoice."
+      }
+    ],
+    "publishedAt": "2026-07-09T02:27:20.293Z",
+    "readTime": 4,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Person's hand holding a company invoice on a clipboard with a pen.",
+      "photographer": "Kindel Media",
+      "photographerUrl": "https://www.pexels.com/@kindelmedia",
+      "pexelsUrl": "https://www.pexels.com/photo/close-up-shot-of-a-person-holding-a-clipboard-7651555/"
+    }
+  },
+  {
     "slug": "digital-invoicing-fbr-pakistan",
     "title": "Top 3 Digital Invoicing FBR Pakistan Solutions",
     "metaDescription": "Guide to digital invoicing in Pakistan as per FBR regulations, including IRIS portal, STRN, and QR invoice requirements",
