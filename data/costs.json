@@ -1084,6 +1084,24 @@
       "promptTokens": 1373,
       "completionTokens": 2447,
       "totalTokens": 3820
+    },
+    {
+      "ts": "2026-07-10T02:45:48.331Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-system-retailers",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-10T02:45:48.911Z",
+      "action": "title_optimize",
+      "slug": "how-to-setup-fbr-penalty-in-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1096,8 +1114,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 35891,
-      "calls": 30
+      "tokens": 36691,
+      "calls": 32
     }
   },
   "monthlyTokenBudget": 5000000,
