@@ -1,5 +1,49 @@
 [
   {
+    "slug": "best-fbr-pos-system-for-retail-in-multan",
+    "title": "Best FBR POS System for Retail in Multan",
+    "metaDescription": "Find the best FBR POS system for retail in Multan, compliant with FBR IRIS and Sales Tax Act. Learn how to integrate POS with FBR IRIS and avoid penalties.",
+    "keywords": [
+      "best fbr pos system for retail in multan",
+      "best fbr pos system for retail in multan pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is FBR IRIS?",
+        "answer": "FBR IRIS is the Federal Board of Revenue's online portal for sales tax registration and compliance."
+      },
+      {
+        "question": "How do I integrate my POS system with FBR IRIS?",
+        "answer": "To integrate your POS system with FBR IRIS, you will need to register for an FBR IRIS account, choose a POS system that is compatible with FBR IRIS, and configure the POS system to connect to the FBR IRIS portal using the provided API credentials."
+      },
+      {
+        "question": "What are the benefits of integrating my POS system with FBR IRIS?",
+        "answer": "The benefits of integrating your POS system with FBR IRIS include reduced risk of penalties and fines, improved compliance with the Sales Tax Act, and increased accuracy and efficiency in sales data transmission."
+      },
+      {
+        "question": "What is the penalty for failure to integrate a POS system with FBR IRIS?",
+        "answer": "The penalty for failure to integrate a POS system with FBR IRIS is PKR 50,000."
+      },
+      {
+        "question": "How do I generate QR invoices using FBR IRIS?",
+        "answer": "To generate QR invoices using FBR IRIS, you will need to use a POS system that is compatible with FBR IRIS and has QR invoice generation capabilities, such as Phelix ERP."
+      }
+    ],
+    "publishedAt": "2026-07-10T02:45:40.762Z",
+    "readTime": 5,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
+      "photographer": "Aa Dil",
+      "photographerUrl": "https://www.pexels.com/@aadil",
+      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
+    }
+  },
+  {
     "slug": "fbr-invoice-number",
     "title": "Top 3 Ways to Validate FBR Invoice Number",
     "metaDescription": "Learn how to verify your FBR invoice number and avoid penalties. Discover the importance of FBR IRIS and POS integration for your business.",
