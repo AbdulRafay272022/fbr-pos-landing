@@ -216,8 +216,15 @@
       "service": "POS System",
       "industry": "restaurant",
       "publishedAt": "2026-07-08T02:39:40.479Z"
+    },
+    {
+      "slug": "pos-system-retail-lahore",
+      "city": "lahore",
+      "service": "POS System",
+      "industry": "retail",
+      "publishedAt": "2026-07-11T02:01:38.893Z"
     }
   ],
-  "totalPublished": 31,
-  "lastGeneratedAt": "2026-07-08T02:39:40.479Z"
+  "totalPublished": 32,
+  "lastGeneratedAt": "2026-07-11T02:01:38.893Z"
 }
