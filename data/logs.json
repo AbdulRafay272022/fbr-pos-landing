@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mrec2gqh-t1ruu",
-      "ts": "2026-07-10T02:45:30.042Z",
+      "id": "mrfpxbve-ubfek",
+      "ts": "2026-07-11T02:01:11.258Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mrec2gqf",
+        "runId": "run-mrfpxbvb",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mrec2h86-xpbbd",
-      "ts": "2026-07-10T02:45:30.678Z",
+      "id": "mrfpxezu-93xb1",
+      "ts": "2026-07-11T02:01:15.306Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mrec2gqf",
+        "runId": "run-mrfpxbvb",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4273 unused keywords, last scrape 20.0d ago (next forced refresh in 10d)",
-          "generate": "24.3h since last generation, 4273 keywords available",
-          "update": "skipped: last update 120.2h ago (min 168h)",
+          "scrape": "skipped: 4272 unused keywords, last scrape 21.0d ago (next forced refresh in 9d)",
+          "generate": "23.3h since last generation, 4272 keywords available",
+          "update": "skipped: last update 143.5h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,108 +48,108 @@
       }
     },
     {
-      "id": "mrec2rq2-35tv1",
-      "ts": "2026-07-10T02:45:44.282Z",
+      "id": "mrfpxkfw-wa7cx",
+      "ts": "2026-07-11T02:01:22.364Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
-      "success": true,
-      "slug": "best-fbr-pos-system-for-retail-in-multan",
-      "words": 960,
-      "source": "groq",
-      "durationMs": 12021,
+      "success": false,
+      "durationMs": 5704,
       "details": {
-        "runId": "run-mrec2gqf"
+        "runId": "run-mrfpxbvb"
       }
     },
     {
-      "id": "mrec2tt7-sco7z",
-      "ts": "2026-07-10T02:45:46.987Z",
+      "id": "mrfpxmot-mkrwg",
+      "ts": "2026-07-11T02:01:25.277Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2705,
+      "durationMs": 2913,
       "details": {
-        "runId": "run-mrec2gqf",
+        "runId": "run-mrfpxbvb",
         "pages": 4,
-        "totalImpressions": 20
+        "totalImpressions": 18
       }
     },
     {
-      "id": "mrec2u1v-sbkdq",
-      "ts": "2026-07-10T02:45:47.299Z",
+      "id": "mrfpxopf-ejafc",
+      "ts": "2026-07-11T02:01:27.891Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 312,
+      "durationMs": 2614,
       "details": {
-        "runId": "run-mrec2gqf",
+        "runId": "run-mrfpxbvb",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mrec2yki-wz2x6",
-      "ts": "2026-07-10T02:45:53.154Z",
+      "id": "mrfpxrke-x08vb",
+      "ts": "2026-07-11T02:01:31.598Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 5855,
+      "durationMs": 3706,
       "details": {
-        "runId": "run-mrec2gqf",
-        "optimizedCount": 2
+        "runId": "run-mrfpxbvb",
+        "optimizedCount": 1
       }
     },
     {
-      "id": "mrec2yxe-wdhnl",
-      "ts": "2026-07-10T02:45:53.618Z",
+      "id": "mrfpxs4v-536tp",
+      "ts": "2026-07-11T02:01:32.335Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "durationMs": 464,
+      "durationMs": 737,
       "details": {
-        "runId": "run-mrec2gqf"
+        "runId": "run-mrfpxbvb"
       }
     },
     {
-      "id": "mrec326q-rcaex",
-      "ts": "2026-07-10T02:45:57.842Z",
+      "id": "mrfpxszh-f1tsj",
+      "ts": "2026-07-11T02:01:33.437Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 4224,
+      "durationMs": 1102,
       "details": {
-        "runId": "run-mrec2gqf",
+        "runId": "run-mrfpxbvb",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mrec33iz-pfo6z",
-      "ts": "2026-07-10T02:45:59.579Z",
+      "id": "mrfpxu41-cb39h",
+      "ts": "2026-07-11T02:01:34.897Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1737,
+      "durationMs": 1459,
       "details": {
-        "runId": "run-mrec2gqf",
+        "runId": "run-mrfpxbvb",
         "decaysFound": 0
       }
     },
     {
-      "id": "mrec342f-3lfs3",
-      "ts": "2026-07-10T02:46:00.279Z",
+      "id": "mrfpxyd4-q7g9z",
+      "ts": "2026-07-11T02:01:40.408Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 700,
+      "success": true,
+      "slug": "pos-system-retail-lahore",
+      "durationMs": 5511,
       "details": {
-        "runId": "run-mrec2gqf"
+        "runId": "run-mrfpxbvb",
+        "city": "lahore",
+        "service": "POS System"
       }
     }
   ],
