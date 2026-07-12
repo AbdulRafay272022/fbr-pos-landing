@@ -223,8 +223,15 @@
       "service": "POS System",
       "industry": "retail",
       "publishedAt": "2026-07-11T02:01:38.893Z"
+    },
+    {
+      "slug": "pos-system-pharmacy-lahore",
+      "city": "lahore",
+      "service": "POS System",
+      "industry": "pharmacy",
+      "publishedAt": "2026-07-12T02:35:40.654Z"
     }
   ],
-  "totalPublished": 32,
-  "lastGeneratedAt": "2026-07-11T02:01:38.893Z"
+  "totalPublished": 33,
+  "lastGeneratedAt": "2026-07-12T02:35:40.654Z"
 }
