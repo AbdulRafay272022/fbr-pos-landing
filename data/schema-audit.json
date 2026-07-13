@@ -2,7 +2,7 @@
   "checks": {
     "https://phelixerp.online": {
       "url": "https://phelixerp.online",
-      "fetchedAt": "2026-07-06T04:13:52.201Z",
+      "fetchedAt": "2026-07-13T04:00:48.115Z",
       "blocks": [
         {
           "type": "Organization",
@@ -1329,7 +1329,7 @@
     },
     "https://phelixerp.online/blog/fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide": {
       "url": "https://phelixerp.online/blog/fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide",
-      "fetchedAt": "2026-07-06T04:13:54.493Z",
+      "fetchedAt": "2026-07-13T04:00:50.618Z",
       "blocks": [
         {
           "type": "Organization",
@@ -9905,7 +9905,7 @@
     },
     "https://phelixerp.online/blog/services-for-fbr-penalty-pakistan": {
       "url": "https://phelixerp.online/blog/services-for-fbr-penalty-pakistan",
-      "fetchedAt": "2026-07-06T04:13:54.367Z",
+      "fetchedAt": "2026-07-13T04:00:50.425Z",
       "blocks": [
         {
           "type": "Organization",
@@ -11092,7 +11092,7 @@
     },
     "https://phelixerp.online/blog/fbr-audit-penalty-increases": {
       "url": "https://phelixerp.online/blog/fbr-audit-penalty-increases",
-      "fetchedAt": "2026-07-06T04:13:52.743Z",
+      "fetchedAt": "2026-07-13T04:00:49.369Z",
       "blocks": [
         {
           "type": "Organization",
@@ -11141,7 +11141,7 @@
           "raw": {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "How to Avoid FBR Audit Penalty Increases",
+            "headline": "How to Avoid FBR Audit Penalty Increases: Top 3 Ways",
             "description": "Learn about FBR audit penalty increases in Pakistan, including the latest penalty amounts and how to avoid them with Phelix ERP's expert guidance",
             "url": "https://phelixerp.online/blog/fbr-audit-penalty-increases",
             "datePublished": "2026-07-06T02:42:31.441Z",
@@ -11199,7 +11199,7 @@
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "How to Avoid FBR Audit Penalty Increases",
+                "name": "How to Avoid FBR Audit Penalty Increases: Top 3 Ways",
                 "item": "https://phelixerp.online/blog/fbr-audit-penalty-increases"
               }
             ]
@@ -11347,7 +11347,7 @@
     },
     "https://phelixerp.online/blog/fbr-strn-registration-guide-pakistan": {
       "url": "https://phelixerp.online/blog/fbr-strn-registration-guide-pakistan",
-      "fetchedAt": "2026-07-06T04:13:53.024Z",
+      "fetchedAt": "2026-07-13T04:00:49.472Z",
       "blocks": [
         {
           "type": "Organization",
@@ -11396,7 +11396,7 @@
           "raw": {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "FBR STRN Registration in Pakistan: A Step-by-Step Guide",
+            "headline": "Top 3 Benefits of FBR STRN Registration for Businesses",
             "description": "How to register for an STRN with FBR in Pakistan — what a Sales Tax Registration Number is, the documents you need, the IRIS steps, and how to activate and verify it.",
             "url": "https://phelixerp.online/blog/fbr-strn-registration-guide-pakistan",
             "datePublished": "2026-07-05T11:07:58.995Z",
@@ -11454,7 +11454,7 @@
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "FBR STRN Registration in Pakistan: A Step-by-Step Guide",
+                "name": "Top 3 Benefits of FBR STRN Registration for Businesses",
                 "item": "https://phelixerp.online/blog/fbr-strn-registration-guide-pakistan"
               }
             ]
@@ -11601,7 +11601,7 @@
     },
     "https://phelixerp.online/blog/gerrys-dnata-fbr-penalty": {
       "url": "https://phelixerp.online/blog/gerrys-dnata-fbr-penalty",
-      "fetchedAt": "2026-07-06T04:13:53.228Z",
+      "fetchedAt": "2026-07-13T04:00:49.657Z",
       "blocks": [
         {
           "type": "Organization",
@@ -11650,7 +11650,7 @@
           "raw": {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "Guide to Gerry's Dnata FBR Penalty Resolution",
+            "headline": "Gerry's Dnata FBR Penalty vs Compliance: What's Best?",
             "description": "Learn about the Gerry's Dnata FBR penalty, its implications, and how to avoid similar penalties with Phelix ERP's FBR compliance solutions.",
             "url": "https://phelixerp.online/blog/gerrys-dnata-fbr-penalty",
             "datePublished": "2026-07-03T02:11:57.387Z",
@@ -11708,7 +11708,7 @@
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Guide to Gerry's Dnata FBR Penalty Resolution",
+                "name": "Gerry's Dnata FBR Penalty vs Compliance: What's Best?",
                 "item": "https://phelixerp.online/blog/gerrys-dnata-fbr-penalty"
               }
             ]
@@ -11856,7 +11856,7 @@
     },
     "https://phelixerp.online/blog/fbr-penalty-us-182": {
       "url": "https://phelixerp.online/blog/fbr-penalty-us-182",
-      "fetchedAt": "2026-07-06T04:13:53.434Z",
+      "fetchedAt": "2026-07-13T04:00:49.787Z",
       "blocks": [
         {
           "type": "Organization",
@@ -12111,7 +12111,7 @@
     },
     "https://phelixerp.online/blog/what-is-fbr-tier-1-retailer-pakistan": {
       "url": "https://phelixerp.online/blog/what-is-fbr-tier-1-retailer-pakistan",
-      "fetchedAt": "2026-07-06T04:13:53.609Z",
+      "fetchedAt": "2026-07-13T04:00:49.953Z",
       "blocks": [
         {
           "type": "Organization",
@@ -12365,7 +12365,7 @@
     },
     "https://phelixerp.online/blog/fbr-pos-system-integration": {
       "url": "https://phelixerp.online/blog/fbr-pos-system-integration",
-      "fetchedAt": "2026-07-06T04:13:53.900Z",
+      "fetchedAt": "2026-07-13T04:00:50.083Z",
       "blocks": [
         {
           "type": "Organization",
@@ -12620,7 +12620,7 @@
     },
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-rawalpindi": {
       "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-rawalpindi",
-      "fetchedAt": "2026-07-06T04:13:54.157Z",
+      "fetchedAt": "2026-07-13T04:00:50.283Z",
       "blocks": [
         {
           "type": "Organization",
@@ -12872,7 +12872,1450 @@
         }
       ],
       "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-non-compliance-penalties-2025": {
+      "url": "https://phelixerp.online/blog/fbr-non-compliance-penalties-2025",
+      "fetchedAt": "2026-07-13T04:00:48.524Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Avoid FBR Non Compliance Penalties 2025: A Guide",
+            "description": "Learn about FBR non compliance penalties 2025 and how to avoid them with Phelix ERP. Discover the consequences of non-compliance and the benefits of integr",
+            "url": "https://phelixerp.online/blog/fbr-non-compliance-penalties-2025",
+            "datePublished": "2026-07-13T02:13:52.693Z",
+            "dateModified": "2026-07-13T02:13:52.693Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr non compliance penalties 2025, fbr non compliance penalties 2025 pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-non-compliance-penalties-2025"
+            },
+            "wordCount": 1154
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Avoid FBR Non Compliance Penalties 2025: A Guide",
+                "item": "https://phelixerp.online/blog/fbr-non-compliance-penalties-2025"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What are FBR Non Compliance Penalties 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR non compliance penalties 2025 refer to the penalties imposed by the FBR on businesses that fail to comply with the Sales Tax Act and Federal Excise Act."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I avoid FBR Non Compliance Penalties 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can avoid FBR non compliance penalties 2025 by registering for FBR IRIS, integrating your POS system with FBR IRIS, generating QR invoices, verifying invoices, and maintaining records."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for failure to register for FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to register for FBR IRIS is PKR 50,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for failure to integrate POS system with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to integrate POS system with FBR IRIS is PKR 100,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for failure to generate QR invoices?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to generate QR invoices is PKR 200,000."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR Non Compliance Penalties 2025",
+            "description": "Learn about FBR non compliance penalties 2025 and how to avoid them with Phelix ERP. Discover the consequences of non-compliance and the benefits of integr",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-07-13T02:13:52.693Z",
+            "dateModified": "2026-07-13T02:13:52.693Z",
+            "url": "https://phelixerp.online/blog/fbr-non-compliance-penalties-2025",
+            "keywords": "fbr non compliance penalties 2025, fbr non compliance penalties 2025 pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What are FBR Non Compliance Penalties 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR non compliance penalties 2025 refer to the penalties imposed by the FBR on businesses that fail to comply with the Sales Tax Act and Federal Excise Act."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I avoid FBR Non Compliance Penalties 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can avoid FBR non compliance penalties 2025 by registering for FBR IRIS, integrating your POS system with FBR IRIS, generating QR invoices, verifying invoices, and maintaining records."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for failure to register for FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to register for FBR IRIS is PKR 50,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for failure to integrate POS system with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to integrate POS system with FBR IRIS is PKR 100,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for failure to generate QR invoices?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to generate QR invoices is PKR 200,000."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-multan": {
+      "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-multan",
+      "fetchedAt": "2026-07-13T04:00:48.692Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Best FBR POS System for Retail in Multan",
+            "description": "Find the best FBR POS system for retail in Multan, compliant with FBR IRIS and Sales Tax Act. Learn how to integrate POS with FBR IRIS and avoid penalties.",
+            "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-multan",
+            "datePublished": "2026-07-10T02:45:40.762Z",
+            "dateModified": "2026-07-10T02:45:40.762Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "best fbr pos system for retail in multan, best fbr pos system for retail in multan pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-multan"
+            },
+            "wordCount": 1374
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Best FBR POS System for Retail in Multan",
+                "item": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-multan"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS is the Federal Board of Revenue's online portal for sales tax registration and compliance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I integrate my POS system with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate your POS system with FBR IRIS, you will need to register for an FBR IRIS account, choose a POS system that is compatible with FBR IRIS, and configure the POS system to connect to the FBR IRIS portal using the provided API credentials."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the benefits of integrating my POS system with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of integrating your POS system with FBR IRIS include reduced risk of penalties and fines, improved compliance with the Sales Tax Act, and increased accuracy and efficiency in sales data transmission."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for failure to integrate a POS system with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to integrate a POS system with FBR IRIS is PKR 50,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I generate QR invoices using FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To generate QR invoices using FBR IRIS, you will need to use a POS system that is compatible with FBR IRIS and has QR invoice generation capabilities, such as Phelix ERP."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Best FBR POS System for Retail in Multan",
+            "description": "Find the best FBR POS system for retail in Multan, compliant with FBR IRIS and Sales Tax Act. Learn how to integrate POS with FBR IRIS and avoid penalties.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-07-10T02:45:40.762Z",
+            "dateModified": "2026-07-10T02:45:40.762Z",
+            "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-multan",
+            "keywords": "best fbr pos system for retail in multan, best fbr pos system for retail in multan pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS is the Federal Board of Revenue's online portal for sales tax registration and compliance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I integrate my POS system with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate your POS system with FBR IRIS, you will need to register for an FBR IRIS account, choose a POS system that is compatible with FBR IRIS, and configure the POS system to connect to the FBR IRIS portal using the provided API credentials."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the benefits of integrating my POS system with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of integrating your POS system with FBR IRIS include reduced risk of penalties and fines, improved compliance with the Sales Tax Act, and increased accuracy and efficiency in sales data transmission."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for failure to integrate a POS system with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to integrate a POS system with FBR IRIS is PKR 50,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I generate QR invoices using FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To generate QR invoices using FBR IRIS, you will need to use a POS system that is compatible with FBR IRIS and has QR invoice generation capabilities, such as Phelix ERP."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-invoice-number": {
+      "url": "https://phelixerp.online/blog/fbr-invoice-number",
+      "fetchedAt": "2026-07-13T04:00:48.830Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 3 Ways to Validate FBR Invoice Number",
+            "description": "Learn how to verify your FBR invoice number and avoid penalties. Discover the importance of FBR IRIS and POS integration for your business.",
+            "url": "https://phelixerp.online/blog/fbr-invoice-number",
+            "datePublished": "2026-07-09T02:27:20.293Z",
+            "dateModified": "2026-07-09T02:27:20.293Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr invoice number, fbr invoice number pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-invoice-number"
+            },
+            "wordCount": 1100
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 3 Ways to Validate FBR Invoice Number",
+                "item": "https://phelixerp.online/blog/fbr-invoice-number"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the penalty for not verifying FBR invoice numbers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for not verifying FBR invoice numbers can be up to PKR 100,000, depending on the nature of the offense."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I integrate my POS system with the FBR IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can integrate your POS system with the FBR IRIS portal using the FBR IRIS API and following the guidelines for [INTERNAL_LINK: \"FBR POS integration\"]."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the purpose of the QR code on the FBR invoice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The QR code on the FBR invoice is used for verification purposes and contains the invoice number, STRN, and other details."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I verify FBR invoice numbers offline?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, you need to use the FBR IRIS portal or the FBR IRIS API to verify FBR invoice numbers."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between FBR IRIS and STRN?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS is the portal used for invoice verification, while STRN is the unique identifier assigned to each invoice."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR Invoice Number: Guide to Verification",
+            "description": "Learn how to verify your FBR invoice number and avoid penalties. Discover the importance of FBR IRIS and POS integration for your business.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-07-09T02:27:20.293Z",
+            "dateModified": "2026-07-09T02:27:20.293Z",
+            "url": "https://phelixerp.online/blog/fbr-invoice-number",
+            "keywords": "fbr invoice number, fbr invoice number pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/7651555/pexels-photo-7651555.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the penalty for not verifying FBR invoice numbers?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for not verifying FBR invoice numbers can be up to PKR 100,000, depending on the nature of the offense."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can I integrate my POS system with the FBR IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "You can integrate your POS system with the FBR IRIS portal using the FBR IRIS API and following the guidelines for [INTERNAL_LINK: \"FBR POS integration\"]."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the purpose of the QR code on the FBR invoice?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The QR code on the FBR invoice is used for verification purposes and contains the invoice number, STRN, and other details."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I verify FBR invoice numbers offline?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, you need to use the FBR IRIS portal or the FBR IRIS API to verify FBR invoice numbers."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between FBR IRIS and STRN?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS is the portal used for invoice verification, while STRN is the unique identifier assigned to each invoice."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/digital-invoicing-fbr-pakistan": {
+      "url": "https://phelixerp.online/blog/digital-invoicing-fbr-pakistan",
+      "fetchedAt": "2026-07-13T04:00:48.952Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 3 Digital Invoicing FBR Pakistan Solutions",
+            "description": "Guide to digital invoicing in Pakistan as per FBR regulations, including IRIS portal, STRN, and QR invoice requirements",
+            "url": "https://phelixerp.online/blog/digital-invoicing-fbr-pakistan",
+            "datePublished": "2026-07-08T02:39:24.657Z",
+            "dateModified": "2026-07-08T02:39:24.657Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "digital invoicing fbr pakistan, digital invoicing fbr pakistan pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/digital-invoicing-fbr-pakistan"
+            },
+            "wordCount": 1713
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 3 Digital Invoicing FBR Pakistan Solutions",
+                "item": "https://phelixerp.online/blog/digital-invoicing-fbr-pakistan"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for digital invoicing fbr pakistan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for digital invoicing fbr pakistan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/how-to-verify-fbr-invoice-pakistan": {
+      "url": "https://phelixerp.online/blog/how-to-verify-fbr-invoice-pakistan",
+      "fetchedAt": "2026-07-13T04:00:49.093Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "How to Verify an FBR Invoice in Pakistan",
+            "description": "How to verify an FBR invoice in Pakistan — scan the QR code or enter the invoice number on the FBR portal to confirm a sale was reported, and what to do if it fails.",
+            "url": "https://phelixerp.online/blog/how-to-verify-fbr-invoice-pakistan",
+            "datePublished": "2026-07-07T21:30:57.753Z",
+            "dateModified": "2026-07-07T21:30:57.753Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "verify fbr invoice, check fbr invoice online, fbr invoice verification pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/how-to-verify-fbr-invoice-pakistan"
+            },
+            "wordCount": 1080
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "How to Verify an FBR Invoice in Pakistan",
+                "item": "https://phelixerp.online/blog/how-to-verify-fbr-invoice-pakistan"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What does verifying an FBR invoice mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Verifying an FBR invoice means confirming, on the FBR portal, that the sale was genuinely reported to the IRIS system. A verified invoice resolves to a real IRIS record; an unverifiable one means the sale may never have reached FBR, regardless of what the printed receipt shows."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I verify an FBR invoice as a customer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Scan the QR code on the receipt with your phone, or visit the FBR verification page and enter the invoice number. A valid result shows the recorded sale details; 'not found' means the invoice was not properly reported to FBR."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why would a valid-looking invoice fail verification?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Usually because the submission to FBR IRIS failed but the receipt still printed — often due to an expired authentication token or a dropped connection. The QR then encodes a reference that does not exist in IRIS, so it cannot be verified."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What should a business do if its invoices fail verification?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Treat it as a compliance emergency: the sales were likely not reported. Check your IRIS dashboard, fix the cause (commonly token refresh or offline sync), re-submit affected invoices, and add a monthly reconciliation so it does not recur."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does a printed receipt prove FBR compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A receipt can print even when the submission to IRIS failed. Only a QR that verifies against a real IRIS record proves the sale was reported — which is exactly why verification matters."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": false,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "How to Verify an FBR Invoice in Pakistan",
+            "description": "How to verify an FBR invoice in Pakistan — scan the QR code or enter the invoice number on the FBR portal to confirm a sale was reported, and what to do if it fails.",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP Team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-07-07T21:30:57.753Z",
+            "dateModified": "2026-07-07T21:30:57.753Z",
+            "url": "https://phelixerp.online/blog/how-to-verify-fbr-invoice-pakistan",
+            "keywords": "verify fbr invoice, check fbr invoice online, fbr invoice verification pakistan"
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "error",
+          "type": "Article",
+          "field": "image",
+          "message": "Required field \"image\" is missing."
+        },
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": false
+    },
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-faisalabad": {
+      "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-faisalabad",
+      "fetchedAt": "2026-07-13T04:00:49.218Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Best FBR POS System for Retail in Faisalabad",
+            "description": "Discover the best FBR POS system for retail in Faisalabad, ensuring compliance with FBR regulations and streamlining sales operations",
+            "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-faisalabad",
+            "datePublished": "2026-07-07T02:54:27.936Z",
+            "dateModified": "2026-07-07T02:54:27.936Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "best fbr pos system for retail in faisalabad, best fbr pos system for retail in faisalabad pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-faisalabad"
+            },
+            "wordCount": 1450
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Best FBR POS System for Retail in Faisalabad",
+                "item": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-faisalabad"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the penalty for non-compliance with FBR regulations?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for non-compliance with FBR regulations is PKR 50,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I register for an FBR IRIS account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To register for an FBR IRIS account, visit the FBR website and follow the registration process."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the benefit of using an FBR-integrated POS system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefit of using an FBR-integrated POS system is improved compliance with FBR regulations, streamlined sales operations, and real-time sales reporting."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use a non-FBR integrated POS system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, it is not recommended to use a non-FBR integrated POS system, as it may result in penalties and non-compliance with FBR regulations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I troubleshoot common issues with FBR POS integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To troubleshoot common issues with FBR POS integration, refer to the FBR IRIS portal technical support documentation or contact Phelix ERP support."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Best FBR POS System for Retail in Faisalabad",
+            "description": "Discover the best FBR POS system for retail in Faisalabad, ensuring compliance with FBR regulations and streamlining sales operations",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-07-07T02:54:27.936Z",
+            "dateModified": "2026-07-07T02:54:27.936Z",
+            "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-faisalabad",
+            "keywords": "best fbr pos system for retail in faisalabad, best fbr pos system for retail in faisalabad pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the penalty for non-compliance with FBR regulations?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for non-compliance with FBR regulations is PKR 50,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I register for an FBR IRIS account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To register for an FBR IRIS account, visit the FBR website and follow the registration process."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the benefit of using an FBR-integrated POS system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefit of using an FBR-integrated POS system is improved compliance with FBR regulations, streamlined sales operations, and real-time sales reporting."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use a non-FBR integrated POS system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No, it is not recommended to use a non-FBR integrated POS system, as it may result in penalties and non-compliance with FBR regulations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I troubleshoot common issues with FBR POS integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To troubleshoot common issues with FBR POS integration, refer to the FBR IRIS portal technical support documentation or contact Phelix ERP support."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
     }
   },
-  "lastAuditedAt": "2026-07-06T04:13:55.471Z"
+  "lastAuditedAt": "2026-07-13T04:00:50.909Z"
 }
