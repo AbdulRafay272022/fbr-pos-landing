@@ -1136,6 +1136,24 @@
       "promptTokens": 1102,
       "completionTokens": 1359,
       "totalTokens": 2461
+    },
+    {
+      "ts": "2026-07-13T02:14:14.567Z",
+      "action": "title_optimize",
+      "slug": "fbr-non-compliance-penalties-2025",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-13T02:14:16.031Z",
+      "action": "title_optimize",
+      "slug": "multi-branch-pos-system-pakistan-fbr-compliance-complete-guide-2026",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1148,8 +1166,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 42626,
-      "calls": 36
+      "tokens": 43426,
+      "calls": 38
     }
   },
   "monthlyTokenBudget": 5000000,
