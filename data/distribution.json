@@ -755,8 +755,29 @@
         }
       ],
       "distributedAt": "2026-07-10T02:45:49.274Z"
+    },
+    {
+      "slug": "fbr-non-compliance-penalties-2025",
+      "title": "FBR Non Compliance Penalties 2025",
+      "blogUrl": "https://phelixerp.online/blog/fbr-non-compliance-penalties-2025",
+      "hook": "FBR Non Compliance Penalties 2025",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-13T02:13:57.601Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-13T02:13:57.601Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-13T02:13:57.601Z"
     }
   ],
-  "lastDistributedAt": "2026-07-10T02:45:49.274Z",
+  "lastDistributedAt": "2026-07-13T02:13:57.602Z",
   "totalDistributed": 0
 }
