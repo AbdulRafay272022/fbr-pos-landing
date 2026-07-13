@@ -230,8 +230,15 @@
       "service": "POS System",
       "industry": "pharmacy",
       "publishedAt": "2026-07-12T02:35:40.654Z"
+    },
+    {
+      "slug": "pos-system-clothing-store-lahore",
+      "city": "lahore",
+      "service": "POS System",
+      "industry": "clothing store",
+      "publishedAt": "2026-07-13T02:14:39.257Z"
     }
   ],
-  "totalPublished": 33,
-  "lastGeneratedAt": "2026-07-12T02:35:40.654Z"
+  "totalPublished": 34,
+  "lastGeneratedAt": "2026-07-13T02:14:39.257Z"
 }
