@@ -776,8 +776,29 @@
         }
       ],
       "distributedAt": "2026-07-13T02:13:57.601Z"
+    },
+    {
+      "slug": "fbr-compliance-level",
+      "title": "FBR Compliance Level",
+      "blogUrl": "https://phelixerp.online/blog/fbr-compliance-level",
+      "hook": "FBR Compliance Level",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-14T02:59:36.522Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-14T02:59:36.522Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-14T02:59:36.522Z"
     }
   ],
-  "lastDistributedAt": "2026-07-13T02:13:57.602Z",
+  "lastDistributedAt": "2026-07-14T02:59:36.522Z",
   "totalDistributed": 0
 }
