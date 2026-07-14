@@ -1,7 +1,7 @@
 [
   {
     "slug": "fbr-compliance-level",
-    "title": "FBR Compliance Level",
+    "title": "What is FBR Compliance Level?",
     "metaDescription": "Learn about FBR compliance level, its importance, and how to achieve it. Discover the benefits of compliance and avoid penalties in Pakistan.",
     "keywords": [
       "fbr compliance level",
@@ -32,7 +32,7 @@
     ],
     "publishedAt": "2026-07-14T02:59:33.570Z",
     "readTime": 5,
-    "version": 1,
+    "version": 2,
     "authorName": "Phelix ERP Team",
     "heroImage": {
       "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -41,11 +41,12 @@
       "photographer": "pierre matile",
       "photographerUrl": "https://www.pexels.com/@open-borders",
       "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
-    }
+    },
+    "lastUpdated": "2026-07-14T02:59:41.182Z"
   },
   {
     "slug": "fbr-pos-integration-cost-pakistan",
-    "title": "FBR POS Integration Cost in Pakistan: What to Budget",
+    "title": "How to Calculate FBR POS Integration Cost",
     "metaDescription": "What FBR POS integration really costs in Pakistan — software subscriptions, setup, optional hardware, and hidden costs — and why it is far cheaper than a single penalty.",
     "keywords": [
       "fbr pos integration cost",
@@ -76,9 +77,9 @@
     ],
     "publishedAt": "2026-07-13T20:23:22.768Z",
     "readTime": 6,
-    "version": 1,
+    "version": 2,
     "authorName": "Phelix ERP Team",
-    "lastUpdated": "2026-07-13T20:23:22.768Z"
+    "lastUpdated": "2026-07-14T02:59:41.750Z"
   },
   {
     "slug": "fbr-non-compliance-penalties-2025",

@@ -1162,6 +1162,24 @@
       "promptTokens": 1114,
       "completionTokens": 1620,
       "totalTokens": 2734
+    },
+    {
+      "ts": "2026-07-14T02:59:41.183Z",
+      "action": "title_optimize",
+      "slug": "fbr-compliance-level",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-14T02:59:41.750Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-integration-cost-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1174,8 +1192,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 46160,
-      "calls": 39
+      "tokens": 46960,
+      "calls": 41
     }
   },
   "monthlyTokenBudget": 5000000,
