@@ -237,8 +237,15 @@
       "service": "POS System",
       "industry": "clothing store",
       "publishedAt": "2026-07-13T02:14:39.257Z"
+    },
+    {
+      "slug": "pos-system-grocery-store-lahore",
+      "city": "lahore",
+      "service": "POS System",
+      "industry": "grocery store",
+      "publishedAt": "2026-07-14T02:59:50.701Z"
     }
   ],
-  "totalPublished": 34,
-  "lastGeneratedAt": "2026-07-13T02:14:39.257Z"
+  "totalPublished": 35,
+  "lastGeneratedAt": "2026-07-14T02:59:50.701Z"
 }
