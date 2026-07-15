@@ -1,6 +1,6 @@
 {
   "slug": "fbr-rules-and-regulations",
-  "title": "FBR Rules and Regulations",
+  "title": "A Guide to FBR Rules and Regulations",
   "metaDescription": "Learn about FBR rules and regulations, including income tax, sales tax, and POS integration. Stay compliant with Phelix ERP.",
   "keywords": [
     "fbr rules and regulations",
@@ -32,7 +32,7 @@
   ],
   "publishedAt": "2026-07-15T02:42:30.987Z",
   "readTime": 7,
-  "version": 1,
+  "version": 2,
   "authorName": "Phelix ERP Team",
   "heroImage": {
     "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -41,5 +41,6 @@
     "photographer": "pierre matile",
     "photographerUrl": "https://www.pexels.com/@open-borders",
     "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
-  }
+  },
+  "lastUpdated": "2026-07-15T02:42:38.366Z"
 }
