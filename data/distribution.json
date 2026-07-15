@@ -797,8 +797,29 @@
         }
       ],
       "distributedAt": "2026-07-14T02:59:36.522Z"
+    },
+    {
+      "slug": "fbr-rules-and-regulations",
+      "title": "FBR Rules and Regulations",
+      "blogUrl": "https://phelixerp.online/blog/fbr-rules-and-regulations",
+      "hook": "FBR Rules and Regulations",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-15T02:42:33.880Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-15T02:42:33.880Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-15T02:42:33.880Z"
     }
   ],
-  "lastDistributedAt": "2026-07-14T02:59:36.522Z",
+  "lastDistributedAt": "2026-07-15T02:42:33.881Z",
   "totalDistributed": 0
 }
