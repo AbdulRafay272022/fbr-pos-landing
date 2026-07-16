@@ -49,11 +49,11 @@
       "source": "phelixerp.online"
     },
     {
-      "id": "eng-mrncjyi5-r84u",
-      "ts": "2026-07-16T10:09:01.805Z",
-      "type": "exit",
+      "id": "eng-mrncjyyr-55y1",
+      "ts": "2026-07-16T10:09:02.403Z",
+      "type": "scroll_depth",
       "slug": "fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide",
-      "value": 0,
+      "value": 79,
       "source": "www.bing.com"
     }
   ],
@@ -65,7 +65,7 @@
       "totalSessions": 3
     },
     "fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide": {
-      "avgScrollDepth": 0,
+      "avgScrollDepth": 79,
       "avgTimeOnPage": 0,
       "bounceRate": 0,
       "totalSessions": 1
