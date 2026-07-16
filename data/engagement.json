@@ -55,6 +55,14 @@
       "slug": "fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide",
       "value": 79,
       "source": "www.bing.com"
+    },
+    {
+      "id": "eng-mrnck3zy-01lv",
+      "ts": "2026-07-16T10:09:08.926Z",
+      "type": "scroll_depth",
+      "slug": "fbr-compliance-checklist-pakistan-businesses-2026",
+      "value": 64,
+      "source": "phelixerp.online"
     }
   ],
   "summary": {
@@ -66,6 +74,12 @@
     },
     "fbr-compliance-checklist-for-pakistani-businesses-2026-complete-guide": {
       "avgScrollDepth": 79,
+      "avgTimeOnPage": 0,
+      "bounceRate": 0,
+      "totalSessions": 1
+    },
+    "fbr-compliance-checklist-pakistan-businesses-2026": {
+      "avgScrollDepth": 64,
       "avgTimeOnPage": 0,
       "bounceRate": 0,
       "totalSessions": 1
