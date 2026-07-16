@@ -81,11 +81,11 @@
       "source": "phelixerp.online"
     },
     {
-      "id": "eng-mrnckei2-jogy",
-      "ts": "2026-07-16T10:09:22.538Z",
-      "type": "scroll_depth",
+      "id": "eng-mrnckeh6-jbhc",
+      "ts": "2026-07-16T10:09:22.506Z",
+      "type": "exit",
       "slug": "fbr-compliance-checklist-pakistan-businesses-2026",
-      "value": 100,
+      "value": 0,
       "source": "phelixerp.online"
     }
   ],
@@ -103,10 +103,10 @@
       "totalSessions": 1
     },
     "fbr-compliance-checklist-pakistan-businesses-2026": {
-      "avgScrollDepth": 84.5,
+      "avgScrollDepth": 79.3,
       "avgTimeOnPage": 0,
       "bounceRate": 0,
-      "totalSessions": 4
+      "totalSessions": 3
     }
   },
   "lastTrimmedAt": null
