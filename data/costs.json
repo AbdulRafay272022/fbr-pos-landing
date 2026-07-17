@@ -1206,6 +1206,24 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-17T02:29:19.948Z",
+      "action": "title_optimize",
+      "slug": "fbr-rules-and-regulations",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-17T02:29:20.984Z",
+      "action": "title_optimize",
+      "slug": "best-fbr-pos-system-for-retail-in-peshawar",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1218,8 +1236,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 50394,
-      "calls": 44
+      "tokens": 51194,
+      "calls": 46
     }
   },
   "monthlyTokenBudget": 5000000,
