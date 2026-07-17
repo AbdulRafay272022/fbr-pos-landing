@@ -104,8 +104,8 @@
       "difficulty": "low",
       "priority": 100,
       "cluster": "city-peshawar",
-      "used": false,
-      "usedIn": null,
+      "used": true,
+      "usedIn": "best-fbr-pos-system-for-retail-in-peshawar",
       "generatedAt": "2026-05-07T02:09:20.087Z"
     },
     {
