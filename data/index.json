@@ -1,5 +1,52 @@
 [
   {
+    "slug": "fbr-iris-api-integration-guide-pakistan-2026",
+    "title": "FBR IRIS API Integration Guide for Pakistan (2026)",
+    "metaDescription": "A developer's guide to FBR IRIS API integration in Pakistan: tokens, endpoints, sandbox testing, offline sync, and the mistakes that trigger penalties.",
+    "keywords": [
+      "fbr iris api integration guide pakistan 2026",
+      "fbr iris api integration",
+      "fbr api integration pakistan",
+      "fbr pos api",
+      "iris api pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need to build an IRIS API integration myself?",
+        "answer": "No. Most Pakistani retailers use a POS or ERP that already ships an FBR-compliant integration, which shifts schema maintenance, token handling, and offline sync onto the vendor. Building in-house makes sense only if you have unusual workflows, in-house engineering capacity, and a willingness to maintain the connection permanently as FBR rules evolve."
+      },
+      {
+        "question": "How long does an FBR IRIS API integration take?",
+        "answer": "For a team with a clean tax data model, two to four weeks including sandbox testing is realistic. In practice most projects run six to eight weeks, because integration surfaces pre-existing problems in how the business calculates tax on discounts, bundles, returns, and exchanges. Budget the reconciliation time, not just the coding time."
+      },
+      {
+        "question": "What happens if the IRIS API is down during business hours?",
+        "answer": "You keep selling. A compliant system queues invoices locally, issues a provisional receipt, and transmits once connectivity returns, reconciling the fiscal number afterwards. What you must not do is stop transmitting and never catch up, because the obligation to report the sale does not lapse when the connection fails."
+      },
+      {
+        "question": "Why does my token keep expiring mid-shift?",
+        "answer": "Because it is designed to. The token issued for POS transmission has a limited lifetime, and a correct client treats a 401 as a routine event: re-authenticate in the background and retry the invoice without the cashier ever seeing it. If expiry is visible to staff, the token lifecycle has not been implemented properly."
+      },
+      {
+        "question": "Can one integration cover all my branches?",
+        "answer": "One codebase can, but registration is per machine. Every till at every outlet needs its own POS registration and transmits under its own POS ID. Multi-branch operations should treat the ID mapping as configuration data with a clear owner, since a mis-mapped till reports another outlet sales and is painful to unwind later."
+      },
+      {
+        "question": "Is the FBR sandbox representative of production?",
+        "answer": "Only partially. Sandbox validates the shape of your payload but is typically more forgiving than production and does not reflect real load. Plan for a phased go-live: one till, one full day, complete reconciliation against your own sales records, and only then roll out the remaining terminals."
+      },
+      {
+        "question": "How do customers verify what I transmit?",
+        "answer": "Through the QR code and fiscal invoice number printed on the receipt, which resolve against FBR records. Any customer or inspector can check an invoice in seconds, which is why persisting the fiscal number returned by IRIS and printing it correctly matters more than any other part of the integration."
+      }
+    ],
+    "publishedAt": "2026-07-17T09:51:58.813Z",
+    "readTime": 10,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-07-17T09:51:58.813Z"
+  },
+  {
     "slug": "best-fbr-pos-system-for-retail-in-peshawar",
     "title": "Top 3 Best FBR POS Systems for Retail in Peshawar Revealed",
     "metaDescription": "Discover the best FBR POS system for retail in Peshawar, ensuring compliance with FBR regulations and streamlining your sales process.",
