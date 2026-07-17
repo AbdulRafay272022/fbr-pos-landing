@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mrlh5ofh-op144",
-      "ts": "2026-07-15T02:42:21.293Z",
+      "id": "mrobk88i-xos8t",
+      "ts": "2026-07-17T02:29:00.978Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mrlh5off",
+        "runId": "run-mrobk88g",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mrlh5oui-2ro2k",
-      "ts": "2026-07-15T02:42:21.834Z",
+      "id": "mrobk8n2-2hzye",
+      "ts": "2026-07-17T02:29:01.502Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mrlh5off",
+        "runId": "run-mrobk88g",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4272 unused keywords, last scrape 25.0d ago (next forced refresh in 5d)",
-          "generate": "23.7h since last generation, 4272 keywords available",
-          "update": "skipped: last update 72.1h ago (min 168h)",
+          "scrape": "skipped: 4272 unused keywords, last scrape 27.0d ago (next forced refresh in 3d)",
+          "generate": "47.8h since last generation, 4272 keywords available",
+          "update": "skipped: last update 119.9h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,108 +48,111 @@
       }
     },
     {
-      "id": "mrlh5xal-jq1cp",
-      "ts": "2026-07-15T02:42:32.781Z",
+      "id": "mrobkidi-s3w0j",
+      "ts": "2026-07-17T02:29:14.118Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "fbr-rules-and-regulations",
-      "words": 1373,
-      "source": "template",
-      "durationMs": 9621,
+      "slug": "best-fbr-pos-system-for-retail-in-peshawar",
+      "words": 972,
+      "source": "groq",
+      "durationMs": 11382,
       "details": {
-        "runId": "run-mrlh5off"
+        "runId": "run-mrobk88g"
       }
     },
     {
-      "id": "mrlh60p0-9ju7r",
-      "ts": "2026-07-15T02:42:37.188Z",
+      "id": "mrobklzn-jmnu7",
+      "ts": "2026-07-17T02:29:18.803Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 4407,
+      "durationMs": 4685,
       "details": {
-        "runId": "run-mrlh5off",
+        "runId": "run-mrobk88g",
         "pages": 4,
-        "totalImpressions": 17
+        "totalImpressions": 16
       }
     },
     {
-      "id": "mrlh60ym-49xts",
-      "ts": "2026-07-15T02:42:37.534Z",
+      "id": "mrobkm7r-ry95s",
+      "ts": "2026-07-17T02:29:19.095Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 346,
+      "durationMs": 291,
       "details": {
-        "runId": "run-mrlh5off",
+        "runId": "run-mrobk88g",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mrlh63bb-bcraw",
-      "ts": "2026-07-15T02:42:40.583Z",
+      "id": "mrobkou0-j573r",
+      "ts": "2026-07-17T02:29:22.488Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 3049,
+      "durationMs": 3392,
       "details": {
-        "runId": "run-mrlh5off",
+        "runId": "run-mrobk88g",
         "optimizedCount": 2
       }
     },
     {
-      "id": "mrlh63op-oj0ui",
-      "ts": "2026-07-15T02:42:41.065Z",
+      "id": "mrobkplh-work1",
+      "ts": "2026-07-17T02:29:23.477Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "durationMs": 482,
+      "durationMs": 989,
       "details": {
-        "runId": "run-mrlh5off"
+        "runId": "run-mrobk88g"
       }
     },
     {
-      "id": "mrlh63uy-6zzpa",
-      "ts": "2026-07-15T02:42:41.290Z",
+      "id": "mrobkppd-9o5xy",
+      "ts": "2026-07-17T02:29:23.617Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 225,
+      "durationMs": 139,
       "details": {
-        "runId": "run-mrlh5off",
+        "runId": "run-mrobk88g",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mrlh64yl-iqtt1",
-      "ts": "2026-07-15T02:42:42.717Z",
+      "id": "mrobkqrr-gee8k",
+      "ts": "2026-07-17T02:29:24.999Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1427,
+      "durationMs": 1382,
       "details": {
-        "runId": "run-mrlh5off",
+        "runId": "run-mrobk88g",
         "decaysFound": 0
       }
     },
     {
-      "id": "mrlh65d1-uf08v",
-      "ts": "2026-07-15T02:42:43.237Z",
+      "id": "mrobkv2h-8dskq",
+      "ts": "2026-07-17T02:29:30.569Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 520,
+      "success": true,
+      "slug": "fbr-pos-integration-restaurant-lahore",
+      "durationMs": 5570,
       "details": {
-        "runId": "run-mrlh5off"
+        "runId": "run-mrobk88g",
+        "city": "lahore",
+        "service": "FBR POS Integration"
       }
     }
   ],
