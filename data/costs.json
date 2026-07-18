@@ -1232,6 +1232,24 @@
       "promptTokens": 1110,
       "completionTokens": 1634,
       "totalTokens": 2744
+    },
+    {
+      "ts": "2026-07-18T02:00:51.954Z",
+      "action": "title_optimize",
+      "slug": "fbr-iris-portal-pakistan-pos-registration-guide",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-18T02:00:53.072Z",
+      "action": "title_optimize",
+      "slug": "fbr-invoice-number",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1244,8 +1262,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 53938,
-      "calls": 47
+      "tokens": 54738,
+      "calls": 49
     }
   },
   "monthlyTokenBudget": 5000000,
