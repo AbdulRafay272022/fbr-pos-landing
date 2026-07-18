@@ -251,8 +251,15 @@
       "service": "FBR POS Integration",
       "industry": "restaurant",
       "publishedAt": "2026-07-17T02:29:29.203Z"
+    },
+    {
+      "slug": "fbr-pos-integration-retail-lahore",
+      "city": "lahore",
+      "service": "FBR POS Integration",
+      "industry": "retail",
+      "publishedAt": "2026-07-18T02:01:01.169Z"
     }
   ],
-  "totalPublished": 36,
-  "lastGeneratedAt": "2026-07-17T02:29:29.203Z"
+  "totalPublished": 37,
+  "lastGeneratedAt": "2026-07-18T02:01:01.169Z"
 }
