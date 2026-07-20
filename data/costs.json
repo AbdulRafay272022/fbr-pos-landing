@@ -1275,6 +1275,24 @@
       "promptTokens": 1110,
       "completionTokens": 1744,
       "totalTokens": 2854
+    },
+    {
+      "ts": "2026-07-20T02:06:43.809Z",
+      "action": "title_optimize",
+      "slug": "fbr-ntn-registration-requirements",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-20T02:06:44.402Z",
+      "action": "title_optimize",
+      "slug": "best-fbr-pos-system-for-retail-in-multan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1287,8 +1305,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 60629,
-      "calls": 52
+      "tokens": 61429,
+      "calls": 54
     }
   },
   "monthlyTokenBudget": 5000000,
