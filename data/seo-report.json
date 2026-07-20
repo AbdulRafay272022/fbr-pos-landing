@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-13T04:00:32.117Z",
+  "generatedAt": "2026-07-20T04:32:11.380Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -20,14 +20,14 @@
   "recommendations": [
     {
       "priority": "high",
-      "title": "4 pages have invalid structured data",
-      "detail": "17 schema errors detected — these block rich-result eligibility.",
+      "title": "3 pages have invalid structured data",
+      "detail": "18 schema errors detected — these block rich-result eligibility.",
       "action": "Fix structured data — see schema audit page."
     },
     {
       "priority": "medium",
-      "title": "Cannibalization: 16 keyword clusters",
-      "detail": "\"fbr pos system\" — 4 pages compete. 4 pages have similar titles. Google will pick one and dilute authority on others.",
+      "title": "Cannibalization: 14 keyword clusters",
+      "detail": "\"fbr pos systems retail\" — 4 pages compete. 4 pages have similar titles. Google will pick one and dilute authority on others.",
       "action": "Differentiate intent — assign each post a unique long-tail variant."
     }
   ],
@@ -62,11 +62,58 @@
   "cannibalization": {
     "clusters": [
       {
+        "primaryKeyword": "fbr pos systems retail",
+        "pages": [
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-peshawar",
+            "title": "Top 3 Best FBR POS Systems for Retail in Peshawar Revealed",
+            "titleSim": 1,
+            "keywords": [
+              "best fbr pos system for retail in peshawar",
+              "best fbr pos system for retail in peshawar pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-karachi",
+            "title": "Top 3 Best FBR POS Retail Systems in Karachi",
+            "titleSim": 0.5714285714285714,
+            "keywords": [
+              "best fbr pos retail karachi",
+              "retail pos karachi",
+              "fbr pos for karachi shop"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-islamabad",
+            "title": "Top 3 Best FBR POS Systems for Retail in Islamabad Compared",
+            "titleSim": 0.5,
+            "keywords": [
+              "best fbr pos system for retail in islamabad",
+              "best fbr pos system for retail in islamabad pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-lahore",
+            "title": "Top 3 Best FBR POS Systems for Retail in Lahore Compared",
+            "titleSim": 0.5,
+            "keywords": [
+              "best fbr pos system for retail in lahore",
+              "best fbr pos system for retail in lahore pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          }
+        ],
+        "recommendation": "differentiate",
+        "reason": "4 pages have similar titles. Google will pick one and dilute authority on others."
+      },
+      {
         "primaryKeyword": "fbr pos system",
         "pages": [
           {
             "slug": "best-fbr-pos-system-for-retail-in-multan",
-            "title": "Best FBR POS System for Retail in Multan",
+            "title": "Top 5 Best FBR POS System for Retail in Multan",
             "titleSim": 1,
             "keywords": [
               "best fbr pos system for retail in multan",
@@ -76,7 +123,7 @@
           },
           {
             "slug": "best-fbr-pos-system-for-retail-in-faisalabad",
-            "title": "Best FBR POS System for Retail in Faisalabad",
+            "title": "Top 5 Best FBR POS System for Retail in Faisalabad",
             "titleSim": 0.6666666666666666,
             "keywords": [
               "best fbr pos system for retail in faisalabad",
@@ -183,88 +230,6 @@
               "fbr penalty notice",
               "fbr penalty notice pakistan",
               "fbr pos compliance pakistan"
-            ]
-          }
-        ],
-        "recommendation": "merge",
-        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
-      },
-      {
-        "primaryKeyword": "fbr pos lahore compared",
-        "pages": [
-          {
-            "slug": "best-fbr-pos-system-for-restaurant-in-lahore",
-            "title": "Top 3 Best FBR POS Solutions for Lahore Restaurants Compared",
-            "titleSim": 1,
-            "keywords": [
-              "best fbr pos restaurant lahore",
-              "restaurant pos lahore",
-              "fbr pos for lahore restaurant"
-            ]
-          },
-          {
-            "slug": "best-fbr-pos-system-for-retail-in-lahore",
-            "title": "Top 3 Best FBR POS Systems for Retail in Lahore Compared",
-            "titleSim": 0.5,
-            "keywords": [
-              "best fbr pos system for retail in lahore",
-              "best fbr pos system for retail in lahore pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          }
-        ],
-        "recommendation": "merge",
-        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
-      },
-      {
-        "primaryKeyword": "fbr pos retail systems",
-        "pages": [
-          {
-            "slug": "best-fbr-pos-system-for-retail-in-karachi",
-            "title": "Top 3 Best FBR POS Retail Systems in Karachi",
-            "titleSim": 1,
-            "keywords": [
-              "best fbr pos retail karachi",
-              "retail pos karachi",
-              "fbr pos for karachi shop"
-            ]
-          },
-          {
-            "slug": "best-fbr-pos-system-for-retail-in-islamabad",
-            "title": "Top 3 Best FBR POS Systems for Retail in Islamabad Compared",
-            "titleSim": 0.5714285714285714,
-            "keywords": [
-              "best fbr pos system for retail in islamabad",
-              "best fbr pos system for retail in islamabad pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          }
-        ],
-        "recommendation": "merge",
-        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
-      },
-      {
-        "primaryKeyword": "fbr register pos pakistan",
-        "pages": [
-          {
-            "slug": "fbr-iris-portal-pakistan-pos-registration-guide",
-            "title": "FBR IRIS Portal: How to Register Your POS in Pakistan",
-            "titleSim": 1,
-            "keywords": [
-              "fbr iris portal pos registration",
-              "register pos fbr iris",
-              "fbr iris portal pakistan"
-            ]
-          },
-          {
-            "slug": "how-to-register-pos-fbr-pakistan-step-by-step",
-            "title": "How to Register POS with FBR Pakistan – Step by Step 2026",
-            "titleSim": 0.5,
-            "keywords": [
-              "how to register POS with FBR",
-              "FBR POS registration Pakistan",
-              "FBR IRIS POS integration",
-              "FBR POS Pakistan 2026"
             ]
           }
         ],
@@ -438,6 +403,46 @@
         "primaryKeyword": "fbr pos compliance pakistan",
         "pages": [
           {
+            "slug": "fbr-ntn-registration-requirements",
+            "title": "How to Meet FBR NTN Registration Requirements",
+            "titleSim": 0,
+            "keywords": [
+              "fbr ntn registration requirements",
+              "fbr ntn registration requirements pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-peshawar",
+            "title": "Top 3 Best FBR POS Systems for Retail in Peshawar Revealed",
+            "titleSim": 0,
+            "keywords": [
+              "best fbr pos system for retail in peshawar",
+              "best fbr pos system for retail in peshawar pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-rules-and-regulations",
+            "title": "Top 3 FBR Rules and Regulations for Business Owners",
+            "titleSim": 0,
+            "keywords": [
+              "fbr rules and regulations",
+              "fbr rules and regulations pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-compliance-level",
+            "title": "What is FBR Compliance Level?",
+            "titleSim": 0,
+            "keywords": [
+              "fbr compliance level",
+              "fbr compliance level pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
             "slug": "fbr-non-compliance-penalties-2025",
             "title": "Avoid FBR Non Compliance Penalties 2025: A Guide",
             "titleSim": 0,
@@ -449,7 +454,7 @@
           },
           {
             "slug": "best-fbr-pos-system-for-retail-in-multan",
-            "title": "Best FBR POS System for Retail in Multan",
+            "title": "Top 5 Best FBR POS System for Retail in Multan",
             "titleSim": 0,
             "keywords": [
               "best fbr pos system for retail in multan",
@@ -459,7 +464,7 @@
           },
           {
             "slug": "fbr-invoice-number",
-            "title": "Top 3 Ways to Validate FBR Invoice Number",
+            "title": "Top 3 FBR Invoice Number Validation Mistakes",
             "titleSim": 0,
             "keywords": [
               "fbr invoice number",
@@ -479,7 +484,7 @@
           },
           {
             "slug": "best-fbr-pos-system-for-retail-in-faisalabad",
-            "title": "Best FBR POS System for Retail in Faisalabad",
+            "title": "Top 5 Best FBR POS System for Retail in Faisalabad",
             "titleSim": 0,
             "keywords": [
               "best fbr pos system for retail in faisalabad",
@@ -610,7 +615,7 @@
           }
         ],
         "recommendation": "differentiate",
-        "reason": "17 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
+        "reason": "21 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
       },
       {
         "primaryKeyword": "fbr pos lahore",
@@ -669,11 +674,11 @@
         "reason": "2 pages claim the same keyword \"qr invoice pakistan\". Reassign to unique long-tail variants."
       }
     ],
-    "flagged": 16
+    "flagged": 14
   },
   "cwv": {
     "summary": {
-      "totalAudited": 52,
+      "totalAudited": 58,
       "passingCwv": 0,
       "failingCwv": 0,
       "avgPerformance": null,
@@ -687,8 +692,8 @@
   },
   "schema": {
     "checked": 16,
-    "failed": 4,
-    "issues": 17
+    "failed": 3,
+    "issues": 18
   },
   "contentGaps": {
     "gaps": [],
