@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-ntn-registration-requirements",
+    "title": "FBR NTN Registration Requirements",
+    "metaDescription": "Discover the FBR NTN registration requirements for businesses in Pakistan. Learn how to register for income tax and avoid penalties.",
+    "keywords": [
+      "fbr ntn registration requirements",
+      "fbr ntn registration requirements pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is FBR NTN registration?",
+        "answer": "FBR NTN registration is a mandatory requirement for businesses in Pakistan to register for income tax."
+      },
+      {
+        "question": "How do I register for FBR NTN?",
+        "answer": "Visit the FBR IRIS portal and create an account. Fill out the registration form and provide required documents. Pay the registration fee and wait for the FBR to verify the registration."
+      },
+      {
+        "question": "What are the benefits of FBR NTN registration?",
+        "answer": "The benefits of registering for NTN include avoiding penalties, complying with the Sales Tax Act, using the FBR IRIS portal for tax returns, and generating QR invoices using the FBR IRIS API."
+      },
+      {
+        "question": "What is the penalty for not registering for FBR NTN?",
+        "answer": "The penalty for not registering for NTN is PKR 100,000."
+      },
+      {
+        "question": "How do I use the FBR IRIS API for QR invoice generation?",
+        "answer": "The FBR IRIS API requires a valid token to generate a QR invoice. Businesses must handle token expiry to avoid sync issues."
+      }
+    ],
+    "publishedAt": "2026-07-20T02:06:22.959Z",
+    "readTime": 5,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
     "slug": "fbr-iris-api-integration-guide-pakistan-2026",
     "title": "FBR IRIS API Integration Guide for Pakistan (2026)",
     "metaDescription": "A developer's guide to FBR IRIS API integration in Pakistan: tokens, endpoints, sandbox testing, offline sync, and the mistakes that trigger penalties.",
