@@ -839,8 +839,29 @@
         }
       ],
       "distributedAt": "2026-07-17T02:29:15.162Z"
+    },
+    {
+      "slug": "fbr-ntn-registration-requirements",
+      "title": "FBR NTN Registration Requirements",
+      "blogUrl": "https://phelixerp.online/blog/fbr-ntn-registration-requirements",
+      "hook": "FBR NTN Registration Requirements",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-20T02:06:27.710Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-20T02:06:27.710Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-20T02:06:27.711Z"
     }
   ],
-  "lastDistributedAt": "2026-07-17T02:29:15.162Z",
+  "lastDistributedAt": "2026-07-20T02:06:27.711Z",
   "totalDistributed": 0
 }
