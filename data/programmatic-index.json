@@ -265,8 +265,15 @@
       "service": "FBR POS Integration",
       "industry": "pharmacy",
       "publishedAt": "2026-07-19T02:32:13.978Z"
+    },
+    {
+      "slug": "fbr-pos-integration-clothing-store-lahore",
+      "city": "lahore",
+      "service": "FBR POS Integration",
+      "industry": "clothing store",
+      "publishedAt": "2026-07-21T02:06:50.253Z"
     }
   ],
-  "totalPublished": 38,
-  "lastGeneratedAt": "2026-07-19T02:32:13.978Z"
+  "totalPublished": 39,
+  "lastGeneratedAt": "2026-07-21T02:06:50.253Z"
 }
