@@ -881,8 +881,29 @@
         }
       ],
       "distributedAt": "2026-07-21T02:06:36.391Z"
+    },
+    {
+      "slug": "best-fbr-pos-system-for-retail-in-quetta",
+      "title": "Best FBR POS System for Retail in Quetta",
+      "blogUrl": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-quetta",
+      "hook": "Best FBR POS System for Retail in Quetta",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-22T02:00:25.390Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-22T02:00:25.391Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-22T02:00:25.391Z"
     }
   ],
-  "lastDistributedAt": "2026-07-21T02:06:36.392Z",
+  "lastDistributedAt": "2026-07-22T02:00:25.391Z",
   "totalDistributed": 0
 }
