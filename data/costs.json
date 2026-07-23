@@ -1336,6 +1336,15 @@
       "promptTokens": 1122,
       "completionTokens": 1533,
       "totalTokens": 2655
+    },
+    {
+      "ts": "2026-07-23T02:42:31.324Z",
+      "action": "title_optimize",
+      "slug": "restaurant-pos-software-pakistan",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1348,8 +1357,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 68030,
-      "calls": 59
+      "tokens": 68430,
+      "calls": 60
     }
   },
   "monthlyTokenBudget": 5000000,
