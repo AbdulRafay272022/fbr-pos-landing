@@ -902,8 +902,29 @@
         }
       ],
       "distributedAt": "2026-07-22T02:00:25.391Z"
+    },
+    {
+      "slug": "restaurant-pos-software-pakistan",
+      "title": "Restaurant POS Software Pakistan",
+      "blogUrl": "https://phelixerp.online/blog/restaurant-pos-software-pakistan",
+      "hook": "Restaurant POS Software Pakistan",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-23T02:42:26.749Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-23T02:42:26.749Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-23T02:42:26.749Z"
     }
   ],
-  "lastDistributedAt": "2026-07-22T02:00:25.391Z",
+  "lastDistributedAt": "2026-07-23T02:42:26.749Z",
   "totalDistributed": 0
 }
