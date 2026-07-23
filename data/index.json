@@ -1,5 +1,49 @@
 [
   {
+    "slug": "restaurant-pos-software-pakistan",
+    "title": "Restaurant POS Software Pakistan",
+    "metaDescription": "Discover the best restaurant POS software in Pakistan, integrated with FBR IRIS, to streamline your business operations and ensure compliance with Sales Ta",
+    "keywords": [
+      "restaurant pos software pakistan",
+      "restaurant pos software pakistan pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is the penalty for not using a compliant POS software?",
+        "answer": "The penalty for not using a compliant POS software in Pakistan can be up to PKR 500,000."
+      },
+      {
+        "question": "How do I integrate my POS software with FBR IRIS?",
+        "answer": "To integrate your POS software with FBR IRIS, you need to use the FBR IRIS API, which requires a token that expires every 30 minutes."
+      },
+      {
+        "question": "What is the technical requirement for implementing a restaurant POS software?",
+        "answer": "The technical requirement for implementing a restaurant POS software in Pakistan includes a compatible operating system, sufficient storage, and a reliable internet connection."
+      },
+      {
+        "question": "Can I use a POS software that is not integrated with FBR IRIS?",
+        "answer": "No, it's not recommended to use a POS software that is not integrated with FBR IRIS, as it may result in non-compliance with tax regulations."
+      },
+      {
+        "question": "How do I choose the best restaurant POS software in Pakistan?",
+        "answer": "To choose the best restaurant POS software in Pakistan, consider factors such as compliance with FBR IRIS, ease of use, and customer support."
+      }
+    ],
+    "publishedAt": "2026-07-23T02:42:23.730Z",
+    "readTime": 4,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/2598025/pexels-photo-2598025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/2598025/pexels-photo-2598025.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A man cooking in a traditional restaurant setting, showcasing cultural ambiance and culinary skills.",
+      "photographer": "Aa Dil",
+      "photographerUrl": "https://www.pexels.com/@aadil",
+      "pexelsUrl": "https://www.pexels.com/photo/man-cooks-at-the-diner-2598025/"
+    }
+  },
+  {
     "slug": "best-fbr-pos-system-for-retail-in-quetta",
     "title": "Top 5 Best FBR POS System for Retail in Quetta",
     "metaDescription": "Discover the best FBR POS system for retail in Quetta, Pakistan. Learn how to integrate with FBR IRIS and avoid non-compliance penalties.",
