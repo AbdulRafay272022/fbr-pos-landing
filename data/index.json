@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-tier-1-retailers",
+    "title": "FBR Tier 1 Retailers Guide",
+    "metaDescription": "Learn about FBR Tier 1 retailers, their requirements, and how to ensure compliance with FBR IRIS and POS integration in Pakistan.",
+    "keywords": [
+      "fbr tier 1 retailers",
+      "fbr tier 1 retailers pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is an FBR Tier 1 retailer?",
+        "answer": "An FBR Tier 1 retailer is a large-scale retailer in Pakistan who is required to integrate their POS system with the FBR IRIS system to ensure compliance with sales tax regulations."
+      },
+      {
+        "question": "What are the requirements for FBR Tier 1 retailers?",
+        "answer": "The requirements for FBR Tier 1 retailers include the use of a POS system that is integrated with the FBR IRIS system, and the generation of invoices that include the required information."
+      },
+      {
+        "question": "How do I become an FBR Tier 1 retailer?",
+        "answer": "To become an FBR Tier 1 retailer, you must register for an NTN number with the FBR, obtain a POS system that is integrated with the FBR IRIS system, and configure the POS system to generate invoices that include the required information."
+      },
+      {
+        "question": "What is the penalty for non-compliance with FBR regulations?",
+        "answer": "The penalty for non-compliance with FBR regulations can be up to PKR 50,000."
+      },
+      {
+        "question": "How do I integrate my POS system with the FBR IRIS system?",
+        "answer": "To integrate your POS system with the FBR IRIS system, you must obtain a POS system that is integrated with the FBR IRIS system, and configure the POS system to generate invoices that include the required information."
+      }
+    ],
+    "publishedAt": "2026-07-24T02:51:56.359Z",
+    "readTime": 6,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/3025495/pexels-photo-3025495.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Colorful street market in Faisalabad at night, showcasing local vendors and vibrant lights.",
+      "photographer": "Aa Dil",
+      "photographerUrl": "https://www.pexels.com/@aadil",
+      "pexelsUrl": "https://www.pexels.com/photo/men-in-store-3025495/"
+    }
+  },
+  {
     "slug": "restaurant-pos-software-pakistan",
     "title": "Top 3 Restaurant POS Software in Pakistan Compared",
     "metaDescription": "Discover the best restaurant POS software in Pakistan, integrated with FBR IRIS, to streamline your business operations and ensure compliance with Sales Ta",
