@@ -279,8 +279,15 @@
       "service": "FBR POS Integration",
       "industry": "grocery store",
       "publishedAt": "2026-07-22T02:00:38.651Z"
+    },
+    {
+      "slug": "billing-software-restaurant-lahore",
+      "city": "lahore",
+      "service": "Billing Software",
+      "industry": "restaurant",
+      "publishedAt": "2026-07-24T02:52:11.303Z"
     }
   ],
-  "totalPublished": 40,
-  "lastGeneratedAt": "2026-07-22T02:00:38.651Z"
+  "totalPublished": 41,
+  "lastGeneratedAt": "2026-07-24T02:52:11.303Z"
 }
