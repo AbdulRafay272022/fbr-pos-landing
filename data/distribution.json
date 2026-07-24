@@ -923,8 +923,29 @@
         }
       ],
       "distributedAt": "2026-07-23T02:42:26.749Z"
+    },
+    {
+      "slug": "fbr-tier-1-retailers",
+      "title": "FBR Tier 1 Retailers Guide",
+      "blogUrl": "https://phelixerp.online/blog/fbr-tier-1-retailers",
+      "hook": "FBR Tier 1 Retailers Guide",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-24T02:51:59.364Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-24T02:51:59.364Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-24T02:51:59.365Z"
     }
   ],
-  "lastDistributedAt": "2026-07-23T02:42:26.749Z",
+  "lastDistributedAt": "2026-07-24T02:51:59.365Z",
   "totalDistributed": 0
 }
