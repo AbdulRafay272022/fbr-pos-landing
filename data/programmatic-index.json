@@ -286,8 +286,15 @@
       "service": "Billing Software",
       "industry": "restaurant",
       "publishedAt": "2026-07-24T02:52:11.303Z"
+    },
+    {
+      "slug": "billing-software-retail-lahore",
+      "city": "lahore",
+      "service": "Billing Software",
+      "industry": "retail",
+      "publishedAt": "2026-07-25T02:58:53.713Z"
     }
   ],
-  "totalPublished": 41,
-  "lastGeneratedAt": "2026-07-24T02:52:11.303Z"
+  "totalPublished": 42,
+  "lastGeneratedAt": "2026-07-25T02:58:53.713Z"
 }
