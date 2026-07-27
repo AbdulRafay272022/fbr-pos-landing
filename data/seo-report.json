@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T04:32:11.380Z",
+  "generatedAt": "2026-07-27T04:47:51.655Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -20,14 +20,14 @@
   "recommendations": [
     {
       "priority": "high",
-      "title": "3 pages have invalid structured data",
+      "title": "1 pages have invalid structured data",
       "detail": "18 schema errors detected — these block rich-result eligibility.",
       "action": "Fix structured data — see schema audit page."
     },
     {
       "priority": "medium",
       "title": "Cannibalization: 14 keyword clusters",
-      "detail": "\"fbr pos systems retail\" — 4 pages compete. 4 pages have similar titles. Google will pick one and dilute authority on others.",
+      "detail": "\"fbr pos system\" — 5 pages compete. 5 pages have similar titles. Google will pick one and dilute authority on others.",
       "action": "Differentiate intent — assign each post a unique long-tail variant."
     }
   ],
@@ -61,6 +61,63 @@
   },
   "cannibalization": {
     "clusters": [
+      {
+        "primaryKeyword": "fbr pos system",
+        "pages": [
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-quetta",
+            "title": "Top 5 Best FBR POS System for Retail in Quetta",
+            "titleSim": 1,
+            "keywords": [
+              "best fbr pos system for retail in quetta",
+              "best fbr pos system for retail in quetta pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-multan",
+            "title": "Top 5 Best FBR POS System for Retail in Multan",
+            "titleSim": 0.6666666666666666,
+            "keywords": [
+              "best fbr pos system for retail in multan",
+              "best fbr pos system for retail in multan pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-faisalabad",
+            "title": "Top 5 Best FBR POS System for Retail in Faisalabad",
+            "titleSim": 0.6666666666666666,
+            "keywords": [
+              "best fbr pos system for retail in faisalabad",
+              "best fbr pos system for retail in faisalabad pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-rawalpindi",
+            "title": "Best FBR POS System for Retail in Rawalpindi",
+            "titleSim": 0.6666666666666666,
+            "keywords": [
+              "best fbr pos system for retail in rawalpindi",
+              "best fbr pos system for retail in rawalpindi pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-pos-invoicing-system",
+            "title": "What is FBR POS Invoicing System?",
+            "titleSim": 0.5,
+            "keywords": [
+              "fbr pos invoicing system",
+              "how fbr invoicing works",
+              "fbr pos invoice process"
+            ]
+          }
+        ],
+        "recommendation": "differentiate",
+        "reason": "5 pages have similar titles. Google will pick one and dilute authority on others."
+      },
       {
         "primaryKeyword": "fbr pos systems retail",
         "pages": [
@@ -102,53 +159,6 @@
               "best fbr pos system for retail in lahore",
               "best fbr pos system for retail in lahore pakistan",
               "fbr pos compliance pakistan"
-            ]
-          }
-        ],
-        "recommendation": "differentiate",
-        "reason": "4 pages have similar titles. Google will pick one and dilute authority on others."
-      },
-      {
-        "primaryKeyword": "fbr pos system",
-        "pages": [
-          {
-            "slug": "best-fbr-pos-system-for-retail-in-multan",
-            "title": "Top 5 Best FBR POS System for Retail in Multan",
-            "titleSim": 1,
-            "keywords": [
-              "best fbr pos system for retail in multan",
-              "best fbr pos system for retail in multan pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          },
-          {
-            "slug": "best-fbr-pos-system-for-retail-in-faisalabad",
-            "title": "Top 5 Best FBR POS System for Retail in Faisalabad",
-            "titleSim": 0.6666666666666666,
-            "keywords": [
-              "best fbr pos system for retail in faisalabad",
-              "best fbr pos system for retail in faisalabad pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          },
-          {
-            "slug": "best-fbr-pos-system-for-retail-in-rawalpindi",
-            "title": "Best FBR POS System for Retail in Rawalpindi",
-            "titleSim": 0.6666666666666666,
-            "keywords": [
-              "best fbr pos system for retail in rawalpindi",
-              "best fbr pos system for retail in rawalpindi pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          },
-          {
-            "slug": "fbr-pos-invoicing-system",
-            "title": "What is FBR POS Invoicing System?",
-            "titleSim": 0.5,
-            "keywords": [
-              "fbr pos invoicing system",
-              "how fbr invoicing works",
-              "fbr pos invoice process"
             ]
           }
         ],
@@ -403,8 +413,58 @@
         "primaryKeyword": "fbr pos compliance pakistan",
         "pages": [
           {
+            "slug": "fbr-integration-deadline",
+            "title": "Meet FBR Integration Deadline: A Guide",
+            "titleSim": 0,
+            "keywords": [
+              "fbr integration deadline",
+              "fbr integration deadline pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-tier-1-retailers",
+            "title": "FBR Tier 1 Retailers Guide",
+            "titleSim": 0,
+            "keywords": [
+              "fbr tier 1 retailers",
+              "fbr tier 1 retailers pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "restaurant-pos-software-pakistan",
+            "title": "Top 3 Restaurant POS Software in Pakistan Compared",
+            "titleSim": 0,
+            "keywords": [
+              "restaurant pos software pakistan",
+              "restaurant pos software pakistan pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-quetta",
+            "title": "Top 5 Best FBR POS System for Retail in Quetta",
+            "titleSim": 0,
+            "keywords": [
+              "best fbr pos system for retail in quetta",
+              "best fbr pos system for retail in quetta pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "pos-software-pakistan-free-download-with-crack",
+            "title": "Top 3 Alternatives to POS Software Pakistan Free Download",
+            "titleSim": 0,
+            "keywords": [
+              "pos software pakistan free download with crack",
+              "pos software pakistan free download with crack pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
             "slug": "fbr-ntn-registration-requirements",
-            "title": "How to Meet FBR NTN Registration Requirements",
+            "title": "Top 3 FBR NTN Registration Requirements Explained",
             "titleSim": 0,
             "keywords": [
               "fbr ntn registration requirements",
@@ -615,7 +675,7 @@
           }
         ],
         "recommendation": "differentiate",
-        "reason": "21 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
+        "reason": "26 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
       },
       {
         "primaryKeyword": "fbr pos lahore",
@@ -678,7 +738,7 @@
   },
   "cwv": {
     "summary": {
-      "totalAudited": 58,
+      "totalAudited": 63,
       "passingCwv": 0,
       "failingCwv": 0,
       "avgPerformance": null,
@@ -692,7 +752,7 @@
   },
   "schema": {
     "checked": 16,
-    "failed": 3,
+    "failed": 1,
     "issues": 18
   },
   "contentGaps": {

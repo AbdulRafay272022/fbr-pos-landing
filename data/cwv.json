@@ -247,6 +247,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online",
+        "fetchedAt": "2026-07-27T04:47:57.210Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi": [
@@ -2498,12 +2517,50 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-ntn-registration-requirements",
+        "fetchedAt": "2026-07-27T04:48:03.959Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/fbr-iris-api-integration-guide-pakistan-2026": [
       {
         "url": "https://phelixerp.online/blog/fbr-iris-api-integration-guide-pakistan-2026",
         "fetchedAt": "2026-07-20T04:32:18.371Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-iris-api-integration-guide-pakistan-2026",
+        "fetchedAt": "2026-07-27T04:48:05.082Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -2540,12 +2597,50 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-peshawar",
+        "fetchedAt": "2026-07-27T04:48:06.203Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/fbr-rules-and-regulations": [
       {
         "url": "https://phelixerp.online/blog/fbr-rules-and-regulations",
         "fetchedAt": "2026-07-20T04:32:20.621Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-rules-and-regulations",
+        "fetchedAt": "2026-07-27T04:48:07.346Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -2604,7 +2699,112 @@
           "PSI HTTP 429"
         ]
       }
+    ],
+    "https://phelixerp.online/blog/fbr-integration-deadline": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-integration-deadline",
+        "fetchedAt": "2026-07-27T04:47:58.333Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-tier-1-retailers": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-tier-1-retailers",
+        "fetchedAt": "2026-07-27T04:47:59.456Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/restaurant-pos-software-pakistan": [
+      {
+        "url": "https://phelixerp.online/blog/restaurant-pos-software-pakistan",
+        "fetchedAt": "2026-07-27T04:48:00.585Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-quetta": [
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-quetta",
+        "fetchedAt": "2026-07-27T04:48:01.708Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/pos-software-pakistan-free-download-with-crack": [
+      {
+        "url": "https://phelixerp.online/blog/pos-software-pakistan-free-download-with-crack",
+        "fetchedAt": "2026-07-27T04:48:02.834Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
     ]
   },
-  "lastFullAuditAt": "2026-07-20T04:32:26.243Z"
+  "lastFullAuditAt": "2026-07-27T04:48:07.347Z"
 }
