@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-integration-deadline",
+    "title": "FBR Integration Deadline",
+    "metaDescription": "Discover the FBR integration deadline and learn how to comply with FBR IRIS and Sales Tax Act regulations to avoid penalties of up to PKR 500,000",
+    "keywords": [
+      "fbr integration deadline",
+      "fbr integration deadline pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is the FBR integration deadline?",
+        "answer": "The FBR integration deadline has been extended to facilitate businesses in complying with the new regulations."
+      },
+      {
+        "question": "What is the penalty for non-compliance with FBR regulations?",
+        "answer": "The penalty for non-compliance with FBR regulations can be up to PKR 500,000."
+      },
+      {
+        "question": "How do I obtain an API token for FBR IRIS integration?",
+        "answer": "You can obtain an API token by registering for the FBR IRIS portal and following the instructions provided."
+      },
+      {
+        "question": "What is the benefit of FBR integration?",
+        "answer": "The benefit of FBR integration is that it can help businesses reduce their tax liability, improve compliance, increase efficiency, and reduce penalties."
+      },
+      {
+        "question": "How do I resolve issues with FBR IRIS integration?",
+        "answer": "You can resolve issues with FBR IRIS integration by monitoring the integration, identifying issues, and contacting the FBR support team."
+      }
+    ],
+    "publishedAt": "2026-07-27T02:47:35.836Z",
+    "readTime": 5,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
     "slug": "fbr-tier-1-retailers",
     "title": "FBR Tier 1 Retailers Guide",
     "metaDescription": "Learn about FBR Tier 1 retailers, their requirements, and how to ensure compliance with FBR IRIS and POS integration in Pakistan.",
