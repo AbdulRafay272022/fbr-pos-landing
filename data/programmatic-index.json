@@ -300,8 +300,15 @@
       "service": "Billing Software",
       "industry": "pharmacy",
       "publishedAt": "2026-07-26T02:52:25.817Z"
+    },
+    {
+      "slug": "billing-software-clothing-store-lahore",
+      "city": "lahore",
+      "service": "Billing Software",
+      "industry": "clothing store",
+      "publishedAt": "2026-07-27T02:48:03.180Z"
     }
   ],
-  "totalPublished": 43,
-  "lastGeneratedAt": "2026-07-26T02:52:25.817Z"
+  "totalPublished": 44,
+  "lastGeneratedAt": "2026-07-27T02:48:03.180Z"
 }
