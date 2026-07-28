@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "id": "ms2mmete-lktvu",
-      "ts": "2026-07-27T02:47:25.058Z",
+      "id": "ms421qzt-mf9ay",
+      "ts": "2026-07-28T02:47:01.097Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-ms2mmetc",
+        "runId": "run-ms421qzq",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "ms2mmf8n-xg8ze",
-      "ts": "2026-07-27T02:47:25.607Z",
+      "id": "ms421rft-qcyk6",
+      "ts": "2026-07-28T02:47:01.673Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-ms2mmetc",
+        "runId": "run-ms421qzq",
         "shouldScrape": false,
         "shouldGenerate": true,
-        "shouldUpdate": true,
+        "shouldUpdate": false,
         "shouldFetchSeo": true,
         "shouldRefresh": true,
         "shouldOptimizeTitles": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4270 unused keywords, last scrape 6.0d ago (next forced refresh in 24d)",
-          "generate": "71.9h since last generation, 4270 keywords available",
-          "update": "168.7h since last update run",
+          "scrape": "skipped: 4270 unused keywords, last scrape 7.0d ago (next forced refresh in 23d)",
+          "generate": "24.0h since last generation, 4270 keywords available",
+          "update": "skipped: last update 24.0h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,122 +48,109 @@
       }
     },
     {
-      "id": "ms2mmoqj-8am5c",
-      "ts": "2026-07-27T02:47:37.915Z",
+      "id": "ms421zxd-lzstq",
+      "ts": "2026-07-28T02:47:12.673Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "fbr-integration-deadline",
-      "words": 950,
-      "source": "groq",
-      "durationMs": 10764,
+      "slug": "fbr-e-integration-deadlines",
+      "words": 1373,
+      "source": "template",
+      "durationMs": 9663,
       "details": {
-        "runId": "run-ms2mmetc"
+        "runId": "run-ms421qzq"
       }
     },
     {
-      "id": "ms2mmzpx-nzbz2",
-      "ts": "2026-07-27T02:47:52.149Z",
-      "site": "Phelix ERP",
-      "event": "blog_updated",
-      "level": "info",
-      "success": true,
-      "durationMs": 14234,
-      "details": {
-        "runId": "run-ms2mmetc",
-        "updatedCount": 0
-      }
-    },
-    {
-      "id": "ms2mn18f-ywxws",
-      "ts": "2026-07-27T02:47:54.111Z",
+      "id": "ms4223ea-rgq3f",
+      "ts": "2026-07-28T02:47:17.170Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 1962,
+      "durationMs": 4497,
       "details": {
-        "runId": "run-ms2mmetc",
+        "runId": "run-ms421qzq",
         "pages": 3,
         "totalImpressions": 13
       }
     },
     {
-      "id": "ms2mn1kk-ujei4",
-      "ts": "2026-07-27T02:47:54.548Z",
+      "id": "ms4223m1-91fxb",
+      "ts": "2026-07-28T02:47:17.449Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 437,
+      "durationMs": 279,
       "details": {
-        "runId": "run-ms2mmetc",
+        "runId": "run-ms421qzq",
         "refreshedCount": 0
       }
     },
     {
-      "id": "ms2mn41k-0vef4",
-      "ts": "2026-07-27T02:47:57.752Z",
+      "id": "ms4225yc-g6c7t",
+      "ts": "2026-07-28T02:47:20.484Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 3203,
+      "durationMs": 3035,
       "details": {
-        "runId": "run-ms2mmetc",
-        "optimizedCount": 1
+        "runId": "run-ms421qzq",
+        "optimizedCount": 2
       }
     },
     {
-      "id": "ms2mn4bi-9l6oa",
-      "ts": "2026-07-27T02:47:58.110Z",
+      "id": "ms4226qo-7wgrt",
+      "ts": "2026-07-28T02:47:21.504Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "durationMs": 358,
+      "durationMs": 1020,
       "details": {
-        "runId": "run-ms2mmetc"
+        "runId": "run-ms421qzq"
       }
     },
     {
-      "id": "ms2mn4hd-5hjqf",
-      "ts": "2026-07-27T02:47:58.321Z",
+      "id": "ms4226wp-f67ju",
+      "ts": "2026-07-28T02:47:21.721Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 210,
+      "durationMs": 217,
       "details": {
-        "runId": "run-ms2mmetc",
+        "runId": "run-ms421qzq",
         "optimizedCount": 0
       }
     },
     {
-      "id": "ms2mn5lf-ea686",
-      "ts": "2026-07-27T02:47:59.763Z",
+      "id": "ms422827-qldd7",
+      "ts": "2026-07-28T02:47:23.215Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1442,
+      "durationMs": 1494,
       "details": {
-        "runId": "run-ms2mmetc",
+        "runId": "run-ms421qzq",
         "decaysFound": 0
       }
     },
     {
-      "id": "ms2mn9aw-465r6",
-      "ts": "2026-07-27T02:48:04.568Z",
+      "id": "ms422bz7-efhw3",
+      "ts": "2026-07-28T02:47:28.291Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": true,
-      "slug": "billing-software-clothing-store-lahore",
-      "durationMs": 4805,
+      "slug": "billing-software-grocery-store-lahore",
+      "durationMs": 5076,
       "details": {
-        "runId": "run-ms2mmetc",
+        "runId": "run-ms421qzq",
         "city": "lahore",
         "service": "Billing Software"
       }
