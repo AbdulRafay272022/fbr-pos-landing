@@ -1386,6 +1386,24 @@
       "promptTokens": 1114,
       "completionTokens": 1467,
       "totalTokens": 2581
+    },
+    {
+      "ts": "2026-07-28T02:47:18.163Z",
+      "action": "title_optimize",
+      "slug": "fbr-e-integration-deadlines",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-28T02:47:18.675Z",
+      "action": "title_optimize",
+      "slug": "fbr-integration-deadline",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1398,8 +1416,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 79444,
-      "calls": 65
+      "tokens": 80244,
+      "calls": 67
     }
   },
   "monthlyTokenBudget": 5000000,
