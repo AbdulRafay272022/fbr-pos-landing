@@ -965,8 +965,29 @@
         }
       ],
       "distributedAt": "2026-07-27T02:47:38.774Z"
+    },
+    {
+      "slug": "fbr-e-integration-deadlines",
+      "title": "FBR E-Integration Deadlines",
+      "blogUrl": "https://phelixerp.online/blog/fbr-e-integration-deadlines",
+      "hook": "FBR E-Integration Deadlines",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-28T02:47:13.629Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-28T02:47:13.629Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-28T02:47:13.629Z"
     }
   ],
-  "lastDistributedAt": "2026-07-27T02:47:38.774Z",
+  "lastDistributedAt": "2026-07-28T02:47:13.629Z",
   "totalDistributed": 0
 }
