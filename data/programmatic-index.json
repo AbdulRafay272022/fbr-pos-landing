@@ -307,8 +307,15 @@
       "service": "Billing Software",
       "industry": "clothing store",
       "publishedAt": "2026-07-27T02:48:03.180Z"
+    },
+    {
+      "slug": "billing-software-grocery-store-lahore",
+      "city": "lahore",
+      "service": "Billing Software",
+      "industry": "grocery store",
+      "publishedAt": "2026-07-28T02:47:26.788Z"
     }
   ],
-  "totalPublished": 44,
-  "lastGeneratedAt": "2026-07-27T02:48:03.180Z"
+  "totalPublished": 45,
+  "lastGeneratedAt": "2026-07-28T02:47:26.788Z"
 }
