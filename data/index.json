@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-electronic-invoicing-integration-deadline-extension",
+    "title": "FBR Electronic Invoicing Integration Deadline Extension",
+    "metaDescription": "Get the latest update on FBR electronic invoicing integration deadline extension in Pakistan. Learn how to comply with FBR regulations and avoid penalties.",
+    "keywords": [
+      "fbr electronic invoicing integration deadline extension",
+      "fbr electronic invoicing integration deadline extension pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is the deadline for FBR electronic invoicing integration?",
+        "answer": "The deadline for FBR electronic invoicing integration has been extended for Tier-1 retailers. Businesses need to check the FBR website for the latest information on deadlines."
+      },
+      {
+        "question": "How do I integrate my POS system with the IRIS portal?",
+        "answer": "Businesses can use the FBR's API to integrate their POS system with the IRIS portal. They can also use the [INTERNAL_LINK: \"FBR POS integration\"] guide for step-by-step instructions."
+      },
+      {
+        "question": "What is the penalty for non-compliance with FBR regulations?",
+        "answer": "The penalty for non-compliance with FBR regulations can be up to PKR 50,000. Businesses need to ensure that they comply with the regulations to avoid penalties."
+      },
+      {
+        "question": "Can I use a cloud-based POS system for FBR electronic invoicing integration?",
+        "answer": "Yes, businesses can use a cloud-based POS system for FBR electronic invoicing integration. The POS system needs to be compatible with the FBR's API."
+      },
+      {
+        "question": "How do I obtain a Sales Tax Registration Number (STRN)?",
+        "answer": "Businesses can obtain a STRN by registering for an IRIS account on the FBR website. They can also use the [INTERNAL_LINK: \"FBR compliance checklist\"] to ensure that they have all the necessary documents."
+      }
+    ],
+    "publishedAt": "2026-07-29T02:45:30.133Z",
+    "readTime": 6,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
     "slug": "fbr-e-integration-deadlines",
     "title": "5 FBR E-Integration Deadlines You Must Know",
     "metaDescription": "Discover the latest FBR e-integration deadlines and ensure compliance to avoid penalties. Learn how to integrate with FBR IRIS and meet the Sales Tax Act r",
