@@ -1412,6 +1412,33 @@
       "promptTokens": 1114,
       "completionTokens": 1452,
       "totalTokens": 2566
+    },
+    {
+      "ts": "2026-07-29T02:45:37.814Z",
+      "action": "title_optimize",
+      "slug": "fbr-electronic-invoicing-integration-deadline-extension",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-29T02:45:38.314Z",
+      "action": "title_optimize",
+      "slug": "fbr-e-integration-deadlines",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-29T02:45:38.905Z",
+      "action": "title_optimize",
+      "slug": "fbr-tier-1-retailers",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1424,8 +1451,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 82810,
-      "calls": 68
+      "tokens": 84010,
+      "calls": 71
     }
   },
   "monthlyTokenBudget": 5000000,
