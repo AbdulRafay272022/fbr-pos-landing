@@ -1439,6 +1439,24 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-30T02:19:28.117Z",
+      "action": "title_optimize",
+      "slug": "fbr-electronic-invoicing-integration-deadline-extension",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-07-30T02:19:28.663Z",
+      "action": "title_optimize",
+      "slug": "best-fbr-pos-system-for-restaurant-in-karachi",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1451,8 +1469,8 @@
       "calls": 51
     },
     "2026-07": {
-      "tokens": 84010,
-      "calls": 71
+      "tokens": 84810,
+      "calls": 73
     }
   },
   "monthlyTokenBudget": 5000000,
