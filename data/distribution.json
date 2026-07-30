@@ -1007,8 +1007,29 @@
         }
       ],
       "distributedAt": "2026-07-29T02:45:33.345Z"
+    },
+    {
+      "slug": "best-fbr-pos-system-for-restaurant-in-karachi",
+      "title": "Best FBR POS System For Restaurant In Karachi",
+      "blogUrl": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi",
+      "hook": "Best FBR POS System For Restaurant In Karachi",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-30T02:19:23.668Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-30T02:19:23.668Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-30T02:19:23.668Z"
     }
   ],
-  "lastDistributedAt": "2026-07-29T02:45:33.345Z",
+  "lastDistributedAt": "2026-07-30T02:19:23.668Z",
   "totalDistributed": 0
 }
