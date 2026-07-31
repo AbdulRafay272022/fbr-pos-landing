@@ -1028,8 +1028,29 @@
         }
       ],
       "distributedAt": "2026-07-30T02:19:23.668Z"
+    },
+    {
+      "slug": "fbr-sales-tax-integration-deadline-extension",
+      "title": "FBR Sales Tax Integration Deadline Extension",
+      "blogUrl": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension",
+      "hook": "FBR Sales Tax Integration Deadline Extension",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-07-31T02:39:19.656Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-07-31T02:39:19.656Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-07-31T02:39:19.656Z"
     }
   ],
-  "lastDistributedAt": "2026-07-30T02:19:23.668Z",
+  "lastDistributedAt": "2026-07-31T02:39:19.656Z",
   "totalDistributed": 0
 }
