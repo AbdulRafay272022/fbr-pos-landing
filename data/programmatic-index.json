@@ -314,8 +314,15 @@
       "service": "Billing Software",
       "industry": "grocery store",
       "publishedAt": "2026-07-28T02:47:26.788Z"
+    },
+    {
+      "slug": "inventory-management-software-restaurant-lahore",
+      "city": "lahore",
+      "service": "Inventory Management Software",
+      "industry": "restaurant",
+      "publishedAt": "2026-07-31T02:39:30.763Z"
     }
   ],
-  "totalPublished": 45,
-  "lastGeneratedAt": "2026-07-28T02:47:26.788Z"
+  "totalPublished": 46,
+  "lastGeneratedAt": "2026-07-31T02:39:30.763Z"
 }
