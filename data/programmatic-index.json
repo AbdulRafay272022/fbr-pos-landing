@@ -321,8 +321,15 @@
       "service": "Inventory Management Software",
       "industry": "restaurant",
       "publishedAt": "2026-07-31T02:39:30.763Z"
+    },
+    {
+      "slug": "inventory-management-software-retail-lahore",
+      "city": "lahore",
+      "service": "Inventory Management Software",
+      "industry": "retail",
+      "publishedAt": "2026-08-01T02:45:28.151Z"
     }
   ],
-  "totalPublished": 46,
-  "lastGeneratedAt": "2026-07-31T02:39:30.763Z"
+  "totalPublished": 47,
+  "lastGeneratedAt": "2026-08-01T02:45:28.151Z"
 }
