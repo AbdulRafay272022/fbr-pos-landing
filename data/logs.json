@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "ms8c324o-v6erc",
-      "ts": "2026-07-31T02:39:03.048Z",
+      "id": "ms9rqu96-851zu",
+      "ts": "2026-08-01T02:45:13.002Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-ms8c324l",
+        "runId": "run-ms9rqu94",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "ms8c32kf-k902i",
-      "ts": "2026-07-31T02:39:03.615Z",
+      "id": "ms9rquns-6b3ph",
+      "ts": "2026-08-01T02:45:13.528Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-ms8c324l",
+        "runId": "run-ms9rqu94",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4269 unused keywords, last scrape 10.0d ago (next forced refresh in 20d)",
-          "generate": "24.3h since last generation, 4269 keywords available",
-          "update": "skipped: last update 95.9h ago (min 168h)",
+          "scrape": "skipped: 4269 unused keywords, last scrape 11.0d ago (next forced refresh in 19d)",
+          "generate": "24.1h since last generation, 4269 keywords available",
+          "update": "skipped: last update 120.0h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,109 +48,106 @@
       }
     },
     {
-      "id": "ms8c3ci1-krv7y",
-      "ts": "2026-07-31T02:39:16.490Z",
+      "id": "ms9rqxca-5brsk",
+      "ts": "2026-08-01T02:45:17.002Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
-      "success": true,
-      "slug": "fbr-sales-tax-integration-deadline-extension",
-      "words": 1013,
-      "source": "groq",
-      "durationMs": 11528,
+      "success": false,
+      "durationMs": 2159,
       "details": {
-        "runId": "run-ms8c324l"
+        "runId": "run-ms9rqu94"
       }
     },
     {
-      "id": "ms8c3elw-6vz4w",
-      "ts": "2026-07-31T02:39:19.220Z",
+      "id": "ms9rqzat-uhd0t",
+      "ts": "2026-08-01T02:45:19.541Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2730,
+      "durationMs": 2538,
       "details": {
-        "runId": "run-ms8c324l",
+        "runId": "run-ms9rqu94",
         "pages": 3,
-        "totalImpressions": 17
+        "totalImpressions": 14
       }
     },
     {
-      "id": "ms8c3ewo-ihh9d",
-      "ts": "2026-07-31T02:39:19.608Z",
+      "id": "ms9rqzg7-6jjkg",
+      "ts": "2026-08-01T02:45:19.735Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 388,
+      "durationMs": 194,
       "details": {
-        "runId": "run-ms8c324l",
+        "runId": "run-ms9rqu94",
         "refreshedCount": 0
       }
     },
     {
-      "id": "ms8c3icg-wgf2r",
-      "ts": "2026-07-31T02:39:24.064Z",
+      "id": "ms9rr0s7-i0lqz",
+      "ts": "2026-08-01T02:45:21.463Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 4456,
+      "durationMs": 1728,
       "details": {
-        "runId": "run-ms8c324l",
-        "optimizedCount": 1
-      }
-    },
-    {
-      "id": "ms8c3j1f-lalw5",
-      "ts": "2026-07-31T02:39:24.963Z",
-      "site": "Phelix ERP",
-      "event": "landing_generated",
-      "level": "info",
-      "success": true,
-      "durationMs": 899,
-      "details": {
-        "runId": "run-ms8c324l"
-      }
-    },
-    {
-      "id": "ms8c3j9a-kx1kx",
-      "ts": "2026-07-31T02:39:25.246Z",
-      "site": "Phelix ERP",
-      "event": "conversion_optimized",
-      "level": "info",
-      "success": true,
-      "durationMs": 283,
-      "details": {
-        "runId": "run-ms8c324l",
+        "runId": "run-ms9rqu94",
         "optimizedCount": 0
       }
     },
     {
-      "id": "ms8c3kgt-u0l2h",
-      "ts": "2026-07-31T02:39:26.813Z",
+      "id": "ms9rr10f-274iz",
+      "ts": "2026-08-01T02:45:21.760Z",
+      "site": "Phelix ERP",
+      "event": "landing_generated",
+      "level": "info",
+      "success": true,
+      "durationMs": 296,
+      "details": {
+        "runId": "run-ms9rqu94"
+      }
+    },
+    {
+      "id": "ms9rr17w-5xd3e",
+      "ts": "2026-08-01T02:45:22.028Z",
+      "site": "Phelix ERP",
+      "event": "conversion_optimized",
+      "level": "info",
+      "success": true,
+      "durationMs": 268,
+      "details": {
+        "runId": "run-ms9rqu94",
+        "optimizedCount": 0
+      }
+    },
+    {
+      "id": "ms9rr2fj-vo8h9",
+      "ts": "2026-08-01T02:45:23.599Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1567,
+      "durationMs": 1571,
       "details": {
-        "runId": "run-ms8c324l",
+        "runId": "run-ms9rqu94",
         "decaysFound": 0
       }
     },
     {
-      "id": "ms8c3oqw-al0hc",
-      "ts": "2026-07-31T02:39:32.360Z",
+      "id": "ms9rr6y6-yv33f",
+      "ts": "2026-08-01T02:45:29.454Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": true,
-      "slug": "inventory-management-software-restaurant-lahore",
-      "durationMs": 5547,
+      "slug": "inventory-management-software-retail-lahore",
+      "durationMs": 5855,
       "details": {
-        "runId": "run-ms8c324l",
+        "runId": "run-ms9rqu94",
         "city": "lahore",
         "service": "Inventory Management Software"
       }
