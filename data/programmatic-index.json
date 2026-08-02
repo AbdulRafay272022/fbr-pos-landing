@@ -328,8 +328,15 @@
       "service": "Inventory Management Software",
       "industry": "retail",
       "publishedAt": "2026-08-01T02:45:28.151Z"
+    },
+    {
+      "slug": "inventory-management-software-pharmacy-lahore",
+      "city": "lahore",
+      "service": "Inventory Management Software",
+      "industry": "pharmacy",
+      "publishedAt": "2026-08-02T02:45:33.924Z"
     }
   ],
-  "totalPublished": 47,
-  "lastGeneratedAt": "2026-08-01T02:45:28.151Z"
+  "totalPublished": 48,
+  "lastGeneratedAt": "2026-08-02T02:45:33.924Z"
 }
