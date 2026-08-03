@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-electronic-invoice-integration-deadlines",
+    "title": "FBR Electronic Invoice Integration Deadlines",
+    "metaDescription": "Discover the latest FBR electronic invoice integration deadlines and ensure compliance with FBR IRIS to avoid penalties of up to PKR 500,000",
+    "keywords": [
+      "fbr electronic invoice integration deadlines",
+      "fbr electronic invoice integration deadlines pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is FBR Electronic Invoice Integration?",
+        "answer": "FBR electronic invoice integration is the process of connecting your business's POS system with the FBR IRIS portal to generate electronic invoices."
+      },
+      {
+        "question": "What are the benefits of FBR Electronic Invoice Integration?",
+        "answer": "The benefits of FBR electronic invoice integration include reduced tax evasion, increased revenue for the government, improved efficiency in invoicing and payment processing, reduced errors in invoicing and payment processing, and improved customer satisfaction."
+      },
+      {
+        "question": "What is the penalty for not integrating with the FBR IRIS portal?",
+        "answer": "The penalty for not integrating with the FBR IRIS portal is up to PKR 500,000."
+      },
+      {
+        "question": "How do I integrate my POS system with the FBR IRIS portal?",
+        "answer": "To integrate your POS system with the FBR IRIS portal, you must obtain a STRN and QR code, choose a compatible POS system, configure the POS system, test the integration, train staff, and monitor the integration regularly."
+      },
+      {
+        "question": "What is the FBR IRIS portal?",
+        "answer": "The FBR IRIS portal is a platform used by the FBR to verify electronic invoices and track tax payments."
+      }
+    ],
+    "publishedAt": "2026-08-03T02:40:02.630Z",
+    "readTime": 5,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Polish currency placed on invoices with a calculator, illustrating financial transactions or budgeting.",
+      "photographer": "Niepoddawajsie.pl Luk",
+      "photographerUrl": "https://www.pexels.com/@niepoddawajsie-pl-luk-2156505622",
+      "pexelsUrl": "https://www.pexels.com/photo/polish-banknotes-with-invoices-and-calculator-38783385/"
+    }
+  },
+  {
     "slug": "fbr-sales-tax-integration-deadline-extension",
     "title": "Top Benefits of FBR Sales Tax Integration Deadline Extension",
     "metaDescription": "FBR sales tax integration deadline extension: a guide for Pakistani businesses. Learn about the latest extension, how to integrate with FBR IRIS, and avoid",
