@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T04:47:51.655Z",
+  "generatedAt": "2026-08-03T04:37:48.394Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -26,13 +26,13 @@
     },
     {
       "priority": "medium",
-      "title": "Cannibalization: 14 keyword clusters",
-      "detail": "\"fbr pos system\" — 5 pages compete. 5 pages have similar titles. Google will pick one and dilute authority on others.",
-      "action": "Differentiate intent — assign each post a unique long-tail variant."
+      "title": "Cannibalization: 16 keyword clusters",
+      "detail": "\"fbr integration deadline extension\" — 2 pages compete. 2 pages have similar titles. Google will pick one and dilute authority on others.",
+      "action": "Merge into one canonical post."
     }
   ],
   "gsc": {
-    "rows": 1,
+    "rows": 4,
     "days": 28
   },
   "rankings": {
@@ -61,6 +61,60 @@
   },
   "cannibalization": {
     "clusters": [
+      {
+        "primaryKeyword": "fbr integration deadline extension",
+        "pages": [
+          {
+            "slug": "fbr-sales-tax-integration-deadline-extension",
+            "title": "What is FBR Sales Tax Integration Deadline Extension?",
+            "titleSim": 1,
+            "keywords": [
+              "fbr sales tax integration deadline extension",
+              "fbr sales tax integration deadline extension pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-electronic-invoicing-integration-deadline-extension",
+            "title": "What is FBR Electronic Invoicing Integration Deadline Extension?",
+            "titleSim": 0.5,
+            "keywords": [
+              "fbr electronic invoicing integration deadline extension",
+              "fbr electronic invoicing integration deadline extension pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          }
+        ],
+        "recommendation": "merge",
+        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
+      },
+      {
+        "primaryKeyword": "fbr pos systems karachi",
+        "pages": [
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-karachi",
+            "title": "Top 5 Best FBR POS Systems For Karachi Restaurants",
+            "titleSim": 1,
+            "keywords": [
+              "best fbr pos system for restaurant in karachi",
+              "best fbr pos system for restaurant in karachi pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-karachi",
+            "title": "Top 3 Best FBR POS Retail Systems in Karachi",
+            "titleSim": 0.6666666666666666,
+            "keywords": [
+              "best fbr pos retail karachi",
+              "retail pos karachi",
+              "fbr pos for karachi shop"
+            ]
+          }
+        ],
+        "recommendation": "merge",
+        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
+      },
       {
         "primaryKeyword": "fbr pos system",
         "pages": [
@@ -132,16 +186,6 @@
             ]
           },
           {
-            "slug": "best-fbr-pos-system-for-retail-in-karachi",
-            "title": "Top 3 Best FBR POS Retail Systems in Karachi",
-            "titleSim": 0.5714285714285714,
-            "keywords": [
-              "best fbr pos retail karachi",
-              "retail pos karachi",
-              "fbr pos for karachi shop"
-            ]
-          },
-          {
             "slug": "best-fbr-pos-system-for-retail-in-islamabad",
             "title": "Top 3 Best FBR POS Systems for Retail in Islamabad Compared",
             "titleSim": 0.5,
@@ -163,7 +207,7 @@
           }
         ],
         "recommendation": "differentiate",
-        "reason": "4 pages have similar titles. Google will pick one and dilute authority on others."
+        "reason": "3 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
         "primaryKeyword": "fbr pos system integration",
@@ -413,8 +457,58 @@
         "primaryKeyword": "fbr pos compliance pakistan",
         "pages": [
           {
+            "slug": "fbr-electronic-invoice-integration-deadlines",
+            "title": "Ultimate Guide to FBR Electronic Invoice Integration Deadlines",
+            "titleSim": 0,
+            "keywords": [
+              "fbr electronic invoice integration deadlines",
+              "fbr electronic invoice integration deadlines pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-sales-tax-integration-deadline-extension",
+            "title": "What is FBR Sales Tax Integration Deadline Extension?",
+            "titleSim": 0,
+            "keywords": [
+              "fbr sales tax integration deadline extension",
+              "fbr sales tax integration deadline extension pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-karachi",
+            "title": "Top 5 Best FBR POS Systems For Karachi Restaurants",
+            "titleSim": 0,
+            "keywords": [
+              "best fbr pos system for restaurant in karachi",
+              "best fbr pos system for restaurant in karachi pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-electronic-invoicing-integration-deadline-extension",
+            "title": "What is FBR Electronic Invoicing Integration Deadline Extension?",
+            "titleSim": 0,
+            "keywords": [
+              "fbr electronic invoicing integration deadline extension",
+              "fbr electronic invoicing integration deadline extension pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-e-integration-deadlines",
+            "title": "Top 5 FBR E-Integration Deadlines to Track",
+            "titleSim": 0,
+            "keywords": [
+              "fbr e integration deadlines",
+              "fbr e integration deadlines pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
             "slug": "fbr-integration-deadline",
-            "title": "Meet FBR Integration Deadline: A Guide",
+            "title": "FBR Integration Deadline: Top 3 Mistakes",
             "titleSim": 0,
             "keywords": [
               "fbr integration deadline",
@@ -424,7 +518,7 @@
           },
           {
             "slug": "fbr-tier-1-retailers",
-            "title": "FBR Tier 1 Retailers Guide",
+            "title": "Top 3 Benefits for Registered FBR Tier 1 Retailers",
             "titleSim": 0,
             "keywords": [
               "fbr tier 1 retailers",
@@ -675,7 +769,7 @@
           }
         ],
         "recommendation": "differentiate",
-        "reason": "26 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
+        "reason": "31 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
       },
       {
         "primaryKeyword": "fbr pos lahore",
@@ -734,11 +828,11 @@
         "reason": "2 pages claim the same keyword \"qr invoice pakistan\". Reassign to unique long-tail variants."
       }
     ],
-    "flagged": 14
+    "flagged": 16
   },
   "cwv": {
     "summary": {
-      "totalAudited": 63,
+      "totalAudited": 68,
       "passingCwv": 0,
       "failingCwv": 0,
       "avgPerformance": null,

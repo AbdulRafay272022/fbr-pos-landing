@@ -266,6 +266,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online",
+        "fetchedAt": "2026-08-03T04:37:54.190Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi": [
@@ -2719,12 +2738,50 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-integration-deadline",
+        "fetchedAt": "2026-08-03T04:38:00.941Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/fbr-tier-1-retailers": [
       {
         "url": "https://phelixerp.online/blog/fbr-tier-1-retailers",
         "fetchedAt": "2026-07-27T04:47:59.456Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-tier-1-retailers",
+        "fetchedAt": "2026-08-03T04:38:02.061Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -2761,12 +2818,50 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/restaurant-pos-software-pakistan",
+        "fetchedAt": "2026-08-03T04:38:03.192Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-quetta": [
       {
         "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-quetta",
         "fetchedAt": "2026-07-27T04:48:01.708Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-quetta",
+        "fetchedAt": "2026-08-03T04:38:04.315Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -2804,7 +2899,112 @@
           "PSI HTTP 429"
         ]
       }
+    ],
+    "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines",
+        "fetchedAt": "2026-08-03T04:37:55.314Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension",
+        "fetchedAt": "2026-08-03T04:37:56.437Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi": [
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi",
+        "fetchedAt": "2026-08-03T04:37:57.565Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension",
+        "fetchedAt": "2026-08-03T04:37:58.691Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-e-integration-deadlines": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-e-integration-deadlines",
+        "fetchedAt": "2026-08-03T04:37:59.817Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
     ]
   },
-  "lastFullAuditAt": "2026-07-27T04:48:07.347Z"
+  "lastFullAuditAt": "2026-08-03T04:38:04.315Z"
 }

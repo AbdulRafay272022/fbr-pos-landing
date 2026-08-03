@@ -2,7 +2,7 @@
   "checks": {
     "https://phelixerp.online": {
       "url": "https://phelixerp.online",
-      "fetchedAt": "2026-07-27T04:48:07.347Z",
+      "fetchedAt": "2026-08-03T04:38:04.316Z",
       "blocks": [
         {
           "type": "Organization",
@@ -14318,7 +14318,7 @@
     },
     "https://phelixerp.online/blog/fbr-ntn-registration-requirements": {
       "url": "https://phelixerp.online/blog/fbr-ntn-registration-requirements",
-      "fetchedAt": "2026-07-27T04:48:08.159Z",
+      "fetchedAt": "2026-08-03T04:38:05.728Z",
       "blocks": [
         {
           "type": "Organization",
@@ -14573,7 +14573,7 @@
     },
     "https://phelixerp.online/blog/fbr-iris-api-integration-guide-pakistan-2026": {
       "url": "https://phelixerp.online/blog/fbr-iris-api-integration-guide-pakistan-2026",
-      "fetchedAt": "2026-07-27T04:48:08.278Z",
+      "fetchedAt": "2026-08-03T04:38:05.819Z",
       "blocks": [
         {
           "type": "Organization",
@@ -14860,7 +14860,7 @@
     },
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-peshawar": {
       "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-peshawar",
-      "fetchedAt": "2026-07-27T04:48:08.462Z",
+      "fetchedAt": "2026-08-03T04:38:05.951Z",
       "blocks": [
         {
           "type": "Organization",
@@ -15115,7 +15115,7 @@
     },
     "https://phelixerp.online/blog/fbr-rules-and-regulations": {
       "url": "https://phelixerp.online/blog/fbr-rules-and-regulations",
-      "fetchedAt": "2026-07-27T04:48:08.658Z",
+      "fetchedAt": "2026-08-03T04:38:06.043Z",
       "blocks": [
         {
           "type": "Organization",
@@ -15370,7 +15370,7 @@
     },
     "https://phelixerp.online/blog/fbr-compliance-level": {
       "url": "https://phelixerp.online/blog/fbr-compliance-level",
-      "fetchedAt": "2026-07-27T04:48:08.800Z",
+      "fetchedAt": "2026-08-03T04:38:06.132Z",
       "blocks": [
         {
           "type": "Organization",
@@ -15844,7 +15844,7 @@
     },
     "https://phelixerp.online/blog/fbr-integration-deadline": {
       "url": "https://phelixerp.online/blog/fbr-integration-deadline",
-      "fetchedAt": "2026-07-27T04:48:07.482Z",
+      "fetchedAt": "2026-08-03T04:38:05.012Z",
       "blocks": [
         {
           "type": "Organization",
@@ -15893,7 +15893,7 @@
           "raw": {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "Meet FBR Integration Deadline: A Guide",
+            "headline": "FBR Integration Deadline: Top 3 Mistakes",
             "description": "Discover the FBR integration deadline and learn how to comply with FBR IRIS and Sales Tax Act regulations to avoid penalties of up to PKR 500,000",
             "url": "https://phelixerp.online/blog/fbr-integration-deadline",
             "datePublished": "2026-07-27T02:47:35.836Z",
@@ -15951,7 +15951,7 @@
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Meet FBR Integration Deadline: A Guide",
+                "name": "FBR Integration Deadline: Top 3 Mistakes",
                 "item": "https://phelixerp.online/blog/fbr-integration-deadline"
               }
             ]
@@ -16099,7 +16099,7 @@
     },
     "https://phelixerp.online/blog/fbr-tier-1-retailers": {
       "url": "https://phelixerp.online/blog/fbr-tier-1-retailers",
-      "fetchedAt": "2026-07-27T04:48:07.629Z",
+      "fetchedAt": "2026-08-03T04:38:05.175Z",
       "blocks": [
         {
           "type": "Organization",
@@ -16148,7 +16148,7 @@
           "raw": {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "FBR Tier 1 Retailers Guide",
+            "headline": "Top 3 Benefits for Registered FBR Tier 1 Retailers",
             "description": "Learn about FBR Tier 1 retailers, their requirements, and how to ensure compliance with FBR IRIS and POS integration in Pakistan.",
             "url": "https://phelixerp.online/blog/fbr-tier-1-retailers",
             "datePublished": "2026-07-24T02:51:56.359Z",
@@ -16206,7 +16206,7 @@
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "FBR Tier 1 Retailers Guide",
+                "name": "Top 3 Benefits for Registered FBR Tier 1 Retailers",
                 "item": "https://phelixerp.online/blog/fbr-tier-1-retailers"
               }
             ]
@@ -16354,7 +16354,7 @@
     },
     "https://phelixerp.online/blog/restaurant-pos-software-pakistan": {
       "url": "https://phelixerp.online/blog/restaurant-pos-software-pakistan",
-      "fetchedAt": "2026-07-27T04:48:07.740Z",
+      "fetchedAt": "2026-08-03T04:38:05.423Z",
       "blocks": [
         {
           "type": "Organization",
@@ -16609,7 +16609,7 @@
     },
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-quetta": {
       "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-quetta",
-      "fetchedAt": "2026-07-27T04:48:07.857Z",
+      "fetchedAt": "2026-08-03T04:38:05.504Z",
       "blocks": [
         {
           "type": "Organization",
@@ -16832,7 +16832,7 @@
     },
     "https://phelixerp.online/blog/pos-software-pakistan-free-download-with-crack": {
       "url": "https://phelixerp.online/blog/pos-software-pakistan-free-download-with-crack",
-      "fetchedAt": "2026-07-27T04:48:08.025Z",
+      "fetchedAt": "2026-08-03T04:38:05.588Z",
       "blocks": [
         {
           "type": "Organization",
@@ -17084,7 +17084,1282 @@
         }
       ],
       "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines": {
+      "url": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines",
+      "fetchedAt": "2026-08-03T04:38:04.460Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Ultimate Guide to FBR Electronic Invoice Integration Deadlines",
+            "description": "Discover the latest FBR electronic invoice integration deadlines and ensure compliance with FBR IRIS to avoid penalties of up to PKR 500,000",
+            "url": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines",
+            "datePublished": "2026-08-03T02:40:02.630Z",
+            "dateModified": "2026-08-03T02:40:02.630Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr electronic invoice integration deadlines, fbr electronic invoice integration deadlines pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines"
+            },
+            "wordCount": 1343
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Ultimate Guide to FBR Electronic Invoice Integration Deadlines",
+                "item": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR Electronic Invoice Integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR electronic invoice integration is the process of connecting your business's POS system with the FBR IRIS portal to generate electronic invoices."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the benefits of FBR Electronic Invoice Integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of FBR electronic invoice integration include reduced tax evasion, increased revenue for the government, improved efficiency in invoicing and payment processing, reduced errors in invoicing and payment processing, and improved customer satisfaction."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for not integrating with the FBR IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for not integrating with the FBR IRIS portal is up to PKR 500,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I integrate my POS system with the FBR IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate your POS system with the FBR IRIS portal, you must obtain a STRN and QR code, choose a compatible POS system, configure the POS system, test the integration, train staff, and monitor the integration regularly."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the FBR IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The FBR IRIS portal is a platform used by the FBR to verify electronic invoices and track tax payments."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR Electronic Invoice Integration Deadlines",
+            "description": "Discover the latest FBR electronic invoice integration deadlines and ensure compliance with FBR IRIS to avoid penalties of up to PKR 500,000",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-08-03T02:40:02.630Z",
+            "dateModified": "2026-08-03T02:40:02.630Z",
+            "url": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines",
+            "keywords": "fbr electronic invoice integration deadlines, fbr electronic invoice integration deadlines pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR Electronic Invoice Integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR electronic invoice integration is the process of connecting your business's POS system with the FBR IRIS portal to generate electronic invoices."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the benefits of FBR Electronic Invoice Integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of FBR electronic invoice integration include reduced tax evasion, increased revenue for the government, improved efficiency in invoicing and payment processing, reduced errors in invoicing and payment processing, and improved customer satisfaction."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for not integrating with the FBR IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for not integrating with the FBR IRIS portal is up to PKR 500,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I integrate my POS system with the FBR IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate your POS system with the FBR IRIS portal, you must obtain a STRN and QR code, choose a compatible POS system, configure the POS system, test the integration, train staff, and monitor the integration regularly."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the FBR IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The FBR IRIS portal is a platform used by the FBR to verify electronic invoices and track tax payments."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension": {
+      "url": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension",
+      "fetchedAt": "2026-08-03T04:38:04.563Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "What is FBR Sales Tax Integration Deadline Extension?",
+            "description": "FBR sales tax integration deadline extension: a guide for Pakistani businesses. Learn about the latest extension, how to integrate with FBR IRIS, and avoid",
+            "url": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension",
+            "datePublished": "2026-07-31T02:39:14.272Z",
+            "dateModified": "2026-07-31T02:39:14.272Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr sales tax integration deadline extension, fbr sales tax integration deadline extension pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension"
+            },
+            "wordCount": 1481
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "What is FBR Sales Tax Integration Deadline Extension?",
+                "item": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR Sales Tax Integration Deadline Extension?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR sales tax integration deadline extension refers to the extension of time granted by the FBR for businesses to integrate their POS systems with the FBR's IRIS portal."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Integrate with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate with the FBR's IRIS portal, businesses must register with the FBR's IRIS portal, purchase a POS system that is compatible with the FBR's IRIS portal, configure the POS system to generate invoices with a unique QR code, integrate the POS system with the FBR's IRIS portal using the API provided by the FBR, test the integration, and train staff on how to use the integrated POS system."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the Benefits of FBR Sales Tax Integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of FBR sales tax integration include improved tax compliance, increased efficiency, improved customer experience, access to real-time data and analytics, and reduced risk of fraud and errors."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Penalty for Failure to Integrate with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to integrate with the FBR's IRIS portal can be up to PKR 500,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Avoid Common Mistakes when Integrating with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Businesses must avoid common mistakes such as failure to register with the FBR's IRIS portal, using a POS system that is not compatible with the FBR's IRIS portal, failure to configure the POS system to generate invoices with a unique QR code, failure to integrate the POS system with the FBR's IRIS portal using the API provided by the FBR, and failure to test the integration."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR Sales Tax Integration Deadline Extension",
+            "description": "FBR sales tax integration deadline extension: a guide for Pakistani businesses. Learn about the latest extension, how to integrate with FBR IRIS, and avoid",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-07-31T02:39:14.272Z",
+            "dateModified": "2026-07-31T02:39:14.272Z",
+            "url": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension",
+            "keywords": "fbr sales tax integration deadline extension, fbr sales tax integration deadline extension pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR Sales Tax Integration Deadline Extension?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR sales tax integration deadline extension refers to the extension of time granted by the FBR for businesses to integrate their POS systems with the FBR's IRIS portal."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Integrate with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate with the FBR's IRIS portal, businesses must register with the FBR's IRIS portal, purchase a POS system that is compatible with the FBR's IRIS portal, configure the POS system to generate invoices with a unique QR code, integrate the POS system with the FBR's IRIS portal using the API provided by the FBR, test the integration, and train staff on how to use the integrated POS system."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the Benefits of FBR Sales Tax Integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of FBR sales tax integration include improved tax compliance, increased efficiency, improved customer experience, access to real-time data and analytics, and reduced risk of fraud and errors."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Penalty for Failure to Integrate with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to integrate with the FBR's IRIS portal can be up to PKR 500,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Avoid Common Mistakes when Integrating with FBR IRIS?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Businesses must avoid common mistakes such as failure to register with the FBR's IRIS portal, using a POS system that is not compatible with the FBR's IRIS portal, failure to configure the POS system to generate invoices with a unique QR code, failure to integrate the POS system with the FBR's IRIS portal using the API provided by the FBR, and failure to test the integration."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi": {
+      "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi",
+      "fetchedAt": "2026-08-03T04:38:04.735Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 5 Best FBR POS Systems For Karachi Restaurants",
+            "description": "Best FBR POS System For Restaurant In Karachi — a practical, up-to-date guide.",
+            "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi",
+            "datePublished": "2026-07-30T02:19:20.539Z",
+            "dateModified": "2026-07-30T02:19:20.539Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "best fbr pos system for restaurant in karachi, best fbr pos system for restaurant in karachi pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi"
+            },
+            "wordCount": 1734
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 5 Best FBR POS Systems For Karachi Restaurants",
+                "item": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for best fbr pos system for restaurant in karachi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Best FBR POS System For Restaurant In Karachi",
+            "description": "Best FBR POS System For Restaurant In Karachi — a practical, up-to-date guide.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-07-30T02:19:20.539Z",
+            "dateModified": "2026-07-30T02:19:20.539Z",
+            "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi",
+            "keywords": "best fbr pos system for restaurant in karachi, best fbr pos system for restaurant in karachi pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/2598025/pexels-photo-2598025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for best fbr pos system for restaurant in karachi?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension": {
+      "url": "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension",
+      "fetchedAt": "2026-08-03T04:38:04.832Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "What is FBR Electronic Invoicing Integration Deadline Extension?",
+            "description": "Get the latest update on FBR electronic invoicing integration deadline extension in Pakistan. Learn how to comply with FBR regulations and avoid penalties.",
+            "url": "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension",
+            "datePublished": "2026-07-29T02:45:30.133Z",
+            "dateModified": "2026-07-29T02:45:30.133Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr electronic invoicing integration deadline extension, fbr electronic invoicing integration deadline extension pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension"
+            },
+            "wordCount": 1487
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "What is FBR Electronic Invoicing Integration Deadline Extension?",
+                "item": "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the deadline for FBR electronic invoicing integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The deadline for FBR electronic invoicing integration has been extended for Tier-1 retailers. Businesses need to check the FBR website for the latest information on deadlines."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I integrate my POS system with the IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Businesses can use the FBR's API to integrate their POS system with the IRIS portal. They can also use the [INTERNAL_LINK: \"FBR POS integration\"] guide for step-by-step instructions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for non-compliance with FBR regulations?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for non-compliance with FBR regulations can be up to PKR 50,000. Businesses need to ensure that they comply with the regulations to avoid penalties."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use a cloud-based POS system for FBR electronic invoicing integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, businesses can use a cloud-based POS system for FBR electronic invoicing integration. The POS system needs to be compatible with the FBR's API."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I obtain a Sales Tax Registration Number (STRN)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Businesses can obtain a STRN by registering for an IRIS account on the FBR website. They can also use the [INTERNAL_LINK: \"FBR compliance checklist\"] to ensure that they have all the necessary documents."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR Electronic Invoicing Integration Deadline Extension",
+            "description": "Get the latest update on FBR electronic invoicing integration deadline extension in Pakistan. Learn how to comply with FBR regulations and avoid penalties.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-07-29T02:45:30.133Z",
+            "dateModified": "2026-07-29T02:45:30.133Z",
+            "url": "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension",
+            "keywords": "fbr electronic invoicing integration deadline extension, fbr electronic invoicing integration deadline extension pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the deadline for FBR electronic invoicing integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The deadline for FBR electronic invoicing integration has been extended for Tier-1 retailers. Businesses need to check the FBR website for the latest information on deadlines."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I integrate my POS system with the IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Businesses can use the FBR's API to integrate their POS system with the IRIS portal. They can also use the [INTERNAL_LINK: \"FBR POS integration\"] guide for step-by-step instructions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for non-compliance with FBR regulations?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for non-compliance with FBR regulations can be up to PKR 50,000. Businesses need to ensure that they comply with the regulations to avoid penalties."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use a cloud-based POS system for FBR electronic invoicing integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, businesses can use a cloud-based POS system for FBR electronic invoicing integration. The POS system needs to be compatible with the FBR's API."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I obtain a Sales Tax Registration Number (STRN)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Businesses can obtain a STRN by registering for an IRIS account on the FBR website. They can also use the [INTERNAL_LINK: \"FBR compliance checklist\"] to ensure that they have all the necessary documents."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-e-integration-deadlines": {
+      "url": "https://phelixerp.online/blog/fbr-e-integration-deadlines",
+      "fetchedAt": "2026-08-03T04:38:04.948Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 5 FBR E-Integration Deadlines to Track",
+            "description": "Discover the latest FBR e-integration deadlines and ensure compliance to avoid penalties. Learn how to integrate with FBR IRIS and meet the Sales Tax Act r",
+            "url": "https://phelixerp.online/blog/fbr-e-integration-deadlines",
+            "datePublished": "2026-07-28T02:47:10.746Z",
+            "dateModified": "2026-07-28T02:47:10.746Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr e integration deadlines, fbr e integration deadlines pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-e-integration-deadlines"
+            },
+            "wordCount": 1714
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 5 FBR E-Integration Deadlines to Track",
+                "item": "https://phelixerp.online/blog/fbr-e-integration-deadlines"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for fbr e integration deadlines?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR E-Integration Deadlines",
+            "description": "Discover the latest FBR e-integration deadlines and ensure compliance to avoid penalties. Learn how to integrate with FBR IRIS and meet the Sales Tax Act r",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-07-28T02:47:10.746Z",
+            "dateModified": "2026-07-28T02:47:10.746Z",
+            "url": "https://phelixerp.online/blog/fbr-e-integration-deadlines",
+            "keywords": "fbr e integration deadlines, fbr e integration deadlines pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for fbr e integration deadlines?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
     }
   },
-  "lastAuditedAt": "2026-07-27T04:48:09.878Z"
+  "lastAuditedAt": "2026-08-03T04:38:06.261Z"
 }
