@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "msb76tm8-5fmnr",
-      "ts": "2026-08-02T02:45:19.088Z",
+      "id": "mscmfnzw-lhu1g",
+      "ts": "2026-08-03T02:39:52.124Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-msb76tm5",
+        "runId": "run-mscmfnzt",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "msb76u24-i70iv",
-      "ts": "2026-08-02T02:45:19.660Z",
+      "id": "mscmfoe8-r904j",
+      "ts": "2026-08-03T02:39:52.640Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-msb76tm5",
+        "runId": "run-mscmfnzt",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4269 unused keywords, last scrape 12.0d ago (next forced refresh in 18d)",
-          "generate": "48.1h since last generation, 4269 keywords available",
-          "update": "skipped: last update 144.0h ago (min 168h)",
+          "scrape": "skipped: 4269 unused keywords, last scrape 13.0d ago (next forced refresh in 17d)",
+          "generate": "72.0h since last generation, 4269 keywords available",
+          "update": "skipped: last update 167.9h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,106 +48,109 @@
       }
     },
     {
-      "id": "msb76wzv-v0394",
-      "ts": "2026-08-02T02:45:23.467Z",
+      "id": "mscmfxna-0hsi9",
+      "ts": "2026-08-03T02:40:04.630Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 2349,
+      "success": true,
+      "slug": "fbr-electronic-invoice-integration-deadlines",
+      "words": 959,
+      "source": "groq",
+      "durationMs": 10708,
       "details": {
-        "runId": "run-msb76tm5"
+        "runId": "run-mscmfnzt"
       }
     },
     {
-      "id": "msb76yyt-85t2q",
-      "ts": "2026-08-02T02:45:26.021Z",
+      "id": "mscmg16n-bayir",
+      "ts": "2026-08-03T02:40:09.215Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2554,
+      "durationMs": 4585,
       "details": {
-        "runId": "run-msb76tm5",
+        "runId": "run-mscmfnzt",
         "pages": 3,
         "totalImpressions": 14
       }
     },
     {
-      "id": "msb76z71-fbh8m",
-      "ts": "2026-08-02T02:45:26.317Z",
+      "id": "mscmg1y9-xmzbh",
+      "ts": "2026-08-03T02:40:10.209Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 296,
+      "durationMs": 994,
       "details": {
-        "runId": "run-msb76tm5",
+        "runId": "run-mscmfnzt",
         "refreshedCount": 0
       }
     },
     {
-      "id": "msb7709u-5c1d7",
-      "ts": "2026-08-02T02:45:27.714Z",
+      "id": "mscmg4md-ju43a",
+      "ts": "2026-08-03T02:40:13.669Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1396,
+      "durationMs": 3460,
       "details": {
-        "runId": "run-msb76tm5",
-        "optimizedCount": 0
+        "runId": "run-mscmfnzt",
+        "optimizedCount": 2
       }
     },
     {
-      "id": "msb770hl-s5xt0",
-      "ts": "2026-08-02T02:45:27.993Z",
+      "id": "mscmg4vx-xvl2m",
+      "ts": "2026-08-03T02:40:14.013Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "durationMs": 279,
+      "durationMs": 342,
       "details": {
-        "runId": "run-msb76tm5"
+        "runId": "run-mscmfnzt"
       }
     },
     {
-      "id": "msb770o9-mfyfi",
-      "ts": "2026-08-02T02:45:28.233Z",
+      "id": "mscmg53n-7r19x",
+      "ts": "2026-08-03T02:40:14.291Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 240,
+      "durationMs": 278,
       "details": {
-        "runId": "run-msb76tm5",
+        "runId": "run-mscmfnzt",
         "optimizedCount": 0
       }
     },
     {
-      "id": "msb771tp-55hxu",
-      "ts": "2026-08-02T02:45:29.725Z",
+      "id": "mscmg69k-1a4t7",
+      "ts": "2026-08-03T02:40:15.800Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1491,
+      "durationMs": 1509,
       "details": {
-        "runId": "run-msb76tm5",
+        "runId": "run-mscmfnzt",
         "decaysFound": 0
       }
     },
     {
-      "id": "msb77644-gcnbt",
-      "ts": "2026-08-02T02:45:35.284Z",
+      "id": "mscmgacb-4u9zr",
+      "ts": "2026-08-03T02:40:21.083Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": true,
-      "slug": "inventory-management-software-pharmacy-lahore",
-      "durationMs": 5559,
+      "slug": "inventory-management-software-clothing-store-lahore",
+      "durationMs": 5282,
       "details": {
-        "runId": "run-msb76tm5",
+        "runId": "run-mscmfnzt",
         "city": "lahore",
         "service": "Inventory Management Software"
       }
