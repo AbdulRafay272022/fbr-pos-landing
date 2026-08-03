@@ -335,8 +335,15 @@
       "service": "Inventory Management Software",
       "industry": "pharmacy",
       "publishedAt": "2026-08-02T02:45:33.924Z"
+    },
+    {
+      "slug": "inventory-management-software-clothing-store-lahore",
+      "city": "lahore",
+      "service": "Inventory Management Software",
+      "industry": "clothing store",
+      "publishedAt": "2026-08-03T02:40:19.673Z"
     }
   ],
-  "totalPublished": 48,
-  "lastGeneratedAt": "2026-08-02T02:45:33.924Z"
+  "totalPublished": 49,
+  "lastGeneratedAt": "2026-08-03T02:40:19.673Z"
 }
