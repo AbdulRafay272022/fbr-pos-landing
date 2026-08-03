@@ -88,8 +88,15 @@
       "submittedAt": "2026-07-13T02:13:55.022Z",
       "type": "URL_UPDATED",
       "status": "submitted"
+    },
+    {
+      "slug": "fbr-electronic-invoice-integration-deadlines",
+      "url": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines",
+      "submittedAt": "2026-08-03T02:40:04.601Z",
+      "type": "URL_UPDATED",
+      "status": "submitted"
     }
   ],
-  "lastSubmittedAt": "2026-07-13T02:13:55.022Z",
-  "totalSubmitted": 7
+  "lastSubmittedAt": "2026-08-03T02:40:04.601Z",
+  "totalSubmitted": 8
 }
