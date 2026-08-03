@@ -1049,8 +1049,29 @@
         }
       ],
       "distributedAt": "2026-07-31T02:39:19.656Z"
+    },
+    {
+      "slug": "fbr-electronic-invoice-integration-deadlines",
+      "title": "FBR Electronic Invoice Integration Deadlines",
+      "blogUrl": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines",
+      "hook": "FBR Electronic Invoice Integration Deadlines",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-03T02:40:05.586Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-03T02:40:05.587Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-03T02:40:05.587Z"
     }
   ],
-  "lastDistributedAt": "2026-07-31T02:39:19.656Z",
+  "lastDistributedAt": "2026-08-03T02:40:05.587Z",
   "totalDistributed": 0
 }
