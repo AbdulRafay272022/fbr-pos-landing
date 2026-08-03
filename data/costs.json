@@ -1490,6 +1490,24 @@
       "promptTokens": 1106,
       "completionTokens": 1748,
       "totalTokens": 2854
+    },
+    {
+      "ts": "2026-08-03T02:40:10.927Z",
+      "action": "title_optimize",
+      "slug": "fbr-electronic-invoice-integration-deadlines",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-03T02:40:11.832Z",
+      "action": "title_optimize",
+      "slug": "fbr-sales-tax-integration-deadline-extension",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1506,8 +1524,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 5436,
-      "calls": 2
+      "tokens": 6236,
+      "calls": 4
     }
   },
   "monthlyTokenBudget": 5000000,
