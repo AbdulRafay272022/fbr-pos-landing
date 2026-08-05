@@ -7,25 +7,25 @@
       "clicks": 0,
       "ctr": 0,
       "position": 4.625,
-      "fetchedAt": "2026-08-03T02:40:05.802Z"
+      "fetchedAt": "2026-08-05T02:00:54.760Z"
     },
     {
       "slug": "how-to-setup-fbr-penalty-in-pakistan",
       "url": "https://phelixerp.online/blog/how-to-setup-fbr-penalty-in-pakistan",
-      "impressions": 3,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 8.666666666666668,
-      "fetchedAt": "2026-08-03T02:40:05.802Z"
+      "position": 9,
+      "fetchedAt": "2026-08-05T02:00:54.760Z"
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
       "url": "https://phelixerp.online/blog/retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
-      "impressions": 3,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 5.666666666666667,
-      "fetchedAt": "2026-08-03T02:40:05.802Z"
+      "position": 5,
+      "fetchedAt": "2026-08-05T02:00:54.760Z"
     }
   ],
   "queries": [
@@ -35,15 +35,15 @@
       "clicks": 0,
       "ctr": 0,
       "position": 24.5,
-      "fetchedAt": "2026-08-03T02:40:05.801Z"
+      "fetchedAt": "2026-08-05T02:00:54.758Z"
     }
   ],
-  "lastFetchedAt": "2026-08-03T02:40:05.802Z",
+  "lastFetchedAt": "2026-08-05T02:00:54.760Z",
   "summary": {
-    "totalImpressions": 14,
+    "totalImpressions": 12,
     "totalClicks": 0,
     "avgCTR": 0,
-    "avgPosition": 6.3194444444444455
+    "avgPosition": 6.208333333333333
   },
   "topPages": [
     {
@@ -54,15 +54,15 @@
     },
     {
       "slug": "how-to-setup-fbr-penalty-in-pakistan",
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 8.666666666666668
+      "position": 9
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
-      "impressions": 3,
+      "impressions": 2,
       "ctr": 0,
-      "position": 5.666666666666667
+      "position": 5
     }
   ],
   "topQueries": [
