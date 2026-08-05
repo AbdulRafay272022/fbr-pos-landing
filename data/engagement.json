@@ -87,6 +87,14 @@
       "slug": "fbr-compliance-checklist-pakistan-businesses-2026",
       "value": 0,
       "source": "phelixerp.online"
+    },
+    {
+      "id": "eng-msg88pmr-nuvj",
+      "ts": "2026-08-05T15:13:37.731Z",
+      "type": "scroll_depth",
+      "slug": "fbr-pos-system-restaurants-pakistan-2026",
+      "value": 38,
+      "source": "www.google.com"
     }
   ],
   "summary": {
@@ -107,6 +115,12 @@
       "avgTimeOnPage": 0,
       "bounceRate": 0,
       "totalSessions": 3
+    },
+    "fbr-pos-system-restaurants-pakistan-2026": {
+      "avgScrollDepth": 38,
+      "avgTimeOnPage": 0,
+      "bounceRate": 0,
+      "totalSessions": 1
     }
   },
   "lastTrimmedAt": null
