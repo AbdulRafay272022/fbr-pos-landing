@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-extends-e-invoice-integration-deadline",
+    "title": "FBR Extends E-Invoice Integration Deadline",
+    "metaDescription": "FBR extends e-invoice integration deadline for sales tax registrants in Pakistan. Learn about the new deadline, integration process, and penalties for non-",
+    "keywords": [
+      "fbr extends e invoice integration deadline",
+      "fbr extends e invoice integration deadline pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is FBR e-invoice integration deadline extension?",
+        "answer": "The FBR has extended the deadline for e-invoice integration for sales tax registrants in Pakistan."
+      },
+      {
+        "question": "What are the technical requirements for e-invoice integration?",
+        "answer": "The technical requirements for e-invoice integration include API protocols and data formats."
+      },
+      {
+        "question": "What are the penalties for non-compliance with the e-invoicing system?",
+        "answer": "The penalties for non-compliance with the e-invoicing system include a fine of PKR 10,000 for each day of non-compliance."
+      },
+      {
+        "question": "How can businesses integrate e-invoices with the FBR's IRIS portal?",
+        "answer": "Businesses can integrate e-invoices with the FBR's IRIS portal using third-party software or by developing their own in-house solution."
+      },
+      {
+        "question": "What is the benefit of e-invoice integration?",
+        "answer": "The benefits of e-invoice integration include reduced tax evasion, increased transparency in business transactions, and improved efficiency in invoicing and payment processing."
+      }
+    ],
+    "publishedAt": "2026-08-05T02:00:29.471Z",
+    "readTime": 4,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Polish currency placed on invoices with a calculator, illustrating financial transactions or budgeting.",
+      "photographer": "Niepoddawajsie.pl Luk",
+      "photographerUrl": "https://www.pexels.com/@niepoddawajsie-pl-luk-2156505622",
+      "pexelsUrl": "https://www.pexels.com/photo/polish-banknotes-with-invoices-and-calculator-38783385/"
+    }
+  },
+  {
     "slug": "fbr-electronic-invoice-integration-deadlines",
     "title": "Ultimate Guide to FBR Electronic Invoice Integration Deadlines",
     "metaDescription": "Discover the latest FBR electronic invoice integration deadlines and ensure compliance with FBR IRIS to avoid penalties of up to PKR 500,000",
