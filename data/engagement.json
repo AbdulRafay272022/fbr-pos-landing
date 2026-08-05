@@ -103,6 +103,14 @@
       "slug": "fbr-pos-system-restaurants-pakistan-2026",
       "value": 38,
       "source": "www.google.com"
+    },
+    {
+      "id": "eng-msg88yeh-7vv5",
+      "ts": "2026-08-05T15:13:49.097Z",
+      "type": "scroll_depth",
+      "slug": "fbr-pos-system-restaurants-pakistan-2026",
+      "value": 38,
+      "source": "www.google.com"
     }
   ],
   "summary": {
@@ -128,7 +136,7 @@
       "avgScrollDepth": 38,
       "avgTimeOnPage": 0,
       "bounceRate": 0,
-      "totalSessions": 2
+      "totalSessions": 3
     }
   },
   "lastTrimmedAt": null
