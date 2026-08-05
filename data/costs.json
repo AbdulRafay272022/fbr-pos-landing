@@ -1516,6 +1516,24 @@
       "promptTokens": 1118,
       "completionTokens": 1493,
       "totalTokens": 2611
+    },
+    {
+      "ts": "2026-08-05T02:00:57.352Z",
+      "action": "title_optimize",
+      "slug": "fbr-extends-e-invoice-integration-deadline",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-05T02:00:57.901Z",
+      "action": "title_optimize",
+      "slug": "fbr-electronic-invoice-integration-deadlines",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1532,8 +1550,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 8847,
-      "calls": 5
+      "tokens": 9647,
+      "calls": 7
     }
   },
   "monthlyTokenBudget": 5000000,
