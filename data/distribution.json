@@ -1070,8 +1070,29 @@
         }
       ],
       "distributedAt": "2026-08-03T02:40:05.587Z"
+    },
+    {
+      "slug": "sales-tax-pakistan-2025",
+      "title": "Sales Tax Pakistan 2025",
+      "blogUrl": "https://phelixerp.online/blog/sales-tax-pakistan-2025",
+      "hook": "Sales Tax Pakistan 2025",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-06T02:58:34.344Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-06T02:58:34.344Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-06T02:58:34.344Z"
     }
   ],
-  "lastDistributedAt": "2026-08-03T02:40:05.587Z",
+  "lastDistributedAt": "2026-08-06T02:58:34.344Z",
   "totalDistributed": 0
 }
