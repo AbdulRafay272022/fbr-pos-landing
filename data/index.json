@@ -1,5 +1,49 @@
 [
   {
+    "slug": "sales-tax-pakistan-2025",
+    "title": "Sales Tax Pakistan 2025",
+    "metaDescription": "Learn about sales tax in Pakistan 2025, including rates, registration, and compliance. Discover how Phelix ERP can help with FBR POS integration.",
+    "keywords": [
+      "sales tax pakistan 2025",
+      "sales tax pakistan 2025 pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is the sales tax rate in Pakistan 2025?",
+        "answer": "The sales tax rate in Pakistan 2025 is 17%."
+      },
+      {
+        "question": "How do I register for sales tax in Pakistan?",
+        "answer": "To register for sales tax in Pakistan, businesses must have an annual turnover of more than PKR 10 million. Registration is mandatory for Tier-1 retailers, who must integrate their POS systems with the FBR's IRIS portal."
+      },
+      {
+        "question": "What is the penalty for failure to register for sales tax?",
+        "answer": "The penalty for failure to register for sales tax is up to PKR 100,000."
+      },
+      {
+        "question": "How do I integrate my POS system with the FBR's IRIS portal?",
+        "answer": "To integrate your POS system with the FBR's IRIS portal, you must obtain an API token and use the API to generate electronic invoices."
+      },
+      {
+        "question": "What is the benefit of sales tax compliance?",
+        "answer": "The benefits of sales tax compliance include avoiding penalties, improving cash flow, enhancing reputation, and accessing credit facilities."
+      }
+    ],
+    "publishedAt": "2026-08-06T02:58:31.189Z",
+    "readTime": 5,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "Polish currency placed on invoices with a calculator, illustrating financial transactions or budgeting.",
+      "photographer": "Niepoddawajsie.pl Luk",
+      "photographerUrl": "https://www.pexels.com/@niepoddawajsie-pl-luk-2156505622",
+      "pexelsUrl": "https://www.pexels.com/photo/polish-banknotes-with-invoices-and-calculator-38783385/"
+    }
+  },
+  {
     "slug": "fbr-extends-e-invoice-integration-deadline",
     "title": "Guide to FBR Extends E-Invoice Integration Deadline Compliance",
     "metaDescription": "FBR extends e-invoice integration deadline for sales tax registrants in Pakistan. Learn about the new deadline, integration process, and penalties for non-",
