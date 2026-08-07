@@ -342,8 +342,15 @@
       "service": "Inventory Management Software",
       "industry": "clothing store",
       "publishedAt": "2026-08-03T02:40:19.673Z"
+    },
+    {
+      "slug": "inventory-management-software-grocery-store-lahore",
+      "city": "lahore",
+      "service": "Inventory Management Software",
+      "industry": "grocery store",
+      "publishedAt": "2026-08-07T02:54:15.786Z"
     }
   ],
-  "totalPublished": 49,
-  "lastGeneratedAt": "2026-08-03T02:40:19.673Z"
+  "totalPublished": 50,
+  "lastGeneratedAt": "2026-08-07T02:54:15.786Z"
 }
