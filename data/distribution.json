@@ -1091,8 +1091,29 @@
         }
       ],
       "distributedAt": "2026-08-06T02:58:34.344Z"
+    },
+    {
+      "slug": "sales-tax-on-services-in-pakistan-2025-26",
+      "title": "Sales Tax on Services in Pakistan 2025-26",
+      "blogUrl": "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26",
+      "hook": "Sales Tax on Services in Pakistan 2025-26",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-07T02:54:02.993Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-07T02:54:02.993Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-07T02:54:03.004Z"
     }
   ],
-  "lastDistributedAt": "2026-08-06T02:58:34.344Z",
+  "lastDistributedAt": "2026-08-07T02:54:03.004Z",
   "totalDistributed": 0
 }
