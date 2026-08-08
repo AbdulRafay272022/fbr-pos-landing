@@ -349,8 +349,15 @@
       "service": "Inventory Management Software",
       "industry": "grocery store",
       "publishedAt": "2026-08-07T02:54:15.786Z"
+    },
+    {
+      "slug": "restaurant-pos-restaurant-lahore",
+      "city": "lahore",
+      "service": "Restaurant POS",
+      "industry": "restaurant",
+      "publishedAt": "2026-08-08T02:14:47.888Z"
     }
   ],
-  "totalPublished": 50,
-  "lastGeneratedAt": "2026-08-07T02:54:15.786Z"
+  "totalPublished": 51,
+  "lastGeneratedAt": "2026-08-08T02:14:47.888Z"
 }
