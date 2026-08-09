@@ -356,8 +356,15 @@
       "service": "Restaurant POS",
       "industry": "restaurant",
       "publishedAt": "2026-08-08T02:14:47.888Z"
+    },
+    {
+      "slug": "restaurant-pos-retail-lahore",
+      "city": "lahore",
+      "service": "Restaurant POS",
+      "industry": "retail",
+      "publishedAt": "2026-08-09T02:26:23.833Z"
     }
   ],
-  "totalPublished": 51,
-  "lastGeneratedAt": "2026-08-08T02:14:47.888Z"
+  "totalPublished": 52,
+  "lastGeneratedAt": "2026-08-09T02:26:23.833Z"
 }
