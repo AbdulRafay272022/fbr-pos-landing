@@ -1585,6 +1585,24 @@
       "promptTokens": 1102,
       "completionTokens": 1390,
       "totalTokens": 2492
+    },
+    {
+      "ts": "2026-08-10T02:17:47.869Z",
+      "action": "title_optimize",
+      "slug": "sales-tax-exempt-items-in-pakistan-2025",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-10T02:17:48.304Z",
+      "action": "title_optimize",
+      "slug": "fbr-electronic-invoice-integration-deadlines",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1601,8 +1619,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 18484,
-      "calls": 13
+      "tokens": 19284,
+      "calls": 15
     }
   },
   "monthlyTokenBudget": 5000000,
