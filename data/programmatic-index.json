@@ -363,8 +363,15 @@
       "service": "Restaurant POS",
       "industry": "retail",
       "publishedAt": "2026-08-09T02:26:23.833Z"
+    },
+    {
+      "slug": "restaurant-pos-pharmacy-lahore",
+      "city": "lahore",
+      "service": "Restaurant POS",
+      "industry": "pharmacy",
+      "publishedAt": "2026-08-10T02:17:57.209Z"
     }
   ],
-  "totalPublished": 52,
-  "lastGeneratedAt": "2026-08-09T02:26:23.833Z"
+  "totalPublished": 53,
+  "lastGeneratedAt": "2026-08-10T02:17:57.209Z"
 }
