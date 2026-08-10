@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T04:37:48.394Z",
+  "generatedAt": "2026-08-10T04:47:52.186Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -19,20 +19,14 @@
   },
   "recommendations": [
     {
-      "priority": "high",
-      "title": "1 pages have invalid structured data",
-      "detail": "18 schema errors detected — these block rich-result eligibility.",
-      "action": "Fix structured data — see schema audit page."
-    },
-    {
       "priority": "medium",
-      "title": "Cannibalization: 16 keyword clusters",
-      "detail": "\"fbr integration deadline extension\" — 2 pages compete. 2 pages have similar titles. Google will pick one and dilute authority on others.",
-      "action": "Merge into one canonical post."
+      "title": "Cannibalization: 18 keyword clusters",
+      "detail": "\"sales tax pakistan\" — 3 pages compete. 3 pages have similar titles. Google will pick one and dilute authority on others.",
+      "action": "Differentiate intent — assign each post a unique long-tail variant."
     }
   ],
   "gsc": {
-    "rows": 4,
+    "rows": 5,
     "days": 28
   },
   "rankings": {
@@ -61,6 +55,70 @@
   },
   "cannibalization": {
     "clusters": [
+      {
+        "primaryKeyword": "sales tax pakistan",
+        "pages": [
+          {
+            "slug": "sales-tax-exempt-items-in-pakistan-2025",
+            "title": "Top 10 Sales Tax Exempt Items in Pakistan 2025",
+            "titleSim": 1,
+            "keywords": [
+              "sales tax exempt items in pakistan 2025",
+              "sales tax exempt items in pakistan 2025 pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "sales-tax-on-services-in-pakistan-2025-26",
+            "title": "What is Sales Tax on Services in Pakistan 2025-26?",
+            "titleSim": 0.5,
+            "keywords": [
+              "sales tax on services in pakistan 2025 26",
+              "sales tax on services in pakistan 2025 26 pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "sales-tax-pakistan-2025",
+            "title": "What is Sales Tax Pakistan 2025: Explained",
+            "titleSim": 0.5,
+            "keywords": [
+              "sales tax pakistan 2025",
+              "sales tax pakistan 2025 pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          }
+        ],
+        "recommendation": "differentiate",
+        "reason": "3 pages have similar titles. Google will pick one and dilute authority on others."
+      },
+      {
+        "primaryKeyword": "fbr integration deadlines track",
+        "pages": [
+          {
+            "slug": "fbr-electronic-invoice-integration-deadlines",
+            "title": "Top 3 FBR Electronic Invoice Integration Deadlines to Track",
+            "titleSim": 1,
+            "keywords": [
+              "fbr electronic invoice integration deadlines",
+              "fbr electronic invoice integration deadlines pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-e-integration-deadlines",
+            "title": "Top 5 FBR E-Integration Deadlines to Track",
+            "titleSim": 0.6666666666666666,
+            "keywords": [
+              "fbr e integration deadlines",
+              "fbr e integration deadlines pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          }
+        ],
+        "recommendation": "merge",
+        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
+      },
       {
         "primaryKeyword": "fbr integration deadline extension",
         "pages": [
@@ -457,8 +515,48 @@
         "primaryKeyword": "fbr pos compliance pakistan",
         "pages": [
           {
+            "slug": "sales-tax-exempt-items-in-pakistan-2025",
+            "title": "Top 10 Sales Tax Exempt Items in Pakistan 2025",
+            "titleSim": 0,
+            "keywords": [
+              "sales tax exempt items in pakistan 2025",
+              "sales tax exempt items in pakistan 2025 pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "sales-tax-on-services-in-pakistan-2025-26",
+            "title": "What is Sales Tax on Services in Pakistan 2025-26?",
+            "titleSim": 0,
+            "keywords": [
+              "sales tax on services in pakistan 2025 26",
+              "sales tax on services in pakistan 2025 26 pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "sales-tax-pakistan-2025",
+            "title": "What is Sales Tax Pakistan 2025: Explained",
+            "titleSim": 0,
+            "keywords": [
+              "sales tax pakistan 2025",
+              "sales tax pakistan 2025 pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-extends-e-invoice-integration-deadline",
+            "title": "How to Meet FBR Extends E-Invoice Integration Deadline",
+            "titleSim": 0,
+            "keywords": [
+              "fbr extends e invoice integration deadline",
+              "fbr extends e invoice integration deadline pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
             "slug": "fbr-electronic-invoice-integration-deadlines",
-            "title": "Ultimate Guide to FBR Electronic Invoice Integration Deadlines",
+            "title": "Top 3 FBR Electronic Invoice Integration Deadlines to Track",
             "titleSim": 0,
             "keywords": [
               "fbr electronic invoice integration deadlines",
@@ -769,7 +867,7 @@
           }
         ],
         "recommendation": "differentiate",
-        "reason": "31 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
+        "reason": "35 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
       },
       {
         "primaryKeyword": "fbr pos lahore",
@@ -828,11 +926,11 @@
         "reason": "2 pages claim the same keyword \"qr invoice pakistan\". Reassign to unique long-tail variants."
       }
     ],
-    "flagged": 16
+    "flagged": 18
   },
   "cwv": {
     "summary": {
-      "totalAudited": 68,
+      "totalAudited": 72,
       "passingCwv": 0,
       "failingCwv": 0,
       "avgPerformance": null,
@@ -846,7 +944,7 @@
   },
   "schema": {
     "checked": 16,
-    "failed": 1,
+    "failed": 0,
     "issues": 18
   },
   "contentGaps": {

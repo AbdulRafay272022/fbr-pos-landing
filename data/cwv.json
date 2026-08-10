@@ -285,6 +285,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online",
+        "fetchedAt": "2026-08-10T04:47:57.439Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi": [
@@ -2919,12 +2938,50 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines",
+        "fetchedAt": "2026-08-10T04:48:03.059Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension": [
       {
         "url": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension",
         "fetchedAt": "2026-08-03T04:37:56.437Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension",
+        "fetchedAt": "2026-08-10T04:48:04.180Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -2961,12 +3018,50 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi",
+        "fetchedAt": "2026-08-10T04:48:05.302Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension": [
       {
         "url": "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension",
         "fetchedAt": "2026-08-03T04:37:58.691Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension",
+        "fetchedAt": "2026-08-10T04:48:06.424Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -3003,8 +3098,111 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-e-integration-deadlines",
+        "fetchedAt": "2026-08-10T04:48:07.551Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/sales-tax-exempt-items-in-pakistan-2025": [
+      {
+        "url": "https://phelixerp.online/blog/sales-tax-exempt-items-in-pakistan-2025",
+        "fetchedAt": "2026-08-10T04:47:58.562Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26": [
+      {
+        "url": "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26",
+        "fetchedAt": "2026-08-10T04:47:59.684Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/sales-tax-pakistan-2025": [
+      {
+        "url": "https://phelixerp.online/blog/sales-tax-pakistan-2025",
+        "fetchedAt": "2026-08-10T04:48:00.809Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-extends-e-invoice-integration-deadline": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-extends-e-invoice-integration-deadline",
+        "fetchedAt": "2026-08-10T04:48:01.937Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ]
   },
-  "lastFullAuditAt": "2026-08-03T04:38:04.315Z"
+  "lastFullAuditAt": "2026-08-10T04:48:07.551Z"
 }

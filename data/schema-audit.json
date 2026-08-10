@@ -2,7 +2,7 @@
   "checks": {
     "https://phelixerp.online": {
       "url": "https://phelixerp.online",
-      "fetchedAt": "2026-08-03T04:38:04.316Z",
+      "fetchedAt": "2026-08-10T04:48:07.551Z",
       "blocks": [
         {
           "type": "Organization",
@@ -14318,7 +14318,7 @@
     },
     "https://phelixerp.online/blog/fbr-ntn-registration-requirements": {
       "url": "https://phelixerp.online/blog/fbr-ntn-registration-requirements",
-      "fetchedAt": "2026-08-03T04:38:05.728Z",
+      "fetchedAt": "2026-08-10T04:48:10.193Z",
       "blocks": [
         {
           "type": "Organization",
@@ -15844,7 +15844,7 @@
     },
     "https://phelixerp.online/blog/fbr-integration-deadline": {
       "url": "https://phelixerp.online/blog/fbr-integration-deadline",
-      "fetchedAt": "2026-08-03T04:38:05.012Z",
+      "fetchedAt": "2026-08-10T04:48:09.663Z",
       "blocks": [
         {
           "type": "Organization",
@@ -16099,7 +16099,7 @@
     },
     "https://phelixerp.online/blog/fbr-tier-1-retailers": {
       "url": "https://phelixerp.online/blog/fbr-tier-1-retailers",
-      "fetchedAt": "2026-08-03T04:38:05.175Z",
+      "fetchedAt": "2026-08-10T04:48:09.770Z",
       "blocks": [
         {
           "type": "Organization",
@@ -16354,7 +16354,7 @@
     },
     "https://phelixerp.online/blog/restaurant-pos-software-pakistan": {
       "url": "https://phelixerp.online/blog/restaurant-pos-software-pakistan",
-      "fetchedAt": "2026-08-03T04:38:05.423Z",
+      "fetchedAt": "2026-08-10T04:48:09.870Z",
       "blocks": [
         {
           "type": "Organization",
@@ -16609,7 +16609,7 @@
     },
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-quetta": {
       "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-quetta",
-      "fetchedAt": "2026-08-03T04:38:05.504Z",
+      "fetchedAt": "2026-08-10T04:48:09.986Z",
       "blocks": [
         {
           "type": "Organization",
@@ -16832,7 +16832,7 @@
     },
     "https://phelixerp.online/blog/pos-software-pakistan-free-download-with-crack": {
       "url": "https://phelixerp.online/blog/pos-software-pakistan-free-download-with-crack",
-      "fetchedAt": "2026-08-03T04:38:05.588Z",
+      "fetchedAt": "2026-08-10T04:48:10.097Z",
       "blocks": [
         {
           "type": "Organization",
@@ -17087,7 +17087,7 @@
     },
     "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines": {
       "url": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines",
-      "fetchedAt": "2026-08-03T04:38:04.460Z",
+      "fetchedAt": "2026-08-10T04:48:09.219Z",
       "blocks": [
         {
           "type": "Organization",
@@ -17136,7 +17136,7 @@
           "raw": {
             "@context": "https://schema.org",
             "@type": "BlogPosting",
-            "headline": "Ultimate Guide to FBR Electronic Invoice Integration Deadlines",
+            "headline": "Top 3 FBR Electronic Invoice Integration Deadlines to Track",
             "description": "Discover the latest FBR electronic invoice integration deadlines and ensure compliance with FBR IRIS to avoid penalties of up to PKR 500,000",
             "url": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines",
             "datePublished": "2026-08-03T02:40:02.630Z",
@@ -17194,7 +17194,7 @@
               {
                 "@type": "ListItem",
                 "position": 3,
-                "name": "Ultimate Guide to FBR Electronic Invoice Integration Deadlines",
+                "name": "Top 3 FBR Electronic Invoice Integration Deadlines to Track",
                 "item": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines"
               }
             ]
@@ -17342,7 +17342,7 @@
     },
     "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension": {
       "url": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension",
-      "fetchedAt": "2026-08-03T04:38:04.563Z",
+      "fetchedAt": "2026-08-10T04:48:09.308Z",
       "blocks": [
         {
           "type": "Organization",
@@ -17597,7 +17597,7 @@
     },
     "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi": {
       "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi",
-      "fetchedAt": "2026-08-03T04:38:04.735Z",
+      "fetchedAt": "2026-08-10T04:48:09.397Z",
       "blocks": [
         {
           "type": "Organization",
@@ -17852,7 +17852,7 @@
     },
     "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension": {
       "url": "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension",
-      "fetchedAt": "2026-08-03T04:38:04.832Z",
+      "fetchedAt": "2026-08-10T04:48:09.476Z",
       "blocks": [
         {
           "type": "Organization",
@@ -18107,7 +18107,7 @@
     },
     "https://phelixerp.online/blog/fbr-e-integration-deadlines": {
       "url": "https://phelixerp.online/blog/fbr-e-integration-deadlines",
-      "fetchedAt": "2026-08-03T04:38:04.948Z",
+      "fetchedAt": "2026-08-10T04:48:09.568Z",
       "blocks": [
         {
           "type": "Organization",
@@ -18359,7 +18359,1027 @@
         }
       ],
       "passes": true
+    },
+    "https://phelixerp.online/blog/sales-tax-exempt-items-in-pakistan-2025": {
+      "url": "https://phelixerp.online/blog/sales-tax-exempt-items-in-pakistan-2025",
+      "fetchedAt": "2026-08-10T04:48:08.721Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 10 Sales Tax Exempt Items in Pakistan 2025",
+            "description": "Discover sales tax exempt items in Pakistan 2025. Learn about FBR IRIS, STRN, and Tier-1 retailers. Get compliant with Phelix ERP",
+            "url": "https://phelixerp.online/blog/sales-tax-exempt-items-in-pakistan-2025",
+            "datePublished": "2026-08-10T02:17:42.422Z",
+            "dateModified": "2026-08-10T02:17:42.422Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "sales tax exempt items in pakistan 2025, sales tax exempt items in pakistan 2025 pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/sales-tax-exempt-items-in-pakistan-2025"
+            },
+            "wordCount": 1736
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 10 Sales Tax Exempt Items in Pakistan 2025",
+                "item": "https://phelixerp.online/blog/sales-tax-exempt-items-in-pakistan-2025"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for sales tax exempt items in pakistan 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Sales Tax Exempt Items in Pakistan 2025",
+            "description": "Discover sales tax exempt items in Pakistan 2025. Learn about FBR IRIS, STRN, and Tier-1 retailers. Get compliant with Phelix ERP",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-08-10T02:17:42.422Z",
+            "dateModified": "2026-08-10T02:17:42.422Z",
+            "url": "https://phelixerp.online/blog/sales-tax-exempt-items-in-pakistan-2025",
+            "keywords": "sales tax exempt items in pakistan 2025, sales tax exempt items in pakistan 2025 pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for sales tax exempt items in pakistan 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26": {
+      "url": "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26",
+      "fetchedAt": "2026-08-10T04:48:08.897Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "What is Sales Tax on Services in Pakistan 2025-26?",
+            "description": "Discover the latest sales tax rates on services in Pakistan for 2025-26, including SROs and FBR regulations, to ensure compliance and avoid penalties.",
+            "url": "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26",
+            "datePublished": "2026-08-07T02:53:59.609Z",
+            "dateModified": "2026-08-07T02:53:59.609Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "sales tax on services in pakistan 2025 26, sales tax on services in pakistan 2025 26 pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26"
+            },
+            "wordCount": 1744
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "What is Sales Tax on Services in Pakistan 2025-26?",
+                "item": "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for sales tax on services in pakistan 2025 26?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Sales Tax on Services in Pakistan 2025-26",
+            "description": "Discover the latest sales tax rates on services in Pakistan for 2025-26, including SROs and FBR regulations, to ensure compliance and avoid penalties.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-08-07T02:53:59.609Z",
+            "dateModified": "2026-08-07T02:53:59.609Z",
+            "url": "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26",
+            "keywords": "sales tax on services in pakistan 2025 26, sales tax on services in pakistan 2025 26 pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for sales tax on services in pakistan 2025 26?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/sales-tax-pakistan-2025": {
+      "url": "https://phelixerp.online/blog/sales-tax-pakistan-2025",
+      "fetchedAt": "2026-08-10T04:48:08.982Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "What is Sales Tax Pakistan 2025: Explained",
+            "description": "Learn about sales tax in Pakistan 2025, including rates, registration, and compliance. Discover how Phelix ERP can help with FBR POS integration.",
+            "url": "https://phelixerp.online/blog/sales-tax-pakistan-2025",
+            "datePublished": "2026-08-06T02:58:31.189Z",
+            "dateModified": "2026-08-06T02:58:31.189Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "sales tax pakistan 2025, sales tax pakistan 2025 pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/sales-tax-pakistan-2025"
+            },
+            "wordCount": 1245
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "What is Sales Tax Pakistan 2025: Explained",
+                "item": "https://phelixerp.online/blog/sales-tax-pakistan-2025"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the sales tax rate in Pakistan 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The sales tax rate in Pakistan 2025 is 17%."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I register for sales tax in Pakistan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To register for sales tax in Pakistan, businesses must have an annual turnover of more than PKR 10 million. Registration is mandatory for Tier-1 retailers, who must integrate their POS systems with the FBR's IRIS portal."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for failure to register for sales tax?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to register for sales tax is up to PKR 100,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I integrate my POS system with the FBR's IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate your POS system with the FBR's IRIS portal, you must obtain an API token and use the API to generate electronic invoices."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the benefit of sales tax compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of sales tax compliance include avoiding penalties, improving cash flow, enhancing reputation, and accessing credit facilities."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Sales Tax Pakistan 2025",
+            "description": "Learn about sales tax in Pakistan 2025, including rates, registration, and compliance. Discover how Phelix ERP can help with FBR POS integration.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-08-06T02:58:31.189Z",
+            "dateModified": "2026-08-06T02:58:31.189Z",
+            "url": "https://phelixerp.online/blog/sales-tax-pakistan-2025",
+            "keywords": "sales tax pakistan 2025, sales tax pakistan 2025 pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the sales tax rate in Pakistan 2025?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The sales tax rate in Pakistan 2025 is 17%."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I register for sales tax in Pakistan?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To register for sales tax in Pakistan, businesses must have an annual turnover of more than PKR 10 million. Registration is mandatory for Tier-1 retailers, who must integrate their POS systems with the FBR's IRIS portal."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for failure to register for sales tax?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for failure to register for sales tax is up to PKR 100,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I integrate my POS system with the FBR's IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate your POS system with the FBR's IRIS portal, you must obtain an API token and use the API to generate electronic invoices."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the benefit of sales tax compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of sales tax compliance include avoiding penalties, improving cash flow, enhancing reputation, and accessing credit facilities."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-extends-e-invoice-integration-deadline": {
+      "url": "https://phelixerp.online/blog/fbr-extends-e-invoice-integration-deadline",
+      "fetchedAt": "2026-08-10T04:48:09.086Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "How to Meet FBR Extends E-Invoice Integration Deadline",
+            "description": "FBR extends e-invoice integration deadline for sales tax registrants in Pakistan. Learn about the new deadline, integration process, and penalties for non-",
+            "url": "https://phelixerp.online/blog/fbr-extends-e-invoice-integration-deadline",
+            "datePublished": "2026-08-05T02:00:29.471Z",
+            "dateModified": "2026-08-05T02:00:29.471Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr extends e invoice integration deadline, fbr extends e invoice integration deadline pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-extends-e-invoice-integration-deadline"
+            },
+            "wordCount": 1090
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "How to Meet FBR Extends E-Invoice Integration Deadline",
+                "item": "https://phelixerp.online/blog/fbr-extends-e-invoice-integration-deadline"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR e-invoice integration deadline extension?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The FBR has extended the deadline for e-invoice integration for sales tax registrants in Pakistan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the technical requirements for e-invoice integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The technical requirements for e-invoice integration include API protocols and data formats."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the penalties for non-compliance with the e-invoicing system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalties for non-compliance with the e-invoicing system include a fine of PKR 10,000 for each day of non-compliance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can businesses integrate e-invoices with the FBR's IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Businesses can integrate e-invoices with the FBR's IRIS portal using third-party software or by developing their own in-house solution."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the benefit of e-invoice integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of e-invoice integration include reduced tax evasion, increased transparency in business transactions, and improved efficiency in invoicing and payment processing."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR Extends E-Invoice Integration Deadline",
+            "description": "FBR extends e-invoice integration deadline for sales tax registrants in Pakistan. Learn about the new deadline, integration process, and penalties for non-",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-08-05T02:00:29.471Z",
+            "dateModified": "2026-08-05T02:00:29.471Z",
+            "url": "https://phelixerp.online/blog/fbr-extends-e-invoice-integration-deadline",
+            "keywords": "fbr extends e invoice integration deadline, fbr extends e invoice integration deadline pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR e-invoice integration deadline extension?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The FBR has extended the deadline for e-invoice integration for sales tax registrants in Pakistan."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the technical requirements for e-invoice integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The technical requirements for e-invoice integration include API protocols and data formats."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the penalties for non-compliance with the e-invoicing system?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalties for non-compliance with the e-invoicing system include a fine of PKR 10,000 for each day of non-compliance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How can businesses integrate e-invoices with the FBR's IRIS portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Businesses can integrate e-invoices with the FBR's IRIS portal using third-party software or by developing their own in-house solution."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the benefit of e-invoice integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of e-invoice integration include reduced tax evasion, increased transparency in business transactions, and improved efficiency in invoicing and payment processing."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
     }
   },
-  "lastAuditedAt": "2026-08-03T04:38:06.261Z"
+  "lastAuditedAt": "2026-08-10T04:48:10.288Z"
 }
