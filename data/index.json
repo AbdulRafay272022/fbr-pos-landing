@@ -1,5 +1,41 @@
 [
   {
+    "slug": "best-fbr-pos-system-for-restaurant-in-islamabad",
+    "title": "Best FBR POS System for Restaurant in Islamabad",
+    "metaDescription": "Discover the best FBR POS system for your restaurant in Islamabad, ensuring compliance with FBR regulations and streamlining your business operations.",
+    "keywords": [
+      "best fbr pos system for restaurant in islamabad",
+      "best fbr pos system for restaurant in islamabad pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is FBR POS Integration?",
+        "answer": "FBR POS integration is the process of connecting your POS system with the FBR IRIS portal to ensure compliance with FBR regulations."
+      },
+      {
+        "question": "How to Integrate FBR POS System?",
+        "answer": "To integrate your POS system with the FBR IRIS portal, you need to obtain a STRN, generate a QR invoice for each sale, and integrate your POS system using the FBR API."
+      },
+      {
+        "question": "What is the Penalty for Non-Compliance?",
+        "answer": "The penalty for non-compliance with FBR regulations can be up to PKR 50,000."
+      }
+    ],
+    "publishedAt": "2026-08-11T02:39:26.254Z",
+    "readTime": 4,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/2598025/pexels-photo-2598025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/2598025/pexels-photo-2598025.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A man cooking in a traditional restaurant setting, showcasing cultural ambiance and culinary skills.",
+      "photographer": "Aa Dil",
+      "photographerUrl": "https://www.pexels.com/@aadil",
+      "pexelsUrl": "https://www.pexels.com/photo/man-cooks-at-the-diner-2598025/"
+    }
+  },
+  {
     "slug": "sales-tax-exempt-items-in-pakistan-2025",
     "title": "Top 10 Sales Tax Exempt Items in Pakistan 2025",
     "metaDescription": "Discover sales tax exempt items in Pakistan 2025. Learn about FBR IRIS, STRN, and Tier-1 retailers. Get compliant with Phelix ERP",
