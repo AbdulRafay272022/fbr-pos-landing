@@ -1611,6 +1611,15 @@
       "promptTokens": 1102,
       "completionTokens": 1570,
       "totalTokens": 2672
+    },
+    {
+      "ts": "2026-08-11T02:39:33.636Z",
+      "action": "title_optimize",
+      "slug": "best-fbr-pos-system-for-restaurant-in-islamabad",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1627,8 +1636,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 21956,
-      "calls": 16
+      "tokens": 22356,
+      "calls": 17
     }
   },
   "monthlyTokenBudget": 5000000,
