@@ -7,7 +7,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 4.75,
-      "fetchedAt": "2026-08-11T02:39:29.222Z"
+      "fetchedAt": "2026-08-12T02:06:32.355Z"
     },
     {
       "slug": "how-to-setup-fbr-penalty-in-pakistan",
@@ -16,7 +16,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 9,
-      "fetchedAt": "2026-08-11T02:39:29.222Z"
+      "fetchedAt": "2026-08-12T02:06:32.355Z"
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
@@ -25,7 +25,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 5,
-      "fetchedAt": "2026-08-11T02:39:29.222Z"
+      "fetchedAt": "2026-08-12T02:06:32.355Z"
     }
   ],
   "queries": [
@@ -35,10 +35,10 @@
       "clicks": 0,
       "ctr": 0,
       "position": 24.5,
-      "fetchedAt": "2026-08-11T02:39:29.222Z"
+      "fetchedAt": "2026-08-12T02:06:32.355Z"
     }
   ],
-  "lastFetchedAt": "2026-08-11T02:39:29.222Z",
+  "lastFetchedAt": "2026-08-12T02:06:32.355Z",
   "summary": {
     "totalImpressions": 12,
     "totalClicks": 0,
