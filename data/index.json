@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-iris-portal-registration-for-unregistered-person",
+    "title": "FBR IRIS Portal Registration Guide",
+    "metaDescription": "Register for FBR IRIS portal as an unregistered person. Learn step-by-step process, benefits, and common mistakes to avoid penalties up to PKR 100,000.",
+    "keywords": [
+      "fbr iris portal registration for unregistered person",
+      "fbr iris portal registration for unregistered person pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is FBR IRIS Portal Registration?",
+        "answer": "FBR IRIS portal registration is the process of registering with the Federal Board of Revenue (FBR) IRIS portal to file tax returns and pay taxes online."
+      },
+      {
+        "question": "How to Register for FBR IRIS Portal?",
+        "answer": "To register for the FBR IRIS portal, visit the FBR IRIS portal website and fill in the required information."
+      },
+      {
+        "question": "What are the Benefits of FBR IRIS Portal Registration?",
+        "answer": "The benefits of registering for the FBR IRIS portal include easy tax filing, reduced penalties, and improved compliance."
+      },
+      {
+        "question": "What are the Common Mistakes to Avoid?",
+        "answer": "Common mistakes to avoid when registering for the FBR IRIS portal include incorrect information, incomplete documents, and invalid username and password."
+      },
+      {
+        "question": "How to Integrate FBR IRIS Portal with Accounting System?",
+        "answer": "To integrate the FBR IRIS portal with your accounting system, you need to use API technology. For more information, visit [INTERNAL_LINK: \"FBR POS integration\"]."
+      }
+    ],
+    "publishedAt": "2026-08-12T02:06:11.049Z",
+    "readTime": 4,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
     "slug": "best-fbr-pos-system-for-restaurant-in-islamabad",
     "title": "Top 5 Best FBR POS System for Restaurant in Islamabad",
     "metaDescription": "Discover the best FBR POS system for your restaurant in Islamabad, ensuring compliance with FBR regulations and streamlining your business operations.",
