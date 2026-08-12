@@ -370,8 +370,15 @@
       "service": "Restaurant POS",
       "industry": "pharmacy",
       "publishedAt": "2026-08-10T02:17:57.209Z"
+    },
+    {
+      "slug": "restaurant-pos-clothing-store-lahore",
+      "city": "lahore",
+      "service": "Restaurant POS",
+      "industry": "clothing store",
+      "publishedAt": "2026-08-12T02:06:44.478Z"
     }
   ],
-  "totalPublished": 53,
-  "lastGeneratedAt": "2026-08-10T02:17:57.209Z"
+  "totalPublished": 54,
+  "lastGeneratedAt": "2026-08-12T02:06:44.478Z"
 }
