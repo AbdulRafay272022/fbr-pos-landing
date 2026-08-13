@@ -377,8 +377,15 @@
       "service": "Restaurant POS",
       "industry": "clothing store",
       "publishedAt": "2026-08-12T02:06:44.478Z"
+    },
+    {
+      "slug": "restaurant-pos-grocery-store-lahore",
+      "city": "lahore",
+      "service": "Restaurant POS",
+      "industry": "grocery store",
+      "publishedAt": "2026-08-13T02:25:30.341Z"
     }
   ],
-  "totalPublished": 54,
-  "lastGeneratedAt": "2026-08-12T02:06:44.478Z"
+  "totalPublished": 55,
+  "lastGeneratedAt": "2026-08-13T02:25:30.341Z"
 }
