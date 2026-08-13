@@ -1,6 +1,6 @@
 {
   "slug": "fbr-iris-portal-irisfbrgovpk",
-  "title": "FBR IRIS Portal (IRIS.FBR.Gov.PK)",
+  "title": "What is FBR IRIS Portal (IRIS.FBR.Gov.PK)?",
   "metaDescription": "FBR IRIS Portal (IRIS.FBR.Gov.PK) — a practical, up-to-date guide.",
   "keywords": [
     "fbr iris portal (iris.fbr.gov.pk)",
@@ -32,7 +32,7 @@
   ],
   "publishedAt": "2026-08-13T02:25:11.373Z",
   "readTime": 7,
-  "version": 1,
+  "version": 2,
   "authorName": "Phelix ERP Team",
   "heroImage": {
     "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -41,5 +41,6 @@
     "photographer": "pierre matile",
     "photographerUrl": "https://www.pexels.com/@open-borders",
     "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
-  }
+  },
+  "lastUpdated": "2026-08-13T02:25:19.184Z"
 }
