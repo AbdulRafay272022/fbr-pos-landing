@@ -1133,8 +1133,29 @@
         }
       ],
       "distributedAt": "2026-08-11T02:39:29.087Z"
+    },
+    {
+      "slug": "fbr-iris-portal-irisfbrgovpk",
+      "title": "FBR IRIS Portal (IRIS.FBR.Gov.PK)",
+      "blogUrl": "https://phelixerp.online/blog/fbr-iris-portal-irisfbrgovpk",
+      "hook": "FBR IRIS Portal (IRIS.FBR.Gov.PK)",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-13T02:25:14.352Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-13T02:25:14.352Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-13T02:25:14.353Z"
     }
   ],
-  "lastDistributedAt": "2026-08-11T02:39:29.087Z",
+  "lastDistributedAt": "2026-08-13T02:25:14.353Z",
   "totalDistributed": 0
 }
