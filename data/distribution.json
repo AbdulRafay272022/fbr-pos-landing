@@ -1154,8 +1154,29 @@
         }
       ],
       "distributedAt": "2026-08-13T02:25:14.353Z"
+    },
+    {
+      "slug": "what-is-fbr-iris-account",
+      "title": "FBR IRIS Account",
+      "blogUrl": "https://phelixerp.online/blog/what-is-fbr-iris-account",
+      "hook": "FBR IRIS Account",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-14T02:32:25.149Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-14T02:32:25.149Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-14T02:32:25.149Z"
     }
   ],
-  "lastDistributedAt": "2026-08-13T02:25:14.353Z",
+  "lastDistributedAt": "2026-08-14T02:32:25.149Z",
   "totalDistributed": 0
 }
