@@ -1,5 +1,49 @@
 [
   {
+    "slug": "what-is-fbr-iris-account",
+    "title": "FBR IRIS Account",
+    "metaDescription": "Discover the benefits and features of an FBR IRIS account and learn how to register and use it for your business in Pakistan.",
+    "keywords": [
+      "what is fbr iris account",
+      "what is fbr iris account pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "What is the Penalty for Not Registering for an FBR IRIS Account?",
+        "answer": "The penalty for not registering for an FBR IRIS account is PKR 10,000."
+      },
+      {
+        "question": "How to Register for an FBR IRIS Account?",
+        "answer": "To register for an FBR IRIS account, visit the FBR IRIS portal website and follow the registration process."
+      },
+      {
+        "question": "What is the Benefit of Using the FBR IRIS Account?",
+        "answer": "The benefit of using the FBR IRIS account is easy access to tax-related services, reduced paperwork, and improved compliance with tax laws."
+      },
+      {
+        "question": "How to File Tax Returns Using the FBR IRIS Account?",
+        "answer": "To file tax returns using the FBR IRIS account, log in to your account, click on the 'Tax Returns' tab, and follow the filing process."
+      },
+      {
+        "question": "What is the Deadline for Filing Tax Returns Using the FBR IRIS Account?",
+        "answer": "The deadline for filing tax returns using the FBR IRIS account is the last day of the tax year."
+      }
+    ],
+    "publishedAt": "2026-08-14T02:32:21.762Z",
+    "readTime": 5,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A glimpse of traditional butcher shop in Pakistan, showcasing local culture.",
+      "photographer": "pierre matile",
+      "photographerUrl": "https://www.pexels.com/@open-borders",
+      "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
+    }
+  },
+  {
     "slug": "fbr-iris-portal-irisfbrgovpk",
     "title": "What is FBR IRIS Portal (IRIS.FBR.Gov.PK)?",
     "metaDescription": "FBR IRIS Portal (IRIS.FBR.Gov.PK) — a practical, up-to-date guide.",
