@@ -1654,6 +1654,24 @@
       "promptTokens": 1114,
       "completionTokens": 1605,
       "totalTokens": 2719
+    },
+    {
+      "ts": "2026-08-14T02:32:27.709Z",
+      "action": "title_optimize",
+      "slug": "what-is-fbr-iris-account",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-14T02:32:28.254Z",
+      "action": "title_optimize",
+      "slug": "fbr-iris-portal-registration-for-unregistered-person",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1670,8 +1688,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 28724,
-      "calls": 21
+      "tokens": 29524,
+      "calls": 23
     }
   },
   "monthlyTokenBudget": 5000000,

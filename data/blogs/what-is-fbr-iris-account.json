@@ -1,6 +1,6 @@
 {
   "slug": "what-is-fbr-iris-account",
-  "title": "FBR IRIS Account",
+  "title": "What Is FBR IRIS Account?",
   "metaDescription": "Discover the benefits and features of an FBR IRIS account and learn how to register and use it for your business in Pakistan.",
   "keywords": [
     "what is fbr iris account",
@@ -32,7 +32,7 @@
   ],
   "publishedAt": "2026-08-14T02:32:21.762Z",
   "readTime": 5,
-  "version": 1,
+  "version": 2,
   "authorName": "Phelix ERP Team",
   "heroImage": {
     "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
@@ -41,5 +41,6 @@
     "photographer": "pierre matile",
     "photographerUrl": "https://www.pexels.com/@open-borders",
     "pexelsUrl": "https://www.pexels.com/photo/traditional-butcher-shop-scene-in-pakistan-36870381/"
-  }
+  },
+  "lastUpdated": "2026-08-14T02:32:27.709Z"
 }
