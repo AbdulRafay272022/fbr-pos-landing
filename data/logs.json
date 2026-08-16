@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mssc05o9-5zjc0",
-      "ts": "2026-08-14T02:32:11.193Z",
+      "id": "msv6tb20-b2nij",
+      "ts": "2026-08-16T02:30:12.024Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mssc05o7",
+        "runId": "run-msv6tb1y",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mssc0668-wncu6",
-      "ts": "2026-08-14T02:32:11.840Z",
+      "id": "msv6tbik-lizqn",
+      "ts": "2026-08-16T02:30:12.620Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mssc05o7",
+        "runId": "run-msv6tb1y",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4268 unused keywords, last scrape 24.0d ago (next forced refresh in 6d)",
-          "generate": "24.1h since last generation, 4268 keywords available",
-          "update": "skipped: last update 48.4h ago (min 168h)",
+          "scrape": "skipped: 4268 unused keywords, last scrape 26.0d ago (next forced refresh in 4d)",
+          "generate": "48.0h since last generation, 4268 keywords available",
+          "update": "skipped: last update 96.4h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,108 +48,108 @@
       }
     },
     {
-      "id": "mssc0flr-rq010",
-      "ts": "2026-08-14T02:32:24.063Z",
+      "id": "msv6te4y-03bn8",
+      "ts": "2026-08-16T02:30:16.018Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
-      "success": true,
-      "slug": "what-is-fbr-iris-account",
-      "words": 863,
-      "source": "groq",
-      "durationMs": 10932,
+      "success": false,
+      "durationMs": 2101,
       "details": {
-        "runId": "run-mssc05o7"
+        "runId": "run-msv6tb1y"
       }
     },
     {
-      "id": "mssc0hlg-yqauz",
-      "ts": "2026-08-14T02:32:26.644Z",
+      "id": "msv6tg9r-0haz0",
+      "ts": "2026-08-16T02:30:18.783Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2581,
+      "durationMs": 2765,
       "details": {
-        "runId": "run-mssc05o7",
+        "runId": "run-msv6tb1y",
         "pages": 3,
         "totalImpressions": 12
       }
     },
     {
-      "id": "mssc0hut-wgrt6",
-      "ts": "2026-08-14T02:32:26.981Z",
+      "id": "msv6tghn-xvyl8",
+      "ts": "2026-08-16T02:30:19.067Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 336,
+      "durationMs": 284,
       "details": {
-        "runId": "run-mssc05o7",
+        "runId": "run-msv6tb1y",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mssc0m4n-z4nxk",
-      "ts": "2026-08-14T02:32:32.519Z",
+      "id": "msv6thr4-9shns",
+      "ts": "2026-08-16T02:30:20.704Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 5538,
+      "durationMs": 1637,
       "details": {
-        "runId": "run-mssc05o7",
-        "optimizedCount": 2
-      }
-    },
-    {
-      "id": "mssc0mka-2ip8s",
-      "ts": "2026-08-14T02:32:33.082Z",
-      "site": "Phelix ERP",
-      "event": "landing_generated",
-      "level": "info",
-      "success": true,
-      "durationMs": 562,
-      "details": {
-        "runId": "run-mssc05o7"
-      }
-    },
-    {
-      "id": "mssc0msm-66xfe",
-      "ts": "2026-08-14T02:32:33.382Z",
-      "site": "Phelix ERP",
-      "event": "conversion_optimized",
-      "level": "info",
-      "success": true,
-      "durationMs": 299,
-      "details": {
-        "runId": "run-mssc05o7",
+        "runId": "run-msv6tb1y",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mssc0pzf-vceel",
-      "ts": "2026-08-14T02:32:37.515Z",
+      "id": "msv6ti2z-ddwre",
+      "ts": "2026-08-16T02:30:21.131Z",
+      "site": "Phelix ERP",
+      "event": "landing_generated",
+      "level": "info",
+      "success": true,
+      "durationMs": 427,
+      "details": {
+        "runId": "run-msv6tb1y"
+      }
+    },
+    {
+      "id": "msv6tib9-36l2i",
+      "ts": "2026-08-16T02:30:21.430Z",
+      "site": "Phelix ERP",
+      "event": "conversion_optimized",
+      "level": "info",
+      "success": true,
+      "durationMs": 298,
+      "details": {
+        "runId": "run-msv6tb1y",
+        "optimizedCount": 0
+      }
+    },
+    {
+      "id": "msv6tjj3-orty0",
+      "ts": "2026-08-16T02:30:23.007Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 4133,
+      "durationMs": 1577,
       "details": {
-        "runId": "run-mssc05o7",
+        "runId": "run-msv6tb1y",
         "decaysFound": 0
       }
     },
     {
-      "id": "mssc0qe0-tmy2e",
-      "ts": "2026-08-14T02:32:38.040Z",
+      "id": "msv6to8v-zmu78",
+      "ts": "2026-08-16T02:30:29.119Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
-      "success": false,
-      "durationMs": 525,
+      "success": true,
+      "slug": "retail-management-software-restaurant-lahore",
+      "durationMs": 6112,
       "details": {
-        "runId": "run-mssc05o7"
+        "runId": "run-msv6tb1y",
+        "city": "lahore",
+        "service": "Retail Management Software"
       }
     }
   ],
