@@ -3,11 +3,11 @@
     {
       "slug": "fbr-pos-system-restaurants-pakistan-2026",
       "url": "https://phelixerp.online/blog/fbr-pos-system-restaurants-pakistan-2026",
-      "impressions": 9,
+      "impressions": 6,
       "clicks": 0,
       "ctr": 0,
-      "position": 5.222222222222222,
-      "fetchedAt": "2026-08-16T02:30:17.297Z"
+      "position": 7.333333333333333,
+      "fetchedAt": "2026-08-17T02:16:47.961Z"
     },
     {
       "slug": "how-to-setup-fbr-penalty-in-pakistan",
@@ -16,7 +16,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 9,
-      "fetchedAt": "2026-08-16T02:30:17.297Z"
+      "fetchedAt": "2026-08-17T02:16:47.961Z"
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
@@ -25,7 +25,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 5,
-      "fetchedAt": "2026-08-16T02:30:17.297Z"
+      "fetchedAt": "2026-08-17T02:16:47.961Z"
     }
   ],
   "queries": [
@@ -35,22 +35,22 @@
       "clicks": 0,
       "ctr": 0,
       "position": 24.5,
-      "fetchedAt": "2026-08-16T02:30:17.297Z"
+      "fetchedAt": "2026-08-17T02:16:47.958Z"
     }
   ],
-  "lastFetchedAt": "2026-08-16T02:30:17.297Z",
+  "lastFetchedAt": "2026-08-17T02:16:47.961Z",
   "summary": {
-    "totalImpressions": 12,
+    "totalImpressions": 9,
     "totalClicks": 0,
     "avgCTR": 0,
-    "avgPosition": 6.407407407407407
+    "avgPosition": 7.111111111111111
   },
   "topPages": [
     {
       "slug": "fbr-pos-system-restaurants-pakistan-2026",
-      "impressions": 9,
+      "impressions": 6,
       "ctr": 0,
-      "position": 5.222222222222222
+      "position": 7.333333333333333
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
