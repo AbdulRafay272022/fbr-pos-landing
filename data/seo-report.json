@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T04:47:52.186Z",
+  "generatedAt": "2026-08-17T04:17:22.480Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -20,13 +20,13 @@
   "recommendations": [
     {
       "priority": "medium",
-      "title": "Cannibalization: 18 keyword clusters",
-      "detail": "\"sales tax pakistan\" — 3 pages compete. 3 pages have similar titles. Google will pick one and dilute authority on others.",
-      "action": "Differentiate intent — assign each post a unique long-tail variant."
+      "title": "Cannibalization: 20 keyword clusters",
+      "detail": "\"fbr iris portal registration\" — 2 pages compete. 2 pages have similar titles. Google will pick one and dilute authority on others.",
+      "action": "Merge into one canonical post."
     }
   ],
   "gsc": {
-    "rows": 5,
+    "rows": 8,
     "days": 28
   },
   "rankings": {
@@ -55,6 +55,60 @@
   },
   "cannibalization": {
     "clusters": [
+      {
+        "primaryKeyword": "fbr iris portal registration",
+        "pages": [
+          {
+            "slug": "fbr-iris-portal-registration-for-unregistered-person",
+            "title": "What is FBR IRIS Portal Registration for Unregistered Person?",
+            "titleSim": 1,
+            "keywords": [
+              "fbr iris portal registration for unregistered person",
+              "fbr iris portal registration for unregistered person pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-iris-portal-pakistan-pos-registration-guide",
+            "title": "Top 3 Benefits of FBR IRIS Portal POS Registration",
+            "titleSim": 0.5,
+            "keywords": [
+              "fbr iris portal pos registration",
+              "register pos fbr iris",
+              "fbr iris portal pakistan"
+            ]
+          }
+        ],
+        "recommendation": "merge",
+        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
+      },
+      {
+        "primaryKeyword": "fbr pos system",
+        "pages": [
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-islamabad",
+            "title": "Top 5 Best FBR POS System for Restaurant in Islamabad",
+            "titleSim": 1,
+            "keywords": [
+              "best fbr pos system for restaurant in islamabad",
+              "best fbr pos system for restaurant in islamabad pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-pos-invoicing-system",
+            "title": "What is FBR POS Invoicing System?",
+            "titleSim": 0.5,
+            "keywords": [
+              "fbr pos invoicing system",
+              "how fbr invoicing works",
+              "fbr pos invoice process"
+            ]
+          }
+        ],
+        "recommendation": "merge",
+        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
+      },
       {
         "primaryKeyword": "sales tax pakistan",
         "pages": [
@@ -174,7 +228,7 @@
         "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
-        "primaryKeyword": "fbr pos system",
+        "primaryKeyword": "fbr pos system retail",
         "pages": [
           {
             "slug": "best-fbr-pos-system-for-retail-in-quetta",
@@ -215,20 +269,10 @@
               "best fbr pos system for retail in rawalpindi pakistan",
               "fbr pos compliance pakistan"
             ]
-          },
-          {
-            "slug": "fbr-pos-invoicing-system",
-            "title": "What is FBR POS Invoicing System?",
-            "titleSim": 0.5,
-            "keywords": [
-              "fbr pos invoicing system",
-              "how fbr invoicing works",
-              "fbr pos invoice process"
-            ]
           }
         ],
         "recommendation": "differentiate",
-        "reason": "5 pages have similar titles. Google will pick one and dilute authority on others."
+        "reason": "4 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
         "primaryKeyword": "fbr pos systems retail",
@@ -514,6 +558,56 @@
       {
         "primaryKeyword": "fbr pos compliance pakistan",
         "pages": [
+          {
+            "slug": "fbr-proposes-voluntary-tax-regime-small-traders",
+            "title": "A Guide to FBR Proposes Voluntary Tax Regime for Small Traders",
+            "titleSim": 0,
+            "keywords": [
+              "fbr proposes voluntary tax regime small traders",
+              "fbr proposes voluntary tax regime small traders pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "what-is-fbr-iris-account",
+            "title": "What Is FBR IRIS Account?",
+            "titleSim": 0,
+            "keywords": [
+              "what is fbr iris account",
+              "what is fbr iris account pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-iris-portal-irisfbrgovpk",
+            "title": "What is FBR IRIS Portal (IRIS.FBR.Gov.PK)?",
+            "titleSim": 0,
+            "keywords": [
+              "fbr iris portal (iris.fbr.gov.pk)",
+              "fbr iris portal (iris.fbr.gov.pk) pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-iris-portal-registration-for-unregistered-person",
+            "title": "What is FBR IRIS Portal Registration for Unregistered Person?",
+            "titleSim": 0,
+            "keywords": [
+              "fbr iris portal registration for unregistered person",
+              "fbr iris portal registration for unregistered person pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-islamabad",
+            "title": "Top 5 Best FBR POS System for Restaurant in Islamabad",
+            "titleSim": 0,
+            "keywords": [
+              "best fbr pos system for restaurant in islamabad",
+              "best fbr pos system for restaurant in islamabad pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
           {
             "slug": "sales-tax-exempt-items-in-pakistan-2025",
             "title": "Top 10 Sales Tax Exempt Items in Pakistan 2025",
@@ -867,7 +961,7 @@
           }
         ],
         "recommendation": "differentiate",
-        "reason": "35 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
+        "reason": "40 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
       },
       {
         "primaryKeyword": "fbr pos lahore",
@@ -926,11 +1020,11 @@
         "reason": "2 pages claim the same keyword \"qr invoice pakistan\". Reassign to unique long-tail variants."
       }
     ],
-    "flagged": 18
+    "flagged": 20
   },
   "cwv": {
     "summary": {
-      "totalAudited": 72,
+      "totalAudited": 77,
       "passingCwv": 0,
       "failingCwv": 0,
       "avgPerformance": null,

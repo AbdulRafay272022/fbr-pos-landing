@@ -2,7 +2,7 @@
   "checks": {
     "https://phelixerp.online": {
       "url": "https://phelixerp.online",
-      "fetchedAt": "2026-08-10T04:48:07.551Z",
+      "fetchedAt": "2026-08-17T04:17:38.390Z",
       "blocks": [
         {
           "type": "Organization",
@@ -15844,7 +15844,7 @@
     },
     "https://phelixerp.online/blog/fbr-integration-deadline": {
       "url": "https://phelixerp.online/blog/fbr-integration-deadline",
-      "fetchedAt": "2026-08-10T04:48:09.663Z",
+      "fetchedAt": "2026-08-17T04:17:40.798Z",
       "blocks": [
         {
           "type": "Organization",
@@ -17087,7 +17087,7 @@
     },
     "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines": {
       "url": "https://phelixerp.online/blog/fbr-electronic-invoice-integration-deadlines",
-      "fetchedAt": "2026-08-10T04:48:09.219Z",
+      "fetchedAt": "2026-08-17T04:17:40.167Z",
       "blocks": [
         {
           "type": "Organization",
@@ -17342,7 +17342,7 @@
     },
     "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension": {
       "url": "https://phelixerp.online/blog/fbr-sales-tax-integration-deadline-extension",
-      "fetchedAt": "2026-08-10T04:48:09.308Z",
+      "fetchedAt": "2026-08-17T04:17:40.381Z",
       "blocks": [
         {
           "type": "Organization",
@@ -17597,7 +17597,7 @@
     },
     "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi": {
       "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-karachi",
-      "fetchedAt": "2026-08-10T04:48:09.397Z",
+      "fetchedAt": "2026-08-17T04:17:40.581Z",
       "blocks": [
         {
           "type": "Organization",
@@ -17852,7 +17852,7 @@
     },
     "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension": {
       "url": "https://phelixerp.online/blog/fbr-electronic-invoicing-integration-deadline-extension",
-      "fetchedAt": "2026-08-10T04:48:09.476Z",
+      "fetchedAt": "2026-08-17T04:17:40.639Z",
       "blocks": [
         {
           "type": "Organization",
@@ -18107,7 +18107,7 @@
     },
     "https://phelixerp.online/blog/fbr-e-integration-deadlines": {
       "url": "https://phelixerp.online/blog/fbr-e-integration-deadlines",
-      "fetchedAt": "2026-08-10T04:48:09.568Z",
+      "fetchedAt": "2026-08-17T04:17:40.721Z",
       "blocks": [
         {
           "type": "Organization",
@@ -18362,7 +18362,7 @@
     },
     "https://phelixerp.online/blog/sales-tax-exempt-items-in-pakistan-2025": {
       "url": "https://phelixerp.online/blog/sales-tax-exempt-items-in-pakistan-2025",
-      "fetchedAt": "2026-08-10T04:48:08.721Z",
+      "fetchedAt": "2026-08-17T04:17:39.712Z",
       "blocks": [
         {
           "type": "Organization",
@@ -18617,7 +18617,7 @@
     },
     "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26": {
       "url": "https://phelixerp.online/blog/sales-tax-on-services-in-pakistan-2025-26",
-      "fetchedAt": "2026-08-10T04:48:08.897Z",
+      "fetchedAt": "2026-08-17T04:17:39.834Z",
       "blocks": [
         {
           "type": "Organization",
@@ -18872,7 +18872,7 @@
     },
     "https://phelixerp.online/blog/sales-tax-pakistan-2025": {
       "url": "https://phelixerp.online/blog/sales-tax-pakistan-2025",
-      "fetchedAt": "2026-08-10T04:48:08.982Z",
+      "fetchedAt": "2026-08-17T04:17:39.965Z",
       "blocks": [
         {
           "type": "Organization",
@@ -19127,7 +19127,7 @@
     },
     "https://phelixerp.online/blog/fbr-extends-e-invoice-integration-deadline": {
       "url": "https://phelixerp.online/blog/fbr-extends-e-invoice-integration-deadline",
-      "fetchedAt": "2026-08-10T04:48:09.086Z",
+      "fetchedAt": "2026-08-17T04:17:40.078Z",
       "blocks": [
         {
           "type": "Organization",
@@ -19379,7 +19379,1250 @@
         }
       ],
       "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-proposes-voluntary-tax-regime-small-traders": {
+      "url": "https://phelixerp.online/blog/fbr-proposes-voluntary-tax-regime-small-traders",
+      "fetchedAt": "2026-08-17T04:17:38.525Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "A Guide to FBR Proposes Voluntary Tax Regime for Small Traders",
+            "description": "Discover the FBR's proposed voluntary tax regime for small traders in Pakistan, its benefits, and how to comply with the new regulations.",
+            "url": "https://phelixerp.online/blog/fbr-proposes-voluntary-tax-regime-small-traders",
+            "datePublished": "2026-08-17T02:16:44.877Z",
+            "dateModified": "2026-08-17T02:16:44.877Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr proposes voluntary tax regime small traders, fbr proposes voluntary tax regime small traders pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-proposes-voluntary-tax-regime-small-traders"
+            },
+            "wordCount": 1385
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "A Guide to FBR Proposes Voluntary Tax Regime for Small Traders",
+                "item": "https://phelixerp.online/blog/fbr-proposes-voluntary-tax-regime-small-traders"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the FBR's voluntary tax regime?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The FBR's voluntary tax regime is a tax regime designed for small traders who have an annual turnover of less than PKR 10 million."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I register for the voluntary tax regime?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To register for the voluntary tax regime, you need to submit the required documents, including your business registration certificate and tax identification number, to the FBR."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the fixed tax amount under the voluntary tax regime?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The fixed tax amount under the voluntary tax regime will be determined by the FBR and will depend on the type of business and annual turnover."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use the FBR's IRIS portal to file my tax returns?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, you can use the FBR's IRIS portal to file your tax returns. The IRIS portal is a online platform that allows taxpayers to file their tax returns and pay their taxes electronically."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for late filing of tax returns?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for late filing of tax returns can be up to PKR 50,000."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR Proposes Voluntary Tax Regime for Small Traders",
+            "description": "Discover the FBR's proposed voluntary tax regime for small traders in Pakistan, its benefits, and how to comply with the new regulations.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-08-17T02:16:44.877Z",
+            "dateModified": "2026-08-17T02:16:44.877Z",
+            "url": "https://phelixerp.online/blog/fbr-proposes-voluntary-tax-regime-small-traders",
+            "keywords": "fbr proposes voluntary tax regime small traders, fbr proposes voluntary tax regime small traders pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/38783385/pexels-photo-38783385.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the FBR's voluntary tax regime?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The FBR's voluntary tax regime is a tax regime designed for small traders who have an annual turnover of less than PKR 10 million."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I register for the voluntary tax regime?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To register for the voluntary tax regime, you need to submit the required documents, including your business registration certificate and tax identification number, to the FBR."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the fixed tax amount under the voluntary tax regime?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The fixed tax amount under the voluntary tax regime will be determined by the FBR and will depend on the type of business and annual turnover."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use the FBR's IRIS portal to file my tax returns?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, you can use the FBR's IRIS portal to file your tax returns. The IRIS portal is a online platform that allows taxpayers to file their tax returns and pay their taxes electronically."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the penalty for late filing of tax returns?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for late filing of tax returns can be up to PKR 50,000."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/what-is-fbr-iris-account": {
+      "url": "https://phelixerp.online/blog/what-is-fbr-iris-account",
+      "fetchedAt": "2026-08-17T04:17:38.680Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "What Is FBR IRIS Account?",
+            "description": "Discover the benefits and features of an FBR IRIS account and learn how to register and use it for your business in Pakistan.",
+            "url": "https://phelixerp.online/blog/what-is-fbr-iris-account",
+            "datePublished": "2026-08-14T02:32:21.762Z",
+            "dateModified": "2026-08-14T02:32:21.762Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "what is fbr iris account, what is fbr iris account pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/what-is-fbr-iris-account"
+            },
+            "wordCount": 1224
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "What Is FBR IRIS Account?",
+                "item": "https://phelixerp.online/blog/what-is-fbr-iris-account"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the Penalty for Not Registering for an FBR IRIS Account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for not registering for an FBR IRIS account is PKR 10,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Register for an FBR IRIS Account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To register for an FBR IRIS account, visit the FBR IRIS portal website and follow the registration process."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Benefit of Using the FBR IRIS Account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefit of using the FBR IRIS account is easy access to tax-related services, reduced paperwork, and improved compliance with tax laws."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to File Tax Returns Using the FBR IRIS Account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To file tax returns using the FBR IRIS account, log in to your account, click on the 'Tax Returns' tab, and follow the filing process."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Deadline for Filing Tax Returns Using the FBR IRIS Account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The deadline for filing tax returns using the FBR IRIS account is the last day of the tax year."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR IRIS Account",
+            "description": "Discover the benefits and features of an FBR IRIS account and learn how to register and use it for your business in Pakistan.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-08-14T02:32:21.762Z",
+            "dateModified": "2026-08-14T02:32:21.762Z",
+            "url": "https://phelixerp.online/blog/what-is-fbr-iris-account",
+            "keywords": "what is fbr iris account, what is fbr iris account pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the Penalty for Not Registering for an FBR IRIS Account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for not registering for an FBR IRIS account is PKR 10,000."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Register for an FBR IRIS Account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To register for an FBR IRIS account, visit the FBR IRIS portal website and follow the registration process."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Benefit of Using the FBR IRIS Account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefit of using the FBR IRIS account is easy access to tax-related services, reduced paperwork, and improved compliance with tax laws."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to File Tax Returns Using the FBR IRIS Account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To file tax returns using the FBR IRIS account, log in to your account, click on the 'Tax Returns' tab, and follow the filing process."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Deadline for Filing Tax Returns Using the FBR IRIS Account?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The deadline for filing tax returns using the FBR IRIS account is the last day of the tax year."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-iris-portal-irisfbrgovpk": {
+      "url": "https://phelixerp.online/blog/fbr-iris-portal-irisfbrgovpk",
+      "fetchedAt": "2026-08-17T04:17:38.873Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "What is FBR IRIS Portal (IRIS.FBR.Gov.PK)?",
+            "description": "FBR IRIS Portal (IRIS.FBR.Gov.PK) — a practical, up-to-date guide.",
+            "url": "https://phelixerp.online/blog/fbr-iris-portal-irisfbrgovpk",
+            "datePublished": "2026-08-13T02:25:11.373Z",
+            "dateModified": "2026-08-13T02:25:11.373Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr iris portal (iris.fbr.gov.pk), fbr iris portal (iris.fbr.gov.pk) pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-iris-portal-irisfbrgovpk"
+            },
+            "wordCount": 1708
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "What is FBR IRIS Portal (IRIS.FBR.Gov.PK)?",
+                "item": "https://phelixerp.online/blog/fbr-iris-portal-irisfbrgovpk"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for fbr iris portal (iris.fbr.gov.pk)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR IRIS Portal (IRIS.FBR.Gov.PK)",
+            "description": "FBR IRIS Portal (IRIS.FBR.Gov.PK) — a practical, up-to-date guide.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-08-13T02:25:11.373Z",
+            "dateModified": "2026-08-13T02:25:11.373Z",
+            "url": "https://phelixerp.online/blog/fbr-iris-portal-irisfbrgovpk",
+            "keywords": "fbr iris portal (iris.fbr.gov.pk), fbr iris portal (iris.fbr.gov.pk) pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Do I need special hardware for fbr iris portal (iris.fbr.gov.pk)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens if my internet goes down during billing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does FBR POS setup take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the FBR penalties for non-compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the integration officially FBR approved?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/fbr-iris-portal-registration-for-unregistered-person": {
+      "url": "https://phelixerp.online/blog/fbr-iris-portal-registration-for-unregistered-person",
+      "fetchedAt": "2026-08-17T04:17:39.351Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "What is FBR IRIS Portal Registration for Unregistered Person?",
+            "description": "Register for FBR IRIS portal as an unregistered person. Learn step-by-step process, benefits, and common mistakes to avoid penalties up to PKR 100,000.",
+            "url": "https://phelixerp.online/blog/fbr-iris-portal-registration-for-unregistered-person",
+            "datePublished": "2026-08-12T02:06:11.049Z",
+            "dateModified": "2026-08-12T02:06:11.049Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "fbr iris portal registration for unregistered person, fbr iris portal registration for unregistered person pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/fbr-iris-portal-registration-for-unregistered-person"
+            },
+            "wordCount": 1145
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "What is FBR IRIS Portal Registration for Unregistered Person?",
+                "item": "https://phelixerp.online/blog/fbr-iris-portal-registration-for-unregistered-person"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR IRIS Portal Registration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS portal registration is the process of registering with the Federal Board of Revenue (FBR) IRIS portal to file tax returns and pay taxes online."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Register for FBR IRIS Portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To register for the FBR IRIS portal, visit the FBR IRIS portal website and fill in the required information."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the Benefits of FBR IRIS Portal Registration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of registering for the FBR IRIS portal include easy tax filing, reduced penalties, and improved compliance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the Common Mistakes to Avoid?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Common mistakes to avoid when registering for the FBR IRIS portal include incorrect information, incomplete documents, and invalid username and password."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Integrate FBR IRIS Portal with Accounting System?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate the FBR IRIS portal with your accounting system, you need to use API technology. For more information, visit [INTERNAL_LINK: \"FBR POS integration\"]."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "FBR IRIS Portal Registration Guide",
+            "description": "Register for FBR IRIS portal as an unregistered person. Learn step-by-step process, benefits, and common mistakes to avoid penalties up to PKR 100,000.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-08-12T02:06:11.049Z",
+            "dateModified": "2026-08-12T02:06:11.049Z",
+            "url": "https://phelixerp.online/blog/fbr-iris-portal-registration-for-unregistered-person",
+            "keywords": "fbr iris portal registration for unregistered person, fbr iris portal registration for unregistered person pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/36870381/pexels-photo-36870381.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR IRIS Portal Registration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR IRIS portal registration is the process of registering with the Federal Board of Revenue (FBR) IRIS portal to file tax returns and pay taxes online."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Register for FBR IRIS Portal?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To register for the FBR IRIS portal, visit the FBR IRIS portal website and fill in the required information."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the Benefits of FBR IRIS Portal Registration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The benefits of registering for the FBR IRIS portal include easy tax filing, reduced penalties, and improved compliance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are the Common Mistakes to Avoid?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Common mistakes to avoid when registering for the FBR IRIS portal include incorrect information, incomplete documents, and invalid username and password."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Integrate FBR IRIS Portal with Accounting System?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate the FBR IRIS portal with your accounting system, you need to use API technology. For more information, visit [INTERNAL_LINK: \"FBR POS integration\"]."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
+    },
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-islamabad": {
+      "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-islamabad",
+      "fetchedAt": "2026-08-17T04:17:39.612Z",
+      "blocks": [
+        {
+          "type": "Organization",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/phelix-logo.png"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "availableLanguage": [
+                "English",
+                "Urdu"
+              ],
+              "areaServed": "PK"
+            },
+            "areaServed": "PK",
+            "description": "Pakistan's leading FBR-compliant POS and ERP system for retail businesses.",
+            "sameAs": []
+          }
+        },
+        {
+          "type": "WebSite",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Phelix ERP",
+            "url": "https://phelixerp.online",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://phelixerp.online/blog?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        },
+        {
+          "type": "BlogPosting",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": "Top 5 Best FBR POS System for Restaurant in Islamabad",
+            "description": "Discover the best FBR POS system for your restaurant in Islamabad, ensuring compliance with FBR regulations and streamlining your business operations.",
+            "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-islamabad",
+            "datePublished": "2026-08-11T02:39:26.254Z",
+            "dateModified": "2026-08-11T02:39:26.254Z",
+            "author": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "url": "https://phelixerp.online"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://phelixerp.online/phelix-logo.png",
+                "width": 200,
+                "height": 60
+              }
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://phelixerp.online/dashboard-screenshot.png",
+              "width": 1200,
+              "height": 700
+            },
+            "keywords": "best fbr pos system for restaurant in islamabad, best fbr pos system for restaurant in islamabad pakistan, fbr pos compliance pakistan",
+            "articleSection": "FBR POS Pakistan",
+            "inLanguage": "en-PK",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-islamabad"
+            },
+            "wordCount": 1067
+          }
+        },
+        {
+          "type": "BreadcrumbList",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://phelixerp.online/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Blog",
+                "item": "https://phelixerp.online/blog"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Top 5 Best FBR POS System for Restaurant in Islamabad",
+                "item": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-islamabad"
+              }
+            ]
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR POS Integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR POS integration is the process of connecting your POS system with the FBR IRIS portal to ensure compliance with FBR regulations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Integrate FBR POS System?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate your POS system with the FBR IRIS portal, you need to obtain a STRN, generate a QR invoice for each sale, and integrate your POS system using the FBR API."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Penalty for Non-Compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for non-compliance with FBR regulations can be up to PKR 50,000."
+                }
+              }
+            ]
+          }
+        },
+        {
+          "type": "Article",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Best FBR POS System for Restaurant in Islamabad",
+            "description": "Discover the best FBR POS system for your restaurant in Islamabad, ensuring compliance with FBR regulations and streamlining your business operations.",
+            "author": {
+              "@type": "Person",
+              "name": "Phelix ERP Team",
+              "url": "https://phelixerp.online/authors/phelix-erp-team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Phelix ERP"
+            },
+            "datePublished": "2026-08-11T02:39:26.254Z",
+            "dateModified": "2026-08-11T02:39:26.254Z",
+            "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-islamabad",
+            "keywords": "best fbr pos system for restaurant in islamabad, best fbr pos system for restaurant in islamabad pakistan, fbr pos compliance pakistan",
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://images.pexels.com/photos/2598025/pexels-photo-2598025.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+              "width": 1200,
+              "height": 675
+            }
+          }
+        },
+        {
+          "type": "FAQPage",
+          "valid": true,
+          "raw": {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is FBR POS Integration?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "FBR POS integration is the process of connecting your POS system with the FBR IRIS portal to ensure compliance with FBR regulations."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How to Integrate FBR POS System?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "To integrate your POS system with the FBR IRIS portal, you need to obtain a STRN, generate a QR invoice for each sale, and integrate your POS system using the FBR API."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Penalty for Non-Compliance?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The penalty for non-compliance with FBR regulations can be up to PKR 50,000."
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "issues": [
+        {
+          "level": "warning",
+          "type": "Article",
+          "field": "mainEntityOfPage",
+          "message": "Recommended field \"mainEntityOfPage\" is missing."
+        }
+      ],
+      "passes": true
     }
   },
-  "lastAuditedAt": "2026-08-10T04:48:10.288Z"
+  "lastAuditedAt": "2026-08-17T04:17:40.899Z"
 }
