@@ -1680,6 +1680,15 @@
       "promptTokens": 1106,
       "completionTokens": 1785,
       "totalTokens": 2891
+    },
+    {
+      "ts": "2026-08-17T02:16:50.567Z",
+      "action": "title_optimize",
+      "slug": "fbr-proposes-voluntary-tax-regime-small-traders",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1696,8 +1705,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 32415,
-      "calls": 24
+      "tokens": 32815,
+      "calls": 25
     }
   },
   "monthlyTokenBudget": 5000000,
