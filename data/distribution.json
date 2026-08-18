@@ -1196,8 +1196,29 @@
         }
       ],
       "distributedAt": "2026-08-17T02:16:47.962Z"
+    },
+    {
+      "slug": "fbr-integrates-big-retailers-into-pos-system",
+      "title": "FBR Integrates Big Retailers Into POS System",
+      "blogUrl": "https://phelixerp.online/blog/fbr-integrates-big-retailers-into-pos-system",
+      "hook": "FBR Integrates Big Retailers Into POS System",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-18T02:20:49.565Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-18T02:20:49.565Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-18T02:20:49.565Z"
     }
   ],
-  "lastDistributedAt": "2026-08-17T02:16:47.962Z",
+  "lastDistributedAt": "2026-08-18T02:20:49.565Z",
   "totalDistributed": 0
 }
