@@ -1689,6 +1689,33 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-18T02:20:51.882Z",
+      "action": "title_optimize",
+      "slug": "fbr-integrates-big-retailers-into-pos-system",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-18T02:20:52.353Z",
+      "action": "title_optimize",
+      "slug": "fbr-proposes-voluntary-tax-regime-small-traders",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-18T02:20:52.576Z",
+      "action": "title_optimize",
+      "slug": "fbr-integration-deadline",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1705,8 +1732,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 32815,
-      "calls": 25
+      "tokens": 34015,
+      "calls": 28
     }
   },
   "monthlyTokenBudget": 5000000,
