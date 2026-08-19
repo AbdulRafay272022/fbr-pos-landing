@@ -1716,6 +1716,24 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-19T02:11:55.653Z",
+      "action": "title_optimize",
+      "slug": "retailers-denounce-harassment-pos-glitches",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-19T02:11:55.844Z",
+      "action": "title_optimize",
+      "slug": "fbr-pos-system-integration",
+      "model": "llama-3.3-70b-versatile",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1732,8 +1750,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 34015,
-      "calls": 28
+      "tokens": 34815,
+      "calls": 30
     }
   },
   "monthlyTokenBudget": 5000000,
