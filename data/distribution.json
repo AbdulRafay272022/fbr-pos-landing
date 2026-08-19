@@ -1217,8 +1217,29 @@
         }
       ],
       "distributedAt": "2026-08-18T02:20:49.565Z"
+    },
+    {
+      "slug": "retailers-denounce-harassment-pos-glitches",
+      "title": "Retailers Denounce Harassment POS Glitches",
+      "blogUrl": "https://phelixerp.online/blog/retailers-denounce-harassment-pos-glitches",
+      "hook": "Retailers Denounce Harassment POS Glitches",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-19T02:11:39.950Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-19T02:11:39.950Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-19T02:11:39.950Z"
     }
   ],
-  "lastDistributedAt": "2026-08-18T02:20:49.565Z",
+  "lastDistributedAt": "2026-08-19T02:11:39.950Z",
   "totalDistributed": 0
 }
