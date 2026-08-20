@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "id": "mszggte8-vgfpa",
-      "ts": "2026-08-19T02:11:30.128Z",
+      "id": "mt0xas4z-1ibiq",
+      "ts": "2026-08-20T02:50:28.211Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mszggte4",
+        "runId": "run-mt0xas4u",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mszggtw8-1f1b2",
-      "ts": "2026-08-19T02:11:30.776Z",
+      "id": "mt0xaslf-u6i2p",
+      "ts": "2026-08-20T02:50:28.803Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mszggte4",
-        "shouldScrape": false,
+        "runId": "run-mt0xas4u",
+        "shouldScrape": true,
         "shouldGenerate": true,
-        "shouldUpdate": true,
+        "shouldUpdate": false,
         "shouldFetchSeo": true,
         "shouldRefresh": true,
         "shouldOptimizeTitles": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4268 unused keywords, last scrape 29.0d ago (next forced refresh in 1d)",
-          "generate": "23.8h since last generation, 4268 keywords available",
-          "update": "168.1h since last update run",
+          "scrape": "pool freshness refresh: 30d since last scrape (>30d threshold) — keywords may be stale",
+          "generate": "24.6h since last generation, 4268 keywords available",
+          "update": "skipped: last update 24.6h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,121 +48,133 @@
       }
     },
     {
-      "id": "mszgh09u-vgdpu",
-      "ts": "2026-08-19T02:11:39.042Z",
+      "id": "mt0xatou-g0jvh",
+      "ts": "2026-08-20T02:50:30.222Z",
+      "site": "Phelix ERP",
+      "event": "keyword_scraped",
+      "level": "info",
+      "success": true,
+      "details": {
+        "runId": "run-mt0xas4u",
+        "action": "starting scrape"
+      }
+    },
+    {
+      "id": "mt0xbads-4sekb",
+      "ts": "2026-08-20T02:50:51.856Z",
+      "site": "Phelix ERP",
+      "event": "keyword_scraped",
+      "level": "info",
+      "success": true,
+      "durationMs": 21634,
+      "details": {
+        "runId": "run-mt0xas4u",
+        "total": 4286
+      }
+    },
+    {
+      "id": "mt0xbefp-o4rqi",
+      "ts": "2026-08-20T02:50:57.109Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "retailers-denounce-harassment-pos-glitches",
-      "words": 1376,
+      "slug": "pakistan-orders-wider-pos-rollout-after-billion-tax",
+      "words": 1385,
       "source": "template",
-      "durationMs": 6811,
+      "durationMs": 5252,
       "details": {
-        "runId": "run-mszggte4"
+        "runId": "run-mt0xas4u"
       }
     },
     {
-      "id": "mszghaxo-9xro9",
-      "ts": "2026-08-19T02:11:52.860Z",
-      "site": "Phelix ERP",
-      "event": "blog_updated",
-      "level": "info",
-      "success": true,
-      "durationMs": 13818,
-      "details": {
-        "runId": "run-mszggte4",
-        "updatedCount": 0
-      }
-    },
-    {
-      "id": "mszghccd-urpy8",
-      "ts": "2026-08-19T02:11:54.685Z",
+      "id": "mt0xbgg8-vlosh",
+      "ts": "2026-08-20T02:50:59.720Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 1825,
+      "durationMs": 2610,
       "details": {
-        "runId": "run-mszggte4",
+        "runId": "run-mt0xas4u",
         "pages": 2,
         "totalImpressions": 8
       }
     },
     {
-      "id": "mszghcrc-6np94",
-      "ts": "2026-08-19T02:11:55.224Z",
+      "id": "mt0xbgql-fmoox",
+      "ts": "2026-08-20T02:51:00.093Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 539,
+      "durationMs": 372,
       "details": {
-        "runId": "run-mszggte4",
+        "runId": "run-mt0xas4u",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mszgheem-ik0ec",
-      "ts": "2026-08-19T02:11:57.358Z",
+      "id": "mt0xbk4s-f3r9l",
+      "ts": "2026-08-20T02:51:04.492Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2133,
+      "durationMs": 4399,
       "details": {
-        "runId": "run-mszggte4",
-        "optimizedCount": 2
+        "runId": "run-mt0xas4u",
+        "optimizedCount": 1
       }
     },
     {
-      "id": "mszgheq3-lxhyo",
-      "ts": "2026-08-19T02:11:57.771Z",
+      "id": "mt0xbl0u-yd65z",
+      "ts": "2026-08-20T02:51:05.646Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "durationMs": 413,
+      "durationMs": 1154,
       "details": {
-        "runId": "run-mszggte4"
+        "runId": "run-mt0xas4u"
       }
     },
     {
-      "id": "mszghezn-3h8fg",
-      "ts": "2026-08-19T02:11:58.115Z",
+      "id": "mt0xbl8a-aylzz",
+      "ts": "2026-08-20T02:51:05.914Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 344,
+      "durationMs": 268,
       "details": {
-        "runId": "run-mszggte4",
+        "runId": "run-mt0xas4u",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mszghg3f-hwvdt",
-      "ts": "2026-08-19T02:11:59.547Z",
+      "id": "mt0xbmjv-dhp85",
+      "ts": "2026-08-20T02:51:07.627Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1431,
+      "durationMs": 1712,
       "details": {
-        "runId": "run-mszggte4",
+        "runId": "run-mt0xas4u",
         "decaysFound": 0
       }
     },
     {
-      "id": "mszghggy-ug63g",
-      "ts": "2026-08-19T02:12:00.034Z",
+      "id": "mt0xbmq0-8ji4x",
+      "ts": "2026-08-20T02:51:07.848Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 486,
+      "durationMs": 221,
       "details": {
-        "runId": "run-mszggte4"
+        "runId": "run-mt0xas4u"
       }
     }
   ],
