@@ -54,8 +54,8 @@
       "difficulty": "low",
       "priority": 100,
       "cluster": "city-rawalpindi",
-      "used": false,
-      "usedIn": null,
+      "used": true,
+      "usedIn": "best-fbr-pos-system-for-restaurant-in-rawalpindi",
       "generatedAt": "2026-05-07T02:09:20.087Z"
     },
     {
