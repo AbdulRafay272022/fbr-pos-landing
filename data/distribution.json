@@ -1259,8 +1259,29 @@
         }
       ],
       "distributedAt": "2026-08-20T02:51:00.151Z"
+    },
+    {
+      "slug": "best-fbr-pos-system-for-restaurant-in-rawalpindi",
+      "title": "Best FBR POS System For Restaurant In Rawalpindi",
+      "blogUrl": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-rawalpindi",
+      "hook": "Best FBR POS System For Restaurant In Rawalpindi",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-21T02:21:57.665Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-21T02:21:57.665Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-21T02:21:57.665Z"
     }
   ],
-  "lastDistributedAt": "2026-08-20T02:51:00.151Z",
+  "lastDistributedAt": "2026-08-21T02:21:57.665Z",
   "totalDistributed": 0
 }
