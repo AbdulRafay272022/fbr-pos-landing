@@ -7,7 +7,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 7.333333333333333,
-      "fetchedAt": "2026-08-22T02:20:57.302Z"
+      "fetchedAt": "2026-08-23T02:12:22.425Z"
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
@@ -16,7 +16,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 5,
-      "fetchedAt": "2026-08-22T02:20:57.302Z"
+      "fetchedAt": "2026-08-23T02:12:22.425Z"
     }
   ],
   "queries": [
@@ -26,10 +26,10 @@
       "clicks": 0,
       "ctr": 0,
       "position": 24.5,
-      "fetchedAt": "2026-08-22T02:20:57.297Z"
+      "fetchedAt": "2026-08-23T02:12:22.351Z"
     }
   ],
-  "lastFetchedAt": "2026-08-22T02:20:57.302Z",
+  "lastFetchedAt": "2026-08-23T02:12:22.425Z",
   "summary": {
     "totalImpressions": 8,
     "totalClicks": 0,
