@@ -323,6 +323,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online",
+        "fetchedAt": "2026-08-24T04:02:42.312Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/best-fbr-pos-system-for-retail-in-karachi": [
@@ -3317,12 +3336,50 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-proposes-voluntary-tax-regime-small-traders",
+        "fetchedAt": "2026-08-24T04:02:49.055Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/what-is-fbr-iris-account": [
       {
         "url": "https://phelixerp.online/blog/what-is-fbr-iris-account",
         "fetchedAt": "2026-08-17T04:17:30.498Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/what-is-fbr-iris-account",
+        "fetchedAt": "2026-08-24T04:02:50.177Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -3359,12 +3416,50 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-iris-portal-irisfbrgovpk",
+        "fetchedAt": "2026-08-24T04:02:51.303Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/fbr-iris-portal-registration-for-unregistered-person": [
       {
         "url": "https://phelixerp.online/blog/fbr-iris-portal-registration-for-unregistered-person",
         "fetchedAt": "2026-08-17T04:17:32.752Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-iris-portal-registration-for-unregistered-person",
+        "fetchedAt": "2026-08-24T04:02:52.434Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -3402,7 +3497,112 @@
           "PSI HTTP 429"
         ]
       }
+    ],
+    "https://phelixerp.online/blog/what-is-fbr-and-its-functions": [
+      {
+        "url": "https://phelixerp.online/blog/what-is-fbr-and-its-functions",
+        "fetchedAt": "2026-08-24T04:02:43.436Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-rawalpindi": [
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-rawalpindi",
+        "fetchedAt": "2026-08-24T04:02:44.559Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/pakistan-orders-wider-pos-rollout-after-billion-tax": [
+      {
+        "url": "https://phelixerp.online/blog/pakistan-orders-wider-pos-rollout-after-billion-tax",
+        "fetchedAt": "2026-08-24T04:02:45.682Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/retailers-denounce-harassment-pos-glitches": [
+      {
+        "url": "https://phelixerp.online/blog/retailers-denounce-harassment-pos-glitches",
+        "fetchedAt": "2026-08-24T04:02:46.809Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
+    ],
+    "https://phelixerp.online/blog/fbr-integrates-big-retailers-into-pos-system": [
+      {
+        "url": "https://phelixerp.online/blog/fbr-integrates-big-retailers-into-pos-system",
+        "fetchedAt": "2026-08-24T04:02:47.931Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      }
     ]
   },
-  "lastFullAuditAt": "2026-08-17T04:17:38.389Z"
+  "lastFullAuditAt": "2026-08-24T04:02:52.434Z"
 }
