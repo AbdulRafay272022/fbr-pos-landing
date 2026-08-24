@@ -1280,8 +1280,29 @@
         }
       ],
       "distributedAt": "2026-08-21T02:21:57.665Z"
+    },
+    {
+      "slug": "what-is-fbr-and-its-functions",
+      "title": "What Is FBR And Its Functions",
+      "blogUrl": "https://phelixerp.online/blog/what-is-fbr-and-its-functions",
+      "hook": "What Is FBR And Its Functions",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-24T02:39:07.689Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-24T02:39:07.689Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-24T02:39:07.689Z"
     }
   ],
-  "lastDistributedAt": "2026-08-21T02:21:57.665Z",
+  "lastDistributedAt": "2026-08-24T02:39:07.689Z",
   "totalDistributed": 0
 }
