@@ -1,16 +1,3 @@
 {
-  "lastTopicIndex": -1,
-  "agent": {
-    "isRunning": true,
-    "lockedAt": "2026-08-25T02:25:19.704Z",
-    "lockedBy": "run-mt81lp13"
-  },
-  "stats": {
-    "lastScrapeAt": "2026-08-20T02:50:51.856Z",
-    "lastGenerateAt": "2026-08-24T02:39:06.640Z",
-    "lastUpdateAt": "2026-08-19T02:11:52.860Z",
-    "blogsGeneratedTotal": 43,
-    "blogsUpdatedTotal": 0,
-    "keywordsUsedTotal": 0
-  }
+  "lastTopicIndex": -1
 }
