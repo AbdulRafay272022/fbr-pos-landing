@@ -8,7 +8,7 @@
  *  2. Falls back to hardcoded BLOG_TOPICS if keyword pool is empty/missing
  *
  * Content generation:
- *  - Groq LLM (llama-3.3-70b-versatile) with strict system prompt
+ *  - LLM (openai/gpt-oss-120b via OpenRouter)
  *  - Falls back to rich HTML template on LLM failure
  *  - Minimum 1200 words enforced
  *
@@ -353,14 +353,14 @@ async function callGroqForBlog(
   apiKey:       string,
   keyword:      string,
 ): Promise<GroqBlogJson> {
-  const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+  const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model:       "llama-3.3-70b-versatile",
+      model:       "openai/gpt-oss-120b",
       messages: [
         { role: "system", content: systemPrompt },
         { role: "user",   content: userInput },
@@ -459,8 +459,8 @@ async function generateWithGroq(
   blogIndex: BlogIndex[],
   seoBrief = ""        // ← passed in from resolveBrief(); no brief computation here
 ): Promise<{ blog: Partial<BlogPost>; keywords: string[]; gen: { draftWords: number; expandedWords: number | null; expanded: boolean; expandError?: string } }> {
-  const apiKey = process.env.GROQ_API_KEY;
-  if (!apiKey) throw new Error("GROQ_API_KEY not configured");
+  const apiKey = process.env.OPENROUTER_API_KEY ?? process.env.GROQ_API_KEY;
+  if (!apiKey) throw new Error("OPENROUTER_API_KEY not configured");
 
   // System prompt + user input are now composed entirely from the active
   // niche pack — no hardcoded FBR/Pakistan strings.
@@ -477,7 +477,7 @@ async function generateWithGroq(
   // ── Pass 1: generate ───────────────────────────────────────────────────────
   let parsed = await callGroqForBlog(systemPrompt, userInput, apiKey, topic.keyword);
 
-  // ── Pass 2: expand (llama-3.3 frequently returns short drafts) ─────────────
+  // ── Pass 2: expand (model frequently returns short drafts) ──────────────────
   // If the draft is below target, ask Groq to EXPAND it rather than regenerate —
   // expansion is far more reliable at hitting length than a cold first attempt.
   // This is what stops short drafts from failing the gate and triggering the

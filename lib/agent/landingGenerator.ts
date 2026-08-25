@@ -20,7 +20,7 @@
  *  - Article + FAQPage JSON-LD schema
  *
  * Design:
- *  - Uses Groq llama-3.3-70b-versatile for content generation
+ *  - Uses openai/gpt-oss-120b via OpenRouter for content generation
  *  - All HTML is self-contained (Tailwind-compatible inline styles)
  *  - Quality gate: requires min 800 words + FAQs
  *  - Cost guard checked before each Groq call
@@ -32,11 +32,11 @@ import { isUnderBudget, recordUsage } from "./costGuard";
 import { getSiteConfig } from "./siteConfig";
 import { getActivePack } from "@/lib/niche/registry";
 
-// ─── Groq settings ────────────────────────────────────────────────────────────
+// ─── LLM settings ─────────────────────────────────────────────────────────────
 
-const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
-const GROQ_MODEL   = "llama-3.3-70b-versatile";
-const GROQ_TIMEOUT = 55_000;
+const LLM_API_URL = "https://openrouter.ai/api/v1/chat/completions";
+const LLM_MODEL   = "openai/gpt-oss-120b";
+const LLM_TIMEOUT = 55_000;
 
 // ─── Page spec ────────────────────────────────────────────────────────────────
 
@@ -213,10 +213,10 @@ async function callGroqLanding(
   groqApiKey: string
 ): Promise<{ result: GroqGenerateResult; promptTokens: number; completionTokens: number }> {
   const controller = new AbortController();
-  const timer      = setTimeout(() => controller.abort(), GROQ_TIMEOUT);
+  const timer      = setTimeout(() => controller.abort(), LLM_TIMEOUT);
 
   try {
-    const res = await fetch(GROQ_API_URL, {
+    const res = await fetch(LLM_API_URL, {
       method:  "POST",
       signal:  controller.signal,
       headers: {
@@ -224,7 +224,7 @@ async function callGroqLanding(
         "Authorization": `Bearer ${groqApiKey}`,
       },
       body: JSON.stringify({
-        model:       GROQ_MODEL,
+        model:       LLM_MODEL,
         temperature: 0.7,
         max_tokens:  4096,
         messages: [
@@ -398,7 +398,7 @@ export async function generateLandingPage(
   const updatedCosts = recordUsage(costs, {
     action:           "generate_landing",
     slug:             result.slug,
-    model:            GROQ_MODEL,
+    model:            LLM_MODEL,
     promptTokens,
     completionTokens,
     totalTokens:      promptTokens + completionTokens,

@@ -75,7 +75,7 @@ export async function GET(req: NextRequest) {
   }
 
   const config   = getSiteConfig();
-  const groqKey  = process.env.GROQ_API_KEY;
+  const groqKey  = process.env.OPENROUTER_API_KEY ?? process.env.GROQ_API_KEY;
 
   log("info", "Title optimisation started", { site: config.name });
 
@@ -182,7 +182,7 @@ export async function GET(req: NextRequest) {
       updatedCosts = recordUsage(updatedCosts, {
         action:           "title_optimize",
         slug:             blog.slug,
-        model:            groqKey ? "llama-3.3-70b-versatile" : "deterministic",
+        model:            groqKey ? "openai/gpt-oss-120b" : "deterministic",
         promptTokens:     300,
         completionTokens: 100,
         totalTokens:      400,

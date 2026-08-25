@@ -132,13 +132,13 @@ export async function GET(req: NextRequest) {
   const owner  = process.env.GITHUB_OWNER;
   const repo   = process.env.GITHUB_REPO;
   const branch = process.env.GITHUB_BRANCH ?? "main";
-  const groqKey = process.env.GROQ_API_KEY;
+  const groqKey = process.env.OPENROUTER_API_KEY ?? process.env.GROQ_API_KEY;
 
   if (!token || !owner || !repo) {
     return NextResponse.json({ success: false, reason: "GitHub env vars not set" }, { status: 500 });
   }
   if (!groqKey) {
-    return NextResponse.json({ success: false, reason: "GROQ_API_KEY not set" }, { status: 500 });
+    return NextResponse.json({ success: false, reason: "OPENROUTER_API_KEY not set" }, { status: 500 });
   }
 
   const config = getSiteConfig();
@@ -297,7 +297,7 @@ export async function GET(req: NextRequest) {
       updatedCosts = recordUsage(updatedCosts, {
         action:           "refresh",
         slug:             blog.slug,
-        model:            "llama-3.3-70b-versatile",
+        model:            "openai/gpt-oss-120b",
         promptTokens:     tokens.promptTokens,
         completionTokens: tokens.completionTokens,
         totalTokens:      Math.max(tokens.totalTokens, 3000), // conservative estimate

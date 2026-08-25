@@ -79,26 +79,26 @@ async function checkGitHub(): Promise<ServiceCheck> {
 }
 
 async function checkGroq(): Promise<ServiceCheck> {
-  const apiKey = process.env.GROQ_API_KEY;
+  const apiKey = process.env.OPENROUTER_API_KEY ?? process.env.GROQ_API_KEY;
   const configured = isSet(apiKey);
 
   if (!configured) {
-    return { name: "Groq API (LLM)", configured: false, reachable: false, required: true,
-      note: "Missing GROQ_API_KEY — content generation will use template fallback only" };
+    return { name: "OpenRouter API (LLM)", configured: false, reachable: false, required: true,
+      note: "Missing OPENROUTER_API_KEY — content generation will use template fallback only" };
   }
 
   const result = await ping(
-    "https://api.groq.com/openai/v1/models",
+    "https://openrouter.ai/api/v1/models",
     { headers: { Authorization: `Bearer ${apiKey}` } }
   );
 
   return {
-    name: "Groq API (LLM)", configured: true, required: true,
+    name: "OpenRouter API (LLM)", configured: true, required: true,
     reachable: result.ok,
     latencyMs: result.latencyMs,
     note: result.ok
-      ? "Connected — llama-3.3-70b-versatile available"
-      : `HTTP ${result.status} — check GROQ_API_KEY is valid. ${result.error ?? ""}`,
+      ? "Connected — openai/gpt-oss-120b active"
+      : `HTTP ${result.status} — check OPENROUTER_API_KEY is valid. ${result.error ?? ""}`,
   };
 }
 

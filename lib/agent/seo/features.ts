@@ -70,7 +70,7 @@ export function getSeoFeatures(): SeoFeatureFlags {
     twitter:  !!(process.env.TWITTER_BEARER_TOKEN || process.env.TWITTER_API_KEY),
     linkedin: !!process.env.LINKEDIN_ACCESS_TOKEN,
 
-    groq:   !!process.env.GROQ_API_KEY,
+    groq:   !!(process.env.OPENROUTER_API_KEY ?? process.env.GROQ_API_KEY),
     claude: !!process.env.ANTHROPIC_API_KEY,
   };
 }

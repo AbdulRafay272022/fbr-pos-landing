@@ -219,14 +219,14 @@ export async function callGroqRefresh(
 
   const userPrompt = buildRefreshUserPrompt(blog, candidate.metric, keyword, serpBrief, competitorBrief);
 
-  const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+  const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method:  "POST",
     headers: {
       Authorization:  `Bearer ${groqApiKey}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      model:       "llama-3.3-70b-versatile",
+      model:       "openai/gpt-oss-120b",
       temperature: 0.5,
       max_tokens:  4096,
       messages: [

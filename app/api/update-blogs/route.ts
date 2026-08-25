@@ -194,8 +194,8 @@ async function improveWithGroq(
   blog: BlogPost,
   allBlogs: BlogIndex[]
 ): Promise<{ title: string; metaDescription: string; content: string; faqs: BlogFaq[] } | null> {
-  const apiKey = process.env.GROQ_API_KEY;
-  if (!apiKey) throw new Error("GROQ_API_KEY not configured");
+  const apiKey = process.env.OPENROUTER_API_KEY ?? process.env.GROQ_API_KEY;
+  if (!apiKey) throw new Error("OPENROUTER_API_KEY not configured");
 
   // ── Skip pinned-title blogs (human-curated, don't touch) ─────────────────
   if ((blog as unknown as Record<string, unknown>).pinnedTitle === true) {
@@ -250,14 +250,14 @@ async function improveWithGroq(
 
   while (retries <= maxRetries) {
     try {
-      const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+      const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${apiKey}`,
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          model:       "llama-3.3-70b-versatile",
+          model:       "openai/gpt-oss-120b",
           messages: [
             { role: "system", content: UPDATE_SYSTEM_PROMPT },
             { role: "user",   content: userInput },

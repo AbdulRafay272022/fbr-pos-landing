@@ -29,11 +29,11 @@ import { isUnderBudget, recordUsage } from "./costGuard";
 import { getSiteConfig } from "./siteConfig";
 import { getActivePack } from "@/lib/niche/registry";
 
-// ─── Groq settings ────────────────────────────────────────────────────────────
+// ─── LLM settings ─────────────────────────────────────────────────────────────
 
-const GROQ_API_URL = "https://api.groq.com/openai/v1/chat/completions";
-const GROQ_MODEL   = "llama-3.3-70b-versatile";
-const GROQ_TIMEOUT = 55_000;
+const LLM_API_URL = "https://openrouter.ai/api/v1/chat/completions";
+const LLM_MODEL   = "openai/gpt-oss-120b";
+const LLM_TIMEOUT = 55_000;
 
 // ─── Combination space ────────────────────────────────────────────────────────
 
@@ -174,10 +174,10 @@ async function callGroqProgrammatic(
   groqApiKey: string
 ): Promise<{ result: GroqProgResult; promptTokens: number; completionTokens: number }> {
   const controller = new AbortController();
-  const timer      = setTimeout(() => controller.abort(), GROQ_TIMEOUT);
+  const timer      = setTimeout(() => controller.abort(), LLM_TIMEOUT);
 
   try {
-    const res = await fetch(GROQ_API_URL, {
+    const res = await fetch(LLM_API_URL, {
       method:  "POST",
       signal:  controller.signal,
       headers: {
@@ -185,7 +185,7 @@ async function callGroqProgrammatic(
         "Authorization": `Bearer ${groqApiKey}`,
       },
       body: JSON.stringify({
-        model:       GROQ_MODEL,
+        model:       LLM_MODEL,
         temperature: 0.65,
         max_tokens:  3000,
         messages: [
@@ -311,7 +311,7 @@ export async function generateProgrammaticPage(
 
   const updatedCosts = recordUsage(costs, {
     action:           "generate_programmatic",
-    model:            GROQ_MODEL,
+    model:            LLM_MODEL,
     promptTokens,
     completionTokens,
     totalTokens:      promptTokens + completionTokens,

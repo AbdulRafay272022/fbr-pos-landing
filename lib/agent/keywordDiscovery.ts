@@ -187,18 +187,18 @@ export async function generateSeedsFromNiche(
   country:          string,
   groqApiKey?:      string,
 ): Promise<string[]> {
-  const apiKey = groqApiKey ?? process.env.GROQ_API_KEY;
+  const apiKey = groqApiKey ?? process.env.OPENROUTER_API_KEY ?? process.env.GROQ_API_KEY;
   if (!apiKey) {
     // Fallback: extract noun phrases from the niche description
     return extractNounPhrases(nicheDescription, country);
   }
 
   try {
-    const res = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+    const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method:  "POST",
       headers: { Authorization: `Bearer ${apiKey}`, "Content-Type": "application/json" },
       body:    JSON.stringify({
-        model:       "llama3-8b-8192",
+        model:       "openai/gpt-oss-120b",
         max_tokens:  400,
         temperature: 0.4,
         messages: [

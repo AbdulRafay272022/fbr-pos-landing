@@ -2,6 +2,25 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Audit Status (2026-08-25)
+
+Health audit findings — fix these before anything else:
+
+| # | Severity | Issue | Location |
+|---|---|---|---|
+| 1 | 🔴 CRITICAL | `llama-3.3-70b-versatile` decommissioned 2026-08-16. All three generators hardcode it and are broken. | `generate-blog/route.ts`, `landingGenerator.ts`, `programmaticGenerator.ts` |
+| 2 | 🔴 CRITICAL | `keywordDiscovery.ts` uses `llama3-8b-8192` (separate dead Groq model). | `lib/agent/keywordDiscovery.ts` |
+| 3 | 🔴 CRITICAL | Agent has produced zero content since 2026-07-17 (39 days). Last `data/logs.json` entry is also July 17. Cron may have stopped firing on Vercel; verify in Vercel dashboard. | Vercel cron logs |
+| 4 | 🟠 HIGH | Keyword pool nearly exhausted: only 3 unused keywords remain. Last scrape: 2026-06-20. Run `/api/scrape-keywords` manually after fixing the model. | `data/keywords.json` |
+| 5 | 🟡 MEDIUM | `DISABLE_AUTO_BLOG` env switch described in handoff doc does not exist in code. | Not implemented |
+| 6 | 🟡 MEDIUM | `meta.json` counter `blogsGeneratedTotal` shows 18 but 64 blog files exist. | `lib/agent/agentBrain.ts` stat tracking |
+| 7 | 🟢 LOW | Two near-duplicate slug pairs (Jaccard ≥ 0.75): `fbr-pos-system-lahore-retailers-2026` ↔ `pos-system-lahore-fbr-integration-for-lahore-retailers-2026`; `generate-fbr-qr-invoices-pakistan` ↔ `how-to-generate-fbr-qr-invoices-in-pakistan-step-by-step-guide`. | `data/blogs/`, `data/index.json` |
+| 8 | 🟢 LOW | `.claude/skills/write-blog/SKILL.md` still says `git rebase origin/main` — stale, should be reset-reapply loop. | `.claude/skills/write-blog/SKILL.md` |
+
+**Code health**: `npx tsc --noEmit` exits 0. ESLint exits 0 (19 warnings, 0 errors). Next.js 16.2.4 / React 19.2.4. No committed secrets.
+
+**Content inventory**: 64 blog files, 64 index entries — perfectly in sync, no orphans.
+
 ## Commands
 
 ```bash
@@ -34,7 +53,7 @@ There is no database. All mutable state lives in `/data/*.json` files committed 
 
 ### Agent Execution Model
 
-`GET /api/agent` is the single cron entry point (every 4 hours via Vercel Cron). It calls `runAgent()` in `lib/agent/agentBrain.ts`, which:
+`GET /api/agent` is the single cron entry point (once daily at 2am UTC via Vercel Cron — `vercel.json` schedule `0 2 * * *`; the "every 4 hours" description in older docs is wrong). It calls `runAgent()` in `lib/agent/agentBrain.ts`, which:
 
 1. Reads `data/meta.json` from GitHub
 2. Checks the job lock (`isLocked()` — 8-minute TTL)
@@ -80,6 +99,17 @@ Order is load-bearing: schema reads content metadata; CTA injection targets `</h
 | `lib/agent/topicMap.ts` | 6 hard-coded topic clusters in `TOPIC_CLUSTERS`. `assignKeywordToCluster()` uses token overlap scoring. Cluster IDs: `fbr-compliance`, `pos-systems`, `tax-penalties`, `restaurant-industry`, `retail-industry`, `erp-accounting`. |
 | `lib/agent/linkStrategy.ts` | Authority scoring (0–100) per blog. Pillar page per cluster = highest authority score in that cluster, gets +20 priority boost in link candidates. |
 | `lib/agent/seoFeedback.ts` | GSC JWT auth via Web Crypto (`crypto.subtle`). Fetches 28-day Search Analytics data. |
+| `lib/agent/seo/dataforseo.ts` | DataForSEO API client — SERP results, keyword volume/difficulty, PAA, backlinks. Auth: HTTP Basic (`DATAFORSEO_LOGIN` + `DATAFORSEO_PASSWORD`). |
+| `lib/agent/seo/rankTracker.ts` | Rank tracking via DataForSEO. |
+| `lib/agent/seo/backlinkMonitor.ts` | Backlink signal monitoring. |
+| `lib/agent/seo/lighthouse.ts` | Lighthouse / technical audit runner. |
+| `lib/agent/seo/orchestrator.ts` | Coordinates the full SEO audit pipeline (weekly cron via `vercel.json`). |
+| `lib/agent/seo/briefGenerator.ts` | Pre-brief generation before blog writing. |
+| `lib/agent/seo/cannibalization.ts` | Keyword cannibalization detection. |
+| `lib/agent/seo/strikingDistance.ts` | Finds pages ranking 8–20 that need a push. |
+| `lib/niche/registry.ts` | Multi-niche pack registry. `SITE_NICHE_PACK` env var selects the active pack (default: `fbr-pos`). |
+| `lib/niche/packs/fbr-pos.ts` | Active pack for this deployment (FBR compliance / POS niche). |
+| `lib/niche/packs/sports.ts` | Proof-of-concept sports pack (AdSense-monetised; generic template — not production-ready). |
 | `lib/keywordEngine.ts` | Keyword generation, scoring, and PAA template expansion. Pure functions — no I/O. |
 | `lib/githubApi.ts` | All GitHub I/O. `withRetry()` wraps everything. 401/403/404 are **not** retried. |
 | `lib/types.ts` | All shared TypeScript interfaces. The single source of truth for data shapes. Add new types here first. |
@@ -90,7 +120,7 @@ All agent sub-routes authenticate via `Authorization: Bearer CRON_SECRET`. They 
 
 | Route | Triggered by | Writes to GitHub |
 |---|---|---|
-| `/api/agent` | Vercel Cron (4h) | Orchestrator — delegates to sub-routes |
+| `/api/agent` | Vercel Cron (daily 2am) | Orchestrator — delegates to sub-routes |
 | `/api/generate-blog` | Agent | `data/blogs/{slug}.json`, `data/index.json`, `data/keywords.json`, `data/costs.json` |
 | `/api/update-blogs` | Agent | `data/blogs/*.json` |
 | `/api/refresh-content` | Agent + decay detector | `data/blogs/*.json` |
@@ -103,6 +133,15 @@ All agent sub-routes authenticate via `Authorization: Bearer CRON_SECRET`. They 
 | `/api/track-conversion` | Client `sendBeacon` | `data/conversions.json` |
 | `/api/track-engagement` | Client `sendBeacon` | `data/engagement.json` |
 | `/api/agent-status` | Dashboard (public) | Read-only |
+| `/api/pre-brief` | Vercel Cron (daily 1am) | Pre-generates keyword brief before the agent run |
+| `/api/scrape-keywords` | Manual / agent | `data/keywords.json` — replenishes keyword pool |
+| `/api/seo/full-audit` | Vercel Cron (weekly Monday 4am) | Full SEO audit via DataForSEO + Lighthouse |
+| `/api/seo/check-backlinks` | SEO orchestrator | Backlink signals |
+| `/api/seo/check-cannibalization` | SEO orchestrator | Cannibalization report |
+| `/api/seo/find-gaps` | SEO orchestrator | Content gap analysis |
+| `/api/seo/generate-brief` | SEO orchestrator | Brief for next blog |
+| `/api/seo/striking-distance` | SEO orchestrator | Pages ranking 8–20 |
+| `/api/seo/track-rankings` | SEO orchestrator | SERP position tracking |
 
 ### Front-End Rendering
 
@@ -141,7 +180,7 @@ GITHUB_OWNER        — Repository owner
 GITHUB_REPO         — Repository name
 GITHUB_BRANCH       — Branch to commit to (default: main)
 CRON_SECRET         — Auth token for all /api/* agent routes
-GROQ_API_KEY        — Groq API (llama-3.3-70b-versatile)
+GROQ_API_KEY        — Groq API key (⚠ llama-3.3-70b-versatile decommissioned 2026-08-16 — migrate to a live model before use)
 SITE_BASE_URL       — Production URL, e.g. https://phelixerp.vercel.app
 ```
 
@@ -151,9 +190,20 @@ GSC_CLIENT_EMAIL / GSC_PRIVATE_KEY / GSC_SITE_URL     — Google Search Console
 GOOGLE_INDEXING_CLIENT_EMAIL / GOOGLE_INDEXING_PRIVATE_KEY
 TWITTER_API_KEY / TWITTER_API_SECRET / TWITTER_ACCESS_TOKEN / TWITTER_ACCESS_SECRET
 LINKEDIN_ACCESS_TOKEN / LINKEDIN_PERSON_URN
-DATAFORSEO_LOGIN / DATAFORSEO_KEY
+DATAFORSEO_LOGIN / DATAFORSEO_PASSWORD
 MONTHLY_TOKEN_BUDGET   — Override 5M token monthly cap
 ```
+
+### Multi-Niche Architecture
+
+The engine is niche-agnostic. A `NichePack` (defined in `lib/niche/types.ts`) bundles all site-specific content logic: keyword seeds, prompt templates, CTA copy, monetization strategy, and topic clusters. Two packs exist:
+
+- `fbr-pos` — active pack for this deployment (FBR / POS / ERP market, Pakistan)
+- `sports` — proof-of-concept only; uses a generic template and is not production-ready
+
+Activate a different niche by setting `SITE_NICHE_PACK=<id>` in Vercel env vars. The registry falls back to `fbr-pos` if the value is missing or unknown.
+
+**Multi-site**: the system supports multiple niches within one deployment but does NOT support running multiple sites from one project. A second site requires a second Vercel project (same repo, different env vars). There is no shared site registry or domain-routing layer.
 
 ### Critical Patterns
 

@@ -63,13 +63,13 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
   // ── Config & credentials ────────────────────────────────────────────────────
   const siteConfig = getSiteConfig();
   const gh         = getGitHubConfig();
-  const groqApiKey = process.env.GROQ_API_KEY;
+  const groqApiKey = process.env.OPENROUTER_API_KEY ?? process.env.GROQ_API_KEY;
 
   if (!gh) {
     return NextResponse.json({ error: "GitHub not configured" }, { status: 500 });
   }
   if (!groqApiKey) {
-    return NextResponse.json({ error: "GROQ_API_KEY not set" }, { status: 500 });
+    return NextResponse.json({ error: "OPENROUTER_API_KEY not set" }, { status: 500 });
   }
 
   const { token, owner, repo } = gh;
