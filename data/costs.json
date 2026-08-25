@@ -1752,6 +1752,15 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-25T02:25:32.901Z",
+      "action": "title_optimize",
+      "slug": "fbr-penalty-increase-july-1",
+      "model": "openai/gpt-oss-120b",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1768,8 +1777,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 35615,
-      "calls": 32
+      "tokens": 36015,
+      "calls": 33
     }
   },
   "monthlyTokenBudget": 5000000,
