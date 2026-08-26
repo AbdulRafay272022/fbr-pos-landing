@@ -1,0 +1,64 @@
+{
+  "runs": [
+    {
+      "ts": "2026-08-26T22:05:31.175Z",
+      "slug": "fbr-pos-sync-failed-how-to-fix-pakistan",
+      "title": "FBR POS Sync Failed: How to Fix Every Error in Pakistan (2026 Guide)",
+      "keyword": "fbr pos sync failed how to fix pakistan",
+      "wordCount": 2615,
+      "selectionMethod": "keyword-pool",
+      "topicReason": "keyword-pool: 3222 non-city candidates; freshness 1.00, priority 100, cluster technical",
+      "attempt": 1,
+      "qualityPassed": true,
+      "qualityChecks": {
+        "words": {
+          "pass": true,
+          "value": 2615
+        },
+        "table": {
+          "pass": true,
+          "tableCount": 1
+        },
+        "numberedProcess": {
+          "pass": true,
+          "longestOrderedList": 7
+        },
+        "faqs": {
+          "pass": true,
+          "faqCount": 6
+        },
+        "metaLength": {
+          "pass": true,
+          "metaLength": 140
+        },
+        "metaSentence": {
+          "pass": true
+        },
+        "fbrIris": {
+          "pass": true,
+          "fbrIrisCount": 24
+        },
+        "pkrFigure": {
+          "pass": true
+        },
+        "internalLinks": {
+          "pass": true,
+          "count": 3,
+          "unresolved": []
+        },
+        "articleSchema": {
+          "pass": true
+        },
+        "faqpageSchema": {
+          "pass": true
+        },
+        "notDuplicate": {
+          "pass": true,
+          "maxJaccard": 0.143
+        }
+      },
+      "published": true,
+      "failReason": null
+    }
+  ]
+}
