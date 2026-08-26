@@ -1,30 +1,30 @@
 {
   "entries": [
     {
-      "id": "mt81lp15-o8gus",
-      "ts": "2026-08-25T02:25:19.097Z",
+      "id": "mt9gve67-gxjei",
+      "ts": "2026-08-26T02:20:31.999Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mt81lp13",
+        "runId": "run-mt9gve64",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mt81lpi0-t0qez",
-      "ts": "2026-08-25T02:25:19.704Z",
+      "id": "mt9gvem1-s0cjl",
+      "ts": "2026-08-26T02:20:32.569Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mt81lp13",
+        "runId": "run-mt9gve64",
         "shouldScrape": false,
         "shouldGenerate": true,
-        "shouldUpdate": false,
+        "shouldUpdate": true,
         "shouldFetchSeo": true,
         "shouldRefresh": true,
         "shouldOptimizeTitles": true,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4267 unused keywords, last scrape 5.0d ago (next forced refresh in 25d)",
-          "generate": "23.8h since last generation, 4267 keywords available",
-          "update": "skipped: last update 144.2h ago (min 168h)",
+          "scrape": "skipped: 4267 unused keywords, last scrape 6.0d ago (next forced refresh in 24d)",
+          "generate": "23.9h since last generation, 4267 keywords available",
+          "update": "168.1h since last update run",
           "fetchSeo": "first GSC fetch",
           "refresh": "first refresh run — schema re-injection + content freshening",
           "optimizeTitles": "first title optimization run",
@@ -48,108 +48,121 @@
       }
     },
     {
-      "id": "mt81lvi1-wh34s",
-      "ts": "2026-08-25T02:25:27.481Z",
+      "id": "mt9gvkx0-s0r30",
+      "ts": "2026-08-26T02:20:40.740Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "fbr-penalty-increase-july-1",
-      "words": 1376,
+      "slug": "best-fbr-pos-system-for-restaurant-in-faisalabad",
+      "words": 1385,
       "source": "template",
-      "durationMs": 6239,
+      "durationMs": 6615,
       "details": {
-        "runId": "run-mt81lp13"
+        "runId": "run-mt9gve64"
       }
     },
     {
-      "id": "mt81lz47-fow6r",
-      "ts": "2026-08-25T02:25:32.167Z",
+      "id": "mt9gvvch-f48bs",
+      "ts": "2026-08-26T02:20:54.257Z",
+      "site": "Phelix ERP",
+      "event": "blog_updated",
+      "level": "info",
+      "success": true,
+      "durationMs": 13517,
+      "details": {
+        "runId": "run-mt9gve64",
+        "updatedCount": 0
+      }
+    },
+    {
+      "id": "mt9gvwzp-7esk3",
+      "ts": "2026-08-26T02:20:56.389Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 4686,
+      "durationMs": 2132,
       "details": {
-        "runId": "run-mt81lp13",
-        "pages": 2,
-        "totalImpressions": 8
+        "runId": "run-mt9gve64",
+        "pages": 1,
+        "totalImpressions": 2
       }
     },
     {
-      "id": "mt81lzf7-ifgj0",
-      "ts": "2026-08-25T02:25:32.563Z",
+      "id": "mt9gvxfb-5cv30",
+      "ts": "2026-08-26T02:20:56.952Z",
       "site": "Phelix ERP",
       "event": "content_refreshed",
       "level": "info",
       "success": true,
-      "durationMs": 396,
+      "durationMs": 561,
       "details": {
-        "runId": "run-mt81lp13",
+        "runId": "run-mt9gve64",
         "refreshedCount": 0
       }
     },
     {
-      "id": "mt81m0zs-kac3n",
-      "ts": "2026-08-25T02:25:34.600Z",
+      "id": "mt9gvxw1-cv77j",
+      "ts": "2026-08-26T02:20:57.553Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 2037,
+      "durationMs": 601,
       "details": {
-        "runId": "run-mt81lp13",
-        "optimizedCount": 1
-      }
-    },
-    {
-      "id": "mt81m1r9-znrmb",
-      "ts": "2026-08-25T02:25:35.589Z",
-      "site": "Phelix ERP",
-      "event": "landing_generated",
-      "level": "info",
-      "success": true,
-      "durationMs": 989,
-      "details": {
-        "runId": "run-mt81lp13"
-      }
-    },
-    {
-      "id": "mt81m1vl-c5n7y",
-      "ts": "2026-08-25T02:25:35.745Z",
-      "site": "Phelix ERP",
-      "event": "conversion_optimized",
-      "level": "info",
-      "success": true,
-      "durationMs": 156,
-      "details": {
-        "runId": "run-mt81lp13",
+        "runId": "run-mt9gve64",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mt81m32j-50m8i",
-      "ts": "2026-08-25T02:25:37.291Z",
+      "id": "mt9gvy6k-swvo7",
+      "ts": "2026-08-26T02:20:57.932Z",
+      "site": "Phelix ERP",
+      "event": "landing_generated",
+      "level": "info",
+      "success": true,
+      "durationMs": 379,
+      "details": {
+        "runId": "run-mt9gve64"
+      }
+    },
+    {
+      "id": "mt9gvyb5-t6h3d",
+      "ts": "2026-08-26T02:20:58.097Z",
+      "site": "Phelix ERP",
+      "event": "conversion_optimized",
+      "level": "info",
+      "success": true,
+      "durationMs": 165,
+      "details": {
+        "runId": "run-mt9gve64",
+        "optimizedCount": 0
+      }
+    },
+    {
+      "id": "mt9gvzlp-vunra",
+      "ts": "2026-08-26T02:20:59.773Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1545,
+      "durationMs": 1676,
       "details": {
-        "runId": "run-mt81lp13",
+        "runId": "run-mt9gve64",
         "decaysFound": 0
       }
     },
     {
-      "id": "mt81m37v-lbjqi",
-      "ts": "2026-08-25T02:25:37.483Z",
+      "id": "mt9gvzqw-t2udz",
+      "ts": "2026-08-26T02:20:59.960Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 192,
+      "durationMs": 187,
       "details": {
-        "runId": "run-mt81lp13"
+        "runId": "run-mt9gve64"
       }
     }
   ],
