@@ -1,5 +1,47 @@
 [
   {
+    "slug": "fbr-pos-sync-failed-how-to-fix-pakistan",
+    "title": "FBR POS Sync Failed: How to Fix Every Error in Pakistan (2026 Guide)",
+    "metaDescription": "FBR POS sync failures can trigger PKR 50,000 fines for each missed invoice. This guide explains every cause and fix, step by step, for 2026.",
+    "keywords": [
+      "fbr pos sync failed how to fix pakistan",
+      "fbr pos sync error fix",
+      "fbr iris sync failure pakistan",
+      "fbr pos offline sync problem"
+    ],
+    "faqs": [
+      {
+        "question": "How long can my FBR POS stay offline before I get a penalty?",
+        "answer": "FBR IRIS currently allows Tier-1 retailers a maximum offline window of 30 minutes per the official API integration SLA. Invoices queued within that window and uploaded successfully after connectivity is restored are not flagged. If the offline period exceeds the tolerance window, an automated compliance flag is raised — this does not immediately trigger a penalty notice, but it creates an audit record that field officers review during physical inspections. Persistent flags across multiple days will result in a formal notice."
+      },
+      {
+        "question": "Will I be penalised for a sync failure caused by IRIS being down?",
+        "answer": "FBR does recognise IRIS server-side downtime as a force-majeure event, but you must document it. Take screenshots of the HTTP 503 error, note the timestamps, and check the official FBR Twitter/X account and IRIS status page for outage announcements. Keep this evidence for at least two years. During an audit, businesses that can demonstrate the failure was on the IRIS side — not theirs — are typically exempted from the PKR 50,000 per-invoice penalty, though the burden of proof lies with the taxpayer."
+      },
+      {
+        "question": "Can I manually enter invoices in the IRIS portal if my POS fails?",
+        "answer": "Yes, FBR IRIS provides a manual invoice entry interface at iris.fbr.gov.pk under the 'E-Invoicing' section. You can enter transactions by hand if your POS is completely inoperable. This is slow — a busy retail counter generating 100 invoices per hour cannot realistically be managed manually — but it is the correct legal fallback. For restaurants and pharmacies with FBR-mandated real-time reporting, manual entry is the only compliant option during total POS failure."
+      },
+      {
+        "question": "What does HTTP 422 from FBR IRIS mean specifically?",
+        "answer": "HTTP 422 (Unprocessable Entity) from the FBR IRIS API indicates the invoice data was structurally valid JSON but contained a business-logic error. The most common causes are: invoice timestamp more than 5 minutes in the past or future (clock skew), a duplicate invoice number already recorded in IRIS for the same STRN, or a mandatory field with an invalid value such as a wrong tax category code. The IRIS response body includes a 'reason' field in English that identifies which field failed validation."
+      },
+      {
+        "question": "How do I prevent sync failures from happening again?",
+        "answer": "Four measures eliminate the most common causes permanently: configure your POS to auto-refresh FBR IRIS tokens every 20 minutes (before the 30-minute expiry), enable automatic NTP time sync on the POS terminal and verify it daily, provision a secondary internet connection (4G SIM dongle costs PKR 800–1,200 per month) dedicated to IRIS sync, and set up an alert in your POS dashboard that sends a WhatsApp or SMS message if the sync queue exceeds 10 pending invoices."
+      },
+      {
+        "question": "My POS vendor says the sync failure is FBR's fault. Who do I escalate to?",
+        "answer": "Escalate in parallel to both parties. For the vendor: file a written support ticket with the exact error code, timestamp, and sync log export — verbal complaints rarely produce fixes. For FBR: use the helpline at 051-111-772-772 or the IRIS support portal's ticket system. If the issue persists beyond 48 hours, consider engaging a tax consultant who specialises in FBR POS compliance — they can file for a temporary exemption period while the technical issue is resolved, protecting you from retrospective penalties of up to PKR 200,000."
+      }
+    ],
+    "publishedAt": "2026-08-26T22:05:31.175Z",
+    "readTime": 9,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "lastUpdated": "2026-08-26T22:05:31.175Z"
+  },
+  {
     "slug": "best-fbr-pos-system-for-restaurant-in-faisalabad",
     "title": "Best FBR POS System For Restaurant In Faisalabad",
     "metaDescription": "Best FBR POS System For Restaurant In Faisalabad — a practical, up-to-date guide.",
