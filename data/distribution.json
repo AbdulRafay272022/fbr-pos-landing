@@ -1322,8 +1322,29 @@
         }
       ],
       "distributedAt": "2026-08-25T02:25:28.540Z"
+    },
+    {
+      "slug": "best-fbr-pos-system-for-restaurant-in-faisalabad",
+      "title": "Best FBR POS System For Restaurant In Faisalabad",
+      "blogUrl": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-faisalabad",
+      "hook": "Best FBR POS System For Restaurant In Faisalabad",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-26T02:20:41.798Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-26T02:20:41.798Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-26T02:20:41.799Z"
     }
   ],
-  "lastDistributedAt": "2026-08-25T02:25:28.540Z",
+  "lastDistributedAt": "2026-08-26T02:20:41.799Z",
   "totalDistributed": 0
 }
