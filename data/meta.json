@@ -1,9 +1,9 @@
 {
   "lastTopicIndex": -1,
   "agent": {
-    "isRunning": false,
-    "lockedAt": null,
-    "lockedBy": null
+    "isRunning": true,
+    "lockedAt": "2026-08-27T02:05:32.829Z",
+    "lockedBy": "run-mtavryi4"
   },
   "stats": {
     "lastScrapeAt": "2026-08-20T02:50:51.856Z",
@@ -11,27 +11,6 @@
     "lastUpdateAt": "2026-08-26T02:20:54.257Z",
     "blogsGeneratedTotal": 45,
     "blogsUpdatedTotal": 0,
-    "keywordsUsedTotal": 0,
-    "lastSeoFetchAt": "2026-08-26T02:20:56.389Z",
-    "totalImpressions": 2,
-    "avgCTR": 0,
-    "topPages": [
-      {
-        "slug": "fbr-pos-system-restaurants-pakistan-2026",
-        "impressions": 2,
-        "ctr": 0,
-        "position": 9.5
-      }
-    ],
-    "lastRefreshAt": "2026-08-26T02:20:56.951Z",
-    "refreshesTotal": 0,
-    "lastTitleOptimizeAt": "2026-08-26T02:20:57.553Z",
-    "titlesOptimizedTotal": 0,
-    "lastLandingGenerateAt": "2026-08-26T02:20:57.932Z",
-    "landingsGeneratedTotal": 1,
-    "lastConversionOptAt": "2026-08-26T02:20:58.097Z",
-    "conversionsOptimizedTotal": 0,
-    "lastDecayDetectAt": "2026-08-26T02:20:59.773Z",
-    "decaysDetectedTotal": 0
+    "keywordsUsedTotal": 0
   }
 }
