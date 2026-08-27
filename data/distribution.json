@@ -1343,8 +1343,29 @@
         }
       ],
       "distributedAt": "2026-08-26T02:20:41.799Z"
+    },
+    {
+      "slug": "fbr-tax-penalty",
+      "title": "The Ultimate Guide to Fbr tax penalty in 2026",
+      "blogUrl": "https://phelixerp.online/blog/fbr-tax-penalty",
+      "hook": "The Ultimate Guide to Fbr tax penalty in 2026",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-27T02:05:46.680Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-27T02:05:46.680Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-27T02:05:46.680Z"
     }
   ],
-  "lastDistributedAt": "2026-08-26T02:20:41.799Z",
+  "lastDistributedAt": "2026-08-27T02:05:46.680Z",
   "totalDistributed": 0
 }
