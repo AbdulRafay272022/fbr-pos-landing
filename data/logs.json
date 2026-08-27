@@ -1,43 +1,43 @@
 {
   "entries": [
     {
-      "id": "mt9gve67-gxjei",
-      "ts": "2026-08-26T02:20:31.999Z",
+      "id": "mtavryi6-36xvo",
+      "ts": "2026-08-27T02:05:32.142Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mt9gve64",
+        "runId": "run-mtavryi4",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mt9gvem1-s0cjl",
-      "ts": "2026-08-26T02:20:32.569Z",
+      "id": "mtavrz18-k9zpt",
+      "ts": "2026-08-27T02:05:32.828Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mt9gve64",
+        "runId": "run-mtavryi4",
         "shouldScrape": false,
         "shouldGenerate": true,
-        "shouldUpdate": true,
+        "shouldUpdate": false,
         "shouldFetchSeo": true,
-        "shouldRefresh": true,
+        "shouldRefresh": false,
         "shouldOptimizeTitles": true,
         "shouldGenerateLanding": true,
         "shouldOptimizeConversion": true,
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4267 unused keywords, last scrape 6.0d ago (next forced refresh in 24d)",
-          "generate": "23.9h since last generation, 4267 keywords available",
-          "update": "168.1h since last update run",
+          "scrape": "skipped: 4266 unused keywords, last scrape 7.0d ago (next forced refresh in 23d)",
+          "generate": "23.7h since last generation, 4266 keywords available",
+          "update": "skipped: last update 23.7h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
-          "refresh": "first refresh run — schema re-injection + content freshening",
+          "refresh": "skipped: no GSC-indexed pages meet refresh threshold",
           "optimizeTitles": "first title optimization run",
           "generateLanding": "first landing page generation",
           "optimizeConversion": "first conversion optimization run",
@@ -48,121 +48,95 @@
       }
     },
     {
-      "id": "mt9gvkx0-s0r30",
-      "ts": "2026-08-26T02:20:40.740Z",
+      "id": "mtavs5v5-ol866",
+      "ts": "2026-08-27T02:05:41.681Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "best-fbr-pos-system-for-restaurant-in-faisalabad",
-      "words": 1385,
+      "slug": "fbr-tax-penalty",
+      "words": 1370,
       "source": "template",
-      "durationMs": 6615,
+      "durationMs": 7497,
       "details": {
-        "runId": "run-mt9gve64"
+        "runId": "run-mtavryi4"
       }
     },
     {
-      "id": "mt9gvvch-f48bs",
-      "ts": "2026-08-26T02:20:54.257Z",
-      "site": "Phelix ERP",
-      "event": "blog_updated",
-      "level": "info",
-      "success": true,
-      "durationMs": 13517,
-      "details": {
-        "runId": "run-mt9gve64",
-        "updatedCount": 0
-      }
-    },
-    {
-      "id": "mt9gvwzp-7esk3",
-      "ts": "2026-08-26T02:20:56.389Z",
+      "id": "mtavs7uw-jlc6y",
+      "ts": "2026-08-27T02:05:44.264Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2132,
+      "durationMs": 2583,
       "details": {
-        "runId": "run-mt9gve64",
-        "pages": 1,
-        "totalImpressions": 2
+        "runId": "run-mtavryi4",
+        "pages": 2,
+        "totalImpressions": 3
       }
     },
     {
-      "id": "mt9gvxfb-5cv30",
-      "ts": "2026-08-26T02:20:56.952Z",
-      "site": "Phelix ERP",
-      "event": "content_refreshed",
-      "level": "info",
-      "success": true,
-      "durationMs": 561,
-      "details": {
-        "runId": "run-mt9gve64",
-        "refreshedCount": 0
-      }
-    },
-    {
-      "id": "mt9gvxw1-cv77j",
-      "ts": "2026-08-26T02:20:57.553Z",
+      "id": "mtavs9ee-3nmq2",
+      "ts": "2026-08-27T02:05:46.262Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 601,
+      "durationMs": 1997,
       "details": {
-        "runId": "run-mt9gve64",
-        "optimizedCount": 0
+        "runId": "run-mtavryi4",
+        "optimizedCount": 1
       }
     },
     {
-      "id": "mt9gvy6k-swvo7",
-      "ts": "2026-08-26T02:20:57.932Z",
+      "id": "mtavs9rs-3gp4d",
+      "ts": "2026-08-27T02:05:46.744Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "durationMs": 379,
+      "durationMs": 482,
       "details": {
-        "runId": "run-mt9gve64"
+        "runId": "run-mtavryi4"
       }
     },
     {
-      "id": "mt9gvyb5-t6h3d",
-      "ts": "2026-08-26T02:20:58.097Z",
+      "id": "mtavs9zj-k018l",
+      "ts": "2026-08-27T02:05:47.023Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 165,
+      "durationMs": 278,
       "details": {
-        "runId": "run-mt9gve64",
+        "runId": "run-mtavryi4",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mt9gvzlp-vunra",
-      "ts": "2026-08-26T02:20:59.773Z",
+      "id": "mtavsccr-fleq0",
+      "ts": "2026-08-27T02:05:50.091Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 1676,
+      "durationMs": 3068,
       "details": {
-        "runId": "run-mt9gve64",
+        "runId": "run-mtavryi4",
         "decaysFound": 0
       }
     },
     {
-      "id": "mt9gvzqw-t2udz",
-      "ts": "2026-08-26T02:20:59.960Z",
+      "id": "mtavscp2-m6dep",
+      "ts": "2026-08-27T02:05:50.534Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 187,
+      "durationMs": 443,
       "details": {
-        "runId": "run-mt9gve64"
+        "runId": "run-mtavryi4"
       }
     }
   ],
