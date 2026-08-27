@@ -7,7 +7,16 @@
       "clicks": 0,
       "ctr": 0,
       "position": 9.5,
-      "fetchedAt": "2026-08-26T02:20:54.758Z"
+      "fetchedAt": "2026-08-27T02:05:42.819Z"
+    },
+    {
+      "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
+      "url": "https://phelixerp.online/blog/retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 7,
+      "fetchedAt": "2026-08-27T02:05:42.819Z"
     }
   ],
   "queries": [
@@ -17,15 +26,15 @@
       "clicks": 0,
       "ctr": 0,
       "position": 24.5,
-      "fetchedAt": "2026-08-26T02:20:54.695Z"
+      "fetchedAt": "2026-08-27T02:05:42.819Z"
     }
   ],
-  "lastFetchedAt": "2026-08-26T02:20:54.758Z",
+  "lastFetchedAt": "2026-08-27T02:05:42.819Z",
   "summary": {
-    "totalImpressions": 2,
+    "totalImpressions": 3,
     "totalClicks": 0,
     "avgCTR": 0,
-    "avgPosition": 9.5
+    "avgPosition": 8.25
   },
   "topPages": [
     {
@@ -33,6 +42,12 @@
       "impressions": 2,
       "ctr": 0,
       "position": 9.5
+    },
+    {
+      "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
     }
   ],
   "topQueries": [
