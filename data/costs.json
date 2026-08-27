@@ -1761,6 +1761,15 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-27T02:05:44.732Z",
+      "action": "title_optimize",
+      "slug": "fbr-tax-penalty",
+      "model": "openai/gpt-oss-120b",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1777,8 +1786,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 36015,
-      "calls": 33
+      "tokens": 36415,
+      "calls": 34
     }
   },
   "monthlyTokenBudget": 5000000,
