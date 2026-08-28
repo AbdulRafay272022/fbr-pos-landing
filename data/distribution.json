@@ -1364,8 +1364,29 @@
         }
       ],
       "distributedAt": "2026-08-27T02:05:46.680Z"
+    },
+    {
+      "slug": "fbr-income-tax-return-deadline",
+      "title": "FBR Income Tax Return Deadline",
+      "blogUrl": "https://phelixerp.online/blog/fbr-income-tax-return-deadline",
+      "hook": "FBR Income Tax Return Deadline",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-28T02:44:02.159Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-28T02:44:02.159Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-28T02:44:02.159Z"
     }
   ],
-  "lastDistributedAt": "2026-08-27T02:05:46.680Z",
+  "lastDistributedAt": "2026-08-28T02:44:02.159Z",
   "totalDistributed": 0
 }
