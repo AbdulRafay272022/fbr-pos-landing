@@ -1770,6 +1770,15 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-28T02:44:06.082Z",
+      "action": "title_optimize",
+      "slug": "fbr-income-tax-return-deadline",
+      "model": "openai/gpt-oss-120b",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1786,8 +1795,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 36415,
-      "calls": 34
+      "tokens": 36815,
+      "calls": 35
     }
   },
   "monthlyTokenBudget": 5000000,
