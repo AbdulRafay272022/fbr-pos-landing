@@ -7,7 +7,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 9.5,
-      "fetchedAt": "2026-08-27T02:05:42.819Z"
+      "fetchedAt": "2026-08-28T02:44:02.242Z"
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
@@ -16,20 +16,11 @@
       "clicks": 0,
       "ctr": 0,
       "position": 7,
-      "fetchedAt": "2026-08-27T02:05:42.819Z"
+      "fetchedAt": "2026-08-28T02:44:02.242Z"
     }
   ],
-  "queries": [
-    {
-      "query": "fbr compliance",
-      "impressions": 2,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 24.5,
-      "fetchedAt": "2026-08-27T02:05:42.819Z"
-    }
-  ],
-  "lastFetchedAt": "2026-08-27T02:05:42.819Z",
+  "queries": [],
+  "lastFetchedAt": "2026-08-28T02:44:02.242Z",
   "summary": {
     "totalImpressions": 3,
     "totalClicks": 0,
@@ -50,11 +41,5 @@
       "position": 7
     }
   ],
-  "topQueries": [
-    {
-      "query": "fbr compliance",
-      "impressions": 2,
-      "position": 24.5
-    }
-  ]
+  "topQueries": []
 }
