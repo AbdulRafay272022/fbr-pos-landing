@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mtavryi6-36xvo",
-      "ts": "2026-08-27T02:05:32.142Z",
+      "id": "mtccl4h2-mazjt",
+      "ts": "2026-08-28T02:43:52.934Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mtavryi4",
+        "runId": "run-mtccl4h0",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mtavrz18-k9zpt",
-      "ts": "2026-08-27T02:05:32.828Z",
+      "id": "mtccl4ww-kvfyt",
+      "ts": "2026-08-28T02:43:53.504Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mtavryi4",
+        "runId": "run-mtccl4h0",
         "shouldScrape": false,
         "shouldGenerate": true,
         "shouldUpdate": false,
@@ -33,9 +33,9 @@
         "shouldDetectDecay": true,
         "shouldGenerateProgrammatic": true,
         "reasons": {
-          "scrape": "skipped: 4266 unused keywords, last scrape 7.0d ago (next forced refresh in 23d)",
-          "generate": "23.7h since last generation, 4266 keywords available",
-          "update": "skipped: last update 23.7h ago (min 168h)",
+          "scrape": "skipped: 4266 unused keywords, last scrape 8.0d ago (next forced refresh in 22d)",
+          "generate": "24.6h since last generation, 4266 keywords available",
+          "update": "skipped: last update 48.4h ago (min 168h)",
           "fetchSeo": "first GSC fetch",
           "refresh": "skipped: no GSC-indexed pages meet refresh threshold",
           "optimizeTitles": "first title optimization run",
@@ -48,95 +48,95 @@
       }
     },
     {
-      "id": "mtavs5v5-ol866",
-      "ts": "2026-08-27T02:05:41.681Z",
+      "id": "mtcclas1-fbwfe",
+      "ts": "2026-08-28T02:44:01.105Z",
       "site": "Phelix ERP",
       "event": "blog_generated",
       "level": "info",
       "success": true,
-      "slug": "fbr-tax-penalty",
-      "words": 1370,
+      "slug": "fbr-income-tax-return-deadline",
+      "words": 1376,
       "source": "template",
-      "durationMs": 7497,
+      "durationMs": 6141,
       "details": {
-        "runId": "run-mtavryi4"
+        "runId": "run-mtccl4h0"
       }
     },
     {
-      "id": "mtavs7uw-jlc6y",
-      "ts": "2026-08-27T02:05:44.264Z",
+      "id": "mtccleb5-xsmws",
+      "ts": "2026-08-28T02:44:05.681Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2583,
+      "durationMs": 4576,
       "details": {
-        "runId": "run-mtavryi4",
+        "runId": "run-mtccl4h0",
         "pages": 2,
         "totalImpressions": 3
       }
     },
     {
-      "id": "mtavs9ee-3nmq2",
-      "ts": "2026-08-27T02:05:46.262Z",
+      "id": "mtcclft3-g2cy6",
+      "ts": "2026-08-28T02:44:07.623Z",
       "site": "Phelix ERP",
       "event": "title_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 1997,
+      "durationMs": 1942,
       "details": {
-        "runId": "run-mtavryi4",
+        "runId": "run-mtccl4h0",
         "optimizedCount": 1
       }
     },
     {
-      "id": "mtavs9rs-3gp4d",
-      "ts": "2026-08-27T02:05:46.744Z",
+      "id": "mtcclg5n-6s213",
+      "ts": "2026-08-28T02:44:08.075Z",
       "site": "Phelix ERP",
       "event": "landing_generated",
       "level": "info",
       "success": true,
-      "durationMs": 482,
+      "durationMs": 452,
       "details": {
-        "runId": "run-mtavryi4"
+        "runId": "run-mtccl4h0"
       }
     },
     {
-      "id": "mtavs9zj-k018l",
-      "ts": "2026-08-27T02:05:47.023Z",
+      "id": "mtcclgaa-ckpgr",
+      "ts": "2026-08-28T02:44:08.242Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 278,
+      "durationMs": 167,
       "details": {
-        "runId": "run-mtavryi4",
+        "runId": "run-mtccl4h0",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mtavsccr-fleq0",
-      "ts": "2026-08-27T02:05:50.091Z",
+      "id": "mtcclhfg-x5nip",
+      "ts": "2026-08-28T02:44:09.724Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 3068,
+      "durationMs": 1482,
       "details": {
-        "runId": "run-mtavryi4",
+        "runId": "run-mtccl4h0",
         "decaysFound": 0
       }
     },
     {
-      "id": "mtavscp2-m6dep",
-      "ts": "2026-08-27T02:05:50.534Z",
+      "id": "mtcclhl7-y4uxb",
+      "ts": "2026-08-28T02:44:09.931Z",
       "site": "Phelix ERP",
       "event": "programmatic_generated",
       "level": "info",
       "success": false,
-      "durationMs": 443,
+      "durationMs": 207,
       "details": {
-        "runId": "run-mtavryi4"
+        "runId": "run-mtccl4h0"
       }
     }
   ],
