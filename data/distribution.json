@@ -1385,8 +1385,29 @@
         }
       ],
       "distributedAt": "2026-08-28T02:44:02.159Z"
+    },
+    {
+      "slug": "fbr-suspend-iris-pos-other-tax-services-maintenance",
+      "title": "FBR Suspend IRIS POS Other Tax Services Maintenance",
+      "blogUrl": "https://phelixerp.online/blog/fbr-suspend-iris-pos-other-tax-services-maintenance",
+      "hook": "FBR Suspend IRIS POS Other Tax Services Maintenance",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-08-31T02:39:55.713Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-08-31T02:39:55.713Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-08-31T02:39:55.714Z"
     }
   ],
-  "lastDistributedAt": "2026-08-28T02:44:02.159Z",
+  "lastDistributedAt": "2026-08-31T02:39:55.714Z",
   "totalDistributed": 0
 }
