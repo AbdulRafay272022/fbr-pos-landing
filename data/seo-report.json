@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T04:02:37.461Z",
+  "generatedAt": "2026-08-31T04:09:58.397Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -19,14 +19,20 @@
   },
   "recommendations": [
     {
+      "priority": "high",
+      "title": "1 pages have invalid structured data",
+      "detail": "19 schema errors detected — these block rich-result eligibility.",
+      "action": "Fix structured data — see schema audit page."
+    },
+    {
       "priority": "medium",
-      "title": "Cannibalization: 20 keyword clusters",
-      "detail": "\"fbr pos system\" — 4 pages compete. 4 pages have similar titles. Google will pick one and dilute authority on others.",
+      "title": "Cannibalization: 19 keyword clusters",
+      "detail": "\"ultimate guide fbr\" — 3 pages compete. 3 pages have similar titles. Google will pick one and dilute authority on others.",
       "action": "Differentiate intent — assign each post a unique long-tail variant."
     }
   ],
   "gsc": {
-    "rows": 8,
+    "rows": 5,
     "days": 28
   },
   "rankings": {
@@ -56,12 +62,59 @@
   "cannibalization": {
     "clusters": [
       {
+        "primaryKeyword": "ultimate guide fbr",
+        "pages": [
+          {
+            "slug": "fbr-income-tax-return-deadline",
+            "title": "The Ultimate Guide to Fbr income tax return deadline in 2026",
+            "titleSim": 1,
+            "keywords": [
+              "fbr income tax return deadline",
+              "fbr income tax return deadline pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-tax-penalty",
+            "title": "The Ultimate Guide to Fbr tax penalty in 2026",
+            "titleSim": 0.5,
+            "keywords": [
+              "fbr tax penalty",
+              "fbr tax penalty pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-integration-deadline",
+            "title": "The Ultimate Guide to Fbr integration deadline in 2026",
+            "titleSim": 0.5,
+            "keywords": [
+              "fbr integration deadline",
+              "fbr integration deadline pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          }
+        ],
+        "recommendation": "differentiate",
+        "reason": "3 pages have similar titles. Google will pick one and dilute authority on others."
+      },
+      {
         "primaryKeyword": "fbr pos system",
         "pages": [
           {
+            "slug": "best-fbr-pos-system-for-restaurant-in-faisalabad",
+            "title": "Best FBR POS System For Restaurant In Faisalabad",
+            "titleSim": 1,
+            "keywords": [
+              "best fbr pos system for restaurant in faisalabad",
+              "best fbr pos system for restaurant in faisalabad pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
             "slug": "best-fbr-pos-system-for-restaurant-in-rawalpindi",
             "title": "Best FBR POS System For Restaurant In Rawalpindi",
-            "titleSim": 1,
+            "titleSim": 0.6666666666666666,
             "keywords": [
               "best fbr pos system for restaurant in rawalpindi",
               "best fbr pos system for restaurant in rawalpindi pakistan",
@@ -79,12 +132,12 @@
             ]
           },
           {
-            "slug": "best-fbr-pos-system-for-retail-in-rawalpindi",
-            "title": "Best FBR POS System for Retail in Rawalpindi",
+            "slug": "best-fbr-pos-system-for-retail-in-faisalabad",
+            "title": "Top 5 Best FBR POS System for Retail in Faisalabad",
             "titleSim": 0.6666666666666666,
             "keywords": [
-              "best fbr pos system for retail in rawalpindi",
-              "best fbr pos system for retail in rawalpindi pakistan",
+              "best fbr pos system for retail in faisalabad",
+              "best fbr pos system for retail in faisalabad pakistan",
               "fbr pos compliance pakistan"
             ]
           },
@@ -100,7 +153,7 @@
           }
         ],
         "recommendation": "differentiate",
-        "reason": "4 pages have similar titles. Google will pick one and dilute authority on others."
+        "reason": "5 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
         "primaryKeyword": "fbr iris portal registration",
@@ -248,33 +301,6 @@
         "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
-        "primaryKeyword": "ultimate guide fbr integration",
-        "pages": [
-          {
-            "slug": "fbr-integration-deadline",
-            "title": "The Ultimate Guide to Fbr integration deadline in 2026",
-            "titleSim": 1,
-            "keywords": [
-              "fbr integration deadline",
-              "fbr integration deadline pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          },
-          {
-            "slug": "fbr-pos-system-integration",
-            "title": "The Ultimate Guide to Fbr pos system integration in 2026",
-            "titleSim": 0.5714285714285714,
-            "keywords": [
-              "fbr pos system integration",
-              "fbr pos system integration pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          }
-        ],
-        "recommendation": "merge",
-        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
-      },
-      {
         "primaryKeyword": "fbr pos system retail",
         "pages": [
           {
@@ -298,12 +324,12 @@
             ]
           },
           {
-            "slug": "best-fbr-pos-system-for-retail-in-faisalabad",
-            "title": "Top 5 Best FBR POS System for Retail in Faisalabad",
+            "slug": "best-fbr-pos-system-for-retail-in-rawalpindi",
+            "title": "Best FBR POS System for Retail in Rawalpindi",
             "titleSim": 0.6666666666666666,
             "keywords": [
-              "best fbr pos system for retail in faisalabad",
-              "best fbr pos system for retail in faisalabad pakistan",
+              "best fbr pos system for retail in rawalpindi",
+              "best fbr pos system for retail in rawalpindi pakistan",
               "fbr pos compliance pakistan"
             ]
           }
@@ -349,6 +375,64 @@
         "reason": "3 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
+        "primaryKeyword": "fbr pos system",
+        "pages": [
+          {
+            "slug": "fbr-pos-system-integration",
+            "title": "The Ultimate Guide to Fbr pos system integration in 2026",
+            "titleSim": 1,
+            "keywords": [
+              "fbr pos system integration",
+              "fbr pos system integration pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-pos-system-issues",
+            "title": "Top 3 FBR POS System Issues: A Troubleshooting Guide",
+            "titleSim": 0.5,
+            "keywords": [
+              "fbr pos system issues",
+              "fbr pos integration problems",
+              "fbr iris errors pakistan"
+            ]
+          },
+          {
+            "slug": "pos-system-lahore-fbr-integration-for-lahore-retailers-2026",
+            "title": "POS System Lahore – FBR Integration for Lahore Retailers 2026",
+            "titleSim": 0.5,
+            "keywords": [
+              "POS system Lahore",
+              "FBR POS Lahore",
+              "Lahore retail POS software"
+            ]
+          },
+          {
+            "slug": "fbr-pos-system-for-pharmacies-in-pakistan-complete-compliance-guide-2026",
+            "title": "FBR POS System for Pharmacies in Pakistan: 2026 Guide",
+            "titleSim": 0.5,
+            "keywords": [
+              "pharmacy POS Pakistan",
+              "FBR POS pharmacy Pakistan",
+              "medical store POS FBR"
+            ]
+          },
+          {
+            "slug": "fbr-pos-system-pakistan-complete-guide-2026",
+            "title": "FBR POS System Pakistan – Complete Guide 2026",
+            "titleSim": 0.5,
+            "keywords": [
+              "FBR POS system Pakistan",
+              "FBR POS 2026",
+              "FBR POS registration",
+              "QR invoice Pakistan"
+            ]
+          }
+        ],
+        "recommendation": "differentiate",
+        "reason": "5 pages have similar titles. Google will pick one and dilute authority on others."
+      },
+      {
         "primaryKeyword": "fbr pos system retailers",
         "pages": [
           {
@@ -370,20 +454,10 @@
               "fbr pos lahore",
               "lahore retail fbr compliance"
             ]
-          },
-          {
-            "slug": "pos-system-lahore-fbr-integration-for-lahore-retailers-2026",
-            "title": "POS System Lahore – FBR Integration for Lahore Retailers 2026",
-            "titleSim": 0.5,
-            "keywords": [
-              "POS system Lahore",
-              "FBR POS Lahore",
-              "Lahore retail POS software"
-            ]
           }
         ],
-        "recommendation": "differentiate",
-        "reason": "3 pages have similar titles. Google will pick one and dilute authority on others."
+        "recommendation": "merge",
+        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
         "primaryKeyword": "fbr penalty notice",
@@ -494,61 +568,6 @@
         "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
-        "primaryKeyword": "fbr pos pharmacies pakistan",
-        "pages": [
-          {
-            "slug": "fbr-pos-system-pharmacies-pakistan-2026",
-            "title": "Top FBR POS Systems for Pharmacies in Pakistan Compared",
-            "titleSim": 1,
-            "keywords": [
-              "fbr pos system pharmacies pakistan",
-              "pharmacy pos fbr",
-              "medical store fbr pos"
-            ]
-          },
-          {
-            "slug": "fbr-pos-system-for-pharmacies-in-pakistan-complete-compliance-guide-2026",
-            "title": "FBR POS System for Pharmacies in Pakistan: 2026 Guide",
-            "titleSim": 0.5,
-            "keywords": [
-              "pharmacy POS Pakistan",
-              "FBR POS pharmacy Pakistan",
-              "medical store POS FBR"
-            ]
-          }
-        ],
-        "recommendation": "merge",
-        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
-      },
-      {
-        "primaryKeyword": "fbr pos pakistan guide",
-        "pages": [
-          {
-            "slug": "fbr-pos-system-restaurants-pakistan-2026",
-            "title": "FBR POS for Restaurants in Pakistan: A 2026 Setup Guide",
-            "titleSim": 1,
-            "keywords": [
-              "fbr pos system restaurants pakistan",
-              "restaurant pos fbr",
-              "fbr pos dine-in"
-            ]
-          },
-          {
-            "slug": "fbr-pos-system-pakistan-complete-guide-2026",
-            "title": "FBR POS System Pakistan – Complete Guide 2026",
-            "titleSim": 0.5,
-            "keywords": [
-              "FBR POS system Pakistan",
-              "FBR POS 2026",
-              "FBR POS registration",
-              "QR invoice Pakistan"
-            ]
-          }
-        ],
-        "recommendation": "merge",
-        "reason": "2 pages have similar titles. Google will pick one and dilute authority on others."
-      },
-      {
         "primaryKeyword": "generate fbr invoices pakistan",
         "pages": [
           {
@@ -578,6 +597,56 @@
       {
         "primaryKeyword": "fbr pos compliance pakistan",
         "pages": [
+          {
+            "slug": "fbr-suspend-iris-pos-other-tax-services-maintenance",
+            "title": "The Ultimate Guide to Fbr suspend iris pos other tax services maintenance in 2026",
+            "titleSim": 0,
+            "keywords": [
+              "fbr suspend iris pos other tax services maintenance",
+              "fbr suspend iris pos other tax services maintenance pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-income-tax-return-deadline",
+            "title": "The Ultimate Guide to Fbr income tax return deadline in 2026",
+            "titleSim": 0,
+            "keywords": [
+              "fbr income tax return deadline",
+              "fbr income tax return deadline pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-tax-penalty",
+            "title": "The Ultimate Guide to Fbr tax penalty in 2026",
+            "titleSim": 0,
+            "keywords": [
+              "fbr tax penalty",
+              "fbr tax penalty pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-faisalabad",
+            "title": "Best FBR POS System For Restaurant In Faisalabad",
+            "titleSim": 0,
+            "keywords": [
+              "best fbr pos system for restaurant in faisalabad",
+              "best fbr pos system for restaurant in faisalabad pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-penalty-increase-july-1",
+            "title": "How to Fbr penalty increase july 1: A Complete Guide",
+            "titleSim": 0,
+            "keywords": [
+              "fbr penalty increase july 1",
+              "fbr penalty increase july 1 pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
           {
             "slug": "what-is-fbr-and-its-functions",
             "title": "The Ultimate Guide to What is fbr and its functions in 2026",
@@ -1031,7 +1100,7 @@
           }
         ],
         "recommendation": "differentiate",
-        "reason": "45 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
+        "reason": "50 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
       },
       {
         "primaryKeyword": "fbr pos lahore",
@@ -1090,11 +1159,11 @@
         "reason": "2 pages claim the same keyword \"qr invoice pakistan\". Reassign to unique long-tail variants."
       }
     ],
-    "flagged": 20
+    "flagged": 19
   },
   "cwv": {
     "summary": {
-      "totalAudited": 82,
+      "totalAudited": 88,
       "passingCwv": 0,
       "failingCwv": 0,
       "avgPerformance": null,
@@ -1108,8 +1177,8 @@
   },
   "schema": {
     "checked": 16,
-    "failed": 0,
-    "issues": 18
+    "failed": 1,
+    "issues": 19
   },
   "contentGaps": {
     "gaps": [],
