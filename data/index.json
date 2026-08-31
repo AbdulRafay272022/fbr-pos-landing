@@ -1,5 +1,49 @@
 [
   {
+    "slug": "fbr-suspend-iris-pos-other-tax-services-maintenance",
+    "title": "FBR Suspend IRIS POS Other Tax Services Maintenance",
+    "metaDescription": "FBR Suspend IRIS POS Other Tax Services Maintenance — a practical, up-to-date guide.",
+    "keywords": [
+      "fbr suspend iris pos other tax services maintenance",
+      "fbr suspend iris pos other tax services maintenance pakistan",
+      "fbr pos compliance pakistan"
+    ],
+    "faqs": [
+      {
+        "question": "Do I need special hardware for fbr suspend iris pos other tax services maintenance?",
+        "answer": "No. A compliant POS runs on any Android phone, iPhone, tablet, or laptop. No specialised POS terminals required."
+      },
+      {
+        "question": "What happens if my internet goes down during billing?",
+        "answer": "Transactions are stored locally during outages and automatically sync to FBR IRIS with correct timestamps when connectivity returns."
+      },
+      {
+        "question": "How long does FBR POS setup take?",
+        "answer": "A typical setup — IRIS registration, API integration, and staff training — completes within 24 hours."
+      },
+      {
+        "question": "What are the FBR penalties for non-compliance?",
+        "answer": "Fines start at PKR 10,000 for a first offense and can reach PKR 1,000,000 for repeated violations, plus STRN suspension and forced closure."
+      },
+      {
+        "question": "Is the integration officially FBR approved?",
+        "answer": "Compliant systems integrate directly with the FBR IRIS API using official endpoints. Every invoice carries a valid FBR QR code confirming submission."
+      }
+    ],
+    "publishedAt": "2026-08-31T02:39:52.425Z",
+    "readTime": 7,
+    "version": 1,
+    "authorName": "Phelix ERP Team",
+    "heroImage": {
+      "url": "https://images.pexels.com/photos/38783382/pexels-photo-38783382.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "thumb": "https://images.pexels.com/photos/38783382/pexels-photo-38783382.jpeg?auto=compress&cs=tinysrgb&h=350",
+      "alt": "A 100 Polish Zloty note placed on top of business VAT invoices, symbolizing finance and economics.",
+      "photographer": "Niepoddawajsie.pl Luk",
+      "photographerUrl": "https://www.pexels.com/@niepoddawajsie-pl-luk-2156505622",
+      "pexelsUrl": "https://www.pexels.com/photo/polish-zloty-on-business-invoice-documents-38783382/"
+    }
+  },
+  {
     "slug": "fbr-income-tax-return-deadline",
     "title": "The Ultimate Guide to Fbr income tax return deadline in 2026",
     "metaDescription": "FBR Income Tax Return Deadline — a practical, up-to-date guide.",

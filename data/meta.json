@@ -1,16 +1,3 @@
 {
-  "lastTopicIndex": -1,
-  "agent": {
-    "isRunning": true,
-    "lockedAt": "2026-08-31T02:39:46.710Z",
-    "lockedBy": "run-mtgmre14"
-  },
-  "stats": {
-    "lastScrapeAt": "2026-08-20T02:50:51.856Z",
-    "lastGenerateAt": "2026-08-28T02:44:01.105Z",
-    "lastUpdateAt": "2026-08-26T02:20:54.257Z",
-    "blogsGeneratedTotal": 47,
-    "blogsUpdatedTotal": 0,
-    "keywordsUsedTotal": 0
-  }
+  "lastTopicIndex": -1
 }
