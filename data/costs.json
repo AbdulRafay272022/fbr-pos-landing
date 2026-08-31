@@ -1779,6 +1779,15 @@
       "promptTokens": 300,
       "completionTokens": 100,
       "totalTokens": 400
+    },
+    {
+      "ts": "2026-08-31T02:40:00.124Z",
+      "action": "title_optimize",
+      "slug": "fbr-suspend-iris-pos-other-tax-services-maintenance",
+      "model": "openai/gpt-oss-120b",
+      "promptTokens": 300,
+      "completionTokens": 100,
+      "totalTokens": 400
     }
   ],
   "monthly": {
@@ -1795,8 +1804,8 @@
       "calls": 75
     },
     "2026-08": {
-      "tokens": 36815,
-      "calls": 35
+      "tokens": 37215,
+      "calls": 36
     }
   },
   "monthlyTokenBudget": 5000000,
