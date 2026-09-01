@@ -12,7 +12,7 @@ Health audit findings — fix these before anything else:
 | 2 | 🔴 CRITICAL | `keywordDiscovery.ts` uses `llama3-8b-8192` (separate dead Groq model). | `lib/agent/keywordDiscovery.ts` |
 | 3 | 🔴 CRITICAL | Agent has produced zero content since 2026-07-17 (39 days). Last `data/logs.json` entry is also July 17. Cron may have stopped firing on Vercel; verify in Vercel dashboard. | Vercel cron logs |
 | 4 | 🟠 HIGH | Keyword pool nearly exhausted: only 3 unused keywords remain. Last scrape: 2026-06-20. Run `/api/scrape-keywords` manually after fixing the model. | `data/keywords.json` |
-| 5 | 🟡 MEDIUM | `DISABLE_AUTO_BLOG` env switch described in handoff doc does not exist in code. | Not implemented |
+| 5 | ✅ RESOLVED (2026-09-02) | `DISABLE_AUTO_BLOG` env switch implemented in `agentBrain.ts` — when truthy, `/api/agent` skips blog/landing/programmatic generation, blog updates, and title optimization. Claude Desktop (`/write-blog`) is now the sole content writer; research actions (GSC fetch, decay detection, conversion opt) and cron routes outside `/api/agent` (pre-brief, full-audit) are unaffected. Keyword discovery and content refresh are separately hard-off via `KEYWORD_DISCOVERY_ENABLED` / `CONTENT_REFRESH_ENABLED` consts in the same file. | `lib/agent/agentBrain.ts` |
 | 6 | 🟡 MEDIUM | `meta.json` counter `blogsGeneratedTotal` shows 18 but 64 blog files exist. | `lib/agent/agentBrain.ts` stat tracking |
 | 7 | 🟢 LOW | Two near-duplicate slug pairs (Jaccard ≥ 0.75): `fbr-pos-system-lahore-retailers-2026` ↔ `pos-system-lahore-fbr-integration-for-lahore-retailers-2026`; `generate-fbr-qr-invoices-pakistan` ↔ `how-to-generate-fbr-qr-invoices-in-pakistan-step-by-step-guide`. | `data/blogs/`, `data/index.json` |
 | 8 | 🟢 LOW | `.claude/skills/write-blog/SKILL.md` still says `git rebase origin/main` — stale, should be reset-reapply loop. | `.claude/skills/write-blog/SKILL.md` |
@@ -192,6 +192,11 @@ TWITTER_API_KEY / TWITTER_API_SECRET / TWITTER_ACCESS_TOKEN / TWITTER_ACCESS_SEC
 LINKEDIN_ACCESS_TOKEN / LINKEDIN_PERSON_URN
 DATAFORSEO_LOGIN / DATAFORSEO_PASSWORD
 MONTHLY_TOKEN_BUDGET   — Override 5M token monthly cap
+DISABLE_AUTO_BLOG      — Set "true"/"1" to pause ALL agent content generation/rewrites
+                          (blog gen, blog update, landing gen, programmatic gen, title
+                          optimizer). Use when Claude Desktop (/write-blog) is the sole
+                          writer. Research actions (GSC fetch, decay detection, conversion
+                          opt) and cron routes outside /api/agent keep running.
 ```
 
 ### Multi-Niche Architecture
