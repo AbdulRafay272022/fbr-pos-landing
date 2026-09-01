@@ -1406,8 +1406,29 @@
         }
       ],
       "distributedAt": "2026-08-31T02:39:55.714Z"
+    },
+    {
+      "slug": "best-fbr-pos-system-for-restaurant-in-multan",
+      "title": "Best FBR POS System For Restaurant In Multan",
+      "blogUrl": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-multan",
+      "hook": "Best FBR POS System For Restaurant In Multan",
+      "posts": [
+        {
+          "platform": "twitter",
+          "postedAt": "2026-09-01T02:20:56.456Z",
+          "success": false,
+          "error": "Twitter credentials not configured"
+        },
+        {
+          "platform": "linkedin",
+          "postedAt": "2026-09-01T02:20:56.457Z",
+          "success": false,
+          "error": "LinkedIn credentials not configured"
+        }
+      ],
+      "distributedAt": "2026-09-01T02:20:56.457Z"
     }
   ],
-  "lastDistributedAt": "2026-08-31T02:39:55.714Z",
+  "lastDistributedAt": "2026-09-01T02:20:56.457Z",
   "totalDistributed": 0
 }
