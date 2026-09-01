@@ -63,6 +63,39 @@ const DECAY_DETECT_INTERVAL_HOURS = 24;
 /** Generate a programmatic page once every 36h */
 const PROG_GEN_INTERVAL_HOURS     = 36;
 
+// ── Manual kill switches ────────────────────────────────────────────────────
+/**
+ * Master content-generation switch. Claude Desktop (via /write-blog) is now
+ * the sole content writer for this site. Set DISABLE_AUTO_BLOG=true (or "1")
+ * in env to stop the autopilot from generating or rewriting ANY content —
+ * blog posts, landing pages, programmatic pages, and title rewrites — so it
+ * never races Claude's posts.
+ *
+ * Research-only actions (GSC fetch, decay detection, conversion opt) are
+ * deliberately NOT gated by this switch — they don't write content, they
+ * feed Claude's topic selection.
+ */
+function isAutoBlogDisabled(): boolean {
+  const v = (process.env.DISABLE_AUTO_BLOG ?? "").trim().toLowerCase();
+  return v === "true" || v === "1" || v === "yes";
+}
+
+/**
+ * Keyword discovery kill switch. OFF as of 2026-09 — the pool has 4,271+
+ * unused keywords, so scraping more would be wasted API calls. Re-enable by
+ * flipping this to `true` once the unused count approaches
+ * `config.minUnusedKeywordsThreshold`.
+ */
+const KEYWORD_DISCOVERY_ENABLED = false;
+
+/**
+ * Content-refresh kill switch (decay-triggered rewrites via /api/refresh-content).
+ * OFF as of 2026-09 — posts are too young for decay-based refresh to matter.
+ * Re-enable by flipping this to `true` once GSC shows real decay signals
+ * (impression/position drops) worth acting on.
+ */
+const CONTENT_REFRESH_ENABLED = false;
+
 // ─── Types ────────────────────────────────────────────────────────────────────
 
 export interface AgentDecision {
@@ -164,6 +197,8 @@ async function makeDecision(
     },
   };
 
+  const autoBlogDisabled = isAutoBlogDisabled();
+
   // ── Read keyword pool stats + SEO data in parallel ─────────────────────────
   const [kwData, seoData] = await Promise.all([
     readJsonFromGitHub<KeywordsData>("data/keywords.json", gh.token, gh.owner, gh.repo),
@@ -219,7 +254,10 @@ async function makeDecision(
   const FRESHNESS_DAYS = 30;
   const poolIsStale    = daysSinceScrape >= FRESHNESS_DAYS;
 
-  if (neverScraped || lowPool || poolIsStale) {
+  if (!KEYWORD_DISCOVERY_ENABLED) {
+    decision.reasons.scrape =
+      `skipped: keyword discovery disabled (KEYWORD_DISCOVERY_ENABLED=false in agentBrain.ts) — ${unusedCount} unused keywords in pool`;
+  } else if (neverScraped || lowPool || poolIsStale) {
     decision.shouldScrape = true;
     decision.reasons.scrape = neverScraped
       ? "never scraped before"
@@ -235,7 +273,9 @@ async function makeDecision(
   const generateAgeOk = hoursSince(lastGenerate) >= config.generateIntervalHours;
   const hasKeywords   = unusedCount > 0;
 
-  if (generateAgeOk && hasKeywords) {
+  if (autoBlogDisabled) {
+    decision.reasons.generate = "skipped: DISABLE_AUTO_BLOG is set — Claude Desktop (/write-blog) is the sole content writer";
+  } else if (generateAgeOk && hasKeywords) {
     decision.shouldGenerate = true;
     decision.reasons.generate = `${hoursSince(lastGenerate).toFixed(1)}h since last generation, ${unusedCount} keywords available`;
   } else if (!generateAgeOk) {
@@ -247,7 +287,9 @@ async function makeDecision(
   // ── UPDATE decision ────────────────────────────────────────────────────────
   const updateAgeOk = hoursSince(lastUpdate) >= config.updateIntervalHours;
 
-  if (updateAgeOk) {
+  if (autoBlogDisabled) {
+    decision.reasons.update = "skipped: DISABLE_AUTO_BLOG is set — content rewrites paused (Claude Desktop is the sole writer)";
+  } else if (updateAgeOk) {
     decision.shouldUpdate = true;
     decision.reasons.update = `${hoursSince(lastUpdate).toFixed(1)}h since last update run`;
   } else {
@@ -307,7 +349,9 @@ async function makeDecision(
         )
     );
 
-  if (refreshAgeOk && hasRefreshTargets) {
+  if (!CONTENT_REFRESH_ENABLED) {
+    decision.reasons.refresh = "skipped: content refresh disabled (CONTENT_REFRESH_ENABLED=false in agentBrain.ts)";
+  } else if (refreshAgeOk && hasRefreshTargets) {
     decision.shouldRefresh = true;
     decision.reasons.refresh = lastRefresh
       ? `${hoursSince(lastRefresh).toFixed(1)}h since last refresh, eligible pages detected`
@@ -321,7 +365,9 @@ async function makeDecision(
   // ── OPTIMIZE TITLES decision (Phase 3) ────────────────────────────────────
   const titleOptAgeOk = hoursSince(lastTitleOpt) >= TITLE_OPT_INTERVAL_HOURS;
 
-  if (titleOptAgeOk) {
+  if (autoBlogDisabled) {
+    decision.reasons.optimizeTitles = "skipped: DISABLE_AUTO_BLOG is set — title rewrites paused";
+  } else if (titleOptAgeOk) {
     decision.shouldOptimizeTitles = true;
     decision.reasons.optimizeTitles = lastTitleOpt
       ? `${hoursSince(lastTitleOpt).toFixed(1)}h since last title optimization`
@@ -333,7 +379,9 @@ async function makeDecision(
   // ── GENERATE LANDING PAGE decision (Phase 5) ───────────────────────────────
   const landingAgeOk = hoursSince(lastLandingGen) >= LANDING_GEN_INTERVAL_HOURS;
 
-  if (landingAgeOk) {
+  if (autoBlogDisabled) {
+    decision.reasons.generateLanding = "skipped: DISABLE_AUTO_BLOG is set — Claude Desktop is the sole content writer";
+  } else if (landingAgeOk) {
     decision.shouldGenerateLanding = true;
     decision.reasons.generateLanding = lastLandingGen
       ? `${hoursSince(lastLandingGen).toFixed(1)}h since last landing page`
@@ -374,7 +422,9 @@ async function makeDecision(
   // ── GENERATE PROGRAMMATIC PAGE decision (Phase 5) ─────────────────────────
   const progAgeOk = hoursSince(lastProgGen) >= PROG_GEN_INTERVAL_HOURS;
 
-  if (progAgeOk) {
+  if (autoBlogDisabled) {
+    decision.reasons.generateProgrammatic = "skipped: DISABLE_AUTO_BLOG is set — programmatic city×vertical pages paused";
+  } else if (progAgeOk) {
     decision.shouldGenerateProgrammatic = true;
     decision.reasons.generateProgrammatic = lastProgGen
       ? `${hoursSince(lastProgGen).toFixed(1)}h since last programmatic page`
