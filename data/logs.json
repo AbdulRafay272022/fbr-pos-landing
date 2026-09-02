@@ -1,142 +1,90 @@
 {
   "entries": [
     {
-      "id": "mti1is72-1188n",
-      "ts": "2026-09-01T02:20:44.991Z",
+      "id": "mtjh4yjt-dd2jh",
+      "ts": "2026-09-02T02:25:40.073Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mti1is71",
+        "runId": "run-mtjh4yjr",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mti1isqf-hlb7i",
-      "ts": "2026-09-01T02:20:45.687Z",
+      "id": "mtjh4z1o-ys22f",
+      "ts": "2026-09-02T02:25:40.717Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mti1is71",
+        "runId": "run-mtjh4yjr",
         "shouldScrape": false,
-        "shouldGenerate": true,
+        "shouldGenerate": false,
         "shouldUpdate": false,
         "shouldFetchSeo": true,
         "shouldRefresh": false,
-        "shouldOptimizeTitles": true,
-        "shouldGenerateLanding": true,
+        "shouldOptimizeTitles": false,
+        "shouldGenerateLanding": false,
         "shouldOptimizeConversion": true,
         "shouldDetectDecay": true,
-        "shouldGenerateProgrammatic": true,
+        "shouldGenerateProgrammatic": false,
         "reasons": {
-          "scrape": "skipped: 4266 unused keywords, last scrape 12.0d ago (next forced refresh in 18d)",
-          "generate": "23.7h since last generation, 4266 keywords available",
-          "update": "skipped: last update 144.0h ago (min 168h)",
+          "scrape": "skipped: keyword discovery disabled (KEYWORD_DISCOVERY_ENABLED=false in agentBrain.ts) — 4265 unused keywords in pool",
+          "generate": "skipped: DISABLE_AUTO_BLOG is set — Claude Desktop (/write-blog) is the sole content writer",
+          "update": "skipped: DISABLE_AUTO_BLOG is set — content rewrites paused (Claude Desktop is the sole writer)",
           "fetchSeo": "first GSC fetch",
-          "refresh": "skipped: no GSC-indexed pages meet refresh threshold",
-          "optimizeTitles": "first title optimization run",
-          "generateLanding": "first landing page generation",
+          "refresh": "skipped: content refresh disabled (CONTENT_REFRESH_ENABLED=false in agentBrain.ts)",
+          "optimizeTitles": "skipped: DISABLE_AUTO_BLOG is set — title rewrites paused",
+          "generateLanding": "skipped: DISABLE_AUTO_BLOG is set — Claude Desktop is the sole content writer",
           "optimizeConversion": "first conversion optimization run",
           "detectDecay": "first decay detection run",
-          "generateProgrammatic": "first programmatic page generation"
+          "generateProgrammatic": "skipped: DISABLE_AUTO_BLOG is set — programmatic city×vertical pages paused"
         },
         "anyAction": true
       }
     },
     {
-      "id": "mti1j03i-p8ix6",
-      "ts": "2026-09-01T02:20:55.230Z",
-      "site": "Phelix ERP",
-      "event": "blog_generated",
-      "level": "info",
-      "success": true,
-      "slug": "best-fbr-pos-system-for-restaurant-in-multan",
-      "words": 1385,
-      "source": "template",
-      "durationMs": 8096,
-      "details": {
-        "runId": "run-mti1is71"
-      }
-    },
-    {
-      "id": "mti1j2ab-odb7v",
-      "ts": "2026-09-01T02:20:58.067Z",
+      "id": "mtjh531u-mw3i0",
+      "ts": "2026-09-02T02:25:45.906Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 2836,
+      "durationMs": 3577,
       "details": {
-        "runId": "run-mti1is71",
+        "runId": "run-mtjh4yjr",
         "pages": 2,
         "totalImpressions": 3
       }
     },
     {
-      "id": "mti1j2ip-md7sb",
-      "ts": "2026-09-01T02:20:58.369Z",
-      "site": "Phelix ERP",
-      "event": "title_optimized",
-      "level": "info",
-      "success": true,
-      "durationMs": 302,
-      "details": {
-        "runId": "run-mti1is71",
-        "optimizedCount": 0
-      }
-    },
-    {
-      "id": "mti1j2sz-i56ba",
-      "ts": "2026-09-01T02:20:58.739Z",
-      "site": "Phelix ERP",
-      "event": "landing_generated",
-      "level": "info",
-      "success": true,
-      "durationMs": 370,
-      "details": {
-        "runId": "run-mti1is71"
-      }
-    },
-    {
-      "id": "mti1j2z2-n2pt8",
-      "ts": "2026-09-01T02:20:58.958Z",
+      "id": "mtjh53an-9xz0v",
+      "ts": "2026-09-02T02:25:46.223Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 219,
+      "durationMs": 316,
       "details": {
-        "runId": "run-mti1is71",
+        "runId": "run-mtjh4yjr",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mti1j654-7nduj",
-      "ts": "2026-09-01T02:21:03.064Z",
+      "id": "mtjh54wg-gxiua",
+      "ts": "2026-09-02T02:25:48.304Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 4106,
+      "durationMs": 2081,
       "details": {
-        "runId": "run-mti1is71",
+        "runId": "run-mtjh4yjr",
         "decaysFound": 0
-      }
-    },
-    {
-      "id": "mti1j6ua-8ljel",
-      "ts": "2026-09-01T02:21:03.970Z",
-      "site": "Phelix ERP",
-      "event": "programmatic_generated",
-      "level": "info",
-      "success": false,
-      "durationMs": 906,
-      "details": {
-        "runId": "run-mti1is71"
       }
     }
   ],
