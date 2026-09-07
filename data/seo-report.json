@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T04:09:58.397Z",
+  "generatedAt": "2026-09-07T04:37:35.395Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -27,12 +27,12 @@
     {
       "priority": "medium",
       "title": "Cannibalization: 19 keyword clusters",
-      "detail": "\"ultimate guide fbr\" — 3 pages compete. 3 pages have similar titles. Google will pick one and dilute authority on others.",
+      "detail": "\"fbr pos system\" — 6 pages compete. 6 pages have similar titles. Google will pick one and dilute authority on others.",
       "action": "Differentiate intent — assign each post a unique long-tail variant."
     }
   ],
   "gsc": {
-    "rows": 5,
+    "rows": 6,
     "days": 28
   },
   "rankings": {
@@ -61,6 +61,73 @@
   },
   "cannibalization": {
     "clusters": [
+      {
+        "primaryKeyword": "fbr pos system",
+        "pages": [
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-multan",
+            "title": "Best FBR POS System For Restaurant In Multan",
+            "titleSim": 1,
+            "keywords": [
+              "best fbr pos system for restaurant in multan",
+              "best fbr pos system for restaurant in multan pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-faisalabad",
+            "title": "Best FBR POS System For Restaurant In Faisalabad",
+            "titleSim": 0.6666666666666666,
+            "keywords": [
+              "best fbr pos system for restaurant in faisalabad",
+              "best fbr pos system for restaurant in faisalabad pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-rawalpindi",
+            "title": "Best FBR POS System For Restaurant In Rawalpindi",
+            "titleSim": 0.6666666666666666,
+            "keywords": [
+              "best fbr pos system for restaurant in rawalpindi",
+              "best fbr pos system for restaurant in rawalpindi pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-islamabad",
+            "title": "Top 5 Best FBR POS System for Restaurant in Islamabad",
+            "titleSim": 0.6666666666666666,
+            "keywords": [
+              "best fbr pos system for restaurant in islamabad",
+              "best fbr pos system for restaurant in islamabad pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "best-fbr-pos-system-for-retail-in-multan",
+            "title": "Top 5 Best FBR POS System for Retail in Multan",
+            "titleSim": 0.6666666666666666,
+            "keywords": [
+              "best fbr pos system for retail in multan",
+              "best fbr pos system for retail in multan pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
+          {
+            "slug": "fbr-pos-invoicing-system",
+            "title": "What is FBR POS Invoicing System?",
+            "titleSim": 0.5,
+            "keywords": [
+              "fbr pos invoicing system",
+              "how fbr invoicing works",
+              "fbr pos invoice process"
+            ]
+          }
+        ],
+        "recommendation": "differentiate",
+        "reason": "6 pages have similar titles. Google will pick one and dilute authority on others."
+      },
       {
         "primaryKeyword": "ultimate guide fbr",
         "pages": [
@@ -97,63 +164,6 @@
         ],
         "recommendation": "differentiate",
         "reason": "3 pages have similar titles. Google will pick one and dilute authority on others."
-      },
-      {
-        "primaryKeyword": "fbr pos system",
-        "pages": [
-          {
-            "slug": "best-fbr-pos-system-for-restaurant-in-faisalabad",
-            "title": "Best FBR POS System For Restaurant In Faisalabad",
-            "titleSim": 1,
-            "keywords": [
-              "best fbr pos system for restaurant in faisalabad",
-              "best fbr pos system for restaurant in faisalabad pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          },
-          {
-            "slug": "best-fbr-pos-system-for-restaurant-in-rawalpindi",
-            "title": "Best FBR POS System For Restaurant In Rawalpindi",
-            "titleSim": 0.6666666666666666,
-            "keywords": [
-              "best fbr pos system for restaurant in rawalpindi",
-              "best fbr pos system for restaurant in rawalpindi pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          },
-          {
-            "slug": "best-fbr-pos-system-for-restaurant-in-islamabad",
-            "title": "Top 5 Best FBR POS System for Restaurant in Islamabad",
-            "titleSim": 0.6666666666666666,
-            "keywords": [
-              "best fbr pos system for restaurant in islamabad",
-              "best fbr pos system for restaurant in islamabad pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          },
-          {
-            "slug": "best-fbr-pos-system-for-retail-in-faisalabad",
-            "title": "Top 5 Best FBR POS System for Retail in Faisalabad",
-            "titleSim": 0.6666666666666666,
-            "keywords": [
-              "best fbr pos system for retail in faisalabad",
-              "best fbr pos system for retail in faisalabad pakistan",
-              "fbr pos compliance pakistan"
-            ]
-          },
-          {
-            "slug": "fbr-pos-invoicing-system",
-            "title": "What is FBR POS Invoicing System?",
-            "titleSim": 0.5,
-            "keywords": [
-              "fbr pos invoicing system",
-              "how fbr invoicing works",
-              "fbr pos invoice process"
-            ]
-          }
-        ],
-        "recommendation": "differentiate",
-        "reason": "5 pages have similar titles. Google will pick one and dilute authority on others."
       },
       {
         "primaryKeyword": "fbr iris portal registration",
@@ -314,12 +324,12 @@
             ]
           },
           {
-            "slug": "best-fbr-pos-system-for-retail-in-multan",
-            "title": "Top 5 Best FBR POS System for Retail in Multan",
+            "slug": "best-fbr-pos-system-for-retail-in-faisalabad",
+            "title": "Top 5 Best FBR POS System for Retail in Faisalabad",
             "titleSim": 0.6666666666666666,
             "keywords": [
-              "best fbr pos system for retail in multan",
-              "best fbr pos system for retail in multan pakistan",
+              "best fbr pos system for retail in faisalabad",
+              "best fbr pos system for retail in faisalabad pakistan",
               "fbr pos compliance pakistan"
             ]
           },
@@ -597,6 +607,16 @@
       {
         "primaryKeyword": "fbr pos compliance pakistan",
         "pages": [
+          {
+            "slug": "best-fbr-pos-system-for-restaurant-in-multan",
+            "title": "Best FBR POS System For Restaurant In Multan",
+            "titleSim": 0,
+            "keywords": [
+              "best fbr pos system for restaurant in multan",
+              "best fbr pos system for restaurant in multan pakistan",
+              "fbr pos compliance pakistan"
+            ]
+          },
           {
             "slug": "fbr-suspend-iris-pos-other-tax-services-maintenance",
             "title": "The Ultimate Guide to Fbr suspend iris pos other tax services maintenance in 2026",
@@ -1100,7 +1120,7 @@
           }
         ],
         "recommendation": "differentiate",
-        "reason": "50 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
+        "reason": "51 pages claim the same keyword \"fbr pos compliance pakistan\". Reassign to unique long-tail variants."
       },
       {
         "primaryKeyword": "fbr pos lahore",
@@ -1163,7 +1183,7 @@
   },
   "cwv": {
     "summary": {
-      "totalAudited": 88,
+      "totalAudited": 89,
       "passingCwv": 0,
       "failingCwv": 0,
       "avgPerformance": null,
