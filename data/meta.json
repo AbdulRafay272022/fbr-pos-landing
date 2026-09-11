@@ -1,9 +1,9 @@
 {
   "lastTopicIndex": -1,
   "agent": {
-    "isRunning": true,
-    "lockedAt": "2026-09-11T02:25:40.603Z",
-    "lockedBy": "run-mtwc3mgq"
+    "isRunning": false,
+    "lockedAt": null,
+    "lockedBy": null
   },
   "stats": {
     "lastScrapeAt": "2026-08-20T02:50:51.856Z",
@@ -11,6 +11,27 @@
     "lastUpdateAt": "2026-08-26T02:20:54.257Z",
     "blogsGeneratedTotal": 49,
     "blogsUpdatedTotal": 0,
-    "keywordsUsedTotal": 0
+    "keywordsUsedTotal": 0,
+    "lastSeoFetchAt": "2026-09-11T02:25:45.269Z",
+    "totalImpressions": 4,
+    "avgCTR": 0,
+    "topPages": [
+      {
+        "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
+        "impressions": 3,
+        "ctr": 0,
+        "position": 7.333333333333333
+      },
+      {
+        "slug": "fbr-pos-system-restaurants-pakistan-2026",
+        "impressions": 1,
+        "ctr": 0,
+        "position": 10
+      }
+    ],
+    "lastConversionOptAt": "2026-09-11T02:25:45.567Z",
+    "conversionsOptimizedTotal": 0,
+    "lastDecayDetectAt": "2026-09-11T02:25:47.515Z",
+    "decaysDetectedTotal": 0
   }
 }
