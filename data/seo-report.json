@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-28T04:37:35.446Z",
+  "generatedAt": "2026-10-05T04:37:35.420Z",
   "features": {
     "gsc": true,
     "pageSpeedInsights": true,
@@ -32,7 +32,7 @@
     }
   ],
   "gsc": {
-    "rows": 3,
+    "rows": 1,
     "days": 28
   },
   "rankings": {
