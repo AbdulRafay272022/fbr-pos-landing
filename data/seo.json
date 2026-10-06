@@ -7,32 +7,32 @@
       "clicks": 0,
       "ctr": 0,
       "position": 6.5,
-      "fetchedAt": "2026-10-05T02:25:42.672Z"
+      "fetchedAt": "2026-10-06T02:25:43.577Z"
     },
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
       "url": "https://phelixerp.online/blog/retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
-      "impressions": 5,
+      "impressions": 4,
       "clicks": 0,
       "ctr": 0,
-      "position": 6.8,
-      "fetchedAt": "2026-10-05T02:25:42.672Z"
+      "position": 6,
+      "fetchedAt": "2026-10-06T02:25:43.577Z"
     }
   ],
   "queries": [],
-  "lastFetchedAt": "2026-10-05T02:25:42.672Z",
+  "lastFetchedAt": "2026-10-06T02:25:43.577Z",
   "summary": {
-    "totalImpressions": 7,
+    "totalImpressions": 6,
     "totalClicks": 0,
     "avgCTR": 0,
-    "avgPosition": 6.65
+    "avgPosition": 6.25
   },
   "topPages": [
     {
       "slug": "retail-inventory-management-pakistan-track-stock-with-fbr-pos-system",
-      "impressions": 5,
+      "impressions": 4,
       "ctr": 0,
-      "position": 6.8
+      "position": 6
     },
     {
       "slug": "fbr-pos-system-restaurants-pakistan-2026",
