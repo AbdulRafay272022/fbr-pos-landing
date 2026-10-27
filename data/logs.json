@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mvomwyqq-4n8jq",
-      "ts": "2026-10-26T02:25:40.322Z",
+      "id": "mvq2ct8t-6u864",
+      "ts": "2026-10-27T02:25:40.109Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mvomwyqo",
+        "runId": "run-mvq2ct8q",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mvomwz7q-4llme",
-      "ts": "2026-10-26T02:25:40.934Z",
+      "id": "mvq2ctrf-81hwn",
+      "ts": "2026-10-27T02:25:40.779Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mvomwyqo",
+        "runId": "run-mvq2ct8q",
         "shouldScrape": false,
         "shouldGenerate": false,
         "shouldUpdate": false,
@@ -29,8 +29,8 @@
         "shouldRefresh": false,
         "shouldOptimizeTitles": false,
         "shouldGenerateLanding": false,
-        "shouldOptimizeConversion": true,
-        "shouldDetectDecay": true,
+        "shouldOptimizeConversion": false,
+        "shouldDetectDecay": false,
         "shouldGenerateProgrammatic": false,
         "reasons": {
           "scrape": "skipped: keyword discovery disabled (KEYWORD_DISCOVERY_ENABLED=false in agentBrain.ts) — 4265 unused keywords in pool",
@@ -40,51 +40,25 @@
           "refresh": "skipped: content refresh disabled (CONTENT_REFRESH_ENABLED=false in agentBrain.ts)",
           "optimizeTitles": "skipped: DISABLE_AUTO_BLOG is set — title rewrites paused",
           "generateLanding": "skipped: DISABLE_AUTO_BLOG is set — Claude Desktop is the sole content writer",
-          "optimizeConversion": "first conversion optimization run",
-          "detectDecay": "first decay detection run",
+          "optimizeConversion": "skipped: no traffic data available yet",
+          "detectDecay": "skipped: no GSC data to compare against",
           "generateProgrammatic": "skipped: DISABLE_AUTO_BLOG is set — programmatic city×vertical pages paused"
         },
         "anyAction": true
       }
     },
     {
-      "id": "mvomx2p3-vle1j",
-      "ts": "2026-10-26T02:25:45.447Z",
+      "id": "mvq2cxc6-k8or8",
+      "ts": "2026-10-27T02:25:45.414Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 3095,
+      "durationMs": 2908,
       "details": {
-        "runId": "run-mvomwyqo",
+        "runId": "run-mvq2ct8q",
         "pages": 0,
         "totalImpressions": 0
-      }
-    },
-    {
-      "id": "mvomx2x0-b3qrf",
-      "ts": "2026-10-26T02:25:45.732Z",
-      "site": "Phelix ERP",
-      "event": "conversion_optimized",
-      "level": "info",
-      "success": true,
-      "durationMs": 285,
-      "details": {
-        "runId": "run-mvomwyqo",
-        "optimizedCount": 0
-      }
-    },
-    {
-      "id": "mvomx33o-et9am",
-      "ts": "2026-10-26T02:25:45.972Z",
-      "site": "Phelix ERP",
-      "event": "decay_detected",
-      "level": "info",
-      "success": true,
-      "durationMs": 240,
-      "details": {
-        "runId": "run-mvomwyqo",
-        "decaysFound": 0
       }
     }
   ],
