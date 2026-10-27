@@ -1,9 +1,9 @@
 {
   "lastTopicIndex": -1,
   "agent": {
-    "isRunning": false,
-    "lockedAt": null,
-    "lockedBy": null
+    "isRunning": true,
+    "lockedAt": "2026-10-27T02:25:40.779Z",
+    "lockedBy": "run-mvq2ct8q"
   },
   "stats": {
     "lastScrapeAt": "2026-08-20T02:50:51.856Z",
@@ -11,14 +11,6 @@
     "lastUpdateAt": "2026-08-26T02:20:54.257Z",
     "blogsGeneratedTotal": 49,
     "blogsUpdatedTotal": 0,
-    "keywordsUsedTotal": 0,
-    "lastSeoFetchAt": "2026-10-26T02:25:45.447Z",
-    "totalImpressions": 0,
-    "avgCTR": 0,
-    "topPages": [],
-    "lastConversionOptAt": "2026-10-26T02:25:45.732Z",
-    "conversionsOptimizedTotal": 0,
-    "lastDecayDetectAt": "2026-10-26T02:25:45.972Z",
-    "decaysDetectedTotal": 0
+    "keywordsUsedTotal": 0
   }
 }
