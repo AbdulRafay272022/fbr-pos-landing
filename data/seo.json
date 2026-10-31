@@ -3,27 +3,27 @@
     {
       "slug": "fbr-non-compliance-penalties-2025",
       "url": "https://phelixerp.online/blog/fbr-non-compliance-penalties-2025",
-      "impressions": 1,
+      "impressions": 2,
       "clicks": 0,
       "ctr": 0,
-      "position": 2,
-      "fetchedAt": "2026-10-30T02:25:43.746Z"
+      "position": 5,
+      "fetchedAt": "2026-10-31T02:25:43.561Z"
     }
   ],
   "queries": [],
-  "lastFetchedAt": "2026-10-30T02:25:43.746Z",
+  "lastFetchedAt": "2026-10-31T02:25:43.561Z",
   "summary": {
-    "totalImpressions": 1,
+    "totalImpressions": 2,
     "totalClicks": 0,
     "avgCTR": 0,
-    "avgPosition": 2
+    "avgPosition": 5
   },
   "topPages": [
     {
       "slug": "fbr-non-compliance-penalties-2025",
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 2
+      "position": 5
     }
   ],
   "topQueries": []
