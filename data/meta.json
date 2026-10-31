@@ -1,9 +1,9 @@
 {
   "lastTopicIndex": -1,
   "agent": {
-    "isRunning": false,
-    "lockedAt": null,
-    "lockedBy": null
+    "isRunning": true,
+    "lockedAt": "2026-10-31T02:25:40.571Z",
+    "lockedBy": "run-mvvs47rr"
   },
   "stats": {
     "lastScrapeAt": "2026-08-20T02:50:51.856Z",
@@ -11,17 +11,6 @@
     "lastUpdateAt": "2026-08-26T02:20:54.257Z",
     "blogsGeneratedTotal": 49,
     "blogsUpdatedTotal": 0,
-    "keywordsUsedTotal": 0,
-    "lastSeoFetchAt": "2026-10-30T02:25:45.464Z",
-    "totalImpressions": 1,
-    "avgCTR": 0,
-    "topPages": [
-      {
-        "slug": "fbr-non-compliance-penalties-2025",
-        "impressions": 1,
-        "ctr": 0,
-        "position": 2
-      }
-    ]
+    "keywordsUsedTotal": 0
   }
 }
