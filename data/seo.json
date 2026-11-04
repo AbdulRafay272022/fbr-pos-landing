@@ -7,16 +7,25 @@
       "clicks": 0,
       "ctr": 0,
       "position": 5,
-      "fetchedAt": "2026-11-03T02:25:43.978Z"
+      "fetchedAt": "2026-11-04T02:25:44.000Z"
+    },
+    {
+      "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
+      "url": "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
+      "impressions": 1,
+      "clicks": 0,
+      "ctr": 0,
+      "position": 95,
+      "fetchedAt": "2026-11-04T02:25:44.000Z"
     }
   ],
   "queries": [],
-  "lastFetchedAt": "2026-11-03T02:25:43.978Z",
+  "lastFetchedAt": "2026-11-04T02:25:44.000Z",
   "summary": {
-    "totalImpressions": 2,
+    "totalImpressions": 3,
     "totalClicks": 0,
     "avgCTR": 0,
-    "avgPosition": 5
+    "avgPosition": 50
   },
   "topPages": [
     {
@@ -24,6 +33,12 @@
       "impressions": 2,
       "ctr": 0,
       "position": 5
+    },
+    {
+      "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
+      "impressions": 1,
+      "ctr": 0,
+      "position": 95
     }
   ],
   "topQueries": []
