@@ -7,38 +7,38 @@
       "clicks": 0,
       "ctr": 0,
       "position": 5,
-      "fetchedAt": "2026-11-09T02:25:43.834Z"
+      "fetchedAt": "2026-11-10T02:25:43.820Z"
     },
     {
       "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
       "url": "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
-      "impressions": 2,
+      "impressions": 3,
       "clicks": 0,
       "ctr": 0,
-      "position": 51.5,
-      "fetchedAt": "2026-11-09T02:25:43.834Z"
+      "position": 34.666666666666664,
+      "fetchedAt": "2026-11-10T02:25:43.820Z"
     }
   ],
   "queries": [],
-  "lastFetchedAt": "2026-11-09T02:25:43.834Z",
+  "lastFetchedAt": "2026-11-10T02:25:43.820Z",
   "summary": {
-    "totalImpressions": 4,
+    "totalImpressions": 5,
     "totalClicks": 0,
     "avgCTR": 0,
-    "avgPosition": 28.25
+    "avgPosition": 19.833333333333332
   },
   "topPages": [
+    {
+      "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
+      "impressions": 3,
+      "ctr": 0,
+      "position": 34.666666666666664
+    },
     {
       "slug": "fbr-non-compliance-penalties-2025",
       "impressions": 2,
       "ctr": 0,
       "position": 5
-    },
-    {
-      "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
-      "impressions": 2,
-      "ctr": 0,
-      "position": 51.5
     }
   ],
   "topQueries": []
