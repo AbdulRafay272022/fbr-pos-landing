@@ -1,27 +1,27 @@
 {
   "entries": [
     {
-      "id": "mwh7pzur-1t1l6",
-      "ts": "2026-11-15T02:25:40.035Z",
+      "id": "mwin5uon-kozrp",
+      "ts": "2026-11-16T02:25:40.247Z",
       "site": "Phelix ERP",
       "event": "agent_start",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mwh7pzup",
+        "runId": "run-mwin5uol",
         "site": "Phelix ERP",
         "baseUrl": "https://phelixerp.online"
       }
     },
     {
-      "id": "mwh7q0ck-1625p",
-      "ts": "2026-11-15T02:25:40.676Z",
+      "id": "mwin5v7c-g0umx",
+      "ts": "2026-11-16T02:25:40.920Z",
       "site": "Phelix ERP",
       "event": "agent_decision",
       "level": "info",
       "success": true,
       "details": {
-        "runId": "run-mwh7pzup",
+        "runId": "run-mwin5uol",
         "shouldScrape": false,
         "shouldGenerate": false,
         "shouldUpdate": false,
@@ -48,42 +48,42 @@
       }
     },
     {
-      "id": "mwh7q5t8-iczda",
-      "ts": "2026-11-15T02:25:47.756Z",
+      "id": "mwin619i-dhtoo",
+      "ts": "2026-11-16T02:25:48.774Z",
       "site": "Phelix ERP",
       "event": "seo_fetch_complete",
       "level": "info",
       "success": true,
-      "durationMs": 3994,
+      "durationMs": 4063,
       "details": {
-        "runId": "run-mwh7pzup",
+        "runId": "run-mwin5uol",
         "pages": 2,
-        "totalImpressions": 8
+        "totalImpressions": 14
       }
     },
     {
-      "id": "mwh7q62f-hh70w",
-      "ts": "2026-11-15T02:25:48.087Z",
+      "id": "mwin61hp-g0pan",
+      "ts": "2026-11-16T02:25:49.069Z",
       "site": "Phelix ERP",
       "event": "conversion_optimized",
       "level": "info",
       "success": true,
-      "durationMs": 330,
+      "durationMs": 295,
       "details": {
-        "runId": "run-mwh7pzup",
+        "runId": "run-mwin5uol",
         "optimizedCount": 0
       }
     },
     {
-      "id": "mwh7q7vd-njdmb",
-      "ts": "2026-11-15T02:25:50.425Z",
+      "id": "mwin63a7-5ep40",
+      "ts": "2026-11-16T02:25:51.391Z",
       "site": "Phelix ERP",
       "event": "decay_detected",
       "level": "info",
       "success": true,
-      "durationMs": 2338,
+      "durationMs": 2321,
       "details": {
-        "runId": "run-mwh7pzup",
+        "runId": "run-mwin5uol",
         "decaysFound": 0
       }
     }
