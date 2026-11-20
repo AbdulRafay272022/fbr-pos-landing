@@ -7,7 +7,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 5,
-      "fetchedAt": "2026-11-19T02:25:44.534Z"
+      "fetchedAt": "2026-11-20T02:25:44.272Z"
     },
     {
       "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
@@ -16,7 +16,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 12.714285714285714,
-      "fetchedAt": "2026-11-19T02:25:44.534Z"
+      "fetchedAt": "2026-11-20T02:25:44.272Z"
     }
   ],
   "queries": [
@@ -26,10 +26,10 @@
       "clicks": 0,
       "ctr": 0,
       "position": 15.333333333333334,
-      "fetchedAt": "2026-11-19T02:25:44.512Z"
+      "fetchedAt": "2026-11-20T02:25:44.021Z"
     }
   ],
-  "lastFetchedAt": "2026-11-19T02:25:44.534Z",
+  "lastFetchedAt": "2026-11-20T02:25:44.272Z",
   "summary": {
     "totalImpressions": 16,
     "totalClicks": 0,
