@@ -3,25 +3,6 @@
     "https://phelixerp.online": [
       {
         "url": "https://phelixerp.online",
-        "fetchedAt": "2026-05-11T04:06:11.416Z",
-        "strategy": "mobile",
-        "performance": null,
-        "accessibility": null,
-        "bestPractices": null,
-        "seo": null,
-        "lcp": null,
-        "inp": null,
-        "cls": null,
-        "fcp": null,
-        "ttfb": null,
-        "cwvPasses": null,
-        "opportunities": [],
-        "errors": [
-          "PSI HTTP 429"
-        ]
-      },
-      {
-        "url": "https://phelixerp.online",
         "fetchedAt": "2026-05-18T04:13:19.905Z",
         "strategy": "mobile",
         "performance": null,
@@ -555,6 +536,25 @@
       {
         "url": "https://phelixerp.online",
         "fetchedAt": "2026-11-16T04:37:40.902Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online",
+        "fetchedAt": "2026-11-23T04:37:40.460Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -3973,6 +3973,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/what-is-fbr-and-its-functions",
+        "fetchedAt": "2026-11-23T04:37:49.449Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-rawalpindi": [
@@ -4207,6 +4226,25 @@
       {
         "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-rawalpindi",
         "fetchedAt": "2026-11-16T04:37:51.038Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-rawalpindi",
+        "fetchedAt": "2026-11-23T04:37:50.576Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -4534,6 +4572,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-suspend-iris-pos-other-tax-services-maintenance",
+        "fetchedAt": "2026-11-23T04:37:42.711Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/fbr-income-tax-return-deadline": [
@@ -4749,6 +4806,25 @@
       {
         "url": "https://phelixerp.online/blog/fbr-income-tax-return-deadline",
         "fetchedAt": "2026-11-16T04:37:44.285Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-income-tax-return-deadline",
+        "fetchedAt": "2026-11-23T04:37:43.833Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -4994,6 +5070,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-tax-penalty",
+        "fetchedAt": "2026-11-23T04:37:44.954Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/fbr-pos-sync-failed-how-to-fix-pakistan": [
@@ -5209,6 +5304,25 @@
       {
         "url": "https://phelixerp.online/blog/fbr-pos-sync-failed-how-to-fix-pakistan",
         "fetchedAt": "2026-11-16T04:37:46.538Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-pos-sync-failed-how-to-fix-pakistan",
+        "fetchedAt": "2026-11-23T04:37:46.076Z",
         "strategy": "mobile",
         "performance": null,
         "accessibility": null,
@@ -5454,6 +5568,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-faisalabad",
+        "fetchedAt": "2026-11-23T04:37:47.201Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/fbr-penalty-increase-july-1": [
@@ -5684,6 +5817,25 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/fbr-penalty-increase-july-1",
+        "fetchedAt": "2026-11-23T04:37:48.328Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ],
     "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-multan": [
@@ -5895,8 +6047,27 @@
         "errors": [
           "PSI HTTP 429"
         ]
+      },
+      {
+        "url": "https://phelixerp.online/blog/best-fbr-pos-system-for-restaurant-in-multan",
+        "fetchedAt": "2026-11-23T04:37:41.584Z",
+        "strategy": "mobile",
+        "performance": null,
+        "accessibility": null,
+        "bestPractices": null,
+        "seo": null,
+        "lcp": null,
+        "inp": null,
+        "cls": null,
+        "fcp": null,
+        "ttfb": null,
+        "cwvPasses": null,
+        "opportunities": [],
+        "errors": [
+          "PSI HTTP 429"
+        ]
       }
     ]
   },
-  "lastFullAuditAt": "2026-11-16T04:37:51.038Z"
+  "lastFullAuditAt": "2026-11-23T04:37:50.576Z"
 }
