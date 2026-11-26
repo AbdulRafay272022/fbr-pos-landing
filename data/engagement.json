@@ -185,11 +185,11 @@
       "source": "www.google.com"
     },
     {
-      "id": "eng-mwx5kk83-3kzq",
-      "ts": "2026-11-26T06:09:46.083Z",
-      "type": "scroll_depth",
+      "id": "eng-mwx5kk92-0hv5",
+      "ts": "2026-11-26T06:09:46.118Z",
+      "type": "bounce",
       "slug": "best-fbr-pos-system-for-retail-in-karachi",
-      "value": 0,
+      "value": 1,
       "source": "direct"
     }
   ],
@@ -221,7 +221,7 @@
     "best-fbr-pos-system-for-retail-in-karachi": {
       "avgScrollDepth": 0,
       "avgTimeOnPage": 0,
-      "bounceRate": 0,
+      "bounceRate": 1,
       "totalSessions": 1
     }
   },
