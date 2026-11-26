@@ -1,22 +1,13 @@
 {
   "pages": [
     {
-      "slug": "fbr-non-compliance-penalties-2025",
-      "url": "https://phelixerp.online/blog/fbr-non-compliance-penalties-2025",
-      "impressions": 1,
-      "clicks": 0,
-      "ctr": 0,
-      "position": 8,
-      "fetchedAt": "2026-11-25T02:25:44.732Z"
-    },
-    {
       "slug": "multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
       "url": "https://phelixerp.online/blog/multi-branch-pos-system-pakistan-managing-multiple-stores-with-fbr",
       "impressions": 15,
       "clicks": 0,
       "ctr": 0,
       "position": 12.533333333333333,
-      "fetchedAt": "2026-11-25T02:25:44.732Z"
+      "fetchedAt": "2026-11-26T02:25:44.962Z"
     }
   ],
   "queries": [
@@ -26,15 +17,15 @@
       "clicks": 0,
       "ctr": 0,
       "position": 14,
-      "fetchedAt": "2026-11-25T02:25:44.732Z"
+      "fetchedAt": "2026-11-26T02:25:44.961Z"
     }
   ],
-  "lastFetchedAt": "2026-11-25T02:25:44.732Z",
+  "lastFetchedAt": "2026-11-26T02:25:44.962Z",
   "summary": {
-    "totalImpressions": 16,
+    "totalImpressions": 15,
     "totalClicks": 0,
     "avgCTR": 0,
-    "avgPosition": 10.266666666666666
+    "avgPosition": 12.533333333333333
   },
   "topPages": [
     {
@@ -42,12 +33,6 @@
       "impressions": 15,
       "ctr": 0,
       "position": 12.533333333333333
-    },
-    {
-      "slug": "fbr-non-compliance-penalties-2025",
-      "impressions": 1,
-      "ctr": 0,
-      "position": 8
     }
   ],
   "topQueries": [
