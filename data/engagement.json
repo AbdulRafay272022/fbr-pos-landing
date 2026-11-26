@@ -183,6 +183,14 @@
       "slug": "fbr-pos-system-restaurants-pakistan-2026",
       "value": 72,
       "source": "www.google.com"
+    },
+    {
+      "id": "eng-mwx5kk83-3kzq",
+      "ts": "2026-11-26T06:09:46.083Z",
+      "type": "scroll_depth",
+      "slug": "best-fbr-pos-system-for-retail-in-karachi",
+      "value": 0,
+      "source": "direct"
     }
   ],
   "summary": {
@@ -209,6 +217,12 @@
       "avgTimeOnPage": 28,
       "bounceRate": 0,
       "totalSessions": 6
+    },
+    "best-fbr-pos-system-for-retail-in-karachi": {
+      "avgScrollDepth": 0,
+      "avgTimeOnPage": 0,
+      "bounceRate": 0,
+      "totalSessions": 1
     }
   },
   "lastTrimmedAt": null
