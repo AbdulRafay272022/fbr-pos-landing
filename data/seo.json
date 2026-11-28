@@ -7,7 +7,7 @@
       "clicks": 0,
       "ctr": 0,
       "position": 12.533333333333333,
-      "fetchedAt": "2026-11-27T02:25:44.059Z"
+      "fetchedAt": "2026-11-28T02:25:44.839Z"
     }
   ],
   "queries": [
@@ -17,10 +17,10 @@
       "clicks": 0,
       "ctr": 0,
       "position": 14,
-      "fetchedAt": "2026-11-27T02:25:44.059Z"
+      "fetchedAt": "2026-11-28T02:25:44.838Z"
     }
   ],
-  "lastFetchedAt": "2026-11-27T02:25:44.059Z",
+  "lastFetchedAt": "2026-11-28T02:25:44.839Z",
   "summary": {
     "totalImpressions": 15,
     "totalClicks": 0,
